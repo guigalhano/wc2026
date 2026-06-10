@@ -208,13 +208,13 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 
 <div class="nav-wrap">
   <nav class="nav">
-    <button class="nb active" onclick="showSec('odds')"><i class="ti ti-activity"></i><span data-t="navOdds">Odds ao vivo</span></button>
+    <button class="nb active" onclick="showSec('confronto')"><i class="ti ti-swords"></i><span data-t="navMatch">Confronto</span></button>
+    <button class="nb" onclick="showSec('odds')"><i class="ti ti-activity"></i><span data-t="navOdds">Odds ao vivo</span></button>
     <button class="nb" onclick="showSec('dashboard')"><i class="ti ti-layout-dashboard"></i><span data-t="navDash">Dashboard</span></button>
     <button class="nb" onclick="showSec('grupos')"><i class="ti ti-tournament"></i><span data-t="navGrupos">Grupos</span></button>
     <button class="nb" onclick="showSec('scouts')"><i class="ti ti-radar"></i><span data-t="navScouts">Scouts</span></button>
     <button class="nb" onclick="showSec('value')"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
     <button class="nb" onclick="showSec('tendencias')"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
-    <button class="nb" onclick="showSec('confronto')"><i class="ti ti-swords"></i><span data-t="navMatch">Confronto</span></button>
       <button class="nb" onclick="showSec('ai_bets')"><i class="ti ti-robot"></i><span>IA Apostas</span></button>
     <button class="nb" onclick="showSec('previews')"><i class="ti ti-file-analytics"></i><span>Prévias</span></button>
     <button class="nb" onclick="showSec('clima')"><i class="ti ti-cloud"></i><span>Clima</span></button>
@@ -224,7 +224,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 <main class="page">
 
 <!-- ODDS AO VIVO -->
-<section id="odds" class="sec active">
+<section id="odds" class="sec">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;flex-wrap:wrap;gap:8px">
     <div class="api-st loading" id="apiSt"><i class="ti ti-loader-2"></i><span id="apiStTx" data-t="loadingOdds">Buscando odds...</span></div>
     <div style="display:flex;gap:7px;align-items:center">
@@ -316,7 +316,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 </section>
 
 <!-- CONFRONTO -->
-<section id="confronto" class="sec">
+<section id="confronto" class="sec active">
   <div class="sel-block">
     <div class="sel-row">
       <select id="selHome" onchange="clearMatch()" style="flex:1;min-width:140px"></select>
