@@ -709,7 +709,7 @@ function showSec(id){
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   event.currentTarget.classList.add('active');
-  const renders={dashboard:renderDashboard,grupos:renderGrupo,scouts:renderScouts,value:renderValue,tendencias:renderTendencias};
+  const renders={dashboard:renderDashboard,grupos:renderGrupo,scouts:renderScouts,value:renderValue,tendencias:renderTendencias,betfair:renderBetfair};
   if(renders[id])renders[id]();
 }
 
@@ -1815,12 +1815,7 @@ function renderBetfair() {
   }).join('');
 }
 
-// Hook into showSec
-const _origShowSec = showSec;
-function showSec(id) {
-  _origShowSec.call(this, id);
-  if (id === 'betfair') renderBetfair();
-}
+// showSec hook merged into main function
 // ──────────────────────────────────────────────────────────────
 
 </script>
