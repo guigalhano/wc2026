@@ -1,0 +1,59 @@
+name: Update WC 2026 Dashboard
+
+on:
+  schedule:
+    # 11:00 UTC = 08:00 BRT
+    - cron: '0 11 * * *'
+    # 23:00 UTC = 20:00 BRT
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      skip_ai:
+        description: 'Skip AI generation (faster, saves API costs)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Step 1 — Fetch live data (odds + weather + news)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_data.py
+
+      - name: Step 2 — Generate AI content (Claude)
+        if: ${{ github.event.inputs.skip_ai != 'true' }}
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: python scripts/generate_ai.py
+
+      - name: Step 3 — Build index.html
+        run: python scripts/build_index.py
+
+      - name: Step 4 — Commit and push updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "WC2026 Bot"
+          git add index.html data/
+          git diff --staged --quiet && echo "No changes" || \
+            git commit -m "🤖 Auto-update $(date -u '+%Y-%m-%d %H:%M UTC')" && git push
+
+      - name: Summary
+        run: |
+          echo "## ✅ Update Complete" >> $GITHUB_STEP_SUMMARY
+          echo "- Odds: $(python -c 'import json; d=json.load(open("data/live_data.json")); print(d["games_count"], "games")')" >> $GITHUB_STEP_SUMMARY
+          echo "- Weather: 16 venues" >> $GITHUB_STEP_SUMMARY
+          echo "- Updated: $(python -c 'import json; d=json.load(open("data/live_data.json")); print(d["updated_at_brt"])')" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 [View dashboard](https://garrinchashirts-create.github.io/wc2026)" >> $GITHUB_STEP_SUMMARY
