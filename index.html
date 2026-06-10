@@ -215,6 +215,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <button class="nb" onclick="showSec('scouts')"><i class="ti ti-radar"></i><span data-t="navScouts">Scouts</span></button>
     <button class="nb" onclick="showSec('value')"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
     <button class="nb" onclick="showSec('tendencias')"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
+    <button class="nb" onclick="showSec('simulador')"><i class="ti ti-tournament"></i><span id="navSim">🏆 Simulador</span></button>
       <button class="nb" onclick="showSec('ai_bets')"><i class="ti ti-robot"></i><span>IA Apostas</span></button>
     <button class="nb" onclick="showSec('previews')"><i class="ti ti-file-analytics"></i><span>Prévias</span></button>
     <button class="nb" onclick="showSec('clima')"><i class="ti ti-cloud"></i><span>Clima</span></button>
@@ -448,6 +449,84 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <strong>⚠️ Impacto nas apostas:</strong> Calor extremo beneficia times físicos e especialistas em bolas paradas (Alemanha, Tchéquia, Uzbequistão).
     Times de alta pressão (Áustria, Noruega) perdem vantagem. Favoreça under 2.5 em jogos em Arlington e Houston.
   </div>
+</section>
+
+
+<!-- SIMULADOR -->
+<section id="simulador" class="sec">
+<style>
+.sim-btn{padding:9px 22px;border-radius:var(--r);border:none;background:var(--ac);color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:'Space Grotesk',sans-serif;display:inline-flex;align-items:center;gap:7px;transition:opacity .15s}
+.sim-btn:hover{opacity:.88}
+.sim-btn.secondary{background:var(--sf2);color:var(--tx);border:1px solid var(--bd2)}
+.sim-progress{height:4px;border-radius:2px;background:var(--bd);overflow:hidden;margin:12px 0}
+.sim-progress-fill{height:100%;border-radius:2px;background:var(--ac);transition:width .3s}
+.bracket{display:flex;gap:0;overflow-x:auto;padding-bottom:1rem}
+.bracket-round{flex-shrink:0;min-width:160px;padding:0 6px}
+.bracket-round-title{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;text-align:center;margin-bottom:10px;font-family:'Space Grotesk',sans-serif}
+.bracket-match{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:6px 8px;margin-bottom:16px;position:relative;box-shadow:var(--sh)}
+.bracket-match.champion{border-color:var(--ac);border-width:2px;background:linear-gradient(135deg,var(--sf),var(--gn-bg))}
+.bracket-team{display:flex;align-items:center;gap:5px;padding:2px 0;font-size:12px}
+.bracket-team.winner{font-weight:700;color:var(--ac)}
+.bracket-team.loser{opacity:.5}
+.bracket-score{margin-left:auto;font-size:12px;font-weight:600;font-family:'Space Grotesk',sans-serif;min-width:20px;text-align:right}
+.mc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.mc-team{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:.7rem .85rem;box-shadow:var(--sh)}
+.mc-team-head{display:flex;align-items:center;gap:7px;margin-bottom:6px}
+.mc-team-flag{font-size:20px}
+.mc-team-name{font-size:12px;font-weight:600;flex:1}
+.mc-team-prob{font-size:16px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--ac)}
+.mc-bars{display:flex;flex-direction:column;gap:3px}
+.mc-bar-row{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--tx3)}
+.mc-bar-label{width:52px;flex-shrink:0;text-align:right}
+.mc-bar-track{flex:1;height:5px;background:var(--bd);border-radius:2px;overflow:hidden}
+.mc-bar-fill{height:100%;border-radius:2px}
+.group-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:1rem}
+.group-table th{background:var(--sf2);padding:5px 8px;text-align:left;font-size:10px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.04em}
+.group-table td{padding:5px 8px;border-bottom:1px solid var(--bd)}
+.group-table tr:last-child td{border-bottom:none}
+.group-table tr.qualified td{background:rgba(29,158,117,.07)}
+.qual-badge{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gn);margin-right:4px}
+.sim-tabs{display:flex;gap:4px;margin-bottom:1rem;border-bottom:1px solid var(--bd);padding-bottom:8px}
+.sim-tab{padding:5px 14px;border-radius:20px;border:1px solid transparent;background:transparent;color:var(--tx2);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.sim-tab.active{background:var(--sf2);color:var(--tx);border-color:var(--bd2);font-weight:500}
+.champion-card{background:linear-gradient(135deg,var(--gn-bg),var(--bl-bg));border:2px solid var(--gn);border-radius:var(--rl);padding:1.5rem;text-align:center;margin-bottom:1.25rem}
+.champion-trophy{font-size:48px;margin-bottom:8px}
+.champion-name{font-size:22px;font-weight:700;font-family:'Space Grotesk',sans-serif}
+.champion-sub{font-size:12px;color:var(--tx2);margin-top:4px}
+.sim-stats-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem}
+.sim-stat{background:var(--sf2);border-radius:var(--r);padding:.6rem .85rem;flex:1;min-width:100px;text-align:center}
+.sim-stat .sv{font-size:18px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--ac)}
+.sim-stat .sk{font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.04em}
+</style>
+
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:10px">
+  <div>
+    <div class="stitle">🏆 Simulador Copa do Mundo 2026</div>
+    <div style="font-size:11px;color:var(--tx3)">Monte Carlo 10.000 simulações · Ratings + xG + forma + fator casa</div>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <button class="sim-btn secondary" onclick="runDeterministic()" id="btnDet"><i class="ti ti-play"></i> Resultado mais provável</button>
+    <button class="sim-btn" onclick="runMonteCarlo()" id="btnMC"><i class="ti ti-refresh"></i> Simular 10.000x</button>
+  </div>
+</div>
+
+<div class="sim-progress" id="simProgress" style="display:none">
+  <div class="sim-progress-fill" id="simProgressFill" style="width:0%"></div>
+</div>
+<div id="simStatus" style="font-size:12px;color:var(--tx3);margin-bottom:1rem;min-height:18px"></div>
+
+<div id="simContent" style="display:none">
+  <div class="sim-tabs">
+    <button class="sim-tab active" onclick="showSimTab('champion')">🏆 Campeão</button>
+    <button class="sim-tab" onclick="showSimTab('bracket')">📊 Chaveamento</button>
+    <button class="sim-tab" onclick="showSimTab('groups')">📋 Fase de Grupos</button>
+    <button class="sim-tab" onclick="showSimTab('montecarlo')">🎲 Monte Carlo</button>
+  </div>
+  <div id="simTabChampion"></div>
+  <div id="simTabBracket" style="display:none"></div>
+  <div id="simTabGroups" style="display:none"></div>
+  <div id="simTabMontecarlo" style="display:none"></div>
+</div>
 </section>
 
 </main>
@@ -1083,6 +1162,419 @@ window.AI_DATA = {"generated_at": "2026-06-10T00:36:35.670433+00:00", "generated
 if(window.LIVE_DATA && window.LIVE_DATA.games) {
   window.oddsData = window.LIVE_DATA;
 }
+
+
+// ═══════════════════════════════════════════════════════
+// WC 2026 SIMULATOR — Monte Carlo + Deterministic
+// ═══════════════════════════════════════════════════════
+
+const SIM_GROUPS = {
+  A:["MEX","AFS","COR","TCH"], B:["CAN","BOS","CAT","SUI"],
+  C:["BRA","MAR","HAI","ESC"], D:["EUA","PAR","AUS","TUR"],
+  E:["ALE","CUR","CDM","EQU"], F:["HOL","JAP","SUE","TUN"],
+  G:["BEL","EGI","IRA","NZE"], H:["ESP","CAB","ARS","URU"],
+  I:["FRA","SEN","IRQ","NOR"], J:["ARG","AGL","AUT","JOR"],
+  K:["POR","RDC","UZB","COL"], L:["ING","CRO","GAN","PAN"]
+};
+
+// Host cities per group (for home advantage)
+const SIM_HOST = {MEX:1.15, EUA:1.10, CAN:1.08};
+
+function simGetStrength(code) {
+  const s = SCOUTS[code];
+  const c = CSV[code] || {};
+  if (!s || !s.rating) return 60;
+  let str = s.rating * 0.45;
+  if (s.xG) str += s.xG * 8;
+  if (s.xGA) str -= s.xGA * 4;
+  const wr = c.games ? (c.wins / c.games) * 100 : 45;
+  str += wr * 0.25;
+  // Form momentum
+  if (c.games >= 6) {
+    const form = (c.wins * 3 + c.draws) / (c.games * 3) * 20;
+    str += form;
+  }
+  return Math.max(30, str);
+}
+
+function simMatchProbs(codeA, codeB, neutralVenue=true) {
+  let strA = simGetStrength(codeA);
+  let strB = simGetStrength(codeB);
+  // Host advantage
+  if (!neutralVenue) {
+    if (SIM_HOST[codeA]) strA *= SIM_HOST[codeA];
+    if (SIM_HOST[codeB]) strB *= SIM_HOST[codeB];
+  }
+  const total = strA + strB;
+  const rawA = strA / total;
+  // Compress toward 50% (upsets happen in football)
+  const pA = rawA * 0.65 + 0.175;
+  const pB = (1 - rawA) * 0.65 + 0.175;
+  const pD = 1 - pA - pB;
+  return { pA: Math.max(0.08, pA), pB: Math.max(0.08, pB), pD: Math.max(0.12, pD) };
+}
+
+function simMatchResult(codeA, codeB, allowDraw=true, neutralVenue=true) {
+  const {pA, pB, pD} = simMatchProbs(codeA, codeB, neutralVenue);
+  const r = Math.random();
+  let winner, loser, draw = false;
+  if (!allowDraw) {
+    // Knockout: redistribute draw prob
+    const adjA = pA + pD * 0.5, adjB = pB + pD * 0.5;
+    if (Math.random() < adjA / (adjA + adjB)) { winner = codeA; loser = codeB; }
+    else { winner = codeB; loser = codeA; }
+  } else {
+    if (r < pA) { winner = codeA; loser = codeB; }
+    else if (r < pA + pD) { draw = true; winner = null; loser = null; }
+    else { winner = codeB; loser = codeA; }
+  }
+  // Simulate scoreline
+  const strA = simGetStrength(codeA), strB = simGetStrength(codeB);
+  const avgGoals = 2.5 + (strA + strB) / 200;
+  const gA = Math.round(Math.random() * avgGoals * (strA/(strA+strB)) * 1.8);
+  const gB = Math.round(Math.random() * avgGoals * (strB/(strA+strB)) * 1.8);
+  // Adjust score to match result
+  let scoreA = gA, scoreB = gB;
+  if (!draw && winner === codeA && scoreA <= scoreB) scoreA = scoreB + 1;
+  if (!draw && winner === codeB && scoreB <= scoreA) scoreB = scoreA + 1;
+  if (draw) scoreA = scoreB = Math.min(gA, gB, 3);
+  return { winner, loser, draw, scoreA, scoreB };
+}
+
+function simGroupStage(randomize=true) {
+  const standings = {};
+  const results = {};
+  // Init standings
+  for (const [g, teams] of Object.entries(SIM_GROUPS)) {
+    results[g] = [];
+    for (const t of teams) {
+      standings[t] = { pts:0, gf:0, ga:0, w:0, d:0, l:0, group:g };
+    }
+  }
+  // Play all group matches
+  for (const [g, teams] of Object.entries(SIM_GROUPS)) {
+    for (let i = 0; i < teams.length; i++) {
+      for (let j = i+1; j < teams.length; j++) {
+        const a = teams[i], b = teams[j];
+        let res;
+        if (randomize) {
+          res = simMatchResult(a, b, true, false);
+        } else {
+          // Deterministic: use probabilities directly
+          const {pA, pB, pD} = simMatchProbs(a, b, false);
+          if (pA > pB && pA > pD) { res = {winner:a, loser:b, draw:false, scoreA:2, scoreB:1}; }
+          else if (pB > pA && pB > pD) { res = {winner:b, loser:a, draw:false, scoreA:1, scoreB:2}; }
+          else { res = {winner:null, loser:null, draw:true, scoreA:1, scoreB:1}; }
+        }
+        results[g].push({a, b, ...res});
+        if (res.draw) {
+          standings[a].pts+=1; standings[a].d++;
+          standings[b].pts+=1; standings[b].d++;
+        } else {
+          standings[res.winner].pts+=3; standings[res.winner].w++;
+          standings[res.loser].l++;
+        }
+        standings[a].gf+=res.scoreA; standings[a].ga+=res.scoreB;
+        standings[b].gf+=res.scoreB; standings[b].ga+=res.scoreA;
+      }
+    }
+  }
+  // Rank each group — top 2 qualify
+  const qualified = {}, groupRankings = {};
+  for (const [g, teams] of Object.entries(SIM_GROUPS)) {
+    const sorted = [...teams].sort((x,y) => {
+      const sx=standings[x], sy=standings[y];
+      if (sy.pts !== sx.pts) return sy.pts - sx.pts;
+      const gdx=sx.gf-sx.ga, gdy=sy.gf-sy.ga;
+      if (gdy !== gdx) return gdy - gdx;
+      return sy.gf - sx.gf;
+    });
+    groupRankings[g] = sorted;
+    qualified[g] = { first: sorted[0], second: sorted[1] };
+  }
+  return { standings, qualified, groupRankings, groupResults: results };
+}
+
+// R16 bracket: fixed WC 2026 bracket
+function simKnockout(qualified, randomize=true) {
+  const R16 = [
+    [qualified.A.first,  qualified.B.second],
+    [qualified.C.first,  qualified.D.second],
+    [qualified.E.first,  qualified.F.second],
+    [qualified.G.first,  qualified.H.second],
+    [qualified.B.first,  qualified.A.second],
+    [qualified.D.first,  qualified.C.second],
+    [qualified.F.first,  qualified.E.second],
+    [qualified.H.first,  qualified.G.second],
+  ];
+  const bracket = { r16:[], qf:[], sf:[], final:[], champion:null };
+  // R16
+  const r16winners = [];
+  for (const [a,b] of R16) {
+    const res = randomize ? simMatchResult(a,b,false,true) : {winner: simGetStrength(a)>simGetStrength(b)?a:b};
+    bracket.r16.push({a,b,winner:res.winner,scoreA:res.scoreA,scoreB:res.scoreB});
+    r16winners.push(res.winner);
+  }
+  // QF
+  const qfpairs = [[0,1],[2,3],[4,5],[6,7]];
+  const qfwinners = [];
+  for (const [i,j] of qfpairs) {
+    const a=r16winners[i], b=r16winners[j];
+    const res = randomize ? simMatchResult(a,b,false,true) : {winner: simGetStrength(a)>simGetStrength(b)?a:b};
+    bracket.qf.push({a,b,winner:res.winner,scoreA:res.scoreA,scoreB:res.scoreB});
+    qfwinners.push(res.winner);
+  }
+  // SF
+  const sfpairs = [[0,1],[2,3]];
+  const sfwinners = [];
+  for (const [i,j] of sfpairs) {
+    const a=qfwinners[i], b=qfwinners[j];
+    const res = randomize ? simMatchResult(a,b,false,true) : {winner: simGetStrength(a)>simGetStrength(b)?a:b};
+    bracket.sf.push({a,b,winner:res.winner,scoreA:res.scoreA,scoreB:res.scoreB});
+    sfwinners.push(res.winner);
+  }
+  // Final
+  const a=sfwinners[0], b=sfwinners[1];
+  const res = randomize ? simMatchResult(a,b,false,true) : {winner: simGetStrength(a)>simGetStrength(b)?a:b};
+  bracket.final.push({a,b,winner:res.winner,scoreA:res.scoreA,scoreB:res.scoreB});
+  bracket.champion = res.winner;
+  return bracket;
+}
+
+function runDeterministic() {
+  document.getElementById('simStatus').textContent = '⚙️ Calculando resultado mais provável...';
+  document.getElementById('simContent').style.display = 'none';
+  setTimeout(() => {
+    const {standings, qualified, groupRankings, groupResults} = simGroupStage(false);
+    const bracket = simKnockout(qualified, false);
+    window._simDet = {standings, qualified, groupRankings, groupResults, bracket, type:'det'};
+    window._simMC = null;
+    renderSimResults();
+    document.getElementById('simStatus').textContent = '✅ Resultado mais provável calculado';
+    document.getElementById('simContent').style.display = 'block';
+    showSimTab('champion');
+  }, 100);
+}
+
+function runMonteCarlo() {
+  const N = 10000;
+  const btn = document.getElementById('btnMC');
+  btn.disabled = true;
+  document.getElementById('simProgress').style.display = 'block';
+  document.getElementById('simContent').style.display = 'none';
+  document.getElementById('simStatus').textContent = '🎲 Simulando...';
+
+  const counts = {};
+  for (const code of Object.keys(SCOUTS)) {
+    counts[code] = { r16:0, qf:0, sf:0, final:0, champion:0, groupOut:0 };
+  }
+
+  let i = 0;
+  const BATCH = 500;
+  function runBatch() {
+    const end = Math.min(i + BATCH, N);
+    for (; i < end; i++) {
+      const {qualified} = simGroupStage(true);
+      const bracket = simKnockout(qualified, true);
+      // Count group qualifiers
+      const allQual = new Set();
+      for (const g of Object.values(qualified)) {
+        allQual.add(g.first); allQual.add(g.second);
+      }
+      for (const code of Object.keys(SCOUTS)) {
+        if (!allQual.has(code)) { if(counts[code]) counts[code].groupOut++; }
+      }
+      // Count knockouts
+      for (const m of bracket.r16) if(m.winner && counts[m.winner]) counts[m.winner].r16++;
+      for (const m of bracket.qf) if(m.winner && counts[m.winner]) counts[m.winner].qf++;
+      for (const m of bracket.sf) if(m.winner && counts[m.winner]) counts[m.winner].sf++;
+      for (const m of bracket.final) if(m.winner && counts[m.winner]) counts[m.winner].final++;
+      if (bracket.champion && counts[bracket.champion]) counts[bracket.champion].champion++;
+    }
+    const pct = Math.round(i/N*100);
+    document.getElementById('simProgressFill').style.width = pct+'%';
+    document.getElementById('simStatus').textContent = `🎲 Simulando... ${i.toLocaleString()}/${N.toLocaleString()} (${pct}%)`;
+    if (i < N) {
+      setTimeout(runBatch, 0);
+    } else {
+      window._simMC = {counts, N};
+      // Also run deterministic for bracket display
+      const {standings, qualified, groupRankings, groupResults} = simGroupStage(false);
+      const bracket = simKnockout(qualified, false);
+      window._simDet = {standings, qualified, groupRankings, groupResults, bracket, type:'mc'};
+      btn.disabled = false;
+      document.getElementById('simProgress').style.display = 'none';
+      document.getElementById('simStatus').textContent = `✅ ${N.toLocaleString()} simulações concluídas`;
+      renderSimResults();
+      document.getElementById('simContent').style.display = 'block';
+      showSimTab('montecarlo');
+    }
+  }
+  setTimeout(runBatch, 50);
+}
+
+function showSimTab(tab) {
+  document.querySelectorAll('.sim-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('[id^="simTab"]').forEach(d=>d.style.display='none');
+  document.getElementById('simTab'+tab.charAt(0).toUpperCase()+tab.slice(1)).style.display='block';
+  event.target.classList.add('active');
+}
+
+function renderSimResults() {
+  const det = window._simDet;
+  if (!det) return;
+  renderChampionTab(det);
+  renderBracketTab(det);
+  renderGroupsTab(det);
+  if (window._simMC) renderMCTab(window._simMC);
+}
+
+function renderChampionTab(det) {
+  const champ = det.bracket.champion;
+  const t = SCOUTS[champ] || {flag:'🏆', name:champ};
+  const mc = window._simMC;
+  const champPct = mc ? ((mc.counts[champ]?.champion||0)/mc.N*100).toFixed(1) : null;
+  let html = `<div class="champion-card">
+    <div class="champion-trophy">🏆</div>
+    <div style="font-size:28px;margin-bottom:4px">${t.flag||'🏳'}</div>
+    <div class="champion-name">${tn(champ)}</div>
+    <div class="champion-sub">${det.type==='mc'?'Campeão mais provável (resultado determinístico)':'Campeão — resultado mais provável'}${champPct?` · ${champPct}% nas simulações`:''}</div>
+  </div>`;
+
+  // Final 4
+  const sf = det.bracket.sf;
+  const finalists = [det.bracket.final[0].a, det.bracket.final[0].b];
+  const semifinalists = [sf[0].a, sf[0].b, sf[1].a, sf[1].b].filter(c=>!finalists.includes(c));
+  html += `<div class="sim-stats-row">`;
+  html += `<div class="sim-stat"><div class="sv">${SCOUTS[det.bracket.final[0].a]?.flag||'🏳'} ${tn(det.bracket.final[0].a)}</div><div class="sk">Finalista</div></div>`;
+  html += `<div class="sim-stat"><div class="sv">${SCOUTS[det.bracket.final[0].b]?.flag||'🏳'} ${tn(det.bracket.final[0].b)}</div><div class="sk">Finalista</div></div>`;
+  for (const s of semifinalists.slice(0,2)) {
+    html += `<div class="sim-stat"><div class="sv">${SCOUTS[s]?.flag||'🏳'} ${tn(s)}</div><div class="sk">Semi-final</div></div>`;
+  }
+  html += `</div>`;
+
+  // Top 8 winner odds from MC
+  if (mc) {
+    const sorted = Object.entries(mc.counts).filter(([,v])=>v.champion>0).sort((a,b)=>b[1].champion-a[1].champion).slice(0,8);
+    html += `<div class="stitle" style="margin-top:1rem">Probabilidade de ser campeão (Monte Carlo)</div>`;
+    html += `<div style="display:flex;flex-direction:column;gap:6px">`;
+    for (const [code, c] of sorted) {
+      const pct = (c.champion/mc.N*100).toFixed(1);
+      const t2 = SCOUTS[code]||{flag:'🏳',name:code};
+      html += `<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)">
+        <span style="font-size:18px">${t2.flag||'🏳'}</span>
+        <span style="font-size:12px;flex:1">${tn(code)}</span>
+        <div style="flex:2;background:var(--bd);border-radius:2px;height:6px;overflow:hidden">
+          <div style="height:100%;width:${Math.min(100,pct*3)}%;background:${pct>15?'var(--ac)':pct>8?'var(--gn)':'var(--am)'};border-radius:2px"></div>
+        </div>
+        <span style="min-width:42px;text-align:right;font-size:13px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:${pct>15?'var(--ac)':pct>8?'var(--gn)':'var(--tx)'}">${pct}%</span>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+  document.getElementById('simTabChampion').innerHTML = html;
+}
+
+function renderBracketTab(det) {
+  const b = det.bracket;
+  const rounds = [
+    {title:'Oitavas', matches:b.r16},
+    {title:'Quartas', matches:b.qf},
+    {title:'Semi-final', matches:b.sf},
+    {title:'Final', matches:b.final},
+  ];
+  let html = `<div style="overflow-x:auto"><div class="bracket">`;
+  for (const round of rounds) {
+    html += `<div class="bracket-round">
+      <div class="bracket-round-title">${round.title}</div>`;
+    for (const m of round.matches) {
+      const aWon = m.winner===m.a, bWon = m.winner===m.b;
+      const isChamp = round.title==='Final';
+      html += `<div class="bracket-match${isChamp&&aWon||isChamp&&bWon?' champion':''}">
+        <div class="bracket-team ${aWon?'winner':'loser'}">
+          <span>${SCOUTS[m.a]?.flag||'🏳'}</span>
+          <span style="font-size:11px">${tn(m.a)}</span>
+          <span class="bracket-score">${m.scoreA??''}</span>
+        </div>
+        <div class="bracket-team ${bWon?'winner':'loser'}">
+          <span>${SCOUTS[m.b]?.flag||'🏳'}</span>
+          <span style="font-size:11px">${tn(m.b)}</span>
+          <span class="bracket-score">${m.scoreB??''}</span>
+        </div>
+        ${isChamp&&m.winner?`<div style="text-align:center;font-size:10px;color:var(--ac);font-weight:700;margin-top:4px">🏆 CAMPEÃO</div>`:''}
+      </div>`;
+    }
+    html += `</div>`;
+  }
+  html += `</div></div>`;
+  document.getElementById('simTabBracket').innerHTML = html;
+}
+
+function renderGroupsTab(det) {
+  let html = `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">`;
+  for (const [g, teams] of Object.entries(SIM_GROUPS)) {
+    const ranked = det.groupRankings[g];
+    const q1 = det.qualified[g].first, q2 = det.qualified[g].second;
+    html += `<div class="card" style="margin-bottom:0">
+      <div class="grp-hdr">Grupo ${g}</div>
+      <table class="group-table"><thead><tr>
+        <th></th><th>Seleção</th><th>Pts</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th>
+      </tr></thead><tbody>`;
+    for (let i=0; i<ranked.length; i++) {
+      const code = ranked[i];
+      const s = det.standings[code];
+      const t2 = SCOUTS[code]||{flag:'🏳',name:code};
+      const isQ = code===q1||code===q2;
+      html += `<tr class="${isQ?'qualified':''}">
+        <td>${isQ?'<span class="qual-badge"></span>':''}</td>
+        <td>${t2.flag||'🏳'} ${tn(code)}</td>
+        <td><strong>${s.pts}</strong></td>
+        <td>${s.w}</td><td>${s.d}</td><td>${s.l}</td>
+        <td>${s.gf}</td><td>${s.ga}</td>
+      </tr>`;
+    }
+    html += `</tbody></table></div>`;
+  }
+  html += `</div>`;
+  document.getElementById('simTabGroups').innerHTML = html;
+}
+
+function renderMCTab(mc) {
+  const {counts, N} = mc;
+  const sorted = Object.entries(counts)
+    .filter(([code]) => SCOUTS[code]?.rating)
+    .sort((a,b)=>b[1].champion-a[1].champion);
+
+  let html = `<p style="font-size:12px;color:var(--tx2);margin-bottom:1rem">${N.toLocaleString()} simulações completas. Probabilidade de cada seleção chegar em cada fase.</p>`;
+  html += `<div class="mc-grid">`;
+  for (const [code, c] of sorted.filter(([,c])=>c.r16>0||c.champion>0)) {
+    const t2 = SCOUTS[code]||{flag:'🏳'};
+    const champPct = (c.champion/N*100).toFixed(1);
+    const finalPct = (c.final/N*100).toFixed(1);
+    const sfPct = (c.sf/N*100).toFixed(1);
+    const qfPct = (c.qf/N*100).toFixed(1);
+    const r16Pct = (c.r16/N*100).toFixed(1);
+    html += `<div class="mc-team">
+      <div class="mc-team-head">
+        <span class="mc-team-flag">${t2.flag||'🏳'}</span>
+        <span class="mc-team-name">${tn(code)}</span>
+        <span class="mc-team-prob">${champPct}%</span>
+      </div>
+      <div class="mc-bars">
+        ${[['Campeão',champPct,'#185FA5'],['Final',finalPct,'#1D9E75'],['Semi',sfPct,'#BA7517'],['Quartas',qfPct,'#888780'],['Oitavas',r16Pct,'#ccc']].map(([lbl,pct,col])=>`
+          <div class="mc-bar-row">
+            <span class="mc-bar-label">${lbl}</span>
+            <div class="mc-bar-track"><div class="mc-bar-fill" style="width:${Math.min(100,pct*2)}%;background:${col}"></div></div>
+            <span style="min-width:32px;text-align:right">${pct}%</span>
+          </div>`).join('')}
+      </div>
+    </div>`;
+  }
+  html += `</div>`;
+  document.getElementById('simTabMontecarlo').innerHTML = html;
+}
+// ═══════════════════════════════════════════════════════
+
 </script>
 </body>
 </html>
