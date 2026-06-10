@@ -201,7 +201,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 
 <div style="background:var(--accent);color:#fff;padding:6px 1.25rem;font-size:11px;white-space:nowrap;overflow:hidden;position:relative">
   <div style="animation:ticker 40s linear infinite;display:inline-block">
-    ⚽ Copa do Mundo 2026 · Dashboard atualizado 2x ao dia · Value bets geradas por IA · Odds ao vivo via The Odds API
+    {{NEWS_TICKER}}
   </div>
 </div>
 <style>@keyframes ticker{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}</style>
@@ -356,13 +356,13 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px">
     <div>
       <div class="stitle">💰 Value Bets do Dia — Geradas por IA</div>
-      <div style="font-size:11px;color:var(--tx3)" id="ai_updated">Atualizado: 09/06/2026 08:00 BRT</div>
+      <div style="font-size:11px;color:var(--tx3)" id="ai_updated">Atualizado: {{UPDATED_AT}}</div>
     </div>
     <div style="font-size:11px;color:var(--tx3);background:var(--bl-bg);color:var(--bl-tx);padding:4px 10px;border-radius:20px;font-weight:500">
       <i class="ti ti-sparkles" style="vertical-align:-2px"></i> Claude AI
     </div>
   </div>
-  <div id="aiBetsContent"><div style="color:var(--tx3);font-size:13px">Análises por IA disponíveis após primeiro ciclo (08h BRT).</div></div>
+  <div id="aiBetsContent">{{VALUE_BETS_HTML}}</div>
   <div style="margin-top:.6rem;padding:.7rem;background:var(--sf2);border-radius:var(--r);font-size:11px;color:var(--tx3)">
     <i class="ti ti-info-circle" style="vertical-align:-2px"></i>
     Análise gerada automaticamente por Claude 2x ao dia. Informativa — aposte com responsabilidade.
@@ -374,10 +374,10 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px">
     <div>
       <div class="stitle">📋 Prévias dos Jogos</div>
-      <div style="font-size:11px;color:var(--tx3)">Análise tática e apostas por jogo · Atualizado: 09/06/2026 08:00 BRT</div>
+      <div style="font-size:11px;color:var(--tx3)">Análise tática e apostas por jogo · Atualizado: {{UPDATED_AT}}</div>
     </div>
   </div>
-  <div id="previewsContent"><div style="color:var(--tx3);font-size:13px">Prévias disponíveis após primeiro ciclo (08h BRT).</div></div>
+  <div id="previewsContent">{{PREVIEWS_HTML}}</div>
 </section>
 
 <!-- CLIMA -->
@@ -387,7 +387,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     Calor extremo afeta diretamente o rendimento. UTCI ≥38°C = risco alto · ≥46°C = incompensável (corpo para de regular temperatura).
   </p>
   <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1rem">
-    <div style="color:var(--tx3);font-size:13px">Aguardando primeira atualização...</div>
+    {{WEATHER_HTML}}
   </div>
   <div style="background:var(--am-bg);border-radius:var(--r);padding:.8rem 1rem;font-size:12px;color:var(--am-tx)">
     <strong>⚠️ Impacto nas apostas:</strong> Calor extremo beneficia times físicos e especialistas em bolas paradas (Alemanha, Tchéquia, Uzbequistão).
@@ -1022,8 +1022,8 @@ loadOdds();
 
 <script>
 // Dynamic data injected by build_index.py
-window.LIVE_DATA = {"updated_at": "2026-06-09T11:00:00+00:00", "updated_at_brt": "09/06/2026 08:00 BRT", "games_count": 0, "games": [], "todays_games": [], "tomorrows_games": [], "weather": {}, "news": [], "_note": "Auto-updated by GitHub Actions 2x/day (08h and 20h BRT)"};
-window.AI_DATA = {"generated_at": "2026-06-09T11:00:00+00:00", "generated_at_brt": "09/06/2026 08:00 BRT", "value_bets_today": {"summary": "Dashboard sendo inicializado. As análises por IA aparecerão automaticamente após o primeiro ciclo de atualização do GitHub Actions.", "bets": [], "tip_of_day": null}, "match_previews": [], "tactical_notes": {}};
+window.LIVE_DATA = {{LIVE_DATA_JSON}};
+window.AI_DATA = {{AI_DATA_JSON}};
 // Make odds data available to existing JS
 if(window.LIVE_DATA && window.LIVE_DATA.games) {
   window.oddsData = window.LIVE_DATA;
