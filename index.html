@@ -1729,7 +1729,12 @@ function renderBetfair() {
     // Scout-based win probability (rough estimate)
     const scoutProb = t.rating ? (t.rating / 100 * 0.35).toFixed(1) : '–';
     const edge = (odd && t.rating) ? Math.round((t.rating/100*0.35 - 1/odd)*1000)/10 : null;
-    const edgeStr = edge !== null ? `<span style="color:${edge>0?'var(--gn-tx)':'var(--rd-tx)';font-weight:600">${edge>0?'+':''}${edge.toFixed(1)}%</span>` : '–';
+    let edgeStr = '–';
+    if (edge !== null) {
+      const eColor = edge > 0 ? 'var(--gn-tx)' : 'var(--rd-tx)';
+      const eSign = edge > 0 ? '+' : '';
+      edgeStr = `<span style="color:${eColor};font-weight:600">${eSign}${edge.toFixed(1)}%</span>`;
+    }
     const profile = (window.BETFAIR_PROFILES||{})[code] || {};
     return `<tr style="border-bottom:1px solid var(--bd)">
       <td style="padding:7px 10px"><span style="font-size:16px">${t.flag||''}</span> ${tn(code)}</td>
