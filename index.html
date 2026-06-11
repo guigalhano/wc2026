@@ -216,7 +216,6 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <button class="nb" onclick="showSec('value')"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
     <button class="nb" onclick="showSec('tendencias')"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
     <button class="nb" onclick="showSec('simulador')"><i class="ti ti-tournament"></i><span>🏆 Simulador</span></button>
-    <button class="nb" onclick="showSec('calendario')"><i class="ti ti-calendar"></i><span>📅 Calendário</span></button>
     <button class="nb" onclick="showSec('betfair')"><i class="ti ti-trophy"></i><span>Betfair Tips</span></button>
       <button class="nb" onclick="showSec('ai_bets')"><i class="ti ti-robot"></i><span>IA Apostas</span></button>
     <button class="nb" onclick="showSec('previews')"><i class="ti ti-file-analytics"></i><span>Prévias</span></button>
@@ -320,7 +319,10 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 
 <!-- CONFRONTO -->
 <section id="confronto" class="sec active">
-  <div class="sel-block">
+  
+<!-- TODAY'S FIXTURES BAR -->
+<div id="todayFixtures" style="margin-bottom:1rem"></div>
+<div class="sel-block">
     <div class="sel-row">
       <select id="selHome" onchange="clearMatch()" style="flex:1;min-width:140px"></select>
       <span class="sel-vs">vs</span>
@@ -351,6 +353,18 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <div id="betsBlock"></div>
     <div class="card"><div class="stitle" data-t="trendsTitle">Tendências WC 2022 → 2026</div><div id="trendsBlock"></div></div>
   </div>
+
+<!-- H2H PANEL (auto-filled when teams selected) -->
+<div id="h2hConfrontoPanel" style="display:none;margin-top:1rem">
+  <div style="background:var(--sf2);border-radius:var(--rl);border:1px solid var(--bd);padding:1rem 1.25rem">
+    <div style="font-size:13px;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:8px">
+      <span>📋</span>
+      <span id="h2hConfrontoTitle">Histórico de confrontos</span>
+    </div>
+    <div id="h2hConfrontoBody"></div>
+  </div>
+</div>
+
 </section>
 
 
@@ -1323,6 +1337,162 @@ function renderSBRanking(){const view=window._sbView||'combined';const ds=view==
 
 // Hook renders into showSec
 const _origRenders_extra={calendario:renderCalendario,betfair:renderBetfair};
+
+
+// ══════════════════════════════════════════════════════════════
+// CONFRONTO: TODAY'S FIXTURES + H2H INTEGRATION
+// ══════════════════════════════════════════════════════════════
+
+function renderTodayFixtures() {
+  const el = document.getElementById('todayFixtures');
+  if (!el) return;
+  const fixtures = window.WC_FIXTURES || [];
+  const today = new Date().toISOString().split('T')[0];
+  
+  // Also show next 2 days if today has no games
+  let targetDates = [today];
+  const futureDates = [...new Set(fixtures.filter(f => f.date >= today).map(f => f.date))].sort().slice(0, 3);
+  if (!fixtures.some(f => f.date === today)) targetDates = futureDates.slice(0, 2);
+  else targetDates = futureDates.slice(0, 3);
+
+  const todayGames = fixtures.filter(f => targetDates.includes(f.date));
+  if (!todayGames.length) { el.style.display = 'none'; return; }
+
+  el.innerHTML = `
+    <div style="background:var(--sf2);border:1px solid var(--bd);border-radius:var(--rl);padding:.85rem 1rem">
+      <div style="font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.6rem">
+        📅 Jogos da Copa — clique para analisar
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        ${todayGames.map(f => {
+          const ht = SCOUTS[f.home] || {flag:'🏳'};
+          const at = SCOUTS[f.away] || {flag:'🏳'};
+          const isToday = f.date === today;
+          const d = new Date(f.date + 'T12:00:00');
+          const dateLabel = isToday ? 'HOJE' : d.toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+          const score = f.played ? `${f.score1}-${f.score2}` : f.time || '';
+          return `<button onclick="selectMatchup('${f.home}','${f.away}')" style="
+            background:${isToday?'var(--ac)':'var(--sf)'};
+            color:${isToday?'#fff':'var(--tx)'};
+            border:1px solid ${isToday?'var(--ac)':'var(--bd)'};
+            border-radius:var(--r);padding:5px 10px;cursor:pointer;
+            font-size:11px;font-family:inherit;
+            display:flex;align-items:center;gap:5px;transition:opacity .15s
+          " onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+            <span style="font-size:13px">${ht.flag||'🏳'}</span>
+            <span style="font-weight:600">${tn(f.home)}</span>
+            <span style="font-size:10px;opacity:.7;margin:0 2px">${score||dateLabel}</span>
+            <span style="font-weight:600">${tn(f.away)}</span>
+            <span style="font-size:13px">${at.flag||'🏳'}</span>
+          </button>`;
+        }).join('')}
+      </div>
+    </div>`;
+}
+
+function selectMatchup(homeCode, awayCode) {
+  // Set the select dropdowns
+  const selH = document.getElementById('selHome');
+  const selA = document.getElementById('selAway');
+  if (!selH || !selA) return;
+  
+  // Find options by value
+  for (let opt of selH.options) { if (opt.value === homeCode) { selH.value = homeCode; break; } }
+  for (let opt of selA.options) { if (opt.value === awayCode) { selA.value = awayCode; break; } }
+  
+  // Trigger the matchup calculation
+  if (typeof calcProbs === 'function') calcProbs();
+  else if (typeof renderMatchup === 'function') renderMatchup();
+  
+  // Scroll to analysis
+  document.getElementById('matchup')?.scrollIntoView({behavior:'smooth', block:'start'});
+  
+  // Show H2H
+  showH2HConfronto(homeCode, awayCode);
+}
+
+function showH2HConfronto(h, a) {
+  const panel = document.getElementById('h2hConfrontoPanel');
+  const titleEl = document.getElementById('h2hConfrontoTitle');
+  const bodyEl = document.getElementById('h2hConfrontoBody');
+  if (!panel || !bodyEl) return;
+
+  const ht = SCOUTS[h] || {flag:'🏳'};
+  const at = SCOUTS[a] || {flag:'🏳'};
+  if (titleEl) titleEl.innerHTML = `${ht.flag||''} ${tn(h)} vs ${at.flag||''} ${tn(a)} — Últimos confrontos diretos`;
+
+  const key = [h, a].sort().join('_');
+  const matches = (window.H2H_DATA || {})[key] || [];
+
+  if (!matches.length) {
+    bodyEl.innerHTML = '<p style="color:var(--tx3);font-size:12px">Sem confrontos diretos encontrados (2019–2026).</p>';
+    panel.style.display = 'block';
+    return;
+  }
+
+  let w1 = 0, w2 = 0, dr = 0;
+  const rows = matches.map(m => {
+    const isH = m.home === h;
+    const s1 = isH ? m.score1 : m.score2, s2 = isH ? m.score2 : m.score1;
+    if (s1 > s2) w1++; else if (s2 > s1) w2++; else dr++;
+    const homeT = SCOUTS[m.home] || {flag:'🏳'};
+    const awayT = SCOUTS[m.away] || {flag:'🏳'};
+    const res = s1>s2 ? 'win' : s2>s1 ? 'loss' : 'draw';
+    const resColor = res==='win'?'var(--gn-tx)':res==='loss'?'var(--rd-tx)':'var(--tx2)';
+    const resLabel = res==='win'?'V':res==='loss'?'D':'E';
+    const d = new Date(m.date + 'T12:00:00');
+    const isWC = m.tournament.toLowerCase().includes('world cup');
+    return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--bd)">
+      <span style="color:var(--tx3);font-size:11px;min-width:65px">${d.toLocaleDateString('pt-BR',{month:'short',year:'numeric'})}</span>
+      <span style="width:22px;height:22px;border-radius:50%;background:${res==='win'?'var(--gn-bg)':res==='loss'?'rgba(255,80,80,.12)':'var(--sf2)'};display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:${resColor};flex-shrink:0">${resLabel}</span>
+      <span style="font-size:18px">${homeT.flag||'🏳'}</span>
+      <span style="font-size:12px;font-weight:${m.home===h?'700':'400'}">${tn(m.home)||m.home}</span>
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;background:var(--sf2);padding:1px 8px;border-radius:6px;flex-shrink:0">${m.score1}–${m.score2}</span>
+      <span style="font-size:12px;font-weight:${m.away===h?'700':'400'}">${tn(m.away)||m.away}</span>
+      <span style="font-size:18px">${awayT.flag||'🏳'}</span>
+      <span style="font-size:10px;color:${isWC?'var(--ac)':'var(--tx3)'};margin-left:auto;flex-shrink:0;max-width:120px;text-align:right;line-height:1.3">${m.tournament}${m.neutral?' · campo neutro':''}</span>
+    </div>`;
+  }).join('');
+
+  bodyEl.innerHTML = `
+    <div style="display:flex;gap:16px;margin-bottom:.75rem;font-size:13px;flex-wrap:wrap">
+      <span>${ht.flag||''} <strong style="color:var(--gn-tx)">${w1}V</strong> ${tn(h)}</span>
+      <span><strong>${dr} E</strong></span>
+      <span>${at.flag||''} <strong style="color:var(--gn-tx)">${w2}V</strong> ${tn(a)}</span>
+      <span style="color:var(--tx3);font-size:11px">${matches.length} jogos · fonte: martj42 (CC0)</span>
+    </div>
+    ${rows}`;
+  panel.style.display = 'block';
+}
+
+// Hook H2H into team selection changes
+(function hookConfronto() {
+  function tryHook() {
+    const selH = document.getElementById('selHome');
+    const selA = document.getElementById('selAway');
+    if (!selH || !selA) { setTimeout(tryHook, 500); return; }
+    
+    function onTeamChange() {
+      const h = selH.value, a = selA.value;
+      if (h && a && h !== a) showH2HConfronto(h, a);
+      else document.getElementById('h2hConfrontoPanel').style.display = 'none';
+    }
+    selH.addEventListener('change', onTeamChange);
+    selA.addEventListener('change', onTeamChange);
+  }
+  setTimeout(tryHook, 800);
+})();
+
+// Init today fixtures when confronto tab opens
+const _origShowSec_cal = showSec;
+function showSec(id) {
+  _origShowSec_cal(id);
+  if (id === 'confronto') renderTodayFixtures();
+}
+
+// Also render on page load since confronto is default
+setTimeout(renderTodayFixtures, 600);
+// ══════════════════════════════════════════════════════════════
 
 </script>
 </body>
