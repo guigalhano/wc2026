@@ -208,15 +208,15 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 
 <div class="nav-wrap">
   <nav class="nav">
-    <button class="nb active" onclick="showSec('confronto')"><i class="ti ti-swords"></i><span data-t="navMatch">Confronto</span></button>
-    <button class="nb" onclick="showSec('odds')"><i class="ti ti-activity"></i><span data-t="navOdds">Odds ao vivo</span></button>
-    <button class="nb" onclick="showSec('dashboard')"><i class="ti ti-layout-dashboard"></i><span data-t="navDash">Dashboard</span></button>
-    <button class="nb" onclick="showSec('grupos')"><i class="ti ti-tournament"></i><span data-t="navGrupos">Grupos</span></button>
-    <button class="nb" onclick="showSec('scouts')"><i class="ti ti-radar"></i><span data-t="navScouts">Scouts</span></button>
-    <button class="nb" onclick="showSec('value')"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
-    <button class="nb" onclick="showSec('tendencias')"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
-    <button class="nb" onclick="showSec('simulador')"><i class="ti ti-tournament"></i><span>🏆 Simulador</span></button>
-    <button class="nb" onclick="showSec('betfair')"><i class="ti ti-trophy"></i><span>Betfair Tips</span></button>
+    <button class="nb active" onclick="showSec('confronto',this)"><i class="ti ti-swords"></i><span data-t="navMatch">Confronto</span></button>
+    <button class="nb" onclick="showSec('odds',this)"><i class="ti ti-activity"></i><span data-t="navOdds">Odds ao vivo</span></button>
+    <button class="nb" onclick="showSec('dashboard',this)"><i class="ti ti-layout-dashboard"></i><span data-t="navDash">Dashboard</span></button>
+    <button class="nb" onclick="showSec('grupos',this)"><i class="ti ti-tournament"></i><span data-t="navGrupos">Grupos</span></button>
+    <button class="nb" onclick="showSec('scouts',this)"><i class="ti ti-radar"></i><span data-t="navScouts">Scouts</span></button>
+    <button class="nb" onclick="showSec('value',this)"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
+    <button class="nb" onclick="showSec('tendencias',this)"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
+    <button class="nb" onclick="showSec('simulador',this)"><i class="ti ti-tournament"></i><span>🏆 Simulador</span></button>
+    <button class="nb" onclick="showSec('betfair',this)"><i class="ti ti-trophy"></i><span>Betfair Tips</span></button>
   </nav>
 </div>
 
@@ -704,14 +704,13 @@ function getSW(code){
 }
 
 // ─── NAV ─────────────────────────────────────────────────
-function showSec(id){
+function showSec(id,btn){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  event.currentTarget.classList.add('active');
+  if(btn) btn.classList.add('active');
   const renders={dashboard:renderDashboard,grupos:renderGrupo,scouts:renderScouts,value:renderValue,tendencias:renderTendencias};
   if(renders[id])renders[id]();
-
   if(id==='confronto'&&typeof renderTodayFixtures==='function'){renderTodayFixtures();initCalTeamSelect();}
 }
 
@@ -1317,8 +1316,8 @@ function renderSBRanking() {
 
 // Auto-render SB ranking when dashboard tab opens
 var _origShowSecDash = showSec;
-function showSec(id) {
-  _origShowSecDash(id);
+function showSec(id,btn) {
+  _origShowSecDash(id,btn);
   if (id === 'dashboard' && typeof renderSBRanking === 'function') {
     setTimeout(function() { renderSBRanking(); }, 100);
   }
