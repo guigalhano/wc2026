@@ -699,6 +699,8 @@ function showSec(id){
   event.currentTarget.classList.add('active');
   const renders={dashboard:renderDashboard,grupos:renderGrupo,scouts:renderScouts,value:renderValue,tendencias:renderTendencias};
   if(renders[id])renders[id]();
+
+  if(id==='confronto'&&typeof renderTodayFixtures==='function'){renderTodayFixtures();initCalTeamSelect();}
 }
 
 function setLang(l){
@@ -1185,6 +1187,7 @@ function copyAI(){
 populateSelects();
 renderDashboard();
 loadOdds();
+setTimeout(function(){if(typeof renderTodayFixtures==="function"){renderTodayFixtures();initCalTeamSelect();}},600);
 </script>
 
 <script>
