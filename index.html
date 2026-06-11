@@ -208,23 +208,22 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 
 <div class="nav-wrap">
   <nav class="nav">
-    <button class="nb active" onclick="showSec('odds')"><i class="ti ti-activity"></i><span data-t="navOdds">Odds ao vivo</span></button>
-    <button class="nb" onclick="showSec('dashboard')"><i class="ti ti-layout-dashboard"></i><span data-t="navDash">Dashboard</span></button>
-    <button class="nb" onclick="showSec('grupos')"><i class="ti ti-tournament"></i><span data-t="navGrupos">Grupos</span></button>
-    <button class="nb" onclick="showSec('scouts')"><i class="ti ti-radar"></i><span data-t="navScouts">Scouts</span></button>
-    <button class="nb" onclick="showSec('value')"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
-    <button class="nb" onclick="showSec('tendencias')"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
-    <button class="nb" onclick="showSec('confronto')"><i class="ti ti-swords"></i><span data-t="navMatch">Confronto</span></button>
-      <button class="nb" onclick="showSec('ai_bets')"><i class="ti ti-robot"></i><span>IA Apostas</span></button>
-    <button class="nb" onclick="showSec('previews')"><i class="ti ti-file-analytics"></i><span>Prévias</span></button>
-    <button class="nb" onclick="showSec('clima')"><i class="ti ti-cloud"></i><span>Clima</span></button>
+    <button class="nb active" onclick="showSec('confronto',this)"><i class="ti ti-swords"></i><span data-t="navMatch">Confronto</span></button>
+    <button class="nb" onclick="showSec('odds',this)"><i class="ti ti-activity"></i><span data-t="navOdds">Odds ao vivo</span></button>
+    <button class="nb" onclick="showSec('dashboard',this)"><i class="ti ti-layout-dashboard"></i><span data-t="navDash">Dashboard</span></button>
+    <button class="nb" onclick="showSec('grupos',this)"><i class="ti ti-tournament"></i><span data-t="navGrupos">Grupos</span></button>
+    <button class="nb" onclick="showSec('scouts',this)"><i class="ti ti-radar"></i><span data-t="navScouts">Scouts</span></button>
+    <button class="nb" onclick="showSec('value',this)"><i class="ti ti-coin"></i><span data-t="navValue">Value</span></button>
+    <button class="nb" onclick="showSec('tendencias',this)"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
+    <button class="nb" onclick="showSec('simulador',this)"><i class="ti ti-tournament"></i><span>🏆 Simulador</span></button>
+    <button class="nb" onclick="showSec('betfair',this)"><i class="ti ti-trophy"></i><span>Betfair Tips</span></button>
   </nav>
 </div>
 
 <main class="page">
 
 <!-- ODDS AO VIVO -->
-<section id="odds" class="sec active">
+<section id="odds" class="sec">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;flex-wrap:wrap;gap:8px">
     <div class="api-st loading" id="apiSt"><i class="ti ti-loader-2"></i><span id="apiStTx" data-t="loadingOdds">Buscando odds...</span></div>
     <div style="display:flex;gap:7px;align-items:center">
@@ -316,7 +315,31 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 </section>
 
 <!-- CONFRONTO -->
-<section id="confronto" class="sec">
+<section id="confronto" class="sec active">
+
+<div id="todayFixtures" style="margin-bottom:.75rem"></div>
+
+<div style="margin-bottom:.75rem">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:.3rem">
+    <span style="font-size:12px;font-weight:600;color:var(--tx2)">&#128197; Calendário Copa 2026</span>
+    <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+      <select id="calGroup" onchange="renderCalConfronto()" style="font-size:11px;padding:3px 7px;border-radius:var(--r);border:1px solid var(--bd);background:var(--sf2);color:var(--tx)">
+        <option value="">Todos grupos</option>
+        <option value="A">Gr. A</option><option value="B">Gr. B</option><option value="C">Gr. C</option>
+        <option value="D">Gr. D</option><option value="E">Gr. E</option><option value="F">Gr. F</option>
+        <option value="G">Gr. G</option><option value="H">Gr. H</option><option value="I">Gr. I</option>
+        <option value="J">Gr. J</option><option value="K">Gr. K</option><option value="L">Gr. L</option>
+        <option value="KO">Eliminatorias</option>
+      </select>
+      <select id="calTeamFilter" onchange="renderCalConfronto()" style="font-size:11px;padding:3px 7px;border-radius:var(--r);border:1px solid var(--bd);background:var(--sf2);color:var(--tx)">
+        <option value="">Todas selecoes</option>
+      </select>
+      <button onclick="toggleCalendario()" id="btnToggleCal" style="font-size:11px;padding:3px 10px;border-radius:var(--r);border:1px solid var(--bd);background:var(--sf2);color:var(--tx);cursor:pointer">Ver todos</button>
+    </div>
+  </div>
+  <div id="calConfrontoList" style="display:none;max-height:320px;overflow-y:auto;border:1px solid var(--bd);border-radius:var(--r);background:var(--sf2);padding:.4rem .6rem"></div>
+</div>
+
   <div class="sel-block">
     <div class="sel-row">
       <select id="selHome" onchange="clearMatch()" style="flex:1;min-width:140px"></select>
@@ -347,6 +370,8 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <div class="stitle" style="margin-top:14px" data-t="betsTitle">Melhores apostas</div>
     <div id="betsBlock"></div>
     <div class="card"><div class="stitle" data-t="trendsTitle">Tendências WC 2022 → 2026</div><div id="trendsBlock"></div></div>
+
+  <div id="h2hConfrontoPanel" style="display:none;margin-top:.75rem"><div class="card"><div style="font-size:13px;font-weight:700;margin-bottom:.75rem" id="h2hConfrontoTitle">Historico direto</div><div id="h2hConfrontoBody"></div></div></div>
   </div>
 </section>
 
@@ -450,6 +475,77 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
   </div>
 </section>
 
+<section id="simulador" class="sec">
+<style>
+.sim-btn{padding:8px 20px;border-radius:var(--r);border:none;background:var(--ac);color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:7px}
+.sim-btn.sec{background:var(--sf2);color:var(--tx);border:1px solid var(--bd)}
+.sim-tabs{display:flex;gap:4px;margin-bottom:1rem;border-bottom:1px solid var(--bd);padding-bottom:8px;flex-wrap:wrap}
+.sim-tab{padding:5px 14px;border-radius:20px;border:1px solid transparent;background:transparent;color:var(--tx2);font-size:12px;cursor:pointer}
+.sim-tab.active{background:var(--sf2);color:var(--tx);border-color:var(--bd2);font-weight:600}
+.bracket-round{flex-shrink:0;min-width:155px;padding:0 5px}
+.bracket-round-title{font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;text-align:center;margin-bottom:8px}
+.bracket-match{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:5px 8px;margin-bottom:14px}
+.bracket-team{display:flex;align-items:center;gap:5px;padding:2px 0;font-size:12px}
+.bracket-team.winner{font-weight:700;color:var(--ac)}
+.group-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:.75rem}
+.group-table th{background:var(--sf2);padding:4px 7px;text-align:left;font-size:10px;font-weight:600;color:var(--tx3);text-transform:uppercase}
+.group-table td{padding:4px 7px;border-bottom:1px solid var(--bd)}
+.group-table tr.q td{background:rgba(29,158,117,.07)}
+</style>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:10px">
+  <div>
+    <div class="stitle">🏆 Simulador Copa 2026</div>
+    <div style="font-size:11px;color:var(--tx3)">Monte Carlo 10.000 simulações · Ratings + xG StatsBomb + fator casa</div>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <button class="sim-btn sec" onclick="runDeterministic()">⚙️ Resultado mais provável</button>
+    <button class="sim-btn" onclick="runMonteCarlo()">🎲 Simular 10.000x</button>
+  </div>
+</div>
+<div id="simProgress" style="display:none;height:4px;border-radius:2px;background:var(--bd);overflow:hidden;margin-bottom:8px">
+  <div id="simProgressFill" style="height:100%;border-radius:2px;background:var(--ac);transition:width .3s;width:0%"></div>
+</div>
+<div id="simStatus" style="font-size:12px;color:var(--tx3);margin-bottom:.75rem;min-height:18px"></div>
+<div id="simContent" style="display:none">
+  <div class="sim-tabs">
+    <button class="sim-tab active" onclick="showSimTab('champion',this)">🏆 Campeão</button>
+    <button class="sim-tab" onclick="showSimTab('bracket',this)">📊 Chaveamento</button>
+    <button class="sim-tab" onclick="showSimTab('groups',this)">📋 Grupos</button>
+    <button class="sim-tab" onclick="showSimTab('groupresults',this)">⚽ Resultados</button>
+    <button class="sim-tab" onclick="showSimTab('montecarlo',this)">🎲 Monte Carlo</button>
+  </div>
+  <div id="simTabChampion"></div>
+  <div id="simTabBracket" style="display:none"></div>
+  <div id="simTabGroups" style="display:none"></div>
+  <div id="simTabGroupresults" style="display:none"></div>
+  <div id="simTabMontecarlo" style="display:none"></div>
+</div>
+</section>
+<section id="betfair" class="sec">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px">
+  <div>
+    <div class="stitle">🏆 Betfair — Odds &amp; Tips</div>
+    <div style="font-size:11px;color:var(--tx3)">Mark O'Haire · Dave Tindall · Jun 2026</div>
+  </div>
+</div>
+<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📊 Tendências — Dave Tindall</div>
+<div id="tindallTrends" style="margin-bottom:1.5rem"></div>
+<div class="stitle" style="font-size:13px;margin-bottom:.75rem">⚽ Prévia do jogo</div>
+<div id="matchTipsContainer" style="margin-bottom:1.5rem"></div>
+<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📊 Odds Betfair (Jun 2026)</div>
+<div style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:12px">
+    <thead><tr style="background:var(--sf2)">
+      <th style="padding:7px 10px;text-align:left;font-size:10px;font-weight:600;color:var(--tx3)">Seleção</th>
+      <th style="padding:7px 10px;text-align:center;font-size:10px;font-weight:600;color:var(--tx3)">Odds</th>
+      <th style="padding:7px 10px;text-align:center;font-size:10px;font-weight:600;color:var(--tx3)">Prob.</th>
+    </tr></thead>
+    <tbody id="betfairOddsTable"></tbody>
+  </table>
+</div>
+<div class="stitle" style="font-size:13px;margin-top:1.5rem;margin-bottom:.75rem">📰 The Athletic — Como jogam</div>
+<div id="athleticProfiles" class="g2"></div>
+</section>
 </main>
 
 <footer class="footer">
@@ -1104,6 +1200,298 @@ window.AI_DATA = {"generated_at": "2026-06-11T20:01:35.522788+00:00", "generated
 if(window.LIVE_DATA && window.LIVE_DATA.games) {
   window.oddsData = window.LIVE_DATA;
 }
+</script>
+<script>
+
+
+// ── SIMULATOR ────────────────────────────────────────────────
+var SIM_GROUPS={A:['MEX','AFS','COR','TCH'],B:['CAN','BOS','CAT','SUI'],C:['BRA','MAR','HAI','ESC'],D:['EUA','PAR','AUS','TUR'],E:['ALE','CUR','CDM','EQU'],F:['HOL','JAP','SUE','TUN'],G:['BEL','EGI','IRA','NZE'],H:['ESP','CAB','ARS','URU'],I:['FRA','SEN','IRQ','NOR'],J:['ARG','AGL','AUT','JOR'],K:['POR','RDC','UZB','COL'],L:['ING','CRO','GAN','PAN']};
+var SIM_HOST={MEX:1.15,EUA:1.10,CAN:1.08};
+function simStr(c){var s=SCOUTS[c],sb=(SB_COMBINED||{})[c];if(!s)return 60;var v=s.rating*0.40;var xg=sb?sb.xg_pg:(s.xG||1.5),xga=sb?sb.xga_pg:(s.xGA||1.5);v+=xg*7-xga*3.5;if(sb&&sb.pressures_pg)v+=(sb.pressures_pg/200)*8;return Math.max(30,v);}
+function simMatch(a,b,draw){var sa=simStr(a)*(SIM_HOST[a]||1),sb=simStr(b)*(SIM_HOST[b]||1),tot=sa+sb;var pA=Math.max(0.08,sa/tot*0.65+0.175),pB=Math.max(0.08,sb/tot*0.65+0.175),pD=draw?Math.max(0.12,1-pA-pB):0;var r=Math.random(),winner,loser,sA,sB,isDraw=false;if(!draw||r>=pA+pD){winner=r<pA||(!draw&&r<pA/(pA+pB))?a:b;loser=winner===a?b:a;sA=winner===a?Math.round(1+Math.random()*2):Math.round(Math.random()*1);sB=winner===b?Math.round(1+Math.random()*2):Math.round(Math.random()*1);}else{isDraw=true;sA=sB=Math.round(Math.random()*2);}return{winner:isDraw?null:winner,loser:isDraw?null:loser,draw:isDraw,sA:sA,sB:sB};}
+function simGroups(rand){var st={},res={};Object.keys(SIM_GROUPS).forEach(function(g){SIM_GROUPS[g].forEach(function(t){st[t]={pts:0,gf:0,ga:0,w:0,d:0,l:0};});res[g]=[];});Object.entries(SIM_GROUPS).forEach(function(ge){var g=ge[0],teams=ge[1];for(var i=0;i<teams.length;i++){for(var j=i+1;j<teams.length;j++){var a=teams[i],b=teams[j];var m=rand?simMatch(a,b,true):(simStr(a)>simStr(b)?{winner:a,loser:b,draw:false,sA:2,sB:1}:simStr(b)>simStr(a)?{winner:b,loser:a,draw:false,sA:1,sB:2}:{winner:null,loser:null,draw:true,sA:1,sB:1});res[g].push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB,draw:m.draw});if(m.draw){st[a].pts+=1;st[a].d++;st[b].pts+=1;st[b].d++;}else{st[m.winner].pts+=3;st[m.winner].w++;st[m.loser].l++;}st[a].gf+=m.sA;st[a].ga+=m.sB;st[b].gf+=m.sB;st[b].ga+=m.sA;}}});var qual={},rank={};Object.entries(SIM_GROUPS).forEach(function(ge){var g=ge[0],teams=ge[1];var s=teams.slice().sort(function(x,y){var sx=st[x],sy=st[y];if(sy.pts!==sx.pts)return sy.pts-sx.pts;return(sy.gf-sy.ga)-(sx.gf-sx.ga);});rank[g]=s;qual[g]={first:s[0],second:s[1]};});return{st:st,qual:qual,rank:rank,res:res};}
+function simKO(qual,rand){var R16=[[qual.A.first,qual.B.second],[qual.C.first,qual.D.second],[qual.E.first,qual.F.second],[qual.G.first,qual.H.second],[qual.B.first,qual.A.second],[qual.D.first,qual.C.second],[qual.F.first,qual.E.second],[qual.H.first,qual.G.second]];var br={r16:[],qf:[],sf:[],final:[],champion:null};var r16w=R16.map(function(p){var m=rand?simMatch(p[0],p[1],false):{winner:simStr(p[0])>simStr(p[1])?p[0]:p[1],sA:1,sB:0};br.r16.push({a:p[0],b:p[1],winner:m.winner,sA:m.sA,sB:m.sB});return m.winner;});var qfw=[];for(var i=0;i<4;i++){var m=rand?simMatch(r16w[i*2],r16w[i*2+1],false):{winner:simStr(r16w[i*2])>simStr(r16w[i*2+1])?r16w[i*2]:r16w[i*2+1],sA:1,sB:0};br.qf.push({a:r16w[i*2],b:r16w[i*2+1],winner:m.winner,sA:m.sA,sB:m.sB});qfw.push(m.winner);}var sfw=[];for(var i=0;i<2;i++){var m=rand?simMatch(qfw[i*2],qfw[i*2+1],false):{winner:simStr(qfw[i*2])>simStr(qfw[i*2+1])?qfw[i*2]:qfw[i*2+1],sA:1,sB:0};br.sf.push({a:qfw[i*2],b:qfw[i*2+1],winner:m.winner,sA:m.sA,sB:m.sB});sfw.push(m.winner);}var fm=rand?simMatch(sfw[0],sfw[1],false):{winner:simStr(sfw[0])>simStr(sfw[1])?sfw[0]:sfw[1],sA:1,sB:0};br.final.push({a:sfw[0],b:sfw[1],winner:fm.winner,sA:fm.sA,sB:fm.sB});br.champion=fm.winner;return br;}
+function showSimTab(id,btn){document.querySelectorAll('.sim-tab').forEach(function(b){b.classList.remove('active');});if(btn)btn.classList.add('active');['champion','bracket','groups','groupresults','montecarlo'].forEach(function(t){var el=document.getElementById('simTab'+t.charAt(0).toUpperCase()+t.slice(1));if(el)el.style.display=t===id?'block':'none';});}
+function runDeterministic(){document.getElementById('simStatus').textContent='Calculando...';document.getElementById('simContent').style.display='none';setTimeout(function(){var g=simGroups(false);var br=simKO(g.qual,false);window._simDet={g:g,br:br};renderSimChampion(br.champion,null);renderSimBracket(br);renderSimGroups(g);renderSimGroupResults(g);document.getElementById('simStatus').textContent='Resultado mais provavel calculado';document.getElementById('simContent').style.display='block';showSimTab('champion',document.querySelector('.sim-tab'));},100);}
+function runMonteCarlo(){var N=10000,counts={};Object.keys(SCOUTS).forEach(function(c){counts[c]={r16:0,qf:0,sf:0,final:0,champion:0};});var i=0;document.getElementById('simProgress').style.display='block';document.getElementById('simContent').style.display='none';function batch(){var end=Math.min(i+500,N);for(;i<end;i++){var g=simGroups(true);var br=simKO(g.qual,true);br.r16.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r16++;});br.qf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].qf++;});br.sf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].sf++;});br.final.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].final++;});if(br.champion&&counts[br.champion])counts[br.champion].champion++;}var pct=Math.round(i/N*100);document.getElementById('simProgressFill').style.width=pct+'%';document.getElementById('simStatus').textContent='Simulando... '+pct+'%';if(i<N){setTimeout(batch,0);}else{window._simMC={counts:counts,N:N};document.getElementById('simProgress').style.display='none';var g2=simGroups(false);var br2=simKO(g2.qual,false);renderSimChampion(br2.champion,counts);renderSimBracket(br2);renderSimGroups(g2);renderSimGroupResults(g2);renderSimMC(counts,N);document.getElementById('simStatus').textContent=N.toLocaleString()+' simulacoes concluidas';document.getElementById('simContent').style.display='block';showSimTab('montecarlo',document.querySelectorAll('.sim-tab')[4]);}}setTimeout(batch,50);}
+function renderSimChampion(ch,counts){var t=SCOUTS[ch]||{flag:'',name:ch};var pct=counts?((counts[ch]&&counts[ch].champion||0)/window._simMC.N*100).toFixed(1):null;var html='<div style="background:linear-gradient(135deg,var(--bl-bg),var(--gn-bg));border:2px solid var(--gn);border-radius:var(--rl);padding:1.5rem;text-align:center;margin-bottom:1.25rem"><div style="font-size:48px;margin-bottom:8px">🏆</div><div style="font-size:32px">'+(t.flag||'')+'</div><div style="font-size:22px;font-weight:700;font-family:Space Grotesk,sans-serif">'+(t.name||ch)+'</div>'+(pct?'<div style="font-size:13px;color:var(--tx2);margin-top:6px">'+pct+'% nas simulacoes</div>':'')+'</div>';if(counts){var sorted=Object.entries(counts).filter(function(e){return e[1].champion>0;}).sort(function(a,b){return b[1].champion-a[1].champion;}).slice(0,10);html+='<div style="display:flex;flex-direction:column;gap:5px">';sorted.forEach(function(e){var code=e[0],c=e[1];var p=(c.champion/window._simMC.N*100).toFixed(1);var t2=SCOUTS[code]||{flag:'',name:code};html+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)"><span style="font-size:18px">'+(t2.flag||'')+'</span><span style="font-size:12px;flex:1">'+(t2.name||code)+'</span><div style="flex:2;background:var(--bd);border-radius:2px;height:6px;overflow:hidden"><div style="height:100%;width:'+Math.min(100,p*3)+'%;background:'+(p>15?'var(--ac)':p>8?'var(--gn)':'var(--am)')+';border-radius:2px"></div></div><span style="min-width:42px;text-align:right;font-size:13px;font-weight:700;font-family:Space Grotesk,sans-serif">'+p+'%</span></div>';});html+='</div>';}document.getElementById('simTabChampion').innerHTML=html;}
+function renderSimBracket(br){var rounds=[{t:'Oitavas',m:br.r16},{t:'Quartas',m:br.qf},{t:'Semi',m:br.sf},{t:'Final',m:br.final}];var html='<div style="overflow-x:auto"><div style="display:flex;gap:0">';rounds.forEach(function(r){html+='<div class="bracket-round"><div class="bracket-round-title">'+r.t+'</div>';r.m.forEach(function(m){var aW=m.winner===m.a;html+='<div class="bracket-match"><div class="bracket-team '+(aW?'winner':'')+'"><span>'+(SCOUTS[m.a]&&SCOUTS[m.a].flag||'🏳')+'</span><span style="flex:1;font-size:11px">'+(SCOUTS[m.a]&&SCOUTS[m.a].name||m.a)+'</span><span style="margin-left:auto;font-size:12px;font-weight:700">'+(m.sA!=null?m.sA:'')+'</span></div><div class="bracket-team '+(m.winner===m.b?'winner':'')+'"><span>'+(SCOUTS[m.b]&&SCOUTS[m.b].flag||'🏳')+'</span><span style="flex:1;font-size:11px">'+(SCOUTS[m.b]&&SCOUTS[m.b].name||m.b)+'</span><span style="margin-left:auto;font-size:12px;font-weight:700">'+(m.sB!=null?m.sB:'')+'</span></div>'+(r.t==='Final'&&m.winner?'<div style="text-align:center;font-size:10px;color:var(--ac);font-weight:700;margin-top:3px">🏆 CAMPEAO</div>':'')+'</div>';});html+='</div>';});html+='</div></div>';document.getElementById('simTabBracket').innerHTML=html;}
+function renderSimGroups(g){var html='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px">';Object.keys(SIM_GROUPS).forEach(function(gr){var teams=g.rank[gr];html+='<div class="card" style="margin-bottom:0"><div class="grp-hdr">Grupo '+gr+'</div><table class="group-table"><thead><tr><th>Sel.</th><th>Pts</th><th>V</th><th>E</th><th>D</th><th>GF</th><th>GC</th></tr></thead><tbody>';teams.forEach(function(c,i){var s=g.st[c],t=SCOUTS[c]||{flag:'🏳',name:c};var q=i<2;html+='<tr class="'+(q?'q':'')+'"><td>'+(t.flag||'🏳')+' '+(t.name||c)+'</td><td><b>'+s.pts+'</b></td><td>'+s.w+'</td><td>'+s.d+'</td><td>'+s.l+'</td><td>'+s.gf+'</td><td>'+s.ga+'</td></tr>';});html+='</tbody></table></div>';});html+='</div>';document.getElementById('simTabGroups').innerHTML=html;}
+function renderSimGroupResults(g){var html='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">';Object.keys(SIM_GROUPS).forEach(function(gr){html+='<div class="card" style="margin-bottom:0"><div class="grp-hdr" style="margin-bottom:.6rem">Grupo '+gr+'</div>';g.res[gr].forEach(function(m){var ht=SCOUTS[m.a]||{flag:'🏳',name:m.a},at=SCOUTS[m.b]||{flag:'🏳',name:m.b};html+='<div style="display:flex;align-items:center;gap:5px;padding:4px 0;border-bottom:1px solid var(--bd);font-size:12px"><span style="font-size:14px">'+(ht.flag||'')+'</span><span style="flex:1;font-weight:'+(m.winner===m.a?700:400)+'">'+(ht.name||m.a)+'</span><b style="font-family:Space Grotesk,sans-serif;font-size:13px;background:var(--sf2);padding:1px 6px;border-radius:5px">'+m.sA+'-'+m.sB+'</b><span style="flex:1;text-align:right;font-weight:'+(m.winner===m.b?700:400)+'">'+(at.name||m.b)+'</span><span style="font-size:14px">'+(at.flag||'')+'</span></div>';});html+='</div>';});html+='</div>';document.getElementById('simTabGroupresults').innerHTML=html;}
+function renderSimMC(counts,N){var sorted=Object.entries(counts).filter(function(e){return e[1].r16>0&&SCOUTS[e[0]];}).sort(function(a,b){return b[1].champion-a[1].champion;});var html='<p style="font-size:12px;color:var(--tx2);margin-bottom:1rem">'+N.toLocaleString()+' simulacoes</p><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px">';sorted.forEach(function(e){var code=e[0],c=e[1],t=SCOUTS[code]||{flag:'',name:code};var pch=(c.champion/N*100).toFixed(1);html+='<div class="card" style="margin-bottom:0;padding:.65rem .8rem"><div style="display:flex;align-items:center;gap:7px;margin-bottom:5px"><span style="font-size:20px">'+(t.flag||'')+'</span><span style="font-size:12px;font-weight:600;flex:1">'+(t.name||code)+'</span><b style="font-size:16px;color:var(--ac)">'+pch+'%</b></div>'+[['Camp.',c.champion,'var(--ac)'],['Final',c.final,'var(--gn)'],['Semi',c.sf,'var(--am)']].map(function(row){var p=(row[1]/N*100).toFixed(1);return '<div style="display:flex;align-items:center;gap:5px;font-size:11px;margin-bottom:2px"><span style="width:38px;color:var(--tx3)">'+row[0]+'</span><div style="flex:1;background:var(--bd);border-radius:2px;height:4px;overflow:hidden"><div style="height:100%;width:'+Math.min(100,p*3)+'%;background:'+row[2]+';border-radius:2px"></div></div><span style="min-width:30px;text-align:right">'+p+'%</span></div>';}).join('')+'</div>';});html+='</div>';document.getElementById('simTabMontecarlo').innerHTML=html;}
+
+// ── BETFAIR RENDER ────────────────────────────────────────────
+var BETFAIR_ODDS={FRA:5.5,ESP:5.5,ING:7.5,BRA:9.0,ARG:11.0,POR:11.0,ALE:13.0,HOL:15.0,BEL:21.0,COL:41.0,NOR:41.0,JAP:51.0,EUA:51.0,MAR:67.0,MEX:67.0,URU:67.0,SUI:81.0,AUT:101.0,CRO:101.0,EQU:101.0,TUR:101.0,CAN:151.0,CDM:151.0,ESC:151.0,SEN:151.0,SUE:151.0,AGL:251.0,EGI:251.0,PAR:251.0,AUS:501.0,BOS:501.0,CAB:501.0,CUR:501.0,TCH:501.0,RDC:501.0,GAN:501.0,HAI:501.0,IRA:501.0,IRQ:501.0,JOR:501.0,NZE:501.0,PAN:501.0,CAT:501.0,ARS:501.0,AFS:501.0,COR:501.0,TUN:501.0,UZB:501.0};
+var TINDALL=[{pos:1,code:'FRA',pts:66,reason:'Melhor media de idade, top 3 ELO, finalista 2022'},{pos:2,code:'ESP',pts:62,reason:'Campea Euros 2024, Nations League, top 5 ELO'},{pos:3,code:'ARG',pts:57,reason:'Campea atual'},{pos:4,code:'ING',pts:52,reason:'Top 5 ELO, Tuchel'},{pos:5,code:'BRA',pts:49,reason:'5x campea, Ancelotti'},{pos:6,code:'ALE',pts:48,reason:'4x campea, odds acima de 10/1'},{pos:7,code:'HOL',pts:42,reason:'3x vice, top 6-10 ELO'},{pos:8,code:'CRO',pts:39,reason:'Final 2018, vice historica'},{pos:9,code:'POR',pts:38,reason:'Nunca venceu, Nations League 2025'}];
+var MATCH_TIPS=[{date:'11/06/2026',home:'MEX',away:'AFS',group:'A',source:'Paul Higham',tips:[{bet:'Mexico vence sem sofrer gols',odd:'10/11',hot:true,reason:'Mexico invicto no Azteca em Mundiais. 6 clean sheets nos ultimos 8 jogos.'},{bet:'Mexico 2+ gols + mais escanteios + AFS 3+ cartoes',odd:'9/2',hot:true,reason:'Mexico liderou no intervalo em 5 dos ultimos 6. AFS: 3+ cartoes em 3 dos ultimos 4.'},{bet:'Johan Vasquez 1+ chute a gol',odd:'12/5',hot:false,reason:'Marcou de cabeca nos ultimos 2 jogos.'}],scoreline:'Mexico 2-0 Africa do Sul'}];
+
+function renderBetfair(){
+  // Tindall
+  var maxPts=TINDALL[0].pts;
+  var th='<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:.75rem">';
+  TINDALL.forEach(function(r){var t=SCOUTS[r.code]||{flag:'',name:r.code};th+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)"><span style="font-size:11px;color:var(--tx3);width:20px;text-align:right">'+r.pos+'.</span><span style="font-size:18px">'+(t.flag||'')+'</span><span style="font-size:12px;flex:1">'+(t.name||r.code)+'</span><div style="flex:2;background:var(--bd);border-radius:2px;height:5px;overflow:hidden"><div style="height:100%;width:'+(r.pts/maxPts*100).toFixed(0)+'%;background:'+(r.pts>=60?'var(--ac)':'var(--gn)')+';border-radius:2px"></div></div><b style="font-size:13px;font-family:Space Grotesk,sans-serif;min-width:28px;text-align:right">'+r.pts+'</b></div>';});
+  th+='</div><div style="font-size:11px;color:var(--tx3)">Recomendacao Dave Tindall: <b>Franca 9/2</b> · Final Franca-Argentina <b>25/1</b></div>';
+  document.getElementById('tindallTrends').innerHTML=th;
+  // Match tips
+  document.getElementById('matchTipsContainer').innerHTML=MATCH_TIPS.map(function(m){var ht=SCOUTS[m.home]||{flag:'',name:m.home},at=SCOUTS[m.away]||{flag:'',name:m.away};return'<div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;flex-wrap:wrap;gap:8px"><b style="font-size:14px;font-family:Space Grotesk,sans-serif">'+(ht.flag||'')+' '+(ht.name||m.home)+' vs '+(at.flag||'')+' '+(at.name||m.away)+'</b><span style="font-size:11px;color:var(--tx3)">'+m.date+' · Grupo '+m.group+'</span></div>'+m.tips.map(function(t){return'<div style="background:'+(t.hot?'var(--gn-bg)':'var(--am-bg)')+';border-left:3px solid '+(t.hot?'var(--gn)':'var(--am)')+';border-radius:0 var(--r) var(--r) 0;padding:.6rem .85rem;margin-bottom:5px"><div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:2px"><b style="font-size:12px">'+(t.bet)+'</b><b style="font-size:13px;font-family:Space Grotesk,sans-serif;flex-shrink:0">'+(t.odd)+'</b></div><div style="font-size:11px;color:var(--tx2)">'+(t.reason)+'</div></div>';}).join('')+'<div style="margin-top:.5rem;font-size:11px;display:flex;justify-content:space-between"><span style="color:var(--tx3)">Fonte: '+m.source+'</span><b style="color:var(--ac)">Placar: '+m.scoreline+'</b></div></div>';}).join('');
+  // Odds table
+  var sorted=Object.entries(SCOUTS).filter(function(e){return e[1].rating&&BETFAIR_ODDS[e[0]];}).sort(function(a,b){return(BETFAIR_ODDS[a[0]]||999)-(BETFAIR_ODDS[b[0]]||999);});
+  document.getElementById('betfairOddsTable').innerHTML=sorted.map(function(e){var code=e[0],t=e[1];var odd=BETFAIR_ODDS[code];var imp=(100/odd).toFixed(1);return'<tr style="border-bottom:1px solid var(--bd)"><td style="padding:6px 10px"><span style="font-size:16px">'+(t.flag||'')+'</span> '+(t.name||code)+'</td><td style="padding:6px 10px;text-align:center;font-weight:700;font-family:Space Grotesk,sans-serif;font-size:14px">'+odd+'</td><td style="padding:6px 10px;text-align:center;font-size:12px">'+imp+'%</td></tr>';}).join('');
+  // Athletic
+  var ath=ATHLETIC_NOTES||{};
+  document.getElementById('athleticProfiles').innerHTML=Object.keys(ath).filter(function(c){return SCOUTS[c];}).map(function(code){var t=SCOUTS[code]||{},a=ath[code]||{};return'<div class="card" style="margin-bottom:0"><div style="display:flex;align-items:center;gap:10px;margin-bottom:.75rem"><span style="font-size:28px">'+(t.flag||'')+'</span><div><div style="font-size:13px;font-weight:700">'+(t.name||code)+'</div><div style="font-size:11px;color:var(--tx3)">The Athletic</div></div></div>'+(a.play?'<div style="font-size:12px;color:var(--tx2);line-height:1.6;margin-bottom:.4rem">'+a.play.substring(0,320)+'</div>':'')+(a.key_player&&!a.key_player.includes('194')?'<div style="font-size:11px;color:var(--tx3)"><b style="color:var(--ac)">Jogador-chave:</b> '+a.key_player.substring(0,200)+'</div>':'')+'</div>';}).join('')||'<p style="color:var(--tx3)">Sem dados.</p>';
+}
+
+// Hook renders
+// betfair triggered by nav click
+
+
+// ── STATSBOMB RANKING (Dashboard) ────────────────────────────
+function setSBView(view) {
+  window._sbView = view;
+  var views = ['combined','wc22','wc18'];
+  var ids = ['sbBtnCombined','sbBtnWc22','sbBtnWc18'];
+  views.forEach(function(v, i) {
+    var btn = document.getElementById(ids[i]);
+    if (!btn) return;
+    if (v === view) {
+      btn.className = 'btn btn-sm';
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.style.border = '';
+    } else {
+      btn.style.background = 'var(--sf2)';
+      btn.style.color = 'var(--tx)';
+      btn.style.border = '1px solid var(--bd)';
+    }
+  });
+  renderSBRanking();
+}
+
+function renderSBRanking() {
+  var el = document.getElementById('sbRanking');
+  if (!el) return;
+  var view = window._sbView || 'combined';
+  var ds = view === 'wc22' ? (window.SB_WC22 || {})
+         : view === 'wc18' ? (window.SB_WC18 || {})
+         : (window.SB_COMBINED || {});
+  var entries = Object.entries(ds)
+    .filter(function(e) { return SCOUTS[e[0]] && SCOUTS[e[0]].rating; })
+    .sort(function(a, b) { return b[1].xg_pg - a[1].xg_pg; });
+  if (!entries.length) {
+    el.innerHTML = '<p style="color:var(--tx3);font-size:12px">Sem dados StatsBomb disponíveis.</p>';
+    return;
+  }
+  var maxXG = entries[0][1].xg_pg;
+  el.innerHTML = entries.map(function(e, i) {
+    var code = e[0], s = e[1], t = SCOUTS[code] || {};
+    var both = !!(window.SB_WC22||{})[code] && !!(window.SB_WC18||{})[code];
+    var diff = (s.xg_pg - s.xga_pg).toFixed(2);
+    var diffCol = diff > 0 ? 'var(--gn-tx)' : 'var(--rd-tx)';
+    return '<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)">'
+      + '<span style="font-size:11px;color:var(--tx3);min-width:20px;text-align:right">' + (i+1) + '</span>'
+      + '<span style="font-size:18px">' + (t.flag||'') + '</span>'
+      + '<span style="font-size:12px;flex:1;font-weight:500">' + (t.name||code) + (both ? ' <span style="color:var(--ac);font-size:9px">★</span>' : '') + '</span>'
+      + '<div style="flex:2;background:var(--bd);border-radius:2px;height:6px;overflow:hidden"><div style="height:100%;width:' + Math.min(100, s.xg_pg/maxXG*100).toFixed(0) + '%;background:var(--bl);border-radius:2px"></div></div>'
+      + '<span style="font-family:Space Grotesk,sans-serif;font-size:12px;font-weight:700;min-width:32px;text-align:right">' + s.xg_pg + '</span>'
+      + '<span style="font-size:11px;color:var(--rd-tx);min-width:30px;text-align:right">-' + s.xga_pg + '</span>'
+      + '<span style="font-size:11px;color:' + diffCol + ';min-width:36px;text-align:right;font-weight:600">' + (diff > 0 ? '+' : '') + diff + '</span>'
+      + '<span style="font-size:10px;color:var(--tx3);min-width:20px;text-align:right">' + s.matches + 'j</span>'
+      + '</div>';
+  }).join('');
+}
+
+// Auto-render SB ranking when dashboard tab opens
+var _origShowSecDash = showSec;
+function showSec(id,btn) {
+  _origShowSecDash(id,btn);
+  if (id === 'dashboard' && typeof renderSBRanking === 'function') {
+    setTimeout(function() { renderSBRanking(); }, 100);
+  }
+}
+
+
+</script>
+<script>
+
+
+var _calOpen = false;
+
+function toggleCalendario() {
+  _calOpen = !_calOpen;
+  var el = document.getElementById('calConfrontoList');
+  var btn = document.getElementById('btnToggleCal');
+  if (!el) return;
+  el.style.display = _calOpen ? 'block' : 'none';
+  if (btn) btn.textContent = _calOpen ? 'Fechar' : 'Ver todos';
+  if (_calOpen) { initCalTeamSelect(); renderCalConfronto(); }
+}
+
+function initCalTeamSelect() {
+  var sel = document.getElementById('calTeamFilter');
+  if (!sel || sel.options.length > 1) return;
+  Object.entries(SCOUTS)
+    .filter(function(e){ return e[1].rating || e[1].group; })
+    .sort(function(a,b){ return (a[1].name||a[0]).localeCompare(b[1].name||b[0]); })
+    .forEach(function(e) {
+      var o = document.createElement('option');
+      o.value = e[0]; o.textContent = (e[1].flag||'') + ' ' + (e[1].name||e[0]);
+      sel.appendChild(o);
+    });
+}
+
+function renderCalConfronto() {
+  var el = document.getElementById('calConfrontoList');
+  if (!el) return;
+  var gf = (document.getElementById('calGroup')||{value:''}).value;
+  var tf = (document.getElementById('calTeamFilter')||{value:''}).value;
+  var fixtures = window.WC_FIXTURES || [];
+  if (!fixtures.length) { el.innerHTML = '<p style="padding:.5rem;color:var(--tx3);font-size:12px">Sem dados</p>'; return; }
+  if (gf === 'KO') fixtures = fixtures.filter(function(f){ return !f.group; });
+  else if (gf) fixtures = fixtures.filter(function(f){ return f.group === gf; });
+  if (tf) fixtures = fixtures.filter(function(f){ return f.home === tf || f.away === tf; });
+  var byDate = {};
+  fixtures.forEach(function(f){ if (!byDate[f.date]) byDate[f.date]=[]; byDate[f.date].push(f); });
+  var today = new Date().toISOString().split('T')[0];
+  var out = '';
+  Object.keys(byDate).sort().forEach(function(date) {
+    var d = new Date(date + 'T12:00:00');
+    var ds = d.toLocaleDateString('pt-BR', {weekday:'short', day:'2-digit', month:'short'});
+    var isToday = date===today, isPast = date<today;
+    var col = isToday ? 'var(--ac)' : (isPast ? 'var(--tx3)' : 'var(--tx2)');
+    out += '<div style="font-size:10px;font-weight:700;color:'+col+';text-transform:uppercase;padding:5px 0 2px;border-top:1px solid var(--bd);margin-top:2px">'+ds+(isToday?' · HOJE':'')+'</div>';
+    byDate[date].forEach(function(f) {
+      var ht = SCOUTS[f.home]||{flag:'\u{1F3F3}',name:f.home};
+      var at = SCOUTS[f.away]||{flag:'\u{1F3F3}',name:f.away};
+      var grp = f.group ? 'Gr.'+f.group : (f.round||'KO');
+      var sc = f.played ? '<b style="color:var(--ac)">'+f.score1+'-'+f.score2+'</b>' : '<span style="color:var(--tx3)">'+(f.time||'--:--')+'</span>';
+      out += '<div class="cal-row" data-h="'+f.home+'" data-a="'+f.away+'" style="display:flex;align-items:center;gap:7px;padding:5px 3px;cursor:pointer;border-radius:4px">'
+        +'<span style="font-size:10px;color:var(--tx3);min-width:32px">'+grp+'</span>'
+        +'<span style="font-size:15px">'+(ht.flag||'')+'</span>'
+        +'<span style="flex:1;font-size:12px;font-weight:600">'+tn(f.home)+'</span>'
+        +'<span style="min-width:44px;text-align:center;font-size:13px">'+sc+'</span>'
+        +'<span style="flex:1;font-size:12px;font-weight:600;text-align:right">'+tn(f.away)+'</span>'
+        +'<span style="font-size:15px">'+(at.flag||'')+'</span>'
+        +'<span style="font-size:10px;color:var(--tx3);min-width:52px;text-align:right">'+(f.city||'')+'</span>'
+        +'</div>';
+    });
+  });
+  el.innerHTML = out || '<p style="color:var(--tx3);font-size:12px;padding:.5rem">Nenhum jogo.</p>';
+  // Attach click handlers after render (avoids inline onclick quote issues)
+  el.querySelectorAll('.cal-row').forEach(function(row) {
+    row.addEventListener('mouseover', function(){ this.style.background='var(--sf)'; });
+    row.addEventListener('mouseout',  function(){ this.style.background='transparent'; });
+    row.addEventListener('click', function(){ selectMatchup(this.dataset.h, this.dataset.a); });
+  });
+}
+
+function renderTodayFixtures() {
+  var el = document.getElementById('todayFixtures');
+  if (!el) return;
+  var fixtures = window.WC_FIXTURES || [];
+  var today = new Date().toISOString().split('T')[0];
+  var seen={}, allDates=[];
+  fixtures.forEach(function(f){ if(f.date>=today&&!seen[f.date]){seen[f.date]=1;allDates.push(f.date);} });
+  allDates.sort();
+  var targets = allDates.slice(0, allDates[0]===today ? 3 : 2);
+  var games = fixtures.filter(function(f){ return targets.indexOf(f.date)>=0; });
+  if (!games.length) { el.innerHTML=''; return; }
+  var container = document.createElement('div');
+  container.style.cssText = 'background:var(--sf2);border:1px solid var(--bd);border-radius:var(--rl);padding:.7rem 1rem';
+  var title = document.createElement('div');
+  title.style.cssText = 'font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;margin-bottom:.5rem';
+  title.textContent = 'JOGOS · clique para analisar';
+  container.appendChild(title);
+  var wrap = document.createElement('div');
+  wrap.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px';
+  games.forEach(function(f) {
+    var ht=SCOUTS[f.home]||{flag:'',name:f.home}, at=SCOUTS[f.away]||{flag:'',name:f.away};
+    var isToday=f.date===today;
+    var d=new Date(f.date+'T12:00:00');
+    var lbl=isToday?'':(d.toLocaleDateString('pt-BR',{day:'2-digit',month:'short'})+' · ');
+    var sc=f.played?(f.score1+'-'+f.score2):(f.time||'');
+    var btn=document.createElement('button');
+    btn.style.cssText='background:'+(isToday?'var(--ac)':'var(--sf)')+';color:'+(isToday?'#fff':'var(--tx)')+';border:1px solid '+(isToday?'var(--ac)':'var(--bd)')+';border-radius:var(--r);padding:5px 11px;cursor:pointer;font-size:12px;font-family:inherit;display:inline-flex;align-items:center;gap:5px';
+    btn.innerHTML='<span style="font-size:14px">'+(ht.flag||'')+'</span><b>'+tn(f.home)+'</b><span style="opacity:.7;font-size:11px">'+lbl+sc+'</span><b>'+tn(f.away)+'</b><span style="font-size:14px">'+(at.flag||'')+'</span>';
+    btn.addEventListener('click', (function(h,a){ return function(){ selectMatchup(h,a); }; })(f.home,f.away));
+    wrap.appendChild(btn);
+  });
+  container.appendChild(wrap);
+  el.innerHTML='';
+  el.appendChild(container);
+}
+
+function selectMatchup(h, a) {
+  var selH=document.getElementById('selHome'), selA=document.getElementById('selAway');
+  if (!selH||!selA) return;
+  selH.value=h; selA.value=a;
+  if(typeof clearMatch==='function') clearMatch();
+  if(typeof renderMatchup==='function') renderMatchup();
+  setTimeout(function(){
+    var m=document.getElementById('matchup');
+    if(m) m.scrollIntoView({behavior:'smooth',block:'start'});
+    showH2HConfronto(h,a);
+  }, 300);
+  if(_calOpen) toggleCalendario();
+}
+
+function showH2HConfronto(h, a) {
+  var panel=document.getElementById('h2hConfrontoPanel');
+  var titleEl=document.getElementById('h2hConfrontoTitle');
+  var bodyEl=document.getElementById('h2hConfrontoBody');
+  if(!panel) return;
+  var ht=SCOUTS[h]||{flag:'',name:h}, at=SCOUTS[a]||{flag:'',name:a};
+  if(titleEl) titleEl.textContent=(ht.flag||'')+' '+tn(h)+' vs '+(at.flag||'')+' '+tn(a)+' - Historico direto';
+  var key=[h,a].sort().join('_');
+  var matches=(window.H2H_DATA||{})[key]||[];
+  if(!bodyEl){panel.style.display='block';return;}
+  if(!matches.length){bodyEl.innerHTML='<p style="color:var(--tx3);font-size:12px;margin:0">Sem confrontos diretos (2019-2026).</p>';panel.style.display='block';return;}
+  var w1=0,w2=0,dr=0;
+  var rows=matches.map(function(m){
+    var isH=m.home===h, s1=isH?m.score1:m.score2, s2=isH?m.score2:m.score1;
+    if(s1>s2)w1++; else if(s2>s1)w2++; else dr++;
+    var hT=SCOUTS[m.home]||{flag:'',name:m.home}, aT=SCOUTS[m.away]||{flag:'',name:m.away};
+    var res=s1>s2?'V':s2>s1?'D':'E';
+    var bg=res==='V'?'var(--gn-bg)':res==='D'?'rgba(220,60,60,.1)':'var(--sf2)';
+    var tc=res==='V'?'var(--gn-tx)':res==='D'?'#e05555':'var(--tx2)';
+    var dd=new Date(m.date+'T12:00:00');
+    var wc=m.tournament.toLowerCase().indexOf('world')>=0;
+    return '<div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid var(--bd);font-size:12px">'
+      +'<span style="color:var(--tx3);min-width:58px;font-size:11px">'+dd.toLocaleDateString('pt-BR',{month:'short',year:'2-digit'})+'</span>'
+      +'<span style="width:20px;height:20px;border-radius:50%;background:'+bg+';display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:'+tc+'">'+res+'</span>'
+      +'<span style="font-size:15px">'+(hT.flag||'')+'</span>'
+      +'<span style="flex:1;font-weight:'+(m.home===h?700:400)+'">'+tn(m.home)+'</span>'
+      +'<b style="font-family:Space Grotesk,sans-serif;font-size:13px;background:var(--sf2);padding:1px 8px;border-radius:6px;flex-shrink:0">'+m.score1+'-'+m.score2+'</b>'
+      +'<span style="flex:1;text-align:right;font-weight:'+(m.away===h?700:400)+'">'+tn(m.away)+'</span>'
+      +'<span style="font-size:15px">'+(aT.flag||'')+'</span>'
+      +'<span style="font-size:10px;color:'+(wc?'var(--ac)':'var(--tx3)')+';max-width:90px;text-align:right;flex-shrink:0">'+m.tournament.substring(0,25)+(m.neutral?' N':'')+'</span>'
+      +'</div>';
+  }).join('');
+  bodyEl.innerHTML='<div style="display:flex;gap:16px;margin-bottom:.7rem;font-size:13px;flex-wrap:wrap">'
+    +'<span>'+(ht.flag||'')+' <b style="color:var(--gn-tx)">'+w1+'V</b> '+tn(h)+'</span>'
+    +'<span><b>'+dr+'E</b></span>'
+    +'<span>'+(at.flag||'')+' <b style="color:var(--gn-tx)">'+w2+'V</b> '+tn(a)+'</span>'
+    +'<span style="color:var(--tx3);font-size:11px;margin-left:auto">'+matches.length+' jogos</span>'
+    +'</div>'+rows;
+  panel.style.display='block';
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  setTimeout(function(){
+    var selH=document.getElementById('selHome'), selA=document.getElementById('selAway');
+    function onChange(){
+      var h=document.getElementById('selHome').value, a=document.getElementById('selAway').value;
+      if(h&&a&&h!==a) showH2HConfronto(h,a);
+      else { var p=document.getElementById('h2hConfrontoPanel'); if(p) p.style.display='none'; }
+    }
+    if(selH) selH.addEventListener('change', onChange);
+    if(selA) selA.addEventListener('change', onChange);
+    initCalTeamSelect();
+    renderTodayFixtures();
+  }, 800);
+});
+
+
 </script>
 </body>
 </html>
