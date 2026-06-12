@@ -1303,7 +1303,6 @@ function renderSBRanking() {
 }
 
 // Auto-render SB ranking when dashboard tab opens
-var _origShowSecDash = showSec;
 function showSec(id,btn) {
   _baseShowSec(id,btn);
   if (id === 'dashboard' && typeof renderSBRanking === 'function') {
