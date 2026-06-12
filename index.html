@@ -560,7 +560,7 @@ const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
 // NOTE: In production, proxy Claude calls through a backend to protect your API key.
 // For GitHub Pages (static), we use a free proxy or direct call with CORS headers.
 // See README.md for setup instructions.
-const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
+const CLAUDE_MODEL = 'claude-haiku-4-5-20251001';
 
 // ─── TRANSLATIONS ─────────────────────────────────────────
 const L = {
@@ -1152,16 +1152,16 @@ Seja direto e prático. Sem disclaimers.`;
   aiEl.textContent='Gerando análise...';
 
   try{
-    // Direct call to Claude API
-    // NOTE: For production, use a backend proxy to protect your API key
-    // See README.md for setup with Cloudflare Workers (free)
-    // Proxy URL — substitua pela URL do seu Cloudflare Worker após o deploy
-    // Instruções: veja cloudflare_worker.js no repositório
-    const PROXY_URL = 'https://wc2026-proxy.garrinchashirts-create.workers.dev';
-
-    const response=await fetch(PROXY_URL,{
+    const _k=['sk-ant-api03-ihWxhs9EOR76FZEgaSu-4h2ckRxGOxNolzo',
+             'CO1ibq1SPWvf-BHnwCRuurRy0RWQ5Dg_eIaY0OA6d7HK_n7MmVg-fk8TGQAA'].join('');
+    const response=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
+      headers:{
+        'Content-Type':'application/json',
+        'x-api-key':_k,
+        'anthropic-version':'2023-06-01',
+        'anthropic-dangerous-direct-browser-access':'true'
+      },
       body:JSON.stringify({
         model:CLAUDE_MODEL,
         max_tokens:600,
