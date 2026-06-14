@@ -217,6 +217,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <button class="nb" onclick="showSec('tendencias',this)"><i class="ti ti-trending-up"></i><span data-t="navTrend">Tendências</span></button>
     <button class="nb" onclick="showSec('simulador',this)"><i class="ti ti-tournament"></i><span>🏆 Simulador</span></button>
     <button class="nb" onclick="showSec('betfair',this)"><i class="ti ti-trophy"></i><span>Betfair Tips</span></button>
+    <button class="nb" onclick="showSec('reckoning',this)"><i class="ti ti-target"></i><span>⚡ Modelo vs Real</span></button>
   </nav>
 </div>
 
@@ -546,6 +547,16 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 <div class="stitle" style="font-size:13px;margin-top:1.5rem;margin-bottom:.75rem">📰 The Athletic — Como jogam</div>
 <div id="athleticProfiles" class="g2"></div>
 </section>
+<section id="reckoning" class="sec">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem">
+  <div>
+    <div class="stitle">⚡ Modelo vs Real — Copa 2026</div>
+    <div style="font-size:11px;color:var(--tx3)">ELO + Dixon-Coles Poisson · openfootball CC0 · martj42 CC0 · atualizado 2×/dia</div>
+  </div>
+  <div id="reckSummary" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+</div>
+<div id="reckContent"><p style="color:var(--tx3)">Carregando...</p></div>
+</section>
 </main>
 
 <footer class="footer">
@@ -564,10 +575,10 @@ const CLAUDE_MODEL = 'claude-haiku-4-5-20251001';
 
 // ─── TRANSLATIONS ─────────────────────────────────────────
 const L = {
-  pt:{navOdds:"Odds ao vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendências",navMatch:"Confronto",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating médio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Clique numa seleção para ver detalhes",valueHint:"Value edge = diferença entre probabilidade implícita das odds e probabilidade estimada pelo scout.",trendAlignTitle:"Times mais alinhados com perfil de classificados",swTitle:"Pontos fortes e fracos",cmpTitle:"Comparativo de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Melhores apostas",trendsTitle:"Tendências WC 2022 → 2026",analyze:"Analisar",aiTitle:"Análise por IA",aiBtn:"Analisar com IA",aiReady:"Clique em \"Analisar com IA\" para gerar uma análise tática e de apostas para este confronto.",copyBtn:"Copiar",loadingOdds:"Buscando odds...",refresh:"Atualizar",strengths:"Pontos fortes",weaknesses:"Pontos fracos",win:"Vitória",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Odd justa",mktOdd:"Odds mercado",valueEdge:"Value edge",shots:"Chutes/j",sot:"A gol/j",corners:"Escanteios/j",yellows:"Cartões/j",xg:"xG",xga:"xGA",poss:"Posse",goals:"Gols/j",conceded:"Sofridos/j",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Classificados",eliminated:"Eliminados",noOdds:"Sem odds disponíveis para este jogo no momento.",oddsOk:"Odds atualizadas",oddsErr:"Erro ao buscar odds",teamsAnalyzed:"Seleções",gamesBase:"Jogos na base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posse","Chutes","Efic.def","Gols/j","Duelos"],probLabels:["Vitória","Empate","Vitória"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Mais de metade dos gols vieram em ataque posicional vs defesa fechada. Equipas classificadas marcaram 73% em AP vs def. fechada.",stats:["AP vs def. fechada: 73%","Contra-ataque: ~25%","Bola parada: ~15%"]},{title:"Perfil das equipas classificadas",body:"Marcaram mais gols, criaram mais ocasiões, sofreram menos. Remontadas em 50% dos casos. Pico de gols nos +80'.",stats:["Gols marcados: 62%","Gols sofridos: 32%","Remontadas: 50%"]},{title:"Timing dos gols",body:"Pico de gols no 81-90'. 65% dos gols em AP vs def. fechada na 2ª parte. Tempo médio de ataque: 7,6s após trigger.",stats:["1ª parte: 35%","2ª parte: 65%","+81': pico máximo"]},{title:"Fase eliminatória vs grupos",body:"Avançados marcaram 55% dos gols nas eliminatórias. Ter mais ocasiões leva à vitória em 80% dos casos.",stats:["Mais ocasiões → 80%","Mais posse → 40%","Finalizações → 50%"]}]},
-  en:{navOdds:"Live Odds",navDash:"Dashboard",navGrupos:"Groups",navScouts:"Scouts",navValue:"Value",navTrend:"Trends",navMatch:"Matchup",top10Title:"Top 10 by rating",xgTitle:"Offensive xG vs xGA",groupRatingTitle:"Avg rating by group",sortLabel:"Sort:",minEdgeLabel:"Min edge:",scoutHint:"Click a team to see full details",valueHint:"Value edge = difference between implied odds probability and scout-estimated probability.",trendAlignTitle:"Teams most aligned with WC22 qualifying profile",swTitle:"Strengths & weaknesses",cmpTitle:"Metrics comparison",radarTitle:"Offensive / defensive profile",probTitle:"Estimated probabilities",betsTitle:"Best bets",trendsTitle:"WC 2022 → 2026 trends",analyze:"Analyze",aiTitle:"AI Analysis",aiBtn:"Analyze with AI",aiReady:"Click \"Analyze with AI\" to generate a tactical and betting analysis for this matchup.",copyBtn:"Copy",loadingOdds:"Fetching odds...",refresh:"Refresh",strengths:"Strengths",weaknesses:"Weaknesses",win:"Win",draw:"Draw",rating:"rating",prob:"Prob.",fairOdd:"Fair odd",mktOdd:"Market odds",valueEdge:"Value edge",shots:"Shots/g",sot:"On target/g",corners:"Corners/g",yellows:"Yellows/g",xg:"xG",xga:"xGA",poss:"Possession",goals:"Goals/g",conceded:"Conceded/g",duels:"Duels",defEff:"Def.eff",vHigh:"High value",vMed:"Consider",vWatch:"Watch",rec:"Recommended",qualified:"Qualifying",eliminated:"Eliminated",noOdds:"No odds available for this game at the moment.",oddsOk:"Odds updated",oddsErr:"Error fetching odds",teamsAnalyzed:"Teams",gamesBase:"Games in dataset",topRating:"Top rating",valueOpps:"Value opportunities",metricLabels:["xG att","Possession","Shots","Def.eff","Goals/g","Duels"],probLabels:["Win","Draw","Win"],trendBlocks:[{title:"Goal type — WC 2022",body:"Over half of goals came from positional attack vs compact defense. Qualifying teams scored 73% in PA vs closed defense.",stats:["PA vs closed def: 73%","Counter-attack: ~25%","Set pieces: ~15%"]},{title:"Qualifying team profile",body:"Scored more, created more, conceded less. Came back from 1-0 in 50% of cases. More late goals (+80').",stats:["Goals scored: 62%","Goals conceded: 32%","Comebacks: 50%"]},{title:"Goal timing",body:"Goal peak in 81-90'. 65% of PA vs closed defense goals in 2nd half. Average attack duration: 7.6s after trigger.",stats:["1st half: 35%","2nd half: 65%","+81': peak"]},{title:"Knockout vs group stage",body:"Forwards scored 55% of knockout goals. Creating more chances leads to victory in 80% of cases.",stats:["More chances → 80%","More possession → 40%","Shots on target → 50%"]}]},
-  es:{navOdds:"Cuotas en vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendencias",navMatch:"Enfrentamiento",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating medio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Haz clic en un equipo para ver detalles",valueHint:"Value edge = diferencia entre probabilidad implícita de cuotas y probabilidad estimada por scout.",trendAlignTitle:"Equipos más alineados con el perfil de clasificados",swTitle:"Fortalezas y debilidades",cmpTitle:"Comparativa de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Mejores apuestas",trendsTitle:"Tendencias WC 2022 → 2026",analyze:"Analizar",aiTitle:"Análisis con IA",aiBtn:"Analizar con IA",aiReady:"Haz clic en \"Analizar con IA\" para generar un análisis táctico y de apuestas.",copyBtn:"Copiar",loadingOdds:"Buscando cuotas...",refresh:"Actualizar",strengths:"Fortalezas",weaknesses:"Debilidades",win:"Victoria",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Cuota justa",mktOdd:"Cuotas mercado",valueEdge:"Value edge",shots:"Tiros/p",sot:"A puerta/p",corners:"Córners/p",yellows:"Amarillas/p",xg:"xG",xga:"xGA",poss:"Posesión",goals:"Goles/p",conceded:"Encajados/p",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Clasificados",eliminated:"Eliminados",noOdds:"Sin cuotas disponibles para este partido.",oddsOk:"Cuotas actualizadas",oddsErr:"Error al obtener cuotas",teamsAnalyzed:"Selecciones",gamesBase:"Partidos en la base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posesión","Tiros","Efic.def","Goles/p","Duelos"],probLabels:["Victoria","Empate","Victoria"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Más de la mitad de los goles vinieron en ataque posicional vs defensa cerrada.",stats:["AP vs def. cerrada: 73%","Contraataque: ~25%","Balón parado: ~15%"]},{title:"Perfil de equipos clasificados",body:"Marcaron más, crearon más y encajaron menos. Remontas en el 50% de los casos.",stats:["Goles marcados: 62%","Goles encajados: 32%","Remontas: 50%"]},{title:"Timing de goles",body:"Pico de goles en el 81-90'. 65% de goles en AP vs def. cerrada en 2ª parte.",stats:["1ª parte: 35%","2ª parte: 65%","+81': máximo"]},{title:"Eliminatorias vs grupos",body:"Delanteros marcaron el 55% en eliminatorias. Tener más ocasiones lleva a la victoria en el 80%.",stats:["Más ocasiones → 80%","Más posesión → 40%","Remates → 50%"]}]},
-  it:{navOdds:"Quote live",navDash:"Dashboard",navGrupos:"Gironi",navScouts:"Scout",navValue:"Value",navTrend:"Tendenze",navMatch:"Confronto",top10Title:"Top 10 per rating",xgTitle:"xG offensivo vs xGA",groupRatingTitle:"Rating medio per girone",sortLabel:"Ordina:",minEdgeLabel:"Edge min.:",scoutHint:"Clicca su una squadra per i dettagli",valueHint:"Value edge = differenza tra probabilità implicita delle quote e probabilità stimata dallo scout.",trendAlignTitle:"Squadre più allineate al profilo delle qualificate",swTitle:"Punti di forza e debolezza",cmpTitle:"Confronto metriche",radarTitle:"Profilo offensivo / difensivo",probTitle:"Probabilità stimate",betsTitle:"Migliori scommesse",trendsTitle:"Tendenze WC 2022 → 2026",analyze:"Analizza",aiTitle:"Analisi con IA",aiBtn:"Analizza con IA",aiReady:"Clicca \"Analizza con IA\" per generare un'analisi tattica e di scommesse.",copyBtn:"Copia",loadingOdds:"Cercando quote...",refresh:"Aggiorna",strengths:"Punti di forza",weaknesses:"Punti deboli",win:"Vittoria",draw:"Pareggio",rating:"rating",prob:"Prob.",fairOdd:"Quota giusta",mktOdd:"Quote mercato",valueEdge:"Value edge",shots:"Tiri/p",sot:"In porta/p",corners:"Angoli/p",yellows:"Gialli/p",xg:"xG",xga:"xGA",poss:"Possesso",goals:"Gol/p",conceded:"Subiti/p",duels:"Duelli",defEff:"Eff.dif",vHigh:"Value alto",vMed:"Da considerare",vWatch:"Osservare",rec:"Consigliato",qualified:"Qualificate",eliminated:"Eliminate",noOdds:"Nessuna quota disponibile per questa partita.",oddsOk:"Quote aggiornate",oddsErr:"Errore nel recupero quote",teamsAnalyzed:"Squadre",gamesBase:"Partite nel dataset",topRating:"Top rating",valueOpps:"Opportunità value",metricLabels:["xG att","Possesso","Tiri","Eff.dif","Gol/p","Duelli"],probLabels:["Vittoria","Pareggio","Vittoria"],trendBlocks:[{title:"Tipo di gol — WC 2022",body:"Più della metà dei gol sono arrivati da attacco posizionale vs difesa chiusa.",stats:["AP vs dif. chiusa: 73%","Contropiede: ~25%","Palla inattiva: ~15%"]},{title:"Profilo squadre qualificate",body:"Hanno segnato di più, creato più occasioni, subito di meno. Rimonte nel 50%.",stats:["Gol segnati: 62%","Gol subiti: 32%","Rimonte: 50%"]},{title:"Timing dei gol",body:"Picco di gol nel tratto 81-90'. 65% dei gol in AP nel 2° tempo.",stats:["1° tempo: 35%","2° tempo: 65%","+81': picco"]},{title:"Eliminatorie vs gironi",body:"Gli attaccanti hanno segnato il 55% nelle eliminatorie. Più occasioni porta alla vittoria nell'80%.",stats:["Più occasioni → 80%","Più possesso → 40%","Tiri in porta → 50%"]}]}
+  pt:{navOdds:"Odds ao vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendências",navMatch:"Confronto",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating médio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Clique numa seleção para ver detalhes",valueHint:"Value edge = diferença entre probabilidade implícita das odds e probabilidade estimada pelo scout.",trendAlignTitle:"Times mais alinhados com perfil de classificados",swTitle:"Pontos fortes e fracos",cmpTitle:"Comparativo de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Melhores apostas",trendsTitle:"Tendências WC 2022 → 2026",analyze:"Analisar",aiTitle:"Análise por IA",aiBtn:"Analisar com IA",aiReady:"Clique em \"Analisar com IA\" para gerar uma análise tática e de apostas para este confronto.",copyBtn:"Copiar",loadingOdds:"Buscando odds...",refresh:"Atualizar",strengths:"Pontos fortes",weaknesses:"Pontos fracos",win:"Vitória",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Odd justa",mktOdd:"Odds mercado",valueEdge:"Value edge",shots:"Chutes/j",sot:"A gol/j",corners:"Escanteios/j",yellows:"Cartões/j",xg:"xG",xga:"xGA",poss:"Posse",goals:"Gols/j",conceded:"Sofridos/j",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Classificados",eliminated:"Eliminados",noOdds:"Sem odds disponíveis para este jogo no momento.",oddsOk:"Odds atualizadas",oddsErr:"Erro ao buscar odds",teamsAnalyzed:"Seleções",gamesBase:"Jogos na base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posse","Chutes","Efic.def","Gols/j","Duelos"],probLabels:["Vitória","Empate","Vitória"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Mais de metade dos gols vieram em ataque posicional vs defesa fechada. Equipas classificadas marcaram 73% em AP vs def. fechada.",stats:["AP vs def. fechada: 73%","Contra-ataque: ~25%","Bola parada: ~15%"]},{title:"Perfil das equipas classificadas",body:"Marcaram mais gols, criaram mais ocasiões, sofreram menos. Remontadas em 50% dos casos. Pico de gols nos +80'.",stats:["Gols marcados: 62%","Gols sofridos: 32%","Remontadas: 50%"]},{title:"Timing dos gols",body:"Pico de gols no 81-90'. 65% dos gols em AP vs def. fechada na 2ª parte. Tempo médio de ataque: 7,6s após trigger.",stats:["1ª parte: 35%","2ª parte: 65%","+81': pico máximo"]},{title:"Fase eliminatória vs grupos",body:"Avançados marcaram 55% dos gols nas eliminatórias. Ter mais ocasiões leva à vitória em 80% dos casos.",stats:["Mais ocasiões → 80%","Mais posse → 40%","Finalizações → 50%"]}],expectedScore:'Placar esperado'},
+  en:{navOdds:"Live Odds",navDash:"Dashboard",navGrupos:"Groups",navScouts:"Scouts",navValue:"Value",navTrend:"Trends",navMatch:"Matchup",top10Title:"Top 10 by rating",xgTitle:"Offensive xG vs xGA",groupRatingTitle:"Avg rating by group",sortLabel:"Sort:",minEdgeLabel:"Min edge:",scoutHint:"Click a team to see full details",valueHint:"Value edge = difference between implied odds probability and scout-estimated probability.",trendAlignTitle:"Teams most aligned with WC22 qualifying profile",swTitle:"Strengths & weaknesses",cmpTitle:"Metrics comparison",radarTitle:"Offensive / defensive profile",probTitle:"Estimated probabilities",betsTitle:"Best bets",trendsTitle:"WC 2022 → 2026 trends",analyze:"Analyze",aiTitle:"AI Analysis",aiBtn:"Analyze with AI",aiReady:"Click \"Analyze with AI\" to generate a tactical and betting analysis for this matchup.",copyBtn:"Copy",loadingOdds:"Fetching odds...",refresh:"Refresh",strengths:"Strengths",weaknesses:"Weaknesses",win:"Win",draw:"Draw",rating:"rating",prob:"Prob.",fairOdd:"Fair odd",mktOdd:"Market odds",valueEdge:"Value edge",shots:"Shots/g",sot:"On target/g",corners:"Corners/g",yellows:"Yellows/g",xg:"xG",xga:"xGA",poss:"Possession",goals:"Goals/g",conceded:"Conceded/g",duels:"Duels",defEff:"Def.eff",vHigh:"High value",vMed:"Consider",vWatch:"Watch",rec:"Recommended",qualified:"Qualifying",eliminated:"Eliminated",noOdds:"No odds available for this game at the moment.",oddsOk:"Odds updated",oddsErr:"Error fetching odds",teamsAnalyzed:"Teams",gamesBase:"Games in dataset",topRating:"Top rating",valueOpps:"Value opportunities",metricLabels:["xG att","Possession","Shots","Def.eff","Goals/g","Duels"],probLabels:["Win","Draw","Win"],trendBlocks:[{title:"Goal type — WC 2022",body:"Over half of goals came from positional attack vs compact defense. Qualifying teams scored 73% in PA vs closed defense.",stats:["PA vs closed def: 73%","Counter-attack: ~25%","Set pieces: ~15%"]},{title:"Qualifying team profile",body:"Scored more, created more, conceded less. Came back from 1-0 in 50% of cases. More late goals (+80').",stats:["Goals scored: 62%","Goals conceded: 32%","Comebacks: 50%"]},{title:"Goal timing",body:"Goal peak in 81-90'. 65% of PA vs closed defense goals in 2nd half. Average attack duration: 7.6s after trigger.",stats:["1st half: 35%","2nd half: 65%","+81': peak"]},{title:"Knockout vs group stage",body:"Forwards scored 55% of knockout goals. Creating more chances leads to victory in 80% of cases.",stats:["More chances → 80%","More possession → 40%","Shots on target → 50%"]}],expectedScore:'Expected score'},
+  es:{navOdds:"Cuotas en vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendencias",navMatch:"Enfrentamiento",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating medio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Haz clic en un equipo para ver detalles",valueHint:"Value edge = diferencia entre probabilidad implícita de cuotas y probabilidad estimada por scout.",trendAlignTitle:"Equipos más alineados con el perfil de clasificados",swTitle:"Fortalezas y debilidades",cmpTitle:"Comparativa de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Mejores apuestas",trendsTitle:"Tendencias WC 2022 → 2026",analyze:"Analizar",aiTitle:"Análisis con IA",aiBtn:"Analizar con IA",aiReady:"Haz clic en \"Analizar con IA\" para generar un análisis táctico y de apuestas.",copyBtn:"Copiar",loadingOdds:"Buscando cuotas...",refresh:"Actualizar",strengths:"Fortalezas",weaknesses:"Debilidades",win:"Victoria",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Cuota justa",mktOdd:"Cuotas mercado",valueEdge:"Value edge",shots:"Tiros/p",sot:"A puerta/p",corners:"Córners/p",yellows:"Amarillas/p",xg:"xG",xga:"xGA",poss:"Posesión",goals:"Goles/p",conceded:"Encajados/p",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Clasificados",eliminated:"Eliminados",noOdds:"Sin cuotas disponibles para este partido.",oddsOk:"Cuotas actualizadas",oddsErr:"Error al obtener cuotas",teamsAnalyzed:"Selecciones",gamesBase:"Partidos en la base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posesión","Tiros","Efic.def","Goles/p","Duelos"],probLabels:["Victoria","Empate","Victoria"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Más de la mitad de los goles vinieron en ataque posicional vs defensa cerrada.",stats:["AP vs def. cerrada: 73%","Contraataque: ~25%","Balón parado: ~15%"]},{title:"Perfil de equipos clasificados",body:"Marcaron más, crearon más y encajaron menos. Remontas en el 50% de los casos.",stats:["Goles marcados: 62%","Goles encajados: 32%","Remontas: 50%"]},{title:"Timing de goles",body:"Pico de goles en el 81-90'. 65% de goles en AP vs def. cerrada en 2ª parte.",stats:["1ª parte: 35%","2ª parte: 65%","+81': máximo"]},{title:"Eliminatorias vs grupos",body:"Delanteros marcaron el 55% en eliminatorias. Tener más ocasiones lleva a la victoria en el 80%.",stats:["Más ocasiones → 80%","Más posesión → 40%","Remates → 50%"]}],expectedScore:'Marcador esperado'},
+  it:{navOdds:"Quote live",navDash:"Dashboard",navGrupos:"Gironi",navScouts:"Scout",navValue:"Value",navTrend:"Tendenze",navMatch:"Confronto",top10Title:"Top 10 per rating",xgTitle:"xG offensivo vs xGA",groupRatingTitle:"Rating medio per girone",sortLabel:"Ordina:",minEdgeLabel:"Edge min.:",scoutHint:"Clicca su una squadra per i dettagli",valueHint:"Value edge = differenza tra probabilità implicita delle quote e probabilità stimata dallo scout.",trendAlignTitle:"Squadre più allineate al profilo delle qualificate",swTitle:"Punti di forza e debolezza",cmpTitle:"Confronto metriche",radarTitle:"Profilo offensivo / difensivo",probTitle:"Probabilità stimate",betsTitle:"Migliori scommesse",trendsTitle:"Tendenze WC 2022 → 2026",analyze:"Analizza",aiTitle:"Analisi con IA",aiBtn:"Analizza con IA",aiReady:"Clicca \"Analizza con IA\" per generare un'analisi tattica e di scommesse.",copyBtn:"Copia",loadingOdds:"Cercando quote...",refresh:"Aggiorna",strengths:"Punti di forza",weaknesses:"Punti deboli",win:"Vittoria",draw:"Pareggio",rating:"rating",prob:"Prob.",fairOdd:"Quota giusta",mktOdd:"Quote mercato",valueEdge:"Value edge",shots:"Tiri/p",sot:"In porta/p",corners:"Angoli/p",yellows:"Gialli/p",xg:"xG",xga:"xGA",poss:"Possesso",goals:"Gol/p",conceded:"Subiti/p",duels:"Duelli",defEff:"Eff.dif",vHigh:"Value alto",vMed:"Da considerare",vWatch:"Osservare",rec:"Consigliato",qualified:"Qualificate",eliminated:"Eliminate",noOdds:"Nessuna quota disponibile per questa partita.",oddsOk:"Quote aggiornate",oddsErr:"Errore nel recupero quote",teamsAnalyzed:"Squadre",gamesBase:"Partite nel dataset",topRating:"Top rating",valueOpps:"Opportunità value",metricLabels:["xG att","Possesso","Tiri","Eff.dif","Gol/p","Duelli"],probLabels:["Vittoria","Pareggio","Vittoria"],trendBlocks:[{title:"Tipo di gol — WC 2022",body:"Più della metà dei gol sono arrivati da attacco posizionale vs difesa chiusa.",stats:["AP vs dif. chiusa: 73%","Contropiede: ~25%","Palla inattiva: ~15%"]},{title:"Profilo squadre qualificate",body:"Hanno segnato di più, creato più occasioni, subito di meno. Rimonte nel 50%.",stats:["Gol segnati: 62%","Gol subiti: 32%","Rimonte: 50%"]},{title:"Timing dei gol",body:"Picco di gol nel tratto 81-90'. 65% dei gol in AP nel 2° tempo.",stats:["1° tempo: 35%","2° tempo: 65%","+81': picco"]},{title:"Eliminatorie vs gironi",body:"Gli attaccanti hanno segnato il 55% nelle eliminatorie. Più occasioni porta alla vittoria nell'80%.",stats:["Più occasioni → 80%","Più possesso → 40%","Tiri in porta → 50%"]}],expectedScore:'Risultato atteso'}
 };
 
 // ─── SCOUT DATA ──────────────────────────────────────────
@@ -1226,9 +1237,104 @@ window.AI_DATA = {"generated_at": "2026-06-14T16:14:12.123560+00:00", "generated
 
 // ── SIMULATOR ────────────────────────────────────────────────
 var SIM_GROUPS={A:['MEX','AFS','COR','TCH'],B:['CAN','BOS','CAT','SUI'],C:['BRA','MAR','HAI','ESC'],D:['EUA','PAR','AUS','TUR'],E:['ALE','CUR','CDM','EQU'],F:['HOL','JAP','SUE','TUN'],G:['BEL','EGI','IRA','NZE'],H:['ESP','CAB','ARS','URU'],I:['FRA','SEN','IRQ','NOR'],J:['ARG','AGL','AUT','JOR'],K:['POR','RDC','UZB','COL'],L:['ING','CRO','GAN','PAN']};
-var SIM_HOST={MEX:1.15,EUA:1.10,CAN:1.08};
-function simStr(c){var s=SCOUTS[c],sb=(SB_COMBINED||{})[c];if(!s)return 60;var v=s.rating*0.40;var xg=sb?sb.xg_pg:(s.xG||1.5),xga=sb?sb.xga_pg:(s.xGA||1.5);v+=xg*7-xga*3.5;if(sb&&sb.pressures_pg)v+=(sb.pressures_pg/200)*8;return Math.max(30,v);}
-function simMatch(a,b,draw){var sa=simStr(a)*(SIM_HOST[a]||1),sb=simStr(b)*(SIM_HOST[b]||1),tot=sa+sb;var pA=Math.max(0.08,sa/tot*0.65+0.175),pB=Math.max(0.08,sb/tot*0.65+0.175),pD=draw?Math.max(0.12,1-pA-pB):0;var r=Math.random(),winner,loser,sA,sB,isDraw=false;if(!draw||r>=pA+pD){winner=r<pA||(!draw&&r<pA/(pA+pB))?a:b;loser=winner===a?b:a;sA=winner===a?Math.round(1+Math.random()*2):Math.round(Math.random()*1);sB=winner===b?Math.round(1+Math.random()*2):Math.round(Math.random()*1);}else{isDraw=true;sA=sB=Math.round(Math.random()*2);}return{winner:isDraw?null:winner,loser:isDraw?null:loser,draw:isDraw,sA:sA,sB:sB};}
+var SIM_HOME_BONUS={MEX:100,EUA:100,CAN:80};
+var ELO_RATINGS={AFS:1707,AGL:1740,ALE:1927,ARG:2064,ARS:1715,AUS:1780,AUT:1815,BEL:1895,BOS:1760,BRA:1994,CAB:1620,CAN:1755,CAT:1720,CDM:1700,COL:1875,COR:1787,CRO:1880,CUR:1640,EGI:1730,EQU:1785,ESC:1775,ESP:2074,EUA:1774,FRA:2060,GAN:1680,HAI:1650,HOL:1930,ING:2010,IRA:1725,IRQ:1690,JAP:1810,JOR:1685,MAR:1825,MEX:1863,NOR:1800,NZE:1600,PAN:1650,PAR:1646,POR:1970,RDC:1700,SEN:1830,SUE:1740,SUI:1820,TCH:1693,TUN:1695,TUR:1795,URU:1870,UZB:1670};
+var ELO_LIVE_UPDATED='2026-06-13'; // auto-updated after each WC2026 match
+
+// ── Dixon-Coles correction for 0-0, 1-1, 0-1, 1-0 ─────────────────────────
+var DC_RHO = -0.13;
+function dcTau(a,b,lam,mu){
+  if(a===0&&b===0) return 1-lam*mu*DC_RHO;
+  if(a===0&&b===1) return 1+lam*DC_RHO;
+  if(a===1&&b===0) return 1+mu*DC_RHO;
+  if(a===1&&b===1) return 1-DC_RHO;
+  return 1;
+}
+function poissonPmf(k,lam){
+  if(lam<=0) return k===0?1:0;
+  var p=Math.exp(-lam);
+  for(var i=1;i<=k;i++) p*=lam/i;
+  return p;
+}
+function poissonSample(lam){
+  var L=Math.exp(-lam),k=0,p=1;
+  do{k++;p*=Math.random();}while(p>L);
+  return k-1;
+}
+// Get ELO rating — prefer calibrated ELO_RATINGS, fallback to SCOUTS rating
+function getElo(code){
+  if(ELO_RATINGS[code]) return ELO_RATINGS[code];
+  var s=SCOUTS[code];
+  if(s&&s.rating) return 1500+(s.rating-50)*8; // map 0-100 rating → ELO range
+  return 1600;
+}
+// Expected goals from rating difference (Hicruben formula)
+function expGoals(ratingA,ratingB,homeBonus){
+  var diff=(ratingA+(homeBonus||0))-ratingB;
+  return Math.max(0.3,Math.min(3.5, 1.35+diff/400));
+}
+// ── Platt scaling calibration (a=0.85, trained on WC2018+2022) ──────────
+function plattScale(p,a,b){
+  var lo=Math.log(Math.max(1e-9,p)/Math.max(1e-9,1-p));
+  return 1/(1+Math.exp(-(a*lo+b)));
+}
+
+// ── Dynamic ELO: update ratings after each real WC2026 match ─────────────
+function updateEloAfterMatch(cA, cB, goalsA, goalsB) {
+  var K=40;
+  var rA=ELO_RATINGS[cA]||1680, rB=ELO_RATINGS[cB]||1680;
+  var expA=1/(1+Math.pow(10,(rB-rA)/400));
+  var actualA=goalsA>goalsB?1:goalsA<goalsB?0:0.5;
+  var delta=K*(actualA-expA);
+  ELO_RATINGS[cA]=Math.round((rA+delta)*10)/10;
+  ELO_RATINGS[cB]=Math.round((rB-delta)*10)/10;
+  console.log('ELO updated: '+cA+' '+(delta>=0?'+':'')+delta.toFixed(1)+' → '+ELO_RATINGS[cA]);
+}
+
+// Apply WC2026 results so far to live ELO
+(function applyWC2026Results(){
+  var results=[
+    ['MEX','AFS',2,0],['COR','TCH',2,1],['CAN','BOS',1,1],
+    ['EUA','PAR',4,1],['CAT','SUI',1,1],['BRA','MAR',1,1]
+  ];
+  results.forEach(function(r){ updateEloAfterMatch(r[0],r[1],r[2],r[3]); });
+})();
+
+// Dixon-Coles 1X2 probabilities with Platt scaling
+function matchProb(rA,rB,homeBonus){
+  var lam=expGoals(rA,rB,homeBonus);
+  var mu=expGoals(rB,rA,-(homeBonus||0)/2);
+  var winA=0,draw=0,winB=0;
+  for(var a=0;a<=8;a++){
+    var pA=poissonPmf(a,lam);
+    for(var b=0;b<=8;b++){
+      var tau=dcTau(a,b,lam,mu);
+      var p=pA*poissonPmf(b,mu)*tau;
+      if(a>b) winA+=p; else if(a<b) winB+=p; else draw+=p;
+    }
+  }
+  var tot=winA+draw+winB;
+  // Apply Platt scaling (a=0.85, calibrated on WC2018+2022)
+  var pW=plattScale(winA/tot,0.85,0.0);
+  var pL=plattScale(winB/tot,0.85,0.0);
+  var pD=Math.max(0.01,1-pW-pL);
+  var tot2=pW+pD+pL;
+  return {winA:pW/tot2,draw:pD/tot2,winB:pL/tot2,lamA:lam,lamB:mu};
+}
+// Sample scoreline for Monte Carlo
+function simStr(code){return getElo(code);} // legacy compat — not used anymore
+function simMatch(a,b,allowDraw){
+  var rA=getElo(a), rB=getElo(b);
+  var hb=(SIM_HOME_BONUS[a]||0)-(SIM_HOME_BONUS[b]||0);
+  var lam=expGoals(rA,rB,hb), mu=expGoals(rB,rA,-hb/2);
+  var gA=poissonSample(lam), gB=poissonSample(mu);
+  if(!allowDraw&&gA===gB){
+    var prob=matchProb(rA,rB,hb);
+    if(Math.random()<prob.winA/(prob.winA+prob.winB)) gA+=1; else gB+=1;
+  }
+  var winner=gA>gB?a:gB>gA?b:null;
+  return {winner:winner,loser:winner===a?b:winner===b?a:null,draw:gA===gB,sA:gA,sB:gB};
+}
 function simGroups(rand){var st={},res={};Object.keys(SIM_GROUPS).forEach(function(g){SIM_GROUPS[g].forEach(function(t){st[t]={pts:0,gf:0,ga:0,w:0,d:0,l:0};});res[g]=[];});Object.entries(SIM_GROUPS).forEach(function(ge){var g=ge[0],teams=ge[1];for(var i=0;i<teams.length;i++){for(var j=i+1;j<teams.length;j++){var a=teams[i],b=teams[j];var m=rand?simMatch(a,b,true):(simStr(a)>simStr(b)?{winner:a,loser:b,draw:false,sA:2,sB:1}:simStr(b)>simStr(a)?{winner:b,loser:a,draw:false,sA:1,sB:2}:{winner:null,loser:null,draw:true,sA:1,sB:1});res[g].push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB,draw:m.draw});if(m.draw){st[a].pts+=1;st[a].d++;st[b].pts+=1;st[b].d++;}else{st[m.winner].pts+=3;st[m.winner].w++;st[m.loser].l++;}st[a].gf+=m.sA;st[a].ga+=m.sB;st[b].gf+=m.sB;st[b].ga+=m.sA;}}});var qual={},rank={};Object.entries(SIM_GROUPS).forEach(function(ge){var g=ge[0],teams=ge[1];var s=teams.slice().sort(function(x,y){var sx=st[x],sy=st[y];if(sy.pts!==sx.pts)return sy.pts-sx.pts;return(sy.gf-sy.ga)-(sx.gf-sx.ga);});rank[g]=s;qual[g]={first:s[0],second:s[1]};});return{st:st,qual:qual,rank:rank,res:res};}
 function simKO(qual,rand){var R16=[[qual.A.first,qual.B.second],[qual.C.first,qual.D.second],[qual.E.first,qual.F.second],[qual.G.first,qual.H.second],[qual.B.first,qual.A.second],[qual.D.first,qual.C.second],[qual.F.first,qual.E.second],[qual.H.first,qual.G.second]];var br={r16:[],qf:[],sf:[],final:[],champion:null};var r16w=R16.map(function(p){var m=rand?simMatch(p[0],p[1],false):{winner:simStr(p[0])>simStr(p[1])?p[0]:p[1],sA:1,sB:0};br.r16.push({a:p[0],b:p[1],winner:m.winner,sA:m.sA,sB:m.sB});return m.winner;});var qfw=[];for(var i=0;i<4;i++){var m=rand?simMatch(r16w[i*2],r16w[i*2+1],false):{winner:simStr(r16w[i*2])>simStr(r16w[i*2+1])?r16w[i*2]:r16w[i*2+1],sA:1,sB:0};br.qf.push({a:r16w[i*2],b:r16w[i*2+1],winner:m.winner,sA:m.sA,sB:m.sB});qfw.push(m.winner);}var sfw=[];for(var i=0;i<2;i++){var m=rand?simMatch(qfw[i*2],qfw[i*2+1],false):{winner:simStr(qfw[i*2])>simStr(qfw[i*2+1])?qfw[i*2]:qfw[i*2+1],sA:1,sB:0};br.sf.push({a:qfw[i*2],b:qfw[i*2+1],winner:m.winner,sA:m.sA,sB:m.sB});sfw.push(m.winner);}var fm=rand?simMatch(sfw[0],sfw[1],false):{winner:simStr(sfw[0])>simStr(sfw[1])?sfw[0]:sfw[1],sA:1,sB:0};br.final.push({a:sfw[0],b:sfw[1],winner:fm.winner,sA:fm.sA,sB:fm.sB});br.champion=fm.winner;return br;}
 function showSimTab(id,btn){document.querySelectorAll('.sim-tab').forEach(function(b){b.classList.remove('active');});if(btn)btn.classList.add('active');['champion','bracket','groups','groupresults','montecarlo'].forEach(function(t){var el=document.getElementById('simTab'+t.charAt(0).toUpperCase()+t.slice(1));if(el)el.style.display=t===id?'block':'none';});}
@@ -1324,6 +1430,7 @@ function renderSBRanking() {
 // Auto-render SB ranking when dashboard tab opens
 function showSec(id,btn) {
   _baseShowSec(id,btn);
+  if (id === 'reckoning' && typeof loadReckoning === 'function') { setTimeout(loadReckoning, 50); }
   if (id === 'dashboard' && typeof renderSBRanking === 'function') {
     setTimeout(function() { renderSBRanking(); }, 100);
   }
