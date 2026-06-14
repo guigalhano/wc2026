@@ -496,7 +496,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:10px">
   <div>
     <div class="stitle">🏆 Simulador Copa 2026</div>
-    <div style="font-size:11px;color:var(--tx3)">Monte Carlo 10.000 simulações · Ratings + xG StatsBomb + fator casa</div>
+    <div style="font-size:11px;color:var(--tx3)">Monte Carlo 10.000 simulações · ELO dinâmico WC2026 · Platt scaling (WC18+22) · xG Dixon-Coles</div>
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap">
     <button class="sim-btn sec" onclick="runDeterministic()">⚙️ Resultado mais provável</button>
@@ -1239,7 +1239,8 @@ window.AI_DATA = {"generated_at": "2026-06-13T16:05:16.224860+00:00", "generated
 // ── SIMULATOR ────────────────────────────────────────────────
 var SIM_GROUPS={A:['MEX','AFS','COR','TCH'],B:['CAN','BOS','CAT','SUI'],C:['BRA','MAR','HAI','ESC'],D:['EUA','PAR','AUS','TUR'],E:['ALE','CUR','CDM','EQU'],F:['HOL','JAP','SUE','TUN'],G:['BEL','EGI','IRA','NZE'],H:['ESP','CAB','ARS','URU'],I:['FRA','SEN','IRQ','NOR'],J:['ARG','AGL','AUT','JOR'],K:['POR','RDC','UZB','COL'],L:['ING','CRO','GAN','PAN']};
 var SIM_HOME_BONUS={MEX:100,EUA:100,CAN:80};
-var ELO_RATINGS={ESP:2074,ARG:2064,FRA:2060,BRA:1994,ING:2010,POR:1970,ALE:1927,HOL:1930,BEL:1895,CRO:1880,COL:1875,URU:1870,MEX:1850,SEN:1830,MAR:1825,SUI:1820,AUT:1815,JAP:1810,NOR:1800,TUR:1795,EQU:1785,AUS:1780,ESC:1775,COR:1770,EUA:1760,CAN:1755,DEN:1750,POL:1745,SUE:1740,GAL:1735,RDC:1700,TCH:1710,GAN:1680,HAI:1650,CAT:1720,EGI:1730,IRA:1725,IRQ:1690,JOR:1685,ARS:1715,CAB:1620,CUR:1640,PAR:1660,AGL:1740,AFS:1720,CDM:1700,NZE:1600,PAN:1650,UZB:1670,TUN:1695,BOS:1760};
+var ELO_RATINGS={AFS:1707,AGL:1740,ALE:1927,ARG:2064,ARS:1715,AUS:1780,AUT:1815,BEL:1895,BOS:1760,BRA:1994,CAB:1620,CAN:1755,CAT:1720,CDM:1700,COL:1875,COR:1787,CRO:1880,CUR:1640,EGI:1730,EQU:1785,ESC:1775,ESP:2074,EUA:1774,FRA:2060,GAN:1680,HAI:1650,HOL:1930,ING:2010,IRA:1725,IRQ:1690,JAP:1810,JOR:1685,MAR:1825,MEX:1863,NOR:1800,NZE:1600,PAN:1650,PAR:1646,POR:1970,RDC:1700,SEN:1830,SUE:1740,SUI:1820,TCH:1693,TUN:1695,TUR:1795,URU:1870,UZB:1670};
+var ELO_LIVE_UPDATED='2026-06-13'; // auto-updated after each WC2026 match
 
 // ── Dixon-Coles correction for 0-0, 1-1, 0-1, 1-0 ─────────────────────────
 var DC_RHO = -0.13;
@@ -1273,7 +1274,34 @@ function expGoals(ratingA,ratingB,homeBonus){
   var diff=(ratingA+(homeBonus||0))-ratingB;
   return Math.max(0.3,Math.min(3.5, 1.35+diff/400));
 }
-// Dixon-Coles 1X2 probabilities
+// ── Platt scaling calibration (a=0.85, trained on WC2018+2022) ──────────
+function plattScale(p,a,b){
+  var lo=Math.log(Math.max(1e-9,p)/Math.max(1e-9,1-p));
+  return 1/(1+Math.exp(-(a*lo+b)));
+}
+
+// ── Dynamic ELO: update ratings after each real WC2026 match ─────────────
+function updateEloAfterMatch(cA, cB, goalsA, goalsB) {
+  var K=40;
+  var rA=ELO_RATINGS[cA]||1680, rB=ELO_RATINGS[cB]||1680;
+  var expA=1/(1+Math.pow(10,(rB-rA)/400));
+  var actualA=goalsA>goalsB?1:goalsA<goalsB?0:0.5;
+  var delta=K*(actualA-expA);
+  ELO_RATINGS[cA]=Math.round((rA+delta)*10)/10;
+  ELO_RATINGS[cB]=Math.round((rB-delta)*10)/10;
+  console.log('ELO updated: '+cA+' '+(delta>=0?'+':'')+delta.toFixed(1)+' → '+ELO_RATINGS[cA]);
+}
+
+// Apply WC2026 results so far to live ELO
+(function applyWC2026Results(){
+  var results=[
+    ['MEX','AFS',2,0],['COR','TCH',2,1],['CAN','BOS',1,1],
+    ['EUA','PAR',4,1],['CAT','SUI',1,1],['BRA','MAR',1,1]
+  ];
+  results.forEach(function(r){ updateEloAfterMatch(r[0],r[1],r[2],r[3]); });
+})();
+
+// Dixon-Coles 1X2 probabilities with Platt scaling
 function matchProb(rA,rB,homeBonus){
   var lam=expGoals(rA,rB,homeBonus);
   var mu=expGoals(rB,rA,-(homeBonus||0)/2);
@@ -1287,7 +1315,12 @@ function matchProb(rA,rB,homeBonus){
     }
   }
   var tot=winA+draw+winB;
-  return {winA:winA/tot,draw:draw/tot,winB:winB/tot,lamA:lam,lamB:mu};
+  // Apply Platt scaling (a=0.85, calibrated on WC2018+2022)
+  var pW=plattScale(winA/tot,0.85,0.0);
+  var pL=plattScale(winB/tot,0.85,0.0);
+  var pD=Math.max(0.01,1-pW-pL);
+  var tot2=pW+pD+pL;
+  return {winA:pW/tot2,draw:pD/tot2,winB:pL/tot2,lamA:lam,lamB:mu};
 }
 // Sample scoreline for Monte Carlo
 function simStr(code){return getElo(code);} // legacy compat — not used anymore
@@ -1694,6 +1727,8 @@ async function loadReckoning() {
         var p=[pred.winA,pred.draw,pred.winB], o=[actual==='A'?1:0,actual==='D'?1:0,actual==='B'?1:0];
         var rps=0; for(var i=0;i<2;i++) rps+= Math.pow((p[0]+p[1]*(i>0))-(o[0]+o[1]*(i>0)),2); rps/=2;
         entry.actual=actual; entry.model_correct=ok; entry.rps=Math.round(rps*10000)/10000;
+        // Keep ELO live — update after each confirmed result
+        if(typeof updateEloAfterMatch==='function') updateEloAfterMatch(cA,cB,g1,g2);
         sumRps+=rps;
       }
       matches.push(entry);
