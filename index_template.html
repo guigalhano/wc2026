@@ -526,27 +526,19 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
 <section id="betfair" class="sec">
 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px">
   <div>
-    <div class="stitle">🏆 Betfair — Odds &amp; Tips</div>
-    <div style="font-size:11px;color:var(--tx3)">Mark O'Haire · Dave Tindall · Jun 2026</div>
+    <div class="stitle">🏆 Betfair Tips — Copa do Mundo 2026</div>
+    <div style="font-size:11px;color:var(--tx3)">Feed oficial Betfair · atualizado automaticamente</div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <span id="bfFeedStatus" style="font-size:10px;color:var(--tx3)"></span>
+    <button onclick="loadBetfairFeed(true)" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid var(--bd);background:var(--sf);color:var(--tx2);cursor:pointer">🔄 Atualizar</button>
+    <a href="https://betting.betfair.com/football/world-cup-2026/" target="_blank" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid var(--bd);background:var(--sf);color:var(--bl-tx);text-decoration:none">Ver no Betfair ↗</a>
   </div>
 </div>
-<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📊 Tendências — Dave Tindall</div>
-<div id="tindallTrends" style="margin-bottom:1.5rem"></div>
-<div class="stitle" style="font-size:13px;margin-bottom:.75rem">⚽ Prévia do jogo</div>
-<div id="matchTipsContainer" style="margin-bottom:1.5rem"></div>
-<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📊 Odds Betfair (Jun 2026)</div>
-<div style="overflow-x:auto">
-  <table style="width:100%;border-collapse:collapse;font-size:12px">
-    <thead><tr style="background:var(--sf2)">
-      <th style="padding:7px 10px;text-align:left;font-size:10px;font-weight:600;color:var(--tx3)">Seleção</th>
-      <th style="padding:7px 10px;text-align:center;font-size:10px;font-weight:600;color:var(--tx3)">Odds</th>
-      <th style="padding:7px 10px;text-align:center;font-size:10px;font-weight:600;color:var(--tx3)">Prob.</th>
-    </tr></thead>
-    <tbody id="betfairOddsTable"></tbody>
-  </table>
-</div>
-<div class="stitle" style="font-size:13px;margin-top:1.5rem;margin-bottom:.75rem">📰 The Athletic — Como jogam</div>
-<div id="athleticProfiles" class="g2"></div>
+<div id="betfairFeedContent" style="margin-bottom:1.5rem"><p style="color:var(--tx3)">⏳ Carregando feed...</p></div>
+<hr style="border:none;border-top:1px solid var(--bd);margin:1rem 0">
+<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📊 Ranking StatsBomb</div>
+<div id="sbRankBlock"></div>
 </section>
 
 <section id="reckoning" class="sec">
@@ -1466,21 +1458,95 @@ var BETFAIR_ODDS={FRA:5.5,ESP:5.5,ING:7.5,BRA:9.0,ARG:11.0,POR:11.0,ALE:13.0,HOL
 var TINDALL=[{pos:1,code:'FRA',pts:66,reason:'Melhor media de idade, top 3 ELO, finalista 2022'},{pos:2,code:'ESP',pts:62,reason:'Campea Euros 2024, Nations League, top 5 ELO'},{pos:3,code:'ARG',pts:57,reason:'Campea atual'},{pos:4,code:'ING',pts:52,reason:'Top 5 ELO, Tuchel'},{pos:5,code:'BRA',pts:49,reason:'5x campea, Ancelotti'},{pos:6,code:'ALE',pts:48,reason:'4x campea, odds acima de 10/1'},{pos:7,code:'HOL',pts:42,reason:'3x vice, top 6-10 ELO'},{pos:8,code:'CRO',pts:39,reason:'Final 2018, vice historica'},{pos:9,code:'POR',pts:38,reason:'Nunca venceu, Nations League 2025'}];
 var MATCH_TIPS=[{date:'11/06/2026',home:'MEX',away:'AFS',group:'A',source:'Paul Higham',tips:[{bet:'Mexico vence sem sofrer gols',odd:'10/11',hot:true,reason:'Mexico invicto no Azteca em Mundiais. 6 clean sheets nos ultimos 8 jogos.'},{bet:'Mexico 2+ gols + mais escanteios + AFS 3+ cartoes',odd:'9/2',hot:true,reason:'Mexico liderou no intervalo em 5 dos ultimos 6. AFS: 3+ cartoes em 3 dos ultimos 4.'},{bet:'Johan Vasquez 1+ chute a gol',odd:'12/5',hot:false,reason:'Marcou de cabeca nos ultimos 2 jogos.'}],scoreline:'Mexico 2-0 Africa do Sul'}];
 
-function renderBetfair(){
-  // Tindall
-  var maxPts=TINDALL[0].pts;
-  var th='<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:.75rem">';
-  TINDALL.forEach(function(r){var t=SCOUTS[r.code]||{flag:'',name:r.code};th+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)"><span style="font-size:11px;color:var(--tx3);width:20px;text-align:right">'+r.pos+'.</span><span style="font-size:18px">'+(t.flag||'')+'</span><span style="font-size:12px;flex:1">'+(t.name||r.code)+'</span><div style="flex:2;background:var(--bd);border-radius:2px;height:5px;overflow:hidden"><div style="height:100%;width:'+(r.pts/maxPts*100).toFixed(0)+'%;background:'+(r.pts>=60?'var(--ac)':'var(--gn)')+';border-radius:2px"></div></div><b style="font-size:13px;font-family:Space Grotesk,sans-serif;min-width:28px;text-align:right">'+r.pts+'</b></div>';});
-  th+='</div><div style="font-size:11px;color:var(--tx3)">Recomendacao Dave Tindall: <b>Franca 9/2</b> · Final Franca-Argentina <b>25/1</b></div>';
-  document.getElementById('tindallTrends').innerHTML=th;
-  // Match tips
-  document.getElementById('matchTipsContainer').innerHTML=MATCH_TIPS.map(function(m){var ht=SCOUTS[m.home]||{flag:'',name:m.home},at=SCOUTS[m.away]||{flag:'',name:m.away};return'<div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;flex-wrap:wrap;gap:8px"><b style="font-size:14px;font-family:Space Grotesk,sans-serif">'+(ht.flag||'')+' '+(ht.name||m.home)+' vs '+(at.flag||'')+' '+(at.name||m.away)+'</b><span style="font-size:11px;color:var(--tx3)">'+m.date+' · Grupo '+m.group+'</span></div>'+m.tips.map(function(t){return'<div style="background:'+(t.hot?'var(--gn-bg)':'var(--am-bg)')+';border-left:3px solid '+(t.hot?'var(--gn)':'var(--am)')+';border-radius:0 var(--r) var(--r) 0;padding:.6rem .85rem;margin-bottom:5px"><div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:2px"><b style="font-size:12px">'+(t.bet)+'</b><b style="font-size:13px;font-family:Space Grotesk,sans-serif;flex-shrink:0">'+(t.odd)+'</b></div><div style="font-size:11px;color:var(--tx2)">'+(t.reason)+'</div></div>';}).join('')+'<div style="margin-top:.5rem;font-size:11px;display:flex;justify-content:space-between"><span style="color:var(--tx3)">Fonte: '+m.source+'</span><b style="color:var(--ac)">Placar: '+m.scoreline+'</b></div></div>';}).join('');
-  // Odds table
-  var sorted=Object.entries(SCOUTS).filter(function(e){return e[1].rating&&BETFAIR_ODDS[e[0]];}).sort(function(a,b){return(BETFAIR_ODDS[a[0]]||999)-(BETFAIR_ODDS[b[0]]||999);});
-  document.getElementById('betfairOddsTable').innerHTML=sorted.map(function(e){var code=e[0],t=e[1];var odd=BETFAIR_ODDS[code];var imp=(100/odd).toFixed(1);return'<tr style="border-bottom:1px solid var(--bd)"><td style="padding:6px 10px"><span style="font-size:16px">'+(t.flag||'')+'</span> '+(t.name||code)+'</td><td style="padding:6px 10px;text-align:center;font-weight:700;font-family:Space Grotesk,sans-serif;font-size:14px">'+odd+'</td><td style="padding:6px 10px;text-align:center;font-size:12px">'+imp+'%</td></tr>';}).join('');
-  // Athletic
-  var ath=ATHLETIC_NOTES||{};
-  document.getElementById('athleticProfiles').innerHTML=Object.keys(ath).filter(function(c){return SCOUTS[c];}).map(function(code){var t=SCOUTS[code]||{},a=ath[code]||{};return'<div class="card" style="margin-bottom:0"><div style="display:flex;align-items:center;gap:10px;margin-bottom:.75rem"><span style="font-size:28px">'+(t.flag||'')+'</span><div><div style="font-size:13px;font-weight:700">'+(t.name||code)+'</div><div style="font-size:11px;color:var(--tx3)">The Athletic</div></div></div>'+(a.play?'<div style="font-size:12px;color:var(--tx2);line-height:1.6;margin-bottom:.4rem">'+a.play.substring(0,320)+'</div>':'')+(a.key_player&&!a.key_player.includes('194')?'<div style="font-size:11px;color:var(--tx3)"><b style="color:var(--ac)">Jogador-chave:</b> '+a.key_player.substring(0,200)+'</div>':'')+'</div>';}).join('')||'<p style="color:var(--tx3)">Sem dados.</p>';
+async function loadBetfairFeed(force) {
+  if (window._bfLoading) return;
+  if (window._bfCache && !force) { renderBetfairFeed(window._bfCache); return; }
+  window._bfLoading = true;
+  var el = document.getElementById('betfairFeedContent');
+  var stEl = document.getElementById('bfFeedStatus');
+  if (el) el.innerHTML = '<p style="color:var(--tx3)">⏳ Buscando artigos Betfair...</p>';
+
+  var FEED = 'https://betting.betfair.com/football/index.xml';
+  var proxies = [
+    'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED) + '&count=20',
+    'https://api.allorigins.win/get?url=' + encodeURIComponent(FEED),
+  ];
+
+  var data = null;
+  for (var pi = 0; pi < proxies.length; pi++) {
+    try {
+      var resp = await fetch(proxies[pi]);
+      if (!resp.ok) continue;
+      var json = await resp.json();
+      if (json.items && json.items.length) { data = json; break; }
+      if (json.contents) { data = parseRSSXML(json.contents); if (data) break; }
+    } catch(e) { continue; }
+  }
+
+  window._bfLoading = false;
+  if (data) {
+    window._bfCache = data;
+    renderBetfairFeed(data);
+    if (stEl) stEl.textContent = '✅ ' + new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+  } else {
+    if (el) el.innerHTML = '<div style="padding:1rem;background:var(--am-bg);border-radius:var(--r);color:var(--am-tx)">'
+      + '⚠️ Feed indisponível. <a href="https://betting.betfair.com/football/world-cup-2026/" target="_blank" style="color:var(--bl-tx)">Ver artigos WC2026 no Betfair ↗</a></div>';
+    if (stEl) stEl.textContent = '⚠️';
+  }
+}
+
+function parseRSSXML(xml) {
+  var items = [];
+  var re = /<item>([\s\S]*?)<\/item>/g, m;
+  while ((m = re.exec(xml)) !== null) {
+    var block = m[1];
+    var title = (block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) ||
+                 block.match(/<title>(.*?)<\/title>/) || ['',''])[1].trim();
+    var link  = (block.match(/<link>(.*?)<\/link>/) || ['',''])[1].trim();
+    var date  = (block.match(/<pubDate>(.*?)<\/pubDate>/) || ['',''])[1].trim();
+    var desc  = (block.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/) ||
+                 block.match(/<description>([\s\S]*?)<\/description>/) || ['',''])[1]
+                 .replace(/<[^>]+>/g,'').trim().slice(0,200);
+    if (title && link) items.push({title:title, link:link, pubDate:date, description:desc});
+  }
+  return items.length ? {items:items} : null;
+}
+
+function renderBetfairFeed(data) {
+  var el = document.getElementById('betfairFeedContent');
+  if (!el) return;
+  var items = (data.items || []);
+  if (!items.length) { el.innerHTML = '<p style="color:var(--tx3)">Sem artigos.</p>'; return; }
+
+  var wc = items.filter(function(it){ return /world.cup|wc.?2026|copa/i.test((it.title||'')+(it.link||'')); });
+  var other = items.filter(function(it){ return !wc.includes(it); });
+  var all = wc.concat(other).slice(0, 15);
+
+  var h = '<div style="display:flex;flex-direction:column;gap:8px">';
+  all.forEach(function(item) {
+    var title = (item.title||'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/<[^>]+>/g,'').trim();
+    var link  = item.link || '#';
+    var date  = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+    var desc  = (item.description||'').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').trim().slice(0,150);
+    var isWC  = /world.cup|wc.?2026|copa/i.test(title+link);
+    var icon  = isWC ? '🏆' : '⚽';
+    var tag   = isWC ? '<span style="background:var(--gn-bg);color:var(--gn-tx);font-size:9px;padding:2px 6px;border-radius:10px;font-weight:700;margin-left:6px">WC2026</span>' : '';
+    h += '<a href="'+link+'" target="_blank" rel="noopener" style="text-decoration:none">';
+    h += '<div style="background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:.7rem 1rem">';
+    h += '<div style="display:flex;gap:8px;align-items:flex-start">';
+    h += '<span style="font-size:16px;flex-shrink:0">'+icon+'</span>';
+    h += '<div><div style="font-size:13px;font-weight:600;color:var(--tx);line-height:1.4">'+title+tag+'</div>';
+    if (desc) h += '<div style="font-size:11px;color:var(--tx3);margin-top:3px;line-height:1.4">'+desc+(desc.length>=150?'…':'')+'</div>';
+    h += '<div style="font-size:10px;color:var(--tx3);margin-top:4px">'+(date?'📅 '+date+' · ':'')+'<span style="color:var(--bl-tx)">betting.betfair.com ↗</span></div>';
+    h += '</div></div></div></a>';
+  });
+  h += '</div>';
+  el.innerHTML = h;
+}
+
+function renderBetfair() {
+  loadBetfairFeed(false);
+  if (typeof renderSBRanking === 'function') setTimeout(renderSBRanking, 100);
 }
 
 // Hook renders
@@ -1546,6 +1612,7 @@ function renderSBRanking() {
 function showSec(id,btn) {
   _baseShowSec(id,btn);
   if (id === 'reckoning' && typeof loadReckoning === 'function') { setTimeout(loadReckoning, 50); }
+  if (id === 'tracking'  && typeof loadTracking  === 'function') { setTimeout(loadTracking,  50); }
   if (id === 'dashboard' && typeof renderSBRanking === 'function') {
     setTimeout(function() { renderSBRanking(); }, 100);
   }
@@ -2125,7 +2192,12 @@ function renderTracking(data){
   }
 
   document.getElementById('trackContent').innerHTML=html||'<p style="color:var(--tx3)">Sem dados.</p>';
-  setTrackView(_trackView);
+  // Update active button state without re-rendering
+  ['pts','xg','table'].forEach(function(x){
+    var b=document.getElementById('btn-track-'+x);
+    if(b) b.style.background=x===_trackView?'var(--bl-bg)':'var(--sf2)';
+    if(b) b.style.color=x===_trackView?'var(--bl-tx)':'var(--tx2)';
+  });
 }
 // ── END TRACKING ──────────────────────────────────────────────────────────
 
