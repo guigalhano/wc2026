@@ -2126,7 +2126,12 @@ function renderTracking(data){
   }
 
   document.getElementById('trackContent').innerHTML=html||'<p style="color:var(--tx3)">Sem dados.</p>';
-  setTrackView(_trackView);
+  // Update active button state without re-rendering
+  ['pts','xg','table'].forEach(function(x){
+    var b=document.getElementById('btn-track-'+x);
+    if(b) b.style.background=x===_trackView?'var(--bl-bg)':'var(--sf2)';
+    if(b) b.style.color=x===_trackView?'var(--bl-tx)':'var(--tx2)';
+  });
 }
 // ── END TRACKING ──────────────────────────────────────────────────────────
 
