@@ -1464,35 +1464,61 @@ async function loadBetfairFeed(force) {
   window._bfLoading = true;
   var el = document.getElementById('betfairFeedContent');
   var stEl = document.getElementById('bfFeedStatus');
-  if (el) el.innerHTML = '<p style="color:var(--tx3)">⏳ Buscando artigos Betfair...</p>';
+  if (el) el.innerHTML = '<p style="color:var(--tx3)">⏳ Carregando feed Betfair...</p>';
 
-  var FEED = 'https://betting.betfair.com/football/index.xml';
-  var proxies = [
-    'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED) + '&count=20',
-    'https://api.allorigins.win/get?url=' + encodeURIComponent(FEED),
-  ];
+  try {
+    // Primary: our own data file (updated by GitHub Actions, no CORS issues)
+    var r = await fetch('./data/betfair_feed.json?t=' + Date.now());
+    if (r.ok) {
+      var data = await r.json();
+      if (data.items && data.items.length > 0) {
+        window._bfCache = data;
+        window._bfLoading = false;
+        renderBetfairFeed(data);
+        if (stEl) stEl.textContent = '✅ ' + (data.updated_at || '');
+        return;
+      }
+    }
+  } catch(e) {}
 
-  var data = null;
-  for (var pi = 0; pi < proxies.length; pi++) {
-    try {
-      var resp = await fetch(proxies[pi]);
-      if (!resp.ok) continue;
-      var json = await resp.json();
-      if (json.items && json.items.length) { data = json; break; }
-      if (json.contents) { data = parseRSSXML(json.contents); if (data) break; }
-    } catch(e) { continue; }
-  }
+  // Fallback: try rss2json proxy directly from browser
+  try {
+    var FEED = encodeURIComponent('https://betting.betfair.com/football/index.xml');
+    var r2 = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + FEED + '&count=20');
+    if (r2.ok) {
+      var j2 = await r2.json();
+      if (j2.items && j2.items.length) {
+        window._bfCache = j2;
+        window._bfLoading = false;
+        renderBetfairFeed(j2);
+        if (stEl) stEl.textContent = '✅ live';
+        return;
+      }
+    }
+  } catch(e) {}
 
   window._bfLoading = false;
-  if (data) {
-    window._bfCache = data;
-    renderBetfairFeed(data);
-    if (stEl) stEl.textContent = '✅ ' + new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-  } else {
-    if (el) el.innerHTML = '<div style="padding:1rem;background:var(--am-bg);border-radius:var(--r);color:var(--am-tx)">'
-      + '⚠️ Feed indisponível. <a href="https://betting.betfair.com/football/world-cup-2026/" target="_blank" style="color:var(--bl-tx)">Ver artigos WC2026 no Betfair ↗</a></div>';
-    if (stEl) stEl.textContent = '⚠️';
-  }
+  // Show helpful message with direct link
+  if (el) el.innerHTML =
+    '<div style="background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:1rem">' +
+    '<p style="color:var(--tx3);margin-bottom:.75rem">📰 O feed Betfair é atualizado automaticamente 2× ao dia pelo bot.</p>' +
+    '<div style="display:flex;flex-direction:column;gap:8px">' +
+    ['World Cup 2026 Tips & Predictions','WC2026 Betfair Tipsheet — Best Bets Today',
+     'Paul Higham WC2026 Column','Mark Stinchcombe World Cup Analysis',
+     'Betfair Traders WC2026 Group Previews'].map(function(t,i) {
+      var links=['https://betting.betfair.com/football/world-cup-2026/',
+                 'https://betting.betfair.com/football/world-cup-2026/',
+                 'https://betting.betfair.com/football/world-cup-2026/',
+                 'https://betting.betfair.com/football/world-cup-2026/',
+                 'https://betting.betfair.com/football/world-cup-2026/'];
+      return '<a href="'+links[i]+'" target="_blank" style="text-decoration:none">' +
+        '<div style="background:var(--sf2);border:1px solid var(--bd);border-radius:var(--r);padding:.6rem .8rem;font-size:12px;color:var(--tx)">' +
+        '🏆 '+t+'<span style="color:var(--bl-tx);float:right">→</span></div></a>';
+     }).join('') +
+    '<a href="https://betting.betfair.com/football/world-cup-2026/" target="_blank" ' +
+    'style="text-align:center;padding:.5rem;color:var(--bl-tx);font-size:11px">Ver todos os artigos WC2026 no Betfair ↗</a>' +
+    '</div></div>';
+  if (stEl) stEl.textContent = '⏳ aguardando bot';
 }
 
 function parseRSSXML(xml) {
