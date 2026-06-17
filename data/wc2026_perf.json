@@ -46,7 +46,21 @@
       "xga_real": 0.07,
       "dgf_real": 0.62,
       "dga_real": -0.07,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 1.78,
+        "pass_accuracy": 90.5,
+        "shot_accuracy": 25.0,
+        "forced_turnovers": 31,
+        "defensive_pressures": 170,
+        "linebreaks_completed": 3,
+        "linebreaks_attempted": 170,
+        "avg_distance_km": 107.31,
+        "avg_speed": 3.6,
+        "top_speed": 33.3,
+        "sprints": 422
+      },
+      "dgf_efi": 0.22
     },
     {
       "code": "COR",
@@ -84,7 +98,21 @@
       "dgf": 0.5,
       "dga": -0.2,
       "xgf": 1.5,
-      "xga": 1.2
+      "xga": 1.2,
+      "efi": {
+        "xg_official": 1.77,
+        "pass_accuracy": 89.1,
+        "shot_accuracy": 40.0,
+        "forced_turnovers": 30,
+        "defensive_pressures": 147,
+        "linebreaks_completed": 4,
+        "linebreaks_attempted": 161,
+        "avg_distance_km": 111.81,
+        "avg_speed": 3.9,
+        "top_speed": 35.2,
+        "sprints": 434
+      },
+      "dgf_efi": 0.23
     },
     {
       "code": "ESC",
@@ -122,7 +150,21 @@
       "dgf": -0.66,
       "dga": -1.04,
       "xgf": 1.66,
-      "xga": 1.04
+      "xga": 1.04,
+      "efi": {
+        "xg_official": 0.91,
+        "pass_accuracy": 81.6,
+        "shot_accuracy": 22.2,
+        "forced_turnovers": 35,
+        "defensive_pressures": 230,
+        "linebreaks_completed": 4,
+        "linebreaks_attempted": 167,
+        "avg_distance_km": 117.57,
+        "avg_speed": 4.0,
+        "top_speed": 32.9,
+        "sprints": 446
+      },
+      "dgf_efi": 0.09
     },
     {
       "code": "EUA",
@@ -160,7 +202,21 @@
       "dgf": 2.15,
       "dga": 0.02,
       "xgf": 1.85,
-      "xga": 0.98
+      "xga": 0.98,
+      "efi": {
+        "xg_official": 1.88,
+        "pass_accuracy": 86.4,
+        "shot_accuracy": 37.5,
+        "forced_turnovers": 50,
+        "defensive_pressures": 204,
+        "linebreaks_completed": 10,
+        "linebreaks_attempted": 223,
+        "avg_distance_km": 119.91,
+        "avg_speed": 3.8,
+        "top_speed": 34.0,
+        "sprints": 511
+      },
+      "dgf_efi": 2.12
     },
     {
       "code": "AUS",
@@ -198,7 +254,21 @@
       "dgf": 0.69,
       "dga": -1.39,
       "xgf": 1.31,
-      "xga": 1.39
+      "xga": 1.39,
+      "efi": {
+        "xg_official": 0.99,
+        "pass_accuracy": 76.5,
+        "shot_accuracy": 44.4,
+        "forced_turnovers": 35,
+        "defensive_pressures": 384,
+        "linebreaks_completed": 5,
+        "linebreaks_attempted": 130,
+        "avg_distance_km": 116.63,
+        "avg_speed": 4.1,
+        "top_speed": 36.7,
+        "sprints": 418
+      },
+      "dgf_efi": 1.01
     },
     {
       "code": "ALE",
@@ -245,7 +315,21 @@
       "xga_real": 0.2,
       "dgf_real": 3.56,
       "dga_real": 0.8,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 4.17,
+        "pass_accuracy": 88.8,
+        "shot_accuracy": 46.2,
+        "forced_turnovers": 46,
+        "defensive_pressures": 227,
+        "linebreaks_completed": 7,
+        "linebreaks_attempted": 190,
+        "avg_distance_km": 116.22,
+        "avg_speed": 4.0,
+        "top_speed": 33.8,
+        "sprints": 490
+      },
+      "dgf_efi": 2.83
     },
     {
       "code": "CDM",
@@ -283,7 +367,21 @@
       "dgf": -0.14,
       "dga": -1.56,
       "xgf": 1.14,
-      "xga": 1.56
+      "xga": 1.56,
+      "efi": {
+        "xg_official": 1.88,
+        "pass_accuracy": 87.7,
+        "shot_accuracy": 26.7,
+        "forced_turnovers": 44,
+        "defensive_pressures": 288,
+        "linebreaks_completed": 4,
+        "linebreaks_attempted": 177,
+        "avg_distance_km": 109.59,
+        "avg_speed": 3.7,
+        "top_speed": 34.6,
+        "sprints": 457
+      },
+      "dgf_efi": -0.88
     },
     {
       "code": "SUE",
@@ -321,7 +419,21 @@
       "dgf": 3.54,
       "dga": -0.24,
       "xgf": 1.46,
-      "xga": 1.24
+      "xga": 1.24,
+      "efi": {
+        "xg_official": 2.09,
+        "pass_accuracy": 81.5,
+        "shot_accuracy": 53.8,
+        "forced_turnovers": 42,
+        "defensive_pressures": 172,
+        "linebreaks_completed": 7,
+        "linebreaks_attempted": 161,
+        "avg_distance_km": 111.34,
+        "avg_speed": 3.9,
+        "top_speed": 32.8,
+        "sprints": 361
+      },
+      "dgf_efi": 2.91
     },
     {
       "code": "CAN",
@@ -368,7 +480,21 @@
       "xga_real": 1.54,
       "dgf_real": 0.09,
       "dga_real": -0.54,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 1.49,
+        "pass_accuracy": 76.7,
+        "shot_accuracy": 30.8,
+        "forced_turnovers": 50,
+        "defensive_pressures": 160,
+        "linebreaks_completed": 6,
+        "linebreaks_attempted": 190,
+        "avg_distance_km": 111.34,
+        "avg_speed": 3.8,
+        "top_speed": 34.6,
+        "sprints": 452
+      },
+      "dgf_efi": -0.49
     },
     {
       "code": "BOS",
@@ -415,7 +541,21 @@
       "xga_real": 0.91,
       "dgf_real": -0.54,
       "dga_real": 0.09,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.76,
+        "pass_accuracy": 66.7,
+        "shot_accuracy": 37.5,
+        "forced_turnovers": 51,
+        "defensive_pressures": 203,
+        "linebreaks_completed": 3,
+        "linebreaks_attempted": 154,
+        "avg_distance_km": 109.53,
+        "avg_speed": 3.8,
+        "top_speed": 34.8,
+        "sprints": 397
+      },
+      "dgf_efi": 0.24
     },
     {
       "code": "CAT",
@@ -462,7 +602,21 @@
       "xga_real": 2.6,
       "dgf_real": 0.56,
       "dga_real": -1.6,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.52,
+        "pass_accuracy": 74.8,
+        "shot_accuracy": 50.0,
+        "forced_turnovers": 36,
+        "defensive_pressures": 294,
+        "linebreaks_completed": 2,
+        "linebreaks_attempted": 128,
+        "avg_distance_km": 103.93,
+        "avg_speed": 3.8,
+        "top_speed": 32.6,
+        "sprints": 375
+      },
+      "dgf_efi": 0.48
     },
     {
       "code": "SUI",
@@ -509,7 +663,21 @@
       "xga_real": 0.44,
       "dgf_real": -1.6,
       "dga_real": 0.56,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 3.14,
+        "pass_accuracy": 91.7,
+        "shot_accuracy": 26.9,
+        "forced_turnovers": 42,
+        "defensive_pressures": 165,
+        "linebreaks_completed": 6,
+        "linebreaks_attempted": 189,
+        "avg_distance_km": 109.41,
+        "avg_speed": 3.7,
+        "top_speed": 33.0,
+        "sprints": 449
+      },
+      "dgf_efi": -2.14
     },
     {
       "code": "BRA",
@@ -556,7 +724,21 @@
       "xga_real": 0.7,
       "dgf_real": -0.34,
       "dga_real": 0.3,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.99,
+        "pass_accuracy": 88.9,
+        "shot_accuracy": 41.7,
+        "forced_turnovers": 41,
+        "defensive_pressures": 315,
+        "linebreaks_completed": 4,
+        "linebreaks_attempted": 154,
+        "avg_distance_km": 113.66,
+        "avg_speed": 3.8,
+        "top_speed": 34.1,
+        "sprints": 509
+      },
+      "dgf_efi": 0.01
     },
     {
       "code": "MAR",
@@ -603,7 +785,21 @@
       "xga_real": 1.34,
       "dgf_real": 0.3,
       "dga_real": -0.34,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 1.33,
+        "pass_accuracy": 85.7,
+        "shot_accuracy": 21.4,
+        "forced_turnovers": 50,
+        "defensive_pressures": 285,
+        "linebreaks_completed": 3,
+        "linebreaks_attempted": 179,
+        "avg_distance_km": 114.9,
+        "avg_speed": 3.9,
+        "top_speed": 33.7,
+        "sprints": 489
+      },
+      "dgf_efi": -0.33
     },
     {
       "code": "HOL",
@@ -650,7 +846,21 @@
       "xga_real": 0.37,
       "dgf_real": 1.22,
       "dga_real": 1.63,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.63,
+        "pass_accuracy": 89.4,
+        "shot_accuracy": 60.0,
+        "forced_turnovers": 33,
+        "defensive_pressures": 194,
+        "linebreaks_completed": 5,
+        "linebreaks_attempted": 153,
+        "avg_distance_km": 102.94,
+        "avg_speed": 3.7,
+        "top_speed": 35.6,
+        "sprints": 342
+      },
+      "dgf_efi": 1.37
     },
     {
       "code": "JAP",
@@ -697,7 +907,21 @@
       "xga_real": 0.78,
       "dgf_real": 1.63,
       "dga_real": 1.22,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.34,
+        "pass_accuracy": 84.8,
+        "shot_accuracy": 22.2,
+        "forced_turnovers": 28,
+        "defensive_pressures": 316,
+        "linebreaks_completed": 6,
+        "linebreaks_attempted": 138,
+        "avg_distance_km": 109.4,
+        "avg_speed": 3.9,
+        "top_speed": 33.5,
+        "sprints": 398
+      },
+      "dgf_efi": 1.66
     },
     {
       "code": "AFS",
@@ -744,7 +968,21 @@
       "xga_real": 1.38,
       "dgf_real": -0.07,
       "dga_real": 0.62,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.1,
+        "pass_accuracy": 82.6,
+        "shot_accuracy": 66.7,
+        "forced_turnovers": 32,
+        "defensive_pressures": 306,
+        "linebreaks_completed": 2,
+        "linebreaks_attempted": 130,
+        "avg_distance_km": 97.06,
+        "avg_speed": 3.3,
+        "top_speed": 34.4,
+        "sprints": 435
+      },
+      "dgf_efi": -0.1
     },
     {
       "code": "TCH",
@@ -782,7 +1020,21 @@
       "dgf": -0.2,
       "dga": 0.5,
       "xgf": 1.2,
-      "xga": 1.5
+      "xga": 1.5,
+      "efi": {
+        "xg_official": 0.64,
+        "pass_accuracy": 73.7,
+        "shot_accuracy": 57.1,
+        "forced_turnovers": 40,
+        "defensive_pressures": 301,
+        "linebreaks_completed": 1,
+        "linebreaks_attempted": 150,
+        "avg_distance_km": 117.63,
+        "avg_speed": 3.8,
+        "top_speed": 34.0,
+        "sprints": 472
+      },
+      "dgf_efi": 0.36
     },
     {
       "code": "HAI",
@@ -820,7 +1072,21 @@
       "dgf": -1.04,
       "dga": -0.66,
       "xgf": 1.04,
-      "xga": 1.66
+      "xga": 1.66,
+      "efi": {
+        "xg_official": 0.7,
+        "pass_accuracy": 87.7,
+        "shot_accuracy": 13.3,
+        "forced_turnovers": 29,
+        "defensive_pressures": 185,
+        "linebreaks_completed": 1,
+        "linebreaks_attempted": 142,
+        "avg_distance_km": 113.74,
+        "avg_speed": 3.3,
+        "top_speed": 34.2,
+        "sprints": 452
+      },
+      "dgf_efi": -0.7
     },
     {
       "code": "PAR",
@@ -858,7 +1124,21 @@
       "dgf": 0.02,
       "dga": 2.15,
       "xgf": 0.98,
-      "xga": 1.85
+      "xga": 1.85,
+      "efi": {
+        "xg_official": 0.6,
+        "pass_accuracy": 74.1,
+        "shot_accuracy": 11.1,
+        "forced_turnovers": 49,
+        "defensive_pressures": 360,
+        "linebreaks_completed": 2,
+        "linebreaks_attempted": 130,
+        "avg_distance_km": 114.31,
+        "avg_speed": 3.8,
+        "top_speed": 33.3,
+        "sprints": 466
+      },
+      "dgf_efi": 0.4
     },
     {
       "code": "TUR",
@@ -896,7 +1176,21 @@
       "dgf": -1.39,
       "dga": 0.69,
       "xgf": 1.39,
-      "xga": 1.31
+      "xga": 1.31,
+      "efi": {
+        "xg_official": 1.66,
+        "pass_accuracy": 91.8,
+        "shot_accuracy": 23.3,
+        "forced_turnovers": 30,
+        "defensive_pressures": 170,
+        "linebreaks_completed": 4,
+        "linebreaks_attempted": 194,
+        "avg_distance_km": 112.45,
+        "avg_speed": 3.9,
+        "top_speed": 34.7,
+        "sprints": 430
+      },
+      "dgf_efi": -1.66
     },
     {
       "code": "CUR",
@@ -943,7 +1237,21 @@
       "xga_real": 3.44,
       "dgf_real": 0.8,
       "dga_real": 3.56,
-      "real_xg_games": 1
+      "real_xg_games": 1,
+      "efi": {
+        "xg_official": 0.4,
+        "pass_accuracy": 80.4,
+        "shot_accuracy": 25.0,
+        "forced_turnovers": 43,
+        "defensive_pressures": 339,
+        "linebreaks_completed": 2,
+        "linebreaks_attempted": 147,
+        "avg_distance_km": 103.49,
+        "avg_speed": 3.1,
+        "top_speed": 33.3,
+        "sprints": 400
+      },
+      "dgf_efi": 0.6
     },
     {
       "code": "EQU",
@@ -981,7 +1289,21 @@
       "dgf": -1.56,
       "dga": -0.14,
       "xgf": 1.56,
-      "xga": 1.14
+      "xga": 1.14,
+      "efi": {
+        "xg_official": 1.36,
+        "pass_accuracy": 85.4,
+        "shot_accuracy": 8.3,
+        "forced_turnovers": 49,
+        "defensive_pressures": 280,
+        "linebreaks_completed": 4,
+        "linebreaks_attempted": 191,
+        "avg_distance_km": 108.42,
+        "avg_speed": 3.4,
+        "top_speed": 35.5,
+        "sprints": 451
+      },
+      "dgf_efi": -1.36
     },
     {
       "code": "TUN",
@@ -1019,7 +1341,21 @@
       "dgf": -0.24,
       "dga": 3.54,
       "xgf": 1.24,
-      "xga": 1.46
+      "xga": 1.46,
+      "efi": {
+        "xg_official": 0.34,
+        "pass_accuracy": 80.8,
+        "shot_accuracy": 33.3,
+        "forced_turnovers": 41,
+        "defensive_pressures": 223,
+        "linebreaks_completed": 2,
+        "linebreaks_attempted": 153,
+        "avg_distance_km": 109.72,
+        "avg_speed": 3.7,
+        "top_speed": 33.9,
+        "sprints": 431
+      },
+      "dgf_efi": 0.66
     }
   ],
   "matches": [
@@ -1169,5 +1505,7 @@
     }
   ],
   "real_xg_source": "nlbair/wc2026-events (WhoScored event data)",
-  "real_xg_updated_at": "2026-06-16"
+  "real_xg_updated_at": "2026-06-16",
+  "efi_source": "Bustami/efi-fifa-data-wc-2026 (FIFA official EFI metrics)",
+  "efi_updated_at": "2026-06-16"
 }
