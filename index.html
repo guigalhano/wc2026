@@ -857,18 +857,27 @@ function setLang(l){
 async function loadOdds(){
   setApiStatus('loading',T('loadingOdds'));
   try{
-    // Load from odds_data.json in same repo (updated by GitHub Actions daily)
-    const r=await fetch('./odds_data.json?t='+Date.now());
+    // Load from data/live_data.json — the file actually written by scripts/fetch_data.py
+    const r=await fetch('./data/live_data.json?t='+Date.now());
     if(!r.ok)throw new Error('HTTP '+r.status);
-    oddsData=await r.json();
+    const liveData=await r.json();
+    oddsData={
+      updated_at: liveData.updated_at,
+      games_count: liveData.games_count||0,
+      games: liveData.games||[]
+    };
     const upd=new Date(oddsData.updated_at);
     document.getElementById('lastUpd').textContent=`${T('oddsOk')}: ${upd.toLocaleDateString()} ${upd.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`;
-    setApiStatus('ok',`${oddsData.games_count||0} jogos`);
+    if(oddsData.games_count>0){
+      setApiStatus('ok',`${oddsData.games_count} jogos`);
+    }else{
+      setApiStatus('err','Sem odds disponíveis no momento');
+    }
     renderOddsUI();
   }catch(e){
     console.warn('Odds load error:',e);
     setApiStatus('err',T('oddsErr'));
-    document.getElementById('oddsContent').innerHTML=`<div class="no-games"><i class="ti ti-alert-circle" style="font-size:24px;color:var(--am);display:block;margin-bottom:8px"></i>${T('oddsErr')}. Os jogos começam em 11 de junho de 2026.</div>`;
+    document.getElementById('oddsContent').innerHTML=`<div class="no-games"><i class="ti ti-alert-circle" style="font-size:24px;color:var(--am);display:block;margin-bottom:8px"></i>${T('oddsErr')}.</div>`;
   }
 }
 
