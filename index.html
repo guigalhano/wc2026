@@ -355,6 +355,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <div class="hero" id="heroBlock"></div>
     <div style="margin-bottom:12px"><div class="stitle" data-t="swTitle">Pontos fortes e fracos</div><div class="g2" id="swBlock"></div></div>
     <div class="card"><div class="stitle" data-t="cmpTitle">Comparativo de métricas</div><div id="cmpBlock"></div></div>
+    <div class="card" id="efiCard" style="display:none"><div class="stitle">🏃 FIFA EFI — Dados oficiais do torneio</div><div id="efiCmpBlock"></div></div>
     <div class="g2">
       <div class="card"><div class="stitle" data-t="radarTitle">Perfil ofensivo / defensivo</div><div style="position:relative;height:220px"><canvas id="radarChart"></canvas></div></div>
       <div class="card"><div class="stitle" data-t="probTitle">Probabilidades estimadas</div><div style="position:relative;height:220px"><canvas id="probChart"></canvas></div></div>
@@ -1173,6 +1174,8 @@ function renderMatchup(){
   document.getElementById('aiBody').textContent=T('aiReady');
   aiAnalysis='';
   document.getElementById('matchup').style.display='block';
+
+  if(typeof loadEfiForConfronto==='function') loadEfiForConfronto(hC,aC);
 }
 
 // ─── AI (CLAUDE) ──────────────────────────────────────────
@@ -2476,6 +2479,61 @@ function renderHistorico(data) {
   }
 }
 // ── END HISTÓRICO ─────────────────────────────────────────────────────────
+</script>
+<script>
+
+// ── EFI comparison in Confronto panel ───────────────────────────────────
+var _efiPerfCache = null;
+async function loadEfiForConfronto(hC, aC) {
+  var card = document.getElementById('efiCard');
+  var block = document.getElementById('efiCmpBlock');
+  if (!card || !block) return;
+  try {
+    if (!_efiPerfCache) {
+      var r = await fetch('./data/wc2026_perf.json?t=' + Date.now());
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      _efiPerfCache = await r.json();
+    }
+    var teams = _efiPerfCache.teams || [];
+    var hT = teams.find(function(t){ return t.code === hC; });
+    var aT = teams.find(function(t){ return t.code === aC; });
+    if (!hT || !aT || !hT.efi || !aT.efi) { card.style.display = 'none'; return; }
+
+    var he = hT.efi, ae = aT.efi;
+    var rows = [
+      {label:'xG oficial FIFA', hv:he.xg_official, av:ae.xg_official, hi:true, fmt:function(v){return v!=null?v.toFixed(2):'–';}},
+      {label:'Precisão de passe', hv:he.pass_accuracy, av:ae.pass_accuracy, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'%':'–';}},
+      {label:'Distância/jogo', hv:he.avg_distance_km, av:ae.avg_distance_km, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'km':'–';}},
+      {label:'Sprints', hv:he.sprints, av:ae.sprints, hi:true, fmt:function(v){return v!=null?Math.round(v):'–';}},
+      {label:'Desarmes forçados', hv:he.forced_turnovers, av:ae.forced_turnovers, hi:true, fmt:function(v){return v!=null?Math.round(v):'–';}},
+      {label:'Linhas rompidas', hv:he.linebreaks_completed, av:ae.linebreaks_completed, hi:true, fmt:function(v){return v!=null?Math.round(v):'–';}},
+    ];
+    if (he.top_speed) rows.push({label:'Vel. máxima', hv:he.top_speed, av:ae.top_speed, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'km/h':'–';}});
+    if (he.shot_accuracy) rows.push({label:'Precisão de chute', hv:he.shot_accuracy, av:ae.shot_accuracy, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'%':'–';}});
+
+    var h = rows.map(function(m) {
+      var hn = parseFloat(m.hv), an = parseFloat(m.av);
+      var hB = !isNaN(hn) && !isNaN(an) && (m.hi ? hn>an : hn<an);
+      var aB = !isNaN(hn) && !isNaN(an) && (m.hi ? an>hn : an<hn);
+      var mx = Math.max(Math.abs(hn)||1, Math.abs(an)||1);
+      var hw = isNaN(hn) ? 40 : Math.round(Math.abs(hn)/mx*80);
+      var aw = isNaN(an) ? 40 : Math.round(Math.abs(an)/mx*80);
+      return '<div class="cmp-row">' +
+        '<div style="text-align:right"><span class="cmp-vh" style="color:'+(hB?'var(--bl)':'var(--tx)')+'">'+m.fmt(m.hv)+'</span><br>' +
+        '<div style="height:3px;border-radius:2px;width:'+hw+'px;float:right;background:'+(hB?'var(--bl)':'var(--bd)')+'"></div></div>' +
+        '<div class="cmp-lbl">'+m.label+'</div>' +
+        '<div><span class="cmp-va" style="color:'+(aB?'var(--rd)':'var(--tx)')+'">'+m.fmt(m.av)+'</span><br>' +
+        '<div style="height:3px;border-radius:2px;width:'+aw+'px;background:'+(aB?'var(--rd)':'var(--bd)')+'"></div></div></div>';
+    }).join('');
+
+    h += '<div style="font-size:9px;color:var(--tx3);margin-top:.5rem;text-align:center">Dados oficiais FIFA (EFI) · jogos disputados até agora · fonte: Bustami/efi-fifa-data-wc-2026</div>';
+    block.innerHTML = h;
+    card.style.display = 'block';
+  } catch(e) {
+    card.style.display = 'none';
+  }
+}
+// ── END EFI confronto ─────────────────────────────────────────────────────
 </script>
 </body>
 </html>
