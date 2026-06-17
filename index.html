@@ -219,6 +219,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <button class="nb" onclick="showSec('betfair',this)"><i class="ti ti-trophy"></i><span>Betfair Tips</span></button>
     <button class="nb" onclick="showSec('reckoning',this)"><i class="ti ti-target"></i><span>⚡ Modelo vs Real</span></button>
     <button class="nb" onclick="showSec('tracking',this)"><i class="ti ti-chart-bar"></i><span>📊 Tracking</span></button>
+    <button class="nb" onclick="showSec('historico',this)"><i class="ti ti-history"></i><span>🏛️ Histórico</span></button>
   </nav>
 </div>
 
@@ -354,6 +355,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <div class="hero" id="heroBlock"></div>
     <div style="margin-bottom:12px"><div class="stitle" data-t="swTitle">Pontos fortes e fracos</div><div class="g2" id="swBlock"></div></div>
     <div class="card"><div class="stitle" data-t="cmpTitle">Comparativo de métricas</div><div id="cmpBlock"></div></div>
+    <div class="card" id="efiCard" style="display:none"><div class="stitle">🏃 FIFA EFI — Dados oficiais do torneio</div><div id="efiCmpBlock"></div></div>
     <div class="g2">
       <div class="card"><div class="stitle" data-t="radarTitle">Perfil ofensivo / defensivo</div><div style="position:relative;height:220px"><canvas id="radarChart"></canvas></div></div>
       <div class="card"><div class="stitle" data-t="probTitle">Probabilidades estimadas</div><div style="position:relative;height:220px"><canvas id="probChart"></canvas></div></div>
@@ -383,7 +385,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px">
     <div>
       <div class="stitle">💰 Value Bets do Dia — Geradas por IA</div>
-      <div style="font-size:11px;color:var(--tx3)" id="ai_updated">Atualizado: 17/06/2026 09:58 BRT</div>
+      <div style="font-size:11px;color:var(--tx3)" id="ai_updated">Atualizado: 16/06/2026 18:36 BRT</div>
     </div>
     <div style="font-size:11px;color:var(--tx3);background:var(--bl-bg);color:var(--bl-tx);padding:4px 10px;border-radius:20px;font-weight:500">
       <i class="ti ti-sparkles" style="vertical-align:-2px"></i> Claude AI
@@ -560,12 +562,22 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <button class="vpill" onclick="setTrackView('pts')" id="btn-track-pts" style="cursor:pointer;background:var(--bl-bg);color:var(--bl-tx)">Δ Pontos</button>
-      <button class="vpill" onclick="setTrackView('xg')" id="btn-track-xg" style="cursor:pointer">Δ xG</button>
+      <button class="vpill" onclick="setTrackView('xg')" id="btn-track-xg" style="cursor:pointer">Δ xG (modelo)</button>
+      <button class="vpill" onclick="setTrackView('xgreal')" id="btn-track-xgreal" style="cursor:pointer">⚡ xG Real (eventos)</button>
+      <button class="vpill" onclick="setTrackView('efi')" id="btn-track-efi" style="cursor:pointer">🏃 FIFA EFI (físico)</button>
       <button class="vpill" onclick="setTrackView('table')" id="btn-track-table" style="cursor:pointer">Tabela completa</button>
     </div>
   </div>
   <div id="trackSummary" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1rem"></div>
   <div id="trackContent"><p style="color:var(--tx3)">⏳ Carregando...</p></div>
+</section>
+
+<section id="historico" class="sec">
+  <div style="margin-bottom:1.25rem">
+    <div class="stitle">🏛️ Histórico — WC2018 vs WC2022 vs WC2026</div>
+    <div style="font-size:11px;color:var(--tx3)">Dados StatsBomb Open Data (CC0) · xG oficial evento-a-evento · 64 jogos por edição</div>
+  </div>
+  <div id="histContent"><p style="color:var(--tx3)">⏳ Carregando dados históricos...</p></div>
 </section>
 </main>
 
@@ -585,10 +597,10 @@ const CLAUDE_MODEL = 'claude-haiku-4-5-20251001';
 
 // ─── TRANSLATIONS ─────────────────────────────────────────
 const L = {
-  pt:{navOdds:"Odds ao vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendências",navMatch:"Confronto",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating médio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Clique numa seleção para ver detalhes",valueHint:"Value edge = diferença entre probabilidade implícita das odds e probabilidade estimada pelo scout.",trendAlignTitle:"Times mais alinhados com perfil de classificados",swTitle:"Pontos fortes e fracos",cmpTitle:"Comparativo de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Melhores apostas",trendsTitle:"Tendências WC 2022 → 2026",analyze:"Analisar",aiTitle:"Análise por IA",aiBtn:"Analisar com IA",aiReady:"Clique em \"Analisar com IA\" para gerar uma análise tática e de apostas para este confronto.",copyBtn:"Copiar",loadingOdds:"Buscando odds...",refresh:"Atualizar",strengths:"Pontos fortes",weaknesses:"Pontos fracos",win:"Vitória",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Odd justa",mktOdd:"Odds mercado",valueEdge:"Value edge",shots:"Chutes/j",sot:"A gol/j",corners:"Escanteios/j",yellows:"Cartões/j",xg:"xG",xga:"xGA",poss:"Posse",goals:"Gols/j",conceded:"Sofridos/j",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Classificados",eliminated:"Eliminados",noOdds:"Sem odds disponíveis para este jogo no momento.",oddsOk:"Odds atualizadas",oddsErr:"Erro ao buscar odds",teamsAnalyzed:"Seleções",gamesBase:"Jogos na base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posse","Chutes","Efic.def","Gols/j","Duelos"],probLabels:["Vitória","Empate","Vitória"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Mais de metade dos gols vieram em ataque posicional vs defesa fechada. Equipas classificadas marcaram 73% em AP vs def. fechada.",stats:["AP vs def. fechada: 73%","Contra-ataque: ~25%","Bola parada: ~15%"]},{title:"Perfil das equipas classificadas",body:"Marcaram mais gols, criaram mais ocasiões, sofreram menos. Remontadas em 50% dos casos. Pico de gols nos +80'.",stats:["Gols marcados: 62%","Gols sofridos: 32%","Remontadas: 50%"]},{title:"Timing dos gols",body:"Pico de gols no 81-90'. 65% dos gols em AP vs def. fechada na 2ª parte. Tempo médio de ataque: 7,6s após trigger.",stats:["1ª parte: 35%","2ª parte: 65%","+81': pico máximo"]},{title:"Fase eliminatória vs grupos",body:"Avançados marcaram 55% dos gols nas eliminatórias. Ter mais ocasiões leva à vitória em 80% dos casos.",stats:["Mais ocasiões → 80%","Mais posse → 40%","Finalizações → 50%"]}]},
-  en:{navOdds:"Live Odds",navDash:"Dashboard",navGrupos:"Groups",navScouts:"Scouts",navValue:"Value",navTrend:"Trends",navMatch:"Matchup",top10Title:"Top 10 by rating",xgTitle:"Offensive xG vs xGA",groupRatingTitle:"Avg rating by group",sortLabel:"Sort:",minEdgeLabel:"Min edge:",scoutHint:"Click a team to see full details",valueHint:"Value edge = difference between implied odds probability and scout-estimated probability.",trendAlignTitle:"Teams most aligned with WC22 qualifying profile",swTitle:"Strengths & weaknesses",cmpTitle:"Metrics comparison",radarTitle:"Offensive / defensive profile",probTitle:"Estimated probabilities",betsTitle:"Best bets",trendsTitle:"WC 2022 → 2026 trends",analyze:"Analyze",aiTitle:"AI Analysis",aiBtn:"Analyze with AI",aiReady:"Click \"Analyze with AI\" to generate a tactical and betting analysis for this matchup.",copyBtn:"Copy",loadingOdds:"Fetching odds...",refresh:"Refresh",strengths:"Strengths",weaknesses:"Weaknesses",win:"Win",draw:"Draw",rating:"rating",prob:"Prob.",fairOdd:"Fair odd",mktOdd:"Market odds",valueEdge:"Value edge",shots:"Shots/g",sot:"On target/g",corners:"Corners/g",yellows:"Yellows/g",xg:"xG",xga:"xGA",poss:"Possession",goals:"Goals/g",conceded:"Conceded/g",duels:"Duels",defEff:"Def.eff",vHigh:"High value",vMed:"Consider",vWatch:"Watch",rec:"Recommended",qualified:"Qualifying",eliminated:"Eliminated",noOdds:"No odds available for this game at the moment.",oddsOk:"Odds updated",oddsErr:"Error fetching odds",teamsAnalyzed:"Teams",gamesBase:"Games in dataset",topRating:"Top rating",valueOpps:"Value opportunities",metricLabels:["xG att","Possession","Shots","Def.eff","Goals/g","Duels"],probLabels:["Win","Draw","Win"],trendBlocks:[{title:"Goal type — WC 2022",body:"Over half of goals came from positional attack vs compact defense. Qualifying teams scored 73% in PA vs closed defense.",stats:["PA vs closed def: 73%","Counter-attack: ~25%","Set pieces: ~15%"]},{title:"Qualifying team profile",body:"Scored more, created more, conceded less. Came back from 1-0 in 50% of cases. More late goals (+80').",stats:["Goals scored: 62%","Goals conceded: 32%","Comebacks: 50%"]},{title:"Goal timing",body:"Goal peak in 81-90'. 65% of PA vs closed defense goals in 2nd half. Average attack duration: 7.6s after trigger.",stats:["1st half: 35%","2nd half: 65%","+81': peak"]},{title:"Knockout vs group stage",body:"Forwards scored 55% of knockout goals. Creating more chances leads to victory in 80% of cases.",stats:["More chances → 80%","More possession → 40%","Shots on target → 50%"]}]},
-  es:{navOdds:"Cuotas en vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendencias",navMatch:"Enfrentamiento",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating medio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Haz clic en un equipo para ver detalles",valueHint:"Value edge = diferencia entre probabilidad implícita de cuotas y probabilidad estimada por scout.",trendAlignTitle:"Equipos más alineados con el perfil de clasificados",swTitle:"Fortalezas y debilidades",cmpTitle:"Comparativa de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Mejores apuestas",trendsTitle:"Tendencias WC 2022 → 2026",analyze:"Analizar",aiTitle:"Análisis con IA",aiBtn:"Analizar con IA",aiReady:"Haz clic en \"Analizar con IA\" para generar un análisis táctico y de apuestas.",copyBtn:"Copiar",loadingOdds:"Buscando cuotas...",refresh:"Actualizar",strengths:"Fortalezas",weaknesses:"Debilidades",win:"Victoria",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Cuota justa",mktOdd:"Cuotas mercado",valueEdge:"Value edge",shots:"Tiros/p",sot:"A puerta/p",corners:"Córners/p",yellows:"Amarillas/p",xg:"xG",xga:"xGA",poss:"Posesión",goals:"Goles/p",conceded:"Encajados/p",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Clasificados",eliminated:"Eliminados",noOdds:"Sin cuotas disponibles para este partido.",oddsOk:"Cuotas actualizadas",oddsErr:"Error al obtener cuotas",teamsAnalyzed:"Selecciones",gamesBase:"Partidos en la base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posesión","Tiros","Efic.def","Goles/p","Duelos"],probLabels:["Victoria","Empate","Victoria"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Más de la mitad de los goles vinieron en ataque posicional vs defensa cerrada.",stats:["AP vs def. cerrada: 73%","Contraataque: ~25%","Balón parado: ~15%"]},{title:"Perfil de equipos clasificados",body:"Marcaron más, crearon más y encajaron menos. Remontas en el 50% de los casos.",stats:["Goles marcados: 62%","Goles encajados: 32%","Remontas: 50%"]},{title:"Timing de goles",body:"Pico de goles en el 81-90'. 65% de goles en AP vs def. cerrada en 2ª parte.",stats:["1ª parte: 35%","2ª parte: 65%","+81': máximo"]},{title:"Eliminatorias vs grupos",body:"Delanteros marcaron el 55% en eliminatorias. Tener más ocasiones lleva a la victoria en el 80%.",stats:["Más ocasiones → 80%","Más posesión → 40%","Remates → 50%"]}]},
-  it:{navOdds:"Quote live",navDash:"Dashboard",navGrupos:"Gironi",navScouts:"Scout",navValue:"Value",navTrend:"Tendenze",navMatch:"Confronto",top10Title:"Top 10 per rating",xgTitle:"xG offensivo vs xGA",groupRatingTitle:"Rating medio per girone",sortLabel:"Ordina:",minEdgeLabel:"Edge min.:",scoutHint:"Clicca su una squadra per i dettagli",valueHint:"Value edge = differenza tra probabilità implicita delle quote e probabilità stimata dallo scout.",trendAlignTitle:"Squadre più allineate al profilo delle qualificate",swTitle:"Punti di forza e debolezza",cmpTitle:"Confronto metriche",radarTitle:"Profilo offensivo / difensivo",probTitle:"Probabilità stimate",betsTitle:"Migliori scommesse",trendsTitle:"Tendenze WC 2022 → 2026",analyze:"Analizza",aiTitle:"Analisi con IA",aiBtn:"Analizza con IA",aiReady:"Clicca \"Analizza con IA\" per generare un'analisi tattica e di scommesse.",copyBtn:"Copia",loadingOdds:"Cercando quote...",refresh:"Aggiorna",strengths:"Punti di forza",weaknesses:"Punti deboli",win:"Vittoria",draw:"Pareggio",rating:"rating",prob:"Prob.",fairOdd:"Quota giusta",mktOdd:"Quote mercato",valueEdge:"Value edge",shots:"Tiri/p",sot:"In porta/p",corners:"Angoli/p",yellows:"Gialli/p",xg:"xG",xga:"xGA",poss:"Possesso",goals:"Gol/p",conceded:"Subiti/p",duels:"Duelli",defEff:"Eff.dif",vHigh:"Value alto",vMed:"Da considerare",vWatch:"Osservare",rec:"Consigliato",qualified:"Qualificate",eliminated:"Eliminate",noOdds:"Nessuna quota disponibile per questa partita.",oddsOk:"Quote aggiornate",oddsErr:"Errore nel recupero quote",teamsAnalyzed:"Squadre",gamesBase:"Partite nel dataset",topRating:"Top rating",valueOpps:"Opportunità value",metricLabels:["xG att","Possesso","Tiri","Eff.dif","Gol/p","Duelli"],probLabels:["Vittoria","Pareggio","Vittoria"],trendBlocks:[{title:"Tipo di gol — WC 2022",body:"Più della metà dei gol sono arrivati da attacco posizionale vs difesa chiusa.",stats:["AP vs dif. chiusa: 73%","Contropiede: ~25%","Palla inattiva: ~15%"]},{title:"Profilo squadre qualificate",body:"Hanno segnato di più, creato più occasioni, subito di meno. Rimonte nel 50%.",stats:["Gol segnati: 62%","Gol subiti: 32%","Rimonte: 50%"]},{title:"Timing dei gol",body:"Picco di gol nel tratto 81-90'. 65% dei gol in AP nel 2° tempo.",stats:["1° tempo: 35%","2° tempo: 65%","+81': picco"]},{title:"Eliminatorie vs gironi",body:"Gli attaccanti hanno segnato il 55% nelle eliminatorie. Più occasioni porta alla vittoria nell'80%.",stats:["Più occasioni → 80%","Più possesso → 40%","Tiri in porta → 50%"]}]}
+  pt:{navOdds:"Odds ao vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendências",navMatch:"Confronto",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating médio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Clique numa seleção para ver detalhes",valueHint:"Value edge = diferença entre probabilidade implícita das odds e probabilidade estimada pelo scout.",trendAlignTitle:"Times mais alinhados com perfil de classificados",swTitle:"Pontos fortes e fracos",cmpTitle:"Comparativo de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Melhores apostas",trendsTitle:"Tendências WC 2022 → 2026",analyze:"Analisar",aiTitle:"Análise por IA",aiBtn:"Analisar com IA",aiReady:"Clique em \"Analisar com IA\" para gerar uma análise tática e de apostas para este confronto.",copyBtn:"Copiar",loadingOdds:"Buscando odds...",refresh:"Atualizar",strengths:"Pontos fortes",weaknesses:"Pontos fracos",win:"Vitória",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Odd justa",mktOdd:"Odds mercado",valueEdge:"Value edge",shots:"Chutes/j",sot:"A gol/j",corners:"Escanteios/j",yellows:"Cartões/j",xg:"xG",xga:"xGA",poss:"Posse",goals:"Gols/j",conceded:"Sofridos/j",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Classificados",eliminated:"Eliminados",noOdds:"Sem odds disponíveis para este jogo no momento.",oddsOk:"Odds atualizadas",oddsErr:"Erro ao buscar odds",teamsAnalyzed:"Seleções",gamesBase:"Jogos na base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posse","Chutes","Efic.def","Gols/j","Duelos"],probLabels:["Vitória","Empate","Vitória"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Mais de metade dos gols vieram em ataque posicional vs defesa fechada. Equipas classificadas marcaram 73% em AP vs def. fechada.",stats:["AP vs def. fechada: 73%","Contra-ataque: ~25%","Bola parada: ~15%"]},{title:"Perfil das equipas classificadas",body:"Marcaram mais gols, criaram mais ocasiões, sofreram menos. Remontadas em 50% dos casos. Pico de gols nos +80'.",stats:["Gols marcados: 62%","Gols sofridos: 32%","Remontadas: 50%"]},{title:"Timing dos gols",body:"Pico de gols no 81-90'. 65% dos gols em AP vs def. fechada na 2ª parte. Tempo médio de ataque: 7,6s após trigger.",stats:["1ª parte: 35%","2ª parte: 65%","+81': pico máximo"]},{title:"Fase eliminatória vs grupos",body:"Avançados marcaram 55% dos gols nas eliminatórias. Ter mais ocasiões leva à vitória em 80% dos casos.",stats:["Mais ocasiões → 80%","Mais posse → 40%","Finalizações → 50%"]}],expectedScore:'Placar esperado'},
+  en:{navOdds:"Live Odds",navDash:"Dashboard",navGrupos:"Groups",navScouts:"Scouts",navValue:"Value",navTrend:"Trends",navMatch:"Matchup",top10Title:"Top 10 by rating",xgTitle:"Offensive xG vs xGA",groupRatingTitle:"Avg rating by group",sortLabel:"Sort:",minEdgeLabel:"Min edge:",scoutHint:"Click a team to see full details",valueHint:"Value edge = difference between implied odds probability and scout-estimated probability.",trendAlignTitle:"Teams most aligned with WC22 qualifying profile",swTitle:"Strengths & weaknesses",cmpTitle:"Metrics comparison",radarTitle:"Offensive / defensive profile",probTitle:"Estimated probabilities",betsTitle:"Best bets",trendsTitle:"WC 2022 → 2026 trends",analyze:"Analyze",aiTitle:"AI Analysis",aiBtn:"Analyze with AI",aiReady:"Click \"Analyze with AI\" to generate a tactical and betting analysis for this matchup.",copyBtn:"Copy",loadingOdds:"Fetching odds...",refresh:"Refresh",strengths:"Strengths",weaknesses:"Weaknesses",win:"Win",draw:"Draw",rating:"rating",prob:"Prob.",fairOdd:"Fair odd",mktOdd:"Market odds",valueEdge:"Value edge",shots:"Shots/g",sot:"On target/g",corners:"Corners/g",yellows:"Yellows/g",xg:"xG",xga:"xGA",poss:"Possession",goals:"Goals/g",conceded:"Conceded/g",duels:"Duels",defEff:"Def.eff",vHigh:"High value",vMed:"Consider",vWatch:"Watch",rec:"Recommended",qualified:"Qualifying",eliminated:"Eliminated",noOdds:"No odds available for this game at the moment.",oddsOk:"Odds updated",oddsErr:"Error fetching odds",teamsAnalyzed:"Teams",gamesBase:"Games in dataset",topRating:"Top rating",valueOpps:"Value opportunities",metricLabels:["xG att","Possession","Shots","Def.eff","Goals/g","Duels"],probLabels:["Win","Draw","Win"],trendBlocks:[{title:"Goal type — WC 2022",body:"Over half of goals came from positional attack vs compact defense. Qualifying teams scored 73% in PA vs closed defense.",stats:["PA vs closed def: 73%","Counter-attack: ~25%","Set pieces: ~15%"]},{title:"Qualifying team profile",body:"Scored more, created more, conceded less. Came back from 1-0 in 50% of cases. More late goals (+80').",stats:["Goals scored: 62%","Goals conceded: 32%","Comebacks: 50%"]},{title:"Goal timing",body:"Goal peak in 81-90'. 65% of PA vs closed defense goals in 2nd half. Average attack duration: 7.6s after trigger.",stats:["1st half: 35%","2nd half: 65%","+81': peak"]},{title:"Knockout vs group stage",body:"Forwards scored 55% of knockout goals. Creating more chances leads to victory in 80% of cases.",stats:["More chances → 80%","More possession → 40%","Shots on target → 50%"]}],expectedScore:'Expected score'},
+  es:{navOdds:"Cuotas en vivo",navDash:"Dashboard",navGrupos:"Grupos",navScouts:"Scouts",navValue:"Value",navTrend:"Tendencias",navMatch:"Enfrentamiento",top10Title:"Top 10 por rating",xgTitle:"xG ofensivo vs xGA",groupRatingTitle:"Rating medio por grupo",sortLabel:"Ordenar:",minEdgeLabel:"Edge mín.:",scoutHint:"Haz clic en un equipo para ver detalles",valueHint:"Value edge = diferencia entre probabilidad implícita de cuotas y probabilidad estimada por scout.",trendAlignTitle:"Equipos más alineados con el perfil de clasificados",swTitle:"Fortalezas y debilidades",cmpTitle:"Comparativa de métricas",radarTitle:"Perfil ofensivo / defensivo",probTitle:"Probabilidades estimadas",betsTitle:"Mejores apuestas",trendsTitle:"Tendencias WC 2022 → 2026",analyze:"Analizar",aiTitle:"Análisis con IA",aiBtn:"Analizar con IA",aiReady:"Haz clic en \"Analizar con IA\" para generar un análisis táctico y de apuestas.",copyBtn:"Copiar",loadingOdds:"Buscando cuotas...",refresh:"Actualizar",strengths:"Fortalezas",weaknesses:"Debilidades",win:"Victoria",draw:"Empate",rating:"rating",prob:"Prob.",fairOdd:"Cuota justa",mktOdd:"Cuotas mercado",valueEdge:"Value edge",shots:"Tiros/p",sot:"A puerta/p",corners:"Córners/p",yellows:"Amarillas/p",xg:"xG",xga:"xGA",poss:"Posesión",goals:"Goles/p",conceded:"Encajados/p",duels:"Duelos",defEff:"Efic.def",vHigh:"Value alto",vMed:"A considerar",vWatch:"Observar",rec:"Recomendado",qualified:"Clasificados",eliminated:"Eliminados",noOdds:"Sin cuotas disponibles para este partido.",oddsOk:"Cuotas actualizadas",oddsErr:"Error al obtener cuotas",teamsAnalyzed:"Selecciones",gamesBase:"Partidos en la base",topRating:"Top rating",valueOpps:"Oportunidades value",metricLabels:["xG atq","Posesión","Tiros","Efic.def","Goles/p","Duelos"],probLabels:["Victoria","Empate","Victoria"],trendBlocks:[{title:"Tipo de gol — WC 2022",body:"Más de la mitad de los goles vinieron en ataque posicional vs defensa cerrada.",stats:["AP vs def. cerrada: 73%","Contraataque: ~25%","Balón parado: ~15%"]},{title:"Perfil de equipos clasificados",body:"Marcaron más, crearon más y encajaron menos. Remontas en el 50% de los casos.",stats:["Goles marcados: 62%","Goles encajados: 32%","Remontas: 50%"]},{title:"Timing de goles",body:"Pico de goles en el 81-90'. 65% de goles en AP vs def. cerrada en 2ª parte.",stats:["1ª parte: 35%","2ª parte: 65%","+81': máximo"]},{title:"Eliminatorias vs grupos",body:"Delanteros marcaron el 55% en eliminatorias. Tener más ocasiones lleva a la victoria en el 80%.",stats:["Más ocasiones → 80%","Más posesión → 40%","Remates → 50%"]}],expectedScore:'Marcador esperado'},
+  it:{navOdds:"Quote live",navDash:"Dashboard",navGrupos:"Gironi",navScouts:"Scout",navValue:"Value",navTrend:"Tendenze",navMatch:"Confronto",top10Title:"Top 10 per rating",xgTitle:"xG offensivo vs xGA",groupRatingTitle:"Rating medio per girone",sortLabel:"Ordina:",minEdgeLabel:"Edge min.:",scoutHint:"Clicca su una squadra per i dettagli",valueHint:"Value edge = differenza tra probabilità implicita delle quote e probabilità stimata dallo scout.",trendAlignTitle:"Squadre più allineate al profilo delle qualificate",swTitle:"Punti di forza e debolezza",cmpTitle:"Confronto metriche",radarTitle:"Profilo offensivo / difensivo",probTitle:"Probabilità stimate",betsTitle:"Migliori scommesse",trendsTitle:"Tendenze WC 2022 → 2026",analyze:"Analizza",aiTitle:"Analisi con IA",aiBtn:"Analizza con IA",aiReady:"Clicca \"Analizza con IA\" per generare un'analisi tattica e di scommesse.",copyBtn:"Copia",loadingOdds:"Cercando quote...",refresh:"Aggiorna",strengths:"Punti di forza",weaknesses:"Punti deboli",win:"Vittoria",draw:"Pareggio",rating:"rating",prob:"Prob.",fairOdd:"Quota giusta",mktOdd:"Quote mercato",valueEdge:"Value edge",shots:"Tiri/p",sot:"In porta/p",corners:"Angoli/p",yellows:"Gialli/p",xg:"xG",xga:"xGA",poss:"Possesso",goals:"Gol/p",conceded:"Subiti/p",duels:"Duelli",defEff:"Eff.dif",vHigh:"Value alto",vMed:"Da considerare",vWatch:"Osservare",rec:"Consigliato",qualified:"Qualificate",eliminated:"Eliminate",noOdds:"Nessuna quota disponibile per questa partita.",oddsOk:"Quote aggiornate",oddsErr:"Errore nel recupero quote",teamsAnalyzed:"Squadre",gamesBase:"Partite nel dataset",topRating:"Top rating",valueOpps:"Opportunità value",metricLabels:["xG att","Possesso","Tiri","Eff.dif","Gol/p","Duelli"],probLabels:["Vittoria","Pareggio","Vittoria"],trendBlocks:[{title:"Tipo di gol — WC 2022",body:"Più della metà dei gol sono arrivati da attacco posizionale vs difesa chiusa.",stats:["AP vs dif. chiusa: 73%","Contropiede: ~25%","Palla inattiva: ~15%"]},{title:"Profilo squadre qualificate",body:"Hanno segnato di più, creato più occasioni, subito di meno. Rimonte nel 50%.",stats:["Gol segnati: 62%","Gol subiti: 32%","Rimonte: 50%"]},{title:"Timing dei gol",body:"Picco di gol nel tratto 81-90'. 65% dei gol in AP nel 2° tempo.",stats:["1° tempo: 35%","2° tempo: 65%","+81': picco"]},{title:"Eliminatorie vs gironi",body:"Gli attaccanti hanno segnato il 55% nelle eliminatorie. Più occasioni porta alla vittoria nell'80%.",stats:["Più occasioni → 80%","Più possesso → 40%","Tiri in porta → 50%"]}],expectedScore:'Risultato atteso'}
 };
 
 // ─── SCOUT DATA ──────────────────────────────────────────
@@ -1028,9 +1040,32 @@ function renderMatchup(){
   curMatchup={h:hC,a:aC};
   const h=SCOUTS[hC],a=SCOUTS[aC],hc=CSV[hC]||{},ac=CSV[aC]||{};
   const{pH,pA,pD}=calcProbs(hC,aC);
+  // ELO-based xG (Poisson model) — venue + form + ML calibration aware
+  var _ep=(typeof matchProb==='function'&&typeof getElo==='function')?matchProb(getElo(hC),getElo(aC),SIM_HOME_BONUS[hC]||0,hC,aC,h&&h.group,false):null;
+  var _xgH=_ep?_ep.lamA:(h.xG||1.5);
+  var _xgA=_ep?_ep.lamB:(a.xG||1.5);
+  var _mlH=Math.max(0,Math.round(_xgH*0.85));
+  var _mlA=Math.max(0,Math.round(_xgA*0.85));
+  var _pH=_ep?_ep.winA:pH; var _pD=_ep?_ep.draw:pD; var _pA=_ep?_ep.winB:pA;
   document.getElementById('heroBlock').innerHTML=`
     <div class="hero-team home"><div class="hero-flag">${h.flag}</div><div class="hero-name">${tn(hC)}</div><div class="hero-sub">Gr. ${h.group}</div><div class="hero-rat" style="color:${rCol(h.rating||70)}">${h.rating||'–'}</div><div style="font-size:10px;color:var(--tx3)">rating</div></div>
-    <div class="hero-mid"><div class="pline" style="color:var(--bl)">${(pH*100).toFixed(0)}%</div><div class="plbl">${T('win')}</div><div class="hdiv"></div><div class="pline" style="color:var(--tx2)">${(pD*100).toFixed(0)}%</div><div class="plbl">${T('draw')}</div><div class="hdiv"></div><div class="pline" style="color:var(--rd)">${(pA*100).toFixed(0)}%</div><div class="plbl">${T('win')}</div></div>
+    <div class="hero-mid">
+      <div class="pline" style="color:var(--bl)">${(_pH*100).toFixed(0)}%</div><div class="plbl">${T('win')}</div>
+      <div class="hdiv"></div>
+      <div class="pline" style="color:var(--tx2)">${(_pD*100).toFixed(0)}%</div><div class="plbl">${T('draw')}</div>
+      <div class="hdiv"></div>
+      <div class="pline" style="color:var(--rd)">${(_pA*100).toFixed(0)}%</div><div class="plbl">${T('win')}</div>
+      <div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--bd);width:100%;text-align:center">
+        <div style="font-size:10px;color:var(--tx3);margin-bottom:3px">${T('expectedScore')}</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:800;letter-spacing:3px">${_mlH} – ${_mlA}</div>
+        <div style="display:flex;justify-content:space-around;margin-top:5px">
+          <div><div style="font-size:13px;font-weight:700;color:var(--bl-tx)">${_xgH.toFixed(2)}</div><div style="font-size:9px;color:var(--tx3)">xG</div></div>
+          <div style="font-size:10px;color:var(--tx3);padding-top:4px">vs</div>
+          <div><div style="font-size:13px;font-weight:700;color:var(--rd-tx)">${_xgA.toFixed(2)}</div><div style="font-size:9px;color:var(--tx3)">xG</div></div>
+        </div>
+        ${_ep&&_ep.venue&&_ep.venue.city?`<div style="font-size:9px;color:var(--tx3);margin-top:4px">📍 ${_ep.venue.city} · ${_ep.venue.alt}m · ${_ep.venue.temp}°C</div>`:''}
+      </div>
+    </div>
     <div class="hero-team away"><div class="hero-flag">${a.flag}</div><div class="hero-name">${tn(aC)}</div><div class="hero-sub">Gr. ${a.group}</div><div class="hero-rat" style="color:${rCol(a.rating||70)}">${a.rating||'–'}</div><div style="font-size:10px;color:var(--tx3)">rating</div></div>`;
   const swH=getSW(hC),swA=getSW(aC);
   document.getElementById('swBlock').innerHTML=`
@@ -1139,6 +1174,8 @@ function renderMatchup(){
   document.getElementById('aiBody').textContent=T('aiReady');
   aiAnalysis='';
   document.getElementById('matchup').style.display='block';
+
+  if(typeof loadEfiForConfronto==='function') loadEfiForConfronto(hC,aC);
 }
 
 // ─── AI (CLAUDE) ──────────────────────────────────────────
@@ -1217,8 +1254,8 @@ loadOdds();
 <script>
 // ── Live data + AI content: fetched client-side from data/*.json
 // (updated by GitHub Actions every 12h — index.html itself is never overwritten)
-window.LIVE_DATA = {"updated_at": "2026-06-17T12:58:54.984278+00:00", "updated_at_brt": "17/06/2026 09:58 BRT", "games_count": 0, "games": [], "todays_games": [], "tomorrows_games": [], "weather": {"New York": {"venue": "MetLife Stadium, New Jersey", "temp_c": 21.3, "feels_like": 21.6, "humidity": 62, "wind": 6.1, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 33.5, "extreme_heat": false, "utci_risk": "moderate"}, "Los Angeles": {"venue": "SoFi Stadium, Los Angeles", "temp_c": 16.3, "feels_like": 18.3, "humidity": 97, "wind": 0.5, "rain_prob": 0, "weather_code": 45, "max_tomorrow": 22.0, "extreme_heat": false, "utci_risk": "moderate"}, "Dallas": {"venue": "AT&T Stadium, Arlington", "temp_c": 25.4, "feels_like": 27.6, "humidity": 80, "wind": 17.0, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 39.7, "extreme_heat": false, "utci_risk": "moderate"}, "San Francisco": {"venue": "Levi's Stadium, Santa Clara", "temp_c": 15.2, "feels_like": 15.7, "humidity": 87, "wind": 3.5, "rain_prob": 0, "weather_code": 2, "max_tomorrow": 28.7, "extreme_heat": false, "utci_risk": "moderate"}, "Miami": {"venue": "Hard Rock Stadium, Miami", "temp_c": 29.1, "feels_like": 33.9, "humidity": 74, "wind": 9.1, "rain_prob": 1, "weather_code": 0, "max_tomorrow": 38.0, "extreme_heat": false, "utci_risk": "moderate"}, "Atlanta": {"venue": "Mercedes-Benz Stadium, Atlanta", "temp_c": 21.6, "feels_like": 24.5, "humidity": 89, "wind": 5.4, "rain_prob": 2, "weather_code": 3, "max_tomorrow": 30.4, "extreme_heat": false, "utci_risk": "moderate"}, "Seattle": {"venue": "Lumen Field, Seattle", "temp_c": 11.2, "feels_like": 10.3, "humidity": 89, "wind": 5.1, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 25.3, "extreme_heat": false, "utci_risk": "moderate"}, "Houston": {"venue": "NRG Stadium, Houston", "temp_c": 25.1, "feels_like": 29.4, "humidity": 93, "wind": 12.3, "rain_prob": 55, "weather_code": 3, "max_tomorrow": 38.3, "extreme_heat": false, "utci_risk": "moderate"}, "Kansas City": {"venue": "Arrowhead Stadium, Kansas City", "temp_c": 25.6, "feels_like": 24.5, "humidity": 71, "wind": 33.8, "rain_prob": 1, "weather_code": 0, "max_tomorrow": 24.8, "extreme_heat": false, "utci_risk": "moderate"}, "Philadelphia": {"venue": "Lincoln Financial Field, Philadelphia", "temp_c": 21.3, "feels_like": 23.5, "humidity": 76, "wind": 2.2, "rain_prob": 0, "weather_code": 1, "max_tomorrow": 34.7, "extreme_heat": false, "utci_risk": "moderate"}, "Boston": {"venue": "Gillette Stadium, Boston", "temp_c": 19.6, "feels_like": 19.7, "humidity": 65, "wind": 5.9, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 23.9, "extreme_heat": false, "utci_risk": "moderate"}, "Vancouver": {"venue": "BC Place, Vancouver", "temp_c": 12.8, "feels_like": 12.2, "humidity": 86, "wind": 5.4, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 21.8, "extreme_heat": false, "utci_risk": "moderate"}, "Toronto": {"venue": "BMO Field, Toronto", "temp_c": 15.6, "feels_like": 15.9, "humidity": 94, "wind": 8.4, "rain_prob": 12, "weather_code": 2, "max_tomorrow": 19.6, "extreme_heat": false, "utci_risk": "moderate"}, "Guadalajara": {"venue": "Estadio Akron, Guadalajara", "temp_c": 17.5, "feels_like": 19.5, "humidity": 97, "wind": 2.7, "rain_prob": 18, "weather_code": 3, "max_tomorrow": 30.2, "extreme_heat": false, "utci_risk": "moderate"}, "Mexico City": {"venue": "Estadio Azteca, Mexico City", "error": "unavailable"}, "Monterrey": {"venue": "Estadio BBVA, Monterrey", "temp_c": 24.3, "feels_like": 28.5, "humidity": 84, "wind": 2.3, "rain_prob": 1, "weather_code": 0, "max_tomorrow": 44.7, "extreme_heat": false, "utci_risk": "moderate"}}, "news": []};
-window.AI_DATA = {"generated_at": "2026-06-17T12:59:17.359884+00:00", "generated_at_brt": "17/06/2026 09:59 BRT", "value_bets_today": {"summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.", "bets": [], "tip_of_day": null}, "match_previews": [], "tactical_notes": {}};
+window.LIVE_DATA = {"updated_at": "2026-06-16T21:36:53.666791+00:00", "updated_at_brt": "16/06/2026 18:36 BRT", "games_count": 0, "games": [], "todays_games": [], "tomorrows_games": [], "weather": {"New York": {"venue": "MetLife Stadium, New Jersey", "temp_c": 25.2, "feels_like": 22.5, "humidity": 29, "wind": 11.5, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 27.4, "extreme_heat": false, "utci_risk": "moderate"}, "Los Angeles": {"venue": "SoFi Stadium, Los Angeles", "temp_c": 21.8, "feels_like": 23.7, "humidity": 71, "wind": 15.9, "rain_prob": 0, "weather_code": 1, "max_tomorrow": 23.0, "extreme_heat": false, "utci_risk": "moderate"}, "Dallas": {"venue": "AT&T Stadium, Arlington", "temp_c": 32.2, "feels_like": 36.2, "humidity": 51, "wind": 6.1, "rain_prob": 0, "weather_code": 1, "max_tomorrow": 36.9, "extreme_heat": false, "utci_risk": "moderate"}, "San Francisco": {"venue": "Levi's Stadium, Santa Clara", "temp_c": 19.8, "feels_like": 19.3, "humidity": 70, "wind": 24.9, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 25.7, "extreme_heat": false, "utci_risk": "moderate"}, "Miami": {"venue": "Hard Rock Stadium, Miami", "temp_c": 31.5, "feels_like": 37.5, "humidity": 80, "wind": 17.3, "rain_prob": 18, "weather_code": 63, "max_tomorrow": 37.5, "extreme_heat": false, "utci_risk": "moderate"}, "Atlanta": {"venue": "Mercedes-Benz Stadium, Atlanta", "temp_c": 20.4, "feels_like": 22.9, "humidity": 92, "wind": 5.9, "rain_prob": 35, "weather_code": 3, "max_tomorrow": 33.1, "extreme_heat": false, "utci_risk": "moderate"}, "Seattle": {"venue": "Lumen Field, Seattle", "temp_c": 23.3, "feels_like": 22.8, "humidity": 40, "wind": 10.6, "rain_prob": 0, "weather_code": 2, "max_tomorrow": 22.2, "extreme_heat": false, "utci_risk": "moderate"}, "Houston": {"venue": "NRG Stadium, Houston", "temp_c": 27.8, "feels_like": 34.2, "humidity": 88, "wind": 5.8, "rain_prob": 32, "weather_code": 3, "max_tomorrow": 35.8, "extreme_heat": false, "utci_risk": "moderate"}, "Kansas City": {"venue": "Arrowhead Stadium, Kansas City", "temp_c": 28.2, "feels_like": 28.5, "humidity": 33, "wind": 7.1, "rain_prob": 0, "weather_code": 1, "max_tomorrow": 35.9, "extreme_heat": false, "utci_risk": "moderate"}, "Philadelphia": {"venue": "Lincoln Financial Field, Philadelphia", "temp_c": 24.5, "feels_like": 22.6, "humidity": 37, "wind": 10.9, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 30.4, "extreme_heat": false, "utci_risk": "moderate"}, "Boston": {"venue": "Gillette Stadium, Boston", "temp_c": 24.0, "feels_like": 21.8, "humidity": 31, "wind": 7.4, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 26.5, "extreme_heat": false, "utci_risk": "moderate"}, "Vancouver": {"venue": "BC Place, Vancouver", "temp_c": 22.0, "feels_like": 18.3, "humidity": 47, "wind": 35.3, "rain_prob": 0, "weather_code": 0, "max_tomorrow": 20.6, "extreme_heat": false, "utci_risk": "moderate"}, "Toronto": {"venue": "BMO Field, Toronto", "temp_c": 22.6, "feels_like": 20.4, "humidity": 43, "wind": 14.2, "rain_prob": 23, "weather_code": 3, "max_tomorrow": 21.8, "extreme_heat": false, "utci_risk": "moderate"}, "Guadalajara": {"venue": "Estadio Akron, Guadalajara", "error": "unavailable"}, "Mexico City": {"venue": "Estadio Azteca, Mexico City", "temp_c": 19.4, "feels_like": 19.6, "humidity": 71, "wind": 8.3, "rain_prob": 99, "weather_code": 80, "max_tomorrow": 23.4, "extreme_heat": false, "utci_risk": "moderate"}, "Monterrey": {"venue": "Estadio BBVA, Monterrey", "temp_c": 30.5, "feels_like": 35.5, "humidity": 73, "wind": 12.5, "rain_prob": 32, "weather_code": 81, "max_tomorrow": 40.6, "extreme_heat": false, "utci_risk": "moderate"}}, "news": []};
+window.AI_DATA = {"generated_at": "2026-06-16T21:37:16.574834+00:00", "generated_at_brt": "16/06/2026 18:37 BRT", "value_bets_today": {"summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.", "bets": [], "tip_of_day": null}, "match_previews": [], "tactical_notes": {}};
 (async function loadExternalData(){
   try {
     const [liveRes, aiRes] = await Promise.all([
@@ -1639,6 +1676,7 @@ function showSec(id,btn) {
   _baseShowSec(id,btn);
   if (id === 'reckoning' && typeof loadReckoning === 'function') { setTimeout(loadReckoning, 50); }
   if (id === 'tracking'  && typeof loadTracking  === 'function') { setTimeout(loadTracking,  50); }
+  if (id === 'historico' && typeof loadHistorico === 'function') { setTimeout(loadHistorico, 50); }
   if (id === 'dashboard' && typeof renderSBRanking === 'function') {
     setTimeout(function() { renderSBRanking(); }, 100);
   }
@@ -2068,7 +2106,7 @@ var _trackData=null, _trackView='pts', _trackLoading=false;
 
 function setTrackView(v){
   _trackView=v;
-  ['pts','xg','table'].forEach(function(x){
+  ['pts','xg','xgreal','efi','table'].forEach(function(x){
     var b=document.getElementById('btn-track-'+x);
     if(b) b.style.background=x===v?'var(--bl-bg)':'var(--sf2)';
     if(b) b.style.color=x===v?'var(--bl-tx)':'var(--tx2)';
@@ -2184,6 +2222,56 @@ function renderTracking(data){
     });
     html+='</div>';
 
+  }else if(_trackView==='xgreal'){
+    var withReal=teams.filter(function(t){return t.real_xg_games>0;});
+    if(!withReal.length){
+      html+='<div style="padding:1rem;background:var(--am-bg);border-radius:var(--r);color:var(--am-tx);font-size:12px">⚡ Dados de xG real (evento-a-evento) ainda não disponíveis. Fonte: <a href="https://github.com/nlbair/wc2026-events" target="_blank" style="color:var(--bl-tx)">nlbair/wc2026-events</a> (WhoScored).</div>';
+    }else{
+      html+='<div style="font-size:11px;color:var(--tx3);margin-bottom:.75rem">⚡ xG calculado evento-a-evento via <a href="https://github.com/nlbair/wc2026-events" target="_blank" style="color:var(--bl-tx)">dados WhoScored</a>. '+withReal.length+' seleções disponíveis.</div>';
+      var sortedReal=[].concat(withReal).sort(function(a,b){return (b.dgf_real||0)-(a.dgf_real||0);});
+      html+='<div class="g2">';
+      sortedReal.forEach(function(t){
+        var sc=SCOUTS[t.code]||{flag:'🏳',name:t.name||t.code};
+        var dgf=t.dgf_real||0, dga=t.dga_real||0;
+        html+='<div class="card" style="margin-bottom:0">';
+        html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:.5rem">';
+        html+='<span style="font-size:18px">'+(sc.flag||'🏳')+'</span><span style="font-size:13px;font-weight:700">'+(sc.name||t.name)+'</span>';
+        html+='<span style="font-size:9px;color:var(--tx3);margin-left:auto">'+(t.real_xg_games||0)+'j</span></div>';
+        html+='<div style="font-size:11px;color:var(--tx3)">xG real: '+(t.xgf_real||0)+' · Δ: <b style="color:'+(dgf>=0?'var(--gn-tx)':'var(--rd-tx)')+'">'+(dgf>=0?'+':'')+dgf.toFixed(2)+'</b></div>';
+        html+='</div>';
+      });
+      html+='</div>';
+    }
+  }else if(_trackView==='efi'){
+    var withEfi=teams.filter(function(t){return t.efi;});
+    if(!withEfi.length){
+      html+='<div style="padding:1rem;background:var(--am-bg);border-radius:var(--r);color:var(--am-tx);font-size:12px">🏃 Dados FIFA EFI ainda não disponíveis. Fonte: <a href="https://github.com/Bustami/efi-fifa-data-wc-2026" target="_blank" style="color:var(--bl-tx)">Bustami/efi-fifa-data-wc-2026</a> (métricas oficiais FIFA).</div>';
+    }else{
+      html+='<div style="font-size:11px;color:var(--tx3);margin-bottom:.75rem">🏃 Métricas físicas e de pressão oficiais da FIFA (EFI — Enhanced Football Intelligence), extraídas da plataforma oficial via <a href="https://github.com/Bustami/efi-fifa-data-wc-2026" target="_blank" style="color:var(--bl-tx)">pipeline Bustami</a>. '+withEfi.length+' seleções disponíveis.</div>';
+      var sortedEfi=[].concat(withEfi).sort(function(a,b){return (b.efi.pass_accuracy||0)-(a.efi.pass_accuracy||0);});
+      html+='<div class="g2">';
+      sortedEfi.forEach(function(t){
+        var sc=SCOUTS[t.code]||{flag:'🏳',name:t.name||t.code};
+        var e=t.efi;
+        var dgfEfi=t.dgf_efi||0;
+        html+='<div class="card" style="margin-bottom:0">';
+        html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:.6rem">';
+        html+='<span style="font-size:18px">'+(sc.flag||'🏳')+'</span>';
+        html+='<span style="font-size:13px;font-weight:700">'+(sc.name||t.name)+'</span>';
+        html+='</div>';
+        html+='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px">';
+        html+='<div><div style="color:var(--tx3);font-size:9px">xG oficial FIFA</div><div style="font-weight:700">'+e.xg_official+' <span style="font-size:9px;color:'+(dgfEfi>=0?'var(--gn-tx)':'var(--rd-tx)')+'">('+(dgfEfi>=0?'+':'')+dgfEfi.toFixed(2)+')</span></div></div>';
+        html+='<div><div style="color:var(--tx3);font-size:9px">Precisão de passe</div><div style="font-weight:700">'+e.pass_accuracy+'%</div></div>';
+        html+='<div><div style="color:var(--tx3);font-size:9px">Distância/jogo</div><div style="font-weight:700">'+e.avg_distance_km+' km</div></div>';
+        html+='<div><div style="color:var(--tx3);font-size:9px">Sprints</div><div style="font-weight:700">'+e.sprints+'</div></div>';
+        html+='<div><div style="color:var(--tx3);font-size:9px">Desarmes forçados</div><div style="font-weight:700">'+e.forced_turnovers+'</div></div>';
+        html+='<div><div style="color:var(--tx3);font-size:9px">Linhas rompidas</div><div style="font-weight:700">'+e.linebreaks_completed+'/'+e.linebreaks_attempted+'</div></div>';
+        if(e.top_speed) html+='<div><div style="color:var(--tx3);font-size:9px">Vel. máxima</div><div style="font-weight:700">'+e.top_speed+' km/h</div></div>';
+        if(e.shot_accuracy) html+='<div><div style="color:var(--tx3);font-size:9px">Precisão de chute</div><div style="font-weight:700">'+e.shot_accuracy+'%</div></div>';
+        html+='</div></div>';
+      });
+      html+='</div>';
+    }
   }else{
     // Full table view
     html+='<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">';
@@ -2228,6 +2316,224 @@ function renderTracking(data){
 // ── END TRACKING ──────────────────────────────────────────────────────────
 
 
+</script>
+<script>
+// ── HISTÓRICO: WC2018 vs WC2022 vs WC2026 comparativo ──────────────────────
+var _histData = null, _histLoading = false;
+
+async function loadHistorico() {
+  if (_histLoading) return;
+  if (_histData) { renderHistorico(_histData); return; }
+  _histLoading = true;
+  var el = document.getElementById('histContent');
+  if (el) el.innerHTML = '<p style="color:var(--tx3)">⏳ Carregando dados StatsBomb...</p>';
+  try {
+    var r = await fetch('./data/wc_history.json?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    _histData = await r.json();
+    renderHistorico(_histData);
+  } catch(e) {
+    if (el) el.innerHTML = '<p style="color:var(--rd-tx)">❌ Erro: ' + e.message + '</p>';
+  }
+  _histLoading = false;
+}
+
+function renderHistorico(data) {
+  var el = document.getElementById('histContent');
+  if (!el) return;
+
+  var s18 = data.summary.wc18, s22 = data.summary.wc22;
+  var ev18 = data.model_eval ? data.model_eval.wc18 : null;
+  var ev22 = data.model_eval ? data.model_eval.wc22 : null;
+  var recurring = data.recurring_teams || [];
+
+  var h = '';
+
+  // ── SECTION 1: Tournament comparison cards ──
+  h += '<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📊 Estatísticas por edição</div>';
+  h += '<div class="g3" style="margin-bottom:1.5rem">';
+
+  [
+    {label:'WC2018 🇷🇺', s:s18, color:'var(--tx3)'},
+    {label:'WC2022 🇶🇦', s:s22, color:'var(--am-tx)'},
+  ].forEach(function(item) {
+    var s = item.s;
+    h += '<div class="card" style="margin-bottom:0">';
+    h += '<div style="font-size:14px;font-weight:700;margin-bottom:.75rem">'+item.label+'</div>';
+    h += '<div style="display:flex;flex-direction:column;gap:6px;font-size:12px">';
+    h += '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Gols/jogo</span><b>'+s.goals_pg+'</b></div>';
+    h += '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">xG/jogo</span><b>'+s.xg_pg+'</b></div>';
+    h += '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Conversão</span><b>'+s.conversion_rate+'%</b></div>';
+    h += '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Empates</span><b>'+s.draw_pct+'%</b></div>';
+    h += '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Vitória casa</span><b>'+s.home_win_pct+'%</b></div>';
+    h += '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Chutes/jogo</span><b>'+s.shots_pg+'</b></div>';
+    h += '</div></div>';
+  });
+
+  // WC2026 live card (from current tracking data if available)
+  h += '<div class="card" style="margin-bottom:0;border-color:var(--bl)">';
+  h += '<div style="font-size:14px;font-weight:700;margin-bottom:.75rem">WC2026 🇲🇽🇺🇸🇨🇦 <span style="font-size:9px;background:var(--gn-bg);color:var(--gn-tx);padding:1px 6px;border-radius:8px;vertical-align:middle">EM ANDAMENTO</span></div>';
+  h += '<div id="hist26Live" style="font-size:12px;color:var(--tx3)">⏳ calculando...</div>';
+  h += '</div>';
+  h += '</div>';
+
+  // ── SECTION 2: Trend chart (goals/xG evolution) ──
+  h += '<div class="stitle" style="font-size:13px;margin-bottom:.75rem">📈 Evolução entre edições</div>';
+  h += '<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:1.5rem">';
+  [
+    {label:'Gols por jogo', v18:s18.goals_pg, v22:s22.goals_pg, max:4, fmt:function(v){return v.toFixed(2);}},
+    {label:'Taxa de empates', v18:s18.draw_pct, v22:s22.draw_pct, max:30, fmt:function(v){return v.toFixed(0)+'%';}},
+    {label:'Conversão de chutes', v18:s18.conversion_rate, v22:s22.conversion_rate, max:15, fmt:function(v){return v.toFixed(1)+'%';}},
+  ].forEach(function(metric) {
+    h += '<div>';
+    h += '<div style="display:flex;justify-content:space-between;font-size:11px;color:var(--tx3);margin-bottom:4px">';
+    h += '<span>'+metric.label+'</span>';
+    h += '<span>2018: <b style="color:var(--tx)">'+metric.fmt(metric.v18)+'</b> → 2022: <b style="color:var(--bl-tx)">'+metric.fmt(metric.v22)+'</b></span>';
+    h += '</div>';
+    h += '<div style="display:flex;gap:4px;height:8px">';
+    h += '<div style="flex:'+(metric.v18/metric.max*100)+';background:var(--sf2);border-radius:4px;position:relative"><div style="position:absolute;inset:0;background:var(--tx3);border-radius:4px;width:100%"></div></div>';
+    h += '<div style="flex:'+(metric.v22/metric.max*100)+';background:var(--sf2);border-radius:4px;position:relative"><div style="position:absolute;inset:0;background:var(--bl);border-radius:4px;width:100%"></div></div>';
+    h += '<div style="flex:'+((metric.max-Math.max(metric.v18,metric.v22))/metric.max*100)+'"></div>';
+    h += '</div></div>';
+  });
+  h += '</div>';
+
+  // ── SECTION 3: Model accuracy on historical data ──
+  if (ev18 && ev22) {
+    h += '<div class="stitle" style="font-size:13px;margin-bottom:.75rem">🎯 Acerto do modelo ELO+Dixon-Coles (retroativo)</div>';
+    h += '<div style="font-size:10px;color:var(--tx3);margin-bottom:.75rem">Aplicando os ratings ELO atuais (calibrados p/ WC2026) contra os resultados reais de 2018 e 2022. Apenas jogos com seleções presentes na Copa 2026 (algumas seleções de 2018/22 não estão no ELO atual).</div>';
+    h += '<div class="g2" style="margin-bottom:1.5rem">';
+    [
+      {label:'WC2018', ev:ev18},
+      {label:'WC2022', ev:ev22},
+    ].forEach(function(item) {
+      var rpsBetter = item.ev.avg_rps < 0.245;
+      h += '<div class="card" style="margin-bottom:0">';
+      h += '<div style="font-size:13px;font-weight:700;margin-bottom:.5rem">'+item.label+' <span style="font-size:10px;color:var(--tx3)">('+item.ev.n+' jogos avaliados)</span></div>';
+      h += '<div style="display:flex;gap:10px">';
+      h += '<div class="vpill" style="background:var(--bl-bg);color:var(--bl-tx)">'+item.ev.accuracy+'% acerto</div>';
+      h += '<div class="vpill" style="background:'+(rpsBetter?'var(--gn-bg)':'var(--am-bg)')+';color:'+(rpsBetter?'var(--gn-tx)':'var(--am-tx)')+'">RPS '+item.ev.avg_rps+' (coin: 0.245)</div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // ── SECTION 4: Recurring teams (2018+2022+2026) ──
+  h += '<div class="stitle" style="font-size:13px;margin-bottom:.75rem">🔁 Seleções nas 3 últimas edições ('+recurring.length+')</div>';
+  h += '<div style="font-size:10px;color:var(--tx3);margin-bottom:.75rem">Comparação de desempenho (V-E-D) e eficiência (Δ gols vs xG real) entre 2018 e 2022.</div>';
+  h += '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:11px">';
+  h += '<thead><tr style="border-bottom:2px solid var(--bd);color:var(--tx3);text-align:center">';
+  h += '<th style="text-align:left;padding:.35rem .6rem">Seleção</th>';
+  h += '<th colspan="2" style="border-left:1px solid var(--bd)">WC2018</th>';
+  h += '<th colspan="2" style="border-left:1px solid var(--bd)">WC2022</th>';
+  h += '</tr><tr style="border-bottom:1px solid var(--bd);color:var(--tx3);text-align:center;font-size:9px">';
+  h += '<th></th><th style="border-left:1px solid var(--bd)">V-E-D</th><th>ΔxG</th><th style="border-left:1px solid var(--bd)">V-E-D</th><th>ΔxG</th>';
+  h += '</tr></thead><tbody>';
+
+  recurring.forEach(function(code, i) {
+    var t18 = data.teams_wc18[code] || data.teams_wc18[Object.keys(data.teams_wc18).find(function(k){return k===code})];
+    var t22 = data.teams_wc22[code];
+    // find by code properly — teams are keyed by original name in some cases, try direct
+    var sc = SCOUTS[code] || {flag:'🏳', name:code};
+    if (!t18 || !t22) return;
+    var dgf18 = t18.dgf || 0, dgf22 = t22.dgf || 0;
+    h += '<tr style="border-bottom:1px solid var(--bd);'+(i%2===0?'background:var(--sf2,rgba(0,0,0,.02))':'')+'">';
+    h += '<td style="padding:.3rem .6rem;white-space:nowrap"><span style="font-size:13px;margin-right:4px">'+(sc.flag||'')+'</span>'+(sc.name||code)+'</td>';
+    h += '<td style="text-align:center;border-left:1px solid var(--bd)">'+t18.wins+'-'+t18.draws+'-'+t18.losses+'</td>';
+    h += '<td style="text-align:center;font-weight:700;color:'+(dgf18>=0?'var(--gn-tx)':'var(--rd-tx)')+'">'+(dgf18>=0?'+':'')+dgf18.toFixed(1)+'</td>';
+    h += '<td style="text-align:center;border-left:1px solid var(--bd)">'+t22.wins+'-'+t22.draws+'-'+t22.losses+'</td>';
+    h += '<td style="text-align:center;font-weight:700;color:'+(dgf22>=0?'var(--gn-tx)':'var(--rd-tx)')+'">'+(dgf22>=0?'+':'')+dgf22.toFixed(1)+'</td>';
+    h += '</tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div style="font-size:9px;color:var(--tx3);margin-top:.5rem">Fonte: StatsBomb Open Data (CC0) · ΔxG = Gols reais − xG oficial StatsBomb</div>';
+
+  el.innerHTML = h;
+
+  // Fill WC2026 live card from tracking data if available
+  if (window._trackData) {
+    var t26 = window._trackData.teams || [];
+    var totalGoals = t26.reduce(function(s,t){return s+t.goals_for;},0);
+    var totalGames = t26.length ? Math.round(t26.reduce(function(s,t){return s+t.games;},0)/2) : 0;
+    var live = document.getElementById('hist26Live');
+    if (live && totalGames) {
+      live.innerHTML = '<div style="display:flex;flex-direction:column;gap:6px">' +
+        '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Jogos até agora</span><b>'+totalGames+'</b></div>' +
+        '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Gols/jogo</span><b>'+(totalGoals/totalGames/2).toFixed(2)+'</b></div>' +
+        '<div style="font-size:10px;color:var(--tx3);margin-top:4px">Veja a aba 📊 Tracking para detalhes completos</div></div>';
+    }
+  } else {
+    // Try fetching tracking data for the live card
+    fetch('./data/wc2026_perf.json?t='+Date.now()).then(function(r){return r.json();}).then(function(perfData){
+      var t26 = perfData.teams || [];
+      var totalGoals = t26.reduce(function(s,t){return s+t.goals_for;},0);
+      var totalGames = t26.length ? Math.round(t26.reduce(function(s,t){return s+t.games;},0)/2) : 0;
+      var live = document.getElementById('hist26Live');
+      if (live && totalGames) {
+        live.innerHTML = '<div style="display:flex;flex-direction:column;gap:6px">' +
+          '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Jogos até agora</span><b>'+totalGames+'</b></div>' +
+          '<div style="display:flex;justify-content:space-between"><span style="color:var(--tx3)">Gols/jogo</span><b>'+(totalGoals/totalGames/2).toFixed(2)+'</b></div>' +
+          '<div style="font-size:10px;color:var(--tx3);margin-top:4px">Veja a aba 📊 Tracking para detalhes completos</div></div>';
+      }
+    }).catch(function(){});
+  }
+}
+// ── END HISTÓRICO ─────────────────────────────────────────────────────────
+</script>
+<script>
+
+// ── EFI comparison in Confronto panel ───────────────────────────────────
+var _efiPerfCache = null;
+async function loadEfiForConfronto(hC, aC) {
+  var card = document.getElementById('efiCard');
+  var block = document.getElementById('efiCmpBlock');
+  if (!card || !block) return;
+  try {
+    if (!_efiPerfCache) {
+      var r = await fetch('./data/wc2026_perf.json?t=' + Date.now());
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      _efiPerfCache = await r.json();
+    }
+    var teams = _efiPerfCache.teams || [];
+    var hT = teams.find(function(t){ return t.code === hC; });
+    var aT = teams.find(function(t){ return t.code === aC; });
+    if (!hT || !aT || !hT.efi || !aT.efi) { card.style.display = 'none'; return; }
+
+    var he = hT.efi, ae = aT.efi;
+    var rows = [
+      {label:'xG oficial FIFA', hv:he.xg_official, av:ae.xg_official, hi:true, fmt:function(v){return v!=null?v.toFixed(2):'–';}},
+      {label:'Precisão de passe', hv:he.pass_accuracy, av:ae.pass_accuracy, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'%':'–';}},
+      {label:'Distância/jogo', hv:he.avg_distance_km, av:ae.avg_distance_km, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'km':'–';}},
+      {label:'Sprints', hv:he.sprints, av:ae.sprints, hi:true, fmt:function(v){return v!=null?Math.round(v):'–';}},
+      {label:'Desarmes forçados', hv:he.forced_turnovers, av:ae.forced_turnovers, hi:true, fmt:function(v){return v!=null?Math.round(v):'–';}},
+      {label:'Linhas rompidas', hv:he.linebreaks_completed, av:ae.linebreaks_completed, hi:true, fmt:function(v){return v!=null?Math.round(v):'–';}},
+    ];
+    if (he.top_speed) rows.push({label:'Vel. máxima', hv:he.top_speed, av:ae.top_speed, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'km/h':'–';}});
+    if (he.shot_accuracy) rows.push({label:'Precisão de chute', hv:he.shot_accuracy, av:ae.shot_accuracy, hi:true, fmt:function(v){return v!=null?v.toFixed(1)+'%':'–';}});
+
+    var h = rows.map(function(m) {
+      var hn = parseFloat(m.hv), an = parseFloat(m.av);
+      var hB = !isNaN(hn) && !isNaN(an) && (m.hi ? hn>an : hn<an);
+      var aB = !isNaN(hn) && !isNaN(an) && (m.hi ? an>hn : an<hn);
+      var mx = Math.max(Math.abs(hn)||1, Math.abs(an)||1);
+      var hw = isNaN(hn) ? 40 : Math.round(Math.abs(hn)/mx*80);
+      var aw = isNaN(an) ? 40 : Math.round(Math.abs(an)/mx*80);
+      return '<div class="cmp-row">' +
+        '<div style="text-align:right"><span class="cmp-vh" style="color:'+(hB?'var(--bl)':'var(--tx)')+'">'+m.fmt(m.hv)+'</span><br>' +
+        '<div style="height:3px;border-radius:2px;width:'+hw+'px;float:right;background:'+(hB?'var(--bl)':'var(--bd)')+'"></div></div>' +
+        '<div class="cmp-lbl">'+m.label+'</div>' +
+        '<div><span class="cmp-va" style="color:'+(aB?'var(--rd)':'var(--tx)')+'">'+m.fmt(m.av)+'</span><br>' +
+        '<div style="height:3px;border-radius:2px;width:'+aw+'px;background:'+(aB?'var(--rd)':'var(--bd)')+'"></div></div></div>';
+    }).join('');
+
+    h += '<div style="font-size:9px;color:var(--tx3);margin-top:.5rem;text-align:center">Dados oficiais FIFA (EFI) · jogos disputados até agora · fonte: Bustami/efi-fifa-data-wc-2026</div>';
+    block.innerHTML = h;
+    card.style.display = 'block';
+  } catch(e) {
+    card.style.display = 'none';
+  }
+}
+// ── END EFI confronto ─────────────────────────────────────────────────────
 </script>
 </body>
 </html>
