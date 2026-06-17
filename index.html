@@ -561,7 +561,9 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <button class="vpill" onclick="setTrackView('pts')" id="btn-track-pts" style="cursor:pointer;background:var(--bl-bg);color:var(--bl-tx)">Δ Pontos</button>
-      <button class="vpill" onclick="setTrackView('xg')" id="btn-track-xg" style="cursor:pointer">Δ xG</button>
+      <button class="vpill" onclick="setTrackView('xg')" id="btn-track-xg" style="cursor:pointer">Δ xG (modelo)</button>
+      <button class="vpill" onclick="setTrackView('xgreal')" id="btn-track-xgreal" style="cursor:pointer">⚡ xG Real (eventos)</button>
+      <button class="vpill" onclick="setTrackView('efi')" id="btn-track-efi" style="cursor:pointer">🏃 FIFA EFI (físico)</button>
       <button class="vpill" onclick="setTrackView('table')" id="btn-track-table" style="cursor:pointer">Tabela completa</button>
     </div>
   </div>
@@ -2101,7 +2103,7 @@ var _trackData=null, _trackView='pts', _trackLoading=false;
 
 function setTrackView(v){
   _trackView=v;
-  ['pts','xg','table'].forEach(function(x){
+  ['pts','xg','xgreal','efi','table'].forEach(function(x){
     var b=document.getElementById('btn-track-'+x);
     if(b) b.style.background=x===v?'var(--bl-bg)':'var(--sf2)';
     if(b) b.style.color=x===v?'var(--bl-tx)':'var(--tx2)';
@@ -2217,6 +2219,26 @@ function renderTracking(data){
     });
     html+='</div>';
 
+  }else if(_trackView==='xgreal'){
+    var withReal=teams.filter(function(t){return t.real_xg_games>0;});
+    if(!withReal.length){
+      html+='<div style="padding:1rem;background:var(--am-bg);border-radius:var(--r);color:var(--am-tx);font-size:12px">⚡ Dados de xG real (evento-a-evento) ainda não disponíveis. Fonte: <a href="https://github.com/nlbair/wc2026-events" target="_blank" style="color:var(--bl-tx)">nlbair/wc2026-events</a> (WhoScored).</div>';
+    }else{
+      html+='<div style="font-size:11px;color:var(--tx3);margin-bottom:.75rem">⚡ xG calculado evento-a-evento via <a href="https://github.com/nlbair/wc2026-events" target="_blank" style="color:var(--bl-tx)">dados WhoScored</a>. '+withReal.length+' seleções disponíveis.</div>';
+      var sortedReal=[].concat(withReal).sort(function(a,b){return (b.dgf_real||0)-(a.dgf_real||0);});
+      html+='<div class="g2">';
+      sortedReal.forEach(function(t){
+        var sc=SCOUTS[t.code]||{flag:'🏳',name:t.name||t.code};
+        var dgf=t.dgf_real||0, dga=t.dga_real||0;
+        html+='<div class="card" style="margin-bottom:0">';
+        html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:.5rem">';
+        html+='<span style="font-size:18px">'+(sc.flag||'🏳')+'</span><span style="font-size:13px;font-weight:700">'+(sc.name||t.name)+'</span>';
+        html+='<span style="font-size:9px;color:var(--tx3);margin-left:auto">'+(t.real_xg_games||0)+'j</span></div>';
+        html+='<div style="font-size:11px;color:var(--tx3)">xG real: '+(t.xgf_real||0)+' · Δ: <b style="color:'+(dgf>=0?'var(--gn-tx)':'var(--rd-tx)')+'">'+(dgf>=0?'+':'')+dgf.toFixed(2)+'</b></div>';
+        html+='</div>';
+      });
+      html+='</div>';
+    }
   }else if(_trackView==='efi'){
     var withEfi=teams.filter(function(t){return t.efi;});
     if(!withEfi.length){
