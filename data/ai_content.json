@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T12:06:26.910245+00:00",
-  "generated_at_brt": "18/06/2026 09:06 BRT",
+  "generated_at": "2026-06-18T19:37:48.265501+00:00",
+  "generated_at_brt": "18/06/2026 16:37 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -8,42 +8,18 @@
   },
   "match_previews": [
     {
-      "game_id": "66ebb9e3f949caded535d97ce686ca09",
-      "home": "Czech Republic",
-      "away": "South Africa",
-      "time": "2026-06-18T16:00:00Z",
-      "h2h": {
-        "home": 1.89,
-        "away": 5.0,
-        "draw": 3.7
-      },
-      "totals": {
-        "over25": 3.1,
-        "under25": 1.96
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
       "game_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "home": "Switzerland",
       "away": "Bosnia & Herzegovina",
       "time": "2026-06-18T19:00:00Z",
       "h2h": {
-        "away": 7.0,
-        "home": 1.61,
-        "draw": 4.3
+        "away": 9.0,
+        "home": 1.66,
+        "draw": 3.8
       },
       "totals": {
-        "over25": 2.9,
-        "under25": 1.95
+        "over25": 2.15,
+        "under25": 2.42
       },
       "btts_yes": null,
       "preview": {
@@ -61,12 +37,12 @@
       "away": "Qatar",
       "time": "2026-06-18T22:00:00Z",
       "h2h": {
-        "home": 1.33,
-        "away": 13.0,
+        "home": 1.35,
+        "away": 12.0,
         "draw": 6.0
       },
       "totals": {
-        "over25": 2.9,
+        "over25": 2.85,
         "under25": 2.22
       },
       "btts_yes": null,
@@ -85,13 +61,13 @@
       "away": "South Korea",
       "time": "2026-06-19T01:00:00Z",
       "h2h": {
-        "home": 2.14,
-        "away": 4.2,
-        "draw": 3.4
+        "home": 2.16,
+        "away": 4.1,
+        "draw": 3.38
       },
       "totals": {
         "over25": 2.36,
-        "under25": 2.85
+        "under25": 3.0
       },
       "btts_yes": null,
       "preview": {
@@ -110,12 +86,12 @@
       "time": "2026-06-19T19:00:00Z",
       "h2h": {
         "away": 5.64,
-        "home": 1.65,
-        "draw": 4.6
+        "home": 1.66,
+        "draw": 4.5
       },
       "totals": {
         "over25": 2.8,
-        "under25": 1.96
+        "under25": 1.95
       },
       "btts_yes": null,
       "preview": {
@@ -133,9 +109,9 @@
       "away": "Morocco",
       "time": "2026-06-19T22:00:00Z",
       "h2h": {
-        "away": 1.81,
+        "away": 1.82,
         "home": 5.8,
-        "draw": 3.75
+        "draw": 3.72
       },
       "totals": {
         "over25": 2.3,
