@@ -816,6 +816,10 @@ function renderOddsUI(){
     const aCode=Object.keys(SCOUTS).find(k=>tn(k).toLowerCase().includes(aTeam.split(' ')[0].toLowerCase())||aTeam.toLowerCase().includes(tn(k).toLowerCase().split(' ')[0]));
     let probs=null,hasValue=false;
     if(hCode&&aCode)probs=calcProbs(hCode,aCode);
+    // Short display name: use our normalized name (handles multi-word teams correctly)
+    // instead of naive .split(' ')[0] which truncates "Bosnia & Herzegovina" → "Bosnia"
+    const hShort=hCode?tn(hCode):hTeam;
+    const aShort=aCode?tn(aCode):aTeam;
     // Check value
     const hEdge=probs&&h2h.home?Math.round((probs.pH-1/h2h.home)*1000)/10:null;
     const aEdge=probs&&h2h.away?Math.round((probs.pA-1/h2h.away)*1000)/10:null;
@@ -828,7 +832,7 @@ function renderOddsUI(){
       </div>
       <div class="ogrid">
         <div class="obox ${hEdge&&hEdge>=5?'value':''}">
-          <div class="olbl">1 ${hTeam.split(' ')[0]}</div>
+          <div class="olbl">1 ${hShort}</div>
           <div class="oval">${h2h.home?.toFixed(2)||'–'}</div>
           ${hEdge!=null?`<div class="oedge">${hEdge>0?'▲ +':''}${hEdge.toFixed(1)}%</div>`:''}
         </div>
@@ -838,7 +842,7 @@ function renderOddsUI(){
           ${dEdge!=null?`<div class="oedge">${dEdge>0?'▲ +':''}${dEdge.toFixed(1)}%</div>`:''}
         </div>
         <div class="obox ${aEdge&&aEdge>=5?'value':''}">
-          <div class="olbl">2 ${aTeam.split(' ')[0]}</div>
+          <div class="olbl">2 ${aShort}</div>
           <div class="oval">${h2h.away?.toFixed(2)||'–'}</div>
           ${aEdge!=null?`<div class="oedge">${aEdge>0?'▲ +':''}${aEdge.toFixed(1)}%</div>`:''}
         </div>
@@ -848,7 +852,7 @@ function renderOddsUI(){
         ${totals.under25?`<div class="mmarket"><span>Under 2.5</span>${totals.under25.toFixed(2)}</div>`:''}
         ${g.btts_yes?`<div class="mmarket"><span>BTTS</span>${g.btts_yes.toFixed(2)}</div>`:''}
       </div>
-      ${probs?`<div style="font-size:10px;color:var(--tx3);margin-top:5px">Prob. estimada: ${hTeam.split(' ')[0]} ${pct(probs.pH)} · X ${pct(probs.pD)} · ${aTeam.split(' ')[0]} ${pct(probs.pA)}</div>`:''}
+      ${probs?`<div style="font-size:10px;color:var(--tx3);margin-top:5px">Prob. estimada: ${hShort} ${pct(probs.pH)} · X ${pct(probs.pD)} · ${aShort} ${pct(probs.pA)}</div>`:''}
     </div>`;
   }
   document.getElementById('oddsContent').innerHTML=html;
