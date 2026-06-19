@@ -278,6 +278,7 @@ def main():
     odds = fetch_odds()
     weather = fetch_weather()
     news = fetch_news_headlines()
+    wc_results = fetch_wc_results()
 
     # Get today's and tomorrow's games
     today = now.date()
@@ -297,9 +298,7 @@ def main():
         "wc_results": wc_results,
     }
 
-    wc_results = fetch_wc_results()
-
-    with open("data/live_data.json","w") as f:
+with open("data/live_data.json","w") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
     print(f"\n✅ Saved data/live_data.json ({len(odds)} games, {len(weather)} venues)")
 
