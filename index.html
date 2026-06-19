@@ -2736,24 +2736,36 @@ function buildBracketFromStandings(liveStandings) {
 function renderChaveamento() {
   var container = document.getElementById('chaveamentoContent');
   if (!container) return;
-  
-  // Try to use live data from football-data.org
-  var liveData = (typeof window._liveData !== 'undefined') ? window._liveData : null;
-  var standings = liveData && liveData.wc_results && liveData.wc_results.standings;
-  
-  if (!standings || !standings.length) {
-    // Fallback: build from FIXTURES + known results
-    renderChaveamentoFromFixtures(container);
-    return;
+  container.innerHTML = '<p style="color:var(--tx3);font-size:12px;padding:1rem">A calcular...</p>';
+
+  // Use window.LIVE_DATA (embedded) or fetch live
+  var liveData = window.LIVE_DATA || null;
+  var wc = liveData && liveData.wc_results;
+  var standings = wc && wc.standings;
+
+  if (standings && standings.length) {
+    // Normalize group names: "GROUP_A" → "A"
+    standings = standings.map(function(s) {
+      return Object.assign({}, s, {
+        group: (s.group || '').replace('GROUP_','').replace('Group ','').trim()
+      });
+    });
+    var bracket = buildBracketFromStandings(standings);
+    if (bracket) {
+      renderChaveamentoHTML(container, bracket);
+      var upd = document.getElementById('chaveamentoUpdated');
+      if (upd) upd.textContent = 'Atualizado: ' + (liveData.updated_at_brt || '');
+      return;
+    }
   }
-  
-  var bracket = buildBracketFromStandings(standings);
-  if (!bracket) { container.innerHTML = '<p style="color:var(--tx3);padding:1rem">Dados de classificação ainda não disponíveis.</p>'; return; }
-  
-  renderChaveamentoHTML(container, bracket);
+
+  // Fallback: build from local FIXTURES + known results
+  renderChaveamentoFromFixtures(container);
 }
 
-function renderChaveamentoFromFixtures() {
+
+function renderChaveamentoFromFixtures(container) {
+  if (!container) container = document.getElementById('chaveamentoContent');
   // Build standings from FIXTURES data we already have
   var played = FIXTURES.filter(function(f) { return f.played && f.score1 !== null; });
   var groups = 'ABCDEFGHIJKL'.split('');
