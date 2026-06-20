@@ -1,10 +1,10 @@
 {
   "summary": {
-    "updated_at": "2026-06-20T15:57:06.997773+00:00",
-    "played": 32,
-    "model_correct": 18,
-    "accuracy": 56.2,
-    "avg_rps": 0.1843,
+    "updated_at": "2026-06-20T20:52:38.085677+00:00",
+    "played": 33,
+    "model_correct": 19,
+    "accuracy": 57.6,
+    "avg_rps": 0.1817,
     "coin_flip_rps": 0.245
   },
   "matches": [
@@ -896,9 +896,9 @@
       "home_name": "Netherlands",
       "away_name": "Sweden",
       "city": "Houston",
-      "played": false,
-      "score1": null,
-      "score2": null,
+      "played": true,
+      "score1": 5,
+      "score2": 1,
       "model": {
         "winA": 0.584,
         "draw": 0.2537,
@@ -907,7 +907,10 @@
         "xgB": 0.88,
         "eloA": 1930,
         "eloB": 1740
-      }
+      },
+      "actual": "A",
+      "model_correct": true,
+      "rps": 0.0997
     },
     {
       "date": "2026-06-20",
