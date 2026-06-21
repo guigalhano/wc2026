@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T02:43:32.738410+00:00",
+  "updated_at": "2026-06-21T02:45:35.858960+00:00",
   "teams": [
     {
       "code": "EUA",
@@ -36,7 +36,10 @@
           "xgf": 1.21,
           "xga": 0.32,
           "result": "W",
-          "p_win": 0.332
+          "p_win": 0.332,
+          "real_poss": 62.0,
+          "real_shots": 9.0,
+          "stats_source": "sofascore.com"
         }
       ],
       "xpts": 2.99,
@@ -44,7 +47,10 @@
       "xgf": 1.41,
       "xga": 0.71,
       "dgf": 1.59,
-      "dga": -0.21
+      "dga": -0.21,
+      "real_possession_avg": 62.0,
+      "real_shots_avg": 9.0,
+      "real_stats_games": 1
     },
     {
       "code": "MEX",
@@ -161,7 +167,11 @@
           "xgf": 0.54,
           "xga": 0.97,
           "result": "W",
-          "p_win": 0.414
+          "p_win": 0.414,
+          "real_poss": 59.0,
+          "real_shots": 12.0,
+          "real_corners": 5.0,
+          "stats_source": "sofascore.com"
         }
       ],
       "xpts": 2.33,
@@ -169,7 +179,10 @@
       "xgf": 0.82,
       "xga": 1.29,
       "dgf": 0.18,
-      "dga": -0.79
+      "dga": -0.79,
+      "real_possession_avg": 59.0,
+      "real_shots_avg": 12.0,
+      "real_stats_games": 1
     },
     {
       "code": "GAN",
@@ -646,7 +659,10 @@
           "xgf": 0.32,
           "xga": 1.21,
           "result": "L",
-          "p_win": 0.378
+          "p_win": 0.378,
+          "real_poss": 38.0,
+          "real_shots": 2.0,
+          "stats_source": "sofascore.com"
         }
       ],
       "xpts": 2.73,
@@ -654,7 +670,10 @@
       "xgf": 0.82,
       "xga": 1.3,
       "dgf": 0.18,
-      "dga": -0.3
+      "dga": -0.3,
+      "real_possession_avg": 38.0,
+      "real_shots_avg": 2.0,
+      "real_stats_games": 1
     },
     {
       "code": "EGI",
@@ -831,7 +850,12 @@
           "xgf": 0.97,
           "xga": 0.54,
           "result": "L",
-          "p_win": 0.299
+          "p_win": 0.299,
+          "real_poss": 41.0,
+          "real_shots": 6.0,
+          "real_sot": 0.0,
+          "real_corners": 2.0,
+          "stats_source": "sofascore.com"
         }
       ],
       "xpts": 2.97,
@@ -839,7 +863,10 @@
       "xgf": 1.32,
       "xga": 0.79,
       "dgf": -0.82,
-      "dga": -0.29
+      "dga": -0.29,
+      "real_possession_avg": 41.0,
+      "real_shots_avg": 6.0,
+      "real_stats_games": 1
     },
     {
       "code": "BRA",
@@ -2004,8 +2031,9 @@
     }
   ],
   "real_xg_source": "mominullptr/FIFA-World-Cup-2026-Dataset (FIFA/Sofascore/Guardian verified)",
-  "real_xg_updated_at": "2026-06-21T02:43:32.738525+00:00",
+  "real_xg_updated_at": "2026-06-21T02:45:35.859013+00:00",
   "real_xg_games": 16,
+  "real_stats_rows": 8,
   "odds_source": "football-data.org",
   "odds_updated_at": "2026-06-20T15:56:41.110452+00:00"
 }
