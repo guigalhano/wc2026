@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T21:46:17.157203+00:00",
+  "updated_at": "2026-06-21T22:40:05.332611+00:00",
   "teams": [
     {
       "code": "EUA",
@@ -2487,9 +2487,9 @@
     }
   ],
   "real_xg_source": "mominullptr/FIFA-World-Cup-2026-Dataset (FIFA/Sofascore/Guardian verified)",
-  "real_xg_updated_at": "2026-06-21T21:46:17.157234+00:00",
+  "real_xg_updated_at": "2026-06-21T22:40:05.332659+00:00",
   "real_xg_games": 16,
   "real_stats_rows": 64,
   "odds_source": "football-data.org",
-  "odds_updated_at": "2026-06-21T21:46:06.913842+00:00"
+  "odds_updated_at": "2026-06-21T22:39:37.442213+00:00"
 }

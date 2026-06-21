@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-21T21:46:18.163116+00:00",
-  "generated_at_brt": "21/06/2026 18:46 BRT",
+  "generated_at": "2026-06-21T22:40:06.023152+00:00",
+  "generated_at_brt": "21/06/2026 19:40 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -13,13 +13,13 @@
       "away": "Cape Verde",
       "time": "2026-06-21T22:00:00Z",
       "h2h": {
-        "away": 11.0,
-        "home": 1.47,
-        "draw": 4.9
+        "away": 3.77,
+        "home": 2.94,
+        "draw": 3.25
       },
       "totals": {
-        "over25": 2.21,
-        "under25": 3.05
+        "over25": 1.83,
+        "under25": 2.3
       },
       "btts_yes": null,
       "preview": {
@@ -38,12 +38,12 @@
       "time": "2026-06-22T01:00:00Z",
       "h2h": {
         "away": 1.65,
-        "home": 6.5,
-        "draw": 4.25
+        "home": 6.6,
+        "draw": 4.2
       },
       "totals": {
         "over25": 2.85,
-        "under25": 1.86
+        "under25": 1.88
       },
       "btts_yes": null,
       "preview": {
@@ -61,9 +61,9 @@
       "away": "Austria",
       "time": "2026-06-22T17:00:00Z",
       "h2h": {
-        "home": 1.57,
+        "home": 1.56,
         "away": 7.5,
-        "draw": 4.4
+        "draw": 4.3
       },
       "totals": {
         "over25": 2.65,
@@ -86,12 +86,12 @@
       "time": "2026-06-22T21:00:00Z",
       "h2h": {
         "home": 1.12,
-        "away": 42.0,
-        "draw": 13.7
+        "away": 41.0,
+        "draw": 13.5
       },
       "totals": {
         "over25": 2.7,
-        "under25": 3.2
+        "under25": 3.1
       },
       "btts_yes": null,
       "preview": {
