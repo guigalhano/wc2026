@@ -67,6 +67,78 @@ def fetch_real_xg_data():
     return real_data
 
 
+def fetch_real_team_stats():
+    """Fetch real possession/shots/corners stats from mominullptr dataset.
+    Returns dict: (date, our_code) -> {possession_pct, total_shots, shots_on_target, corners, fouls, offsides, saves}
+    """
+    print("  Fetching real team stats (possession/shots/corners)...")
+    ctx = ssl.create_default_context()
+    import csv, io
+
+    try:
+        # 1. teams.csv: team_id -> fifa_code -> our_code
+        req1 = urllib.request.Request(
+            "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/teams.csv",
+            headers={"User-Agent": "Mozilla/5.0"})
+        teams_text = urllib.request.urlopen(req1, timeout=20, context=ctx).read().decode()
+        teams_reader = list(csv.DictReader(io.StringIO(teams_text)))
+        id_to_ourcode = {}
+        for row in teams_reader:
+            fifa_code = row.get('fifa_code', '')
+            our_code = FIFA_TO_OUR.get(fifa_code)
+            if our_code:
+                id_to_ourcode[row['team_id']] = our_code
+
+        # 2. matches.csv: match_id -> date, home_team_id, away_team_id
+        req2 = urllib.request.Request(
+            "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches.csv",
+            headers={"User-Agent": "Mozilla/5.0"})
+        matches_text = urllib.request.urlopen(req2, timeout=20, context=ctx).read().decode()
+        matches_reader = list(csv.DictReader(io.StringIO(matches_text)))
+        match_info = {m['match_id']: m for m in matches_reader}
+
+        # 3. match_team_stats.csv: match_id, team_id, possession_pct, total_shots, ...
+        req3 = urllib.request.Request(
+            "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_team_stats.csv",
+            headers={"User-Agent": "Mozilla/5.0"})
+        stats_text = urllib.request.urlopen(req3, timeout=20, context=ctx).read().decode()
+        stats_reader = list(csv.DictReader(io.StringIO(stats_text)))
+
+        result = {}
+        count = 0
+        for row in stats_reader:
+            mid = row.get('match_id', '')
+            tid = row.get('team_id', '')
+            m = match_info.get(mid)
+            code = id_to_ourcode.get(tid)
+            if not m or not code:
+                continue
+            date = m.get('date', '')
+
+            def to_num(v):
+                try:
+                    return float(v) if v not in ('', None) else None
+                except ValueError:
+                    return None
+
+            result[(date, code)] = {
+                'possession_pct': to_num(row.get('possession_pct')),
+                'total_shots': to_num(row.get('total_shots')),
+                'shots_on_target': to_num(row.get('shots_on_target')),
+                'corners': to_num(row.get('corners')),
+                'fouls': to_num(row.get('fouls')),
+                'offsides': to_num(row.get('offsides')),
+                'saves': to_num(row.get('saves')),
+                'data_source': row.get('data_source', ''),
+            }
+            count += 1
+        print(f"    Got real team stats for {count} team-match rows")
+        return result
+    except Exception as e:
+        print(f"    WARNING: could not fetch real team stats: {e}")
+        return {}
+
+
 # ── ELO ratings (calibrated, same as fetch_wc2026.py) ──────────────────────
 ELO = {
     'ESP':2074,'ARG':2064,'FRA':2060,'BRA':1994,'ING':2010,'POR':1970,
@@ -150,6 +222,7 @@ def main():
 
     # Fetch real verified xG data (mominullptr dataset)
     real_xg = fetch_real_xg_data()
+    real_stats = fetch_real_team_stats()
 
     teams = {}
     matches_out = []
@@ -216,6 +289,21 @@ def main():
                 'xgf': round(xgf, 2), 'xga': round(xga, 2),
                 'result': result, 'p_win': round(p_win, 3),
             })
+            # Attach real stats if available (possession, shots, corners, etc.)
+            real_s = real_stats.get((date, code))
+            if real_s:
+                m_entry = t['matches'][-1]
+                if real_s.get('possession_pct') is not None:
+                    m_entry['real_poss'] = real_s['possession_pct']
+                if real_s.get('total_shots') is not None:
+                    m_entry['real_shots'] = real_s['total_shots']
+                if real_s.get('shots_on_target') is not None:
+                    m_entry['real_sot'] = real_s['shots_on_target']
+                if real_s.get('corners') is not None:
+                    m_entry['real_corners'] = real_s['corners']
+                if real_s.get('fouls') is not None:
+                    m_entry['real_fouls'] = real_s['fouls']
+                m_entry['stats_source'] = real_s.get('data_source', '')
 
     # Compute derived fields
     for code, t in teams.items():
@@ -226,6 +314,17 @@ def main():
         t['dgf'] = round((t['goals_for'] / t['games']) - t['xgf'], 2) if t['games'] else 0
         t['dga'] = round((t['goals_against'] / t['games']) - t['xga'], 2) if t['games'] else 0
 
+        # Aggregate real stats (possession, shots) from matches that have them
+        real_matches = [m for m in t['matches'] if 'real_poss' in m or 'real_shots' in m]
+        if real_matches:
+            poss_vals = [m['real_poss'] for m in real_matches if 'real_poss' in m]
+            shots_vals = [m['real_shots'] for m in real_matches if 'real_shots' in m]
+            if poss_vals:
+                t['real_possession_avg'] = round(sum(poss_vals) / len(poss_vals), 1)
+            if shots_vals:
+                t['real_shots_avg'] = round(sum(shots_vals) / len(shots_vals), 1)
+            t['real_stats_games'] = len(real_matches)
+
     output = {
         'updated_at': datetime.now(timezone.utc).isoformat(),
         'teams': sorted(teams.values(), key=lambda x: -x['delta_pts']),
@@ -233,6 +332,7 @@ def main():
         'real_xg_source': 'mominullptr/FIFA-World-Cup-2026-Dataset (FIFA/Sofascore/Guardian verified)',
         'real_xg_updated_at': datetime.now(timezone.utc).isoformat(),
         'real_xg_games': real_xg_used,
+        'real_stats_rows': len(real_stats),
         'odds_source': 'football-data.org',
         'odds_updated_at': live.get('updated_at', ''),
     }
@@ -242,7 +342,7 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"  Saved data/wc2026_perf.json")
-    print(f"  Teams: {len(teams)} | Matches: {len(matches_out)} | Real xG: {real_xg_used}/{len(matches_out)}")
+    print(f"  Teams: {len(teams)} | Matches: {len(matches_out)} | Real xG: {real_xg_used}/{len(matches_out)} | Real stats rows: {len(real_stats)}")
     over = [t for t in teams.values() if t['delta_pts'] > 0.8]
     under = [t for t in teams.values() if t['delta_pts'] < -0.8]
     print(f"  Overperforming: {len(over)} | Underperforming: {len(under)}")
