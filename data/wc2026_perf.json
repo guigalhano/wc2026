@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T02:45:35.858960+00:00",
+  "updated_at": "2026-06-21T21:46:17.157203+00:00",
   "teams": [
     {
       "code": "EUA",
@@ -37,9 +37,12 @@
           "xga": 0.32,
           "result": "W",
           "p_win": 0.332,
-          "real_poss": 62.0,
-          "real_shots": 9.0,
-          "stats_source": "sofascore.com"
+          "real_poss": 55.0,
+          "real_shots": 10.0,
+          "real_sot": 2.0,
+          "real_corners": 7.0,
+          "real_fouls": 12.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 2.99,
@@ -48,8 +51,8 @@
       "xga": 0.71,
       "dgf": 1.59,
       "dga": -0.21,
-      "real_possession_avg": 62.0,
-      "real_shots_avg": 9.0,
+      "real_possession_avg": 55.0,
+      "real_shots_avg": 10.0,
       "real_stats_games": 1
     },
     {
@@ -77,7 +80,11 @@
           "xgf": 1.84,
           "xga": 0.52,
           "result": "W",
-          "p_win": 0.511
+          "p_win": 0.511,
+          "real_poss": 57.0,
+          "real_shots": 16.0,
+          "real_sot": 4.0,
+          "stats_source": "fifa.com"
         },
         {
           "vs": "COR",
@@ -95,42 +102,10 @@
       "xgf": 1.7,
       "xga": 0.84,
       "dgf": -0.2,
-      "dga": -0.84
-    },
-    {
-      "code": "CDM",
-      "name": "Costa do Marfim",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 0,
-      "xg_for": 1.1,
-      "xg_against": 0.95,
-      "wins": 1,
-      "draws": 0,
-      "losses": 0,
-      "points": 3,
-      "expected_wins": 0.26154513921985634,
-      "expected_draws": 0.28252809766590353,
-      "expected_losses": 0.4559267631142402,
-      "expected_points": 1.0671635153254726,
-      "matches": [
-        {
-          "vs": "EQU",
-          "date": "2026-06-14",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 1.1,
-          "xga": 0.95,
-          "result": "W",
-          "p_win": 0.262
-        }
-      ],
-      "xpts": 1.07,
-      "delta_pts": 1.93,
-      "xgf": 1.1,
-      "xga": 0.95,
-      "dgf": -0.1,
-      "dga": -0.95
+      "dga": -0.84,
+      "real_possession_avg": 57.0,
+      "real_shots_avg": 16.0,
+      "real_stats_games": 1
     },
     {
       "code": "MAR",
@@ -157,7 +132,13 @@
           "xgf": 1.1,
           "xga": 1.62,
           "result": "D",
-          "p_win": 0.18
+          "p_win": 0.18,
+          "real_poss": 45.0,
+          "real_shots": 14.0,
+          "real_sot": 3.0,
+          "real_corners": 2.0,
+          "real_fouls": 14.0,
+          "stats_source": "fifa.com"
         },
         {
           "vs": "ESC",
@@ -180,8 +161,59 @@
       "xga": 1.29,
       "dgf": 0.18,
       "dga": -0.79,
-      "real_possession_avg": 59.0,
-      "real_shots_avg": 12.0,
+      "real_possession_avg": 52.0,
+      "real_shots_avg": 13.0,
+      "real_stats_games": 2
+    },
+    {
+      "code": "ALE",
+      "name": "Alemanha",
+      "games": 2,
+      "goals_for": 9,
+      "goals_against": 2,
+      "xg_for": 6.737500000000001,
+      "xg_against": 1.2225000000000001,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_wins": 1.3265950061785858,
+      "expected_draws": 0.4503324546297184,
+      "expected_losses": 0.22307253919169578,
+      "expected_points": 4.430117473165476,
+      "matches": [
+        {
+          "vs": "CUR",
+          "date": "2026-06-14",
+          "gf": 7,
+          "ga": 1,
+          "xgf": 4.82,
+          "xga": 0.44,
+          "result": "W",
+          "p_win": 0.698,
+          "real_poss": 63.0,
+          "real_shots": 25.0,
+          "stats_source": "theguardian.com"
+        },
+        {
+          "vs": "CDM",
+          "date": "2026-06-20",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 1.92,
+          "xga": 0.78,
+          "result": "W",
+          "p_win": 0.628
+        }
+      ],
+      "xpts": 4.43,
+      "delta_pts": 1.57,
+      "xgf": 3.37,
+      "xga": 0.61,
+      "dgf": 1.13,
+      "dga": 0.39,
+      "real_possession_avg": 63.0,
+      "real_shots_avg": 25.0,
       "real_stats_games": 1
     },
     {
@@ -209,7 +241,13 @@
           "xgf": 1.3,
           "xga": 0.75,
           "result": "W",
-          "p_win": 0.39
+          "p_win": 0.39,
+          "real_poss": 35.0,
+          "real_shots": 7.0,
+          "real_sot": 2.0,
+          "real_corners": 2.0,
+          "real_fouls": 9.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.46,
@@ -217,7 +255,10 @@
       "xgf": 1.3,
       "xga": 0.75,
       "dgf": -0.3,
-      "dga": -0.75
+      "dga": -0.75,
+      "real_possession_avg": 35.0,
+      "real_shots_avg": 7.0,
+      "real_stats_games": 1
     },
     {
       "code": "CAN",
@@ -244,7 +285,13 @@
           "xgf": 3.82,
           "xga": 0.22,
           "result": "W",
-          "p_win": 0.396
+          "p_win": 0.396,
+          "real_poss": 65.0,
+          "real_shots": 33.0,
+          "real_sot": 11.0,
+          "real_corners": 19.0,
+          "real_fouls": 9.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.48,
@@ -252,42 +299,116 @@
       "xgf": 3.82,
       "xga": 0.22,
       "dgf": 2.18,
-      "dga": -0.22
+      "dga": -0.22,
+      "real_possession_avg": 65.0,
+      "real_shots_avg": 33.0,
+      "real_stats_games": 1
     },
     {
-      "code": "SUE",
-      "name": "Suécia",
-      "games": 1,
-      "goals_for": 5,
-      "goals_against": 1,
-      "xg_for": 1.4625000000000001,
-      "xg_against": 1.2375,
+      "code": "CDM",
+      "name": "Costa do Marfim",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 1.8825000000000003,
+      "xg_against": 2.8674999999999997,
       "wins": 1,
       "draws": 0,
-      "losses": 0,
+      "losses": 1,
       "points": 3,
-      "expected_wins": 0.4077744499079698,
-      "expected_draws": 0.28791710372417056,
-      "expected_losses": 0.3043084463678596,
-      "expected_points": 1.51124045344808,
+      "expected_wins": 0.3940545322079882,
+      "expected_draws": 0.5215913989073325,
+      "expected_losses": 1.0843540688846796,
+      "expected_points": 1.7037549955312972,
       "matches": [
         {
-          "vs": "TUN",
-          "date": "2026-06-15",
-          "gf": 5,
-          "ga": 1,
-          "xgf": 1.46,
-          "xga": 1.24,
+          "vs": "EQU",
+          "date": "2026-06-14",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.1,
+          "xga": 0.95,
           "result": "W",
-          "p_win": 0.408
+          "p_win": 0.262,
+          "real_poss": 41.0,
+          "real_shots": 15.0,
+          "real_sot": 4.0,
+          "real_corners": 3.0,
+          "stats_source": "fifa.com"
+        },
+        {
+          "vs": "ALE",
+          "date": "2026-06-20",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 0.78,
+          "xga": 1.92,
+          "result": "L",
+          "p_win": 0.133
         }
       ],
-      "xpts": 1.51,
-      "delta_pts": 1.49,
-      "xgf": 1.46,
-      "xga": 1.24,
-      "dgf": 3.54,
-      "dga": -0.24
+      "xpts": 1.7,
+      "delta_pts": 1.3,
+      "xgf": 0.94,
+      "xga": 1.43,
+      "dgf": 0.06,
+      "dga": -0.43,
+      "real_possession_avg": 41.0,
+      "real_shots_avg": 15.0,
+      "real_stats_games": 1
+    },
+    {
+      "code": "JAP",
+      "name": "Japão",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 2,
+      "xg_for": 3.4575000000000005,
+      "xg_against": 3.0125,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_wins": 0.7186941359446456,
+      "expected_draws": 0.5515806336176562,
+      "expected_losses": 0.7297252304376982,
+      "expected_points": 2.7076630414515934,
+      "matches": [
+        {
+          "vs": "HOL",
+          "date": "2026-06-14",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.82,
+          "xga": 1.95,
+          "result": "D",
+          "p_win": 0.226,
+          "real_poss": 39.0,
+          "real_shots": 9.0,
+          "real_corners": 4.0,
+          "real_fouls": 7.0,
+          "stats_source": "fifa.com"
+        },
+        {
+          "vs": "TUN",
+          "date": "2026-06-21",
+          "gf": 4,
+          "ga": 0,
+          "xgf": 1.64,
+          "xga": 1.06,
+          "result": "W",
+          "p_win": 0.492
+        }
+      ],
+      "xpts": 2.71,
+      "delta_pts": 1.29,
+      "xgf": 1.73,
+      "xga": 1.51,
+      "dgf": 1.27,
+      "dga": -0.51,
+      "real_possession_avg": 39.0,
+      "real_shots_avg": 9.0,
+      "real_stats_games": 1
     },
     {
       "code": "NOR",
@@ -314,7 +435,12 @@
           "xgf": 2.85,
           "xga": 0.68,
           "result": "W",
-          "p_win": 0.486
+          "p_win": 0.486,
+          "real_poss": 57.0,
+          "real_shots": 11.0,
+          "real_sot": 5.0,
+          "real_fouls": 13.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.74,
@@ -322,7 +448,10 @@
       "xgf": 2.85,
       "xga": 0.68,
       "dgf": 1.15,
-      "dga": 0.32
+      "dga": 0.32,
+      "real_possession_avg": 57.0,
+      "real_shots_avg": 11.0,
+      "real_stats_games": 1
     },
     {
       "code": "AUT",
@@ -384,7 +513,13 @@
           "xgf": 2.92,
           "xga": 1.64,
           "result": "W",
-          "p_win": 0.511
+          "p_win": 0.511,
+          "real_poss": 48.0,
+          "real_shots": 22.0,
+          "real_sot": 11.0,
+          "real_corners": 8.0,
+          "real_fouls": 10.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.81,
@@ -392,7 +527,10 @@
       "xgf": 2.92,
       "xga": 1.64,
       "dgf": 1.08,
-      "dga": 0.36
+      "dga": 0.36,
+      "real_possession_avg": 48.0,
+      "real_shots_avg": 22.0,
+      "real_stats_games": 1
     },
     {
       "code": "PAR",
@@ -499,7 +637,13 @@
           "xgf": 2.44,
           "xga": 1.05,
           "result": "W",
-          "p_win": 0.632
+          "p_win": 0.632,
+          "real_poss": 49.0,
+          "real_shots": 11.0,
+          "real_sot": 8.0,
+          "real_corners": 6.0,
+          "real_fouls": 5.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 2.13,
@@ -507,42 +651,55 @@
       "xgf": 2.44,
       "xga": 1.05,
       "dgf": 0.56,
-      "dga": -0.05
+      "dga": -0.05,
+      "real_possession_avg": 49.0,
+      "real_shots_avg": 11.0,
+      "real_stats_games": 1
     },
     {
-      "code": "ALE",
-      "name": "Alemanha",
-      "games": 1,
-      "goals_for": 7,
-      "goals_against": 1,
-      "xg_for": 4.82,
-      "xg_against": 0.44,
+      "code": "SUE",
+      "name": "Suécia",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 6,
+      "xg_for": 2.3375000000000004,
+      "xg_against": 3.0625,
       "wins": 1,
       "draws": 0,
-      "losses": 0,
+      "losses": 1,
       "points": 3,
-      "expected_wins": 0.6981677004081467,
-      "expected_draws": 0.2112691533882894,
-      "expected_losses": 0.09056314620356394,
-      "expected_points": 2.3057722546127293,
+      "expected_wins": 0.5700608657019253,
+      "expected_draws": 0.5416300719379106,
+      "expected_losses": 0.8883090623601642,
+      "expected_points": 2.2518126690436864,
       "matches": [
         {
-          "vs": "CUR",
-          "date": "2026-06-14",
-          "gf": 7,
+          "vs": "TUN",
+          "date": "2026-06-15",
+          "gf": 5,
           "ga": 1,
-          "xgf": 4.82,
-          "xga": 0.44,
+          "xgf": 1.46,
+          "xga": 1.24,
           "result": "W",
-          "p_win": 0.698
+          "p_win": 0.408
+        },
+        {
+          "vs": "HOL",
+          "date": "2026-06-20",
+          "gf": 1,
+          "ga": 5,
+          "xgf": 0.88,
+          "xga": 1.83,
+          "result": "L",
+          "p_win": 0.162
         }
       ],
-      "xpts": 2.31,
-      "delta_pts": 0.69,
-      "xgf": 4.82,
-      "xga": 0.44,
-      "dgf": 2.18,
-      "dga": 0.56
+      "xpts": 2.25,
+      "delta_pts": 0.75,
+      "xgf": 1.17,
+      "xga": 1.53,
+      "dgf": 1.83,
+      "dga": 1.47
     },
     {
       "code": "ARG",
@@ -578,6 +735,41 @@
       "xga": 0.54,
       "dgf": 0.84,
       "dga": -0.54
+    },
+    {
+      "code": "ESP",
+      "name": "Espanha",
+      "games": 1,
+      "goals_for": 4,
+      "goals_against": 0,
+      "xg_for": 2.2475,
+      "xg_against": 0.4525000000000001,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "points": 3,
+      "expected_wins": 0.7762223284055111,
+      "expected_draws": 0.17288875322220648,
+      "expected_losses": 0.050888918372282495,
+      "expected_points": 2.5015557384387397,
+      "matches": [
+        {
+          "vs": "ARS",
+          "date": "2026-06-21",
+          "gf": 4,
+          "ga": 0,
+          "xgf": 2.25,
+          "xga": 0.45,
+          "result": "W",
+          "p_win": 0.776
+        }
+      ],
+      "xpts": 2.5,
+      "delta_pts": 0.5,
+      "xgf": 2.25,
+      "xga": 0.45,
+      "dgf": 1.75,
+      "dga": -0.45
     },
     {
       "code": "COR",
@@ -660,9 +852,12 @@
           "xga": 1.21,
           "result": "L",
           "p_win": 0.378,
-          "real_poss": 38.0,
-          "real_shots": 2.0,
-          "stats_source": "sofascore.com"
+          "real_poss": 30.0,
+          "real_shots": 5.0,
+          "real_sot": 2.0,
+          "real_corners": 4.0,
+          "real_fouls": 16.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 2.73,
@@ -671,8 +866,61 @@
       "xga": 1.3,
       "dgf": 0.18,
       "dga": -0.3,
-      "real_possession_avg": 38.0,
-      "real_shots_avg": 2.0,
+      "real_possession_avg": 30.0,
+      "real_shots_avg": 5.0,
+      "real_stats_games": 1
+    },
+    {
+      "code": "HOL",
+      "name": "Holanda",
+      "games": 2,
+      "goals_for": 7,
+      "goals_against": 3,
+      "xg_for": 3.7750000000000004,
+      "xg_against": 2.6950000000000003,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_wins": 1.0825961441311085,
+      "expected_draws": 0.5289067394048248,
+      "expected_losses": 0.3884971164640668,
+      "expected_points": 3.77669517179815,
+      "matches": [
+        {
+          "vs": "JAP",
+          "date": "2026-06-14",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.95,
+          "xga": 1.82,
+          "result": "D",
+          "p_win": 0.499,
+          "real_poss": 61.0,
+          "real_shots": 10.0,
+          "real_corners": 5.0,
+          "real_fouls": 7.0,
+          "stats_source": "fifa.com"
+        },
+        {
+          "vs": "SUE",
+          "date": "2026-06-20",
+          "gf": 5,
+          "ga": 1,
+          "xgf": 1.83,
+          "xga": 0.88,
+          "result": "W",
+          "p_win": 0.584
+        }
+      ],
+      "xpts": 3.78,
+      "delta_pts": 0.22,
+      "xgf": 1.89,
+      "xga": 1.35,
+      "dgf": 1.61,
+      "dga": 0.15,
+      "real_possession_avg": 61.0,
+      "real_shots_avg": 10.0,
       "real_stats_games": 1
     },
     {
@@ -700,7 +948,13 @@
           "xgf": 1.12,
           "xga": 1.58,
           "result": "D",
-          "p_win": 0.184
+          "p_win": 0.184,
+          "real_poss": 43.0,
+          "real_shots": 14.0,
+          "real_sot": 3.0,
+          "real_corners": 7.0,
+          "real_fouls": 15.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 0.81,
@@ -708,42 +962,10 @@
       "xgf": 1.12,
       "xga": 1.58,
       "dgf": -0.12,
-      "dga": -0.58
-    },
-    {
-      "code": "ARS",
-      "name": "Arábia Saudita",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 1,
-      "xg_for": 0.85,
-      "xg_against": 1.76,
-      "wins": 0,
-      "draws": 1,
-      "losses": 0,
-      "points": 1,
-      "expected_wins": 0.19306028323061047,
-      "expected_draws": 0.2655373178081092,
-      "expected_losses": 0.5414023989612804,
-      "expected_points": 0.8447181674999406,
-      "matches": [
-        {
-          "vs": "URU",
-          "date": "2026-06-15",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 0.85,
-          "xga": 1.76,
-          "result": "D",
-          "p_win": 0.193
-        }
-      ],
-      "xpts": 0.84,
-      "delta_pts": 0.16,
-      "xgf": 0.85,
-      "xga": 1.76,
-      "dgf": 0.15,
-      "dga": -0.76
+      "dga": -0.58,
+      "real_possession_avg": 43.0,
+      "real_shots_avg": 14.0,
+      "real_stats_games": 1
     },
     {
       "code": "NZE",
@@ -779,41 +1001,6 @@
       "xga": 1.66,
       "dgf": 0.96,
       "dga": 0.34
-    },
-    {
-      "code": "JAP",
-      "name": "Japão",
-      "games": 1,
-      "goals_for": 2,
-      "goals_against": 2,
-      "xg_for": 1.82,
-      "xg_against": 1.95,
-      "wins": 0,
-      "draws": 1,
-      "losses": 0,
-      "points": 1,
-      "expected_wins": 0.22621070067011143,
-      "expected_draws": 0.2751937711910848,
-      "expected_losses": 0.4985955281388038,
-      "expected_points": 0.9538258732014191,
-      "matches": [
-        {
-          "vs": "HOL",
-          "date": "2026-06-14",
-          "gf": 2,
-          "ga": 2,
-          "xgf": 1.82,
-          "xga": 1.95,
-          "result": "D",
-          "p_win": 0.226
-        }
-      ],
-      "xpts": 0.95,
-      "delta_pts": 0.05,
-      "xgf": 1.82,
-      "xga": 1.95,
-      "dgf": 0.18,
-      "dga": 0.05
     },
     {
       "code": "ESC",
@@ -869,6 +1056,111 @@
       "real_stats_games": 1
     },
     {
+      "code": "ARS",
+      "name": "Arábia Saudita",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 5,
+      "xg_for": 1.3025000000000002,
+      "xg_against": 4.0075,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_wins": 0.24394920160289296,
+      "expected_draws": 0.43842607103031567,
+      "expected_losses": 1.3176247273667916,
+      "expected_points": 1.1702736758389944,
+      "matches": [
+        {
+          "vs": "URU",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 0.85,
+          "xga": 1.76,
+          "result": "D",
+          "p_win": 0.193,
+          "real_poss": 27.0,
+          "real_shots": 7.0,
+          "real_sot": 3.0,
+          "real_corners": 4.0,
+          "real_fouls": 11.0,
+          "stats_source": "fifa.com"
+        },
+        {
+          "vs": "ESP",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 4,
+          "xgf": 0.45,
+          "xga": 2.25,
+          "result": "L",
+          "p_win": 0.051
+        }
+      ],
+      "xpts": 1.17,
+      "delta_pts": -0.17,
+      "xgf": 0.65,
+      "xga": 2.0,
+      "dgf": -0.15,
+      "dga": 0.5,
+      "real_possession_avg": 27.0,
+      "real_shots_avg": 7.0,
+      "real_stats_games": 1
+    },
+    {
+      "code": "CUR",
+      "name": "Curaçao",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 7,
+      "xg_for": 1.4275,
+      "xg_against": 6.532500000000001,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_wins": 0.2928602086917054,
+      "expected_draws": 0.4797940624570014,
+      "expected_losses": 1.2273457288512932,
+      "expected_points": 1.3583746885321177,
+      "matches": [
+        {
+          "vs": "ALE",
+          "date": "2026-06-14",
+          "gf": 1,
+          "ga": 7,
+          "xgf": 0.44,
+          "xga": 4.82,
+          "result": "L",
+          "p_win": 0.091,
+          "real_poss": 37.0,
+          "real_shots": 8.0,
+          "stats_source": "theguardian.com"
+        },
+        {
+          "vs": "EQU",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.99,
+          "xga": 1.71,
+          "result": "D",
+          "p_win": 0.202
+        }
+      ],
+      "xpts": 1.36,
+      "delta_pts": -0.36,
+      "xgf": 0.71,
+      "xga": 3.27,
+      "dgf": -0.21,
+      "dga": 0.23,
+      "real_possession_avg": 37.0,
+      "real_shots_avg": 8.0,
+      "real_stats_games": 1
+    },
+    {
       "code": "BRA",
       "name": "Brasil",
       "games": 2,
@@ -893,7 +1185,13 @@
           "xgf": 1.62,
           "xga": 1.1,
           "result": "D",
-          "p_win": 0.558
+          "p_win": 0.558,
+          "real_poss": 55.0,
+          "real_shots": 12.0,
+          "real_sot": 5.0,
+          "real_corners": 6.0,
+          "real_fouls": 16.0,
+          "stats_source": "fifa.com"
         },
         {
           "vs": "HAI",
@@ -911,7 +1209,10 @@
       "xgf": 1.92,
       "xga": 0.8,
       "dgf": 0.08,
-      "dga": -0.3
+      "dga": -0.3,
+      "real_possession_avg": 55.0,
+      "real_shots_avg": 12.0,
+      "real_stats_games": 1
     },
     {
       "code": "AGL",
@@ -949,39 +1250,49 @@
       "dga": 0.84
     },
     {
-      "code": "CUR",
-      "name": "Curaçao",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 7,
-      "xg_for": 0.44,
-      "xg_against": 4.82,
+      "code": "IRA",
+      "name": "Irã",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 2.5875000000000004,
+      "xg_against": 2.8125,
       "wins": 0,
-      "draws": 0,
-      "losses": 1,
-      "points": 0,
-      "expected_wins": 0.09056314620356394,
-      "expected_draws": 0.2112691533882894,
-      "expected_losses": 0.6981677004081467,
-      "expected_points": 0.4829585919989812,
+      "draws": 2,
+      "losses": 0,
+      "points": 2,
+      "expected_wins": 0.6842809947585066,
+      "expected_draws": 0.5346782305070736,
+      "expected_losses": 0.7810407747344197,
+      "expected_points": 2.5875212147825932,
       "matches": [
         {
-          "vs": "ALE",
-          "date": "2026-06-14",
-          "gf": 1,
-          "ga": 7,
-          "xgf": 0.44,
-          "xga": 4.82,
-          "result": "L",
-          "p_win": 0.091
+          "vs": "NZE",
+          "date": "2026-06-16",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.66,
+          "xga": 1.04,
+          "result": "D",
+          "p_win": 0.505
+        },
+        {
+          "vs": "BEL",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.93,
+          "xga": 1.78,
+          "result": "D",
+          "p_win": 0.18
         }
       ],
-      "xpts": 0.48,
-      "delta_pts": -0.48,
-      "xgf": 0.44,
-      "xga": 4.82,
-      "dgf": 0.56,
-      "dga": 2.18
+      "xpts": 2.59,
+      "delta_pts": -0.59,
+      "xgf": 1.29,
+      "xga": 1.41,
+      "dgf": -0.29,
+      "dga": -0.41
     },
     {
       "code": "SEN",
@@ -1008,7 +1319,13 @@
           "xgf": 1.05,
           "xga": 2.44,
           "result": "L",
-          "p_win": 0.13
+          "p_win": 0.13,
+          "real_poss": 44.0,
+          "real_shots": 6.0,
+          "real_sot": 2.0,
+          "real_corners": 4.0,
+          "real_fouls": 9.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 0.63,
@@ -1016,7 +1333,10 @@
       "xgf": 1.05,
       "xga": 2.44,
       "dgf": -0.05,
-      "dga": 0.56
+      "dga": 0.56,
+      "real_possession_avg": 44.0,
+      "real_shots_avg": 6.0,
+      "real_stats_games": 1
     },
     {
       "code": "SUI",
@@ -1043,7 +1363,13 @@
           "xgf": 1.54,
           "xga": 0.78,
           "result": "D",
-          "p_win": 0.474
+          "p_win": 0.474,
+          "real_poss": 58.0,
+          "real_shots": 26.0,
+          "real_sot": 7.0,
+          "real_corners": 10.0,
+          "real_fouls": 11.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.7,
@@ -1051,7 +1377,10 @@
       "xgf": 1.54,
       "xga": 0.78,
       "dgf": -0.54,
-      "dga": 0.22
+      "dga": 0.22,
+      "real_possession_avg": 58.0,
+      "real_shots_avg": 26.0,
+      "real_stats_games": 1
     },
     {
       "code": "UZB",
@@ -1089,76 +1418,6 @@
       "dga": 1.14
     },
     {
-      "code": "HOL",
-      "name": "Holanda",
-      "games": 1,
-      "goals_for": 2,
-      "goals_against": 2,
-      "xg_for": 1.95,
-      "xg_against": 1.82,
-      "wins": 0,
-      "draws": 1,
-      "losses": 0,
-      "points": 1,
-      "expected_wins": 0.4985955281388038,
-      "expected_draws": 0.2751937711910848,
-      "expected_losses": 0.22621070067011143,
-      "expected_points": 1.7709803556074963,
-      "matches": [
-        {
-          "vs": "JAP",
-          "date": "2026-06-14",
-          "gf": 2,
-          "ga": 2,
-          "xgf": 1.95,
-          "xga": 1.82,
-          "result": "D",
-          "p_win": 0.499
-        }
-      ],
-      "xpts": 1.77,
-      "delta_pts": -0.77,
-      "xgf": 1.95,
-      "xga": 1.82,
-      "dgf": 0.05,
-      "dga": 0.18
-    },
-    {
-      "code": "IRA",
-      "name": "Irã",
-      "games": 1,
-      "goals_for": 2,
-      "goals_against": 2,
-      "xg_for": 1.6625,
-      "xg_against": 1.0375,
-      "wins": 0,
-      "draws": 1,
-      "losses": 0,
-      "points": 1,
-      "expected_wins": 0.5047104416487301,
-      "expected_draws": 0.2739532291426751,
-      "expected_losses": 0.22133632920859464,
-      "expected_points": 1.7880845540888655,
-      "matches": [
-        {
-          "vs": "NZE",
-          "date": "2026-06-16",
-          "gf": 2,
-          "ga": 2,
-          "xgf": 1.66,
-          "xga": 1.04,
-          "result": "D",
-          "p_win": 0.505
-        }
-      ],
-      "xpts": 1.79,
-      "delta_pts": -0.79,
-      "xgf": 1.66,
-      "xga": 1.04,
-      "dgf": 0.34,
-      "dga": 0.96
-    },
-    {
       "code": "URU",
       "name": "Uruguai",
       "games": 1,
@@ -1183,7 +1442,13 @@
           "xgf": 1.76,
           "xga": 0.85,
           "result": "D",
-          "p_win": 0.541
+          "p_win": 0.541,
+          "real_poss": 63.0,
+          "real_shots": 27.0,
+          "real_sot": 10.0,
+          "real_corners": 14.0,
+          "real_fouls": 6.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.89,
@@ -1191,42 +1456,10 @@
       "xgf": 1.76,
       "xga": 0.85,
       "dgf": -0.76,
-      "dga": 0.15
-    },
-    {
-      "code": "BEL",
-      "name": "Bélgica",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 1,
-      "xg_for": 1.58,
-      "xg_against": 1.12,
-      "wins": 0,
-      "draws": 1,
-      "losses": 0,
-      "points": 1,
-      "expected_wins": 0.5536097068659258,
-      "expected_draws": 0.26237255043954716,
-      "expected_losses": 0.18401774269452706,
-      "expected_points": 1.9232016710373245,
-      "matches": [
-        {
-          "vs": "EGI",
-          "date": "2026-06-15",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.58,
-          "xga": 1.12,
-          "result": "D",
-          "p_win": 0.554
-        }
-      ],
-      "xpts": 1.92,
-      "delta_pts": -0.92,
-      "xgf": 1.58,
-      "xga": 1.12,
-      "dgf": -0.58,
-      "dga": -0.12
+      "dga": 0.15,
+      "real_possession_avg": 63.0,
+      "real_shots_avg": 27.0,
+      "real_stats_games": 1
     },
     {
       "code": "JOR",
@@ -1288,7 +1521,13 @@
           "xgf": 1.64,
           "xga": 2.92,
           "result": "L",
-          "p_win": 0.217
+          "p_win": 0.217,
+          "real_poss": 43.0,
+          "real_shots": 10.0,
+          "real_sot": 5.0,
+          "real_corners": 2.0,
+          "real_fouls": 12.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 0.92,
@@ -1296,7 +1535,10 @@
       "xgf": 1.64,
       "xga": 2.92,
       "dgf": 0.36,
-      "dga": 1.08
+      "dga": 1.08,
+      "real_possession_avg": 43.0,
+      "real_shots_avg": 10.0,
+      "real_stats_games": 1
     },
     {
       "code": "IRQ",
@@ -1323,7 +1565,12 @@
           "xgf": 0.68,
           "xga": 2.85,
           "result": "L",
-          "p_win": 0.236
+          "p_win": 0.236,
+          "real_poss": 34.0,
+          "real_shots": 11.0,
+          "real_sot": 1.0,
+          "real_fouls": 12.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 0.99,
@@ -1331,42 +1578,10 @@
       "xgf": 0.68,
       "xga": 2.85,
       "dgf": 0.32,
-      "dga": 1.15
-    },
-    {
-      "code": "TUN",
-      "name": "Tunísia",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 5,
-      "xg_for": 1.2375,
-      "xg_against": 1.4625000000000001,
-      "wins": 0,
-      "draws": 0,
-      "losses": 1,
-      "points": 0,
-      "expected_wins": 0.3043084463678596,
-      "expected_draws": 0.28791710372417056,
-      "expected_losses": 0.4077744499079698,
-      "expected_points": 1.2008424428277493,
-      "matches": [
-        {
-          "vs": "SUE",
-          "date": "2026-06-15",
-          "gf": 1,
-          "ga": 5,
-          "xgf": 1.24,
-          "xga": 1.46,
-          "result": "L",
-          "p_win": 0.304
-        }
-      ],
-      "xpts": 1.2,
-      "delta_pts": -1.2,
-      "xgf": 1.24,
-      "xga": 1.46,
-      "dgf": -0.24,
-      "dga": 3.54
+      "dga": 1.15,
+      "real_possession_avg": 34.0,
+      "real_shots_avg": 11.0,
+      "real_stats_games": 1
     },
     {
       "code": "CAT",
@@ -1393,7 +1608,13 @@
           "xgf": 0.78,
           "xga": 1.54,
           "result": "D",
-          "p_win": 0.246
+          "p_win": 0.246,
+          "real_poss": 28.0,
+          "real_shots": 6.0,
+          "real_sot": 3.0,
+          "real_corners": 3.0,
+          "real_fouls": 12.0,
+          "stats_source": "fifa.com"
         },
         {
           "vs": "CAN",
@@ -1403,7 +1624,13 @@
           "xgf": 0.22,
           "xga": 3.82,
           "result": "L",
-          "p_win": 0.315
+          "p_win": 0.315,
+          "real_poss": 20.0,
+          "real_shots": 2.0,
+          "real_sot": 0.0,
+          "real_corners": 1.0,
+          "real_fouls": 10.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 2.25,
@@ -1411,7 +1638,10 @@
       "xgf": 0.5,
       "xga": 2.68,
       "dgf": 0.0,
-      "dga": 0.82
+      "dga": 0.82,
+      "real_possession_avg": 24.0,
+      "real_shots_avg": 4.0,
+      "real_stats_games": 2
     },
     {
       "code": "PAN",
@@ -1438,7 +1668,13 @@
           "xgf": 0.75,
           "xga": 1.3,
           "result": "L",
-          "p_win": 0.321
+          "p_win": 0.321,
+          "real_poss": 55.0,
+          "real_shots": 11.0,
+          "real_sot": 4.0,
+          "real_corners": 2.0,
+          "real_fouls": 11.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 1.25,
@@ -1446,7 +1682,10 @@
       "xgf": 0.75,
       "xga": 1.3,
       "dgf": -0.75,
-      "dga": -0.3
+      "dga": -0.3,
+      "real_possession_avg": 55.0,
+      "real_shots_avg": 11.0,
+      "real_stats_games": 1
     },
     {
       "code": "HAI",
@@ -1518,7 +1757,11 @@
           "xgf": 0.52,
           "xga": 1.84,
           "result": "L",
-          "p_win": 0.217
+          "p_win": 0.217,
+          "real_poss": 43.0,
+          "real_shots": 3.0,
+          "real_sot": 2.0,
+          "stats_source": "fifa.com"
         },
         {
           "vs": "TCH",
@@ -1528,7 +1771,13 @@
           "xgf": 1.15,
           "xga": 1.35,
           "result": "D",
-          "p_win": 0.367
+          "p_win": 0.367,
+          "real_poss": 60.0,
+          "real_shots": 17.0,
+          "real_sot": 4.0,
+          "real_corners": 5.0,
+          "real_fouls": 10.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 2.31,
@@ -1536,7 +1785,10 @@
       "xgf": 0.83,
       "xga": 1.6,
       "dgf": -0.33,
-      "dga": -0.1
+      "dga": -0.1,
+      "real_possession_avg": 51.5,
+      "real_shots_avg": 10.0,
+      "real_stats_games": 2
     },
     {
       "code": "TCH",
@@ -1573,7 +1825,13 @@
           "xgf": 1.35,
           "xga": 1.15,
           "result": "D",
-          "p_win": 0.344
+          "p_win": 0.344,
+          "real_poss": 32.0,
+          "real_shots": 14.0,
+          "real_sot": 3.0,
+          "real_corners": 5.0,
+          "real_fouls": 12.0,
+          "stats_source": "fifa.com"
         }
       ],
       "xpts": 2.47,
@@ -1581,24 +1839,126 @@
       "xgf": 1.28,
       "xga": 1.32,
       "dgf": -0.28,
-      "dga": 0.18
+      "dga": 0.18,
+      "real_possession_avg": 32.0,
+      "real_shots_avg": 14.0,
+      "real_stats_games": 1
+    },
+    {
+      "code": "BEL",
+      "name": "Bélgica",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 1,
+      "xg_for": 3.3550000000000004,
+      "xg_against": 2.045,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "points": 2,
+      "expected_wins": 1.1133141523917507,
+      "expected_draws": 0.5230975518039458,
+      "expected_losses": 0.36358829580430346,
+      "expected_points": 3.863040008979198,
+      "matches": [
+        {
+          "vs": "EGI",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.58,
+          "xga": 1.12,
+          "result": "D",
+          "p_win": 0.554,
+          "real_poss": 57.0,
+          "real_shots": 15.0,
+          "real_sot": 3.0,
+          "real_corners": 2.0,
+          "real_fouls": 15.0,
+          "stats_source": "fifa.com"
+        },
+        {
+          "vs": "IRA",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 1.78,
+          "xga": 0.93,
+          "result": "D",
+          "p_win": 0.56
+        }
+      ],
+      "xpts": 3.86,
+      "delta_pts": -1.86,
+      "xgf": 1.68,
+      "xga": 1.02,
+      "dgf": -1.18,
+      "dga": -0.52,
+      "real_possession_avg": 57.0,
+      "real_shots_avg": 15.0,
+      "real_stats_games": 1
+    },
+    {
+      "code": "TUN",
+      "name": "Tunísia",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 9,
+      "xg_for": 2.3,
+      "xg_against": 3.1000000000000005,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_wins": 0.535438148666754,
+      "expected_draws": 0.564303966150742,
+      "expected_losses": 0.900257885182504,
+      "expected_points": 2.1706184121510037,
+      "matches": [
+        {
+          "vs": "SUE",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 5,
+          "xgf": 1.24,
+          "xga": 1.46,
+          "result": "L",
+          "p_win": 0.304
+        },
+        {
+          "vs": "JAP",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 4,
+          "xgf": 1.06,
+          "xga": 1.64,
+          "result": "L",
+          "p_win": 0.231
+        }
+      ],
+      "xpts": 2.17,
+      "delta_pts": -2.17,
+      "xgf": 1.15,
+      "xga": 1.55,
+      "dgf": -0.65,
+      "dga": 2.95
     },
     {
       "code": "EQU",
       "name": "Equador",
-      "games": 1,
+      "games": 2,
       "goals_for": 0,
       "goals_against": 1,
-      "xg_for": 0.95,
-      "xg_against": 1.1,
+      "xg_for": 2.6625,
+      "xg_against": 2.0875000000000004,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 1,
-      "points": 0,
-      "expected_wins": 0.4559267631142402,
-      "expected_draws": 0.28252809766590353,
-      "expected_losses": 0.26154513921985634,
-      "expected_points": 1.6503083870086241,
+      "points": 1,
+      "expected_wins": 0.9851047915573867,
+      "expected_draws": 0.5510530067346155,
+      "expected_losses": 0.46384220170799784,
+      "expected_points": 3.506367381406776,
       "matches": [
         {
           "vs": "CDM",
@@ -1608,15 +1968,33 @@
           "xgf": 0.95,
           "xga": 1.1,
           "result": "L",
-          "p_win": 0.456
+          "p_win": 0.456,
+          "real_poss": 49.0,
+          "real_shots": 12.0,
+          "real_sot": 1.0,
+          "real_corners": 5.0,
+          "stats_source": "fifa.com"
+        },
+        {
+          "vs": "CUR",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 1.71,
+          "xga": 0.99,
+          "result": "D",
+          "p_win": 0.529
         }
       ],
-      "xpts": 1.65,
-      "delta_pts": -1.65,
-      "xgf": 0.95,
-      "xga": 1.1,
-      "dgf": -0.95,
-      "dga": -0.1
+      "xpts": 3.51,
+      "delta_pts": -2.51,
+      "xgf": 1.33,
+      "xga": 1.04,
+      "dgf": -1.33,
+      "dga": -0.54,
+      "real_possession_avg": 49.0,
+      "real_shots_avg": 12.0,
+      "real_stats_games": 1
     },
     {
       "code": "TUR",
@@ -2028,12 +2406,90 @@
       "lam": 1.6875,
       "mu": 1.0125000000000002,
       "real_xg": false
+    },
+    {
+      "date": "2026-06-20",
+      "home": "HOL",
+      "away": "SUE",
+      "g1": 5,
+      "g2": 1,
+      "wA": 0.5840006159923046,
+      "dr": 0.25371296821374,
+      "wB": 0.16228641579395542,
+      "lam": 1.8250000000000002,
+      "mu": 0.8750000000000001,
+      "real_xg": false
+    },
+    {
+      "date": "2026-06-20",
+      "home": "ALE",
+      "away": "CDM",
+      "g1": 2,
+      "g2": 1,
+      "wA": 0.6284273057704393,
+      "dr": 0.23906330124142897,
+      "wB": 0.13250939298813186,
+      "lam": 1.9175,
+      "mu": 0.7825000000000001,
+      "real_xg": false
+    },
+    {
+      "date": "2026-06-21",
+      "home": "EQU",
+      "away": "CUR",
+      "g1": 0,
+      "g2": 0,
+      "wA": 0.5291780284431465,
+      "dr": 0.268524909068712,
+      "wB": 0.2022970624881415,
+      "lam": 1.7125000000000001,
+      "mu": 0.9875,
+      "real_xg": false
+    },
+    {
+      "date": "2026-06-21",
+      "home": "TUN",
+      "away": "JAP",
+      "g1": 0,
+      "g2": 4,
+      "wA": 0.23112970229889437,
+      "dr": 0.2763868624265714,
+      "wB": 0.4924834352745342,
+      "lam": 1.0625,
+      "mu": 1.6375000000000002,
+      "real_xg": false
+    },
+    {
+      "date": "2026-06-21",
+      "home": "ESP",
+      "away": "ARS",
+      "g1": 4,
+      "g2": 0,
+      "wA": 0.7762223284055111,
+      "dr": 0.17288875322220648,
+      "wB": 0.050888918372282495,
+      "lam": 2.2475,
+      "mu": 0.4525000000000001,
+      "real_xg": false
+    },
+    {
+      "date": "2026-06-21",
+      "home": "BEL",
+      "away": "IRA",
+      "g1": 0,
+      "g2": 0,
+      "wA": 0.559704445525825,
+      "dr": 0.2607250013643986,
+      "wB": 0.1795705531097764,
+      "lam": 1.7750000000000001,
+      "mu": 0.925,
+      "real_xg": false
     }
   ],
   "real_xg_source": "mominullptr/FIFA-World-Cup-2026-Dataset (FIFA/Sofascore/Guardian verified)",
-  "real_xg_updated_at": "2026-06-21T02:45:35.859013+00:00",
+  "real_xg_updated_at": "2026-06-21T21:46:17.157234+00:00",
   "real_xg_games": 16,
-  "real_stats_rows": 8,
+  "real_stats_rows": 64,
   "odds_source": "football-data.org",
-  "odds_updated_at": "2026-06-20T15:56:41.110452+00:00"
+  "odds_updated_at": "2026-06-21T21:46:06.913842+00:00"
 }

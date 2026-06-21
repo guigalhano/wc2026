@@ -1,153 +1,77 @@
 {
-  "updated_at": "2026-06-16 03:05 UTC",
-  "fetched_at": "2026-06-16T03:05:41.551006+00:00",
+  "updated_at": "2026-06-21 21:46 UTC",
   "source": "betting.betfair.com",
-  "count": 6,
+  "count": 10,
   "items": [
     {
-      "title": "World Cup Day 6 Tipsheet — France v Senegal, Iraq v Norway, Argentina v Algeria",
-      "url": "https://betting.betfair.com/football/world-cup-2026/world-cup-tips-for-day-6-best-bets-and-predictions-for-tuesday-16th-june-130626-904.html",
-      "author": "Jack Critchley",
-      "date": "2026-06-15",
-      "matches": [
-        "France vs Senegal",
-        "Iraq vs Norway",
-        "Argentina vs Algeria",
-        "Austria vs Jordan"
-      ],
-      "bets": [
-        {
-          "selection": "Norway to beat Iraq",
-          "odds": "1/3",
-          "result": "pending"
-        }
-      ],
-      "summary": "Four matches previewed for Day 6 including France vs Senegal and Norway's firepower vs Iraq."
+      "title": "World Cup Day 12 Tipsheet: Jack Critchley&#039;s best bets for day 12 of the 2026 World Cup",
+      "link": "https://betting.betfair.com/football/world-cup-2026/world-cup-tips-for-day-6-best-bets-and-predictions-for-monday-22nd-june-200626-904.html",
+      "date": "Mon, 22 Jun 2026 18:36:00 +0100",
+      "desc": "There are another four games taking place on Day 12, with Groups I and J taking centre stage. Jack Critchley has picked out his best bets from these games and put together a near [5/1] anytime goalsco",
+      "isWC": true
     },
     {
-      "title": "World Cup Day 5 Tipsheet — Spain v Cabo Verde, Belgium v Egypt, Saudi Arabia v Uruguay",
-      "url": "https://betting.betfair.com/football/world-cup-2026/world-cup-day-5-tipsheet-best-bets-and-predictions-including-a-43-1-punt-in-belgium-v-egypt-140626-1320.html",
-      "author": "Jimmy The Punt",
-      "date": "2026-06-14",
-      "matches": [
-        "Spain vs Cabo Verde",
-        "Belgium vs Egypt",
-        "Saudi Arabia vs Uruguay",
-        "Iran vs New Zealand"
-      ],
-      "bets": [
-        {
-          "selection": "43/1 correct score punt in Belgium v Egypt",
-          "odds": "43/1",
-          "result": "pending"
-        },
-        {
-          "selection": "Belgium to beat Egypt to nil",
-          "odds": "6/4",
-          "result": "pending"
-        }
-      ],
-      "summary": "Day 5 preview includes a 43/1 correct score punt and Spain as heavy favourites vs Cabo Verde."
+      "title": "World Cup Matchday 2: Opta stats and tips for the second round of group matches",
+      "link": "https://betting.betfair.com/football/world-cup-2026/world-cup-matchday-2-opta-stats-and-tips-for-second-round-of-group-matches-170626-204.html",
+      "date": "Sun, 21 Jun 2026 09:50:00 +0100",
+      "desc": "We&#039;ve seen every team at the World Cup play and the second round of matches is getting underway. Get an Opta stat and tip for the standout ties taking place over the next few days...\n\nOpta stats ",
+      "isWC": true
     },
     {
-      "title": "Brazil v Morocco Tips — best bets and prediction",
-      "url": "https://betting.betfair.com/football/world-cup-2026/brazil-v-morocco-world-cup-2026-betting-tips-match-preview-prediction-110626-1063.html",
-      "author": "Paul Higham",
-      "date": "2026-06-12",
-      "matches": [
-        "Brazil vs Morocco"
-      ],
-      "bets": [
-        {
-          "selection": "Goalless first half",
-          "odds": "15/8",
-          "result": "won"
-        },
-        {
-          "selection": "13/2 Bet Builder fouls-based",
-          "odds": "13/2",
-          "result": "pending"
-        }
-      ],
-      "summary": "Paul Higham tips a goalless first half at 15/8 for Brazil vs Morocco at MetLife Stadium."
+      "title": "World Cup Daily ACCA: Andy Robson picks out a 10/3 multi for Day 11",
+      "link": "https://betting.betfair.com/football/world-cup-2026/world-cup-daily-acca-tips-100626-1302.html",
+      "date": "Sun, 21 Jun 2026 11:55:00 +0100",
+      "desc": "Andy Robson has again consulted his World Cup betting experts to come up with a daily ACCA using Betfair&#039;s Bet Builder Multi tool. Spain and Belgium need wins on Day 11 and our man has a [10/3] B",
+      "isWC": true
     },
     {
-      "title": "World Cup Day 2 Tipsheet — Canada v Bosnia, USA v Paraguay",
-      "url": "https://betting.betfair.com/football/world-cup-2026/world-cup-tips-day-2-tipsheet-best-bets-and-predictions-including-a-60-1-shot-in-canada-v-bosnia-100626-1320.html",
-      "author": "Jimmy The Punt",
-      "date": "2026-06-11",
-      "matches": [
-        "Canada vs Bosnia",
-        "USA vs Paraguay"
-      ],
-      "bets": [
-        {
-          "selection": "Ismael Kone to be shown a card",
-          "odds": "9/2",
-          "result": "lost"
-        },
-        {
-          "selection": "A red card in Canada v Bosnia",
-          "odds": "6/1",
-          "result": "lost"
-        },
-        {
-          "selection": "Both teams to have a red card",
-          "odds": "60/1",
-          "result": "lost"
-        }
-      ],
-      "summary": "Jimmy The Punt goes for card-related bets in Canada vs Bosnia including a 60/1 shot."
+      "title": "World Cup Day 11 Tipsheet: Best bets and predictions including headers, cards and a result",
+      "link": "https://betting.betfair.com/football/world-cup-2026/world-cup-day-11-tipsheet-best-bets-and-predictions-including-headers-cards-and-a-result-200626-1320.html",
+      "date": "Sun, 21 Jun 2026 19:15:00 +0100",
+      "desc": "And winner in his last column, including one at [11/2], Jimmy The Punt previews day 11 of the 2026 World Cup and is backing headers, cards and a result...\n\nFoul drawing merchants in Spain and Belgium ",
+      "isWC": true
     },
     {
-      "title": "World Cup Day 1 Tipsheet — Mexico v South Africa, South Korea v Czechia",
-      "url": "https://betting.betfair.com/football/world-cup-2026/world-cup-tips-for-day-1-best-bets-and-predictions-including-a-381-shot-in-south-korea-v-czechia-090626-1329.html",
-      "author": "Mark Stinchcombe",
-      "date": "2026-06-10",
-      "matches": [
-        "Mexico vs South Africa",
-        "South Korea vs Czechia"
-      ],
-      "bets": [
-        {
-          "selection": "Over 2.25 goals Mexico vs South Africa",
-          "odds": "evens",
-          "result": "won"
-        },
-        {
-          "selection": "Krejci anytime scorer + Coufal assist",
-          "odds": "38/1",
-          "result": "lost"
-        }
-      ],
-      "summary": "Mark Stinchcombe opens WC2026 tips with over goals bet and a 38/1 Bet Builder for South Korea vs Czechia."
+      "title": "England v Ghana: Back Kane in 9/2 Bet Builder",
+      "link": "https://betting.betfair.com/football/world-cup-2026/england-v-ghana-tips-predictions-back-kane-in-9-2-bet-builder-180626-719.html",
+      "date": "Mon, 22 Jun 2026 09:01:00 +0100",
+      "desc": "After making profits on all three of England&#039;s games on US soil so far, Dave Tindall looks to continue that run when the Three Lions take on Ghana...\n\nEngland may find Ghana stubborn opponents\n\nA",
+      "isWC": false
     },
     {
-      "title": "Mexico v South Africa — Preview and Best Bets",
-      "url": "https://betting.betfair.com/football/world-cup-2026/mexico-v-south-africa-world-cup-2026-betting-tips-match-preview-prediction-090626-1063.html",
-      "author": "Paul Higham",
-      "date": "2026-06-09",
-      "matches": [
-        "Mexico vs South Africa"
-      ],
-      "bets": [
-        {
-          "selection": "Mexico to win without conceding",
-          "odds": "9/10",
-          "result": "won"
-        },
-        {
-          "selection": "Mexico 2+ goals + more corners + AFS 3+ cards",
-          "odds": "9/2",
-          "result": "won"
-        },
-        {
-          "selection": "Johan Vasquez 1+ shot on target",
-          "odds": "12/5",
-          "result": "won"
-        }
-      ],
-      "summary": "Paul Higham backs Mexico clean sheet and a 9/2 Bet Builder combining goals, corners and cards."
+      "title": "England v Ghana: Black Stars won&#039;t shine plus 9/1 player prop Bet Builder",
+      "link": "https://betting.betfair.com/football/world-cup-2026/england-v-ghana-betting-guide-black-stars-wont-shine-plus-9-1-player-prop-bet-builder-210626-718.html",
+      "date": "Mon, 22 Jun 2026 09:03:00 +0100",
+      "desc": "Ste Tudor predicts back-to-back World Cup victories for Thomas Tuchel&#039;s men with Kane, Bellingham and Rice at the fore.\n\n\nGhana will offer little going forward\n\n\nKane to get ahead and Bellingham ",
+      "isWC": false
+    },
+    {
+      "title": "Golden Boot Betting: Latest on the favourites as Mbappe and Messi share favouritism ahead of Kane",
+      "link": "https://betting.betfair.com/football/world-cup-2026/golden-boot-betting-guide---who-will-win-at-the-2026-world-cup-280526-140.html",
+      "date": "Mon, 22 Jun 2026 10:02:00 +0100",
+      "desc": "The Golden Boot is the glittering player prize at the World Cup and is shaping up into a great battle witht the likes of Lionel Messi, Kylian Mbappe, Harry Kane and Erling Haaland all scoring multiple",
+      "isWC": false
+    },
+    {
+      "title": "Argentina v Austria: Back more Messi magic in 7/1 Bet Builder",
+      "link": "https://betting.betfair.com/football/world-cup-2026/argentina-v-austria-world-cup-betting-tips-best-bets-match-preview-prediction-200626-1063.html",
+      "date": "Mon, 22 Jun 2026 19:05:00 +0100",
+      "desc": "Paul Higham thinks [7/5] Argentina are a good bet to beat Austria and keep another clean sheet, while Lionel Messi has to be backed again - this time in a [7/1] Bet Builder.\n\nBack [7/5] Argentina win ",
+      "isWC": false
+    },
+    {
+      "title": "Germany v Ivory Coast: Back more fireworks with 9/1 Bet Builder",
+      "link": "https://betting.betfair.com/football/world-cup-2026/germany-v-ivory-coast-world-cup-tips-best-bets-match-preview-prediction-190626-1063.html",
+      "date": "Sat, 20 Jun 2026 19:20:00 +0100",
+      "desc": "Paul Higham expects more fireworks from Germany with a [2/1] win predicted against Ivory Coast and an all-action [9/1] Bet Builder on Julian Nagelsmann&#039;s exciting side.\n\nBack [2/1] Germany to win",
+      "isWC": false
+    },
+    {
+      "title": "Spain v Saudi Arabia: Corner the market with 23/10 Spain &amp; back 6/1 Bet Builder",
+      "link": "https://betting.betfair.com/football/world-cup-2026/spain-v-saudi-arabia-world-cup-tips-best-bets-match-preview-prediction-200626-1063.html",
+      "date": "Sun, 21 Jun 2026 19:35:00 +0100",
+      "desc": "Paul Higham is backing [23/10] Spain to pile up the corners against Saudi Arabia, and also has a [6/1] Bet Builder on Lamine Yamal and others as they try to break down a stubborn defence.\n\nBack Spain ",
+      "isWC": false
     }
   ]
 }
