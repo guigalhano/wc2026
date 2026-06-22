@@ -2122,20 +2122,20 @@ function calcConfidence(probSets, sampleSize) {
 
 // ── 3. SCORE FROM PREDICTION (scoreFromPrediction.ts) ────────────────────────
 function scoreFromPrediction(pH, pD, pA, lam, mu) {
+  // Math.round = mode of Poisson (avoids ceil inflating & floor zeroing away goals)
   var maxProb = Math.max(pH, pD, pA);
+  var mh = Math.round(lam);
+  var ma = Math.round(mu);
   if (maxProb === pD) {
-    // Draw most likely — average goals, same score
-    var g = Math.max(0, Math.round((lam + mu) / 2));
+    var g = Math.round((lam + mu) / 2);
     return { h: g, a: g };
   }
   if (maxProb === pH) {
-    var h = Math.max(1, Math.ceil(lam));
-    var a = Math.max(0, Math.min(Math.floor(mu), h - 1));
-    return { h: h, a: a };
+    if (mh <= ma) mh = ma + 1;
+    return { h: Math.max(1, mh), a: Math.max(0, ma) };
   }
-  var a2 = Math.max(1, Math.ceil(mu));
-  var h2 = Math.max(0, Math.min(Math.floor(lam), a2 - 1));
-  return { h: h2, a: a2 };
+  if (ma <= mh) ma = mh + 1;
+  return { h: Math.max(0, mh), a: Math.max(1, ma) };
 }
 
 // ── 4. AI MATCH ANALYSIS (buildAiPrompt + Claude API) ────────────────────────
