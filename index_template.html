@@ -481,6 +481,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
       <button class="vpill" onclick="setTrackView('xgreal')" id="btn-track-xgreal" style="cursor:pointer">⚡ xG Real (eventos)</button>
       <button class="vpill" onclick="setTrackView('efi')" id="btn-track-efi" style="cursor:pointer">🏃 FIFA EFI (físico)</button>
       <button class="vpill" onclick="setTrackView('table')" id="btn-track-table" style="cursor:pointer">Tabela completa</button>
+      <button class="vpill" onclick="setTrackView('matches')" id="btn-track-matches" style="cursor:pointer">🎮 Partidas</button>
     </div>
   </div>
   <div id="trackSummary" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1rem"></div>
@@ -2305,7 +2306,7 @@ var _trackData=null, _trackView='pts', _trackLoading=false;
 
 function setTrackView(v){
   _trackView=v;
-  ['pts','xg','xgreal','efi','table'].forEach(function(x){
+  ['pts','xg','xgreal','efi','table','matches'].forEach(function(x){
     var b=document.getElementById('btn-track-'+x);
     if(b) b.style.background=x===v?'var(--bl-bg)':'var(--sf2)';
     if(b) b.style.color=x===v?'var(--bl-tx)':'var(--tx2)';
@@ -2506,7 +2507,7 @@ function renderTracking(data){
 
   document.getElementById('trackContent').innerHTML=html||'<p style="color:var(--tx3)">Sem dados.</p>';
   // Update active button state without re-rendering
-  ['pts','xg','table'].forEach(function(x){
+  ['pts','xg','xgreal','efi','table','matches'].forEach(function(x){
     var b=document.getElementById('btn-track-'+x);
     if(b) b.style.background=x===_trackView?'var(--bl-bg)':'var(--sf2)';
     if(b) b.style.color=x===_trackView?'var(--bl-tx)':'var(--tx2)';
