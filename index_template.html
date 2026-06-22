@@ -1034,9 +1034,9 @@ function renderMatchup(){
   var _ep2=matchProbV2(hC,aC,h&&h.group,false); var _ep={winA:_ep2.winA,draw:_ep2.draw,winB:_ep2.winB,lamA:_ep2.lam,lamB:_ep2.mu};
   var _xgH=_ep?_ep.lamA:(h.xG||1.5);
   var _xgA=_ep?_ep.lamB:(a.xG||1.5);
+  var _pH=_ep?_ep.winA:pH; var _pD=_ep?_ep.draw:pD; var _pA=_ep?_ep.winB:pA;
   var _score=scoreFromPrediction(_pH,_pD,_pA,_xgH,_xgA);
   var _mlH=_score.h; var _mlA=_score.a;
-  var _pH=_ep?_ep.winA:pH; var _pD=_ep?_ep.draw:pD; var _pA=_ep?_ep.winB:pA;
   var _conf = calcConfidence([
     [_pH, _pD, _pA],
     [pH, pD, pA],
