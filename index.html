@@ -364,6 +364,7 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
     <div id="verdictBlock"></div>
     <div class="hero" id="heroBlock"></div>
     <div id="bfMatchupBlock"></div>
+    <div id="aiAnalysisBlock" style="margin-bottom:12px"></div>
     <div style="margin-bottom:12px"><div class="stitle" data-t="swTitle">Pontos fortes e fracos</div><div class="g2" id="swBlock"></div></div>
     <div class="card"><div class="stitle" data-t="cmpTitle">Comparativo de métricas</div><div id="cmpBlock"></div></div>
     <div class="card" id="efiCard" style="display:none"><div class="stitle">🏃 FIFA EFI — Dados oficiais do torneio</div><div id="efiCmpBlock"></div></div>
@@ -1033,9 +1034,13 @@ function renderMatchup(){
   var _ep2=matchProbV2(hC,aC,h&&h.group,false); var _ep={winA:_ep2.winA,draw:_ep2.draw,winB:_ep2.winB,lamA:_ep2.lam,lamB:_ep2.mu};
   var _xgH=_ep?_ep.lamA:(h.xG||1.5);
   var _xgA=_ep?_ep.lamB:(a.xG||1.5);
-  var _mlH=Math.max(0,Math.round(_xgH*0.85));
-  var _mlA=Math.max(0,Math.round(_xgA*0.85));
+  var _score=scoreFromPrediction(_pH,_pD,_pA,_xgH,_xgA);
+  var _mlH=_score.h; var _mlA=_score.a;
   var _pH=_ep?_ep.winA:pH; var _pD=_ep?_ep.draw:pD; var _pA=_ep?_ep.winB:pA;
+  var _conf = calcConfidence([
+    [_pH, _pD, _pA],
+    [pH, pD, pA],
+  ], 8);
   document.getElementById('heroBlock').innerHTML=`
     <div class="hero-team home"><div class="hero-flag">${h.flag}</div><div class="hero-name">${tn(hC)}</div><div class="hero-sub">Gr. ${h.group}</div><div class="hero-rat" style="color:${rCol(h.rating||70)}">${h.rating||'–'}</div><div style="font-size:10px;color:var(--tx3)">rating</div></div>
     <div class="hero-mid">
@@ -1081,6 +1086,17 @@ function renderMatchup(){
     if (homeFormEl) homeFormEl.insertAdjacentHTML('afterend', fmtForm(formH));
     if (awayFormEl) awayFormEl.insertAdjacentHTML('afterend', fmtForm(formA2));
   }
+  // Squad value indicators
+  if (heroEl) {
+    var hSq = _ep2 ? _ep2.squadA : Math.round((SQUAD_STRENGTH[hC]||0.05)*100);
+    var aSq = _ep2 ? _ep2.squadB : Math.round((SQUAD_STRENGTH[aC]||0.05)*100);
+    var sqCol = function(v){ return v>=70?'var(--gn)':v>=40?'var(--am)':'var(--rd-tx)'; };
+    var sqHtml = function(v){ return '<div style="font-size:9px;color:var(--tx3);margin-top:1px">Squad <span style="color:'+sqCol(v)+';font-weight:700">'+v+'%</span></div>'; };
+    var hSubEl2 = heroEl.querySelector('.hero-team.home .hero-sub');
+    var aSubEl2 = heroEl.querySelector('.hero-team.away .hero-sub');
+    if(hSubEl2) hSubEl2.insertAdjacentHTML('afterend', sqHtml(hSq));
+    if(aSubEl2) aSubEl2.insertAdjacentHTML('afterend', sqHtml(aSq));
+  }
   var verdictEl = document.getElementById('verdictBlock');
   if (verdictEl) {
     verdictEl.innerHTML = `
@@ -1089,7 +1105,7 @@ function renderMatchup(){
         <div style="flex:1;min-width:180px">
           <div style="font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:0.5px">${T('modelVerdict')}</div>
           <div style="font-size:14px;font-weight:700;color:${_verdictColor}">
-            ${_verdictIcon} ${_verdictLabel} <span style='font-size:10px;color:var(--tx3);font-weight:400'>· ${getPredConfig().label}</span>
+            ${_verdictIcon} ${_verdictLabel} <span style='font-size:10px;color:var(--tx3);font-weight:400'>· ${getPredConfig().label} · Confiança: ${_conf}%</span>
             <span style="font-size:12px;font-weight:600;color:var(--tx2)">(${(_verdictPct*100).toFixed(0)}% · ${_verdictConf})</span>
           </div>
         </div>
@@ -1100,6 +1116,21 @@ function renderMatchup(){
   }
 
   renderBetfairTipsForMatchup(hC, aC);
+  // Load AI analysis async
+  (async function(){
+    var aiEl = document.getElementById('aiAnalysisBlock');
+    if (!aiEl) return;
+    aiEl.innerHTML = '<div style="font-size:11px;color:var(--tx3);padding:8px 12px">🤖 A gerar análise IA...</div>';
+    var analysis = await getAiMatchAnalysis(hC, aC, _ep || {winA:_pH,draw:_pD,winB:_pA,lam:_xgH,mu:_xgA}, _activePredConfig);
+    if (analysis) {
+      aiEl.innerHTML = '<div class="card" style="border-left:3px solid var(--bl);padding:10px 12px;margin-bottom:0">' +
+        '<div style="font-size:10px;font-weight:700;color:var(--bl-tx);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.5px">🤖 Análise IA · '+getPredConfig().label+'</div>' +
+        '<div style="font-size:12px;color:var(--tx2);line-height:1.6">' + analysis.replace(/\n/g,'<br>') + '</div>' +
+        '</div>';
+    } else {
+      aiEl.innerHTML = '';
+    }
+  })();
 
 
   const swH=getSW(hC),swA=getSW(aC);
@@ -2021,12 +2052,21 @@ function matchProbV2(codeA, codeB, group, isKO) {
     }
   }
 
+  // Squad strength component (market value based)
+  var squadBias = squadWinBias(codeA, codeB);
+
   // A) Apply drawBias from config
   var rawDraw = draw * cfg.drawBias;
   var excess  = rawDraw - draw;
   winA = winA - excess * (winA / (winA + winB));
   winB = winB - excess * (winB / (winA + winB));
   draw = rawDraw;
+
+  // Blend squad strength (cfg.squadW = 15% max)
+  var sqW = cfg.formW * 0.5; // use half formW for squad, capped at ~10%
+  winA = winA * (1 - sqW) + squadBias.home * sqW;
+  draw = draw * (1 - sqW) + squadBias.draw * sqW;
+  winB = winB * (1 - sqW) + squadBias.away * sqW;
 
   // Normalize
   var tot = winA + draw + winB;
@@ -2041,7 +2081,113 @@ function matchProbV2(codeA, codeB, group, isKO) {
     altitude: alt,
     altFactor: Math.round(altFactor * 100) / 100,
     config: _activePredConfig,
+    squadA: Math.round((SQUAD_STRENGTH[codeA]||0.05)*100),
+    squadB: Math.round((SQUAD_STRENGTH[codeB]||0.05)*100),
   };
+}
+
+
+// ── 1. SQUAD STRENGTH (market values from squads_and_players.csv) ────────────
+var SQUAD_STRENGTH = {"ARG":1.0,"ESP":0.6,"FRA":0.488,"ING":0.371,"POR":0.277,"BRA":0.256,"MAR":0.223,"HOL":0.203,"BEL":0.177,"ALE":0.147,"COL":0.146,"EQU":0.143,"URU":0.133,"CRO":0.129,"AUT":0.125,"MEX":0.122,"SUI":0.118,"SEN":0.114,"COR":0.101,"JAP":0.1,"NOR":0.093,"EUA":0.088,"TUR":0.083,"AUS":0.08,"AGL":0.076,"TCH":0.074,"SUE":0.073,"BOS":0.065,"CAN":0.063,"ARS":0.061,"EGI":0.059,"PAR":0.057,"ESC":0.055,"CDM":0.054,"TUN":0.052,"UZB":0.049,"IRQ":0.047,"CAT":0.045,"RDC":0.043,"GAN":0.041,"IRA":0.039,"AFS":0.037,"CAB":0.028,"HAI":0.028,"CUR":0.026,"NZE":0.025,"JOR":0.031,"PAN":0.033};
+
+function squadWinBias(codeA, codeB) {
+  var mvA = SQUAD_STRENGTH[codeA] || 0.05;
+  var mvB = SQUAD_STRENGTH[codeB] || 0.05;
+  var total = mvA + mvB;
+  var shareA = mvA / total;
+  return { home: shareA * 0.7 + 0.1, draw: 0.2, away: (1 - shareA) * 0.7 + 0.1 };
+}
+
+// ── 2. CONFIDENCE SCORE (from confidence.ts) ─────────────────────────────────
+function modelAgreement(probSets) {
+  // probSets: array of [pH, pD, pA]
+  if (probSets.length < 2) return 0.5;
+  var agreement = 0;
+  for (var i = 0; i < 3; i++) {
+    var vals = probSets.map(function(p){ return p[i]; });
+    var mean = vals.reduce(function(a,b){return a+b;},0) / vals.length;
+    var variance = vals.reduce(function(s,v){return s+Math.pow(v-mean,2);},0) / vals.length;
+    agreement += 1 - Math.min(1, variance * 10);
+  }
+  return agreement / 3;
+}
+
+function calcConfidence(probSets, sampleSize) {
+  var agreement = modelAgreement(probSets);
+  var dataQuality = 0.8; // good data
+  var sampleFactor = Math.min(1, (sampleSize || 5) / 10);
+  var raw = 0.5 * agreement + 0.3 * dataQuality + 0.2 * sampleFactor;
+  return Math.round(Math.min(0.95, Math.max(0.1, raw)) * 100);
+}
+
+// ── 3. SCORE FROM PREDICTION (scoreFromPrediction.ts) ────────────────────────
+function scoreFromPrediction(pH, pD, pA, lam, mu) {
+  var maxProb = Math.max(pH, pD, pA);
+  if (maxProb === pD) {
+    // Draw most likely — average goals, same score
+    var g = Math.max(0, Math.round((lam + mu) / 2));
+    return { h: g, a: g };
+  }
+  if (maxProb === pH) {
+    var h = Math.max(1, Math.ceil(lam));
+    var a = Math.max(0, Math.min(Math.floor(mu), h - 1));
+    return { h: h, a: a };
+  }
+  var a2 = Math.max(1, Math.ceil(mu));
+  var h2 = Math.max(0, Math.min(Math.floor(lam), a2 - 1));
+  return { h: h2, a: a2 };
+}
+
+// ── 4. AI MATCH ANALYSIS (buildAiPrompt + Claude API) ────────────────────────
+var _aiMatchCache = {};
+
+function buildMatchAiPrompt(hC, aC, probs, cfg) {
+  var h = SCOUTS[hC] || {}, a = SCOUTS[aC] || {};
+  var hn = h.names ? (h.names.en || h.name) : hC;
+  var an = a.names ? (a.names.en || a.name) : aC;
+  var fH = Math.round(getWC2026FormScore(hC) * 100);
+  var fA = Math.round(getWC2026FormScore(aC) * 100);
+  var mvH = Math.round((SQUAD_STRENGTH[hC]||0.05)*100);
+  var mvA = Math.round((SQUAD_STRENGTH[aC]||0.05)*100);
+  var grp = h.group || '?';
+  var venue = MATCH_VENUE[grp] || 'Dallas';
+  var alt = VENUE_ALTITUDE[venue] || 0;
+
+  return [
+    'FIFA World Cup 2026: ' + hn + ' vs ' + an + ' (Group ' + grp + ', venue: ' + venue + (alt>500?' — altitude '+alt+'m':'') + ')',
+    hn + ': ELO ' + (getElo(hC)||'?') + ', form ' + fH + '%, squad value ' + mvH + '% of tournament max',
+    an + ': ELO ' + (getElo(aC)||'?') + ', form ' + fA + '%, squad value ' + mvA + '% of tournament max',
+    'Statistical model (' + (cfg||'balanced') + '): home ' + Math.round(probs.winA*100) + '% / draw ' + Math.round(probs.draw*100) + '% / away ' + Math.round(probs.winB*100) + '%',
+    'Expected goals: ' + probs.lam + ' – ' + probs.mu,
+    '',
+    'In 2-3 sentences: explain the tactical and contextual factors that will decide this match. Be specific about form, squad quality, altitude effects, and key strengths/weaknesses. End with one sentence on the most likely result and why.',
+    'Return only plain text, no JSON, no headers.',
+  ].join('\n');
+}
+
+async function getAiMatchAnalysis(hC, aC, probs, cfg) {
+  var cacheKey = hC + '-' + aC + '-' + (cfg||'balanced');
+  if (_aiMatchCache[cacheKey]) return _aiMatchCache[cacheKey];
+
+  var prompt = buildMatchAiPrompt(hC, aC, probs, cfg);
+  try {
+    var resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 200,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    if (!resp.ok) return null;
+    var data = await resp.json();
+    var text = (data.content && data.content[0] && data.content[0].text) || null;
+    if (text) _aiMatchCache[cacheKey] = text;
+    return text;
+  } catch(e) {
+    return null;
+  }
 }
 
 // ── Enhanced calcVal with Kelly Criterion ────────────────────────────────────
