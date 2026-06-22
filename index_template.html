@@ -1362,151 +1362,7 @@ function getVenueFactors(group, isKnockout) {
 var ELO_RATINGS={"AFS":1571,"AGL":1686,"ALE":1960,"ARG":1994,"ARS":1675,"AUS":1777,"AUT":1742,"BEL":1874,"BOS":1585,"BRA":1967,"CAB":1617,"CAN":1757,"CAT":1590,"CDM":1751,"COL":1885,"COR":1761,"CRO":1826,"CUR":1547,"EGI":1699,"EQU":1777,"ESC":1667,"ESP":1992,"EUA":1876,"FRA":2034,"GAN":1692,"HAI":1516,"HOL":1924,"ING":2019,"IRA":1745,"IRQ":1594,"JAP":1833,"JOR":1524,"MAR":1879,"MEX":1877,"NOR":1885,"NZE":1593,"PAN":1582,"PAR":1682,"POR":1934,"RDC":1661,"SEN":1823,"SUE":1757,"SUI":1814,"TCH":1627,"TUN":1638,"TUR":1675,"URU":1813,"UZB":1626};
 var ELO_LIVE_UPDATED='2026-06-21';
 
-// ══════════════════════════════════════════════════════════════════════════════
-// INTEGRAÇÃO: AhmedHazem02/fifa-world-cup-2026-prediction-agent
-// A) drawBias  B) formScore recente  C) altitudeImpact  D) Kelly Criterion
-// ══════════════════════════════════════════════════════════════════════════════
 
-// ── A) Prediction Configs (drawBias + model weights) ─────────────────────────
-var PRED_CONFIGS = {
-  balanced:     {label:'Balanced',    eloW:0.35,poisW:0.30,formW:0.20,squadW:0.15, drawBias:1.00, homeAdv:65, hostAdv:80},
-  conservative: {label:'Conservative',eloW:0.30,poisW:0.30,formW:0.25,squadW:0.15, drawBias:1.30, homeAdv:60, hostAdv:75},
-  'elo-heavy':  {label:'ELO Heavy',   eloW:0.55,poisW:0.25,formW:0.12,squadW:0.08, drawBias:0.95, homeAdv:70, hostAdv:85},
-  'form-heavy': {label:'Form Heavy',  eloW:0.18,poisW:0.22,formW:0.45,squadW:0.15, drawBias:1.00, homeAdv:60, hostAdv:75},
-  'goals-heavy':{label:'Goals Heavy', eloW:0.15,poisW:0.55,formW:0.20,squadW:0.10, drawBias:0.90, homeAdv:55, hostAdv:70},
-  'host-bias':  {label:'Host Bias',   eloW:0.30,poisW:0.25,formW:0.25,squadW:0.20, drawBias:1.00, homeAdv:75, hostAdv:110},
-};
-var _activePredConfig = 'balanced';
-
-function getPredConfig() { return PRED_CONFIGS[_activePredConfig] || PRED_CONFIGS.balanced; }
-
-// ── B) Form Score from real WC2026 results ────────────────────────────────────
-function getWC2026FormScore(code) {
-  // Use real results from FIXTURES (last 5 played matches)
-  var played = FIXTURES.filter(function(f) {
-    return f.played && (f.home === code || f.away === code);
-  }).slice(-5);
-  if (!played.length) return 0.5;
-  var pts = 0, maxPts = played.length * 3;
-  played.forEach(function(f) {
-    var gf = f.home === code ? (f.score1||0) : (f.score2||0);
-    var ga = f.home === code ? (f.score2||0) : (f.score1||0);
-    if (gf > ga) pts += 3;
-    else if (gf === ga) pts += 1;
-  });
-  return maxPts > 0 ? pts / maxPts : 0.5;
-}
-
-// ── C) Altitude impact (from AhmedHazem02 altitudeImpact.ts) ─────────────────
-function altitudeFatigueFactor(altMeters) {
-  if (altMeters < 500)  return 1.00;
-  if (altMeters < 1500) return 0.97;
-  return 0.93;
-}
-
-// ── D) Kelly Criterion (from AhmedHazem02 kellyCriterion.ts) ─────────────────
-function americanToDecimal(americanOdds) {
-  return americanOdds >= 100 ? americanOdds / 100 : 100 / Math.abs(americanOdds);
-}
-
-function decimalToAmerican(decimal) {
-  if (decimal >= 2) return '+' + Math.round((decimal - 1) * 100);
-  return Math.round(-100 / (decimal - 1)).toString();
-}
-
-function kellyFraction(modelProb, decimalOdds) {
-  // Kelly: f = (p*(b+1) - 1) / b  where b = decimal - 1
-  var b = decimalOdds - 1;
-  if (b <= 0) return 0;
-  var f = (modelProb * (b + 1) - 1) / b;
-  return Math.max(0, Math.round(f * 1000) / 1000);
-}
-
-// ── Enhanced matchProb with config integration ────────────────────────────────
-function matchProbV2(codeA, codeB, group, isKO) {
-  var cfg = getPredConfig();
-  var rA = getElo(codeA), rB = getElo(codeB);
-
-  // Host advantage
-  var HOSTS = {MEX:1,EUA:1,CAN:1};
-  var hostA = HOSTS[codeA] ? cfg.hostAdv : 0;
-  var hostB = HOSTS[codeB] ? cfg.hostAdv : 0;
-  var homeBonus = hostA - hostB + (group ? cfg.homeAdv * 0.3 : 0);
-
-  // B) Real form score from last 5 WC2026 matches
-  var formA = getWC2026FormScore(codeA); // 0–1
-  var formB = getWC2026FormScore(codeB);
-  var formDiff = (formA - formB) * 80; // convert to ELO-like points
-
-  // C) Altitude penalty for away team at high-altitude venues
-  var city  = group ? (MATCH_VENUE[group] || 'Dallas') : 'Dallas';
-  var alt   = VENUE_ALTITUDE[city] || 200;
-  var altFactor = altitudeFatigueFactor(alt);
-
-  // Ensemble ELO component
-  var rAeff = rA + homeBonus + formDiff * cfg.formW * 2;
-  var rBeff = rB - formDiff * cfg.formW * 2;
-
-  // Poisson lambdas
-  var lam = Math.max(0.3, Math.min(3.5, 1.35 + (rAeff - rBeff) / 400));
-  var mu  = Math.max(0.3, Math.min(3.5, 1.35 + (rBeff - rAeff) / 400));
-
-  // Apply altitude: away team suffers if they're the visitor at altitude
-  if (alt > 500) {
-    mu = mu * altFactor; // away team penalised
-  }
-
-  // Dixon-Coles matrix
-  var winA = 0, draw = 0, winB = 0;
-  for (var a = 0; a <= 8; a++) {
-    var pA = poissonPmf(a, lam);
-    for (var b = 0; b <= 8; b++) {
-      var p = pA * poissonPmf(b, mu) * dcTau(a, b, lam, mu);
-      if (a > b) winA += p; else if (a < b) winB += p; else draw += p;
-    }
-  }
-
-  // A) Apply drawBias from config
-  var rawDraw = draw * cfg.drawBias;
-  var excess  = rawDraw - draw;
-  winA = winA - excess * (winA / (winA + winB));
-  winB = winB - excess * (winB / (winA + winB));
-  draw = rawDraw;
-
-  // Normalize
-  var tot = winA + draw + winB;
-  return {
-    winA: Math.round(winA / tot * 1000) / 1000,
-    draw: Math.round(draw / tot * 1000) / 1000,
-    winB: Math.round(winB / tot * 1000) / 1000,
-    lam:  Math.round(lam * 100) / 100,
-    mu:   Math.round(mu  * 100) / 100,
-    formA: Math.round(formA * 100),
-    formB: Math.round(formB * 100),
-    altitude: alt,
-    altFactor: Math.round(altFactor * 100) / 100,
-    config: _activePredConfig,
-  };
-}
-
-// ── Enhanced calcVal with Kelly Criterion ────────────────────────────────────
-function calcValV2(code) {
-  var s = SCOUTS[code], c = CSV[code];
-  if (!s || !s.rating || !c) return null;
-  var wr  = c.games ? c.wins / c.games : 0.4;
-  var imp = c.avg_odds > 0 ? 1 / c.avg_odds : 0;
-  var adj = (s.rating / 100) * 0.6 + wr * 0.4;
-  var edge = Math.round((adj - imp) * 1000) / 10;
-  // D) Kelly Criterion
-  var kelly = c.avg_odds > 0 ? kellyFraction(adj, c.avg_odds) * 100 : 0;
-  return {
-    edge: edge,
-    avgOdds: c.avg_odds,
-    impliedProb: Math.round(imp * 1000) / 10,
-    scoutAdj: Math.round(adj * 1000) / 10,
-    kelly: Math.round(kelly * 10) / 10,  // % of bankroll
-  };
-}
  // auto-updated after each WC2026 match
 
 // ── Dixon-Coles correction for 0-0, 1-1, 0-1, 1-0 ─────────────────────────
@@ -2052,6 +1908,159 @@ function showSec(id,btn) {
   if (id === 'betfair' && typeof renderBetfair === 'function') {
     setTimeout(function() { renderBetfair(); }, 50);
   }
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// INTEGRAÇÃO: AhmedHazem02/fifa-world-cup-2026-prediction-agent
+// A) drawBias  B) formScore recente  C) altitudeImpact  D) Kelly Criterion
+// ══════════════════════════════════════════════════════════════════════════════
+
+// ── A) Prediction Configs (drawBias + model weights) ─────────────────────────
+var PRED_CONFIGS = {
+  balanced:     {label:'Balanced',    eloW:0.35,poisW:0.30,formW:0.20,squadW:0.15, drawBias:1.00, homeAdv:65, hostAdv:80},
+  conservative: {label:'Conservative',eloW:0.30,poisW:0.30,formW:0.25,squadW:0.15, drawBias:1.30, homeAdv:60, hostAdv:75},
+  'elo-heavy':  {label:'ELO Heavy',   eloW:0.55,poisW:0.25,formW:0.12,squadW:0.08, drawBias:0.95, homeAdv:70, hostAdv:85},
+  'form-heavy': {label:'Form Heavy',  eloW:0.18,poisW:0.22,formW:0.45,squadW:0.15, drawBias:1.00, homeAdv:60, hostAdv:75},
+  'goals-heavy':{label:'Goals Heavy', eloW:0.15,poisW:0.55,formW:0.20,squadW:0.10, drawBias:0.90, homeAdv:55, hostAdv:70},
+  'host-bias':  {label:'Host Bias',   eloW:0.30,poisW:0.25,formW:0.25,squadW:0.20, drawBias:1.00, homeAdv:75, hostAdv:110},
+};
+var _activePredConfig = 'balanced';
+
+function getPredConfig() { return PRED_CONFIGS[_activePredConfig] || PRED_CONFIGS.balanced; }
+
+// ── B) Form Score from real WC2026 results ────────────────────────────────────
+function getWC2026FormScore(code) {
+  var allMatches = (typeof FIXTURES !== 'undefined') ? FIXTURES :
+    (window.LIVE_DATA && window.LIVE_DATA.wc_results ? window.LIVE_DATA.wc_results.matches : []);
+  var played = allMatches.filter(function(f) {
+    var hc = f.home || f.home_code || '';
+    var ac = f.away || f.away_code || '';
+    var hg = f.score1 != null ? f.score1 : (f.home_score != null ? f.home_score : null);
+    return hg !== null && (hc === code || ac === code);
+  }).slice(-5);
+  if (!played.length) return 0.5;
+  var pts = 0, maxPts = played.length * 3;
+  played.forEach(function(f) {
+    var hc = f.home || f.home_code || '';
+    var hg = f.score1 != null ? f.score1 : (f.home_score || 0);
+    var ag = f.score2 != null ? f.score2 : (f.away_score || 0);
+    var gf = hc === code ? hg : ag;
+    var ga = hc === code ? ag : hg;
+    if (gf > ga) pts += 3;
+    else if (gf === ga) pts += 1;
+  });
+  return maxPts > 0 ? pts / maxPts : 0.5;
+}
+
+// ── C) Altitude impact (from AhmedHazem02 altitudeImpact.ts) ─────────────────
+function altitudeFatigueFactor(altMeters) {
+  if (altMeters < 500)  return 1.00;
+  if (altMeters < 1500) return 0.97;
+  return 0.93;
+}
+
+// ── D) Kelly Criterion (from AhmedHazem02 kellyCriterion.ts) ─────────────────
+function americanToDecimal(americanOdds) {
+  return americanOdds >= 100 ? americanOdds / 100 : 100 / Math.abs(americanOdds);
+}
+
+function decimalToAmerican(decimal) {
+  if (decimal >= 2) return '+' + Math.round((decimal - 1) * 100);
+  return Math.round(-100 / (decimal - 1)).toString();
+}
+
+function kellyFraction(modelProb, decimalOdds) {
+  // Kelly: f = (p*(b+1) - 1) / b  where b = decimal - 1
+  var b = decimalOdds - 1;
+  if (b <= 0) return 0;
+  var f = (modelProb * (b + 1) - 1) / b;
+  return Math.max(0, Math.round(f * 1000) / 1000);
+}
+
+// ── Enhanced matchProb with config integration ────────────────────────────────
+function matchProbV2(codeA, codeB, group, isKO) {
+  var cfg = getPredConfig();
+  var rA = getElo(codeA), rB = getElo(codeB);
+
+  // Host advantage
+  var HOSTS = {MEX:1,EUA:1,CAN:1};
+  var hostA = HOSTS[codeA] ? cfg.hostAdv : 0;
+  var hostB = HOSTS[codeB] ? cfg.hostAdv : 0;
+  var homeBonus = hostA - hostB + (group ? cfg.homeAdv * 0.3 : 0);
+
+  // B) Real form score from last 5 WC2026 matches
+  var formA = getWC2026FormScore(codeA); // 0–1
+  var formB = getWC2026FormScore(codeB);
+  var formDiff = (formA - formB) * 80; // convert to ELO-like points
+
+  // C) Altitude penalty for away team at high-altitude venues
+  var city  = group ? (MATCH_VENUE[group] || 'Dallas') : 'Dallas';
+  var alt   = VENUE_ALTITUDE[city] || 200;
+  var altFactor = altitudeFatigueFactor(alt);
+
+  // Ensemble ELO component
+  var rAeff = rA + homeBonus + formDiff * cfg.formW * 2;
+  var rBeff = rB - formDiff * cfg.formW * 2;
+
+  // Poisson lambdas
+  var lam = Math.max(0.3, Math.min(3.5, 1.35 + (rAeff - rBeff) / 400));
+  var mu  = Math.max(0.3, Math.min(3.5, 1.35 + (rBeff - rAeff) / 400));
+
+  // Apply altitude: away team suffers if they're the visitor at altitude
+  if (alt > 500) {
+    mu = mu * altFactor; // away team penalised
+  }
+
+  // Dixon-Coles matrix
+  var winA = 0, draw = 0, winB = 0;
+  for (var a = 0; a <= 8; a++) {
+    var pA = poissonPmf(a, lam);
+    for (var b = 0; b <= 8; b++) {
+      var p = pA * poissonPmf(b, mu) * dcTau(a, b, lam, mu);
+      if (a > b) winA += p; else if (a < b) winB += p; else draw += p;
+    }
+  }
+
+  // A) Apply drawBias from config
+  var rawDraw = draw * cfg.drawBias;
+  var excess  = rawDraw - draw;
+  winA = winA - excess * (winA / (winA + winB));
+  winB = winB - excess * (winB / (winA + winB));
+  draw = rawDraw;
+
+  // Normalize
+  var tot = winA + draw + winB;
+  return {
+    winA: Math.round(winA / tot * 1000) / 1000,
+    draw: Math.round(draw / tot * 1000) / 1000,
+    winB: Math.round(winB / tot * 1000) / 1000,
+    lam:  Math.round(lam * 100) / 100,
+    mu:   Math.round(mu  * 100) / 100,
+    formA: Math.round(formA * 100),
+    formB: Math.round(formB * 100),
+    altitude: alt,
+    altFactor: Math.round(altFactor * 100) / 100,
+    config: _activePredConfig,
+  };
+}
+
+// ── Enhanced calcVal with Kelly Criterion ────────────────────────────────────
+function calcValV2(code) {
+  var s = SCOUTS[code], c = CSV[code];
+  if (!s || !s.rating || !c) return null;
+  var wr  = c.games ? c.wins / c.games : 0.4;
+  var imp = c.avg_odds > 0 ? 1 / c.avg_odds : 0;
+  var adj = (s.rating / 100) * 0.6 + wr * 0.4;
+  var edge = Math.round((adj - imp) * 1000) / 10;
+  // D) Kelly Criterion
+  var kelly = c.avg_odds > 0 ? kellyFraction(adj, c.avg_odds) * 100 : 0;
+  return {
+    edge: edge,
+    avgOdds: c.avg_odds,
+    impliedProb: Math.round(imp * 1000) / 10,
+    scoutAdj: Math.round(adj * 1000) / 10,
+    kelly: Math.round(kelly * 10) / 10,  // % of bankroll
+  };
 }
 
 
