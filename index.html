@@ -1596,6 +1596,139 @@ function simGroups(rand){
   return{st:st,qual:qual,rank:rank,res:res,best8:best8thirds};
 }
 
+// ── Simulation with real group stage base ────────────────────────────────────
+// replaces simGroups() in runMonteCarlo — uses real standings as starting point
+// and only simulates unplayed matches
+
+function getRealGroupBase() {
+  // Returns {st, playedPairs} from LIVE_DATA standings + matches
+  var ld = window.LIVE_DATA;
+  if (!ld || !ld.wc_results) return null;
+
+  var standings = ld.wc_results.standings || [];
+  var matches   = ld.wc_results.matches || [];
+
+  if (!standings.length) return null;
+
+  // Build current points/gf/ga per team from standings
+  var st = {};
+  standings.forEach(function(e) {
+    var code = e.code;
+    if (!code) return;
+    st[code] = {
+      pts: e.points       || 0,
+      gf:  e.goals_for    || 0,
+      ga:  e.goals_against|| 0,
+      gd:  e.goal_diff    || 0,
+      w:   e.won  || 0,
+      d:   e.draw || 0,
+      l:   e.lost || 0,
+    };
+  });
+
+  // Build set of already-played matchups
+  var playedPairs = {};
+  matches.forEach(function(m) {
+    if (m.home_score !== null && m.home_score !== undefined) {
+      playedPairs[m.home_code + '-' + m.away_code] = true;
+      playedPairs[m.away_code + '-' + m.home_code] = true; // symmetric
+    }
+  });
+
+  return { st: st, playedPairs: playedPairs };
+}
+
+function simGroupsWithRealBase(rand) {
+  var base = getRealGroupBase();
+
+  // Fall back to full simulation if no real data
+  if (!base || !Object.keys(base.st).length) {
+    return simGroups(rand);
+  }
+
+  var st = {};
+  var res = {};
+
+  // Initialize from real standings
+  Object.keys(SIM_GROUPS).forEach(function(g) {
+    res[g] = [];
+    SIM_GROUPS[g].forEach(function(t) {
+      st[t] = base.st[t]
+        ? { pts: base.st[t].pts, gf: base.st[t].gf, ga: base.st[t].ga,
+            w: base.st[t].w, d: base.st[t].d, l: base.st[t].l }
+        : { pts: 0, gf: 0, ga: 0, w: 0, d: 0, l: 0 };
+    });
+  });
+
+  // Simulate only UNPLAYED games
+  Object.entries(SIM_GROUPS).forEach(function(ge) {
+    var g = ge[0], teams = ge[1];
+    for (var i = 0; i < teams.length; i++) {
+      for (var j = i + 1; j < teams.length; j++) {
+        var a = teams[i], b = teams[j];
+        var key = a + '-' + b;
+
+        // Skip if already played
+        if (base.playedPairs[key]) continue;
+
+        // Simulate the unplayed match
+        var m = rand
+          ? simMatch(a, b, true)
+          : (simStr(a) > simStr(b)
+              ? { winner: a, loser: b, draw: false, sA: 2, sB: 1 }
+              : simStr(b) > simStr(a)
+                ? { winner: b, loser: a, draw: false, sA: 1, sB: 2 }
+                : { winner: null, loser: null, draw: true, sA: 1, sB: 1 });
+
+        res[g].push({ a: a, b: b, winner: m.winner, sA: m.sA, sB: m.sB, draw: m.draw });
+
+        if (m.draw) {
+          st[a].pts += 1; st[a].d++;
+          st[b].pts += 1; st[b].d++;
+        } else {
+          st[m.winner].pts += 3; st[m.winner].w++;
+          st[m.loser].l++;
+        }
+        st[a].gf += m.sA; st[a].ga += m.sB;
+        st[b].gf += m.sB; st[b].ga += m.sA;
+      }
+    }
+  });
+
+  // Sort groups → qual
+  var qual = {}, rank = {}, thirds = [];
+  Object.entries(SIM_GROUPS).forEach(function(ge) {
+    var g = ge[0], teams = ge[1];
+    var s = teams.slice().sort(function(x, y) {
+      var sx = st[x], sy = st[y];
+      if (sy.pts !== sx.pts) return sy.pts - sx.pts;
+      var dgd = (sy.gf - sy.ga) - (sx.gf - sx.ga);
+      if (dgd !== 0) return dgd;
+      return sy.gf - sx.gf;
+    });
+    rank[g] = s;
+    qual[g] = { first: s[0], second: s[1], third: s[2] };
+    thirds.push({
+      team: s[2], group: g,
+      pts: st[s[2]].pts,
+      gd: st[s[2]].gf - st[s[2]].ga,
+      gf: st[s[2]].gf,
+    });
+  });
+
+  thirds.sort(function(a, b) {
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    if (b.gd !== a.gd)  return b.gd - a.gd;
+    return b.gf - a.gf;
+  });
+
+  var best8thirds = thirds.slice(0, 8).map(function(x) {
+    return { team: x.team, group: x.group };
+  });
+
+  return { st: st, qual: qual, rank: rank, res: res, best8: best8thirds };
+}
+
 function assignBest3rds(best8,qual){
   // FIFA 2026 R32 slots that need a 3rd-place team, in order:
   // Each slot lists which groups can fill it — assign greedily in slot order
@@ -1739,8 +1872,8 @@ function simKO(qual,rand,best8){
   return br;
 }
 function showSimTab(id,btn){document.querySelectorAll('.sim-tab').forEach(function(b){b.classList.remove('active');});if(btn)btn.classList.add('active');['champion','bracket','groups','groupresults','montecarlo'].forEach(function(t){var el=document.getElementById('simTab'+t.charAt(0).toUpperCase()+t.slice(1));if(el)el.style.display=t===id?'block':'none';});}
-function runDeterministic(){document.getElementById('simStatus').textContent='Calculando...';document.getElementById('simContent').style.display='none';setTimeout(function(){var g=simGroups(false);var br=simKO(g.qual,false,g.best8);window._simDet={g:g,br:br};renderSimChampion(br.champion,null);renderSimBracket(br);renderSimGroups(g);renderSimGroupResults(g);document.getElementById('simStatus').textContent='Resultado mais provavel calculado';document.getElementById('simContent').style.display='block';showSimTab('champion',document.querySelector('.sim-tab'));},100);}
-function runMonteCarlo(){var N=10000,counts={};Object.keys(SCOUTS).forEach(function(c){counts[c]={r32:0,r16:0,qf:0,sf:0,final:0,champion:0};});var i=0;document.getElementById('simProgress').style.display='block';document.getElementById('simContent').style.display='none';function batch(){var end=Math.min(i+500,N);for(;i<end;i++){var g=simGroups(true);var br=simKO(g.qual,true,g.best8);(br.r32||[]).forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r32=((counts[m.winner].r32||0)+1);});br.r16.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r16++;});br.qf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].qf++;});br.sf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].sf++;});br.final.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].final++;});if(br.champion&&counts[br.champion])counts[br.champion].champion++;}var pct=Math.round(i/N*100);document.getElementById('simProgressFill').style.width=pct+'%';document.getElementById('simStatus').textContent='Simulando... '+pct+'%';if(i<N){setTimeout(batch,0);}else{window._simMC={counts:counts,N:N};document.getElementById('simProgress').style.display='none';var g2=simGroups(false);var br2=simKO(g2.qual,false,g2.best8);renderSimChampion(br2.champion,counts);renderSimBracket(br2);renderSimGroups(g2);renderSimGroupResults(g2);renderSimMC(counts,N);document.getElementById('simStatus').textContent=N.toLocaleString()+' simulacoes concluidas';document.getElementById('simContent').style.display='block';showSimTab('montecarlo',document.querySelectorAll('.sim-tab')[4]);}}setTimeout(batch,50);}
+function runDeterministic(){document.getElementById('simStatus').textContent='Calculando...';document.getElementById('simContent').style.display='none';setTimeout(function(){var g=simGroupsWithRealBase(false);var br=simKO(g.qual,false,g.best8);window._simDet={g:g,br:br};renderSimChampion(br.champion,null);renderSimBracket(br);renderSimGroups(g);renderSimGroupResults(g);document.getElementById('simStatus').textContent='Resultado mais provavel calculado';document.getElementById('simContent').style.display='block';showSimTab('champion',document.querySelector('.sim-tab'));},100);}
+function runMonteCarlo(){var N=10000,counts={};Object.keys(SCOUTS).forEach(function(c){counts[c]={r32:0,r16:0,qf:0,sf:0,final:0,champion:0};});var i=0;document.getElementById('simProgress').style.display='block';document.getElementById('simContent').style.display='none';function batch(){var end=Math.min(i+500,N);for(;i<end;i++){var g=simGroupsWithRealBase(true);var br=simKO(g.qual,true,g.best8);(br.r32||[]).forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r32=((counts[m.winner].r32||0)+1);});br.r16.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r16++;});br.qf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].qf++;});br.sf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].sf++;});br.final.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].final++;});if(br.champion&&counts[br.champion])counts[br.champion].champion++;}var pct=Math.round(i/N*100);document.getElementById('simProgressFill').style.width=pct+'%';document.getElementById('simStatus').textContent='Simulando... '+pct+'%';if(i<N){setTimeout(batch,0);}else{window._simMC={counts:counts,N:N};document.getElementById('simProgress').style.display='none';var g2=simGroups(false);var br2=simKO(g2.qual,false,g2.best8);renderSimChampion(br2.champion,counts);renderSimBracket(br2);renderSimGroups(g2);renderSimGroupResults(g2);renderSimMC(counts,N);document.getElementById('simStatus').textContent=N.toLocaleString()+' simulacoes concluidas';document.getElementById('simContent').style.display='block';showSimTab('montecarlo',document.querySelectorAll('.sim-tab')[4]);}}setTimeout(batch,50);}
 function renderSimChampion(ch,counts){var t=SCOUTS[ch]||{flag:'',name:ch};var pct=counts?((counts[ch]&&counts[ch].champion||0)/window._simMC.N*100).toFixed(1):null;var html='<div style="background:linear-gradient(135deg,var(--bl-bg),var(--gn-bg));border:2px solid var(--gn);border-radius:var(--rl);padding:1.5rem;text-align:center;margin-bottom:1.25rem"><div style="font-size:48px;margin-bottom:8px">🏆</div><div style="font-size:32px">'+(t.flag||'')+'</div><div style="font-size:22px;font-weight:700;font-family:Space Grotesk,sans-serif">'+(t.name||ch)+'</div>'+(pct?'<div style="font-size:13px;color:var(--tx2);margin-top:6px">'+pct+'% nas simulacoes</div>':'')+'</div>';if(counts){var sorted=Object.entries(counts).filter(function(e){return e[1].champion>0;}).sort(function(a,b){return b[1].champion-a[1].champion;}).slice(0,10);html+='<div style="display:flex;flex-direction:column;gap:5px">';sorted.forEach(function(e){var code=e[0],c=e[1];var p=(c.champion/window._simMC.N*100).toFixed(1);var t2=SCOUTS[code]||{flag:'',name:code};html+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)"><span style="font-size:18px">'+(t2.flag||'')+'</span><span style="font-size:12px;flex:1">'+(t2.name||code)+'</span><div style="flex:2;background:var(--bd);border-radius:2px;height:6px;overflow:hidden"><div style="height:100%;width:'+Math.min(100,p*3)+'%;background:'+(p>15?'var(--ac)':p>8?'var(--gn)':'var(--am)')+';border-radius:2px"></div></div><span style="min-width:42px;text-align:right;font-size:13px;font-weight:700;font-family:Space Grotesk,sans-serif">'+p+'%</span></div>';});html+='</div>';}document.getElementById('simTabChampion').innerHTML=html;}
 function renderSimBracket(br){var rounds=[{t:'16 Avos',m:br.r32||[]},{t:'Oitavas',m:br.r16},{t:'Quartas',m:br.qf},{t:'Semi',m:br.sf},{t:'Final',m:br.final}];var html='<div style="overflow-x:auto"><div style="display:flex;gap:0">';rounds.forEach(function(r){html+='<div class="bracket-round"><div class="bracket-round-title">'+r.t+'</div>';r.m.forEach(function(m){var aW=m.winner===m.a;html+='<div class="bracket-match"><div class="bracket-team '+(aW?'winner':'')+'"><span>'+(SCOUTS[m.a]&&SCOUTS[m.a].flag||'🏳')+'</span><span style="flex:1;font-size:11px">'+(SCOUTS[m.a]&&SCOUTS[m.a].name||m.a)+'</span><span style="margin-left:auto;font-size:12px;font-weight:700">'+(m.sA!=null?m.sA:'')+'</span></div><div class="bracket-team '+(m.winner===m.b?'winner':'')+'"><span>'+(SCOUTS[m.b]&&SCOUTS[m.b].flag||'🏳')+'</span><span style="flex:1;font-size:11px">'+(SCOUTS[m.b]&&SCOUTS[m.b].name||m.b)+'</span><span style="margin-left:auto;font-size:12px;font-weight:700">'+(m.sB!=null?m.sB:'')+'</span></div>'+(r.t==='Final'&&m.winner?'<div style="text-align:center;font-size:10px;color:var(--ac);font-weight:700;margin-top:3px">🏆 CAMPEAO</div>':'')+'</div>';});html+='</div>';});html+='</div></div>';document.getElementById('simTabBracket').innerHTML=html;}
 function renderSimGroups(g){var html='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px">';Object.keys(SIM_GROUPS).forEach(function(gr){var teams=g.rank[gr];html+='<div class="card" style="margin-bottom:0"><div class="grp-hdr">Grupo '+gr+'</div><table class="group-table"><thead><tr><th>Sel.</th><th>Pts</th><th>V</th><th>E</th><th>D</th><th>GF</th><th>GC</th></tr></thead><tbody>';teams.forEach(function(c,i){var s=g.st[c],t=SCOUTS[c]||{flag:'🏳',name:c};var q=i<2;html+='<tr class="'+(q?'q':'')+'"><td>'+(t.flag||'🏳')+' '+(t.name||c)+'</td><td><b>'+s.pts+'</b></td><td>'+s.w+'</td><td>'+s.d+'</td><td>'+s.l+'</td><td>'+s.gf+'</td><td>'+s.ga+'</td></tr>';});html+='</tbody></table></div>';});html+='</div>';document.getElementById('simTabGroups').innerHTML=html;}
