@@ -2183,9 +2183,140 @@ function simKO(qual,rand,best8){
 }
 function showSimTab(id,btn){document.querySelectorAll('.sim-tab').forEach(function(b){b.classList.remove('active');});if(btn)btn.classList.add('active');['champion','bracket','groups','groupresults','montecarlo'].forEach(function(t){var el=document.getElementById('simTab'+t.charAt(0).toUpperCase()+t.slice(1));if(el)el.style.display=t===id?'block':'none';});}
 function runDeterministic(){document.getElementById('simStatus').textContent='Calculando...';document.getElementById('simContent').style.display='none';setTimeout(function(){var g=simGroupsWithRealBase(false);var br=simKO(g.qual,false,g.best8);window._simDet={g:g,br:br};renderSimChampion(br.champion,null);renderSimBracket(br);renderSimGroups(g);renderSimGroupResults(g);document.getElementById('simStatus').textContent='Resultado mais provavel calculado';document.getElementById('simContent').style.display='block';showSimTab('champion',document.querySelector('.sim-tab'));},100);}
-function runMonteCarlo(){var N=10000,counts={};Object.keys(SCOUTS).forEach(function(c){counts[c]={r32:0,r16:0,qf:0,sf:0,final:0,champion:0};});var i=0;document.getElementById('simProgress').style.display='block';document.getElementById('simContent').style.display='none';function batch(){var end=Math.min(i+500,N);for(;i<end;i++){var g=simGroupsWithRealBase(true);var br=simKO(g.qual,true,g.best8);(br.r32||[]).forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r32=((counts[m.winner].r32||0)+1);});br.r16.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r16++;});br.qf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].qf++;});br.sf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].sf++;});br.final.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].final++;});if(br.champion&&counts[br.champion])counts[br.champion].champion++;}var pct=Math.round(i/N*100);document.getElementById('simProgressFill').style.width=pct+'%';document.getElementById('simStatus').textContent='Simulando... '+pct+'%';if(i<N){setTimeout(batch,0);}else{window._simMC={counts:counts,N:N};document.getElementById('simProgress').style.display='none';var g2=simGroupsWithRealBase(false);var br2=simKO(g2.qual,false,g2.best8);renderSimChampion(br2.champion,counts);renderSimBracket(br2);renderSimGroups(g2);renderSimGroupResults(g2);renderSimMC(counts,N);document.getElementById('simStatus').textContent=N.toLocaleString()+' simulacoes concluidas';document.getElementById('simContent').style.display='block';showSimTab('montecarlo',document.querySelectorAll('.sim-tab')[4]);}}setTimeout(batch,50);}
+function runMonteCarlo(){var N=10000,counts={};Object.keys(SCOUTS).forEach(function(c){counts[c]={r32:0,r16:0,qf:0,sf:0,final:0,champion:0};});var i=0;document.getElementById('simProgress').style.display='block';document.getElementById('simContent').style.display='none';function batch(){var end=Math.min(i+500,N);for(;i<end;i++){var g=simGroupsWithRealBase(true);var br=simKO(g.qual,true,g.best8);(br.r32||[]).forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r32=((counts[m.winner].r32||0)+1);});br.r16.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r16++;});br.qf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].qf++;});br.sf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].sf++;});br.final.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].final++;});if(br.champion&&counts[br.champion])counts[br.champion].champion++;}var pct=Math.round(i/N*100);document.getElementById('simProgressFill').style.width=pct+'%';document.getElementById('simStatus').textContent='Simulando... '+pct+'%';if(i<N){setTimeout(batch,0);}else{window._simMC={counts:counts,N:N};document.getElementById('simProgress').style.display='none';var g2=simGroupsWithRealBase(false);var br2=simKO(g2.qual,false,g2.best8);renderSimChampion(br2.champion,counts);renderSimBracket(br2, window._simMC ? window._simMC.counts : null, window._simMC ? window._simMC.N : 1);renderSimGroups(g2);renderSimGroupResults(g2);renderSimMC(counts,N);document.getElementById('simStatus').textContent=N.toLocaleString()+' simulacoes concluidas';document.getElementById('simContent').style.display='block';showSimTab('montecarlo',document.querySelectorAll('.sim-tab')[4]);}}setTimeout(batch,50);}
 function renderSimChampion(ch,counts){var t=SCOUTS[ch]||{flag:'',name:ch};var pct=counts?((counts[ch]&&counts[ch].champion||0)/window._simMC.N*100).toFixed(1):null;var html='<div style="background:linear-gradient(135deg,var(--bl-bg),var(--gn-bg));border:2px solid var(--gn);border-radius:var(--rl);padding:1.5rem;text-align:center;margin-bottom:1.25rem"><div style="font-size:48px;margin-bottom:8px">🏆</div><div style="font-size:32px">'+(t.flag||'')+'</div><div style="font-size:22px;font-weight:700;font-family:Space Grotesk,sans-serif">'+(t.name||ch)+'</div>'+(pct?'<div style="font-size:13px;color:var(--tx2);margin-top:6px">'+pct+'% nas simulacoes</div>':'')+'</div>';if(counts){var sorted=Object.entries(counts).filter(function(e){return e[1].champion>0;}).sort(function(a,b){return b[1].champion-a[1].champion;}).slice(0,10);html+='<div style="display:flex;flex-direction:column;gap:5px">';sorted.forEach(function(e){var code=e[0],c=e[1];var p=(c.champion/window._simMC.N*100).toFixed(1);var t2=SCOUTS[code]||{flag:'',name:code};html+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)"><span style="font-size:18px">'+(t2.flag||'')+'</span><span style="font-size:12px;flex:1">'+(t2.name||code)+'</span><div style="flex:2;background:var(--bd);border-radius:2px;height:6px;overflow:hidden"><div style="height:100%;width:'+Math.min(100,p*3)+'%;background:'+(p>15?'var(--ac)':p>8?'var(--gn)':'var(--am)')+';border-radius:2px"></div></div><span style="min-width:42px;text-align:right;font-size:13px;font-weight:700;font-family:Space Grotesk,sans-serif">'+p+'%</span></div>';});html+='</div>';}document.getElementById('simTabChampion').innerHTML=html;}
-function renderSimBracket(br){var rounds=[{t:'16 Avos',m:br.r32||[]},{t:'Oitavas',m:br.r16},{t:'Quartas',m:br.qf},{t:'Semi',m:br.sf},{t:'Final',m:br.final}];var html='<div style="overflow-x:auto"><div style="display:flex;gap:0">';rounds.forEach(function(r){html+='<div class="bracket-round"><div class="bracket-round-title">'+r.t+'</div>';r.m.forEach(function(m){var aW=m.winner===m.a;html+='<div class="bracket-match"><div class="bracket-team '+(aW?'winner':'')+'"><span>'+(SCOUTS[m.a]&&SCOUTS[m.a].flag||'🏳')+'</span><span style="flex:1;font-size:11px">'+(SCOUTS[m.a]&&SCOUTS[m.a].name||m.a)+'</span><span style="margin-left:auto;font-size:12px;font-weight:700">'+(m.sA!=null?m.sA:'')+'</span></div><div class="bracket-team '+(m.winner===m.b?'winner':'')+'"><span>'+(SCOUTS[m.b]&&SCOUTS[m.b].flag||'🏳')+'</span><span style="flex:1;font-size:11px">'+(SCOUTS[m.b]&&SCOUTS[m.b].name||m.b)+'</span><span style="margin-left:auto;font-size:12px;font-weight:700">'+(m.sB!=null?m.sB:'')+'</span></div>'+(r.t==='Final'&&m.winner?'<div style="text-align:center;font-size:10px;color:var(--ac);font-weight:700;margin-top:3px">🏆 CAMPEAO</div>':'')+'</div>';});html+='</div>';});html+='</div></div>';document.getElementById('simTabBracket').innerHTML=html;}
+// ── NEW renderSimBracket — ESPN-style visual bracket ─────────────────────────
+function renderSimBracket(br, counts, N) {
+  var rounds = [
+    { key: 'r32', label: '16 Avos', dates: ['28 Jun','29 Jun','30 Jun','1 Jul','2 Jul'] },
+    { key: 'r16', label: 'Oitavas', dates: ['4 Jul','5 Jul','6 Jul','7 Jul'] },
+    { key: 'qf',  label: 'Quartas', dates: ['9 Jul','10 Jul','11 Jul'] },
+    { key: 'sf',  label: 'Semi',    dates: ['14 Jul','15 Jul'] },
+    { key: 'final', label: 'Final', dates: ['19 Jul'] },
+  ];
+
+  var champion = br.champion || (br.final && br.final[0] && br.final[0].winner);
+
+  function teamSlot(code, isWinner, score, prob, isChamp) {
+    if (!code || code === '?') {
+      return '<div style="display:flex;align-items:center;gap:5px;padding:4px 6px;height:26px;color:var(--tx3);font-size:10px;border-radius:4px">TBD</div>';
+    }
+    var sc = SCOUTS[code] || { flag: '🏳', name: code };
+    var name = (sc.name || code).substring(0, 13);
+    var flag = sc.flag || '🏳';
+    var winPct = (prob != null && N > 0) ? Math.round(prob / N * 100) : null;
+    var bg = isChamp ? 'background:linear-gradient(90deg,var(--gn-bg),transparent)' :
+             isWinner ? 'background:var(--sf2)' : '';
+    var fw = isWinner ? 'font-weight:700' : 'color:var(--tx2)';
+    var scoreStr = score != null ? '<span style="font-size:11px;font-weight:700;min-width:14px;text-align:right">' + score + '</span>' : '';
+    var champIcon = isChamp ? ' 🏆' : '';
+    return '<div style="display:flex;align-items:center;gap:5px;padding:3px 6px;height:26px;border-radius:4px;' + bg + '">' +
+      '<span style="font-size:14px;line-height:1">' + flag + '</span>' +
+      '<span style="font-size:11px;' + fw + ';flex:1;white-space:nowrap;overflow:hidden">' + name + champIcon + '</span>' +
+      scoreStr +
+      (winPct != null ? '<span style="font-size:9px;color:var(--tx3);min-width:26px;text-align:right">' + winPct + '%</span>' : '') +
+      '</div>';
+  }
+
+  function matchCard(m, dateLabel, idx, roundKey) {
+    if (!m) return '<div style="height:64px"></div>';
+    var cA = m.a, cB = m.b;
+    var winA = m.winner === cA, winB = m.winner === cB;
+    var isChampA = cA === champion, isChampB = cB === champion;
+    var cntA = counts && counts[cA] ? counts[cA][roundKey] || 0 : null;
+    var cntB = counts && counts[cB] ? counts[cB][roundKey] || 0 : null;
+    var probBarA = cntA != null && N > 0 ? Math.round(cntA/N*100) : 50;
+    var probBarB = cntB != null && N > 0 ? Math.round(cntB/N*100) : 50;
+    return '<div class="bracket-card" style="background:var(--bg2);border:1px solid var(--bd);border-radius:6px;margin-bottom:2px;overflow:hidden">' +
+      // Team A
+      teamSlot(cA, winA, m.sA != null ? m.sA : null, cntA, isChampA) +
+      // Probability bar
+      '<div style="height:3px;background:var(--bd);margin:0 6px"><div style="height:100%;width:' + probBarA + '%;background:var(--bl);border-radius:2px"></div></div>' +
+      // Divider
+      '<div style="height:1px;background:var(--bd);margin:0"></div>' +
+      '<div style="height:3px;background:var(--bd);margin:0 6px"><div style="height:100%;width:' + probBarB + '%;background:var(--am);border-radius:2px"></div></div>' +
+      // Team B
+      teamSlot(cB, winB, m.sB != null ? m.sB : null, cntB, isChampB) +
+      // Date label
+      (dateLabel ? '<div style="font-size:8px;color:var(--tx3);padding:1px 6px;text-align:right">' + dateLabel + '</div>' : '') +
+      '</div>';
+  }
+
+  // KO dates from live_data
+  var KO_DATES = {};
+  if (window.LIVE_DATA && window.LIVE_DATA.wc_results) {
+    var koMatches = (window.LIVE_DATA.wc_results.matches || []).filter(function(m){ return m.stage && m.stage !== 'GROUP_STAGE'; });
+    var datesByStage = {};
+    koMatches.forEach(function(m){ if(!datesByStage[m.stage]) datesByStage[m.stage] = []; datesByStage[m.stage].push(m.date||''); });
+    KO_DATES = datesByStage;
+  }
+
+  function fmtDate(dateStr) {
+    if (!dateStr) return '';
+    var d = new Date(dateStr + 'T12:00:00Z');
+    return ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'][d.getUTCDay()] + ' ' + d.getUTCDate() + '/' + (d.getUTCMonth()+1);
+  }
+
+  function getDate(stage, idx) {
+    var dates = KO_DATES[stage] || [];
+    return fmtDate(dates[idx] || '');
+  }
+
+  var stageMap = { r32:'LAST_32', r16:'LAST_16', qf:'QUARTER_FINALS', sf:'SEMI_FINALS', final:'FINAL' };
+
+  var html = '<div style="overflow-x:auto;padding-bottom:8px"><div style="display:flex;gap:10px;min-width:900px;align-items:stretch">';
+
+  rounds.forEach(function(round) {
+    var matches = br[round.key] || [];
+    if (round.key === 'final' && br.final) matches = [br.final[0]];
+    var stage = stageMap[round.key];
+
+    html += '<div style="flex:1;min-width:150px">';
+    html += '<div style="font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;text-align:center">' + round.label + '</div>';
+
+    // Vertical spacer management for alignment
+    var numMatchesInRound = { r32:16, r16:8, qf:4, sf:2, final:1 };
+    var count = numMatchesInRound[round.key] || matches.length;
+    var spacer = round.key === 'final' ? 'flex:1' : '';
+
+    html += '<div style="display:flex;flex-direction:column;' + (round.key !== 'r32' ? 'justify-content:space-around;height:100%' : '') + '">';
+
+    for (var i = 0; i < Math.max(matches.length, count); i++) {
+      var m = matches[i];
+      var dateLabel = getDate(stage, i);
+      if (round.key !== 'r32' && i > 0) {
+        html += '<div style="flex:1"></div>';  // spacing between matches in later rounds
+      }
+      html += matchCard(m, dateLabel, i, round.key);
+    }
+
+    html += '</div></div>';
+  });
+
+  // Champion card at end
+  if (champion) {
+    var sc = SCOUTS[champion] || { flag:'🏆', name: champion };
+    var pct = counts && counts[champion] ? Math.round((counts[champion].champion||0)/N*100) : null;
+    html += '<div style="min-width:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px">';
+    html += '<div style="font-size:36px">' + (sc.flag||'🏆') + '</div>';
+    html += '<div style="font-size:12px;font-weight:700;color:var(--tx);text-align:center">' + (sc.name||champion) + '</div>';
+    if (pct) html += '<div style="font-size:10px;color:var(--gn-tx);background:var(--gn-bg);padding:2px 8px;border-radius:10px">🏆 ' + pct + '%</div>';
+    html += '<div style="font-size:9px;color:var(--tx3)">19 Jul · NY</div>';
+    html += '</div>';
+  }
+
+  html += '</div></div>';
+
+  // Legend
+  html = '<div style="display:flex;gap:16px;font-size:10px;color:var(--tx3);margin-bottom:8px;flex-wrap:wrap">' +
+    '<span><span style="display:inline-block;width:12px;height:3px;background:var(--bl);border-radius:1px;vertical-align:middle"></span> Prob. vitória</span>' +
+    '<span style="background:var(--sf2);padding:1px 5px;border-radius:3px">fundo = vencedor</span>' +
+    '</div>' + html;
+
+  document.getElementById('simTabBracket').innerHTML = html;
+}
+
+
 function renderSimGroups(g){
   // Show real-data note
   var ld = window.LIVE_DATA;
