@@ -178,6 +178,9 @@ def fetch_wc_results():
         "United States":"EUA","Curacao":"CUR","Côte d'Ivoire":"CDM",
         "Democratic Republic of Congo":"RDC","USA":"EUA","Korea Republic":"COR",
         "Czechia":"TCH","Bosnia & Herzegovina":"BOS",
+        "Bosnia-Herzegovina":"BOS",
+        "Cape Verde Islands":"CAB",
+        "Congo DR":"RDC",
     }
 
     result = {"matches": [], "standings": [], "scorers": [], "updated_at": ""}
@@ -268,6 +271,31 @@ def fetch_wc_results():
         print(f"  ✓ {len(result['scorers'])} top scorers")
 
     result["updated_at"] = datetime.now(timezone.utc).isoformat()
+    # ── Validation: fix any empty codes using comprehensive name lookup ──────
+    FALLBACK_CODES = {
+        "Congo DR":"RDC","DR Congo":"RDC","Democratic Republic of Congo":"RDC",
+        "Congo, DR":"RDC","Dem. Rep. Congo":"RDC","Republic Democratic Congo":"RDC",
+        "Cape Verde Islands":"CAB","Cape Verde":"CAB","Cabo Verde":"CAB",
+        "Bosnia-Herzegovina":"BOS","Bosnia & Herzegovina":"BOS","Bosnia and Herzegovina":"BOS",
+        "Korea Republic":"COR","South Korea":"COR","Republic of Korea":"COR",
+        "IR Iran":"IRA","Ivory Coast":"CDM","Cote d\'Ivoire":"CDM","Cote dIvoire":"CDM",
+        "Turkiye":"TUR","Türkiye":"TUR","USA":"EUA","United States of America":"EUA",
+        "England":"ING","Czech Republic":"TCH","Curacao":"CUR",
+    }
+    empty_codes = 0
+    for m in result.get("matches", []):
+        for side in ("home", "away"):
+            if not m.get(f"{side}_code") and m.get(side):
+                fixed = FALLBACK_CODES.get(m[side], "")
+                if fixed:
+                    m[f"{side}_code"] = fixed
+                    empty_codes += 1
+    if empty_codes:
+        print(f"  ✓ Repaired {empty_codes} empty team codes via fallback lookup")
+    for e in result.get("standings", []):
+        if not e.get("code") and e.get("team_name"):
+            e["code"] = FALLBACK_CODES.get(e["team_name"], "")
+
     return result
 
 def main():
