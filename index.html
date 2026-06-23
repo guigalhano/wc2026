@@ -1890,6 +1890,43 @@ function assignBest3rds(best8,qual){
   return assigned;
 }
 
+
+// ── KO match using matchProbV2 model ──────────────────────────────────────
+function simKOMatch(a, b, rand) {
+  if (!a || !b || a === '?' || b === '?') {
+    return { winner: a || b, loser: b || a, draw: false, sA: 1, sB: 0 };
+  }
+  var probs;
+  try { probs = matchProbV2(a, b, 'KO', true); } catch(e) { probs = null; }
+  if (!probs) {
+    // Fallback to simMatch
+    return simMatch(a, b, false, 'KO', true);
+  }
+  var sA, sB;
+  if (rand) {
+    // Monte Carlo: sample from Poisson, re-draw if draw (KO has no draws)
+    var attempts = 0;
+    do {
+      sA = poissonSample(probs.lam);
+      sB = poissonSample(probs.mu);
+      attempts++;
+    } while (sA === sB && attempts < 10);
+    if (sA === sB) {
+      if (Math.random() < probs.winA / (probs.winA + probs.winB)) sA++; else sB++;
+    }
+  } else {
+    // Deterministic: most likely score from model
+    var sc = scoreFromPrediction(probs.winA, probs.draw, probs.winB, probs.lam, probs.mu);
+    sA = sc.h; sB = sc.a;
+    // KO must have a winner — if draw predicted, give goal to favourite
+    if (sA === sB) {
+      if (probs.winA >= probs.winB) sA++; else sB++;
+    }
+  }
+  var winner = sA > sB ? a : b;
+  return { winner: winner, loser: sA > sB ? b : a, draw: false, sA: sA, sB: sB };
+}
+
 function simKO(qual,rand,best8){
   // Assign best 3rds to R32 slots
   var t3=assignBest3rds(best8,qual);
@@ -1963,7 +2000,7 @@ function simKO(qual,rand,best8){
   var r32w=R32.map(function(p){
     var a=p[0]||'?',b=p[1]||'?';
     if(a==='?'||b==='?'){var w=a!=='?'?a:b;br.r32.push({a:a,b:b,winner:w,sA:1,sB:0});return w;}
-    var m=rand?simMatch(a,b,false,'KO',true):{winner:simStr(a)>simStr(b)?a:b,sA:1,sB:0};
+    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
     br.r32.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
     return m.winner;
   });
@@ -1972,7 +2009,7 @@ function simKO(qual,rand,best8){
   var r16pairs=[[0,1],[2,3],[4,5],[6,7],[8,9],[10,11],[12,13],[14,15]];
   var r16w=r16pairs.map(function(p){
     var a=r32w[p[0]],b=r32w[p[1]];
-    var m=rand?simMatch(a,b,false,'KO',true):{winner:simStr(a)>simStr(b)?a:b,sA:1,sB:0};
+    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
     br.r16.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
     return m.winner;
   });
@@ -1981,7 +2018,7 @@ function simKO(qual,rand,best8){
   var qfw=[];
   for(var i=0;i<4;i++){
     var a=r16w[i*2],b=r16w[i*2+1];
-    var m=rand?simMatch(a,b,false,'KO',true):{winner:simStr(a)>simStr(b)?a:b,sA:1,sB:0};
+    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
     br.qf.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
     qfw.push(m.winner);
   }
@@ -1990,13 +2027,13 @@ function simKO(qual,rand,best8){
   var sfw=[];
   for(var i=0;i<2;i++){
     var a=qfw[i*2],b=qfw[i*2+1];
-    var m=rand?simMatch(a,b,false,'KO',true):{winner:simStr(a)>simStr(b)?a:b,sA:1,sB:0};
+    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
     br.sf.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
     sfw.push(m.winner);
   }
 
   // Final
-  var fm=rand?simMatch(sfw[0],sfw[1],false,'KO',true):{winner:simStr(sfw[0])>simStr(sfw[1])?sfw[0]:sfw[1],sA:1,sB:0};
+  var fm=rand?simKOMatch(sfw[0],sfw[1],true):simKOMatch(sfw[0],sfw[1],false);
   br.final.push({a:sfw[0],b:sfw[1],winner:fm.winner,sA:fm.sA,sB:fm.sB});
   br.champion=fm.winner;
   return br;
