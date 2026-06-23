@@ -417,13 +417,15 @@ select:focus{border-color:var(--bl);box-shadow:0 0 0 3px rgba(24,95,165,.15)}
   <div style="display:flex;gap:8px;flex-wrap:wrap">
     <button class="sim-btn sec" onclick="runDeterministic()">⚙️ Resultado mais provável</button>
     <button class="sim-btn" onclick="runMonteCarlo()">🎲 Simular 10.000x</button>
+      <button class="btn" onclick="showNextFixtures()" style="margin-left:8px">🔮 Próximos Jogos</button>
   </div>
 </div>
 <div id="simProgress" style="display:none;height:4px;border-radius:2px;background:var(--bd);overflow:hidden;margin-bottom:8px">
   <div id="simProgressFill" style="height:100%;border-radius:2px;background:var(--ac);transition:width .3s;width:0%"></div>
 </div>
 <div id="simStatus" style="font-size:12px;color:var(--tx3);margin-bottom:.75rem;min-height:18px"></div>
-<div id="simContent" style="display:none">
+<div id="nextFixturesContent" style="display:none;margin-bottom:16px"></div>
+  <div id="simContent" style="display:none">
   <div class="sim-tabs">
     <button class="sim-tab active" onclick="showSimTab('champion',this)">🏆 Campeão</button>
     <button class="sim-tab" onclick="showSimTab('bracket',this)">📊 Chaveamento</button>
@@ -993,7 +995,131 @@ function clearMatch(){document.getElementById('matchup').style.display='none';ai
     return [codeA, codeB];
   }
 
-  function renderBetfairTipsForMatchup(hC, aC) {
+  // ── Próximos Jogos: simulate unplayed fixtures ────────────────────────────────
+function showNextFixtures() {
+  var el = document.getElementById('nextFixturesContent');
+  var sc = document.getElementById('simContent');
+  var pr = document.getElementById('simProgress');
+  if (!el) return;
+  if (el.style.display === 'none' || !el.style.display) {
+    el.style.display = 'block';
+    if (sc) sc.style.display = 'none';
+    if (pr) pr.style.display = 'none';
+    renderNextFixtures();
+  } else {
+    el.style.display = 'none';
+  }
+}
+
+function renderNextFixtures() {
+  var el = document.getElementById('nextFixturesContent');
+  if (!el) return;
+
+  var ld = window.LIVE_DATA;
+  if (!ld || !ld.wc_results) { el.innerHTML = '<p style="color:var(--tx3);padding:12px">Sem dados disponíveis.</p>'; return; }
+
+  var allMatches = ld.wc_results.matches || [];
+  var standings  = ld.wc_results.standings || [];
+  var unplayed   = allMatches.filter(function(m) { return m.home_score === null || m.home_score === undefined; });
+
+  if (!unplayed.length) { el.innerHTML = '<p style="color:var(--gn);padding:12px">✅ Todos os jogos da fase de grupos foram disputados.</p>'; return; }
+
+  // Build current pts map for context
+  var pts = {};
+  standings.forEach(function(e) { if (e.code) pts[e.code] = e.points || 0; });
+
+  // Group by date
+  var byDate = {};
+  unplayed.forEach(function(m) {
+    var dt = m.date || '?';
+    if (!byDate[dt]) byDate[dt] = [];
+    byDate[dt].push(m);
+  });
+
+  var dayNames = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  var html = '';
+  Object.keys(byDate).sort().forEach(function(dt) {
+    var games = byDate[dt];
+    var d = new Date(dt + 'T12:00:00Z');
+    var dayLabel = dayNames[d.getUTCDay()] + ' ' + d.getUTCDate() + '/' + (d.getUTCMonth()+1);
+    html += '<div style="font-size:11px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:0.5px;margin:14px 0 6px">' + dayLabel + ' · ' + games.length + ' jogos</div>';
+
+    games.forEach(function(m) {
+      var hC = m.home_code, aC = m.away_code;
+      if (!hC || !aC) return;
+
+      var sh = SCOUTS[hC] || {}, sa = SCOUTS[aC] || {};
+      var grp = (m.group || '').replace('GROUP_','').replace('Group ','');
+
+      var probs;
+      try { probs = matchProbV2(hC, aC, grp, false); } catch(e) { return; }
+
+      var pH = probs.winA, pD = probs.draw, pA = probs.winB;
+      var score = scoreFromPrediction(pH, pD, pA, probs.lam, probs.mu);
+      var pred = pH >= pD && pH >= pA ? hC : (pA >= pH && pA >= pD ? aC : 'draw');
+      var predCol = pred === hC ? 'var(--gn)' : pred === aC ? 'var(--rd-tx)' : 'var(--tx2)';
+
+      // Standing context
+      var hPts = pts[hC] !== undefined ? pts[hC] + 'pts' : '?';
+      var aPts = pts[aC] !== undefined ? pts[aC] + 'pts' : '?';
+
+      html += '<div style="background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:10px 12px;margin-bottom:6px">' +
+        '<div style="display:flex;align-items:center;gap:6px;margin-bottom:7px">' +
+          '<span style="font-size:10px;background:var(--sf2);padding:1px 6px;border-radius:3px;color:var(--tx3)">Gr.' + grp + '</span>' +
+          '<span style="font-size:10px;color:var(--tx3)">Jornada ' + (m.matchday || '?') + '</span>' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px">' +
+          // Home team
+          '<div style="display:flex;align-items:center;gap:7px">' +
+            '<span style="font-size:20px">' + (sh.flag || '🏳') + '</span>' +
+            '<div>' +
+              '<div style="font-size:12px;font-weight:600;color:var(--tx)">' + (sh.name || hC) + '</div>' +
+              '<div style="font-size:10px;color:var(--tx3)">' + hPts + '</div>' +
+            '</div>' +
+          '</div>' +
+          // Score prediction
+          '<div style="text-align:center;min-width:70px">' +
+            '<div style="font-size:16px;font-weight:700;font-family:\'Space Grotesk\',monospace;color:' + predCol + '">' +
+              score.h + ' – ' + score.a +
+            '</div>' +
+            '<div style="font-size:9px;color:var(--tx3);margin-top:1px">placar previsto</div>' +
+          '</div>' +
+          // Away team
+          '<div style="display:flex;align-items:center;gap:7px;justify-content:flex-end">' +
+            '<div style="text-align:right">' +
+              '<div style="font-size:12px;font-weight:600;color:var(--tx)">' + (sa.name || aC) + '</div>' +
+              '<div style="font-size:10px;color:var(--tx3)">' + aPts + '</div>' +
+            '</div>' +
+            '<span style="font-size:20px">' + (sa.flag || '🏳') + '</span>' +
+          '</div>' +
+        '</div>' +
+        // Probability bar
+        '<div style="margin-top:8px">' +
+          '<div style="display:flex;height:6px;border-radius:3px;overflow:hidden;gap:1px">' +
+            '<div style="flex:' + Math.round(pH*100) + ';background:var(--gn)"></div>' +
+            '<div style="flex:' + Math.round(pD*100) + ';background:var(--tx3)"></div>' +
+            '<div style="flex:' + Math.round(pA*100) + ';background:var(--rd-tx)"></div>' +
+          '</div>' +
+          '<div style="display:flex;justify-content:space-between;font-size:9px;color:var(--tx3);margin-top:2px">' +
+            '<span>' + Math.round(pH*100) + '% casa</span>' +
+            '<span>' + Math.round(pD*100) + '% emp</span>' +
+            '<span>' + Math.round(pA*100) + '% fora</span>' +
+          '</div>' +
+        '</div>' +
+        // xG
+        '<div style="display:flex;justify-content:center;gap:16px;margin-top:5px;font-size:10px;color:var(--tx3)">' +
+          '<span>xG <b style="color:var(--tx)">' + probs.lam + '</b></span>' +
+          '<span>vs</span>' +
+          '<span>xG <b style="color:var(--tx)">' + probs.mu + '</b></span>' +
+        '</div>' +
+      '</div>';
+    });
+  });
+
+  el.innerHTML = html;
+}
+
+function renderBetfairTipsForMatchup(hC, aC) {
     var el = document.getElementById('bfMatchupBlock');
     if (!el) return;
     var feed = window._bfCache;
