@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T19:28:05.289746+00:00",
-  "generated_at_brt": "23/06/2026 16:28 BRT",
+  "generated_at": "2026-06-23T23:39:12.004085+00:00",
+  "generated_at_brt": "23/06/2026 20:39 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -8,42 +8,18 @@
   },
   "match_previews": [
     {
-      "game_id": "2f49dd8deae3079dc4eb2d634d18a99c",
-      "home": "England",
-      "away": "Ghana",
-      "time": "2026-06-23T20:00:00Z",
-      "h2h": {
-        "home": 1.2,
-        "away": 20.0,
-        "draw": 8.5
-      },
-      "totals": {
-        "over25": 2.34,
-        "under25": 2.55
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
       "game_id": "c1bc8c26480cd42b89a0de5329581314",
       "home": "Panama",
       "away": "Croatia",
       "time": "2026-06-23T23:00:00Z",
       "h2h": {
-        "away": 1.52,
-        "home": 8.4,
-        "draw": 4.8
+        "away": 1.83,
+        "home": 8.5,
+        "draw": 4.5
       },
       "totals": {
-        "over25": 2.7,
-        "under25": 2.26
+        "over25": 3.4,
+        "under25": 2.3
       },
       "btts_yes": null,
       "preview": {
@@ -63,11 +39,11 @@
       "h2h": {
         "home": 1.58,
         "away": 7.6,
-        "draw": 4.25
+        "draw": 4.2
       },
       "totals": {
         "over25": 2.25,
-        "under25": 3.1
+        "under25": 3.05
       },
       "btts_yes": null,
       "preview": {
@@ -86,8 +62,8 @@
       "time": "2026-06-24T19:00:00Z",
       "h2h": {
         "home": 1.45,
-        "away": 9.0,
-        "draw": 5.6
+        "away": 8.5,
+        "draw": 5.5
       },
       "totals": {
         "over25": 2.55,
@@ -109,8 +85,8 @@
       "away": "Canada",
       "time": "2026-06-24T19:00:00Z",
       "h2h": {
-        "away": 3.6,
-        "home": 2.45,
+        "away": 3.55,
+        "home": 2.44,
         "draw": 3.25
       },
       "totals": {
@@ -134,12 +110,36 @@
       "time": "2026-06-24T22:00:00Z",
       "h2h": {
         "away": 1.41,
-        "home": 9.6,
+        "home": 9.8,
         "draw": 5.5
       },
       "totals": {
         "over25": 2.6,
-        "under25": 2.04
+        "under25": 2.06
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "d1279ce7f33136a33e99ad442fc855e8",
+      "home": "Morocco",
+      "away": "Haiti",
+      "time": "2026-06-24T22:00:00Z",
+      "h2h": {
+        "away": 20.0,
+        "home": 1.23,
+        "draw": 8.0
+      },
+      "totals": {
+        "over25": 2.42,
+        "under25": 2.45
       },
       "btts_yes": null,
       "preview": {

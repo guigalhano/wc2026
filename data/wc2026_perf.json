@@ -1,1 +1,4433 @@
-{"updated_at":"2026-06-23T19:28:04.689400+00:00","teams":[{"code":"EUA","name":"USA","games":2,"goals_for":6,"goals_against":1,"xg_for":3.9,"xg_against":1.32,"wins":2,"draws":0,"losses":0,"points":6,"expected_points":4.105879016753078,"big_chances_created":6,"big_chances_conceded":0,"matches":[{"vs":"PAR","date":"2026-06-13","gf":4,"ga":1,"xgf":2.69,"xga":1.0,"result":"W","p_win":0.649},{"vs":"AUS","date":"2026-06-19","gf":2,"ga":0,"xgf":1.21,"xga":0.32,"result":"W","p_win":0.559}],"xpts":4.11,"delta_pts":1.89,"xgf":1.95,"xga":0.66,"real_xg_games":2,"xgf_real":1.95,"xga_real":0.66,"dgf_real":1.05,"dga_real":-0.16},{"code":"NOR","name":"Norway","games":2,"goals_for":7,"goals_against":3,"xg_for":4.4575000000000005,"xg_against":1.7725,"wins":2,"draws":0,"losses":0,"points":6,"expected_points":4.127620513422666,"big_chances_created":5,"big_chances_conceded":0,"matches":[{"vs":"IRQ","date":"2026-06-16","gf":4,"ga":1,"xgf":2.85,"xga":0.68,"result":"W","p_win":0.741},{"vs":"SEN","date":"2026-06-23","gf":3,"ga":2,"xgf":1.61,"xga":1.09,"result":"W","p_win":0.478}],"xpts":4.13,"delta_pts":1.87,"xgf":2.23,"xga":0.89,"real_xg_games":1,"xgf_real":2.85,"xga_real":0.68,"dgf_real":1.15,"dga_real":0.32,"efi":{"xg_official":1.96,"goals_pg":3.0,"shots_pg":12.0,"shots_on_target_pg":6.0,"pass_accuracy":86.7,"pressures_pg":198.5,"distance_pg":118.3,"sprints_pg":474,"fouls_pg":7.5,"games":2},"dgf_efi":1.04},{"code":"MEX","name":"Mexico","games":2,"goals_for":3,"goals_against":0,"xg_for":3.715,"xg_against":1.4700000000000002,"wins":2,"draws":0,"losses":0,"points":6,"expected_points":4.462121531935452,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"AFS","date":"2026-06-11","gf":2,"ga":0,"xgf":1.84,"xga":0.52,"result":"W","p_win":0.77},{"vs":"COR","date":"2026-06-19","gf":1,"ga":0,"xgf":1.88,"xga":0.95,"result":"W","p_win":0.577}],"xpts":4.46,"delta_pts":1.54,"xgf":1.86,"xga":0.74,"real_xg_games":1,"xgf_real":1.84,"xga_real":0.52,"dgf_real":0.16,"dga_real":-0.52,"efi":{"xg_official":1.06,"goals_pg":1.5,"shots_pg":12.0,"shots_on_target_pg":4.0,"pass_accuracy":87.3,"pressures_pg":217.5,"distance_pg":111.9,"sprints_pg":437,"fouls_pg":9.0,"games":2},"dgf_efi":0.44},{"code":"ARG","name":"Argentina","games":2,"goals_for":5,"goals_against":0,"xg_for":2.7800000000000002,"xg_against":0.98,"wins":2,"draws":0,"losses":0,"points":6,"expected_points":4.567671096553157,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"AGL","date":"2026-06-17","gf":3,"ga":0,"xgf":1.0,"xga":0.43,"result":"W","p_win":0.697},{"vs":"AUT","date":"2026-06-22","gf":2,"ga":0,"xgf":1.78,"xga":0.55,"result":"W","p_win":0.682}],"xpts":4.57,"delta_pts":1.43,"xgf":1.39,"xga":0.49,"real_xg_games":1,"xgf_real":1.0,"xga_real":0.43,"dgf_real":2.0,"dga_real":-0.43,"efi":{"xg_official":2.02,"goals_pg":2.5,"shots_pg":11.0,"shots_on_target_pg":5.5,"pass_accuracy":89.8,"pressures_pg":258.5,"distance_pg":106.4,"sprints_pg":366,"fouls_pg":9.5,"games":2},"dgf_efi":0.48},{"code":"ALE","name":"Germany","games":2,"goals_for":9,"goals_against":2,"xg_for":6.67,"xg_against":1.16,"wins":2,"draws":0,"losses":0,"points":6,"expected_points":4.594705575892773,"big_chances_created":11,"big_chances_conceded":0,"matches":[{"vs":"CUR","date":"2026-06-14","gf":7,"ga":1,"xgf":4.82,"xga":0.44,"result":"W","p_win":0.805},{"vs":"CDM","date":"2026-06-20","gf":2,"ga":1,"xgf":1.85,"xga":0.72,"result":"W","p_win":0.59}],"xpts":4.59,"delta_pts":1.41,"xgf":3.33,"xga":0.58,"real_xg_games":2,"xgf_real":3.33,"xga_real":0.58,"dgf_real":1.17,"dga_real":0.42},{"code":"GAN","name":"Ghana","games":1,"goals_for":1,"goals_against":0,"xg_for":1.3,"xg_against":0.75,"wins":1,"draws":0,"losses":0,"points":3,"expected_points":1.6745516676196828,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"PAN","date":"2026-06-17","gf":1,"ga":0,"xgf":1.3,"xga":0.75,"result":"W","p_win":0.464}],"xpts":1.67,"delta_pts":1.33,"xgf":1.3,"xga":0.75},{"code":"FRA","name":"France","games":2,"goals_for":6,"goals_against":1,"xg_for":4.65,"xg_against":1.5,"wins":2,"draws":0,"losses":0,"points":6,"expected_points":4.763763804938384,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"SEN","date":"2026-06-16","gf":3,"ga":1,"xgf":2.44,"xga":1.05,"result":"W","p_win":0.62},{"vs":"IRQ","date":"2026-06-22","gf":3,"ga":0,"xgf":2.21,"xga":0.45,"result":"W","p_win":0.843}],"xpts":4.76,"delta_pts":1.24,"xgf":2.33,"xga":0.75,"real_xg_games":1,"xgf_real":2.44,"xga_real":1.05,"dgf_real":0.56,"dga_real":-0.05,"efi":{"xg_official":1.96,"goals_pg":3.0,"shots_pg":15.0,"shots_on_target_pg":6.5,"pass_accuracy":90.0,"pressures_pg":267.0,"distance_pg":113.9,"sprints_pg":453,"fouls_pg":6.0,"games":2},"dgf_efi":1.04},{"code":"EGI","name":"Egypt","games":2,"goals_for":4,"goals_against":2,"xg_for":2.8275,"xg_against":2.5725000000000002,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":2.7777827142474263,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"BEL","date":"2026-06-15","gf":1,"ga":1,"xgf":1.12,"xga":1.58,"result":"D","p_win":0.218},{"vs":"NZE","date":"2026-06-22","gf":3,"ga":1,"xgf":1.71,"xga":0.99,"result":"W","p_win":0.527}],"xpts":2.78,"delta_pts":1.22,"xgf":1.41,"xga":1.29,"real_xg_games":1,"xgf_real":1.12,"xga_real":1.58,"dgf_real":-0.12,"dga_real":-0.58},{"code":"ING","name":"England","games":1,"goals_for":4,"goals_against":2,"xg_for":2.92,"xg_against":1.64,"wins":1,"draws":0,"losses":0,"points":3,"expected_points":1.956410425680629,"big_chances_created":7,"big_chances_conceded":0,"matches":[{"vs":"CRO","date":"2026-06-17","gf":4,"ga":2,"xgf":2.92,"xga":1.64,"result":"W","p_win":0.566}],"xpts":1.96,"delta_pts":1.04,"xgf":2.92,"xga":1.64,"real_xg_games":1,"xgf_real":2.92,"xga_real":1.64,"dgf_real":1.08,"dga_real":0.36},{"code":"CDM","name":"Ivory Coast","games":2,"goals_for":2,"goals_against":2,"xg_for":1.82,"xg_against":2.8,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":1.9951016025090038,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"EQU","date":"2026-06-14","gf":1,"ga":0,"xgf":1.1,"xga":0.95,"result":"W","p_win":0.327},{"vs":"ALE","date":"2026-06-20","gf":1,"ga":2,"xgf":0.72,"xga":1.85,"result":"L","p_win":0.158}],"xpts":2.0,"delta_pts":1.0,"xgf":0.91,"xga":1.4,"real_xg_games":1,"xgf_real":0.72,"xga_real":1.85,"dgf_real":0.28,"dga_real":0.15},{"code":"PAR","name":"Paraguay","games":2,"goals_for":2,"goals_against":4,"xg_for":1.48,"xg_against":6.46,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.0206250046920564,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"EUA","date":"2026-06-13","gf":1,"ga":4,"xgf":1.0,"xga":2.69,"result":"L","p_win":0.125},{"vs":"TUR","date":"2026-06-20","gf":1,"ga":0,"xgf":0.48,"xga":3.77,"result":"W","p_win":0.377}],"xpts":2.02,"delta_pts":0.98,"xgf":0.74,"xga":3.23,"real_xg_games":2,"xgf_real":0.74,"xga_real":3.23,"dgf_real":0.26,"dga_real":-1.23,"efi":{"xg_official":0.48,"goals_pg":1.0,"shots_pg":8.0,"shots_on_target_pg":1.5,"pass_accuracy":66.9,"pressures_pg":363.5,"distance_pg":115.6,"sprints_pg":462,"fouls_pg":13.5,"games":2},"dgf_efi":0.52},{"code":"CAB","name":"Cape Verde","games":2,"goals_for":2,"goals_against":2,"xg_for":1.4500000000000002,"xg_against":3.8,"wins":0,"draws":2,"losses":0,"points":2,"expected_points":1.130975046129786,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"ESP","date":"2026-06-15","gf":0,"ga":0,"xgf":0.35,"xga":2.15,"result":"D","p_win":0.051},{"vs":"URU","date":"2026-06-21","gf":2,"ga":2,"xgf":1.1,"xga":1.65,"result":"D","p_win":0.181}],"xpts":1.13,"delta_pts":0.87,"xgf":0.73,"xga":1.9,"real_xg_games":1,"xgf_real":0.35,"xga_real":2.15,"dgf_real":-0.35,"dga_real":-2.15},{"code":"JAP","name":"Japan","games":2,"goals_for":6,"goals_against":2,"xg_for":3.91,"xg_against":2.1,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":3.1848933055089925,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"HOL","date":"2026-06-14","gf":2,"ga":2,"xgf":1.82,"xga":1.95,"result":"D","p_win":0.285},{"vs":"TUN","date":"2026-06-21","gf":4,"ga":0,"xgf":2.09,"xga":0.15,"result":"W","p_win":0.598}],"xpts":3.18,"delta_pts":0.82,"xgf":1.96,"xga":1.05,"real_xg_games":2,"xgf_real":1.96,"xga_real":1.05,"dgf_real":1.04,"dga_real":-0.05},{"code":"MAR","name":"Morocco","games":2,"goals_for":2,"goals_against":1,"xg_for":1.6400000000000001,"xg_against":2.59,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":3.268319885092101,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"BRA","date":"2026-06-13","gf":1,"ga":1,"xgf":1.1,"xga":1.62,"result":"D","p_win":0.288},{"vs":"ESC","date":"2026-06-19","gf":1,"ga":0,"xgf":0.54,"xga":0.97,"result":"W","p_win":0.626}],"xpts":3.27,"delta_pts":0.73,"xgf":0.82,"xga":1.29,"real_xg_games":2,"xgf_real":0.82,"xga_real":1.29,"dgf_real":0.18,"dga_real":-0.79,"efi":{"xg_official":1.06,"goals_pg":1.0,"shots_pg":13.0,"shots_on_target_pg":2.5,"pass_accuracy":88.5,"pressures_pg":272.5,"distance_pg":115.1,"sprints_pg":491,"fouls_pg":13.0,"games":2},"dgf_efi":-0.06},{"code":"COL","name":"Colombia","games":1,"goals_for":3,"goals_against":1,"xg_for":2.45,"xg_against":0.82,"wins":1,"draws":0,"losses":0,"points":3,"expected_points":2.2707035655698866,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"UZB","date":"2026-06-18","gf":3,"ga":1,"xgf":2.45,"xga":0.82,"result":"W","p_win":0.685}],"xpts":2.27,"delta_pts":0.73,"xgf":2.45,"xga":0.82,"real_xg_games":1,"xgf_real":2.45,"xga_real":0.82,"dgf_real":0.55,"dga_real":0.18,"efi":{"xg_official":1.16,"goals_pg":3.0,"shots_pg":15.0,"shots_on_target_pg":4.0,"pass_accuracy":87.8,"pressures_pg":160.0,"distance_pg":108.7,"sprints_pg":369,"fouls_pg":13.0,"games":1},"dgf_efi":1.84},{"code":"HOL","name":"Netherlands","games":2,"goals_for":7,"goals_against":3,"xg_for":5.4,"xg_against":2.7,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":3.456916949838082,"big_chances_created":3,"big_chances_conceded":0,"matches":[{"vs":"JAP","date":"2026-06-14","gf":2,"ga":2,"xgf":1.95,"xga":1.82,"result":"D","p_win":0.429},{"vs":"SUE","date":"2026-06-20","gf":5,"ga":1,"xgf":3.45,"xga":0.88,"result":"W","p_win":0.539}],"xpts":3.46,"delta_pts":0.54,"xgf":2.7,"xga":1.35,"real_xg_games":2,"xgf_real":2.7,"xga_real":1.35,"dgf_real":0.8,"dga_real":0.15},{"code":"AUS","name":"Australia","games":2,"goals_for":2,"goals_against":2,"xg_for":1.29,"xg_against":3.98,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.5016350352963785,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"TUR","date":"2026-06-14","gf":2,"ga":0,"xgf":0.97,"xga":2.77,"result":"W","p_win":0.469},{"vs":"EUA","date":"2026-06-19","gf":0,"ga":2,"xgf":0.32,"xga":1.21,"result":"L","p_win":0.186}],"xpts":2.5,"delta_pts":0.5,"xgf":0.65,"xga":1.99,"real_xg_games":2,"xgf_real":0.65,"xga_real":1.99,"dgf_real":0.35,"dga_real":-0.99,"efi":{"xg_official":0.65,"goals_pg":1.0,"shots_pg":7.0,"shots_on_target_pg":3.0,"pass_accuracy":76.9,"pressures_pg":323.0,"distance_pg":114.7,"sprints_pg":461,"fouls_pg":7.5,"games":2},"dgf_efi":0.35},{"code":"AGL","name":"Algeria","games":2,"goals_for":2,"goals_against":4,"xg_for":2.2625,"xg_against":1.8675000000000002,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.5008548524853813,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"ARG","date":"2026-06-17","gf":0,"ga":3,"xgf":0.43,"xga":1.0,"result":"L","p_win":0.091},{"vs":"JOR","date":"2026-06-23","gf":2,"ga":1,"xgf":1.83,"xga":0.87,"result":"W","p_win":0.588}],"xpts":2.5,"delta_pts":0.5,"xgf":1.13,"xga":0.93,"real_xg_games":1,"xgf_real":0.43,"xga_real":1.0,"dgf_real":-0.43,"dga_real":2.0},{"code":"ESC","name":"Scotland","games":2,"goals_for":1,"goals_against":1,"xg_for":2.41,"xg_against":1.87,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.525065228548888,"big_chances_created":3,"big_chances_conceded":0,"matches":[{"vs":"HAI","date":"2026-06-14","gf":1,"ga":0,"xgf":1.44,"xga":1.33,"result":"W","p_win":0.539},{"vs":"MAR","date":"2026-06-19","gf":0,"ga":1,"xgf":0.97,"xga":0.54,"result":"L","p_win":0.134}],"xpts":2.53,"delta_pts":0.47,"xgf":1.21,"xga":0.94,"real_xg_games":2,"xgf_real":1.21,"xga_real":0.94,"dgf_real":-0.71,"dga_real":-0.44},{"code":"RDC","name":"DR Congo","games":1,"goals_for":1,"goals_against":1,"xg_for":1.15,"xg_against":1.78,"wins":0,"draws":1,"losses":0,"points":1,"expected_points":0.5370243485272601,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"POR","date":"2026-06-17","gf":1,"ga":1,"xgf":1.15,"xga":1.78,"result":"D","p_win":0.105}],"xpts":0.54,"delta_pts":0.46,"xgf":1.15,"xga":1.78,"real_xg_games":1,"xgf_real":1.15,"xga_real":1.78,"dgf_real":-0.15,"dga_real":-0.78},{"code":"COR","name":"South Korea","games":2,"goals_for":2,"goals_against":2,"xg_for":3.43,"xg_against":3.045,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.571314731231558,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"TCH","date":"2026-06-12","gf":2,"ga":1,"xgf":2.48,"xga":1.17,"result":"W","p_win":0.51},{"vs":"MEX","date":"2026-06-19","gf":0,"ga":1,"xgf":0.95,"xga":1.88,"result":"L","p_win":0.173}],"xpts":2.57,"delta_pts":0.43,"xgf":1.72,"xga":1.52,"real_xg_games":1,"xgf_real":2.48,"xga_real":1.17,"dgf_real":-0.48,"dga_real":-0.17},{"code":"AUT","name":"Austria","games":2,"goals_for":3,"goals_against":3,"xg_for":2.95,"xg_against":2.87,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.574620575975998,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"JOR","date":"2026-06-17","gf":3,"ga":1,"xgf":2.4,"xga":1.09,"result":"W","p_win":0.603},{"vs":"ARG","date":"2026-06-22","gf":0,"ga":2,"xgf":0.55,"xga":1.78,"result":"L","p_win":0.1}],"xpts":2.57,"delta_pts":0.43,"xgf":1.48,"xga":1.44,"real_xg_games":1,"xgf_real":2.4,"xga_real":1.09,"dgf_real":0.6,"dga_real":-0.09,"efi":{"xg_official":1.28,"goals_pg":1.0,"shots_pg":8.0,"shots_on_target_pg":2.5,"pass_accuracy":86.2,"pressures_pg":252.5,"distance_pg":114.1,"sprints_pg":464,"fouls_pg":8.5,"games":2},"dgf_efi":-0.28},{"code":"SUE","name":"Sweden","games":2,"goals_for":6,"goals_against":6,"xg_for":3.1999999999999997,"xg_against":3.8200000000000003,"wins":1,"draws":0,"losses":1,"points":3,"expected_points":2.5943594714558595,"big_chances_created":5,"big_chances_conceded":0,"matches":[{"vs":"TUN","date":"2026-06-15","gf":5,"ga":1,"xgf":2.32,"xga":0.37,"result":"W","p_win":0.489},{"vs":"HOL","date":"2026-06-20","gf":1,"ga":5,"xgf":0.88,"xga":3.45,"result":"L","p_win":0.195}],"xpts":2.59,"delta_pts":0.41,"xgf":1.6,"xga":1.91,"real_xg_games":2,"xgf_real":1.6,"xga_real":1.91,"dgf_real":1.4,"dga_real":1.09},{"code":"CUR","name":"Curaçao","games":2,"goals_for":1,"goals_against":7,"xg_for":1.14,"xg_against":9.09,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":0.9321922885789289,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"ALE","date":"2026-06-14","gf":1,"ga":7,"xgf":0.44,"xga":4.82,"result":"L","p_win":0.038},{"vs":"EQU","date":"2026-06-21","gf":0,"ga":0,"xgf":0.7,"xga":4.27,"result":"D","p_win":0.139}],"xpts":0.93,"delta_pts":0.07,"xgf":0.57,"xga":4.54,"real_xg_games":2,"xgf_real":0.57,"xga_real":4.54,"dgf_real":-0.07,"dga_real":-1.04},{"code":"CAN","name":"Canada","games":2,"goals_for":7,"goals_against":1,"xg_for":5.17,"xg_against":1.2,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":4.152324819932845,"big_chances_created":8,"big_chances_conceded":0,"matches":[{"vs":"BOS","date":"2026-06-12","gf":1,"ga":1,"xgf":1.35,"xga":0.98,"result":"D","p_win":0.607},{"vs":"CAT","date":"2026-06-18","gf":6,"ga":0,"xgf":3.82,"xga":0.22,"result":"W","p_win":0.617}],"xpts":4.15,"delta_pts":-0.15,"xgf":2.58,"xga":0.6,"real_xg_games":2,"xgf_real":2.58,"xga_real":0.6,"dgf_real":0.92,"dga_real":-0.1,"efi":{"xg_official":2.7,"goals_pg":3.0,"shots_pg":23.0,"shots_on_target_pg":7.5,"pass_accuracy":86.2,"pressures_pg":133.5,"distance_pg":111.3,"sprints_pg":436,"fouls_pg":15.0,"games":2},"dgf_efi":0.3},{"code":"SUI","name":"Switzerland","games":2,"goals_for":5,"goals_against":2,"xg_for":3.99,"xg_against":1.6600000000000001,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":4.188581108720262,"big_chances_created":9,"big_chances_conceded":0,"matches":[{"vs":"CAT","date":"2026-06-13","gf":1,"ga":1,"xgf":1.54,"xga":0.78,"result":"D","p_win":0.622},{"vs":"BOS","date":"2026-06-18","gf":4,"ga":1,"xgf":2.45,"xga":0.88,"result":"W","p_win":0.612}],"xpts":4.19,"delta_pts":-0.19,"xgf":2.0,"xga":0.83,"real_xg_games":2,"xgf_real":2.0,"xga_real":0.83,"dgf_real":0.5,"dga_real":0.17,"efi":{"xg_official":2.49,"goals_pg":2.5,"shots_pg":19.5,"shots_on_target_pg":7.0,"pass_accuracy":90.0,"pressures_pg":199.5,"distance_pg":112.1,"sprints_pg":457,"fouls_pg":14.5,"games":2},"dgf_efi":0.01},{"code":"BRA","name":"Brazil","games":2,"goals_for":4,"goals_against":1,"xg_for":3.9,"xg_against":1.51,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":4.221581231293559,"big_chances_created":6,"big_chances_conceded":0,"matches":[{"vs":"MAR","date":"2026-06-13","gf":1,"ga":1,"xgf":1.62,"xga":1.1,"result":"D","p_win":0.426},{"vs":"HAI","date":"2026-06-20","gf":3,"ga":0,"xgf":2.28,"xga":0.41,"result":"W","p_win":0.842}],"xpts":4.22,"delta_pts":-0.22,"xgf":1.95,"xga":0.76,"real_xg_games":2,"xgf_real":1.95,"xga_real":0.76,"dgf_real":0.05,"dga_real":-0.26,"efi":{"xg_official":1.2,"goals_pg":2.0,"shots_pg":9.5,"shots_on_target_pg":4.5,"pass_accuracy":88.4,"pressures_pg":255.0,"distance_pg":113.6,"sprints_pg":485,"fouls_pg":14.0,"games":2},"dgf_efi":0.8},{"code":"ARS","name":"Saudi Arabia","games":2,"goals_for":1,"goals_against":5,"xg_for":1.1,"xg_against":5.04,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":1.2635614760029164,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"URU","date":"2026-06-15","gf":1,"ga":1,"xgf":0.85,"xga":1.76,"result":"D","p_win":0.205},{"vs":"ESP","date":"2026-06-21","gf":0,"ga":4,"xgf":0.25,"xga":3.28,"result":"L","p_win":0.064}],"xpts":1.26,"delta_pts":-0.26,"xgf":0.55,"xga":2.52,"real_xg_games":2,"xgf_real":0.55,"xga_real":2.52,"dgf_real":-0.05,"dga_real":-0.02},{"code":"CAT","name":"Qatar","games":2,"goals_for":1,"goals_against":7,"xg_for":1.0,"xg_against":5.359999999999999,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":1.321404289458629,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"SUI","date":"2026-06-13","gf":1,"ga":1,"xgf":0.78,"xga":1.54,"result":"D","p_win":0.136},{"vs":"CAN","date":"2026-06-18","gf":0,"ga":6,"xgf":0.22,"xga":3.82,"result":"L","p_win":0.144}],"xpts":1.32,"delta_pts":-0.32,"xgf":0.5,"xga":2.68,"real_xg_games":2,"xgf_real":0.5,"xga_real":2.68,"dgf_real":0.0,"dga_real":0.82},{"code":"BOS","name":"Bosnia & Herzegovina","games":2,"goals_for":2,"goals_against":5,"xg_for":1.8599999999999999,"xg_against":3.8000000000000003,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":1.3710919482680577,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"CAN","date":"2026-06-12","gf":1,"ga":1,"xgf":0.98,"xga":1.35,"result":"D","p_win":0.151},{"vs":"SUI","date":"2026-06-18","gf":1,"ga":4,"xgf":0.88,"xga":2.45,"result":"L","p_win":0.143}],"xpts":1.37,"delta_pts":-0.37,"xgf":0.93,"xga":1.9,"real_xg_games":2,"xgf_real":0.93,"xga_real":1.9,"dgf_real":0.07,"dga_real":0.6},{"code":"AFS","name":"South Africa","games":2,"goals_for":1,"goals_against":3,"xg_for":1.67,"xg_against":3.1900000000000004,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":1.5497804709507026,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"MEX","date":"2026-06-11","gf":0,"ga":2,"xgf":0.52,"xga":1.84,"result":"L","p_win":0.058},{"vs":"TCH","date":"2026-06-18","gf":1,"ga":1,"xgf":1.15,"xga":1.35,"result":"D","p_win":0.305}],"xpts":1.55,"delta_pts":-0.55,"xgf":0.83,"xga":1.6,"real_xg_games":2,"xgf_real":0.83,"xga_real":1.6,"dgf_real":-0.33,"dga_real":-0.1},{"code":"IRQ","name":"Iraq","games":2,"goals_for":1,"goals_against":7,"xg_for":1.1300000000000001,"xg_against":5.0600000000000005,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":0.6005070357726093,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"NOR","date":"2026-06-16","gf":1,"ga":4,"xgf":0.68,"xga":2.85,"result":"L","p_win":0.068},{"vs":"FRA","date":"2026-06-22","gf":0,"ga":3,"xgf":0.45,"xga":2.21,"result":"L","p_win":0.025}],"xpts":0.6,"delta_pts":-0.6,"xgf":0.57,"xga":2.53,"real_xg_games":1,"xgf_real":0.68,"xga_real":2.85,"dgf_real":0.32,"dga_real":1.15,"efi":{"xg_official":0.95,"goals_pg":0.5,"shots_pg":7.5,"shots_on_target_pg":0.5,"pass_accuracy":84.5,"pressures_pg":296.0,"distance_pg":111.9,"sprints_pg":410,"fouls_pg":10.5,"games":2},"dgf_efi":-0.45},{"code":"POR","name":"Portugal","games":2,"goals_for":6,"goals_against":1,"xg_for":3.9300000000000006,"xg_against":1.7,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":4.639733462797892,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"RDC","date":"2026-06-17","gf":1,"ga":1,"xgf":1.78,"xga":1.15,"result":"D","p_win":0.673},{"vs":"UZB","date":"2026-06-23","gf":5,"ga":0,"xgf":2.15,"xga":0.55,"result":"W","p_win":0.735}],"xpts":4.64,"delta_pts":-0.64,"xgf":1.97,"xga":0.85,"real_xg_games":1,"xgf_real":1.78,"xga_real":1.15,"dgf_real":-0.78,"dga_real":-0.15,"efi":{"xg_official":0.57,"goals_pg":1.0,"shots_pg":7.0,"shots_on_target_pg":1.0,"pass_accuracy":92.0,"pressures_pg":183.0,"distance_pg":109.8,"sprints_pg":458,"fouls_pg":9.0,"games":1},"dgf_efi":0.43},{"code":"NZE","name":"New Zealand","games":2,"goals_for":3,"goals_against":5,"xg_for":2.9725,"xg_against":3.8675,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":1.708095945384795,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"IRA","date":"2026-06-16","gf":2,"ga":2,"xgf":1.98,"xga":2.16,"result":"D","p_win":0.188},{"vs":"EGI","date":"2026-06-22","gf":1,"ga":3,"xgf":0.99,"xga":1.71,"result":"L","p_win":0.204}],"xpts":1.71,"delta_pts":-0.71,"xgf":1.49,"xga":1.93,"real_xg_games":1,"xgf_real":1.98,"xga_real":2.16,"dgf_real":0.02,"dga_real":-0.16},{"code":"CRO","name":"Croatia","games":1,"goals_for":2,"goals_against":4,"xg_for":1.64,"xg_against":2.92,"wins":0,"draws":0,"losses":1,"points":0,"expected_points":0.784554858584084,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"ING","date":"2026-06-17","gf":2,"ga":4,"xgf":1.64,"xga":2.92,"result":"L","p_win":0.175}],"xpts":0.78,"delta_pts":-0.78,"xgf":1.64,"xga":2.92,"real_xg_games":1,"xgf_real":1.64,"xga_real":2.92,"dgf_real":0.36,"dga_real":1.08,"efi":{"xg_official":0.82,"goals_pg":2.0,"shots_pg":10.0,"shots_on_target_pg":5.0,"pass_accuracy":86.9,"pressures_pg":295.0,"distance_pg":113.7,"sprints_pg":487,"fouls_pg":10.0,"games":1},"dgf_efi":1.18},{"code":"IRA","name":"Iran","games":2,"goals_for":2,"goals_against":2,"xg_for":2.7800000000000002,"xg_against":3.4299999999999997,"wins":0,"draws":2,"losses":0,"points":2,"expected_points":2.8956577507909373,"big_chances_created":3,"big_chances_conceded":0,"matches":[{"vs":"NZE","date":"2026-06-16","gf":2,"ga":2,"xgf":2.16,"xga":1.98,"result":"D","p_win":0.549},{"vs":"BEL","date":"2026-06-21","gf":0,"ga":0,"xgf":0.62,"xga":1.45,"result":"D","p_win":0.236}],"xpts":2.9,"delta_pts":-0.9,"xgf":1.39,"xga":1.71,"real_xg_games":1,"xgf_real":2.16,"xga_real":1.98,"dgf_real":-0.16,"dga_real":0.02},{"code":"UZB","name":"Uzbekistan","games":2,"goals_for":1,"goals_against":8,"xg_for":1.37,"xg_against":4.6000000000000005,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":0.9191393234173179,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"COL","date":"2026-06-18","gf":1,"ga":3,"xgf":0.82,"xga":2.45,"result":"L","p_win":0.098},{"vs":"POR","date":"2026-06-23","gf":0,"ga":5,"xgf":0.55,"xga":2.15,"result":"L","p_win":0.071}],"xpts":0.92,"delta_pts":-0.92,"xgf":0.69,"xga":2.3,"real_xg_games":1,"xgf_real":0.82,"xga_real":2.45,"dgf_real":0.18,"dga_real":0.55,"efi":{"xg_official":1.11,"goals_pg":1.0,"shots_pg":8.0,"shots_on_target_pg":2.0,"pass_accuracy":79.9,"pressures_pg":264.0,"distance_pg":112.0,"sprints_pg":365,"fouls_pg":10.0,"games":1},"dgf_efi":-0.11},{"code":"ESP","name":"Spain","games":2,"goals_for":4,"goals_against":0,"xg_for":5.43,"xg_against":0.6,"wins":1,"draws":1,"losses":0,"points":4,"expected_points":4.935446729488756,"big_chances_created":7,"big_chances_conceded":0,"matches":[{"vs":"CAB","date":"2026-06-15","gf":0,"ga":0,"xgf":2.15,"xga":0.35,"result":"D","p_win":0.776},{"vs":"ARS","date":"2026-06-21","gf":4,"ga":0,"xgf":3.28,"xga":0.25,"result":"W","p_win":0.749}],"xpts":4.94,"delta_pts":-0.94,"xgf":2.71,"xga":0.3,"real_xg_games":2,"xgf_real":2.71,"xga_real":0.3,"dgf_real":-0.71,"dga_real":-0.3,"efi":{"xg_official":2.73,"goals_pg":1.5,"shots_pg":24.5,"shots_on_target_pg":7.5,"pass_accuracy":92.9,"pressures_pg":207.0,"distance_pg":115.5,"sprints_pg":427,"fouls_pg":1.0,"games":2},"dgf_efi":-1.23},{"code":"PAN","name":"Panama","games":1,"goals_for":0,"goals_against":1,"xg_for":0.75,"xg_against":1.3,"wins":0,"draws":0,"losses":1,"points":0,"expected_points":1.0441951187220373,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"GAN","date":"2026-06-17","gf":0,"ga":1,"xgf":0.75,"xga":1.3,"result":"L","p_win":0.254}],"xpts":1.04,"delta_pts":-1.04,"xgf":0.75,"xga":1.3,"efi":{"xg_official":0.77,"goals_pg":0.0,"shots_pg":11.0,"shots_on_target_pg":4.0,"pass_accuracy":88.1,"pressures_pg":201.0,"distance_pg":117.3,"sprints_pg":444,"fouls_pg":9.0,"games":1},"dgf_efi":-0.77},{"code":"HAI","name":"Haiti","games":2,"goals_for":0,"goals_against":4,"xg_for":1.74,"xg_against":3.7199999999999998,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":1.0595616245567931,"big_chances_created":1,"big_chances_conceded":0,"matches":[{"vs":"ESC","date":"2026-06-14","gf":0,"ga":1,"xgf":1.33,"xga":1.44,"result":"L","p_win":0.195},{"vs":"BRA","date":"2026-06-20","gf":0,"ga":3,"xgf":0.41,"xga":2.28,"result":"L","p_win":0.025}],"xpts":1.06,"delta_pts":-1.06,"xgf":0.87,"xga":1.86,"real_xg_games":2,"xgf_real":0.87,"xga_real":1.86,"dgf_real":-0.87,"dga_real":0.14,"efi":{"xg_official":0.48,"goals_pg":0.0,"shots_pg":11.0,"shots_on_target_pg":2.5,"pass_accuracy":86.0,"pressures_pg":239.5,"distance_pg":113.3,"sprints_pg":465,"fouls_pg":16.5,"games":2},"dgf_efi":-0.48},{"code":"TCH","name":"Czechia","games":2,"goals_for":2,"goals_against":3,"xg_for":2.52,"xg_against":3.63,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":2.433094284032107,"big_chances_created":4,"big_chances_conceded":0,"matches":[{"vs":"COR","date":"2026-06-12","gf":1,"ga":2,"xgf":1.17,"xga":2.48,"result":"L","p_win":0.217},{"vs":"AFS","date":"2026-06-18","gf":1,"ga":1,"xgf":1.35,"xga":1.15,"result":"D","p_win":0.407}],"xpts":2.43,"delta_pts":-1.43,"xgf":1.26,"xga":1.81,"real_xg_games":2,"xgf_real":1.26,"xga_real":1.81,"dgf_real":-0.26,"dga_real":-0.31},{"code":"JOR","name":"Jordan","games":2,"goals_for":2,"goals_against":5,"xg_for":1.9575000000000002,"xg_against":4.2325,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":1.4266943425160634,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"AUT","date":"2026-06-17","gf":1,"ga":3,"xgf":1.09,"xga":2.4,"result":"L","p_win":0.149},{"vs":"AGL","date":"2026-06-23","gf":1,"ga":2,"xgf":0.87,"xga":1.83,"result":"L","p_win":0.16}],"xpts":1.43,"delta_pts":-1.43,"xgf":0.98,"xga":2.12,"real_xg_games":1,"xgf_real":1.09,"xga_real":2.4,"dgf_real":-0.09,"dga_real":0.6,"efi":{"xg_official":0.27,"goals_pg":1.0,"shots_pg":9.5,"shots_on_target_pg":4.0,"pass_accuracy":71.3,"pressures_pg":161.0,"distance_pg":119.6,"sprints_pg":258,"fouls_pg":8.0,"games":2},"dgf_efi":0.73},{"code":"BEL","name":"Belgium","games":2,"goals_for":1,"goals_against":1,"xg_for":3.0300000000000002,"xg_against":1.7400000000000002,"wins":0,"draws":2,"losses":0,"points":2,"expected_points":3.5349849018862005,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"EGI","date":"2026-06-15","gf":1,"ga":1,"xgf":1.58,"xga":1.12,"result":"D","p_win":0.508},{"vs":"IRA","date":"2026-06-21","gf":0,"ga":0,"xgf":1.45,"xga":0.62,"result":"D","p_win":0.486}],"xpts":3.53,"delta_pts":-1.53,"xgf":1.52,"xga":0.87,"real_xg_games":1,"xgf_real":1.58,"xga_real":1.12,"dgf_real":-0.58,"dga_real":-0.12,"efi":{"xg_official":0.74,"goals_pg":0.0,"shots_pg":19.0,"shots_on_target_pg":5.0,"pass_accuracy":86.8,"pressures_pg":60.5,"distance_pg":113.5,"sprints_pg":213,"fouls_pg":11.5,"games":2},"dgf_efi":-0.74},{"code":"SEN","name":"Senegal","games":2,"goals_for":3,"goals_against":6,"xg_for":2.1425,"xg_against":4.0475,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":1.6641454446652433,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"FRA","date":"2026-06-16","gf":1,"ga":3,"xgf":1.05,"xga":2.44,"result":"L","p_win":0.138},{"vs":"NOR","date":"2026-06-23","gf":2,"ga":3,"xgf":1.09,"xga":1.61,"result":"L","p_win":0.243}],"xpts":1.66,"delta_pts":-1.66,"xgf":1.07,"xga":2.02,"real_xg_games":1,"xgf_real":1.05,"xga_real":2.44,"dgf_real":-0.05,"dga_real":0.56,"efi":{"xg_official":1.22,"goals_pg":1.5,"shots_pg":11.0,"shots_on_target_pg":3.0,"pass_accuracy":87.8,"pressures_pg":270.5,"distance_pg":114.0,"sprints_pg":475,"fouls_pg":9.0,"games":2},"dgf_efi":0.28},{"code":"TUN","name":"Tunisia","games":2,"goals_for":1,"goals_against":9,"xg_for":0.52,"xg_against":4.41,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":1.6855136246044142,"big_chances_created":0,"big_chances_conceded":0,"matches":[{"vs":"SUE","date":"2026-06-15","gf":1,"ga":5,"xgf":0.37,"xga":2.32,"result":"L","p_win":0.234},{"vs":"JAP","date":"2026-06-21","gf":0,"ga":4,"xgf":0.15,"xga":2.09,"result":"L","p_win":0.152}],"xpts":1.69,"delta_pts":-1.69,"xgf":0.26,"xga":2.21,"real_xg_games":2,"xgf_real":0.26,"xga_real":2.21,"dgf_real":0.24,"dga_real":2.29,"efi":{"xg_official":0.18,"goals_pg":0.5,"shots_pg":4.0,"shots_on_target_pg":1.0,"pass_accuracy":81.0,"pressures_pg":228.0,"distance_pg":111.1,"sprints_pg":412,"fouls_pg":12.5,"games":2},"dgf_efi":0.32},{"code":"URU","name":"Uruguay","games":2,"goals_for":3,"goals_against":3,"xg_for":3.41,"xg_against":1.9500000000000002,"wins":0,"draws":2,"losses":0,"points":2,"expected_points":3.7791031247974374,"big_chances_created":2,"big_chances_conceded":0,"matches":[{"vs":"ARS","date":"2026-06-15","gf":1,"ga":1,"xgf":1.76,"xga":0.85,"result":"D","p_win":0.526},{"vs":"CAB","date":"2026-06-21","gf":2,"ga":2,"xgf":1.65,"xga":1.1,"result":"D","p_win":0.557}],"xpts":3.78,"delta_pts":-1.78,"xgf":1.71,"xga":0.98,"real_xg_games":1,"xgf_real":1.76,"xga_real":0.85,"dgf_real":-0.76,"dga_real":0.15,"efi":{"xg_official":1.86,"goals_pg":1.5,"shots_pg":22.0,"shots_on_target_pg":6.0,"pass_accuracy":88.6,"pressures_pg":177.5,"distance_pg":111.8,"sprints_pg":472,"fouls_pg":7.5,"games":2},"dgf_efi":-0.36},{"code":"TUR","name":"Turkey","games":2,"goals_for":0,"goals_against":3,"xg_for":6.54,"xg_against":1.45,"wins":0,"draws":0,"losses":2,"points":0,"expected_points":2.3206650627488177,"big_chances_created":7,"big_chances_conceded":0,"matches":[{"vs":"AUS","date":"2026-06-14","gf":0,"ga":2,"xgf":2.77,"xga":0.97,"result":"L","p_win":0.25},{"vs":"PAR","date":"2026-06-20","gf":0,"ga":1,"xgf":3.77,"xga":0.48,"result":"L","p_win":0.333}],"xpts":2.32,"delta_pts":-2.32,"xgf":3.27,"xga":0.72,"real_xg_games":2,"xgf_real":3.27,"xga_real":0.72,"dgf_real":-3.27,"dga_real":0.78,"efi":{"xg_official":1.89,"goals_pg":0.0,"shots_pg":31.0,"shots_on_target_pg":6.0,"pass_accuracy":90.6,"pressures_pg":135.5,"distance_pg":117.9,"sprints_pg":420,"fouls_pg":13.5,"games":2},"dgf_efi":-1.89},{"code":"EQU","name":"Ecuador","games":2,"goals_for":0,"goals_against":1,"xg_for":5.22,"xg_against":1.8,"wins":0,"draws":1,"losses":1,"points":1,"expected_points":3.5375717795412314,"big_chances_created":6,"big_chances_conceded":0,"matches":[{"vs":"CDM","date":"2026-06-14","gf":0,"ga":1,"xgf":0.95,"xga":1.1,"result":"L","p_win":0.384},{"vs":"CUR","date":"2026-06-21","gf":0,"ga":0,"xgf":4.27,"xga":0.7,"result":"D","p_win":0.618}],"xpts":3.54,"delta_pts":-2.54,"xgf":2.61,"xga":0.9,"real_xg_games":1,"xgf_real":4.27,"xga_real":0.7,"dgf_real":-4.27,"dga_real":-0.7}],"matches":[{"date":"2026-06-11","home":"MEX","away":"AFS","g1":2,"g2":0,"pH":0.77,"pD":0.173,"pA":0.058,"lam":2.31,"mu":0.52,"home_xg":1.84,"away_xg":0.52,"real_xg":true,"home_shots":16,"away_shots":3,"home_sot":10,"away_sot":2,"home_poss":59.2,"away_poss":40.8,"home_big_chances":2,"away_big_chances":0,"home_goals":[{"min":"8","player":"Julián Quiñones","type":"regular"},{"min":"66","player":"Raúl Jiménez","type":"regular"}],"away_goals":[],"reds":[["55","AFS","Sphephelo S'miso Sithole"],["84","AFS","Themba Zwane"],["86","MEX","César Jasib Montes"]],"has_stats":true,"narrative":["✅ **Result matched prediction** (77%). Final: 2–0.","💥 Mexico created 2 big chances.","🟥 South Africa down to 10 men (Sphephelo S'miso Sithole, 55').","🟥 South Africa down to 10 men (Themba Zwane, 84').","🟥 Mexico down to 10 men (César Jasib Montes, 86')."],"nlbair":true,"stadium":"Mexico City Stadium (Estadio Azteca)","city":"Mexico City"},{"date":"2026-06-12","home":"COR","away":"TCH","g1":2,"g2":1,"pH":0.51,"pD":0.273,"pA":0.217,"lam":1.67,"mu":1.03,"home_xg":2.48,"away_xg":1.17,"real_xg":false,"home_shots":15,"away_shots":7,"home_sot":10,"away_sot":4,"home_poss":60.7,"away_poss":39.3,"home_big_chances":4,"away_big_chances":1,"home_goals":[{"min":"66","player":"Hwang In-Beom","type":"regular"},{"min":"79","player":"Oh Hyeon-Gyu","type":"regular"}],"away_goals":[{"min":"58","player":"Ladislav Krejcí","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (51%). Final: 2–1.","💥 South Korea created 4 big chances.","💥 Czechia created 1 big chance.","🎯 South Korea dominated possession (61%)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-12","home":"CAN","away":"BOS","g1":1,"g2":1,"pH":0.607,"pD":0.242,"pA":0.151,"lam":1.93,"mu":0.88,"home_xg":1.35,"away_xg":0.98,"real_xg":true,"home_shots":13,"away_shots":8,"home_sot":8,"away_sot":4,"home_poss":55.4,"away_poss":44.6,"home_big_chances":2,"away_big_chances":1,"home_goals":[{"min":"77","player":"Cyle Larin","type":"regular"}],"away_goals":[{"min":"20","player":"Jovo Lukic","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Canada win (61%) but ended 1–1.","💥 Canada created 2 big chances.","💥 Bosnia & Herzegovina created 1 big chance."],"nlbair":true,"stadium":"Toronto Stadium (BMO Field)","city":"Toronto"},{"date":"2026-06-13","home":"EUA","away":"PAR","g1":4,"g2":1,"pH":0.649,"pD":0.226,"pA":0.125,"lam":2.03,"mu":0.8,"home_xg":2.69,"away_xg":1.0,"real_xg":false,"home_shots":16,"away_shots":10,"home_sot":10,"away_sot":7,"home_poss":61.7,"away_poss":38.3,"home_big_chances":4,"away_big_chances":1,"home_goals":[{"min":"30","player":"Folarin Balogun","type":"regular"},{"min":"49","player":"Folarin Balogun","type":"regular"},{"min":"97","player":"Giovanni Reyna","type":"regular"}],"away_goals":[{"min":"6","player":"Damián Bobadilla","type":"regular"},{"min":"72","player":"Mauricio","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (65%). Final: 4–1.","⚡ USA outscored xG (4 goals vs 2.7 xG) — clinical finishing.","💥 USA created 4 big chances.","💥 Paraguay created 1 big chance.","🎯 USA dominated possession (62%)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-13","home":"CAT","away":"SUI","g1":1,"g2":1,"pH":0.136,"pD":0.241,"pA":0.622,"lam":0.8,"mu":1.91,"home_xg":0.78,"away_xg":1.54,"real_xg":true,"home_shots":6,"away_shots":27,"home_sot":3,"away_sot":17,"home_poss":36.5,"away_poss":63.5,"home_big_chances":1,"away_big_chances":6,"home_goals":[],"away_goals":[{"min":"16","player":"Breel Embolo","type":"penalty"},{"min":"93","player":"Miro Muheim","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Switzerland win (62%) but ended 1–1.","💥 Qatar created 1 big chance.","💥 Switzerland created 6 big chances.","🎯 Switzerland dominated possession (64%)."],"nlbair":true,"stadium":"Boston Stadium (Gillette Stadium)","city":"Foxborough"},{"date":"2026-06-13","home":"BRA","away":"MAR","g1":1,"g2":1,"pH":0.426,"pD":0.286,"pA":0.288,"lam":1.5,"mu":1.2,"home_xg":1.62,"away_xg":1.1,"real_xg":true,"home_shots":12,"away_shots":14,"home_sot":8,"away_sot":9,"home_poss":50.6,"away_poss":49.4,"home_big_chances":1,"away_big_chances":2,"home_goals":[{"min":"31","player":"Vinícius Júnior","type":"regular"}],"away_goals":[{"min":"20","player":"Ismael Saibari","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Brazil win (43%) but ended 1–1.","💥 Brazil created 1 big chance.","💥 Morocco created 2 big chances."],"nlbair":true,"stadium":"New York New Jersey Stadium (MetLife Stadium)","city":"East Rutherford"},{"date":"2026-06-14","home":"HAI","away":"ESC","g1":0,"g2":1,"pH":0.195,"pD":0.266,"pA":0.539,"lam":0.97,"mu":1.73,"home_xg":1.33,"away_xg":1.44,"real_xg":false,"home_shots":15,"away_shots":9,"home_sot":6,"away_sot":5,"home_poss":52.7,"away_poss":47.3,"home_big_chances":1,"away_big_chances":2,"home_goals":[],"away_goals":[{"min":"27","player":"John McGinn","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (54%). Final: 0–1.","🧱 Haiti underperformed xG (0 goals vs 1.3 xG).","💥 Haiti created 1 big chance.","💥 Scotland created 2 big chances."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-14","home":"AUS","away":"TUR","g1":2,"g2":0,"pH":0.469,"pD":0.28,"pA":0.25,"lam":1.59,"mu":1.11,"home_xg":0.97,"away_xg":2.77,"real_xg":false,"home_shots":9,"away_shots":30,"home_sot":5,"away_sot":20,"home_poss":35.1,"away_poss":64.9,"home_big_chances":1,"away_big_chances":2,"home_goals":[{"min":"26","player":"Nestory Irankunda","type":"regular"},{"min":"74","player":"Connor Metcalfe","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (47%). Final: 2–0.","⚡ Australia outscored xG (2 goals vs 1.0 xG) — clinical finishing.","🧱 Turkey underperformed xG (0 goals vs 2.8 xG).","💥 Australia created 1 big chance.","💥 Turkey created 2 big chances.","🎯 Turkey dominated possession (65%)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-14","home":"ALE","away":"CUR","g1":7,"g2":1,"pH":0.805,"pD":0.156,"pA":0.038,"lam":2.32,"mu":0.38,"home_xg":4.82,"away_xg":0.44,"real_xg":true,"home_shots":26,"away_shots":8,"home_sot":20,"away_sot":2,"home_poss":59.4,"away_poss":40.6,"home_big_chances":6,"away_big_chances":0,"home_goals":[{"min":"5","player":"Felix Nmecha","type":"regular"},{"min":"37","player":"Nico Schlotterbeck","type":"regular"},{"min":"46","player":"Jamal Musiala","type":"regular"},{"min":"49","player":"Kai Havertz","type":"penalty"},{"min":"67","player":"Nathaniel Brown","type":"regular"},{"min":"77","player":"Deniz Undav","type":"regular"},{"min":"87","player":"Kai Havertz","type":"regular"}],"away_goals":[{"min":"20","player":"Livano Comenencia","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (81%). Final: 7–1.","⚡ Germany outscored xG (7 goals vs 4.8 xG) — clinical finishing.","💥 Germany created 6 big chances.","📉 Scoreline (7–1) far more one-sided than model expected (~2.3–0.4)."],"nlbair":true,"stadium":"Atlanta Stadium (Mercedes-Benz Stadium)","city":"Atlanta"},{"date":"2026-06-14","home":"HOL","away":"JAP","g1":2,"g2":2,"pH":0.429,"pD":0.286,"pA":0.285,"lam":1.51,"mu":1.19,"home_xg":1.95,"away_xg":1.82,"real_xg":true,"home_shots":10,"away_shots":10,"home_sot":7,"away_sot":4,"home_poss":57.4,"away_poss":42.6,"home_big_chances":0,"away_big_chances":0,"home_goals":[{"min":"50","player":"Virgil van Dijk","type":"regular"},{"min":"63","player":"Crysencio Summerville","type":"regular"}],"away_goals":[{"min":"56","player":"Keito Nakamura","type":"regular"},{"min":"88","player":"Daichi Kamada","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Netherlands win (43%) but ended 2–2."],"nlbair":true,"stadium":"San Francisco Bay Area Stadium (Levi's Stadium)","city":"Santa Clara"},{"date":"2026-06-14","home":"CDM","away":"EQU","g1":1,"g2":0,"pH":0.327,"pD":0.289,"pA":0.384,"lam":1.29,"mu":1.41,"home_xg":1.1,"away_xg":0.95,"real_xg":true,"home_shots":15.0,"away_shots":12.0,"home_sot":4.0,"away_sot":1.0,"home_poss":41.0,"away_poss":49.0,"home_big_chances":null,"away_big_chances":null,"home_goals":[{"min":"90","player":"Amad Diallo","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Ecuador win (38%) but ended 1–0.","🧱 Ecuador underperformed xG (0 goals vs 0.9 xG)."],"nlbair":false,"stadium":"Houston Stadium (NRG Stadium)","city":"Houston"},{"date":"2026-06-15","home":"SUE","away":"TUN","g1":5,"g2":1,"pH":0.489,"pD":0.277,"pA":0.234,"lam":1.63,"mu":1.07,"home_xg":2.32,"away_xg":0.37,"real_xg":false,"home_shots":13,"away_shots":6,"home_sot":10,"away_sot":3,"home_poss":49.3,"away_poss":50.7,"home_big_chances":4,"away_big_chances":0,"home_goals":[{"min":"6","player":"Yasin Ayari","type":"regular"},{"min":"29","player":"Alexander Isak","type":"regular"},{"min":"58","player":"Viktor Gyökeres","type":"regular"},{"min":"83","player":"Mattias Svanberg","type":"regular"},{"min":"95","player":"Yasin Ayari","type":"regular"}],"away_goals":[{"min":"42","player":"Omar Rekik","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (49%). Final: 5–1.","⚡ Sweden outscored xG (5 goals vs 2.3 xG) — clinical finishing.","💥 Sweden created 4 big chances.","🎯 Sweden: 5 goals from 13 shots (38% conversion).","📉 Scoreline (5–1) far more one-sided than model expected (~1.6–1.1)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-15","home":"ESP","away":"CAB","g1":0,"g2":0,"pH":0.776,"pD":0.173,"pA":0.051,"lam":2.25,"mu":0.45,"home_xg":2.15,"away_xg":0.35,"real_xg":true,"home_shots":27,"away_shots":6,"home_sot":16,"away_sot":3,"home_poss":66.8,"away_poss":33.2,"home_big_chances":2,"away_big_chances":1,"home_goals":[],"away_goals":[],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Spain win (78%) but ended 0–0.","🧱 Spain underperformed xG (0 goals vs 2.1 xG).","💥 Spain created 2 big chances.","💥 Cape Verde created 1 big chance.","🎯 Spain dominated possession (67%)."],"nlbair":true,"stadium":"Miami Stadium (Hard Rock Stadium)","city":"Miami Gardens"},{"date":"2026-06-15","home":"BEL","away":"EGI","g1":1,"g2":1,"pH":0.508,"pD":0.273,"pA":0.218,"lam":1.67,"mu":1.03,"home_xg":1.58,"away_xg":1.12,"real_xg":true,"home_shots":15,"away_shots":15,"home_sot":9,"away_sot":12,"home_poss":53.1,"away_poss":46.9,"home_big_chances":2,"away_big_chances":2,"home_goals":[],"away_goals":[{"min":"19","player":"Emam Ashour","type":"regular"},{"min":"65","player":"Mohamed Hany","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Belgium win (51%) but ended 1–1.","💥 Belgium created 2 big chances.","💥 Egypt created 2 big chances."],"nlbair":true,"stadium":"Dallas Stadium (AT&T Stadium)","city":"Arlington"},{"date":"2026-06-15","home":"ARS","away":"URU","g1":1,"g2":1,"pH":0.205,"pD":0.269,"pA":0.526,"lam":1.0,"mu":1.71,"home_xg":0.85,"away_xg":1.76,"real_xg":true,"home_shots":7,"away_shots":27,"home_sot":4,"away_sot":17,"home_poss":37.6,"away_poss":62.4,"home_big_chances":1,"away_big_chances":2,"home_goals":[{"min":"40","player":"Abdulelah Al Amri","type":"regular"}],"away_goals":[{"min":"79","player":"Maxi Araújo","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Uruguay win (53%) but ended 1–1.","💥 Saudi Arabia created 1 big chance.","💥 Uruguay created 2 big chances.","🎯 Uruguay dominated possession (62%)."],"nlbair":true,"stadium":"Monterrey Stadium (Estadio BBVA)","city":"Guadalupe"},{"date":"2026-06-16","home":"IRA","away":"NZE","g1":2,"g2":2,"pH":0.549,"pD":0.264,"pA":0.188,"lam":1.75,"mu":0.95,"home_xg":2.16,"away_xg":1.98,"real_xg":false,"home_shots":17,"away_shots":14,"home_sot":10,"away_sot":10,"home_poss":48.0,"away_poss":52.0,"home_big_chances":3,"away_big_chances":2,"home_goals":[{"min":"31","player":"Ramin Rezaeian","type":"regular"},{"min":"63","player":"Mohammad Mohebbi","type":"regular"}],"away_goals":[{"min":"6","player":"Elijah Just","type":"regular"},{"min":"54","player":"Elijah Just","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Iran win (55%) but ended 2–2.","💥 Iran created 3 big chances.","💥 New Zealand created 2 big chances."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-16","home":"FRA","away":"SEN","g1":3,"g2":1,"pH":0.62,"pD":0.242,"pA":0.138,"lam":1.9,"mu":0.8,"home_xg":2.44,"away_xg":1.05,"real_xg":true,"home_shots":11,"away_shots":6,"home_sot":10,"away_sot":4,"home_poss":51.9,"away_poss":48.1,"home_big_chances":4,"away_big_chances":2,"home_goals":[{"min":"65","player":"Kylian Mbappé","type":"regular"},{"min":"81","player":"Bradley Barcola","type":"regular"},{"min":"95","player":"Kylian Mbappé","type":"regular"}],"away_goals":[{"min":"94","player":"Ibrahim Mbaye","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (62%). Final: 3–1.","💥 France created 4 big chances.","💥 Senegal created 2 big chances."],"nlbair":true,"stadium":"New York New Jersey Stadium (MetLife Stadium)","city":"East Rutherford"},{"date":"2026-06-16","home":"IRQ","away":"NOR","g1":1,"g2":4,"pH":0.068,"pD":0.191,"pA":0.741,"lam":0.54,"mu":2.17,"home_xg":0.68,"away_xg":2.85,"real_xg":true,"home_shots":12,"away_shots":12,"home_sot":4,"away_sot":8,"home_poss":41.6,"away_poss":58.4,"home_big_chances":1,"away_big_chances":5,"home_goals":[{"min":"38","player":"Aymen Hussein","type":"regular"},{"min":"95","player":"Aymen Hussein","type":"regular"}],"away_goals":[{"min":"28","player":"Erling Haaland","type":"regular"},{"min":"42","player":"Erling Haaland","type":"regular"},{"min":"75","player":"Leo Østigård","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (74%). Final: 1–4.","⚡ Norway outscored xG (4 goals vs 2.9 xG) — clinical finishing.","💥 Iraq created 1 big chance.","💥 Norway created 5 big chances.","🎯 Norway: 4 goals from 12 shots (33% conversion)."],"nlbair":true,"stadium":"Boston Stadium (Gillette Stadium)","city":"Foxborough"},{"date":"2026-06-17","home":"ARG","away":"AGL","g1":3,"g2":0,"pH":0.697,"pD":0.212,"pA":0.091,"lam":2.06,"mu":0.64,"home_xg":1.0,"away_xg":0.43,"real_xg":false,"home_shots":10,"away_shots":7,"home_sot":6,"away_sot":3,"home_poss":47.6,"away_poss":52.4,"home_big_chances":1,"away_big_chances":0,"home_goals":[{"min":"16","player":"Lionel Messi","type":"regular"},{"min":"59","player":"Lionel Messi","type":"regular"},{"min":"75","player":"Lionel Messi","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (70%). Final: 3–0.","⚡ Argentina outscored xG (3 goals vs 1.0 xG) — clinical finishing.","💥 Argentina created 1 big chance.","🎯 Argentina: 3 goals from 10 shots (30% conversion)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-17","home":"AUT","away":"JOR","g1":3,"g2":1,"pH":0.603,"pD":0.248,"pA":0.149,"lam":1.87,"mu":0.84,"home_xg":2.4,"away_xg":1.09,"real_xg":false,"home_shots":11,"away_shots":12,"home_sot":5,"away_sot":8,"home_poss":58.4,"away_poss":41.6,"home_big_chances":4,"away_big_chances":0,"home_goals":[{"min":"20","player":"Romano Schmid","type":"regular"},{"min":"101","player":"Marko Arnautovic","type":"penalty"}],"away_goals":[{"min":"49","player":"Ali Olwan","type":"regular"},{"min":"75","player":"Yazan Al Arab","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (60%). Final: 3–1.","💥 Austria created 4 big chances."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-17","home":"POR","away":"RDC","g1":1,"g2":1,"pH":0.673,"pD":0.222,"pA":0.105,"lam":2.01,"mu":0.69,"home_xg":1.78,"away_xg":1.15,"real_xg":true,"home_shots":7,"away_shots":8,"home_sot":3,"away_sot":5,"home_poss":69.2,"away_poss":30.8,"home_big_chances":0,"away_big_chances":1,"home_goals":[{"min":"5","player":"João Neves","type":"regular"}],"away_goals":[{"min":"49","player":"Yoane Wissa","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Portugal win (67%) but ended 1–1.","💥 DR Congo created 1 big chance.","🎯 Portugal dominated possession (69%)."],"nlbair":true,"stadium":"Atlanta Stadium (Mercedes-Benz Stadium)","city":"Atlanta"},{"date":"2026-06-17","home":"ING","away":"CRO","g1":4,"g2":2,"pH":0.566,"pD":0.259,"pA":0.175,"lam":1.79,"mu":0.91,"home_xg":2.92,"away_xg":1.64,"real_xg":true,"home_shots":22,"away_shots":10,"home_sot":16,"away_sot":7,"home_poss":51.7,"away_poss":48.3,"home_big_chances":7,"away_big_chances":2,"home_goals":[{"min":"11","player":"Harry Kane","type":"penalty"},{"min":"41","player":"Harry Kane","type":"regular"},{"min":"46","player":"Jude Bellingham","type":"regular"},{"min":"84","player":"Marcus Rashford","type":"regular"}],"away_goals":[{"min":"35","player":"Martin Baturina","type":"regular"},{"min":"49","player":"Petar Musa","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (57%). Final: 4–2.","⚡ England outscored xG (4 goals vs 2.9 xG) — clinical finishing.","💥 England created 7 big chances.","💥 Croatia created 2 big chances."],"nlbair":true,"stadium":"Miami Stadium (Hard Rock Stadium)","city":"Miami Gardens"},{"date":"2026-06-17","home":"GAN","away":"PAN","g1":1,"g2":0,"pH":0.464,"pD":0.281,"pA":0.254,"lam":1.58,"mu":1.12,"home_xg":1.3,"away_xg":0.75,"real_xg":true,"home_shots":7.0,"away_shots":11.0,"home_sot":2.0,"away_sot":4.0,"home_poss":35.0,"away_poss":55.0,"home_big_chances":null,"away_big_chances":null,"home_goals":[{"min":"90","player":"Caleb Marfo Yirenkyi","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (46%). Final: 1–0."],"nlbair":false,"stadium":"Houston Stadium (NRG Stadium)","city":"Houston"},{"date":"2026-06-18","home":"UZB","away":"COL","g1":1,"g2":3,"pH":0.098,"pD":0.217,"pA":0.685,"lam":0.66,"mu":2.04,"home_xg":0.82,"away_xg":2.45,"real_xg":false,"home_shots":8,"away_shots":15,"home_sot":5,"away_sot":9,"home_poss":41.4,"away_poss":58.6,"home_big_chances":1,"away_big_chances":4,"home_goals":[{"min":"59","player":"Abbosbek Fayzullaev","type":"regular"}],"away_goals":[{"min":"39","player":"Daniel Muñoz","type":"regular"},{"min":"64","player":"Luis Díaz","type":"regular"},{"min":"98","player":"Jaminton Campaz","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (68%). Final: 1–3.","💥 Uzbekistan created 1 big chance.","💥 Colombia created 4 big chances."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-18","home":"TCH","away":"AFS","g1":1,"g2":1,"pH":0.407,"pD":0.288,"pA":0.305,"lam":1.46,"mu":1.24,"home_xg":1.35,"away_xg":1.15,"real_xg":true,"home_shots":14,"away_shots":17,"home_sot":6,"away_sot":12,"home_poss":40.8,"away_poss":59.2,"home_big_chances":3,"away_big_chances":1,"home_goals":[{"min":"5","player":"Michal Sadílek","type":"regular"}],"away_goals":[{"min":"82","player":"Teboho Mokoena","type":"penalty"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Czechia win (41%) but ended 1–1.","💥 Czechia created 3 big chances.","💥 South Africa created 1 big chance."],"nlbair":true,"stadium":"Los Angeles Stadium (SoFi Stadium)","city":"Inglewood"},{"date":"2026-06-18","home":"SUI","away":"BOS","g1":4,"g2":1,"pH":0.612,"pD":0.245,"pA":0.143,"lam":1.88,"mu":0.82,"home_xg":2.45,"away_xg":0.88,"real_xg":true,"home_shots":13,"away_shots":5,"home_sot":10,"away_sot":4,"home_poss":59.3,"away_poss":40.7,"home_big_chances":3,"away_big_chances":0,"home_goals":[{"min":"73","player":"Johan Manzambi","type":"regular"},{"min":"83","player":"Rubén Vargas","type":"regular"},{"min":"89","player":"Johan Manzambi","type":"regular"},{"min":"96","player":"Granit Xhaka","type":"penalty"}],"away_goals":[{"min":"92","player":"Ermin Mahmic","type":"regular"}],"reds":[["80","BOS","Tarik Muharemovic"]],"has_stats":true,"narrative":["✅ **Result matched prediction** (61%). Final: 4–1.","⚡ Switzerland outscored xG (4 goals vs 2.5 xG) — clinical finishing.","💥 Switzerland created 3 big chances.","🟥 Bosnia & Herzegovina down to 10 men (Tarik Muharemovic, 80').","🎯 Switzerland: 4 goals from 13 shots (31% conversion)."],"nlbair":true,"stadium":"Mexico City Stadium (Estadio Azteca)","city":"Mexico City"},{"date":"2026-06-18","home":"CAN","away":"CAT","g1":6,"g2":0,"pH":0.617,"pD":0.239,"pA":0.144,"lam":1.95,"mu":0.85,"home_xg":3.82,"away_xg":0.22,"real_xg":true,"home_shots":32,"away_shots":3,"home_sot":24,"away_sot":2,"home_poss":69.0,"away_poss":31.0,"home_big_chances":6,"away_big_chances":0,"home_goals":[{"min":"15","player":"Cyle Larin","type":"regular"},{"min":"28","player":"Jonathan David","type":"regular"},{"min":"47","player":"Jonathan David","type":"regular"},{"min":"63","player":"Nathan Saliba","type":"regular"},{"min":"91","player":"Jonathan David","type":"regular"}],"away_goals":[{"min":"74","player":"Mohammad Al Manai","type":"regular"}],"reds":[["60","CAT","Elamin Homam"],["85","CAT","Omer Assim Madibo"]],"has_stats":true,"narrative":["✅ **Result matched prediction** (62%). Final: 6–0.","⚡ Canada outscored xG (6 goals vs 3.8 xG) — clinical finishing.","💥 Canada created 6 big chances.","🟥 Qatar down to 10 men (Elamin Homam, 60').","🟥 Qatar down to 10 men (Omer Assim Madibo, 85').","🎯 Canada dominated possession (69%).","📉 Scoreline (6–0) far more one-sided than model expected (~1.9–0.9)."],"nlbair":true,"stadium":"Vancouver Stadium (BC Place)","city":"Vancouver"},{"date":"2026-06-19","home":"MEX","away":"COR","g1":1,"g2":0,"pH":0.577,"pD":0.25,"pA":0.173,"lam":1.88,"mu":0.95,"home_xg":1.88,"away_xg":0.95,"real_xg":false,"home_shots":null,"away_shots":null,"home_sot":null,"away_sot":null,"home_poss":null,"away_poss":null,"home_big_chances":null,"away_big_chances":null,"home_goals":[],"away_goals":[],"reds":[],"has_stats":false,"narrative":["✅ **Result matched prediction** (58%). Final: 1–0.","🧱 Mexico underperformed xG (1 goals vs 1.9 xG).","🧱 South Korea underperformed xG (0 goals vs 1.0 xG)."],"nlbair":false,"stadium":"","city":""},{"date":"2026-06-19","home":"EUA","away":"AUS","g1":2,"g2":0,"pH":0.559,"pD":0.255,"pA":0.186,"lam":1.84,"mu":0.99,"home_xg":1.21,"away_xg":0.32,"real_xg":true,"home_shots":10,"away_shots":6,"home_sot":8,"away_sot":3,"home_poss":59.4,"away_poss":40.6,"home_big_chances":2,"away_big_chances":0,"home_goals":[{"min":"42","player":"Alex Freeman","type":"regular"}],"away_goals":[{"min":"10","player":"Cameron Burgess","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (56%). Final: 2–0.","💥 USA created 2 big chances."],"nlbair":true,"stadium":"Toronto Stadium (BMO Field)","city":"Toronto"},{"date":"2026-06-19","home":"ESC","away":"MAR","g1":0,"g2":1,"pH":0.134,"pD":0.24,"pA":0.626,"lam":0.79,"mu":1.91,"home_xg":0.97,"away_xg":0.54,"real_xg":true,"home_shots":6,"away_shots":12,"home_sot":3,"away_sot":6,"home_poss":42.4,"away_poss":57.6,"home_big_chances":1,"away_big_chances":2,"home_goals":[],"away_goals":[{"min":"1","player":"Ismael Saibari","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (63%). Final: 0–1.","🧱 Scotland underperformed xG (0 goals vs 1.0 xG).","💥 Scotland created 1 big chance.","💥 Morocco created 2 big chances."],"nlbair":true,"stadium":"Dallas Stadium (AT&T Stadium)","city":"Arlington"},{"date":"2026-06-20","home":"BRA","away":"HAI","g1":3,"g2":0,"pH":0.842,"pD":0.133,"pA":0.025,"lam":2.45,"mu":0.3,"home_xg":2.28,"away_xg":0.41,"real_xg":false,"home_shots":8,"away_shots":7,"home_sot":6,"away_sot":4,"home_poss":55.3,"away_poss":44.7,"home_big_chances":5,"away_big_chances":0,"home_goals":[{"min":"22","player":"Matheus Cunha","type":"regular"},{"min":"35","player":"Matheus Cunha","type":"regular"},{"min":"47","player":"Vinícius Júnior","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (84%). Final: 3–0.","💥 Brazil created 5 big chances.","🎯 Brazil: 3 goals from 8 shots (38% conversion)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-20","home":"TUR","away":"PAR","g1":0,"g2":1,"pH":0.333,"pD":0.29,"pA":0.377,"lam":1.3,"mu":1.4,"home_xg":3.77,"away_xg":0.48,"real_xg":false,"home_shots":32,"away_shots":7,"home_sot":17,"away_sot":4,"home_poss":68.8,"away_poss":31.2,"home_big_chances":5,"away_big_chances":0,"home_goals":[],"away_goals":[{"min":"1","player":"Matías Galarza","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (38%). Final: 0–1.","🧱 Turkey underperformed xG (0 goals vs 3.8 xG).","💥 Turkey created 5 big chances.","🎯 Turkey dominated possession (69%)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-20","home":"HOL","away":"SUE","g1":5,"g2":1,"pH":0.539,"pD":0.266,"pA":0.195,"lam":1.73,"mu":0.97,"home_xg":3.45,"away_xg":0.88,"real_xg":true,"home_shots":10,"away_shots":16,"home_sot":8,"away_sot":11,"home_poss":50.9,"away_poss":49.1,"home_big_chances":3,"away_big_chances":1,"home_goals":[{"min":"4","player":"Brian Brobbey","type":"regular"},{"min":"16","player":"Brian Brobbey","type":"regular"},{"min":"46","player":"Cody Gakpo","type":"regular"},{"min":"53","player":"Cody Gakpo","type":"regular"},{"min":"88","player":"Crysencio Summerville","type":"regular"}],"away_goals":[{"min":"58","player":"Anthony Elanga","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (54%). Final: 5–1.","⚡ Netherlands outscored xG (5 goals vs 3.5 xG) — clinical finishing.","💥 Netherlands created 3 big chances.","💥 Sweden created 1 big chance.","🎯 Netherlands: 5 goals from 10 shots (50% conversion).","📉 Scoreline (5–1) far more one-sided than model expected (~1.7–1.0)."],"nlbair":true,"stadium":"Philadelphia Stadium (Lincoln Financial Field)","city":"Philadelphia"},{"date":"2026-06-20","home":"ALE","away":"CDM","g1":2,"g2":1,"pH":0.59,"pD":0.252,"pA":0.158,"lam":1.84,"mu":0.86,"home_xg":1.85,"away_xg":0.72,"real_xg":true,"home_shots":16,"away_shots":9,"home_sot":11,"away_sot":7,"home_poss":55.6,"away_poss":44.4,"home_big_chances":5,"away_big_chances":2,"home_goals":[{"min":"67","player":"Deniz Undav","type":"regular"},{"min":"93","player":"Deniz Undav","type":"regular"}],"away_goals":[{"min":"29","player":"Franck Kessie","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (59%). Final: 2–1.","💥 Germany created 5 big chances.","💥 Ivory Coast created 2 big chances."],"nlbair":true,"stadium":"Boston Stadium (Gillette Stadium)","city":"Foxborough"},{"date":"2026-06-21","home":"EQU","away":"CUR","g1":0,"g2":0,"pH":0.618,"pD":0.243,"pA":0.139,"lam":1.9,"mu":0.81,"home_xg":4.27,"away_xg":0.7,"real_xg":false,"home_shots":27,"away_shots":10,"home_sot":17,"away_sot":6,"home_poss":66.7,"away_poss":33.3,"home_big_chances":6,"away_big_chances":0,"home_goals":[],"away_goals":[],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Ecuador win (62%) but ended 0–0.","🧱 Ecuador underperformed xG (0 goals vs 4.3 xG).","💥 Ecuador created 6 big chances.","🎯 Ecuador dominated possession (67%)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-21","home":"TUN","away":"JAP","g1":0,"g2":4,"pH":0.152,"pD":0.249,"pA":0.598,"lam":0.85,"mu":1.85,"home_xg":0.15,"away_xg":2.09,"real_xg":false,"home_shots":2,"away_shots":11,"home_sot":1,"away_sot":8,"home_poss":41.2,"away_poss":58.8,"home_big_chances":0,"away_big_chances":4,"home_goals":[],"away_goals":[{"min":"3","player":"Daichi Kamada","type":"regular"},{"min":"30","player":"Ayase Ueda","type":"regular"},{"min":"68","player":"Junya Ito","type":"regular"},{"min":"82","player":"Ayase Ueda","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (60%). Final: 0–4.","⚡ Japan outscored xG (4 goals vs 2.1 xG) — clinical finishing.","💥 Japan created 4 big chances.","🎯 Japan: 4 goals from 11 shots (36% conversion).","📉 Scoreline (0–4) far more one-sided than model expected (~0.8–1.9)."],"nlbair":true,"stadium":"","city":""},{"date":"2026-06-21","home":"ESP","away":"ARS","g1":4,"g2":0,"pH":0.749,"pD":0.187,"pA":0.064,"lam":2.18,"mu":0.52,"home_xg":3.28,"away_xg":0.25,"real_xg":true,"home_shots":22,"away_shots":4,"home_sot":11,"away_sot":3,"home_poss":63.4,"away_poss":36.6,"home_big_chances":5,"away_big_chances":0,"home_goals":[{"min":"9","player":"Lamine Yamal","type":"regular"},{"min":"20","player":"Mikel Oyarzabal","type":"regular"},{"min":"23","player":"Mikel Oyarzabal","type":"regular"}],"away_goals":[{"min":"48","player":"Hassan Al Tambakti","type":"regular"}],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (75%). Final: 4–0.","💥 Spain created 5 big chances.","🎯 Spain dominated possession (63%).","📉 Scoreline (4–0) far more one-sided than model expected (~2.2–0.5)."],"nlbair":true,"stadium":"San Francisco Bay Area Stadium (Levi's Stadium)","city":"Santa Clara"},{"date":"2026-06-21","home":"BEL","away":"IRA","g1":0,"g2":0,"pH":0.486,"pD":0.278,"pA":0.236,"lam":1.62,"mu":1.08,"home_xg":1.45,"away_xg":0.62,"real_xg":true,"home_shots":23.0,"away_shots":7.0,"home_sot":8.0,"away_sot":2.0,"home_poss":59.0,"away_poss":30.0,"home_big_chances":null,"away_big_chances":null,"home_goals":[],"away_goals":[],"reds":[["66","BEL","Hany Gamal Mohamed Hany"]],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Belgium win (49%) but ended 0–0.","🧱 Belgium underperformed xG (0 goals vs 1.4 xG).","🟥 Belgium down to 10 men (Hany Gamal Mohamed Hany, 66')."],"nlbair":false,"stadium":"Houston Stadium (NRG Stadium)","city":"Houston"},{"date":"2026-06-21","home":"URU","away":"CAB","g1":2,"g2":2,"pH":0.557,"pD":0.261,"pA":0.181,"lam":1.77,"mu":0.93,"home_xg":1.65,"away_xg":1.1,"real_xg":true,"home_shots":17.0,"away_shots":12.0,"home_sot":7.0,"away_sot":4.0,"home_poss":65.0,"away_poss":35.0,"home_big_chances":null,"away_big_chances":null,"home_goals":[{"min":"44","player":"Maximiliano Javier Araujo","type":"regular"},{"min":"45","player":"Agustin Canobbio","type":"regular"}],"away_goals":[{"min":"21","player":"Lenini Kevin Pina","type":"regular"},{"min":"61","player":"Sandro Helio Varela","type":"regular"}],"reds":[],"has_stats":true,"narrative":["🚨 **Upset**: model predicted Uruguay win (56%) but ended 2–2.","⚡ Cape Verde outscored xG (2 goals vs 1.1 xG) — clinical finishing.","🎯 Uruguay dominated possession (65%)."],"nlbair":false,"stadium":"New York New Jersey Stadium (MetLife Stadium)","city":"East Rutherford"},{"date":"2026-06-22","home":"NZE","away":"EGI","g1":1,"g2":3,"pH":0.204,"pD":0.269,"pA":0.527,"lam":0.99,"mu":1.71,"home_xg":0.99,"away_xg":1.71,"real_xg":false,"home_shots":null,"away_shots":null,"home_sot":null,"away_sot":null,"home_poss":null,"away_poss":null,"home_big_chances":null,"away_big_chances":null,"home_goals":[],"away_goals":[],"reds":[],"has_stats":false,"narrative":["✅ **Result matched prediction** (53%). Final: 1–3.","⚡ Egypt outscored xG (3 goals vs 1.7 xG) — clinical finishing."],"nlbair":false,"stadium":"","city":""},{"date":"2026-06-22","home":"ARG","away":"AUT","g1":2,"g2":0,"pH":0.682,"pD":0.218,"pA":0.1,"lam":2.03,"mu":0.67,"home_xg":1.78,"away_xg":0.55,"real_xg":true,"home_shots":12.0,"away_shots":6.0,"home_sot":5.0,"away_sot":1.0,"home_poss":54.0,"away_poss":46.0,"home_big_chances":null,"away_big_chances":null,"home_goals":[{"min":"38","player":"Lionel Andrés Messi","type":"regular"},{"min":"90","player":"Lionel Andrés Messi","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (68%). Final: 2–0."],"nlbair":false,"stadium":"Monterrey Stadium (Estadio BBVA)","city":"Guadalupe"},{"date":"2026-06-22","home":"FRA","away":"IRQ","g1":3,"g2":0,"pH":0.843,"pD":0.132,"pA":0.025,"lam":2.46,"mu":0.3,"home_xg":2.21,"away_xg":0.45,"real_xg":true,"home_shots":19.0,"away_shots":4.0,"home_sot":5.0,"away_sot":0.0,"home_poss":56.0,"away_poss":44.0,"home_big_chances":null,"away_big_chances":null,"home_goals":[{"min":"14","player":"Kylian Mbappe","type":"regular"},{"min":"54","player":"Kylian Mbappe","type":"regular"},{"min":"66","player":"Masour Ousmane Dembele","type":"regular"}],"away_goals":[],"reds":[],"has_stats":true,"narrative":["✅ **Result matched prediction** (84%). Final: 3–0."],"nlbair":false,"stadium":"Dallas Stadium (AT&T Stadium)","city":"Arlington"},{"date":"2026-06-23","home":"NOR","away":"SEN","g1":3,"g2":2,"pH":0.478,"pD":0.279,"pA":0.243,"lam":1.61,"mu":1.09,"home_xg":1.61,"away_xg":1.09,"real_xg":false,"home_shots":null,"away_shots":null,"home_sot":null,"away_sot":null,"home_poss":null,"away_poss":null,"home_big_chances":null,"away_big_chances":null,"home_goals":[],"away_goals":[],"reds":[],"has_stats":false,"narrative":["✅ **Result matched prediction** (48%). Final: 3–2.","⚡ Norway outscored xG (3 goals vs 1.6 xG) — clinical finishing.","⚡ Senegal outscored xG (2 goals vs 1.1 xG) — clinical finishing."],"nlbair":false,"stadium":"","city":""},{"date":"2026-06-23","home":"JOR","away":"AGL","g1":1,"g2":2,"pH":0.16,"pD":0.253,"pA":0.588,"lam":0.87,"mu":1.83,"home_xg":0.87,"away_xg":1.83,"real_xg":false,"home_shots":null,"away_shots":null,"home_sot":null,"away_sot":null,"home_poss":null,"away_poss":null,"home_big_chances":null,"away_big_chances":null,"home_goals":[],"away_goals":[],"reds":[],"has_stats":false,"narrative":["✅ **Result matched prediction** (59%). Final: 1–2."],"nlbair":false,"stadium":"","city":""},{"date":"2026-06-23","home":"POR","away":"UZB","g1":5,"g2":0,"pH":0.735,"pD":0.194,"pA":0.071,"lam":2.15,"mu":0.55,"home_xg":2.15,"away_xg":0.55,"real_xg":false,"home_shots":null,"away_shots":null,"home_sot":null,"away_sot":null,"home_poss":null,"away_poss":null,"home_big_chances":null,"away_big_chances":null,"home_goals":[],"away_goals":[],"reds":[],"has_stats":false,"narrative":["✅ **Result matched prediction** (73%). Final: 5–0.","⚡ Portugal outscored xG (5 goals vs 2.2 xG) — clinical finishing.","📉 Scoreline (5–0) far more one-sided than model expected (~2.2–0.6)."],"nlbair":false,"stadium":"Kansas City Stadium (Arrowhead Stadium)","city":"Kansas City"}],"real_xg_games":27,"nlbair_games":34,"narratives_built":45,"source":"football-data.org + mominullptr + nlbair/wc2026-events"}
+{
+  "updated_at": "2026-06-23T23:39:10.831641+00:00",
+  "teams": [
+    {
+      "code": "EUA",
+      "name": "USA",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 1,
+      "xg_for": 3.9,
+      "xg_against": 1.32,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.105879016753078,
+      "big_chances_created": 6,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "PAR",
+          "date": "2026-06-13",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 2.69,
+          "xga": 1.0,
+          "result": "W",
+          "p_win": 0.649
+        },
+        {
+          "vs": "AUS",
+          "date": "2026-06-19",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 1.21,
+          "xga": 0.32,
+          "result": "W",
+          "p_win": 0.559
+        }
+      ],
+      "xpts": 4.11,
+      "delta_pts": 1.89,
+      "xgf": 1.95,
+      "xga": 0.66
+    },
+    {
+      "code": "NOR",
+      "name": "Norway",
+      "games": 2,
+      "goals_for": 7,
+      "goals_against": 3,
+      "xg_for": 5.59,
+      "xg_against": 2.8600000000000003,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.127620513422666,
+      "big_chances_created": 10,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "IRQ",
+          "date": "2026-06-16",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 2.85,
+          "xga": 0.68,
+          "result": "W",
+          "p_win": 0.741
+        },
+        {
+          "vs": "SEN",
+          "date": "2026-06-23",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.74,
+          "xga": 2.18,
+          "result": "W",
+          "p_win": 0.478
+        }
+      ],
+      "xpts": 4.13,
+      "delta_pts": 1.87,
+      "xgf": 2.79,
+      "xga": 1.43
+    },
+    {
+      "code": "GAN",
+      "name": "Ghana",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 0,
+      "xg_for": 1.78,
+      "xg_against": 2.81,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 2.2264922341292306,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "PAN",
+          "date": "2026-06-17",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.3,
+          "xga": 0.75,
+          "result": "W",
+          "p_win": 0.489
+        },
+        {
+          "vs": "ING",
+          "date": "2026-06-23",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.48,
+          "xga": 2.06,
+          "result": "D",
+          "p_win": 0.091
+        }
+      ],
+      "xpts": 2.23,
+      "delta_pts": 1.77,
+      "xgf": 0.89,
+      "xga": 1.41
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico",
+      "games": 2,
+      "goals_for": 3,
+      "goals_against": 0,
+      "xg_for": 3.715,
+      "xg_against": 1.4700000000000002,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.462121531935452,
+      "big_chances_created": 2,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AFS",
+          "date": "2026-06-11",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 1.84,
+          "xga": 0.52,
+          "result": "W",
+          "p_win": 0.77
+        },
+        {
+          "vs": "COR",
+          "date": "2026-06-19",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.88,
+          "xga": 0.95,
+          "result": "W",
+          "p_win": 0.577
+        }
+      ],
+      "xpts": 4.46,
+      "delta_pts": 1.54,
+      "xgf": 1.86,
+      "xga": 0.74
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "games": 2,
+      "goals_for": 5,
+      "goals_against": 0,
+      "xg_for": 2.7800000000000002,
+      "xg_against": 0.98,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.567671096553157,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AGL",
+          "date": "2026-06-17",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 1.0,
+          "xga": 0.43,
+          "result": "W",
+          "p_win": 0.697
+        },
+        {
+          "vs": "AUT",
+          "date": "2026-06-22",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 1.78,
+          "xga": 0.55,
+          "result": "W",
+          "p_win": 0.682
+        }
+      ],
+      "xpts": 4.57,
+      "delta_pts": 1.43,
+      "xgf": 1.39,
+      "xga": 0.49
+    },
+    {
+      "code": "ALE",
+      "name": "Germany",
+      "games": 2,
+      "goals_for": 9,
+      "goals_against": 2,
+      "xg_for": 6.67,
+      "xg_against": 1.16,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.594705575892773,
+      "big_chances_created": 11,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CUR",
+          "date": "2026-06-14",
+          "gf": 7,
+          "ga": 1,
+          "xgf": 4.82,
+          "xga": 0.44,
+          "result": "W",
+          "p_win": 0.805
+        },
+        {
+          "vs": "CDM",
+          "date": "2026-06-20",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 1.85,
+          "xga": 0.72,
+          "result": "W",
+          "p_win": 0.59
+        }
+      ],
+      "xpts": 4.59,
+      "delta_pts": 1.41,
+      "xgf": 3.33,
+      "xga": 0.58
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 1,
+      "xg_for": 4.65,
+      "xg_against": 1.5,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.763763804938384,
+      "big_chances_created": 9,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "SEN",
+          "date": "2026-06-16",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.44,
+          "xga": 1.05,
+          "result": "W",
+          "p_win": 0.62
+        },
+        {
+          "vs": "IRQ",
+          "date": "2026-06-22",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 2.21,
+          "xga": 0.45,
+          "result": "W",
+          "p_win": 0.843
+        }
+      ],
+      "xpts": 4.76,
+      "delta_pts": 1.24,
+      "xgf": 2.33,
+      "xga": 0.75
+    },
+    {
+      "code": "EGI",
+      "name": "Egypt",
+      "games": 2,
+      "goals_for": 4,
+      "goals_against": 2,
+      "xg_for": 3.56,
+      "xg_against": 3.27,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 2.7777827142474263,
+      "big_chances_created": 5,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BEL",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.12,
+          "xga": 1.58,
+          "result": "D",
+          "p_win": 0.218
+        },
+        {
+          "vs": "NZE",
+          "date": "2026-06-22",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.44,
+          "xga": 1.69,
+          "result": "W",
+          "p_win": 0.527
+        }
+      ],
+      "xpts": 2.78,
+      "delta_pts": 1.22,
+      "xgf": 1.78,
+      "xga": 1.64
+    },
+    {
+      "code": "CDM",
+      "name": "Ivory Coast",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 1.82,
+      "xg_against": 2.8,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 1.9951016025090038,
+      "big_chances_created": 2,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "EQU",
+          "date": "2026-06-14",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.1,
+          "xga": 0.95,
+          "result": "W",
+          "p_win": 0.327
+        },
+        {
+          "vs": "ALE",
+          "date": "2026-06-20",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 0.72,
+          "xga": 1.85,
+          "result": "L",
+          "p_win": 0.158
+        }
+      ],
+      "xpts": 2.0,
+      "delta_pts": 1.0,
+      "xgf": 0.91,
+      "xga": 1.4
+    },
+    {
+      "code": "PAR",
+      "name": "Paraguay",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 4,
+      "xg_for": 1.48,
+      "xg_against": 6.46,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.0206250046920564,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "EUA",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 4,
+          "xgf": 1.0,
+          "xga": 2.69,
+          "result": "L",
+          "p_win": 0.125
+        },
+        {
+          "vs": "TUR",
+          "date": "2026-06-20",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 0.48,
+          "xga": 3.77,
+          "result": "W",
+          "p_win": 0.377
+        }
+      ],
+      "xpts": 2.02,
+      "delta_pts": 0.98,
+      "xgf": 0.74,
+      "xga": 3.23
+    },
+    {
+      "code": "CAB",
+      "name": "Cape Verde",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 1.4500000000000002,
+      "xg_against": 3.8,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "points": 2,
+      "expected_points": 1.130975046129786,
+      "big_chances_created": 2,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "ESP",
+          "date": "2026-06-15",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.35,
+          "xga": 2.15,
+          "result": "D",
+          "p_win": 0.051
+        },
+        {
+          "vs": "URU",
+          "date": "2026-06-21",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.1,
+          "xga": 1.65,
+          "result": "D",
+          "p_win": 0.181
+        }
+      ],
+      "xpts": 1.13,
+      "delta_pts": 0.87,
+      "xgf": 0.73,
+      "xga": 1.9
+    },
+    {
+      "code": "JAP",
+      "name": "Japan",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 2,
+      "xg_for": 3.91,
+      "xg_against": 2.1,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 3.1848933055089925,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "HOL",
+          "date": "2026-06-14",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.82,
+          "xga": 1.95,
+          "result": "D",
+          "p_win": 0.285
+        },
+        {
+          "vs": "TUN",
+          "date": "2026-06-21",
+          "gf": 4,
+          "ga": 0,
+          "xgf": 2.09,
+          "xga": 0.15,
+          "result": "W",
+          "p_win": 0.598
+        }
+      ],
+      "xpts": 3.18,
+      "delta_pts": 0.82,
+      "xgf": 1.96,
+      "xga": 1.05
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 1,
+      "xg_for": 1.6400000000000001,
+      "xg_against": 2.59,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 3.268319885092101,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BRA",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.1,
+          "xga": 1.62,
+          "result": "D",
+          "p_win": 0.288
+        },
+        {
+          "vs": "ESC",
+          "date": "2026-06-19",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 0.54,
+          "xga": 0.97,
+          "result": "W",
+          "p_win": 0.626
+        }
+      ],
+      "xpts": 3.27,
+      "delta_pts": 0.73,
+      "xgf": 0.82,
+      "xga": 1.29
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "games": 1,
+      "goals_for": 3,
+      "goals_against": 1,
+      "xg_for": 2.45,
+      "xg_against": 0.82,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "points": 3,
+      "expected_points": 2.2707035655698866,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "UZB",
+          "date": "2026-06-18",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.45,
+          "xga": 0.82,
+          "result": "W",
+          "p_win": 0.685
+        }
+      ],
+      "xpts": 2.27,
+      "delta_pts": 0.73,
+      "xgf": 2.45,
+      "xga": 0.82
+    },
+    {
+      "code": "HOL",
+      "name": "Netherlands",
+      "games": 2,
+      "goals_for": 7,
+      "goals_against": 3,
+      "xg_for": 5.4,
+      "xg_against": 2.7,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 3.456916949838082,
+      "big_chances_created": 3,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "JAP",
+          "date": "2026-06-14",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.95,
+          "xga": 1.82,
+          "result": "D",
+          "p_win": 0.429
+        },
+        {
+          "vs": "SUE",
+          "date": "2026-06-20",
+          "gf": 5,
+          "ga": 1,
+          "xgf": 3.45,
+          "xga": 0.88,
+          "result": "W",
+          "p_win": 0.539
+        }
+      ],
+      "xpts": 3.46,
+      "delta_pts": 0.54,
+      "xgf": 2.7,
+      "xga": 1.35
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 1.29,
+      "xg_against": 3.98,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.5016350352963785,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "TUR",
+          "date": "2026-06-14",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 0.97,
+          "xga": 2.77,
+          "result": "W",
+          "p_win": 0.469
+        },
+        {
+          "vs": "EUA",
+          "date": "2026-06-19",
+          "gf": 0,
+          "ga": 2,
+          "xgf": 0.32,
+          "xga": 1.21,
+          "result": "L",
+          "p_win": 0.186
+        }
+      ],
+      "xpts": 2.5,
+      "delta_pts": 0.5,
+      "xgf": 0.65,
+      "xga": 1.99
+    },
+    {
+      "code": "AGL",
+      "name": "Algeria",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 4,
+      "xg_for": 2.8600000000000003,
+      "xg_against": 1.97,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.5008548524853813,
+      "big_chances_created": 3,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "ARG",
+          "date": "2026-06-17",
+          "gf": 0,
+          "ga": 3,
+          "xgf": 0.43,
+          "xga": 1.0,
+          "result": "L",
+          "p_win": 0.091
+        },
+        {
+          "vs": "JOR",
+          "date": "2026-06-23",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 2.43,
+          "xga": 0.97,
+          "result": "W",
+          "p_win": 0.588
+        }
+      ],
+      "xpts": 2.5,
+      "delta_pts": 0.5,
+      "xgf": 1.43,
+      "xga": 0.98
+    },
+    {
+      "code": "ESC",
+      "name": "Scotland",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 1,
+      "xg_for": 2.41,
+      "xg_against": 1.87,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.525065228548888,
+      "big_chances_created": 3,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "HAI",
+          "date": "2026-06-14",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.44,
+          "xga": 1.33,
+          "result": "W",
+          "p_win": 0.539
+        },
+        {
+          "vs": "MAR",
+          "date": "2026-06-19",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 0.97,
+          "xga": 0.54,
+          "result": "L",
+          "p_win": 0.134
+        }
+      ],
+      "xpts": 2.53,
+      "delta_pts": 0.47,
+      "xgf": 1.21,
+      "xga": 0.94
+    },
+    {
+      "code": "RDC",
+      "name": "DR Congo",
+      "games": 1,
+      "goals_for": 1,
+      "goals_against": 1,
+      "xg_for": 1.15,
+      "xg_against": 1.78,
+      "wins": 0,
+      "draws": 1,
+      "losses": 0,
+      "points": 1,
+      "expected_points": 0.5370243485272601,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "POR",
+          "date": "2026-06-17",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.15,
+          "xga": 1.78,
+          "result": "D",
+          "p_win": 0.105
+        }
+      ],
+      "xpts": 0.54,
+      "delta_pts": 0.46,
+      "xgf": 1.15,
+      "xga": 1.78
+    },
+    {
+      "code": "COR",
+      "name": "South Korea",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 3.43,
+      "xg_against": 3.045,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.571314731231558,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "TCH",
+          "date": "2026-06-12",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 2.48,
+          "xga": 1.17,
+          "result": "W",
+          "p_win": 0.51
+        },
+        {
+          "vs": "MEX",
+          "date": "2026-06-19",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 0.95,
+          "xga": 1.88,
+          "result": "L",
+          "p_win": 0.173
+        }
+      ],
+      "xpts": 2.57,
+      "delta_pts": 0.43,
+      "xgf": 1.72,
+      "xga": 1.52
+    },
+    {
+      "code": "AUT",
+      "name": "Austria",
+      "games": 2,
+      "goals_for": 3,
+      "goals_against": 3,
+      "xg_for": 2.95,
+      "xg_against": 2.87,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.574620575975998,
+      "big_chances_created": 5,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "JOR",
+          "date": "2026-06-17",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.4,
+          "xga": 1.09,
+          "result": "W",
+          "p_win": 0.603
+        },
+        {
+          "vs": "ARG",
+          "date": "2026-06-22",
+          "gf": 0,
+          "ga": 2,
+          "xgf": 0.55,
+          "xga": 1.78,
+          "result": "L",
+          "p_win": 0.1
+        }
+      ],
+      "xpts": 2.57,
+      "delta_pts": 0.43,
+      "xgf": 1.48,
+      "xga": 1.44
+    },
+    {
+      "code": "SUE",
+      "name": "Sweden",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 6,
+      "xg_for": 3.1999999999999997,
+      "xg_against": 3.8200000000000003,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "expected_points": 2.5943594714558595,
+      "big_chances_created": 5,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "TUN",
+          "date": "2026-06-15",
+          "gf": 5,
+          "ga": 1,
+          "xgf": 2.32,
+          "xga": 0.37,
+          "result": "W",
+          "p_win": 0.489
+        },
+        {
+          "vs": "HOL",
+          "date": "2026-06-20",
+          "gf": 1,
+          "ga": 5,
+          "xgf": 0.88,
+          "xga": 3.45,
+          "result": "L",
+          "p_win": 0.195
+        }
+      ],
+      "xpts": 2.59,
+      "delta_pts": 0.41,
+      "xgf": 1.6,
+      "xga": 1.91
+    },
+    {
+      "code": "CUR",
+      "name": "Curaçao",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 7,
+      "xg_for": 1.14,
+      "xg_against": 9.09,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 0.9321922885789289,
+      "big_chances_created": 0,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "ALE",
+          "date": "2026-06-14",
+          "gf": 1,
+          "ga": 7,
+          "xgf": 0.44,
+          "xga": 4.82,
+          "result": "L",
+          "p_win": 0.038
+        },
+        {
+          "vs": "EQU",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.7,
+          "xga": 4.27,
+          "result": "D",
+          "p_win": 0.139
+        }
+      ],
+      "xpts": 0.93,
+      "delta_pts": 0.07,
+      "xgf": 0.57,
+      "xga": 4.54
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "games": 2,
+      "goals_for": 7,
+      "goals_against": 1,
+      "xg_for": 5.17,
+      "xg_against": 1.2,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 4.152324819932845,
+      "big_chances_created": 8,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BOS",
+          "date": "2026-06-12",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.35,
+          "xga": 0.98,
+          "result": "D",
+          "p_win": 0.607
+        },
+        {
+          "vs": "CAT",
+          "date": "2026-06-18",
+          "gf": 6,
+          "ga": 0,
+          "xgf": 3.82,
+          "xga": 0.22,
+          "result": "W",
+          "p_win": 0.617
+        }
+      ],
+      "xpts": 4.15,
+      "delta_pts": -0.15,
+      "xgf": 2.58,
+      "xga": 0.6
+    },
+    {
+      "code": "SUI",
+      "name": "Switzerland",
+      "games": 2,
+      "goals_for": 5,
+      "goals_against": 2,
+      "xg_for": 3.99,
+      "xg_against": 1.6600000000000001,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 4.188581108720262,
+      "big_chances_created": 9,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CAT",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.54,
+          "xga": 0.78,
+          "result": "D",
+          "p_win": 0.622
+        },
+        {
+          "vs": "BOS",
+          "date": "2026-06-18",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 2.45,
+          "xga": 0.88,
+          "result": "W",
+          "p_win": 0.612
+        }
+      ],
+      "xpts": 4.19,
+      "delta_pts": -0.19,
+      "xgf": 2.0,
+      "xga": 0.83
+    },
+    {
+      "code": "ING",
+      "name": "England",
+      "games": 2,
+      "goals_for": 4,
+      "goals_against": 2,
+      "xg_for": 4.98,
+      "xg_against": 2.12,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 4.19551676930468,
+      "big_chances_created": 9,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CRO",
+          "date": "2026-06-17",
+          "gf": 4,
+          "ga": 2,
+          "xgf": 2.92,
+          "xga": 1.64,
+          "result": "W",
+          "p_win": 0.541
+        },
+        {
+          "vs": "GAN",
+          "date": "2026-06-23",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 2.06,
+          "xga": 0.48,
+          "result": "D",
+          "p_win": 0.698
+        }
+      ],
+      "xpts": 4.2,
+      "delta_pts": -0.2,
+      "xgf": 2.49,
+      "xga": 1.06
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil",
+      "games": 2,
+      "goals_for": 4,
+      "goals_against": 1,
+      "xg_for": 3.9,
+      "xg_against": 1.51,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 4.221581231293559,
+      "big_chances_created": 6,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "MAR",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.62,
+          "xga": 1.1,
+          "result": "D",
+          "p_win": 0.426
+        },
+        {
+          "vs": "HAI",
+          "date": "2026-06-20",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 2.28,
+          "xga": 0.41,
+          "result": "W",
+          "p_win": 0.842
+        }
+      ],
+      "xpts": 4.22,
+      "delta_pts": -0.22,
+      "xgf": 1.95,
+      "xga": 0.76
+    },
+    {
+      "code": "ARS",
+      "name": "Saudi Arabia",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 5,
+      "xg_for": 1.1,
+      "xg_against": 5.04,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 1.2635614760029164,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "URU",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 0.85,
+          "xga": 1.76,
+          "result": "D",
+          "p_win": 0.205
+        },
+        {
+          "vs": "ESP",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 4,
+          "xgf": 0.25,
+          "xga": 3.28,
+          "result": "L",
+          "p_win": 0.064
+        }
+      ],
+      "xpts": 1.26,
+      "delta_pts": -0.26,
+      "xgf": 0.55,
+      "xga": 2.52
+    },
+    {
+      "code": "CAT",
+      "name": "Qatar",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 7,
+      "xg_for": 1.0,
+      "xg_against": 5.359999999999999,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 1.321404289458629,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "SUI",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 0.78,
+          "xga": 1.54,
+          "result": "D",
+          "p_win": 0.136
+        },
+        {
+          "vs": "CAN",
+          "date": "2026-06-18",
+          "gf": 0,
+          "ga": 6,
+          "xgf": 0.22,
+          "xga": 3.82,
+          "result": "L",
+          "p_win": 0.144
+        }
+      ],
+      "xpts": 1.32,
+      "delta_pts": -0.32,
+      "xgf": 0.5,
+      "xga": 2.68
+    },
+    {
+      "code": "BOS",
+      "name": "Bosnia & Herzegovina",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 5,
+      "xg_for": 1.8599999999999999,
+      "xg_against": 3.8000000000000003,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 1.3710919482680577,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CAN",
+          "date": "2026-06-12",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 0.98,
+          "xga": 1.35,
+          "result": "D",
+          "p_win": 0.151
+        },
+        {
+          "vs": "SUI",
+          "date": "2026-06-18",
+          "gf": 1,
+          "ga": 4,
+          "xgf": 0.88,
+          "xga": 2.45,
+          "result": "L",
+          "p_win": 0.143
+        }
+      ],
+      "xpts": 1.37,
+      "delta_pts": -0.37,
+      "xgf": 0.93,
+      "xga": 1.9
+    },
+    {
+      "code": "AFS",
+      "name": "South Africa",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 3,
+      "xg_for": 1.67,
+      "xg_against": 3.1900000000000004,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 1.5497804709507026,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "MEX",
+          "date": "2026-06-11",
+          "gf": 0,
+          "ga": 2,
+          "xgf": 0.52,
+          "xga": 1.84,
+          "result": "L",
+          "p_win": 0.058
+        },
+        {
+          "vs": "TCH",
+          "date": "2026-06-18",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.15,
+          "xga": 1.35,
+          "result": "D",
+          "p_win": 0.305
+        }
+      ],
+      "xpts": 1.55,
+      "delta_pts": -0.55,
+      "xgf": 0.83,
+      "xga": 1.6
+    },
+    {
+      "code": "IRQ",
+      "name": "Iraq",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 7,
+      "xg_for": 1.1300000000000001,
+      "xg_against": 5.0600000000000005,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 0.6005070357726093,
+      "big_chances_created": 2,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "NOR",
+          "date": "2026-06-16",
+          "gf": 1,
+          "ga": 4,
+          "xgf": 0.68,
+          "xga": 2.85,
+          "result": "L",
+          "p_win": 0.068
+        },
+        {
+          "vs": "FRA",
+          "date": "2026-06-22",
+          "gf": 0,
+          "ga": 3,
+          "xgf": 0.45,
+          "xga": 2.21,
+          "result": "L",
+          "p_win": 0.025
+        }
+      ],
+      "xpts": 0.6,
+      "delta_pts": -0.6,
+      "xgf": 0.57,
+      "xga": 2.53
+    },
+    {
+      "code": "POR",
+      "name": "Portugal",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 1,
+      "xg_for": 5.43,
+      "xg_against": 2.08,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 4.639733462797892,
+      "big_chances_created": 7,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "RDC",
+          "date": "2026-06-17",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.78,
+          "xga": 1.15,
+          "result": "D",
+          "p_win": 0.673
+        },
+        {
+          "vs": "UZB",
+          "date": "2026-06-23",
+          "gf": 5,
+          "ga": 0,
+          "xgf": 3.65,
+          "xga": 0.93,
+          "result": "W",
+          "p_win": 0.735
+        }
+      ],
+      "xpts": 4.64,
+      "delta_pts": -0.64,
+      "xgf": 2.71,
+      "xga": 1.04
+    },
+    {
+      "code": "NZE",
+      "name": "New Zealand",
+      "games": 2,
+      "goals_for": 3,
+      "goals_against": 5,
+      "xg_for": 3.67,
+      "xg_against": 4.6,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 1.708095945384795,
+      "big_chances_created": 5,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "IRA",
+          "date": "2026-06-16",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.98,
+          "xga": 2.16,
+          "result": "D",
+          "p_win": 0.188
+        },
+        {
+          "vs": "EGI",
+          "date": "2026-06-22",
+          "gf": 1,
+          "ga": 3,
+          "xgf": 1.69,
+          "xga": 2.44,
+          "result": "L",
+          "p_win": 0.204
+        }
+      ],
+      "xpts": 1.71,
+      "delta_pts": -0.71,
+      "xgf": 1.83,
+      "xga": 2.3
+    },
+    {
+      "code": "CRO",
+      "name": "Croatia",
+      "games": 1,
+      "goals_for": 2,
+      "goals_against": 4,
+      "xg_for": 1.64,
+      "xg_against": 2.92,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "points": 0,
+      "expected_points": 0.8447181674999406,
+      "big_chances_created": 2,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "ING",
+          "date": "2026-06-17",
+          "gf": 2,
+          "ga": 4,
+          "xgf": 1.64,
+          "xga": 2.92,
+          "result": "L",
+          "p_win": 0.193
+        }
+      ],
+      "xpts": 0.84,
+      "delta_pts": -0.84,
+      "xgf": 1.64,
+      "xga": 2.92
+    },
+    {
+      "code": "IRA",
+      "name": "Iran",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 2,
+      "xg_for": 2.7800000000000002,
+      "xg_against": 3.4299999999999997,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "points": 2,
+      "expected_points": 2.8956577507909373,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "NZE",
+          "date": "2026-06-16",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 2.16,
+          "xga": 1.98,
+          "result": "D",
+          "p_win": 0.549
+        },
+        {
+          "vs": "BEL",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.62,
+          "xga": 1.45,
+          "result": "D",
+          "p_win": 0.236
+        }
+      ],
+      "xpts": 2.9,
+      "delta_pts": -0.9,
+      "xgf": 1.39,
+      "xga": 1.71
+    },
+    {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 8,
+      "xg_for": 1.75,
+      "xg_against": 6.1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 0.9191393234173179,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "COL",
+          "date": "2026-06-18",
+          "gf": 1,
+          "ga": 3,
+          "xgf": 0.82,
+          "xga": 2.45,
+          "result": "L",
+          "p_win": 0.098
+        },
+        {
+          "vs": "POR",
+          "date": "2026-06-23",
+          "gf": 0,
+          "ga": 5,
+          "xgf": 0.93,
+          "xga": 3.65,
+          "result": "L",
+          "p_win": 0.071
+        }
+      ],
+      "xpts": 0.92,
+      "delta_pts": -0.92,
+      "xgf": 0.88,
+      "xga": 3.05
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "games": 2,
+      "goals_for": 4,
+      "goals_against": 0,
+      "xg_for": 5.43,
+      "xg_against": 0.6,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "points": 4,
+      "expected_points": 4.935446729488756,
+      "big_chances_created": 7,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CAB",
+          "date": "2026-06-15",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 2.15,
+          "xga": 0.35,
+          "result": "D",
+          "p_win": 0.776
+        },
+        {
+          "vs": "ARS",
+          "date": "2026-06-21",
+          "gf": 4,
+          "ga": 0,
+          "xgf": 3.28,
+          "xga": 0.25,
+          "result": "W",
+          "p_win": 0.749
+        }
+      ],
+      "xpts": 4.94,
+      "delta_pts": -0.94,
+      "xgf": 2.71,
+      "xga": 0.3
+    },
+    {
+      "code": "PAN",
+      "name": "Panama",
+      "games": 1,
+      "goals_for": 0,
+      "goals_against": 1,
+      "xg_for": 0.75,
+      "xg_against": 1.3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "points": 0,
+      "expected_points": 0.9793865806070328,
+      "big_chances_created": 0,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "GAN",
+          "date": "2026-06-17",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 0.75,
+          "xga": 1.3,
+          "result": "L",
+          "p_win": 0.234
+        }
+      ],
+      "xpts": 0.98,
+      "delta_pts": -0.98,
+      "xgf": 0.75,
+      "xga": 1.3
+    },
+    {
+      "code": "HAI",
+      "name": "Haiti",
+      "games": 2,
+      "goals_for": 0,
+      "goals_against": 4,
+      "xg_for": 1.74,
+      "xg_against": 3.7199999999999998,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 1.0595616245567931,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "ESC",
+          "date": "2026-06-14",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 1.33,
+          "xga": 1.44,
+          "result": "L",
+          "p_win": 0.195
+        },
+        {
+          "vs": "BRA",
+          "date": "2026-06-20",
+          "gf": 0,
+          "ga": 3,
+          "xgf": 0.41,
+          "xga": 2.28,
+          "result": "L",
+          "p_win": 0.025
+        }
+      ],
+      "xpts": 1.06,
+      "delta_pts": -1.06,
+      "xgf": 0.87,
+      "xga": 1.86
+    },
+    {
+      "code": "TCH",
+      "name": "Czechia",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 3,
+      "xg_for": 2.52,
+      "xg_against": 3.63,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 2.433094284032107,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "COR",
+          "date": "2026-06-12",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 1.17,
+          "xga": 2.48,
+          "result": "L",
+          "p_win": 0.217
+        },
+        {
+          "vs": "AFS",
+          "date": "2026-06-18",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.35,
+          "xga": 1.15,
+          "result": "D",
+          "p_win": 0.407
+        }
+      ],
+      "xpts": 2.43,
+      "delta_pts": -1.43,
+      "xgf": 1.26,
+      "xga": 1.81
+    },
+    {
+      "code": "JOR",
+      "name": "Jordan",
+      "games": 2,
+      "goals_for": 2,
+      "goals_against": 5,
+      "xg_for": 2.06,
+      "xg_against": 4.83,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 1.4266943425160634,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AUT",
+          "date": "2026-06-17",
+          "gf": 1,
+          "ga": 3,
+          "xgf": 1.09,
+          "xga": 2.4,
+          "result": "L",
+          "p_win": 0.149
+        },
+        {
+          "vs": "AGL",
+          "date": "2026-06-23",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 0.97,
+          "xga": 2.43,
+          "result": "L",
+          "p_win": 0.16
+        }
+      ],
+      "xpts": 1.43,
+      "delta_pts": -1.43,
+      "xgf": 1.03,
+      "xga": 2.42
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 1,
+      "xg_for": 3.0300000000000002,
+      "xg_against": 1.7400000000000002,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "points": 2,
+      "expected_points": 3.5349849018862005,
+      "big_chances_created": 3,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "EGI",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.58,
+          "xga": 1.12,
+          "result": "D",
+          "p_win": 0.508
+        },
+        {
+          "vs": "IRA",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 1.45,
+          "xga": 0.62,
+          "result": "D",
+          "p_win": 0.486
+        }
+      ],
+      "xpts": 3.53,
+      "delta_pts": -1.53,
+      "xgf": 1.52,
+      "xga": 0.87
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "games": 2,
+      "goals_for": 3,
+      "goals_against": 6,
+      "xg_for": 3.2300000000000004,
+      "xg_against": 5.18,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 1.6641454446652433,
+      "big_chances_created": 5,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "FRA",
+          "date": "2026-06-16",
+          "gf": 1,
+          "ga": 3,
+          "xgf": 1.05,
+          "xga": 2.44,
+          "result": "L",
+          "p_win": 0.138
+        },
+        {
+          "vs": "NOR",
+          "date": "2026-06-23",
+          "gf": 2,
+          "ga": 3,
+          "xgf": 2.18,
+          "xga": 2.74,
+          "result": "L",
+          "p_win": 0.243
+        }
+      ],
+      "xpts": 1.66,
+      "delta_pts": -1.66,
+      "xgf": 1.62,
+      "xga": 2.59
+    },
+    {
+      "code": "TUN",
+      "name": "Tunisia",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 9,
+      "xg_for": 0.52,
+      "xg_against": 4.41,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 1.6855136246044142,
+      "big_chances_created": 0,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "SUE",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 5,
+          "xgf": 0.37,
+          "xga": 2.32,
+          "result": "L",
+          "p_win": 0.234
+        },
+        {
+          "vs": "JAP",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 4,
+          "xgf": 0.15,
+          "xga": 2.09,
+          "result": "L",
+          "p_win": 0.152
+        }
+      ],
+      "xpts": 1.69,
+      "delta_pts": -1.69,
+      "xgf": 0.26,
+      "xga": 2.21
+    },
+    {
+      "code": "URU",
+      "name": "Uruguay",
+      "games": 2,
+      "goals_for": 3,
+      "goals_against": 3,
+      "xg_for": 3.41,
+      "xg_against": 1.9500000000000002,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "points": 2,
+      "expected_points": 3.7791031247974374,
+      "big_chances_created": 4,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "ARS",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.76,
+          "xga": 0.85,
+          "result": "D",
+          "p_win": 0.526
+        },
+        {
+          "vs": "CAB",
+          "date": "2026-06-21",
+          "gf": 2,
+          "ga": 2,
+          "xgf": 1.65,
+          "xga": 1.1,
+          "result": "D",
+          "p_win": 0.557
+        }
+      ],
+      "xpts": 3.78,
+      "delta_pts": -1.78,
+      "xgf": 1.71,
+      "xga": 0.98
+    },
+    {
+      "code": "TUR",
+      "name": "Turkey",
+      "games": 2,
+      "goals_for": 0,
+      "goals_against": 3,
+      "xg_for": 6.54,
+      "xg_against": 1.45,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 2.3206650627488177,
+      "big_chances_created": 7,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AUS",
+          "date": "2026-06-14",
+          "gf": 0,
+          "ga": 2,
+          "xgf": 2.77,
+          "xga": 0.97,
+          "result": "L",
+          "p_win": 0.25
+        },
+        {
+          "vs": "PAR",
+          "date": "2026-06-20",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 3.77,
+          "xga": 0.48,
+          "result": "L",
+          "p_win": 0.333
+        }
+      ],
+      "xpts": 2.32,
+      "delta_pts": -2.32,
+      "xgf": 3.27,
+      "xga": 0.72
+    },
+    {
+      "code": "EQU",
+      "name": "Ecuador",
+      "games": 2,
+      "goals_for": 0,
+      "goals_against": 1,
+      "xg_for": 5.22,
+      "xg_against": 1.8,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "points": 1,
+      "expected_points": 3.5375717795412314,
+      "big_chances_created": 6,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CDM",
+          "date": "2026-06-14",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 0.95,
+          "xga": 1.1,
+          "result": "L",
+          "p_win": 0.384
+        },
+        {
+          "vs": "CUR",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 4.27,
+          "xga": 0.7,
+          "result": "D",
+          "p_win": 0.618
+        }
+      ],
+      "xpts": 3.54,
+      "delta_pts": -2.54,
+      "xgf": 2.61,
+      "xga": 0.9
+    }
+  ],
+  "matches": [
+    {
+      "date": "2026-06-11",
+      "home": "MEX",
+      "away": "AFS",
+      "g1": 2,
+      "g2": 0,
+      "pH": 0.77,
+      "pD": 0.173,
+      "pA": 0.058,
+      "lam": 2.31,
+      "mu": 0.52,
+      "home_xg": 1.84,
+      "away_xg": 0.52,
+      "real_xg": true,
+      "home_shots": 16,
+      "away_shots": 3,
+      "home_sot": 10,
+      "away_sot": 2,
+      "home_poss": 59.2,
+      "away_poss": 40.8,
+      "home_big_chances": 2,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "8",
+          "player": "Julián Quiñones",
+          "type": "regular"
+        },
+        {
+          "min": "66",
+          "player": "Raúl Jiménez",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [
+        [
+          "55",
+          "AFS",
+          "Sphephelo S'miso Sithole"
+        ],
+        [
+          "84",
+          "AFS",
+          "Themba Zwane"
+        ],
+        [
+          "86",
+          "MEX",
+          "César Jasib Montes"
+        ]
+      ],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (77%). Final: 2–0.",
+        "💥 Mexico created 2 big chances.",
+        "🟥 South Africa down to 10 men (Sphephelo S'miso Sithole, 55').",
+        "🟥 South Africa down to 10 men (Themba Zwane, 84').",
+        "🟥 Mexico down to 10 men (César Jasib Montes, 86')."
+      ],
+      "nlbair": true,
+      "stadium": "Mexico City Stadium (Estadio Azteca)",
+      "city": "Mexico City"
+    },
+    {
+      "date": "2026-06-12",
+      "home": "COR",
+      "away": "TCH",
+      "g1": 2,
+      "g2": 1,
+      "pH": 0.51,
+      "pD": 0.273,
+      "pA": 0.217,
+      "lam": 1.67,
+      "mu": 1.03,
+      "home_xg": 2.48,
+      "away_xg": 1.17,
+      "real_xg": false,
+      "home_shots": 15,
+      "away_shots": 7,
+      "home_sot": 10,
+      "away_sot": 4,
+      "home_poss": 60.7,
+      "away_poss": 39.3,
+      "home_big_chances": 4,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "66",
+          "player": "Hwang In-Beom",
+          "type": "regular"
+        },
+        {
+          "min": "79",
+          "player": "Oh Hyeon-Gyu",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "58",
+          "player": "Ladislav Krejcí",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (51%). Final: 2–1.",
+        "💥 South Korea created 4 big chances.",
+        "💥 Czechia created 1 big chance.",
+        "🎯 South Korea dominated possession (61%)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-12",
+      "home": "CAN",
+      "away": "BOS",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.607,
+      "pD": 0.242,
+      "pA": 0.151,
+      "lam": 1.93,
+      "mu": 0.88,
+      "home_xg": 1.35,
+      "away_xg": 0.98,
+      "real_xg": true,
+      "home_shots": 13,
+      "away_shots": 8,
+      "home_sot": 8,
+      "away_sot": 4,
+      "home_poss": 55.4,
+      "away_poss": 44.6,
+      "home_big_chances": 2,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "77",
+          "player": "Cyle Larin",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "20",
+          "player": "Jovo Lukic",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Canada win (61%) but ended 1–1.",
+        "💥 Canada created 2 big chances.",
+        "💥 Bosnia & Herzegovina created 1 big chance."
+      ],
+      "nlbair": true,
+      "stadium": "Toronto Stadium (BMO Field)",
+      "city": "Toronto"
+    },
+    {
+      "date": "2026-06-13",
+      "home": "EUA",
+      "away": "PAR",
+      "g1": 4,
+      "g2": 1,
+      "pH": 0.649,
+      "pD": 0.226,
+      "pA": 0.125,
+      "lam": 2.03,
+      "mu": 0.8,
+      "home_xg": 2.69,
+      "away_xg": 1.0,
+      "real_xg": false,
+      "home_shots": 16,
+      "away_shots": 10,
+      "home_sot": 10,
+      "away_sot": 7,
+      "home_poss": 61.7,
+      "away_poss": 38.3,
+      "home_big_chances": 4,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "30",
+          "player": "Folarin Balogun",
+          "type": "regular"
+        },
+        {
+          "min": "49",
+          "player": "Folarin Balogun",
+          "type": "regular"
+        },
+        {
+          "min": "97",
+          "player": "Giovanni Reyna",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "6",
+          "player": "Damián Bobadilla",
+          "type": "regular"
+        },
+        {
+          "min": "72",
+          "player": "Mauricio",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (65%). Final: 4–1.",
+        "⚡ USA outscored xG (4 goals vs 2.7 xG) — clinical finishing.",
+        "💥 USA created 4 big chances.",
+        "💥 Paraguay created 1 big chance.",
+        "🎯 USA dominated possession (62%)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-13",
+      "home": "CAT",
+      "away": "SUI",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.136,
+      "pD": 0.241,
+      "pA": 0.622,
+      "lam": 0.8,
+      "mu": 1.91,
+      "home_xg": 0.78,
+      "away_xg": 1.54,
+      "real_xg": true,
+      "home_shots": 6,
+      "away_shots": 27,
+      "home_sot": 3,
+      "away_sot": 17,
+      "home_poss": 36.5,
+      "away_poss": 63.5,
+      "home_big_chances": 1,
+      "away_big_chances": 6,
+      "home_goals": [],
+      "away_goals": [
+        {
+          "min": "16",
+          "player": "Breel Embolo",
+          "type": "penalty"
+        },
+        {
+          "min": "93",
+          "player": "Miro Muheim",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Switzerland win (62%) but ended 1–1.",
+        "💥 Qatar created 1 big chance.",
+        "💥 Switzerland created 6 big chances.",
+        "🎯 Switzerland dominated possession (64%)."
+      ],
+      "nlbair": true,
+      "stadium": "Boston Stadium (Gillette Stadium)",
+      "city": "Foxborough"
+    },
+    {
+      "date": "2026-06-13",
+      "home": "BRA",
+      "away": "MAR",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.426,
+      "pD": 0.286,
+      "pA": 0.288,
+      "lam": 1.5,
+      "mu": 1.2,
+      "home_xg": 1.62,
+      "away_xg": 1.1,
+      "real_xg": true,
+      "home_shots": 12,
+      "away_shots": 14,
+      "home_sot": 8,
+      "away_sot": 9,
+      "home_poss": 50.6,
+      "away_poss": 49.4,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "31",
+          "player": "Vinícius Júnior",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "20",
+          "player": "Ismael Saibari",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Brazil win (43%) but ended 1–1.",
+        "💥 Brazil created 1 big chance.",
+        "💥 Morocco created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "New York New Jersey Stadium (MetLife Stadium)",
+      "city": "East Rutherford"
+    },
+    {
+      "date": "2026-06-14",
+      "home": "HAI",
+      "away": "ESC",
+      "g1": 0,
+      "g2": 1,
+      "pH": 0.195,
+      "pD": 0.266,
+      "pA": 0.539,
+      "lam": 0.97,
+      "mu": 1.73,
+      "home_xg": 1.33,
+      "away_xg": 1.44,
+      "real_xg": false,
+      "home_shots": 15,
+      "away_shots": 9,
+      "home_sot": 6,
+      "away_sot": 5,
+      "home_poss": 52.7,
+      "away_poss": 47.3,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
+      "home_goals": [],
+      "away_goals": [
+        {
+          "min": "27",
+          "player": "John McGinn",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (54%). Final: 0–1.",
+        "🧱 Haiti underperformed xG (0 goals vs 1.3 xG).",
+        "💥 Haiti created 1 big chance.",
+        "💥 Scotland created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-14",
+      "home": "AUS",
+      "away": "TUR",
+      "g1": 2,
+      "g2": 0,
+      "pH": 0.469,
+      "pD": 0.28,
+      "pA": 0.25,
+      "lam": 1.59,
+      "mu": 1.11,
+      "home_xg": 0.97,
+      "away_xg": 2.77,
+      "real_xg": false,
+      "home_shots": 9,
+      "away_shots": 30,
+      "home_sot": 5,
+      "away_sot": 20,
+      "home_poss": 35.1,
+      "away_poss": 64.9,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "26",
+          "player": "Nestory Irankunda",
+          "type": "regular"
+        },
+        {
+          "min": "74",
+          "player": "Connor Metcalfe",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (47%). Final: 2–0.",
+        "⚡ Australia outscored xG (2 goals vs 1.0 xG) — clinical finishing.",
+        "🧱 Turkey underperformed xG (0 goals vs 2.8 xG).",
+        "💥 Australia created 1 big chance.",
+        "💥 Turkey created 2 big chances.",
+        "🎯 Turkey dominated possession (65%)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-14",
+      "home": "ALE",
+      "away": "CUR",
+      "g1": 7,
+      "g2": 1,
+      "pH": 0.805,
+      "pD": 0.156,
+      "pA": 0.038,
+      "lam": 2.32,
+      "mu": 0.38,
+      "home_xg": 4.82,
+      "away_xg": 0.44,
+      "real_xg": true,
+      "home_shots": 26,
+      "away_shots": 8,
+      "home_sot": 20,
+      "away_sot": 2,
+      "home_poss": 59.4,
+      "away_poss": 40.6,
+      "home_big_chances": 6,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "5",
+          "player": "Felix Nmecha",
+          "type": "regular"
+        },
+        {
+          "min": "37",
+          "player": "Nico Schlotterbeck",
+          "type": "regular"
+        },
+        {
+          "min": "46",
+          "player": "Jamal Musiala",
+          "type": "regular"
+        },
+        {
+          "min": "49",
+          "player": "Kai Havertz",
+          "type": "penalty"
+        },
+        {
+          "min": "67",
+          "player": "Nathaniel Brown",
+          "type": "regular"
+        },
+        {
+          "min": "77",
+          "player": "Deniz Undav",
+          "type": "regular"
+        },
+        {
+          "min": "87",
+          "player": "Kai Havertz",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "20",
+          "player": "Livano Comenencia",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (81%). Final: 7–1.",
+        "⚡ Germany outscored xG (7 goals vs 4.8 xG) — clinical finishing.",
+        "💥 Germany created 6 big chances.",
+        "📉 Scoreline (7–1) far more one-sided than model expected (~2.3–0.4)."
+      ],
+      "nlbair": true,
+      "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
+      "city": "Atlanta"
+    },
+    {
+      "date": "2026-06-14",
+      "home": "HOL",
+      "away": "JAP",
+      "g1": 2,
+      "g2": 2,
+      "pH": 0.429,
+      "pD": 0.286,
+      "pA": 0.285,
+      "lam": 1.51,
+      "mu": 1.19,
+      "home_xg": 1.95,
+      "away_xg": 1.82,
+      "real_xg": true,
+      "home_shots": 10,
+      "away_shots": 10,
+      "home_sot": 7,
+      "away_sot": 4,
+      "home_poss": 57.4,
+      "away_poss": 42.6,
+      "home_big_chances": 0,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "50",
+          "player": "Virgil van Dijk",
+          "type": "regular"
+        },
+        {
+          "min": "63",
+          "player": "Crysencio Summerville",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "56",
+          "player": "Keito Nakamura",
+          "type": "regular"
+        },
+        {
+          "min": "88",
+          "player": "Daichi Kamada",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Netherlands win (43%) but ended 2–2."
+      ],
+      "nlbair": true,
+      "stadium": "San Francisco Bay Area Stadium (Levi's Stadium)",
+      "city": "Santa Clara"
+    },
+    {
+      "date": "2026-06-14",
+      "home": "CDM",
+      "away": "EQU",
+      "g1": 1,
+      "g2": 0,
+      "pH": 0.327,
+      "pD": 0.289,
+      "pA": 0.384,
+      "lam": 1.29,
+      "mu": 1.41,
+      "home_xg": 1.1,
+      "away_xg": 0.95,
+      "real_xg": true,
+      "home_shots": 15.0,
+      "away_shots": 12.0,
+      "home_sot": 4.0,
+      "away_sot": 1.0,
+      "home_poss": 41.0,
+      "away_poss": 49.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [
+        {
+          "min": "90",
+          "player": "Amad Diallo",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Ecuador win (38%) but ended 1–0.",
+        "🧱 Ecuador underperformed xG (0 goals vs 0.9 xG)."
+      ],
+      "nlbair": false,
+      "stadium": "Houston Stadium (NRG Stadium)",
+      "city": "Houston"
+    },
+    {
+      "date": "2026-06-15",
+      "home": "SUE",
+      "away": "TUN",
+      "g1": 5,
+      "g2": 1,
+      "pH": 0.489,
+      "pD": 0.277,
+      "pA": 0.234,
+      "lam": 1.63,
+      "mu": 1.07,
+      "home_xg": 2.32,
+      "away_xg": 0.37,
+      "real_xg": false,
+      "home_shots": 13,
+      "away_shots": 6,
+      "home_sot": 10,
+      "away_sot": 3,
+      "home_poss": 49.3,
+      "away_poss": 50.7,
+      "home_big_chances": 4,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "6",
+          "player": "Yasin Ayari",
+          "type": "regular"
+        },
+        {
+          "min": "29",
+          "player": "Alexander Isak",
+          "type": "regular"
+        },
+        {
+          "min": "58",
+          "player": "Viktor Gyökeres",
+          "type": "regular"
+        },
+        {
+          "min": "83",
+          "player": "Mattias Svanberg",
+          "type": "regular"
+        },
+        {
+          "min": "95",
+          "player": "Yasin Ayari",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "42",
+          "player": "Omar Rekik",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (49%). Final: 5–1.",
+        "⚡ Sweden outscored xG (5 goals vs 2.3 xG) — clinical finishing.",
+        "💥 Sweden created 4 big chances.",
+        "🎯 Sweden: 5 goals from 13 shots (38% conversion).",
+        "📉 Scoreline (5–1) far more one-sided than model expected (~1.6–1.1)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-15",
+      "home": "ESP",
+      "away": "CAB",
+      "g1": 0,
+      "g2": 0,
+      "pH": 0.776,
+      "pD": 0.173,
+      "pA": 0.051,
+      "lam": 2.25,
+      "mu": 0.45,
+      "home_xg": 2.15,
+      "away_xg": 0.35,
+      "real_xg": true,
+      "home_shots": 27,
+      "away_shots": 6,
+      "home_sot": 16,
+      "away_sot": 3,
+      "home_poss": 66.8,
+      "away_poss": 33.2,
+      "home_big_chances": 2,
+      "away_big_chances": 1,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Spain win (78%) but ended 0–0.",
+        "🧱 Spain underperformed xG (0 goals vs 2.1 xG).",
+        "💥 Spain created 2 big chances.",
+        "💥 Cape Verde created 1 big chance.",
+        "🎯 Spain dominated possession (67%)."
+      ],
+      "nlbair": true,
+      "stadium": "Miami Stadium (Hard Rock Stadium)",
+      "city": "Miami Gardens"
+    },
+    {
+      "date": "2026-06-15",
+      "home": "BEL",
+      "away": "EGI",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.508,
+      "pD": 0.273,
+      "pA": 0.218,
+      "lam": 1.67,
+      "mu": 1.03,
+      "home_xg": 1.58,
+      "away_xg": 1.12,
+      "real_xg": true,
+      "home_shots": 15,
+      "away_shots": 15,
+      "home_sot": 9,
+      "away_sot": 12,
+      "home_poss": 53.1,
+      "away_poss": 46.9,
+      "home_big_chances": 2,
+      "away_big_chances": 2,
+      "home_goals": [],
+      "away_goals": [
+        {
+          "min": "19",
+          "player": "Emam Ashour",
+          "type": "regular"
+        },
+        {
+          "min": "65",
+          "player": "Mohamed Hany",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Belgium win (51%) but ended 1–1.",
+        "💥 Belgium created 2 big chances.",
+        "💥 Egypt created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "Dallas Stadium (AT&T Stadium)",
+      "city": "Arlington"
+    },
+    {
+      "date": "2026-06-15",
+      "home": "ARS",
+      "away": "URU",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.205,
+      "pD": 0.269,
+      "pA": 0.526,
+      "lam": 1.0,
+      "mu": 1.71,
+      "home_xg": 0.85,
+      "away_xg": 1.76,
+      "real_xg": true,
+      "home_shots": 7,
+      "away_shots": 27,
+      "home_sot": 4,
+      "away_sot": 17,
+      "home_poss": 37.6,
+      "away_poss": 62.4,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "40",
+          "player": "Abdulelah Al Amri",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "79",
+          "player": "Maxi Araújo",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Uruguay win (53%) but ended 1–1.",
+        "💥 Saudi Arabia created 1 big chance.",
+        "💥 Uruguay created 2 big chances.",
+        "🎯 Uruguay dominated possession (62%)."
+      ],
+      "nlbair": true,
+      "stadium": "Monterrey Stadium (Estadio BBVA)",
+      "city": "Guadalupe"
+    },
+    {
+      "date": "2026-06-16",
+      "home": "IRA",
+      "away": "NZE",
+      "g1": 2,
+      "g2": 2,
+      "pH": 0.549,
+      "pD": 0.264,
+      "pA": 0.188,
+      "lam": 1.75,
+      "mu": 0.95,
+      "home_xg": 2.16,
+      "away_xg": 1.98,
+      "real_xg": false,
+      "home_shots": 17,
+      "away_shots": 14,
+      "home_sot": 10,
+      "away_sot": 10,
+      "home_poss": 48.0,
+      "away_poss": 52.0,
+      "home_big_chances": 3,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "31",
+          "player": "Ramin Rezaeian",
+          "type": "regular"
+        },
+        {
+          "min": "63",
+          "player": "Mohammad Mohebbi",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "6",
+          "player": "Elijah Just",
+          "type": "regular"
+        },
+        {
+          "min": "54",
+          "player": "Elijah Just",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Iran win (55%) but ended 2–2.",
+        "💥 Iran created 3 big chances.",
+        "💥 New Zealand created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-16",
+      "home": "FRA",
+      "away": "SEN",
+      "g1": 3,
+      "g2": 1,
+      "pH": 0.62,
+      "pD": 0.242,
+      "pA": 0.138,
+      "lam": 1.9,
+      "mu": 0.8,
+      "home_xg": 2.44,
+      "away_xg": 1.05,
+      "real_xg": true,
+      "home_shots": 11,
+      "away_shots": 6,
+      "home_sot": 10,
+      "away_sot": 4,
+      "home_poss": 51.9,
+      "away_poss": 48.1,
+      "home_big_chances": 4,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "65",
+          "player": "Kylian Mbappé",
+          "type": "regular"
+        },
+        {
+          "min": "81",
+          "player": "Bradley Barcola",
+          "type": "regular"
+        },
+        {
+          "min": "95",
+          "player": "Kylian Mbappé",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "94",
+          "player": "Ibrahim Mbaye",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (62%). Final: 3–1.",
+        "💥 France created 4 big chances.",
+        "💥 Senegal created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "New York New Jersey Stadium (MetLife Stadium)",
+      "city": "East Rutherford"
+    },
+    {
+      "date": "2026-06-16",
+      "home": "IRQ",
+      "away": "NOR",
+      "g1": 1,
+      "g2": 4,
+      "pH": 0.068,
+      "pD": 0.191,
+      "pA": 0.741,
+      "lam": 0.54,
+      "mu": 2.17,
+      "home_xg": 0.68,
+      "away_xg": 2.85,
+      "real_xg": true,
+      "home_shots": 12,
+      "away_shots": 12,
+      "home_sot": 4,
+      "away_sot": 8,
+      "home_poss": 41.6,
+      "away_poss": 58.4,
+      "home_big_chances": 1,
+      "away_big_chances": 5,
+      "home_goals": [
+        {
+          "min": "38",
+          "player": "Aymen Hussein",
+          "type": "regular"
+        },
+        {
+          "min": "95",
+          "player": "Aymen Hussein",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "28",
+          "player": "Erling Haaland",
+          "type": "regular"
+        },
+        {
+          "min": "42",
+          "player": "Erling Haaland",
+          "type": "regular"
+        },
+        {
+          "min": "75",
+          "player": "Leo Østigård",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (74%). Final: 1–4.",
+        "⚡ Norway outscored xG (4 goals vs 2.9 xG) — clinical finishing.",
+        "💥 Iraq created 1 big chance.",
+        "💥 Norway created 5 big chances.",
+        "🎯 Norway: 4 goals from 12 shots (33% conversion)."
+      ],
+      "nlbair": true,
+      "stadium": "Boston Stadium (Gillette Stadium)",
+      "city": "Foxborough"
+    },
+    {
+      "date": "2026-06-17",
+      "home": "ARG",
+      "away": "AGL",
+      "g1": 3,
+      "g2": 0,
+      "pH": 0.697,
+      "pD": 0.212,
+      "pA": 0.091,
+      "lam": 2.06,
+      "mu": 0.64,
+      "home_xg": 1.0,
+      "away_xg": 0.43,
+      "real_xg": false,
+      "home_shots": 10,
+      "away_shots": 7,
+      "home_sot": 6,
+      "away_sot": 3,
+      "home_poss": 47.6,
+      "away_poss": 52.4,
+      "home_big_chances": 1,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "16",
+          "player": "Lionel Messi",
+          "type": "regular"
+        },
+        {
+          "min": "59",
+          "player": "Lionel Messi",
+          "type": "regular"
+        },
+        {
+          "min": "75",
+          "player": "Lionel Messi",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (70%). Final: 3–0.",
+        "⚡ Argentina outscored xG (3 goals vs 1.0 xG) — clinical finishing.",
+        "💥 Argentina created 1 big chance.",
+        "🎯 Argentina: 3 goals from 10 shots (30% conversion)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-17",
+      "home": "AUT",
+      "away": "JOR",
+      "g1": 3,
+      "g2": 1,
+      "pH": 0.603,
+      "pD": 0.248,
+      "pA": 0.149,
+      "lam": 1.87,
+      "mu": 0.84,
+      "home_xg": 2.4,
+      "away_xg": 1.09,
+      "real_xg": false,
+      "home_shots": 11,
+      "away_shots": 12,
+      "home_sot": 5,
+      "away_sot": 8,
+      "home_poss": 58.4,
+      "away_poss": 41.6,
+      "home_big_chances": 4,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "20",
+          "player": "Romano Schmid",
+          "type": "regular"
+        },
+        {
+          "min": "101",
+          "player": "Marko Arnautovic",
+          "type": "penalty"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "49",
+          "player": "Ali Olwan",
+          "type": "regular"
+        },
+        {
+          "min": "75",
+          "player": "Yazan Al Arab",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (60%). Final: 3–1.",
+        "💥 Austria created 4 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-17",
+      "home": "POR",
+      "away": "RDC",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.673,
+      "pD": 0.222,
+      "pA": 0.105,
+      "lam": 2.01,
+      "mu": 0.69,
+      "home_xg": 1.78,
+      "away_xg": 1.15,
+      "real_xg": true,
+      "home_shots": 7,
+      "away_shots": 8,
+      "home_sot": 3,
+      "away_sot": 5,
+      "home_poss": 69.2,
+      "away_poss": 30.8,
+      "home_big_chances": 0,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "5",
+          "player": "João Neves",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "49",
+          "player": "Yoane Wissa",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Portugal win (67%) but ended 1–1.",
+        "💥 DR Congo created 1 big chance.",
+        "🎯 Portugal dominated possession (69%)."
+      ],
+      "nlbair": true,
+      "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
+      "city": "Atlanta"
+    },
+    {
+      "date": "2026-06-17",
+      "home": "ING",
+      "away": "CRO",
+      "g1": 4,
+      "g2": 2,
+      "pH": 0.541,
+      "pD": 0.266,
+      "pA": 0.193,
+      "lam": 1.74,
+      "mu": 0.96,
+      "home_xg": 2.92,
+      "away_xg": 1.64,
+      "real_xg": true,
+      "home_shots": 22,
+      "away_shots": 10,
+      "home_sot": 16,
+      "away_sot": 7,
+      "home_poss": 51.7,
+      "away_poss": 48.3,
+      "home_big_chances": 7,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "11",
+          "player": "Harry Kane",
+          "type": "penalty"
+        },
+        {
+          "min": "41",
+          "player": "Harry Kane",
+          "type": "regular"
+        },
+        {
+          "min": "46",
+          "player": "Jude Bellingham",
+          "type": "regular"
+        },
+        {
+          "min": "84",
+          "player": "Marcus Rashford",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "35",
+          "player": "Martin Baturina",
+          "type": "regular"
+        },
+        {
+          "min": "49",
+          "player": "Petar Musa",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (54%). Final: 4–2.",
+        "⚡ England outscored xG (4 goals vs 2.9 xG) — clinical finishing.",
+        "💥 England created 7 big chances.",
+        "💥 Croatia created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "Miami Stadium (Hard Rock Stadium)",
+      "city": "Miami Gardens"
+    },
+    {
+      "date": "2026-06-17",
+      "home": "GAN",
+      "away": "PAN",
+      "g1": 1,
+      "g2": 0,
+      "pH": 0.489,
+      "pD": 0.277,
+      "pA": 0.234,
+      "lam": 1.63,
+      "mu": 1.07,
+      "home_xg": 1.3,
+      "away_xg": 0.75,
+      "real_xg": true,
+      "home_shots": 7.0,
+      "away_shots": 11.0,
+      "home_sot": 2.0,
+      "away_sot": 4.0,
+      "home_poss": 35.0,
+      "away_poss": 55.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [
+        {
+          "min": "90",
+          "player": "Caleb Marfo Yirenkyi",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (49%). Final: 1–0."
+      ],
+      "nlbair": false,
+      "stadium": "Houston Stadium (NRG Stadium)",
+      "city": "Houston"
+    },
+    {
+      "date": "2026-06-18",
+      "home": "UZB",
+      "away": "COL",
+      "g1": 1,
+      "g2": 3,
+      "pH": 0.098,
+      "pD": 0.217,
+      "pA": 0.685,
+      "lam": 0.66,
+      "mu": 2.04,
+      "home_xg": 0.82,
+      "away_xg": 2.45,
+      "real_xg": false,
+      "home_shots": 8,
+      "away_shots": 15,
+      "home_sot": 5,
+      "away_sot": 9,
+      "home_poss": 41.4,
+      "away_poss": 58.6,
+      "home_big_chances": 1,
+      "away_big_chances": 4,
+      "home_goals": [
+        {
+          "min": "59",
+          "player": "Abbosbek Fayzullaev",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "39",
+          "player": "Daniel Muñoz",
+          "type": "regular"
+        },
+        {
+          "min": "64",
+          "player": "Luis Díaz",
+          "type": "regular"
+        },
+        {
+          "min": "98",
+          "player": "Jaminton Campaz",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (68%). Final: 1–3.",
+        "💥 Uzbekistan created 1 big chance.",
+        "💥 Colombia created 4 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-18",
+      "home": "TCH",
+      "away": "AFS",
+      "g1": 1,
+      "g2": 1,
+      "pH": 0.407,
+      "pD": 0.288,
+      "pA": 0.305,
+      "lam": 1.46,
+      "mu": 1.24,
+      "home_xg": 1.35,
+      "away_xg": 1.15,
+      "real_xg": true,
+      "home_shots": 14,
+      "away_shots": 17,
+      "home_sot": 6,
+      "away_sot": 12,
+      "home_poss": 40.8,
+      "away_poss": 59.2,
+      "home_big_chances": 3,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "5",
+          "player": "Michal Sadílek",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "82",
+          "player": "Teboho Mokoena",
+          "type": "penalty"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Czechia win (41%) but ended 1–1.",
+        "💥 Czechia created 3 big chances.",
+        "💥 South Africa created 1 big chance."
+      ],
+      "nlbair": true,
+      "stadium": "Los Angeles Stadium (SoFi Stadium)",
+      "city": "Inglewood"
+    },
+    {
+      "date": "2026-06-18",
+      "home": "SUI",
+      "away": "BOS",
+      "g1": 4,
+      "g2": 1,
+      "pH": 0.612,
+      "pD": 0.245,
+      "pA": 0.143,
+      "lam": 1.88,
+      "mu": 0.82,
+      "home_xg": 2.45,
+      "away_xg": 0.88,
+      "real_xg": true,
+      "home_shots": 13,
+      "away_shots": 5,
+      "home_sot": 10,
+      "away_sot": 4,
+      "home_poss": 59.3,
+      "away_poss": 40.7,
+      "home_big_chances": 3,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "73",
+          "player": "Johan Manzambi",
+          "type": "regular"
+        },
+        {
+          "min": "83",
+          "player": "Rubén Vargas",
+          "type": "regular"
+        },
+        {
+          "min": "89",
+          "player": "Johan Manzambi",
+          "type": "regular"
+        },
+        {
+          "min": "96",
+          "player": "Granit Xhaka",
+          "type": "penalty"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "92",
+          "player": "Ermin Mahmic",
+          "type": "regular"
+        }
+      ],
+      "reds": [
+        [
+          "80",
+          "BOS",
+          "Tarik Muharemovic"
+        ]
+      ],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (61%). Final: 4–1.",
+        "⚡ Switzerland outscored xG (4 goals vs 2.5 xG) — clinical finishing.",
+        "💥 Switzerland created 3 big chances.",
+        "🟥 Bosnia & Herzegovina down to 10 men (Tarik Muharemovic, 80').",
+        "🎯 Switzerland: 4 goals from 13 shots (31% conversion)."
+      ],
+      "nlbair": true,
+      "stadium": "Mexico City Stadium (Estadio Azteca)",
+      "city": "Mexico City"
+    },
+    {
+      "date": "2026-06-18",
+      "home": "CAN",
+      "away": "CAT",
+      "g1": 6,
+      "g2": 0,
+      "pH": 0.617,
+      "pD": 0.239,
+      "pA": 0.144,
+      "lam": 1.95,
+      "mu": 0.85,
+      "home_xg": 3.82,
+      "away_xg": 0.22,
+      "real_xg": true,
+      "home_shots": 32,
+      "away_shots": 3,
+      "home_sot": 24,
+      "away_sot": 2,
+      "home_poss": 69.0,
+      "away_poss": 31.0,
+      "home_big_chances": 6,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "15",
+          "player": "Cyle Larin",
+          "type": "regular"
+        },
+        {
+          "min": "28",
+          "player": "Jonathan David",
+          "type": "regular"
+        },
+        {
+          "min": "47",
+          "player": "Jonathan David",
+          "type": "regular"
+        },
+        {
+          "min": "63",
+          "player": "Nathan Saliba",
+          "type": "regular"
+        },
+        {
+          "min": "91",
+          "player": "Jonathan David",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "74",
+          "player": "Mohammad Al Manai",
+          "type": "regular"
+        }
+      ],
+      "reds": [
+        [
+          "60",
+          "CAT",
+          "Elamin Homam"
+        ],
+        [
+          "85",
+          "CAT",
+          "Omer Assim Madibo"
+        ]
+      ],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (62%). Final: 6–0.",
+        "⚡ Canada outscored xG (6 goals vs 3.8 xG) — clinical finishing.",
+        "💥 Canada created 6 big chances.",
+        "🟥 Qatar down to 10 men (Elamin Homam, 60').",
+        "🟥 Qatar down to 10 men (Omer Assim Madibo, 85').",
+        "🎯 Canada dominated possession (69%).",
+        "📉 Scoreline (6–0) far more one-sided than model expected (~1.9–0.9)."
+      ],
+      "nlbair": true,
+      "stadium": "Vancouver Stadium (BC Place)",
+      "city": "Vancouver"
+    },
+    {
+      "date": "2026-06-19",
+      "home": "MEX",
+      "away": "COR",
+      "g1": 1,
+      "g2": 0,
+      "pH": 0.577,
+      "pD": 0.25,
+      "pA": 0.173,
+      "lam": 1.88,
+      "mu": 0.95,
+      "home_xg": 1.88,
+      "away_xg": 0.95,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "narrative": [
+        "✅ **Result matched prediction** (58%). Final: 1–0.",
+        "🧱 Mexico underperformed xG (1 goals vs 1.9 xG).",
+        "🧱 South Korea underperformed xG (0 goals vs 1.0 xG)."
+      ],
+      "nlbair": false,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-19",
+      "home": "EUA",
+      "away": "AUS",
+      "g1": 2,
+      "g2": 0,
+      "pH": 0.559,
+      "pD": 0.255,
+      "pA": 0.186,
+      "lam": 1.84,
+      "mu": 0.99,
+      "home_xg": 1.21,
+      "away_xg": 0.32,
+      "real_xg": true,
+      "home_shots": 10,
+      "away_shots": 6,
+      "home_sot": 8,
+      "away_sot": 3,
+      "home_poss": 59.4,
+      "away_poss": 40.6,
+      "home_big_chances": 2,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "42",
+          "player": "Alex Freeman",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "10",
+          "player": "Cameron Burgess",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (56%). Final: 2–0.",
+        "💥 USA created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "Toronto Stadium (BMO Field)",
+      "city": "Toronto"
+    },
+    {
+      "date": "2026-06-19",
+      "home": "ESC",
+      "away": "MAR",
+      "g1": 0,
+      "g2": 1,
+      "pH": 0.134,
+      "pD": 0.24,
+      "pA": 0.626,
+      "lam": 0.79,
+      "mu": 1.91,
+      "home_xg": 0.97,
+      "away_xg": 0.54,
+      "real_xg": true,
+      "home_shots": 6,
+      "away_shots": 12,
+      "home_sot": 3,
+      "away_sot": 6,
+      "home_poss": 42.4,
+      "away_poss": 57.6,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
+      "home_goals": [],
+      "away_goals": [
+        {
+          "min": "1",
+          "player": "Ismael Saibari",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (63%). Final: 0–1.",
+        "🧱 Scotland underperformed xG (0 goals vs 1.0 xG).",
+        "💥 Scotland created 1 big chance.",
+        "💥 Morocco created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "Dallas Stadium (AT&T Stadium)",
+      "city": "Arlington"
+    },
+    {
+      "date": "2026-06-20",
+      "home": "BRA",
+      "away": "HAI",
+      "g1": 3,
+      "g2": 0,
+      "pH": 0.842,
+      "pD": 0.133,
+      "pA": 0.025,
+      "lam": 2.45,
+      "mu": 0.3,
+      "home_xg": 2.28,
+      "away_xg": 0.41,
+      "real_xg": false,
+      "home_shots": 8,
+      "away_shots": 7,
+      "home_sot": 6,
+      "away_sot": 4,
+      "home_poss": 55.3,
+      "away_poss": 44.7,
+      "home_big_chances": 5,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "22",
+          "player": "Matheus Cunha",
+          "type": "regular"
+        },
+        {
+          "min": "35",
+          "player": "Matheus Cunha",
+          "type": "regular"
+        },
+        {
+          "min": "47",
+          "player": "Vinícius Júnior",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (84%). Final: 3–0.",
+        "💥 Brazil created 5 big chances.",
+        "🎯 Brazil: 3 goals from 8 shots (38% conversion)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-20",
+      "home": "TUR",
+      "away": "PAR",
+      "g1": 0,
+      "g2": 1,
+      "pH": 0.333,
+      "pD": 0.29,
+      "pA": 0.377,
+      "lam": 1.3,
+      "mu": 1.4,
+      "home_xg": 3.77,
+      "away_xg": 0.48,
+      "real_xg": false,
+      "home_shots": 32,
+      "away_shots": 7,
+      "home_sot": 17,
+      "away_sot": 4,
+      "home_poss": 68.8,
+      "away_poss": 31.2,
+      "home_big_chances": 5,
+      "away_big_chances": 0,
+      "home_goals": [],
+      "away_goals": [
+        {
+          "min": "1",
+          "player": "Matías Galarza",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (38%). Final: 0–1.",
+        "🧱 Turkey underperformed xG (0 goals vs 3.8 xG).",
+        "💥 Turkey created 5 big chances.",
+        "🎯 Turkey dominated possession (69%)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-20",
+      "home": "HOL",
+      "away": "SUE",
+      "g1": 5,
+      "g2": 1,
+      "pH": 0.539,
+      "pD": 0.266,
+      "pA": 0.195,
+      "lam": 1.73,
+      "mu": 0.97,
+      "home_xg": 3.45,
+      "away_xg": 0.88,
+      "real_xg": true,
+      "home_shots": 10,
+      "away_shots": 16,
+      "home_sot": 8,
+      "away_sot": 11,
+      "home_poss": 50.9,
+      "away_poss": 49.1,
+      "home_big_chances": 3,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "4",
+          "player": "Brian Brobbey",
+          "type": "regular"
+        },
+        {
+          "min": "16",
+          "player": "Brian Brobbey",
+          "type": "regular"
+        },
+        {
+          "min": "46",
+          "player": "Cody Gakpo",
+          "type": "regular"
+        },
+        {
+          "min": "53",
+          "player": "Cody Gakpo",
+          "type": "regular"
+        },
+        {
+          "min": "88",
+          "player": "Crysencio Summerville",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "58",
+          "player": "Anthony Elanga",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (54%). Final: 5–1.",
+        "⚡ Netherlands outscored xG (5 goals vs 3.5 xG) — clinical finishing.",
+        "💥 Netherlands created 3 big chances.",
+        "💥 Sweden created 1 big chance.",
+        "🎯 Netherlands: 5 goals from 10 shots (50% conversion).",
+        "📉 Scoreline (5–1) far more one-sided than model expected (~1.7–1.0)."
+      ],
+      "nlbair": true,
+      "stadium": "Philadelphia Stadium (Lincoln Financial Field)",
+      "city": "Philadelphia"
+    },
+    {
+      "date": "2026-06-20",
+      "home": "ALE",
+      "away": "CDM",
+      "g1": 2,
+      "g2": 1,
+      "pH": 0.59,
+      "pD": 0.252,
+      "pA": 0.158,
+      "lam": 1.84,
+      "mu": 0.86,
+      "home_xg": 1.85,
+      "away_xg": 0.72,
+      "real_xg": true,
+      "home_shots": 16,
+      "away_shots": 9,
+      "home_sot": 11,
+      "away_sot": 7,
+      "home_poss": 55.6,
+      "away_poss": 44.4,
+      "home_big_chances": 5,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "67",
+          "player": "Deniz Undav",
+          "type": "regular"
+        },
+        {
+          "min": "93",
+          "player": "Deniz Undav",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "29",
+          "player": "Franck Kessie",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (59%). Final: 2–1.",
+        "💥 Germany created 5 big chances.",
+        "💥 Ivory Coast created 2 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "Boston Stadium (Gillette Stadium)",
+      "city": "Foxborough"
+    },
+    {
+      "date": "2026-06-21",
+      "home": "EQU",
+      "away": "CUR",
+      "g1": 0,
+      "g2": 0,
+      "pH": 0.618,
+      "pD": 0.243,
+      "pA": 0.139,
+      "lam": 1.9,
+      "mu": 0.81,
+      "home_xg": 4.27,
+      "away_xg": 0.7,
+      "real_xg": false,
+      "home_shots": 27,
+      "away_shots": 10,
+      "home_sot": 17,
+      "away_sot": 6,
+      "home_poss": 66.7,
+      "away_poss": 33.3,
+      "home_big_chances": 6,
+      "away_big_chances": 0,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Ecuador win (62%) but ended 0–0.",
+        "🧱 Ecuador underperformed xG (0 goals vs 4.3 xG).",
+        "💥 Ecuador created 6 big chances.",
+        "🎯 Ecuador dominated possession (67%)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-21",
+      "home": "TUN",
+      "away": "JAP",
+      "g1": 0,
+      "g2": 4,
+      "pH": 0.152,
+      "pD": 0.249,
+      "pA": 0.598,
+      "lam": 0.85,
+      "mu": 1.85,
+      "home_xg": 0.15,
+      "away_xg": 2.09,
+      "real_xg": false,
+      "home_shots": 2,
+      "away_shots": 11,
+      "home_sot": 1,
+      "away_sot": 8,
+      "home_poss": 41.2,
+      "away_poss": 58.8,
+      "home_big_chances": 0,
+      "away_big_chances": 4,
+      "home_goals": [],
+      "away_goals": [
+        {
+          "min": "3",
+          "player": "Daichi Kamada",
+          "type": "regular"
+        },
+        {
+          "min": "30",
+          "player": "Ayase Ueda",
+          "type": "regular"
+        },
+        {
+          "min": "68",
+          "player": "Junya Ito",
+          "type": "regular"
+        },
+        {
+          "min": "82",
+          "player": "Ayase Ueda",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (60%). Final: 0–4.",
+        "⚡ Japan outscored xG (4 goals vs 2.1 xG) — clinical finishing.",
+        "💥 Japan created 4 big chances.",
+        "🎯 Japan: 4 goals from 11 shots (36% conversion).",
+        "📉 Scoreline (0–4) far more one-sided than model expected (~0.8–1.9)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-21",
+      "home": "ESP",
+      "away": "ARS",
+      "g1": 4,
+      "g2": 0,
+      "pH": 0.749,
+      "pD": 0.187,
+      "pA": 0.064,
+      "lam": 2.18,
+      "mu": 0.52,
+      "home_xg": 3.28,
+      "away_xg": 0.25,
+      "real_xg": true,
+      "home_shots": 22,
+      "away_shots": 4,
+      "home_sot": 11,
+      "away_sot": 3,
+      "home_poss": 63.4,
+      "away_poss": 36.6,
+      "home_big_chances": 5,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "9",
+          "player": "Lamine Yamal",
+          "type": "regular"
+        },
+        {
+          "min": "20",
+          "player": "Mikel Oyarzabal",
+          "type": "regular"
+        },
+        {
+          "min": "23",
+          "player": "Mikel Oyarzabal",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "48",
+          "player": "Hassan Al Tambakti",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (75%). Final: 4–0.",
+        "💥 Spain created 5 big chances.",
+        "🎯 Spain dominated possession (63%).",
+        "📉 Scoreline (4–0) far more one-sided than model expected (~2.2–0.5)."
+      ],
+      "nlbair": true,
+      "stadium": "San Francisco Bay Area Stadium (Levi's Stadium)",
+      "city": "Santa Clara"
+    },
+    {
+      "date": "2026-06-21",
+      "home": "BEL",
+      "away": "IRA",
+      "g1": 0,
+      "g2": 0,
+      "pH": 0.486,
+      "pD": 0.278,
+      "pA": 0.236,
+      "lam": 1.62,
+      "mu": 1.08,
+      "home_xg": 1.45,
+      "away_xg": 0.62,
+      "real_xg": true,
+      "home_shots": 23,
+      "away_shots": 7,
+      "home_sot": 13,
+      "away_sot": 4,
+      "home_poss": 63.7,
+      "away_poss": 36.3,
+      "home_big_chances": 1,
+      "away_big_chances": 1,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [
+        [
+          "66",
+          "BEL",
+          "Hany Gamal Mohamed Hany"
+        ]
+      ],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Belgium win (49%) but ended 0–0.",
+        "🧱 Belgium underperformed xG (0 goals vs 1.4 xG).",
+        "💥 Belgium created 1 big chance.",
+        "💥 Iran created 1 big chance.",
+        "🟥 Belgium down to 10 men (Hany Gamal Mohamed Hany, 66').",
+        "🎯 Belgium dominated possession (64%)."
+      ],
+      "nlbair": true,
+      "stadium": "Houston Stadium (NRG Stadium)",
+      "city": "Houston"
+    },
+    {
+      "date": "2026-06-21",
+      "home": "URU",
+      "away": "CAB",
+      "g1": 2,
+      "g2": 2,
+      "pH": 0.557,
+      "pD": 0.261,
+      "pA": 0.181,
+      "lam": 1.77,
+      "mu": 0.93,
+      "home_xg": 1.65,
+      "away_xg": 1.1,
+      "real_xg": true,
+      "home_shots": 17,
+      "away_shots": 12,
+      "home_sot": 9,
+      "away_sot": 8,
+      "home_poss": 58.5,
+      "away_poss": 41.5,
+      "home_big_chances": 2,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "43",
+          "player": "Maxi Araújo",
+          "type": "regular"
+        },
+        {
+          "min": "50",
+          "player": "Agustín Canobbio",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "20",
+          "player": "Kevin Pina",
+          "type": "regular"
+        },
+        {
+          "min": "60",
+          "player": "Hélio Varela",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted Uruguay win (56%) but ended 2–2.",
+        "⚡ Cape Verde outscored xG (2 goals vs 1.1 xG) — clinical finishing.",
+        "💥 Uruguay created 2 big chances.",
+        "💥 Cape Verde created 1 big chance."
+      ],
+      "nlbair": true,
+      "stadium": "New York New Jersey Stadium (MetLife Stadium)",
+      "city": "East Rutherford"
+    },
+    {
+      "date": "2026-06-22",
+      "home": "NZE",
+      "away": "EGI",
+      "g1": 1,
+      "g2": 3,
+      "pH": 0.204,
+      "pD": 0.269,
+      "pA": 0.527,
+      "lam": 0.99,
+      "mu": 1.71,
+      "home_xg": 1.69,
+      "away_xg": 2.44,
+      "real_xg": false,
+      "home_shots": 11,
+      "away_shots": 19,
+      "home_sot": 8,
+      "away_sot": 13,
+      "home_poss": 44.8,
+      "away_poss": 55.2,
+      "home_big_chances": 3,
+      "away_big_chances": 3,
+      "home_goals": [
+        {
+          "min": "14",
+          "player": "Finn Surman",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "57",
+          "player": "Mostafa Zico",
+          "type": "regular"
+        },
+        {
+          "min": "66",
+          "player": "Mohamed Salah",
+          "type": "regular"
+        },
+        {
+          "min": "81",
+          "player": "Trezeguet",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (53%). Final: 1–3.",
+        "💥 New Zealand created 3 big chances.",
+        "💥 Egypt created 3 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-22",
+      "home": "ARG",
+      "away": "AUT",
+      "g1": 2,
+      "g2": 0,
+      "pH": 0.682,
+      "pD": 0.218,
+      "pA": 0.1,
+      "lam": 2.03,
+      "mu": 0.67,
+      "home_xg": 1.78,
+      "away_xg": 0.55,
+      "real_xg": true,
+      "home_shots": 12,
+      "away_shots": 6,
+      "home_sot": 8,
+      "away_sot": 1,
+      "home_poss": 53.5,
+      "away_poss": 46.5,
+      "home_big_chances": 3,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "37",
+          "player": "Lionel Messi",
+          "type": "regular"
+        },
+        {
+          "min": "94",
+          "player": "Lionel Messi",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (68%). Final: 2–0.",
+        "💥 Argentina created 3 big chances.",
+        "💥 Austria created 1 big chance."
+      ],
+      "nlbair": true,
+      "stadium": "Monterrey Stadium (Estadio BBVA)",
+      "city": "Guadalupe"
+    },
+    {
+      "date": "2026-06-22",
+      "home": "FRA",
+      "away": "IRQ",
+      "g1": 3,
+      "g2": 0,
+      "pH": 0.843,
+      "pD": 0.132,
+      "pA": 0.025,
+      "lam": 2.46,
+      "mu": 0.3,
+      "home_xg": 2.21,
+      "away_xg": 0.45,
+      "real_xg": true,
+      "home_shots": 19,
+      "away_shots": 4,
+      "home_sot": 10,
+      "away_sot": 1,
+      "home_poss": 54.3,
+      "away_poss": 45.7,
+      "home_big_chances": 5,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "13",
+          "player": "Kylian Mbappé",
+          "type": "regular"
+        },
+        {
+          "min": "53",
+          "player": "Kylian Mbappé",
+          "type": "regular"
+        },
+        {
+          "min": "65",
+          "player": "Ousmane Dembélé",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (84%). Final: 3–0.",
+        "💥 France created 5 big chances.",
+        "💥 Iraq created 1 big chance."
+      ],
+      "nlbair": true,
+      "stadium": "Dallas Stadium (AT&T Stadium)",
+      "city": "Arlington"
+    },
+    {
+      "date": "2026-06-23",
+      "home": "NOR",
+      "away": "SEN",
+      "g1": 3,
+      "g2": 2,
+      "pH": 0.478,
+      "pD": 0.279,
+      "pA": 0.243,
+      "lam": 1.61,
+      "mu": 1.09,
+      "home_xg": 2.74,
+      "away_xg": 2.18,
+      "real_xg": false,
+      "home_shots": 13,
+      "away_shots": 16,
+      "home_sot": 11,
+      "away_sot": 9,
+      "home_poss": 42.9,
+      "away_poss": 57.1,
+      "home_big_chances": 5,
+      "away_big_chances": 3,
+      "home_goals": [
+        {
+          "min": "42",
+          "player": "Marcus Pedersen",
+          "type": "regular"
+        },
+        {
+          "min": "47",
+          "player": "Erling Haaland",
+          "type": "regular"
+        },
+        {
+          "min": "57",
+          "player": "Erling Haaland",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "52",
+          "player": "Ismaïla Sarr",
+          "type": "regular"
+        },
+        {
+          "min": "92",
+          "player": "Ismaïla Sarr",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (48%). Final: 3–2.",
+        "💥 Norway created 5 big chances.",
+        "💥 Senegal created 3 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-23",
+      "home": "JOR",
+      "away": "AGL",
+      "g1": 1,
+      "g2": 2,
+      "pH": 0.16,
+      "pD": 0.253,
+      "pA": 0.588,
+      "lam": 0.87,
+      "mu": 1.83,
+      "home_xg": 0.97,
+      "away_xg": 2.43,
+      "real_xg": false,
+      "home_shots": 8,
+      "away_shots": 17,
+      "home_sot": 4,
+      "away_sot": 13,
+      "home_poss": 35.4,
+      "away_poss": 64.6,
+      "home_big_chances": 1,
+      "away_big_chances": 3,
+      "home_goals": [
+        {
+          "min": "35",
+          "player": "Nizar Al Rashdan",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "68",
+          "player": "Nadhir Benbouali",
+          "type": "regular"
+        },
+        {
+          "min": "81",
+          "player": "Amine Gouiri",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (59%). Final: 1–2.",
+        "💥 Jordan created 1 big chance.",
+        "💥 Algeria created 3 big chances.",
+        "🎯 Algeria dominated possession (65%)."
+      ],
+      "nlbair": true,
+      "stadium": "",
+      "city": ""
+    },
+    {
+      "date": "2026-06-23",
+      "home": "POR",
+      "away": "UZB",
+      "g1": 5,
+      "g2": 0,
+      "pH": 0.735,
+      "pD": 0.194,
+      "pA": 0.071,
+      "lam": 2.15,
+      "mu": 0.55,
+      "home_xg": 3.65,
+      "away_xg": 0.93,
+      "real_xg": false,
+      "home_shots": 17,
+      "away_shots": 8,
+      "home_sot": 12,
+      "away_sot": 6,
+      "home_poss": 61.1,
+      "away_poss": 38.9,
+      "home_big_chances": 7,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "5",
+          "player": "Cristiano Ronaldo",
+          "type": "regular"
+        },
+        {
+          "min": "16",
+          "player": "Nuno Mendes",
+          "type": "regular"
+        },
+        {
+          "min": "38",
+          "player": "Cristiano Ronaldo",
+          "type": "regular"
+        },
+        {
+          "min": "86",
+          "player": "Rafael Leão",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "59",
+          "player": "Abduvokhid Nematov",
+          "type": "regular"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "✅ **Result matched prediction** (73%). Final: 5–0.",
+        "⚡ Portugal outscored xG (5 goals vs 3.6 xG) — clinical finishing.",
+        "🧱 Uzbekistan underperformed xG (0 goals vs 0.9 xG).",
+        "💥 Portugal created 7 big chances.",
+        "🎯 Portugal dominated possession (61%).",
+        "🎯 Portugal: 5 goals from 17 shots (29% conversion).",
+        "📉 Scoreline (5–0) far more one-sided than model expected (~2.2–0.6)."
+      ],
+      "nlbair": true,
+      "stadium": "Kansas City Stadium (Arrowhead Stadium)",
+      "city": "Kansas City"
+    },
+    {
+      "date": "2026-06-23",
+      "home": "ING",
+      "away": "GAN",
+      "g1": 0,
+      "g2": 0,
+      "pH": 0.698,
+      "pD": 0.211,
+      "pA": 0.091,
+      "lam": 2.07,
+      "mu": 0.63,
+      "home_xg": 2.06,
+      "away_xg": 0.48,
+      "real_xg": false,
+      "home_shots": 19,
+      "away_shots": 2,
+      "home_sot": 10,
+      "away_sot": 2,
+      "home_poss": 70.4,
+      "away_poss": 29.6,
+      "home_big_chances": 2,
+      "away_big_chances": 1,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "narrative": [
+        "🚨 **Upset**: model predicted England win (70%) but ended 0–0.",
+        "🧱 England underperformed xG (0 goals vs 2.1 xG).",
+        "💥 England created 2 big chances.",
+        "💥 Ghana created 1 big chance.",
+        "🎯 England dominated possession (70%)."
+      ],
+      "nlbair": true,
+      "stadium": "Seattle Stadium (Lumen Field)",
+      "city": "Seattle"
+    }
+  ],
+  "real_xg_games": 27,
+  "nlbair_games": 43,
+  "narratives_built": 46,
+  "source": "football-data.org + mominullptr + nlbair/wc2026-events"
+}
