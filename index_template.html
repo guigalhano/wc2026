@@ -866,6 +866,38 @@ function renderScouts(){
       <div class="sr"><span class="sk">${T('xg')}</span><span class="sv">${t.xG||'N/D'}</span></div>
       <div class="sr"><span class="sk">${T('poss')}</span><span class="sv">${t.pos?t.pos+'%':'N/D'}</span></div>
       <div class="sr"><span class="sk">${T('goals')}</span><span class="sv">${t.gm||'N/D'}</span></div>
+
+      ${(function(){
+        var form=[];
+        if(window.LIVE_DATA&&window.LIVE_DATA.wc_results){
+          (window.LIVE_DATA.wc_results.matches||[]).forEach(function(m){
+            if(m.home_score===null||m.home_score===undefined)return;
+            var res=null;
+            if(m.home_code===code)res=m.home_score>m.away_score?'W':m.home_score<m.away_score?'L':'D';
+            if(m.away_code===code)res=m.away_score>m.home_score?'W':m.away_score<m.home_score?'L':'D';
+            if(res)form.push(res);
+          });
+        }
+        if(!form.length)return '';
+        var dots=form.map(function(r){return '<span style="display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;border-radius:50%;font-size:8px;font-weight:700;color:#fff;background:'+(r==='W'?'var(--gn)':r==='D'?'#888':'var(--rd-tx)')+'">'+r+'</span>';}).join('');
+        return '<div style="display:flex;align-items:center;justify-content:space-between;margin-top:5px"><span style="font-size:9px;color:var(--tx3)">Forma</span><div style="display:flex;gap:2px">'+dots+'</div></div>';
+      })()}
+      ${(function(){
+        var p=WC26_PERF_SUMMARY[code]||{};
+        if(!p.rg)return '';
+        var xgf=p.xgf!=null?p.xgf.toFixed(2):null;
+        var xga=p.xga!=null?p.xga.toFixed(2):null;
+        if(!xgf&&!xga)return '';
+        var xgfCol=parseFloat(xgf)>=2?'var(--gn)':parseFloat(xgf)>=1?'var(--am)':'var(--tx3)';
+        var xgaCol=parseFloat(xga)<=0.8?'var(--gn)':parseFloat(xga)<=1.5?'var(--am)':'var(--rd-tx)';
+        return '<div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px">'
+          +'<span style="font-size:9px;color:var(--tx3)">xG Copa</span>'
+          +'<span style="font-size:10px;font-weight:700;color:'+xgfCol+'">'+xgf+'</span>'
+          +'<span style="font-size:9px;color:var(--tx3)">xGA</span>'
+          +'<span style="font-size:10px;font-weight:700;color:'+xgaCol+'">'+xga+'</span>'
+          +'<span style="font-size:8px;color:var(--tx3)">('+p.rg+'j)</span>'
+          +'</div>';
+      })()}
       ${(function(){var sq=SQUAD_STRENGTH[code];if(!sq)return '';var mv=Math.round(sq*3396);var pct=Math.round(sq*100);var col=pct>=60?'var(--gn)':pct>=30?'var(--am)':'var(--tx3)';return '<div style="margin-top:6px"><div style="display:flex;justify-content:space-between;font-size:9px;color:var(--tx3);margin-bottom:2px"><span>Plantel</span><span style="color:'+col+';font-weight:700">€'+mv+'M ('+pct+'%)</span></div><div style="height:4px;background:var(--bd);border-radius:2px;overflow:hidden"><div style="width:'+pct+'%;height:100%;background:'+col+';border-radius:2px"></div></div></div>';})()}
       ${v?`<div style="margin-top:5px">${vpill(v.edge)}</div>`:''}
     </div>`;
