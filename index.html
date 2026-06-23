@@ -2010,7 +2010,70 @@ function renderSimGroups(g){
   if(noteEl && playedCount>0){
     noteEl.innerHTML = '<div style="font-size:11px;color:var(--tx3);text-align:center;padding:4px 0 8px">📌 Base real: <b style="color:var(--tx)">'+playedCount+' jogos</b> · Restantes simulados pelo modelo</div>';
   }var html='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px">';Object.keys(SIM_GROUPS).forEach(function(gr){var teams=g.rank[gr];html+='<div class="card" style="margin-bottom:0"><div class="grp-hdr">Grupo '+gr+'</div><table class="group-table"><thead><tr><th>Sel.</th><th>Pts</th><th>V</th><th>E</th><th>D</th><th>GF</th><th>GC</th></tr></thead><tbody>';teams.forEach(function(c,i){var s=g.st[c],t=SCOUTS[c]||{flag:'🏳',name:c};var q=i<2;html+='<tr class="'+(q?'q':'')+'"><td>'+(t.flag||'🏳')+' '+(t.name||c)+'</td><td><b>'+s.pts+'</b></td><td>'+s.w+'</td><td>'+s.d+'</td><td>'+s.l+'</td><td>'+s.gf+'</td><td>'+s.ga+'</td></tr>';});html+='</tbody></table></div>';});html+='</div>';document.getElementById('simTabGroups').innerHTML=html;}
-function renderSimGroupResults(g){var html='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">';Object.keys(SIM_GROUPS).forEach(function(gr){html+='<div class="card" style="margin-bottom:0"><div class="grp-hdr" style="margin-bottom:.6rem">Grupo '+gr+'</div>';g.res[gr].forEach(function(m){var ht=SCOUTS[m.a]||{flag:'🏳',name:m.a},at=SCOUTS[m.b]||{flag:'🏳',name:m.b};html+='<div style="display:flex;align-items:center;gap:5px;padding:4px 0;border-bottom:1px solid var(--bd);font-size:12px"><span style="font-size:14px">'+(ht.flag||'')+'</span><span style="flex:1;font-weight:'+(m.winner===m.a?700:400)+'">'+(ht.name||m.a)+'</span><b style="font-family:Space Grotesk,sans-serif;font-size:13px;background:var(--sf2);padding:1px 6px;border-radius:5px">'+m.sA+'-'+m.sB+'</b><span style="flex:1;text-align:right;font-weight:'+(m.winner===m.b?700:400)+'">'+(at.name||m.b)+'</span><span style="font-size:14px">'+(at.flag||'')+'</span></div>';});html+='</div>';});html+='</div>';document.getElementById('simTabGroupresults').innerHTML=html;}
+function renderSimGroupResults(g){
+  // Build real results index from LIVE_DATA
+  var realMap = {};
+  var ld = window.LIVE_DATA;
+  if (ld && ld.wc_results && ld.wc_results.matches) {
+    ld.wc_results.matches.forEach(function(m) {
+      if (m.home_score !== null && m.home_score !== undefined) {
+        realMap[m.home_code + '-' + m.away_code] = { sA: m.home_score, sB: m.away_score, real: true };
+      }
+    });
+  }
+
+  var totalReal = 0, totalSim = 0;
+  var html = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">';
+
+  Object.keys(SIM_GROUPS).forEach(function(gr) {
+    html += '<div class="card" style="margin-bottom:0">';
+    html += '<div class="grp-hdr" style="margin-bottom:.6rem">Grupo ' + gr + '</div>';
+
+    g.res[gr].forEach(function(m) {
+      var ht = SCOUTS[m.a] || { flag:'🏳', name: m.a };
+      var at = SCOUTS[m.b] || { flag:'🏳', name: m.b };
+
+      // Check if real result exists
+      var key  = m.a + '-' + m.b;
+      var keyR = m.b + '-' + m.a;
+      var real = realMap[key] || (realMap[keyR] ? { sA: realMap[keyR].sB, sB: realMap[keyR].sA, real: true } : null);
+
+      var sA, sB, isReal;
+      if (real) {
+        sA = real.sA; sB = real.sB; isReal = true; totalReal++;
+      } else {
+        sA = m.sA; sB = m.sB; isReal = false; totalSim++;
+      }
+
+      var winA = sA > sB, winB = sB > sA;
+      var scoreStyle = isReal
+        ? 'background:var(--gn-bg);color:var(--gn-tx);border:1px solid var(--gn);font-weight:700'
+        : 'background:var(--sf2);color:var(--tx3);border:1px dashed var(--bd);font-style:italic';
+      var badge = isReal ? '' : '<span style="font-size:9px;color:var(--tx3);margin-left:2px" title="Previsto">~</span>';
+
+      html += '<div style="display:flex;align-items:center;gap:5px;padding:5px 0;border-bottom:1px solid var(--bd);font-size:12px">';
+      html += '<span style="font-size:14px">' + (ht.flag||'') + '</span>';
+      html += '<span style="flex:1;font-weight:' + (winA?700:400) + ';color:' + (winA?'var(--tx)':'var(--tx2)') + '">' + (ht.name||m.a) + '</span>';
+      html += '<b style="font-family:\'Space Grotesk\',monospace;font-size:13px;padding:1px 7px;border-radius:5px;' + scoreStyle + '">' + sA + '-' + sB + badge + '</b>';
+      html += '<span style="flex:1;text-align:right;font-weight:' + (winB?700:400) + ';color:' + (winB?'var(--tx)':'var(--tx2)') + '">' + (at.name||m.b) + '</span>';
+      html += '<span style="font-size:14px">' + (at.flag||'') + '</span>';
+      html += '</div>';
+    });
+
+    html += '</div>';
+  });
+
+  html += '</div>';
+
+  // Legend
+  html = '<div style="display:flex;align-items:center;gap:16px;font-size:11px;margin-bottom:10px;flex-wrap:wrap">'
+    + '<span style="display:flex;align-items:center;gap:5px"><b style="background:var(--gn-bg);color:var(--gn-tx);border:1px solid var(--gn);padding:1px 8px;border-radius:4px;font-size:11px">2-1</b> Resultado real (' + totalReal + ')</span>'
+    + '<span style="display:flex;align-items:center;gap:5px"><b style="background:var(--sf2);color:var(--tx3);border:1px dashed var(--bd);padding:1px 8px;border-radius:4px;font-size:11px;font-style:italic">~1-0</b> Previsão do modelo (' + totalSim + ')</span>'
+    + '</div>'
+    + html;
+
+  document.getElementById('simTabGroupresults').innerHTML = html;
+}
 function renderSimMC(counts,N){var sorted=Object.entries(counts).filter(function(e){return e[1].r16>0&&SCOUTS[e[0]];}).sort(function(a,b){return b[1].champion-a[1].champion;});var html='<p style="font-size:12px;color:var(--tx2);margin-bottom:1rem">'+N.toLocaleString()+' simulacoes</p><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px">';sorted.forEach(function(e){var code=e[0],c=e[1],t=SCOUTS[code]||{flag:'',name:code};var pch=(c.champion/N*100).toFixed(1);html+='<div class="card" style="margin-bottom:0;padding:.65rem .8rem"><div style="display:flex;align-items:center;gap:7px;margin-bottom:5px"><span style="font-size:20px">'+(t.flag||'')+'</span><span style="font-size:12px;font-weight:600;flex:1">'+(t.name||code)+'</span><b style="font-size:16px;color:var(--ac)">'+pch+'%</b></div>'+[['Camp.',c.champion,'var(--ac)'],['Final',c.final,'var(--gn)'],['Semi',c.sf,'var(--am)']].map(function(row){var p=(row[1]/N*100).toFixed(1);return '<div style="display:flex;align-items:center;gap:5px;font-size:11px;margin-bottom:2px"><span style="width:38px;color:var(--tx3)">'+row[0]+'</span><div style="flex:1;background:var(--bd);border-radius:2px;height:4px;overflow:hidden"><div style="height:100%;width:'+Math.min(100,p*3)+'%;background:'+row[2]+';border-radius:2px"></div></div><span style="min-width:30px;text-align:right">'+p+'%</span></div>';}).join('')+'</div>';});html+='</div>';document.getElementById('simTabMontecarlo').innerHTML=html;}
 
 // ── BETFAIR RENDER ────────────────────────────────────────────
