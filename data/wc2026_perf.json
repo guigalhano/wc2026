@@ -1,6 +1,51 @@
 {
-  "updated_at": "2026-06-22T23:07:06.793610+00:00",
+  "updated_at": "2026-06-23T02:21:58.870268+00:00",
   "teams": [
+    {
+      "code": "NOR",
+      "name": "Norway",
+      "games": 2,
+      "goals_for": 7,
+      "goals_against": 3,
+      "xg_for": 4.28,
+      "xg_against": 1.9500000000000002,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 3.7543168429233,
+      "matches": [
+        {
+          "vs": "IRQ",
+          "date": "2026-06-16",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 2.85,
+          "xga": 0.68,
+          "result": "W",
+          "p_win": 0.691,
+          "real_poss": 57.0,
+          "real_shots": 11.0,
+          "real_sot": 5.0
+        },
+        {
+          "vs": "SEN",
+          "date": "2026-06-23",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 1.43,
+          "xga": 1.27,
+          "result": "W",
+          "p_win": 0.392
+        }
+      ],
+      "xpts": 3.75,
+      "delta_pts": 2.25,
+      "xgf": 2.14,
+      "xga": 0.98,
+      "real_possession_avg": 57.0,
+      "real_shots_avg": 11.0
+    },
     {
       "code": "EUA",
       "name": "USA",
@@ -215,6 +260,52 @@
       "real_shots_avg": 7.0
     },
     {
+      "code": "FRA",
+      "name": "France",
+      "games": 2,
+      "goals_for": 6,
+      "goals_against": 1,
+      "xg_for": 4.8149999999999995,
+      "xg_against": 1.3750000000000002,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "points": 6,
+      "expected_points": 4.533358464958702,
+      "matches": [
+        {
+          "vs": "SEN",
+          "date": "2026-06-16",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.44,
+          "xga": 1.05,
+          "result": "W",
+          "p_win": 0.549,
+          "real_poss": 49.0,
+          "real_shots": 11.0,
+          "real_sot": 8.0,
+          "real_corners": 6.0
+        },
+        {
+          "vs": "IRQ",
+          "date": "2026-06-22",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 2.38,
+          "xga": 0.33,
+          "result": "W",
+          "p_win": 0.827
+        }
+      ],
+      "xpts": 4.53,
+      "delta_pts": 1.47,
+      "xgf": 2.41,
+      "xga": 0.69,
+      "real_possession_avg": 49.0,
+      "real_shots_avg": 11.0
+    },
+    {
       "code": "ALE",
       "name": "Germany",
       "games": 2,
@@ -381,42 +472,6 @@
       "xga": 1.72
     },
     {
-      "code": "FRA",
-      "name": "France",
-      "games": 1,
-      "goals_for": 3,
-      "goals_against": 1,
-      "xg_for": 2.44,
-      "xg_against": 1.05,
-      "wins": 1,
-      "draws": 0,
-      "losses": 0,
-      "points": 3,
-      "expected_points": 1.9098475019303134,
-      "matches": [
-        {
-          "vs": "SEN",
-          "date": "2026-06-16",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.44,
-          "xga": 1.05,
-          "result": "W",
-          "p_win": 0.549,
-          "real_poss": 49.0,
-          "real_shots": 11.0,
-          "real_sot": 8.0,
-          "real_corners": 6.0
-        }
-      ],
-      "xpts": 1.91,
-      "delta_pts": 1.09,
-      "xgf": 2.44,
-      "xga": 1.05,
-      "real_possession_avg": 49.0,
-      "real_shots_avg": 11.0
-    },
-    {
       "code": "JAP",
       "name": "Japan",
       "games": 2,
@@ -575,41 +630,6 @@
       "delta_pts": 0.82,
       "xgf": 1.96,
       "xga": 0.74
-    },
-    {
-      "code": "NOR",
-      "name": "Norway",
-      "games": 1,
-      "goals_for": 4,
-      "goals_against": 1,
-      "xg_for": 2.85,
-      "xg_against": 0.68,
-      "wins": 1,
-      "draws": 0,
-      "losses": 0,
-      "points": 3,
-      "expected_points": 2.288318849145942,
-      "matches": [
-        {
-          "vs": "IRQ",
-          "date": "2026-06-16",
-          "gf": 4,
-          "ga": 1,
-          "xgf": 2.85,
-          "xga": 0.68,
-          "result": "W",
-          "p_win": 0.691,
-          "real_poss": 57.0,
-          "real_shots": 11.0,
-          "real_sot": 5.0
-        }
-      ],
-      "xpts": 2.29,
-      "delta_pts": 0.71,
-      "xgf": 2.85,
-      "xga": 0.68,
-      "real_possession_avg": 57.0,
-      "real_shots_avg": 11.0
     },
     {
       "code": "AUS",
@@ -1085,41 +1105,6 @@
       "real_shots_avg": 4.0
     },
     {
-      "code": "IRQ",
-      "name": "Iraq",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 4,
-      "xg_for": 0.68,
-      "xg_against": 2.85,
-      "wins": 0,
-      "draws": 0,
-      "losses": 1,
-      "points": 0,
-      "expected_points": 0.49743545914586906,
-      "matches": [
-        {
-          "vs": "NOR",
-          "date": "2026-06-16",
-          "gf": 1,
-          "ga": 4,
-          "xgf": 0.68,
-          "xga": 2.85,
-          "result": "L",
-          "p_win": 0.094,
-          "real_poss": 34.0,
-          "real_shots": 11.0,
-          "real_sot": 1.0
-        }
-      ],
-      "xpts": 0.5,
-      "delta_pts": -0.5,
-      "xgf": 0.68,
-      "xga": 2.85,
-      "real_possession_avg": 34.0,
-      "real_shots_avg": 11.0
-    },
-    {
       "code": "AGL",
       "name": "Algeria",
       "games": 1,
@@ -1229,6 +1214,51 @@
       "xga": 1.96
     },
     {
+      "code": "IRQ",
+      "name": "Iraq",
+      "games": 2,
+      "goals_for": 1,
+      "goals_against": 7,
+      "xg_for": 1.0050000000000003,
+      "xg_against": 5.225,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 0.7303309435791889,
+      "matches": [
+        {
+          "vs": "NOR",
+          "date": "2026-06-16",
+          "gf": 1,
+          "ga": 4,
+          "xgf": 0.68,
+          "xga": 2.85,
+          "result": "L",
+          "p_win": 0.094,
+          "real_poss": 34.0,
+          "real_shots": 11.0,
+          "real_sot": 1.0
+        },
+        {
+          "vs": "FRA",
+          "date": "2026-06-22",
+          "gf": 0,
+          "ga": 3,
+          "xgf": 0.33,
+          "xga": 2.38,
+          "result": "L",
+          "p_win": 0.03
+        }
+      ],
+      "xpts": 0.73,
+      "delta_pts": -0.73,
+      "xgf": 0.5,
+      "xga": 2.61,
+      "real_possession_avg": 34.0,
+      "real_shots_avg": 11.0
+    },
+    {
       "code": "JOR",
       "name": "Jordan",
       "games": 1,
@@ -1297,42 +1327,6 @@
       "delta_pts": -0.81,
       "xgf": 1.38,
       "xga": 1.32
-    },
-    {
-      "code": "SEN",
-      "name": "Senegal",
-      "games": 1,
-      "goals_for": 1,
-      "goals_against": 3,
-      "xg_for": 1.05,
-      "xg_against": 2.44,
-      "wins": 0,
-      "draws": 0,
-      "losses": 1,
-      "points": 0,
-      "expected_points": 0.8264930376969957,
-      "matches": [
-        {
-          "vs": "FRA",
-          "date": "2026-06-16",
-          "gf": 1,
-          "ga": 3,
-          "xgf": 1.05,
-          "xga": 2.44,
-          "result": "L",
-          "p_win": 0.188,
-          "real_poss": 44.0,
-          "real_shots": 6.0,
-          "real_sot": 2.0,
-          "real_corners": 4.0
-        }
-      ],
-      "xpts": 0.83,
-      "delta_pts": -0.83,
-      "xgf": 1.05,
-      "xga": 2.44,
-      "real_possession_avg": 44.0,
-      "real_shots_avg": 6.0
     },
     {
       "code": "NZE",
@@ -1689,6 +1683,52 @@
       "delta_pts": -1.99,
       "xgf": 1.08,
       "xga": 1.62
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "games": 2,
+      "goals_for": 3,
+      "goals_against": 6,
+      "xg_for": 2.3200000000000003,
+      "xg_against": 3.87,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "points": 0,
+      "expected_points": 2.0715334042694193,
+      "matches": [
+        {
+          "vs": "FRA",
+          "date": "2026-06-16",
+          "gf": 1,
+          "ga": 3,
+          "xgf": 1.05,
+          "xga": 2.44,
+          "result": "L",
+          "p_win": 0.188,
+          "real_poss": 44.0,
+          "real_shots": 6.0,
+          "real_sot": 2.0,
+          "real_corners": 4.0
+        },
+        {
+          "vs": "NOR",
+          "date": "2026-06-23",
+          "gf": 2,
+          "ga": 3,
+          "xgf": 1.27,
+          "xga": 1.43,
+          "result": "L",
+          "p_win": 0.319
+        }
+      ],
+      "xpts": 2.07,
+      "delta_pts": -2.07,
+      "xgf": 1.16,
+      "xga": 1.94,
+      "real_possession_avg": 44.0,
+      "real_shots_avg": 6.0
     },
     {
       "code": "TUR",
@@ -3193,9 +3233,70 @@
       "stadium": "Monterrey Stadium (Estadio BBVA)",
       "city": "Guadalupe",
       "referee": "Mustapha Ghorbal"
+    },
+    {
+      "date": "2026-06-22",
+      "home": "FRA",
+      "away": "IRQ",
+      "g1": 3,
+      "g2": 0,
+      "pH": 0.827,
+      "pD": 0.144,
+      "pA": 0.03,
+      "lam": 2.38,
+      "mu": 0.33,
+      "home_xg": 2.38,
+      "away_xg": 0.33,
+      "real_xg": false,
+      "goals": [],
+      "reds": [],
+      "home_poss": null,
+      "away_poss": null,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "has_stats": false,
+      "narrative": [
+        "✅ **Result matched prediction** (83% confidence). Final: 3–0."
+      ],
+      "stadium": "Dallas Stadium (AT&T Stadium)",
+      "city": "Arlington",
+      "referee": "César Arturo Ramos"
+    },
+    {
+      "date": "2026-06-23",
+      "home": "NOR",
+      "away": "SEN",
+      "g1": 3,
+      "g2": 2,
+      "pH": 0.392,
+      "pD": 0.289,
+      "pA": 0.319,
+      "lam": 1.43,
+      "mu": 1.27,
+      "home_xg": 1.43,
+      "away_xg": 1.27,
+      "real_xg": false,
+      "goals": [],
+      "reds": [],
+      "home_poss": null,
+      "away_poss": null,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "has_stats": false,
+      "narrative": [
+        "✅ **Result matched prediction** (39% confidence). Final: 3–2.",
+        "⚡ Norway outscored their xG significantly (3 goals vs 1.4 xG) — clinical finishing."
+      ],
+      "stadium": "",
+      "city": "",
+      "referee": ""
     }
   ],
   "real_xg_games": 16,
-  "narratives_built": 36,
+  "narratives_built": 38,
   "source": "football-data.org + mominullptr/FIFA-World-Cup-2026-Dataset"
 }

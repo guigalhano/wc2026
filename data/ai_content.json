@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22T23:07:07.447937+00:00",
-  "generated_at_brt": "22/06/2026 20:07 BRT",
+  "generated_at": "2026-06-23T02:21:59.891624+00:00",
+  "generated_at_brt": "22/06/2026 23:21 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -8,66 +8,18 @@
   },
   "match_previews": [
     {
-      "game_id": "7ad7a0ce2ef2618bb59b066da5642f70",
-      "home": "France",
-      "away": "Iraq",
-      "time": "2026-06-22T21:00:00Z",
-      "h2h": {
-        "home": 1.11,
-        "away": 150.0,
-        "draw": 22.0
-      },
-      "totals": {
-        "over25": 1.96,
-        "under25": 3.25
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
-      "game_id": "3f48473742ca0fd2a85930554720c75e",
-      "home": "Norway",
-      "away": "Senegal",
-      "time": "2026-06-23T00:00:00Z",
-      "h2h": {
-        "home": 2.4,
-        "away": 3.3,
-        "draw": 3.55
-      },
-      "totals": {
-        "over25": 2.6,
-        "under25": 1.96
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
       "game_id": "fd8533b650e655030f6a7946f8795db2",
       "home": "Jordan",
       "away": "Algeria",
       "time": "2026-06-23T03:00:00Z",
       "h2h": {
         "away": 1.6,
-        "home": 7.02,
-        "draw": 4.5
+        "home": 7.2,
+        "draw": 4.55
       },
       "totals": {
         "over25": 2.7,
-        "under25": 1.97
+        "under25": 1.93
       },
       "btts_yes": null,
       "preview": {
@@ -86,12 +38,12 @@
       "time": "2026-06-23T17:00:00Z",
       "h2h": {
         "home": 1.23,
-        "away": 22.0,
-        "draw": 8.5
+        "away": 24.0,
+        "draw": 8.75
       },
       "totals": {
-        "over25": 2.48,
-        "under25": 2.45
+        "over25": 2.42,
+        "under25": 2.5
       },
       "btts_yes": null,
       "preview": {
@@ -114,7 +66,7 @@
         "draw": 7.5
       },
       "totals": {
-        "over25": 2.07,
+        "over25": 2.6,
         "under25": 2.4
       },
       "btts_yes": null,
@@ -134,12 +86,60 @@
       "time": "2026-06-23T23:00:00Z",
       "h2h": {
         "away": 1.58,
-        "home": 8.0,
+        "home": 7.8,
         "draw": 4.4
       },
       "totals": {
-        "over25": 2.55,
-        "under25": 2.14
+        "over25": 2.4,
+        "under25": 2.16
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "68bfc965eb267508e04d8e8d75c1a0ae",
+      "home": "Colombia",
+      "away": "DR Congo",
+      "time": "2026-06-24T02:00:00Z",
+      "h2h": {
+        "home": 1.6,
+        "away": 7.4,
+        "draw": 4.2
+      },
+      "totals": {
+        "over25": 2.32,
+        "under25": 2.9
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "512ac18beb5aa936a59f7ea3e497ada2",
+      "home": "Bosnia & Herzegovina",
+      "away": "Qatar",
+      "time": "2026-06-24T19:00:00Z",
+      "h2h": {
+        "home": 1.48,
+        "away": 7.8,
+        "draw": 5.3
+      },
+      "totals": {
+        "over25": 2.09,
+        "under25": 2.3
       },
       "btts_yes": null,
       "preview": {
