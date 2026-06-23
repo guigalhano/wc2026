@@ -158,6 +158,38 @@ def build_narrative(hC, aC, g1, g2, pH, pD, pA, lam, mu,
 
     return lines
 
+# ── ELO auto-update from real WC2026 results ──────────────────────────────
+ELO_BASE = {
+    'ESP':2010,'FRA':2009,'ING':1993,'ARG':1976,'BRA':1955,'POR':1945,'ALE':1926,
+    'HOL':1894,'NOR':1880,'BEL':1878,'COL':1878,'MAR':1874,'CRO':1852,'SEN':1848,
+    'MEX':1834,'URU':1831,'EQU':1829,'EUA':1826,'JAP':1825,'SUI':1812,'AUS':1772,
+    'COR':1760,'SUE':1752,'IRA':1747,'CAN':1740,'CDM':1732,'TUR':1731,'AUT':1718,
+    'AGL':1704,'EGI':1695,'PAR':1681,'TUN':1680,'ESC':1663,'GAN':1659,'ARS':1657,
+    'TCH':1651,'RDC':1650,'UZB':1633,'PAN':1615,'BOS':1602,'IRQ':1599,'CAB':1599,
+    'CAT':1592,'AFS':1591,'NZE':1591,'JOR':1548,'CUR':1548,'HAI':1537,
+}
+ELO_K = 55
+
+def compute_live_elo(played_matches):
+    """Recalculate ELO from base values using all played WC2026 matches (K=55)."""
+    elo = dict(ELO_BASE)
+    for m in sorted(played_matches, key=lambda x: x.get('date', '')):
+        hC = m.get('home_code', '')
+        aC = m.get('away_code', '')
+        hg = m.get('home_score')
+        ag = m.get('away_score')
+        if not hC or not aC or hg is None or ag is None:
+            continue
+        rH = elo.get(hC, 1600)
+        rA = elo.get(aC, 1600)
+        pH_exp = 1 / (1 + 10**((rA - rH) / 400))
+        ah = 1.0 if hg > ag else (0.5 if hg == ag else 0.0)
+        dH = ELO_K * (ah - pH_exp)
+        elo[hC] = round(elo.get(hC, 1600) + dH)
+        elo[aC] = round(elo.get(aC, 1600) - dH)
+    return elo
+
+
 def main():
     print("WC2026 Performance Tracker v2 — with match narratives")
 
@@ -323,6 +355,20 @@ def main():
         'narratives_built': narratives_built,
         'source': 'football-data.org + mominullptr/FIFA-World-Cup-2026-Dataset',
     }
+    # Store live ELO back into live_data.json for build_index.py to inject
+    try:
+        with open('data/live_data.json') as lf:
+            ld = json.load(lf)
+        live_elo = compute_live_elo(played)
+        ld['live_elo'] = live_elo
+        ld['live_elo_games'] = len(played)
+        ld['live_elo_updated'] = datetime.now(timezone.utc).isoformat()
+        with open('data/live_data.json', 'w') as lf:
+            json.dump(ld, lf, ensure_ascii=False, separators=(',', ':'))
+        print(f"  Live ELO updated: {len(live_elo)} teams from {len(played)} games")
+    except Exception as e:
+        print(f"  WARNING: could not update live ELO: {e}")
+
     os.makedirs('data', exist_ok=True)
     with open('data/wc2026_perf.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
