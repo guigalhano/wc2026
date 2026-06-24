@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T10:37:56.182392+00:00",
-  "generated_at_brt": "24/06/2026 07:37 BRT",
+  "generated_at": "2026-06-24T18:23:26.880713+00:00",
+  "generated_at_brt": "24/06/2026 15:23 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -13,12 +13,12 @@
       "away": "Qatar",
       "time": "2026-06-24T19:00:00Z",
       "h2h": {
-        "home": 1.45,
+        "home": 1.44,
         "away": 8.5,
-        "draw": 5.6
+        "draw": 5.65
       },
       "totals": {
-        "over25": 2.45,
+        "over25": 2.5,
         "under25": 2.45
       },
       "btts_yes": null,
@@ -37,13 +37,13 @@
       "away": "Canada",
       "time": "2026-06-24T19:00:00Z",
       "h2h": {
-        "away": 3.55,
-        "home": 2.46,
-        "draw": 3.2
+        "away": 3.45,
+        "home": 2.6,
+        "draw": 3.15
       },
       "totals": {
-        "over25": 2.22,
-        "under25": 2.55
+        "over25": 2.34,
+        "under25": 3.05
       },
       "btts_yes": null,
       "preview": {
@@ -62,11 +62,11 @@
       "time": "2026-06-24T22:00:00Z",
       "h2h": {
         "away": 1.37,
-        "home": 11.1,
+        "home": 12.3,
         "draw": 6.0
       },
       "totals": {
-        "over25": 2.55,
+        "over25": 2.45,
         "under25": 2.12
       },
       "btts_yes": null,
@@ -85,13 +85,13 @@
       "away": "Haiti",
       "time": "2026-06-24T22:00:00Z",
       "h2h": {
-        "away": 20.0,
+        "away": 22.0,
         "home": 1.23,
-        "draw": 8.0
+        "draw": 8.8
       },
       "totals": {
-        "over25": 2.38,
-        "under25": 2.48
+        "over25": 2.4,
+        "under25": 2.52
       },
       "btts_yes": null,
       "preview": {
@@ -109,13 +109,13 @@
       "away": "Mexico",
       "time": "2026-06-25T01:00:00Z",
       "h2h": {
-        "home": 4.0,
-        "away": 2.0,
-        "draw": 4.1
+        "home": 3.95,
+        "away": 2.01,
+        "draw": 4.0
       },
       "totals": {
-        "over25": 3.0,
-        "under25": 1.92
+        "over25": 2.8,
+        "under25": 1.88
       },
       "btts_yes": null,
       "preview": {
@@ -133,12 +133,12 @@
       "away": "South Korea",
       "time": "2026-06-25T01:00:00Z",
       "h2h": {
-        "home": 5.9,
-        "away": 1.71,
-        "draw": 4.1
+        "home": 6.6,
+        "away": 1.7,
+        "draw": 4.2
       },
       "totals": {
-        "over25": 2.9,
+        "over25": 2.85,
         "under25": 1.87
       },
       "btts_yes": null,
