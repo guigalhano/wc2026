@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-25T10:30:44.745781+00:00",
-  "generated_at_brt": "25/06/2026 07:30 BRT",
+  "generated_at": "2026-06-25T19:23:43.124251+00:00",
+  "generated_at_brt": "25/06/2026 16:23 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -13,13 +13,13 @@
       "away": "Ivory Coast",
       "time": "2026-06-25T20:00:00Z",
       "h2h": {
-        "home": 22.0,
-        "away": 1.19,
+        "home": 23.0,
+        "away": 1.21,
         "draw": 9.0
       },
       "totals": {
-        "over25": 2.25,
-        "under25": 2.75
+        "over25": 2.2,
+        "under25": 3.0
       },
       "btts_yes": null,
       "preview": {
@@ -37,13 +37,13 @@
       "away": "Germany",
       "time": "2026-06-25T20:00:00Z",
       "h2h": {
-        "home": 5.75,
-        "away": 1.57,
-        "draw": 5.4
+        "home": 5.7,
+        "away": 1.69,
+        "draw": 5.3
       },
       "totals": {
-        "over25": 2.65,
-        "under25": 2.42
+        "over25": 2.7,
+        "under25": 2.32
       },
       "btts_yes": null,
       "preview": {
@@ -61,13 +61,13 @@
       "away": "Sweden",
       "time": "2026-06-25T23:00:00Z",
       "h2h": {
-        "home": 1.96,
-        "away": 4.7,
-        "draw": 3.65
+        "home": 2.08,
+        "away": 4.6,
+        "draw": 3.6
       },
       "totals": {
-        "over25": 2.3,
-        "under25": 2.02
+        "over25": 2.7,
+        "under25": 1.95
       },
       "btts_yes": null,
       "preview": {
@@ -85,13 +85,13 @@
       "away": "Netherlands",
       "time": "2026-06-25T23:00:00Z",
       "h2h": {
-        "away": 1.12,
-        "home": 46.0,
-        "draw": 14.3
+        "away": 1.13,
+        "home": 32.0,
+        "draw": 12.5
       },
       "totals": {
-        "over25": 2.08,
-        "under25": 3.1
+        "over25": 2.9,
+        "under25": 2.9
       },
       "btts_yes": null,
       "preview": {
@@ -109,13 +109,13 @@
       "away": "Australia",
       "time": "2026-06-26T02:00:00Z",
       "h2h": {
-        "away": 4.4,
-        "home": 2.88,
-        "draw": 2.38
+        "away": 4.7,
+        "home": 2.84,
+        "draw": 2.36
       },
       "totals": {
-        "over25": 3.15,
-        "under25": 2.36
+        "over25": 3.05,
+        "under25": 2.32
       },
       "btts_yes": null,
       "preview": {
@@ -133,13 +133,13 @@
       "away": "USA",
       "time": "2026-06-26T02:00:00Z",
       "h2h": {
-        "home": 4.0,
+        "home": 4.1,
         "away": 1.95,
-        "draw": 4.3
+        "draw": 4.4
       },
       "totals": {
-        "over25": 2.25,
-        "under25": 2.27
+        "over25": 2.55,
+        "under25": 2.42
       },
       "btts_yes": null,
       "preview": {

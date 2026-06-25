@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T10:30:44.152417+00:00",
+  "updated_at": "2026-06-25T19:23:41.742487+00:00",
   "teams": [
     {
       "code": "MEX",
@@ -7,14 +7,14 @@
       "games": 3,
       "goals_for": 6,
       "goals_against": 0,
-      "xg_for": 5.970000000000001,
-      "xg_against": 1.7900000000000005,
+      "xg_for": 6.3825,
+      "xg_against": 2.2825,
       "wins": 3,
       "draws": 0,
       "losses": 0,
       "points": 9,
       "expected_points": 7.0069092255130085,
-      "big_chances_created": 2,
+      "big_chances_created": 7,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -42,16 +42,16 @@
           "date": "2026-06-25",
           "gf": 3,
           "ga": 0,
-          "xgf": 2.13,
-          "xga": 0.45,
+          "xgf": 2.54,
+          "xga": 0.94,
           "result": "W",
           "p_win": 0.758
         }
       ],
       "xpts": 7.01,
       "delta_pts": 1.99,
-      "xgf": 1.99,
-      "xga": 0.6
+      "xgf": 2.13,
+      "xga": 0.76
     },
     {
       "code": "EUA",
@@ -454,7 +454,7 @@
       "losses": 0,
       "points": 7,
       "expected_points": 5.853821817818332,
-      "big_chances_created": 9,
+      "big_chances_created": 12,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -499,14 +499,14 @@
       "games": 3,
       "goals_for": 6,
       "goals_against": 3,
-      "xg_for": 3.9650000000000003,
-      "xg_against": 2.965,
+      "xg_for": 5.35,
+      "xg_against": 3.51,
       "wins": 2,
       "draws": 1,
       "losses": 0,
       "points": 7,
       "expected_points": 5.8825366714777765,
-      "big_chances_created": 4,
+      "big_chances_created": 9,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -534,16 +534,16 @@
           "date": "2026-06-24",
           "gf": 4,
           "ga": 2,
-          "xgf": 2.33,
-          "xga": 0.38,
+          "xgf": 3.71,
+          "xga": 0.92,
           "result": "W",
           "p_win": 0.807
         }
       ],
       "xpts": 5.88,
       "delta_pts": 1.12,
-      "xgf": 1.32,
-      "xga": 0.99
+      "xgf": 1.78,
+      "xga": 1.17
     },
     {
       "code": "CDM",
@@ -642,7 +642,7 @@
       "losses": 1,
       "points": 4,
       "expected_points": 3.100505512203822,
-      "big_chances_created": 1,
+      "big_chances_created": 2,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -939,14 +939,14 @@
       "games": 3,
       "goals_for": 7,
       "goals_against": 1,
-      "xg_for": 6.0075,
-      "xg_against": 2.1025,
+      "xg_for": 7.390000000000001,
+      "xg_against": 2.96,
       "wins": 2,
       "draws": 1,
       "losses": 0,
       "points": 7,
       "expected_points": 6.593560819395872,
-      "big_chances_created": 6,
+      "big_chances_created": 12,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -974,16 +974,16 @@
           "date": "2026-06-24",
           "gf": 3,
           "ga": 0,
-          "xgf": 2.11,
-          "xga": 0.59,
+          "xgf": 3.49,
+          "xga": 1.45,
           "result": "W",
           "p_win": 0.716
         }
       ],
       "xpts": 6.59,
       "delta_pts": 0.41,
-      "xgf": 2.0,
-      "xga": 0.7
+      "xgf": 2.46,
+      "xga": 0.99
     },
     {
       "code": "SUE",
@@ -1033,14 +1033,14 @@
       "games": 3,
       "goals_for": 1,
       "goals_against": 4,
-      "xg_for": 3.0025000000000004,
-      "xg_against": 3.9775,
+      "xg_for": 3.8600000000000003,
+      "xg_against": 5.36,
       "wins": 1,
       "draws": 0,
       "losses": 2,
       "points": 3,
       "expected_points": 2.919958142561,
-      "big_chances_created": 3,
+      "big_chances_created": 4,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1068,16 +1068,16 @@
           "date": "2026-06-24",
           "gf": 0,
           "ga": 3,
-          "xgf": 0.59,
-          "xga": 2.11,
+          "xgf": 1.45,
+          "xga": 3.49,
           "result": "L",
           "p_win": 0.081
         }
       ],
       "xpts": 2.92,
       "delta_pts": 0.08,
-      "xgf": 1.0,
-      "xga": 1.33
+      "xgf": 1.29,
+      "xga": 1.79
     },
     {
       "code": "CUR",
@@ -1606,7 +1606,7 @@
       "losses": 1,
       "points": 4,
       "expected_points": 5.184740343017908,
-      "big_chances_created": 8,
+      "big_chances_created": 11,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1658,7 +1658,7 @@
       "losses": 2,
       "points": 1,
       "expected_points": 2.3200037114422307,
-      "big_chances_created": 1,
+      "big_chances_created": 3,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1703,14 +1703,14 @@
       "games": 3,
       "goals_for": 2,
       "goals_against": 8,
-      "xg_for": 2.115,
-      "xg_against": 6.045,
+      "xg_for": 2.66,
+      "xg_against": 7.43,
       "wins": 0,
       "draws": 0,
       "losses": 3,
       "points": 0,
       "expected_points": 1.3297729284195718,
-      "big_chances_created": 1,
+      "big_chances_created": 2,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1738,16 +1738,16 @@
           "date": "2026-06-24",
           "gf": 2,
           "ga": 4,
-          "xgf": 0.38,
-          "xga": 2.33,
+          "xgf": 0.92,
+          "xga": 3.71,
           "result": "L",
           "p_win": 0.037
         }
       ],
       "xpts": 1.33,
       "delta_pts": -1.33,
-      "xgf": 0.71,
-      "xga": 2.02
+      "xgf": 0.89,
+      "xga": 2.48
     },
     {
       "code": "JOR",
@@ -1965,8 +1965,8 @@
       "games": 3,
       "goals_for": 2,
       "goals_against": 6,
-      "xg_for": 2.9675000000000002,
-      "xg_against": 5.7575,
+      "xg_for": 3.46,
+      "xg_against": 6.17,
       "wins": 0,
       "draws": 1,
       "losses": 2,
@@ -2000,16 +2000,16 @@
           "date": "2026-06-25",
           "gf": 0,
           "ga": 3,
-          "xgf": 0.45,
-          "xga": 2.13,
+          "xgf": 0.94,
+          "xga": 2.54,
           "result": "L",
           "p_win": 0.056
         }
       ],
       "xpts": 2.7,
       "delta_pts": -1.7,
-      "xgf": 0.99,
-      "xga": 1.92
+      "xgf": 1.15,
+      "xga": 2.06
     },
     {
       "code": "URU",
@@ -4680,30 +4680,30 @@
       "home_xg": 0.71,
       "away_xg": 1.35,
       "real_xg": true,
-      "home_shots": 6.0,
-      "away_shots": 13.0,
-      "home_sot": 4.0,
-      "away_sot": 7.0,
-      "home_poss": 55.0,
-      "away_poss": 45.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 6,
+      "away_shots": 13,
+      "home_sot": 5,
+      "away_sot": 10,
+      "home_poss": 53.5,
+      "away_poss": 46.5,
+      "home_big_chances": 3,
+      "away_big_chances": 3,
       "home_goals": [
         {
-          "min": "46",
-          "player": "Ruben Estephan Vargas",
+          "min": "45",
+          "player": "Rubén Vargas",
           "type": "regular"
         },
         {
-          "min": "57",
-          "player": "Johan Kula Manzambi",
+          "min": "56",
+          "player": "Johan Manzambi",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "76",
-          "player": "Promise Oluwatobi Emmanuel David",
+          "min": "75",
+          "player": "Promise David",
           "type": "regular"
         }
       ],
@@ -4712,9 +4712,11 @@
       "narrative": [
         "✅ **Result matched prediction** (41%). Final: 2–1.",
         "⚡ Switzerland outscored xG (2 goals vs 0.7 xG) — clinical finishing.",
+        "💥 Switzerland created 3 big chances.",
+        "💥 Canada created 3 big chances.",
         "🎯 Switzerland: 2 goals from 6 shots (33% conversion)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Vancouver Stadium (BC Place)",
       "city": "Vancouver"
     },
@@ -4732,35 +4734,35 @@
       "home_xg": 1.48,
       "away_xg": 0.95,
       "real_xg": true,
-      "home_shots": 14.0,
-      "away_shots": 9.0,
-      "home_sot": 5.0,
-      "away_sot": 3.0,
-      "home_poss": 54.0,
-      "away_poss": 46.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 14,
+      "away_shots": 10,
+      "home_sot": 11,
+      "away_sot": 5,
+      "home_poss": 53.2,
+      "away_poss": 46.8,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
       "home_goals": [
         {
-          "min": "29",
+          "min": "28",
           "player": "Kerim Alajbegovic",
           "type": "regular"
         },
         {
-          "min": "34",
-          "player": "Ibrahim Mahmoud Abunada",
-          "type": "regular"
-        },
-        {
-          "min": "82",
+          "min": "79",
           "player": "Ermin Mahmic",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "42",
-          "player": "Khalid Hassan Alhaydos",
+          "min": "33",
+          "player": "Mahmoud Abunada",
+          "type": "regular"
+        },
+        {
+          "min": "41",
+          "player": "Hassan Al Haydos",
           "type": "regular"
         }
       ],
@@ -4768,9 +4770,11 @@
       "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (43%). Final: 3–1.",
-        "⚡ Bosnia & Herzegovina outscored xG (3 goals vs 1.5 xG) — clinical finishing."
+        "⚡ Bosnia & Herzegovina outscored xG (3 goals vs 1.5 xG) — clinical finishing.",
+        "💥 Bosnia & Herzegovina created 1 big chance.",
+        "💥 Qatar created 2 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Toronto Stadium (BMO Field)",
       "city": "Toronto"
     },
@@ -4785,27 +4789,61 @@
       "pA": 0.037,
       "lam": 2.33,
       "mu": 0.38,
-      "home_xg": 2.33,
-      "away_xg": 0.38,
+      "home_xg": 3.71,
+      "away_xg": 0.92,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_shots": 23,
+      "away_shots": 9,
+      "home_sot": 17,
+      "away_sot": 5,
+      "home_poss": 62.2,
+      "away_poss": 37.8,
+      "home_big_chances": 5,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "9",
+          "player": "Yassine Bounou",
+          "type": "regular"
+        },
+        {
+          "min": "38",
+          "player": "Achraf Hakimi",
+          "type": "regular"
+        },
+        {
+          "min": "45",
+          "player": "Ismael Saibari",
+          "type": "regular"
+        },
+        {
+          "min": "77",
+          "player": "Soufiane Rahimi",
+          "type": "regular"
+        },
+        {
+          "min": "88",
+          "player": "Gessime Yassine",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "42",
+          "player": "Wilson Isidor",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (81%). Final: 4–2.",
-        "⚡ Morocco outscored xG (4 goals vs 2.3 xG) — clinical finishing.",
-        "⚡ Haiti outscored xG (2 goals vs 0.4 xG) — clinical finishing."
+        "⚡ Haiti outscored xG (2 goals vs 0.9 xG) — clinical finishing.",
+        "💥 Morocco created 5 big chances.",
+        "💥 Haiti created 1 big chance.",
+        "🎯 Morocco dominated possession (62%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -4820,26 +4858,44 @@
       "pA": 0.716,
       "lam": 0.59,
       "mu": 2.11,
-      "home_xg": 0.59,
-      "away_xg": 2.11,
+      "home_xg": 1.45,
+      "away_xg": 3.49,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 14,
+      "away_shots": 21,
+      "home_sot": 8,
+      "away_sot": 14,
+      "home_poss": 46.2,
+      "away_poss": 53.8,
+      "home_big_chances": 1,
+      "away_big_chances": 6,
       "home_goals": [],
-      "away_goals": [],
+      "away_goals": [
+        {
+          "min": "6",
+          "player": "Vinícius Júnior",
+          "type": "regular"
+        },
+        {
+          "min": "47",
+          "player": "Vinícius Júnior",
+          "type": "regular"
+        },
+        {
+          "min": "59",
+          "player": "Matheus Cunha",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (72%). Final: 0–3.",
-        "⚡ Brazil outscored xG (3 goals vs 2.1 xG) — clinical finishing."
+        "🧱 Scotland underperformed xG (0 goals vs 1.4 xG).",
+        "💥 Scotland created 1 big chance.",
+        "💥 Brazil created 6 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -4854,26 +4910,43 @@
       "pA": 0.758,
       "lam": 0.45,
       "mu": 2.13,
-      "home_xg": 0.45,
-      "away_xg": 2.13,
+      "home_xg": 0.94,
+      "away_xg": 2.54,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 13,
+      "away_shots": 11,
+      "home_sot": 5,
+      "away_sot": 7,
+      "home_poss": 50.7,
+      "away_poss": 49.3,
+      "home_big_chances": 0,
+      "away_big_chances": 5,
       "home_goals": [],
-      "away_goals": [],
+      "away_goals": [
+        {
+          "min": "54",
+          "player": "Mateo Chávez",
+          "type": "regular"
+        },
+        {
+          "min": "60",
+          "player": "Julián Quiñones",
+          "type": "regular"
+        },
+        {
+          "min": "93",
+          "player": "Álvaro Fidalgo",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (76%). Final: 0–3.",
-        "⚡ Mexico outscored xG (3 goals vs 2.1 xG) — clinical finishing."
+        "🧱 Czechia underperformed xG (0 goals vs 0.9 xG).",
+        "💥 Mexico created 5 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -4913,7 +4986,7 @@
     }
   ],
   "real_xg_games": 32,
-  "nlbair_games": 44,
+  "nlbair_games": 49,
   "narratives_built": 54,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
