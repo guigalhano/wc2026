@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T21:58:14.037184+00:00",
-  "generated_at_brt": "26/06/2026 18:58 BRT",
+  "generated_at": "2026-06-27T08:12:18.636288+00:00",
+  "generated_at_brt": "27/06/2026 05:12 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -8,114 +8,18 @@
   },
   "match_previews": [
     {
-      "game_id": "e07b1926be5a4d515c7eb108dbcee9c5",
-      "home": "Cape Verde",
-      "away": "Saudi Arabia",
-      "time": "2026-06-27T00:00:00Z",
-      "h2h": {
-        "home": 2.9,
-        "away": 2.68,
-        "draw": 3.55
-      },
-      "totals": {
-        "over25": 2.8,
-        "under25": 1.9
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
-      "game_id": "dcff2e31c0bce001a4db5caaf4fa8822",
-      "home": "Uruguay",
-      "away": "Spain",
-      "time": "2026-06-27T00:00:00Z",
-      "h2h": {
-        "away": 1.7,
-        "home": 7.0,
-        "draw": 3.8
-      },
-      "totals": {
-        "over25": 2.18,
-        "under25": 3.15
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
-      "game_id": "581691da05dcd75b5c6d3be91ee9d2ab",
-      "home": "New Zealand",
-      "away": "Belgium",
-      "time": "2026-06-27T03:00:00Z",
-      "h2h": {
-        "away": 1.22,
-        "home": 17.0,
-        "draw": 8.6
-      },
-      "totals": {
-        "over25": 2.7,
-        "under25": 3.9
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
-      "game_id": "3e3b5fa2b3c963e74cf044c60db0b573",
-      "home": "Egypt",
-      "away": "Iran",
-      "time": "2026-06-27T03:00:00Z",
-      "h2h": {
-        "home": 2.62,
-        "away": 4.25,
-        "draw": 2.79
-      },
-      "totals": {
-        "over25": 3.05,
-        "under25": 2.45
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
       "game_id": "537c0997cd899394f47f16545b7068b2",
       "home": "Croatia",
       "away": "Ghana",
       "time": "2026-06-27T21:00:00Z",
       "h2h": {
-        "home": 1.85,
-        "away": 6.25,
-        "draw": 3.4
+        "home": 1.99,
+        "away": 5.4,
+        "draw": 3.25
       },
       "totals": {
-        "over25": 2.33,
-        "under25": 3.0
+        "over25": 2.43,
+        "under25": 2.85
       },
       "btts_yes": null,
       "preview": {
@@ -133,13 +37,109 @@
       "away": "England",
       "time": "2026-06-27T21:00:00Z",
       "h2h": {
-        "away": 1.22,
-        "home": 20.0,
-        "draw": 9.0
+        "away": 1.19,
+        "home": 21.0,
+        "draw": 9.6
       },
       "totals": {
-        "over25": 2.2,
-        "under25": 2.72
+        "over25": 2.16,
+        "under25": 2.88
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "67ae5751c401a98409b8566ae4897069",
+      "home": "Colombia",
+      "away": "Portugal",
+      "time": "2026-06-27T23:30:00Z",
+      "h2h": {
+        "home": 3.7,
+        "away": 2.08,
+        "draw": 3.96
+      },
+      "totals": {
+        "over25": 2.6,
+        "under25": 2.06
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "13eab94a136b9c264ba974cf437a5f71",
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "time": "2026-06-27T23:30:00Z",
+      "h2h": {
+        "home": 1.66,
+        "away": 6.0,
+        "draw": 4.4
+      },
+      "totals": {
+        "over25": 2.14,
+        "under25": 2.7
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "8756200e539155e571557c4f2e0d7f05",
+      "home": "Algeria",
+      "away": "Austria",
+      "time": "2026-06-28T02:00:00Z",
+      "h2h": {
+        "home": 4.4,
+        "away": 3.05,
+        "draw": 2.25
+      },
+      "totals": {
+        "over25": 3.25,
+        "under25": 2.28
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "54697f453437ab26276d773be1d72e9b",
+      "home": "Jordan",
+      "away": "Argentina",
+      "time": "2026-06-28T02:00:00Z",
+      "h2h": {
+        "away": 1.21,
+        "home": 22.0,
+        "draw": 9.95
+      },
+      "totals": {
+        "over25": 2.33,
+        "under25": 2.6
       },
       "btts_yes": null,
       "preview": {
