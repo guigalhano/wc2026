@@ -2288,177 +2288,241 @@ function runDeterministic(){document.getElementById('simStatus').textContent='Ca
 function runMonteCarlo(){var N=10000,counts={};Object.keys(SCOUTS).forEach(function(c){counts[c]={r32:0,r16:0,qf:0,sf:0,final:0,champion:0};});var i=0;document.getElementById('simProgress').style.display='block';document.getElementById('simContent').style.display='none';function batch(){var end=Math.min(i+500,N);for(;i<end;i++){var g=simGroupsWithRealBase(true);var br=simKO(g.qual,true,g.best8);(br.r32||[]).forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r32=((counts[m.winner].r32||0)+1);});br.r16.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].r16++;});br.qf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].qf++;});br.sf.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].sf++;});br.final.forEach(function(m){if(m.winner&&counts[m.winner])counts[m.winner].final++;});if(br.champion&&counts[br.champion])counts[br.champion].champion++;}var pct=Math.round(i/N*100);document.getElementById('simProgressFill').style.width=pct+'%';document.getElementById('simStatus').textContent='Simulando... '+pct+'%';if(i<N){setTimeout(batch,0);}else{window._simMC={counts:counts,N:N};document.getElementById('simProgress').style.display='none';var g2=simGroupsWithRealBase(false);var br2=simKO(g2.qual,false,g2.best8);renderSimChampion(br2.champion,counts);renderSimBracket(br2, window._simMC ? window._simMC.counts : null, window._simMC ? window._simMC.N : 1);renderSimGroups(g2);renderSimGroupResults(g2);renderSimMC(counts,N);document.getElementById('simStatus').textContent=N.toLocaleString()+' simulacoes concluidas';document.getElementById('simContent').style.display='block';showSimTab('montecarlo',document.querySelectorAll('.sim-tab')[4]);}}setTimeout(batch,50);}
 function renderSimChampion(ch,counts){var t=SCOUTS[ch]||{flag:'',name:ch};var pct=counts?((counts[ch]&&counts[ch].champion||0)/window._simMC.N*100).toFixed(1):null;var html='<div style="background:linear-gradient(135deg,var(--bl-bg),var(--gn-bg));border:2px solid var(--gn);border-radius:var(--rl);padding:1.5rem;text-align:center;margin-bottom:1.25rem"><div style="font-size:48px;margin-bottom:8px">🏆</div><div style="font-size:32px">'+(t.flag||'')+'</div><div style="font-size:22px;font-weight:700;font-family:Space Grotesk,sans-serif">'+(t.name||ch)+'</div>'+(pct?'<div style="font-size:13px;color:var(--tx2);margin-top:6px">'+pct+'% nas simulacoes</div>':'')+'</div>';if(counts){var sorted=Object.entries(counts).filter(function(e){return e[1].champion>0;}).sort(function(a,b){return b[1].champion-a[1].champion;}).slice(0,10);html+='<div style="display:flex;flex-direction:column;gap:5px">';sorted.forEach(function(e){var code=e[0],c=e[1];var p=(c.champion/window._simMC.N*100).toFixed(1);var t2=SCOUTS[code]||{flag:'',name:code};html+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)"><span style="font-size:18px">'+(t2.flag||'')+'</span><span style="font-size:12px;flex:1">'+(t2.name||code)+'</span><div style="flex:2;background:var(--bd);border-radius:2px;height:6px;overflow:hidden"><div style="height:100%;width:'+Math.min(100,p*3)+'%;background:'+(p>15?'var(--ac)':p>8?'var(--gn)':'var(--am)')+';border-radius:2px"></div></div><span style="min-width:42px;text-align:right;font-size:13px;font-weight:700;font-family:Space Grotesk,sans-serif">'+p+'%</span></div>';});html+='</div>';}document.getElementById('simTabChampion').innerHTML=html;}
 // ── Dynamic Bracket with probabilities ───────────────────────────────────────
-function renderSimBracket(br, counts, N) {
-  var ld = window.LIVE_DATA;
-  var allMatches = ld && ld.wc_results ? ld.wc_results.matches || [] : [];
+// ── renderSimBracket v3 — with historical WC data ────────────────────────────
+var WC_KO_HIST = {
+  // Historical stats from WC 1998-2022 knockout stages
+  // R32 = new in 2026 (48 teams), using R16 as proxy
+  rounds: {
+    r32:   { label:'16 Avos',  pens_pct:20, avg_goals:2.6, note:'Similar às Oitavas de CMs anteriores' },
+    r16:   { label:'Oitavas',  pens_pct:20, avg_goals:2.6, note:'19.6% vão a pênaltis (1998-2022)' },
+    qf:    { label:'Quartas',  pens_pct:32, avg_goals:2.1, note:'32% vão a pênaltis — ronda mais equilibrada' },
+    sf:    { label:'Semis',    pens_pct:14, avg_goals:2.4, note:'14% vão a pênaltis' },
+    final: { label:'Final',    pens_pct:29, avg_goals:3.0, note:'2 de 7 finais foram a pênaltis' },
+  },
+  // Confederation head-to-head in KO (1998-2022), format: [conf_winner, pct_win, pct_pens, n]
+  conf_h2h: {
+    'UEFA-CONMEBOL': { uefa:47, conmebol:28, pens:25, n:32, label:'Clássico Copa — UEFA leva historicamente' },
+    'UEFA-CAF':      { uefa:67, caf:22,      pens:11, n:9,  label:'UEFA domina vs CAF' },
+    'UEFA-AFC':      { uefa:57, afc:14,      pens:29, n:7,  label:'UEFA favorita, mas AFC surpreende (Japão, Coreia)' },
+    'UEFA-CONCACAF': { uefa:71, concacaf:0,  pens:29, n:7,  label:'UEFA domina vs CONCACAF' },
+    'CONMEBOL-AFC':  { conmebol:75, afc:0,   pens:25, n:4,  label:'CONMEBOL domina vs AFC' },
+    'CONMEBOL-CAF':  { conmebol:67, caf:0,   pens:33, n:3,  label:'CONMEBOL favorita vs CAF' },
+    'CONMEBOL-CONCACAF':{ conmebol:100, concacaf:0, pens:0, n:3, label:'CONMEBOL 100% vs CONCACAF' },
+  }
+};
 
-  // Which teams are CONFIRMED qualifiers (group complete = 6 games played)
-  var groupGames = {};
-  allMatches.forEach(function(m) {
-    if (m.stage === 'GROUP_STAGE' && m.home_score !== null && m.home_score !== undefined) {
-      var g = (m.group||'').replace('Group ','');
-      groupGames[g] = (groupGames[g]||0) + 1;
+function getConf(code) {
+  var UEFA=['ESP','FRA','ALE','POR','HOL','BEL','ING','CRO','AUT','SUI','TUR','NOR','SUE','ESC','BOS','TCH','POL','SER'];
+  var CONMEBOL=['BRA','ARG','URU','COL','EQU','PAR','CHI','PER'];
+  var AFC=['JAP','COR','AUS','IRA','ARS','CAT','JOR','UZB'];
+  var CAF=['MAR','SEN','GAN','NIG','CAM','AFS','CDM','AGL','TUN','EGI','RDC','MAL'];
+  var CONCACAF=['EUA','MEX','CAN','CRC','PAN','HAI','JAM','CUR'];
+  if(UEFA.indexOf(code)>=0)return'UEFA';
+  if(CONMEBOL.indexOf(code)>=0)return'CONMEBOL';
+  if(AFC.indexOf(code)>=0)return'AFC';
+  if(CAF.indexOf(code)>=0)return'CAF';
+  if(CONCACAF.indexOf(code)>=0)return'CONCACAF';
+  return'OTHER';
+}
+
+function getConfH2H(cA, cB) {
+  var confA=getConf(cA), confB=getConf(cB);
+  if(confA===confB)return null;
+  var key1=confA+'-'+confB, key2=confB+'-'+confA;
+  return WC_KO_HIST.conf_h2h[key1]||WC_KO_HIST.conf_h2h[key2]||null;
+}
+
+function confH2HEdge(cA, cB) {
+  // Returns {favored: code_or_null, pct: int, pens_pct: int, note: str}
+  var confA=getConf(cA), confB=getConf(cB);
+  if(confA===confB)return null;
+  var key1=confA+'-'+confB, key2=confB+'-'+confA;
+  var h=WC_KO_HIST.conf_h2h[key1]||WC_KO_HIST.conf_h2h[key2];
+  if(!h||h.n<3)return null;
+  
+  var confs=[confA,confB];
+  var pcts=[h[confA.toLowerCase()]||0, h[confB.toLowerCase()]||0];
+  var favIdx=pcts[0]>pcts[1]?0:1;
+  var favConf=confs[favIdx];
+  var favPct=pcts[favIdx];
+  
+  // Which of our teams belongs to favConf?
+  var favCode=(getConf(cA)===favConf)?cA:cB;
+  var sc=SCOUTS[favCode]||{};
+  
+  return {favCode:favCode, favPct:favPct, pensPct:h.pens||0, note:h.label, n:h.n,
+          confA:confA, confB:confB};
+}
+
+function renderSimBracket(br, counts, N) {
+  var ld=window.LIVE_DATA;
+  var allMatches=ld&&ld.wc_results?ld.wc_results.matches||[]:[];
+
+  // Confirmed groups (6 games played)
+  var groupGames={};
+  allMatches.forEach(function(m){
+    if(m.stage==='GROUP_STAGE'&&m.home_score!==null&&m.home_score!==undefined){
+      var g=(m.group||'').replace('Group ','');
+      groupGames[g]=(groupGames[g]||0)+1;
     }
   });
-  var confirmed = {};
-  Object.keys(groupGames).forEach(function(g) {
-    if (groupGames[g] >= 6) confirmed[g] = true;
-  });
+  var confirmed={};
+  Object.keys(groupGames).forEach(function(g){if(groupGames[g]>=6)confirmed[g]=true;});
 
   // Real KO results
-  var koReal = {};
-  allMatches.forEach(function(m) {
-    if (m.stage && m.stage !== 'GROUP_STAGE' && m.home_score !== null && m.home_score !== undefined) {
-      koReal[m.home_code + '-' + m.away_code] = { h: m.home_score, a: m.away_score, real: true };
+  var koReal={};
+  allMatches.forEach(function(m){
+    if(m.stage&&m.stage!=='GROUP_STAGE'&&m.home_score!==null&&m.home_score!==undefined){
+      koReal[m.home_code+'-'+m.away_code]={h:m.home_score,a:m.away_score};
     }
   });
 
-  // Updated: last updated timestamp
-  var updatedAt = ld && ld.updated_at_brt ? ld.updated_at_brt : '';
+  var champion=br.champion||(br.final&&br.final[0]&&br.final[0].winner);
+  var updatedAt=ld&&ld.updated_at_brt?ld.updated_at_brt:'';
 
-  var champion = br.champion || (br.final && br.final[0] && br.final[0].winner);
+  function teamProb(code,rk){
+    if(!counts||!N||!code||code==='?')return null;
+    var c=counts[code];return c?Math.round((c[rk]||0)/N*100):null;
+  }
+  function matchProbs(cA,cB,rk){
+    var pA=teamProb(cA,rk),pB=teamProb(cB,rk);
+    if(pA==null||pB==null)return null;
+    var t=pA+pB;if(!t)return{a:50,b:50};
+    return{a:Math.round(pA/t*100),b:Math.round(pB/t*100)};
+  }
+  function isConf(code){var sc=SCOUTS[code]||{};return sc.group&&confirmed[sc.group];}
 
-  // Per-round counts for probabilities
-  var RND_KEY = { r32:'r32', r16:'r16', qf:'qf', sf:'sf', final:'final' };
-
-  function teamProb(code, roundKey) {
-    if (!counts || !N || !code || code === '?') return null;
-    var c = counts[code];
-    if (!c) return null;
-    return Math.round((c[roundKey] || 0) / N * 100);
+  function teamRow(code,prob,isWinner,score){
+    if(!code||code==='?')return'<div style="display:flex;align-items:center;gap:5px;padding:3px 6px;height:26px;color:var(--tx3);font-size:10px">A definir</div>';
+    var sc=SCOUTS[code]||{flag:'🏳',name:code};
+    var name=(sc.name||code).substring(0,12);
+    var isChamp=code===champion;
+    var bg=isChamp?'background:linear-gradient(90deg,rgba(59,109,17,.15),transparent)':isWinner?'background:var(--sf2)':'';
+    var fw=isWinner?'font-weight:700':'color:var(--tx2)';
+    var badge=isConf(code)?'<span style="font-size:7px;color:var(--gn);margin-left:1px">✓</span>':'';
+    return'<div style="display:flex;align-items:center;gap:4px;padding:2px 6px;height:24px;border-radius:3px;'+bg+'">'
+      +'<span style="font-size:12px;line-height:1">'+(sc.flag||'🏳')+'</span>'
+      +'<span style="font-size:11px;'+fw+';flex:1;white-space:nowrap;overflow:hidden">'+name+badge+(isChamp?' 🏆':'')+'</span>'
+      +(score!=null?'<span style="font-size:11px;font-weight:700;min-width:12px;text-align:right">'+score+'</span>':'')
+      +(prob!=null?'<span style="font-size:9px;color:var(--tx3);min-width:26px;text-align:right">'+prob+'%</span>':'')
+      +'</div>';
   }
 
-  function matchProbs(teamA, teamB, roundKey) {
-    var pA = teamProb(teamA, roundKey);
-    var pB = teamProb(teamB, roundKey);
-    if (pA == null || pB == null) return null;
-    var tot = pA + pB;
-    if (tot === 0) return { a: 50, b: 50 };
-    return { a: Math.round(pA / tot * 100), b: Math.round(pB / tot * 100) };
+  function probBar(pA,pB){
+    if(pA==null)return'';
+    var cA=pA>=55?'var(--gn)':pA>=45?'var(--tx3)':'var(--rd-tx)';
+    var cB=pB>=55?'var(--gn)':pB>=45?'var(--tx3)':'var(--rd-tx)';
+    return'<div style="display:flex;height:3px;margin:0 6px;gap:1px">'
+      +'<div style="flex:'+pA+';background:'+cA+';border-radius:2px"></div>'
+      +'<div style="flex:'+pB+';background:'+cB+';border-radius:2px"></div>'
+      +'</div>';
   }
 
-  function isConfirmed(code) {
-    var sc = SCOUTS[code] || {};
-    return sc.group && confirmed[sc.group];
-  }
+  var M_NUMS=['M73','M74','M75','M76','M77','M78','M79','M80','M81','M82','M83','M84','M85','M86','M87','M88'];
 
-  function teamRow(code, prob, isWinner, sideScore, roundKey) {
-    if (!code || code === '?') {
-      return '<div style="display:flex;align-items:center;gap:5px;padding:4px 6px;height:28px;color:var(--tx3);font-size:10px">A definir</div>';
+  function matchCard(m, idx, rndKey, mNum){
+    if(!m)return'<div style="min-height:72px;margin-bottom:4px"></div>';
+    var cA=m.a,cB=m.b;
+    var winA=m.winner===cA,winB=m.winner===cB;
+    var probs=matchProbs(cA,cB,rndKey);
+    var pA=probs?probs.a:null,pB=probs?probs.b:null;
+    var real=koReal[cA+'-'+cB]||(koReal[cB+'-'+cA]?{h:koReal[cB+'-'+cA].a,a:koReal[cB+'-'+cA].h}:null);
+    var sA=real?real.h:null,sB=real?real.a:null;
+    var border=real?'1.5px solid var(--gn)':'1px solid var(--bd)';
+    var hist=WC_KO_HIST.rounds[rndKey];
+    var h2h=cA&&cA!=='?'&&cB&&cB!=='?'?confH2HEdge(cA,cB):null;
+
+    var topRow='';
+    if(mNum||h2h){
+      topRow='<div style="display:flex;align-items:center;justify-content:space-between;padding:1px 6px 0">';
+      if(mNum)topRow+='<span style="font-size:8px;color:var(--tx3)">'+mNum+'</span>';
+      else topRow+='<span></span>';
+      if(h2h&&pA!=null&&Math.abs(pA-50)>10){
+        var fsc=SCOUTS[h2h.favCode]||{};
+        topRow+='<span style="font-size:8px;color:var(--am);background:rgba(186,117,23,.1);padding:0 4px;border-radius:3px">'
+          +(fsc.flag||'')+'hist.'+h2h.favPct+'%'
+          +(h2h.pensPct>20?' · 🎯'+h2h.pensPct+'%pens':'')
+          +'</span>';
+      }
+      topRow+='</div>';
     }
-    var sc = SCOUTS[code] || { flag:'🏳', name: code };
-    var name = (sc.name || code).substring(0, 12);
-    var conf = isConfirmed(code);
-    var isChamp = code === champion;
-    var bg = isChamp ? 'background:linear-gradient(90deg,rgba(59,109,17,.15),transparent)' :
-             isWinner ? 'background:var(--sf2)' : '';
-    var fw = isWinner ? 'font-weight:700' : 'color:var(--tx2)';
-    var badge = conf ? '<span style="font-size:8px;color:var(--gn);margin-left:2px">✓</span>' : '';
-    var scoreEl = sideScore != null ? '<span style="font-size:11px;font-weight:700;min-width:12px;text-align:right;color:var(--tx)">' + sideScore + '</span>' : '';
-    var probEl = prob != null ? '<span style="font-size:9px;color:var(--tx3);min-width:28px;text-align:right">' + prob + '%</span>' : '';
-    return '<div style="display:flex;align-items:center;gap:4px;padding:3px 6px;height:26px;border-radius:3px;' + bg + '">' +
-      '<span style="font-size:13px;line-height:1">' + (sc.flag||'🏳') + '</span>' +
-      '<span style="font-size:11px;' + fw + ';flex:1;white-space:nowrap;overflow:hidden">' + name + badge + (isChamp?' 🏆':'') + '</span>' +
-      scoreEl + probEl +
-    '</div>';
+
+    return'<div style="background:var(--bg2);border:'+border+';border-radius:6px;margin-bottom:4px;overflow:hidden">'
+      +topRow
+      +teamRow(cA,pA,winA,sA)
+      +probBar(pA,pB)
+      +'<div style="height:0.5px;background:var(--bd)"></div>'
+      +probBar(pB,pA)
+      +teamRow(cB,pB,winB,sB)
+      +'</div>';
   }
 
-  function probBar(probA, probB) {
-    if (probA == null) return '';
-    var colA = probA >= 55 ? '#3B6D11' : probA >= 45 ? '#888780' : '#A32D2D';
-    var colB = probB >= 55 ? '#3B6D11' : probB >= 45 ? '#888780' : '#A32D2D';
-    return '<div style="display:flex;height:3px;margin:0 6px">' +
-      '<div style="flex:' + probA + ';background:' + colA + ';border-radius:2px 0 0 2px"></div>' +
-      '<div style="flex:' + probB + ';background:' + colB + ';border-radius:0 2px 2px 0"></div>' +
-    '</div>';
-  }
-
-  function matchCard(m, idx, roundKey, matchNum) {
-    if (!m) return '<div style="height:62px;margin-bottom:4px"></div>';
-    var cA = m.a, cB = m.b;
-    var winA = m.winner === cA, winB = m.winner === cB;
-    var probs = matchProbs(cA, cB, roundKey);
-    var pA = probs ? probs.a : null, pB = probs ? probs.b : null;
-    var realKey = cA+'-'+cB, realKeyR = cB+'-'+cA;
-    var real = koReal[realKey] || (koReal[realKeyR] ? {h:koReal[realKeyR].a, a:koReal[realKeyR].h, real:true} : null);
-    var sA = real ? real.h : null, sB = real ? real.a : null;
-    var isReal = !!real;
-    var border = isReal ? '1.5px solid var(--gn)' : '1px solid var(--bd)';
-    var numLabel = matchNum ? '<span style="font-size:8px;color:var(--tx3);padding:0 6px;display:block;text-align:right">' + matchNum + '</span>' : '';
-    return '<div style="background:var(--bg2);border:' + border + ';border-radius:6px;margin-bottom:4px;overflow:hidden">' +
-      numLabel +
-      teamRow(cA, pA, winA, sA, roundKey) +
-      probBar(pA, pB) +
-      '<div style="height:0.5px;background:var(--bd)"></div>' +
-      probBar(pB, pA) +
-      teamRow(cB, pB, winB, sB, roundKey) +
-    '</div>';
-  }
-
-  // Match numbers per FIFA draw
-  var M_NUMS = ['M73','M74','M75','M76','M77','M78','M79','M80','M81','M82','M83','M84','M85','M86','M87','M88'];
-  var KO_STAGES = [
-    { key:'r32',   label:'16 Avos de Final', n:16 },
-    { key:'r16',   label:'Oitavas',          n:8  },
-    { key:'qf',    label:'Quartas',          n:4  },
-    { key:'sf',    label:'Semi',             n:2  },
-    { key:'final', label:'Final',            n:1  },
+  var KO_STAGES=[
+    {key:'r32',label:'16 Avos',n:16},
+    {key:'r16',label:'Oitavas',n:8},
+    {key:'qf', label:'Quartas',n:4},
+    {key:'sf', label:'Semis',  n:2},
+    {key:'final',label:'Final',n:1},
   ];
 
-  // Build HTML — header
-  var confirmedCount = Object.keys(confirmed).length;
-  var pending = 12 - confirmedCount;
+  var confirmedCount=Object.keys(confirmed).length;
 
-  var html = '<div style="background:var(--bl-bg);border:1px solid var(--bl);border-radius:8px;padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">'
-    + '<div>'
-    + '<div style="font-size:12px;font-weight:700;color:var(--bl-tx)">🏆 Chaveamento ao Vivo — WC2026</div>'
-    + '<div style="font-size:10px;color:var(--tx3);margin-top:2px">'
-    + (confirmedCount ? confirmedCount + ' grupos confirmados · ' : '')
-    + (pending ? pending + ' grupos em jogo · ' : '')
-    + (counts ? 'Prob. de ' + N.toLocaleString() + ' simulações' : 'Simulação determinística')
-    + '</div>'
-    + '</div>'
-    + '<div style="font-size:9px;color:var(--tx3)">✓ confirmado</div>'
-    + '</div>';
+  // Header
+  var html='<div style="background:var(--bl-bg);border:1px solid var(--bl);border-radius:8px;padding:8px 12px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">'
+    +'<div><div style="font-size:12px;font-weight:700;color:var(--bl-tx)">🏆 Chaveamento ao Vivo — WC2026</div>'
+    +'<div style="font-size:10px;color:var(--tx3);margin-top:1px">'
+    +confirmedCount+' grupos confirmados'
+    +(counts?' · MC '+N.toLocaleString()+' simulações':'')
+    +(updatedAt?' · '+updatedAt:'')+'</div></div>'
+    +'<div style="font-size:9px;color:var(--tx3)">✓ confirmado · hist. = vantagem histórica por confederação</div>'
+    +'</div>';
 
-  // Legend
-  html += '<div style="display:flex;gap:12px;font-size:10px;color:var(--tx3);margin-bottom:8px;flex-wrap:wrap">'
-    + '<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:20px;height:3px;background:linear-gradient(90deg,#3B6D11,#A32D2D)"></span> barra de probabilidade</span>'
-    + '<span style="background:var(--sf2);padding:1px 5px;border-radius:3px">fundo = vencedor simulado</span>'
-    + '</div>';
+  // Round headers with historical stats
+  html+='<div style="overflow-x:auto"><div style="display:flex;gap:8px;min-width:870px">';
 
-  // Bracket rounds
-  html += '<div style="overflow-x:auto"><div style="display:flex;gap:8px;min-width:850px">';
+  KO_STAGES.forEach(function(stage){
+    var matches=br[stage.key]||[];
+    if(stage.key==='final'&&br.final)matches=[br.final[0]];
+    var rh=WC_KO_HIST.rounds[stage.key];
 
-  KO_STAGES.forEach(function(stage) {
-    var matches = br[stage.key] || [];
-    if (stage.key === 'final' && br.final) matches = [br.final[0]];
-    html += '<div style="flex:1;min-width:140px">';
-    html += '<div style="font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;text-align:center">'
-      + stage.label + '</div>';
-    html += '<div style="display:flex;flex-direction:column' + (stage.key !== 'r32' ? ';justify-content:space-around;height:100%' : '') + '">';
-    for (var i = 0; i < Math.max(matches.length, stage.n); i++) {
-      if (stage.key !== 'r32' && i > 0) html += '<div style="flex:1;min-height:8px"></div>';
-      var mNum = stage.key === 'r32' ? M_NUMS[i] : null;
-      html += matchCard(matches[i], i, stage.key, mNum);
+    html+='<div style="flex:1;min-width:140px">';
+    // Column header with historical stats
+    html+='<div style="text-align:center;margin-bottom:4px">'
+      +'<div style="font-size:10px;font-weight:700;color:var(--tx2);text-transform:uppercase;letter-spacing:0.5px">'+stage.label+'</div>'
+      +(rh?'<div style="font-size:8px;color:var(--tx3)">⚽'+rh.avg_goals+' golos · 🎯'+rh.pens_pct+'% pênaltis</div>':'')
+      +'</div>';
+
+    html+='<div style="display:flex;flex-direction:column'+(stage.key!=='r32'?';justify-content:space-around;height:100%':'')+'">';
+    for(var i=0;i<Math.max(matches.length,stage.n);i++){
+      if(stage.key!=='r32'&&i>0)html+='<div style="flex:1;min-height:6px"></div>';
+      var mNum=stage.key==='r32'?M_NUMS[i]:null;
+      html+=matchCard(matches[i],i,stage.key,mNum);
     }
-    html += '</div></div>';
+    html+='</div></div>';
   });
 
-  // Champion
-  if (champion) {
-    var sc = SCOUTS[champion] || { flag:'🏆', name: champion };
-    var pct = teamProb(champion, 'champion');
-    html += '<div style="min-width:100px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px">'
-      + '<div style="font-size:32px">' + (sc.flag||'🏆') + '</div>'
-      + '<div style="font-size:11px;font-weight:700;color:var(--tx);text-align:center">' + (sc.name||champion) + '</div>'
-      + (pct ? '<div style="font-size:10px;color:var(--gn-tx);background:var(--gn-bg);padding:2px 8px;border-radius:10px">🏆 ' + pct + '%</div>' : '')
-      + '<div style="font-size:9px;color:var(--tx3)">19 Jul · NY</div>'
-      + '</div>';
+  // Champion box
+  if(champion){
+    var sc=SCOUTS[champion]||{flag:'🏆',name:champion};
+    var pct=teamProb(champion,'champion');
+    html+='<div style="min-width:90px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px">'
+      +'<div style="font-size:28px">'+(sc.flag||'🏆')+'</div>'
+      +'<div style="font-size:11px;font-weight:700;text-align:center">'+(sc.name||champion)+'</div>'
+      +(pct?'<div style="font-size:10px;color:var(--gn-tx);background:var(--gn-bg);padding:2px 8px;border-radius:10px">🏆 '+pct+'%</div>':'')
+      +'<div style="font-size:8px;color:var(--tx3)">19 Jul · NY</div>'
+      +'</div>';
   }
 
-  html += '</div></div>';
-  document.getElementById('simTabBracket').innerHTML = html;
+  html+='</div></div>';
+
+  // Historical context legend
+  html+='<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;font-size:10px;color:var(--tx3)">'
+    +'<span>⚽ média de golos por jogo nesta ronda (WC 1998-2022)</span>'
+    +'<span>🎯 % de jogos que foram a pênaltis</span>'
+    +'<span>hist.% = vantagem histórica da confederação favorita no confronto directo</span>'
+    +'</div>';
+
+  document.getElementById('simTabBracket').innerHTML=html;
 }
 
 
