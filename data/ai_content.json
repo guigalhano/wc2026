@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-27T15:05:19.180753+00:00",
-  "generated_at_brt": "27/06/2026 12:05 BRT",
+  "generated_at": "2026-06-27T20:18:37.794593+00:00",
+  "generated_at_brt": "27/06/2026 17:18 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -13,13 +13,13 @@
       "away": "Ghana",
       "time": "2026-06-27T21:00:00Z",
       "h2h": {
-        "home": 1.98,
-        "away": 5.6,
-        "draw": 3.2
+        "home": 1.87,
+        "away": 6.0,
+        "draw": 3.4
       },
       "totals": {
-        "over25": 2.65,
-        "under25": 2.85
+        "over25": 2.38,
+        "under25": 2.8
       },
       "btts_yes": null,
       "preview": {
@@ -38,11 +38,11 @@
       "time": "2026-06-27T21:00:00Z",
       "h2h": {
         "away": 1.19,
-        "home": 22.0,
+        "home": 22.99,
         "draw": 9.6
       },
       "totals": {
-        "over25": 2.16,
+        "over25": 2.8,
         "under25": 2.92
       },
       "btts_yes": null,
@@ -61,13 +61,13 @@
       "away": "Portugal",
       "time": "2026-06-27T23:30:00Z",
       "h2h": {
-        "home": 3.8,
-        "away": 2.04,
-        "draw": 4.0
+        "home": 3.6,
+        "away": 2.12,
+        "draw": 4.1
       },
       "totals": {
-        "over25": 2.03,
-        "under25": 3.2
+        "over25": 1.93,
+        "under25": 3.4
       },
       "btts_yes": null,
       "preview": {
@@ -86,12 +86,12 @@
       "time": "2026-06-27T23:30:00Z",
       "h2h": {
         "home": 1.76,
-        "away": 5.6,
-        "draw": 4.14
+        "away": 5.5,
+        "draw": 4.0
       },
       "totals": {
-        "over25": 3.15,
-        "under25": 1.94
+        "over25": 3.25,
+        "under25": 1.93
       },
       "btts_yes": null,
       "preview": {
@@ -110,12 +110,12 @@
       "time": "2026-06-28T02:00:00Z",
       "h2h": {
         "home": 4.0,
-        "away": 3.45,
-        "draw": 2.22
+        "away": 3.86,
+        "draw": 2.12
       },
       "totals": {
         "over25": 3.25,
-        "under25": 2.23
+        "under25": 2.2
       },
       "btts_yes": null,
       "preview": {
@@ -134,12 +134,12 @@
       "time": "2026-06-28T02:00:00Z",
       "h2h": {
         "away": 1.17,
-        "home": 25.0,
+        "home": 26.0,
         "draw": 10.0
       },
       "totals": {
         "over25": 2.32,
-        "under25": 2.7
+        "under25": 2.65
       },
       "btts_yes": null,
       "preview": {
