@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-28T15:07:01.610485+00:00",
-  "generated_at_brt": "28/06/2026 12:07 BRT",
+  "generated_at": "2026-06-28T20:39:26.439043+00:00",
+  "generated_at_brt": "28/06/2026 17:39 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -13,13 +13,13 @@
       "away": "Canada",
       "time": "2026-06-28T19:00:00Z",
       "h2h": {
-        "away": 1.7,
-        "home": 6.6,
+        "away": 3.7,
+        "home": 10.25,
         "draw": 3.8
       },
       "totals": {
-        "over25": 2.3,
-        "under25": 3.0
+        "over25": 8.0,
+        "under25": 1.85
       },
       "btts_yes": null,
       "preview": {
@@ -37,13 +37,13 @@
       "away": "Japan",
       "time": "2026-06-29T17:00:00Z",
       "h2h": {
-        "home": 1.74,
-        "away": 5.75,
-        "draw": 4.0
+        "home": 1.76,
+        "away": 5.6,
+        "draw": 3.9
       },
       "totals": {
         "over25": 2.8,
-        "under25": 1.95
+        "under25": 2.0
       },
       "btts_yes": null,
       "preview": {
@@ -63,10 +63,10 @@
       "h2h": {
         "home": 1.38,
         "away": 11.5,
-        "draw": 5.7
+        "draw": 5.6
       },
       "totals": {
-        "over25": 2.07,
+        "over25": 2.14,
         "under25": 3.35
       },
       "btts_yes": null,
