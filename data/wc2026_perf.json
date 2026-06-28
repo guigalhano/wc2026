@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T08:36:33.695610+00:00",
+  "updated_at": "2026-06-28T15:07:00.291354+00:00",
   "teams": [
     {
       "code": "FRA",
@@ -631,8 +631,8 @@
       "games": 3,
       "goals_for": 5,
       "goals_against": 3,
-      "xg_for": 4.87,
-      "xg_against": 4.66,
+      "xg_for": 4.41,
+      "xg_against": 4.19,
       "wins": 1,
       "draws": 2,
       "losses": 0,
@@ -666,16 +666,16 @@
           "date": "2026-06-27",
           "gf": 1,
           "ga": 1,
-          "xgf": 1.31,
-          "xga": 1.39,
+          "xgf": 0.85,
+          "xga": 0.92,
           "result": "D",
           "p_win": 0.337
         }
       ],
       "xpts": 4.09,
       "delta_pts": 0.91,
-      "xgf": 1.62,
-      "xga": 1.55
+      "xgf": 1.47,
+      "xga": 1.4
     },
     {
       "code": "BOS",
@@ -839,8 +839,8 @@
       "games": 3,
       "goals_for": 2,
       "goals_against": 2,
-      "xg_for": 2.745,
-      "xg_against": 5.205,
+      "xg_for": 1.87,
+      "xg_against": 4.18,
       "wins": 0,
       "draws": 3,
       "losses": 0,
@@ -874,16 +874,16 @@
           "date": "2026-06-27",
           "gf": 0,
           "ga": 0,
-          "xgf": 1.3,
-          "xga": 1.41,
+          "xgf": 0.42,
+          "xga": 0.38,
           "result": "D",
           "p_win": 0.33
         }
       ],
       "xpts": 2.44,
       "delta_pts": 0.56,
-      "xgf": 0.92,
-      "xga": 1.74
+      "xgf": 0.62,
+      "xga": 1.39
     },
     {
       "code": "BRA",
@@ -1411,8 +1411,8 @@
       "games": 3,
       "goals_for": 5,
       "goals_against": 0,
-      "xg_for": 7.3275,
-      "xg_against": 1.4025,
+      "xg_for": 6.779999999999999,
+      "xg_against": 1.38,
       "wins": 2,
       "draws": 1,
       "losses": 0,
@@ -1446,16 +1446,16 @@
           "date": "2026-06-27",
           "gf": 1,
           "ga": 0,
-          "xgf": 1.9,
-          "xga": 0.8,
+          "xgf": 1.35,
+          "xga": 0.78,
           "result": "W",
           "p_win": 0.619
         }
       ],
       "xpts": 7.11,
       "delta_pts": -0.11,
-      "xgf": 2.44,
-      "xga": 0.47
+      "xgf": 2.26,
+      "xga": 0.46
     },
     {
       "code": "TUR",
@@ -1567,8 +1567,8 @@
       "games": 3,
       "goals_for": 1,
       "goals_against": 5,
-      "xg_for": 2.505,
-      "xg_against": 6.335,
+      "xg_for": 1.48,
+      "xg_against": 5.46,
       "wins": 0,
       "draws": 2,
       "losses": 1,
@@ -1602,16 +1602,16 @@
           "date": "2026-06-27",
           "gf": 0,
           "ga": 0,
-          "xgf": 1.41,
-          "xga": 1.3,
+          "xgf": 0.38,
+          "xga": 0.42,
           "result": "D",
           "p_win": 0.381
         }
       ],
       "xpts": 2.7,
       "delta_pts": -0.7,
-      "xgf": 0.83,
-      "xga": 2.11
+      "xgf": 0.49,
+      "xga": 1.82
     },
     {
       "code": "EQU",
@@ -1671,8 +1671,8 @@
       "games": 3,
       "goals_for": 6,
       "goals_against": 2,
-      "xg_for": 5.1075,
-      "xg_against": 2.3625000000000003,
+      "xg_for": 6.28,
+      "xg_against": 2.22,
       "wins": 1,
       "draws": 2,
       "losses": 0,
@@ -1706,16 +1706,16 @@
           "date": "2026-06-27",
           "gf": 5,
           "ga": 1,
-          "xgf": 2.08,
-          "xga": 0.62,
+          "xgf": 3.25,
+          "xga": 0.48,
           "result": "W",
           "p_win": 0.703
         }
       ],
       "xpts": 5.92,
       "delta_pts": -0.92,
-      "xgf": 1.7,
-      "xga": 0.79
+      "xgf": 2.09,
+      "xga": 0.74
     },
     {
       "code": "SEN",
@@ -1879,8 +1879,8 @@
       "games": 3,
       "goals_for": 4,
       "goals_against": 10,
-      "xg_for": 4.2925,
-      "xg_against": 6.6775,
+      "xg_for": 4.15,
+      "xg_against": 7.85,
       "wins": 0,
       "draws": 1,
       "losses": 2,
@@ -1914,16 +1914,16 @@
           "date": "2026-06-27",
           "gf": 1,
           "ga": 5,
-          "xgf": 0.62,
-          "xga": 2.08,
+          "xgf": 0.48,
+          "xga": 3.25,
           "result": "L",
           "p_win": 0.088
         }
       ],
       "xpts": 2.12,
       "delta_pts": -1.12,
-      "xgf": 1.43,
-      "xga": 2.23
+      "xgf": 1.38,
+      "xga": 2.62
     },
     {
       "code": "CAN",
@@ -2035,8 +2035,8 @@
       "games": 3,
       "goals_for": 3,
       "goals_against": 3,
-      "xg_for": 4.17,
-      "xg_against": 4.74,
+      "xg_for": 3.7,
+      "xg_against": 4.279999999999999,
       "wins": 0,
       "draws": 3,
       "losses": 0,
@@ -2070,16 +2070,16 @@
           "date": "2026-06-27",
           "gf": 1,
           "ga": 1,
-          "xgf": 1.39,
-          "xga": 1.31,
+          "xgf": 0.92,
+          "xga": 0.85,
           "result": "D",
           "p_win": 0.374
         }
       ],
       "xpts": 4.3,
       "delta_pts": -1.3,
-      "xgf": 1.39,
-      "xga": 1.58
+      "xgf": 1.23,
+      "xga": 1.43
     },
     {
       "code": "CAT",
@@ -2451,8 +2451,8 @@
       "games": 3,
       "goals_for": 3,
       "goals_against": 4,
-      "xg_for": 4.2125,
-      "xg_against": 3.8475,
+      "xg_for": 4.19,
+      "xg_against": 3.3000000000000003,
       "wins": 0,
       "draws": 2,
       "losses": 1,
@@ -2486,8 +2486,8 @@
           "date": "2026-06-27",
           "gf": 0,
           "ga": 1,
-          "xgf": 0.8,
-          "xga": 1.9,
+          "xgf": 0.78,
+          "xga": 1.35,
           "result": "L",
           "p_win": 0.139
         }
@@ -2495,7 +2495,7 @@
       "xpts": 4.34,
       "delta_pts": -2.34,
       "xgf": 1.4,
-      "xga": 1.28
+      "xga": 1.1
     }
   ],
   "matches": [
@@ -5627,9 +5627,9 @@
       "pA": 0.619,
       "lam": 0.8,
       "mu": 1.9,
-      "home_xg": 0.8,
-      "away_xg": 1.9,
-      "real_xg": false,
+      "home_xg": 0.78,
+      "away_xg": 1.35,
+      "real_xg": true,
       "home_shots": null,
       "away_shots": null,
       "home_sot": null,
@@ -5639,13 +5639,17 @@
       "home_big_chances": null,
       "away_big_chances": null,
       "home_goals": [],
-      "away_goals": [],
+      "away_goals": [
+        {
+          "min": "42",
+          "player": "Alejandro Baena",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
-        "✅ **Result matched prediction** (62%). Final: 0–1.",
-        "🧱 Uruguay underperformed xG (0 goals vs 0.8 xG).",
-        "🧱 Spain underperformed xG (1 goals vs 1.9 xG)."
+        "✅ **Result matched prediction** (62%). Final: 0–1."
       ],
       "nlbair": false,
       "stadium": "Miami Stadium (Hard Rock Stadium)",
@@ -5662,9 +5666,9 @@
       "pA": 0.381,
       "lam": 1.3,
       "mu": 1.41,
-      "home_xg": 1.3,
-      "away_xg": 1.41,
-      "real_xg": false,
+      "home_xg": 0.42,
+      "away_xg": 0.38,
+      "real_xg": true,
       "home_shots": null,
       "away_shots": null,
       "home_sot": null,
@@ -5676,11 +5680,9 @@
       "home_goals": [],
       "away_goals": [],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
-        "🚨 **Upset**: model predicted Saudi Arabia win (38%) but ended 0–0.",
-        "🧱 Cape Verde underperformed xG (0 goals vs 1.3 xG).",
-        "🧱 Saudi Arabia underperformed xG (0 goals vs 1.4 xG)."
+        "🚨 **Upset**: model predicted Saudi Arabia win (38%) but ended 0–0."
       ],
       "nlbair": false,
       "stadium": "Philadelphia Stadium (Lincoln Financial Field)",
@@ -5697,9 +5699,9 @@
       "pA": 0.703,
       "lam": 0.62,
       "mu": 2.08,
-      "home_xg": 0.62,
-      "away_xg": 2.08,
-      "real_xg": false,
+      "home_xg": 0.48,
+      "away_xg": 3.25,
+      "real_xg": true,
       "home_shots": null,
       "away_shots": null,
       "home_sot": null,
@@ -5708,13 +5710,45 @@
       "away_poss": null,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_goals": [
+        {
+          "min": "84",
+          "player": "Elijah Henry Just",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "28",
+          "player": "Leandro Trossard",
+          "type": "regular"
+        },
+        {
+          "min": "50",
+          "player": "Leandro Trossard",
+          "type": "regular"
+        },
+        {
+          "min": "66",
+          "player": "Kevin De Bruyne",
+          "type": "regular"
+        },
+        {
+          "min": "86",
+          "player": "Romelu Lukaku",
+          "type": "regular"
+        },
+        {
+          "min": "90",
+          "player": "Alexis Jesse Saelemaekers",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (70%). Final: 1–5.",
-        "⚡ Belgium outscored xG (5 goals vs 2.1 xG) — clinical finishing.",
+        "⚡ Belgium outscored xG (5 goals vs 3.2 xG) — clinical finishing.",
         "📉 Scoreline (1–5) far more one-sided than model expected (~0.6–2.1)."
       ],
       "nlbair": false,
@@ -5732,9 +5766,9 @@
       "pA": 0.374,
       "lam": 1.31,
       "mu": 1.39,
-      "home_xg": 1.31,
-      "away_xg": 1.39,
-      "real_xg": false,
+      "home_xg": 0.85,
+      "away_xg": 0.92,
+      "real_xg": true,
       "home_shots": null,
       "away_shots": null,
       "home_sot": null,
@@ -5743,10 +5777,22 @@
       "away_poss": null,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_goals": [
+        {
+          "min": "5",
+          "player": "Saber Abdelmohsen Mahmoud",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "14",
+          "player": "Ramin Rezaeian",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "🚨 **Upset**: model predicted Iran win (37%) but ended 1–1."
       ],
@@ -5958,7 +6004,7 @@
       "city": "Inglewood"
     }
   ],
-  "real_xg_games": 32,
+  "real_xg_games": 36,
   "nlbair_games": 49,
   "narratives_built": 72,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
