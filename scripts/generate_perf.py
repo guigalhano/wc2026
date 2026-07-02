@@ -522,5 +522,12 @@ def main():
     print(f"  Saved: {len(teams_out)} teams, {len(matches_out)} matches")
     print(f"  nlbair: {nlbair_used} matches | mominullptr xG: {real_xg_used} | narratives: {narratives_built}")
 
+    # ── Tactical style profiles (depends on wc2026_perf.json just written above) ──
+    try:
+        import subprocess
+        subprocess.run(['python3', 'scripts/generate_tactics.py'], check=False)
+    except Exception as e:
+        print(f"  WARNING tactics: {e}")
+
 if __name__=='__main__':
     main()
