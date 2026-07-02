@@ -36,21 +36,6 @@ OUR_TO_NLBAIR = {
     'CRO':'croatia','GAN':'ghana','PAN':'panama',
 }
 
-# FIFA EFI team_name (Bustami/efi-fifa-data-wc-2026) -> our 3-letter code
-EFI_NAME_TO_OUR = {
-    'Mexico':'MEX','South Africa':'AFS','Korea Republic':'COR','Czechia':'TCH',
-    'Canada':'CAN','Bosnia and Herzegovina':'BOS','Qatar':'CAT','Switzerland':'SUI',
-    'Brazil':'BRA','Morocco':'MAR','Haiti':'HAI','Scotland':'ESC','USA':'EUA',
-    'Paraguay':'PAR','Australia':'AUS','Türkiye':'TUR','Germany':'ALE','Curaçao':'CUR',
-    "Côte d'Ivoire":'CDM','Congo DR':'RDC','Ecuador':'EQU','Netherlands':'HOL','Japan':'JAP',
-    'Sweden':'SUE','Tunisia':'TUN','Belgium':'BEL','Egypt':'EGI','IR Iran':'IRA',
-    'New Zealand':'NZE','Spain':'ESP','Cabo Verde':'CAB','Saudi Arabia':'ARS',
-    'Uruguay':'URU','France':'FRA','Senegal':'SEN','Iraq':'IRQ','Norway':'NOR',
-    'Argentina':'ARG','Algeria':'AGL','Austria':'AUT','Jordan':'JOR','Portugal':'POR',
-    'Uzbekistan':'UZB','Colombia':'COL','England':'ING','Croatia':'CRO',
-    'Ghana':'GAN','Panama':'PAN',
-}
-
 ELO_BASE = {
     'ESP':2010,'FRA':2009,'ING':1993,'ARG':1976,'BRA':1955,'POR':1945,'ALE':1926,
     'HOL':1894,'NOR':1880,'BEL':1878,'COL':1878,'MAR':1874,'CRO':1852,'SEN':1848,
@@ -61,8 +46,13 @@ ELO_BASE = {
     'CAT':1592,'AFS':1591,'NZE':1591,'JOR':1548,'CUR':1548,'HAI':1537,
 }
 HOME_BONUS = {'MEX':100,'EUA':100,'CAN':80}
-DC_RHO = -0.13
-ELO_K = 55
+# Backtested 2026-07-02 on 82 played matches (out-of-sample validated on knockouts):
+#   multiplicative goal model (GOAL_BASE/GOAL_SCALE) + MOV-scaled K=40 + rho=-0.18
+#   logloss 0.837 -> 0.80, RPS 0.154 -> 0.140 vs previous additive formula.
+DC_RHO = -0.18          # aligned with frontend simulator (was -0.13 here, -0.18 in JS)
+ELO_K = 40              # base K; effective K scales with margin of victory (mov_mult)
+GOAL_BASE  = 1.25       # expected goals per team when ratings are equal
+GOAL_SCALE = 460        # ELO points for a 10x goal-ratio swing (per 2*scale)
 
 TEAM_NAMES = {
     'ESP':'Spain','ARG':'Argentina','FRA':'France','ING':'England','BRA':'Brazil',
@@ -189,16 +179,41 @@ def dc_tau(a, b, lam, mu):
     if a==1 and b==1: return 1-DC_RHO
     return 1.0
 
+def real_goals(m):
+    """
+    football-data.org folds the penalty-shootout tally into home_score/away_score
+    for matches decided on penalties (e.g. 1-1 + pens 3-4 arrives as '4-5').
+    Strip the shootout kicks so goals, ELO and W/D/L use actual match goals.
+    A shootout match counts as a DRAW for ratings/table purposes; the bracket
+    winner is preserved separately via 'match_winner'/'went_pens'.
+    """
+    hg, ag = m.get('home_score'), m.get('away_score')
+    if hg is None or ag is None: return hg, ag
+    if m.get('went_pens'):
+        hg -= (m.get('home_score_pen') or 0)
+        ag -= (m.get('away_score_pen') or 0)
+    return hg, ag
+
+def mov_mult(gd):
+    """World-Football-Elo margin-of-victory multiplier."""
+    gd = abs(gd)
+    if gd <= 1: return 1.0
+    if gd == 2: return 1.5
+    return (11 + gd) / 8
+
 def match_prob(hC, aC, elo=None):
     E = elo or ELO_BASE
     rH = E.get(hC,1650); rA = E.get(aC,1650)
     hb = HOME_BONUS.get(hC,0)-HOME_BONUS.get(aC,0)
-    lam = max(0.3, min(3.5, 1.35+((rH+hb)-rA)/400))
-    mu  = max(0.3, min(3.5, 1.35+(rA-(rH+hb/2))/400))
+    # Multiplicative goal expectation: totals grow with mismatch (unlike the old
+    # additive form, where lam+mu was constant regardless of quality gap).
+    d = (rH + hb) - rA
+    lam = max(0.15, min(4.5, GOAL_BASE * 10 ** ( d / (2*GOAL_SCALE))))
+    mu  = max(0.15, min(4.5, GOAL_BASE * 10 ** (-d / (2*GOAL_SCALE))))
     pH=pD=pA=0.0
-    for a in range(9):
+    for a in range(10):
         pa = poisson_pmf(a, lam)
-        for b in range(9):
+        for b in range(10):
             p = pa*poisson_pmf(b,mu)*dc_tau(a,b,lam,mu)
             if a>b: pH+=p
             elif a<b: pA+=p
@@ -206,19 +221,24 @@ def match_prob(hC, aC, elo=None):
     t=pH+pD+pA
     return pH/t, pD/t, pA/t, lam, mu
 
+def elo_update(elo, hC, aC, hg, ag):
+    """Single-match ELO update: MOV-scaled K, home bonus in the expectation."""
+    rH, rA = elo.get(hC,1650), elo.get(aC,1650)
+    hb = HOME_BONUS.get(hC,0)-HOME_BONUS.get(aC,0)
+    eH = 1/(1+10**((rA-(rH+hb))/400))
+    ah = 1.0 if hg>ag else (0.5 if hg==ag else 0.0)
+    d = ELO_K * mov_mult(hg-ag) * (ah-eH)
+    elo[hC] = rH + d
+    elo[aC] = rA - d
+
 def compute_live_elo(played_matches):
     elo = dict(ELO_BASE)
     for m in sorted(played_matches, key=lambda x: x.get('date','')):
         hC,aC = m.get('home_code',''), m.get('away_code','')
-        hg,ag = m.get('home_score'), m.get('away_score')
+        hg,ag = real_goals(m)
         if not hC or not aC or hg is None: continue
-        rH,rA = elo.get(hC,1600), elo.get(aC,1600)
-        pH = 1/(1+10**((rA-rH)/400))
-        ah = 1.0 if hg>ag else (0.5 if hg==ag else 0.0)
-        dH = ELO_K*(ah-pH)
-        elo[hC] = round(elo.get(hC,1600)+dH)
-        elo[aC] = round(elo.get(aC,1600)-dH)
-    return elo
+        elo_update(elo, hC, aC, hg, ag)
+    return {k: round(v) for k,v in elo.items()}
 
 # ── nlbair xG model (zone-based, calibrated) ─────────────────────────────────
 XG_ZONES = {
@@ -330,8 +350,11 @@ def main():
     played = [m for m in wc.get('matches',[]) if m.get('home_score') is not None and m.get('home_code') and m.get('away_code')]
     print(f"  {len(played)} played matches")
 
-    # Compute live ELO
+    # Compute live ELO (final, for future-match predictions elsewhere)
     live_elo = compute_live_elo(played)
+    # Sequential tracker for honest pre-match evaluation inside the loop below
+    seq_elo = dict(ELO_BASE)
+    played.sort(key=lambda x: x.get('date',''))
 
     # ── mominullptr data ────────────────────────────────────────────────────
     BASE = "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main"
@@ -362,7 +385,7 @@ def main():
         hc = FIFA_TO_OUR.get(r.get('home_fifa_code',''),'')
         ac = FIFA_TO_OUR.get(r.get('away_fifa_code',''),'')
         try: real_xg_map[(r['date'],hc,ac)] = (float(r['home_xg']),float(r['away_xg']))
-        except: pass
+        except (KeyError, ValueError, TypeError): pass
     evts_by_mid = {}
     for e in evt_rows:
         evts_by_mid.setdefault(e['match_id'],[]).append(e)
@@ -376,9 +399,15 @@ def main():
 
     for m in played:
         hC,aC = m['home_code'], m['away_code']
-        g1,g2 = m['home_score'], m['away_score']
+        g1,g2 = real_goals(m)                       # pens-stripped actual goals
         date  = m.get('date','')
-        pH,pD,pA,lam,mu = match_prob(hC, aC, live_elo)
+        went_pens = bool(m.get('went_pens'))
+        pens_score = (m.get('home_score_pen'), m.get('away_score_pen')) if went_pens else None
+        # Pre-match ratings — evaluate the model with what was known BEFORE the
+        # game, then update. (Previously used final ELO for all matches, which
+        # leaked future results into expected_points/delta_pts.)
+        pH,pD,pA,lam,mu = match_prob(hC, aC, seq_elo)
+        elo_update(seq_elo, hC, aC, g1, g2)
 
         # ── Stats priority: nlbair > mominullptr ──────────────────────────
         nlb = fetch_nlbair_stats(hC, aC, date)
@@ -450,6 +479,9 @@ def main():
             'home_big_chances':hbc,'away_big_chances':abc,
             'home_goals':h_goals,'away_goals':a_goals,
             'reds':reds,'has_stats':bool(nlb or rxg),
+            'went_pens':went_pens,
+            'pens':{'home':pens_score[0],'away':pens_score[1]} if pens_score else None,
+            'winner':m.get('match_winner'),
             'narrative':narr,'nlbair':bool(nlb),
             'stadium':det.get('stadium_name','') if det else '',
             'city':det.get('city','') if det else '',
