@@ -36,6 +36,21 @@ OUR_TO_NLBAIR = {
     'CRO':'croatia','GAN':'ghana','PAN':'panama',
 }
 
+# FIFA EFI team_name (Bustami/efi-fifa-data-wc-2026) -> our 3-letter code
+EFI_NAME_TO_OUR = {
+    'Mexico':'MEX','South Africa':'AFS','Korea Republic':'COR','Czechia':'TCH',
+    'Canada':'CAN','Bosnia and Herzegovina':'BOS','Qatar':'CAT','Switzerland':'SUI',
+    'Brazil':'BRA','Morocco':'MAR','Haiti':'HAI','Scotland':'ESC','USA':'EUA',
+    'Paraguay':'PAR','Australia':'AUS','Türkiye':'TUR','Germany':'ALE','Curaçao':'CUR',
+    "Côte d'Ivoire":'CDM','Congo DR':'RDC','Ecuador':'EQU','Netherlands':'HOL','Japan':'JAP',
+    'Sweden':'SUE','Tunisia':'TUN','Belgium':'BEL','Egypt':'EGI','IR Iran':'IRA',
+    'New Zealand':'NZE','Spain':'ESP','Cabo Verde':'CAB','Saudi Arabia':'ARS',
+    'Uruguay':'URU','France':'FRA','Senegal':'SEN','Iraq':'IRQ','Norway':'NOR',
+    'Argentina':'ARG','Algeria':'AGL','Austria':'AUT','Jordan':'JOR','Portugal':'POR',
+    'Uzbekistan':'UZB','Colombia':'COL','England':'ING','Croatia':'CRO',
+    'Ghana':'GAN','Panama':'PAN',
+}
+
 ELO_BASE = {
     'ESP':2010,'FRA':2009,'ING':1993,'ARG':1976,'BRA':1955,'POR':1945,'ALE':1926,
     'HOL':1894,'NOR':1880,'BEL':1878,'COL':1878,'MAR':1874,'CRO':1852,'SEN':1848,
@@ -73,6 +88,93 @@ def fetch_json(url):
     req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0"})
     r = urllib.request.urlopen(req, timeout=20, context=SSL_CTX)
     return json.loads(r.read().decode())
+
+EFI_BASE = "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data"
+
+def _f(row, key):
+    try:
+        v = row.get(key, '')
+        return float(v) if v not in (None, '', 'NA', 'N/A') else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+def fetch_efi_stats():
+    """
+    Fetch FIFA's official EFI (Enhanced Football Intelligence) player-match data
+    from Bustami/efi-fifa-data-wc-2026 and roll it up to team-level per-game averages.
+    Note: the EFI CSV's own 'team_name' column is already a FIFA 3-letter code
+    (maps directly via FIFA_TO_OUR), and its 'match_id' joins to matches.csv's
+    'result_id' (NOT its 'match_id' column — the two files use different keys).
+    Returns { our_code: {efi dict} }, or {} if the source is unavailable.
+    """
+    try:
+        efi_rows = fetch_csv(f"{EFI_BASE}/wc2026_efi.csv")
+    except Exception as e:
+        print(f"  WARNING EFI fetch: {e}")
+        return {}
+
+    # (match_id, our_code) -> summed team totals for that match
+    per_match = {}
+    for r in efi_rows:
+        mid = r.get('match_id')
+        code = FIFA_TO_OUR.get(r.get('team_name', ''))
+        if not code:
+            continue
+        key = (mid, code)
+        agg = per_match.setdefault(key, {
+            'xg':0.0,'passes':0.0,'passes_completed':0.0,'total_distance':0.0,
+            'sprints':0.0,'forced_turnovers':0.0,'linebreaks_completed':0.0,
+            'linebreaks_attempted':0.0,'top_speed':0.0,'players':0,
+            'attempts':0.0,'attempts_on_target':0.0,
+        })
+        agg['xg'] += _f(r,'xg')
+        agg['passes'] += _f(r,'passes')
+        agg['passes_completed'] += _f(r,'passes_completed')
+        agg['total_distance'] += _f(r,'total_distance')
+        agg['sprints'] += _f(r,'sprints')
+        agg['forced_turnovers'] += _f(r,'forced_turnovers')
+        agg['linebreaks_completed'] += _f(r,'linebreaks_attempted_completed')
+        agg['linebreaks_attempted'] += _f(r,'linebreaks_attempted')
+        agg['attempts'] += _f(r,'attempt_at_goal')
+        agg['attempts_on_target'] += _f(r,'attempt_at_goal_on_target')
+        agg['top_speed'] = max(agg['top_speed'], _f(r,'top_speed'))
+        if _f(r,'time_played') > 0:
+            agg['players'] += 1
+
+    # roll per-match team totals up to season (per-game average) per team
+    by_team = {}
+    for (mid, code), agg in per_match.items():
+        by_team.setdefault(code, []).append(agg)
+
+    out = {}
+    for code, games in by_team.items():
+        n = len(games)
+        if not n: continue
+        sum_xg      = sum(g['xg'] for g in games)
+        sum_pass    = sum(g['passes'] for g in games)
+        sum_passc   = sum(g['passes_completed'] for g in games)
+        sum_dist    = sum(g['total_distance'] for g in games)
+        sum_players = sum(g['players'] for g in games) or 1
+        sum_sprints = sum(g['sprints'] for g in games)
+        sum_fturn   = sum(g['forced_turnovers'] for g in games)
+        sum_lbc     = sum(g['linebreaks_completed'] for g in games)
+        sum_lba     = sum(g['linebreaks_attempted'] for g in games)
+        sum_att     = sum(g['attempts'] for g in games)
+        sum_att_ot  = sum(g['attempts_on_target'] for g in games)
+        out[code] = {
+            'games': n,
+            'xg_official': round(sum_xg/n, 2),
+            'pass_accuracy': round(sum_passc/sum_pass*100, 1) if sum_pass else None,
+            # total_distance from EFI is in metres per player; average per player per game, in km
+            'avg_distance_km': round(sum_dist/sum_players/1000, 2) if sum_players else None,
+            'sprints': round(sum_sprints/n, 1),
+            'forced_turnovers': round(sum_fturn/n, 1),
+            'linebreaks_completed': round(sum_lbc/n, 1),
+            'linebreaks_attempted': round(sum_lba/n, 1),
+            'top_speed': round(max(g['top_speed'] for g in games), 1) or None,
+            'shot_accuracy': round(sum_att_ot/sum_att*100, 1) if sum_att else None,
+        }
+    return out
 
 def poisson_pmf(k, lam):
     if lam <= 0: return 1.0 if k==0 else 0.0
@@ -378,6 +480,21 @@ def main():
         t['xpts']=round(t['expected_points'],2)
         t['delta_pts']=round(t['points']-t['expected_points'],2)
         t['xgf']=round(t['xg_for']/g,2); t['xga']=round(t['xg_against']/g,2)
+
+    # ── FIFA EFI (official physical/technical data) ───────────────────────
+    print("  Fetching FIFA EFI (Bustami)...")
+    try:
+        efi_by_team = fetch_efi_stats()
+        efi_matched = 0
+        for code, efi in efi_by_team.items():
+            t = teams_out.get(code)
+            if not t: continue
+            t['efi'] = efi
+            t['dgf_efi'] = round((t['goals_for']/(t['games'] or 1)) - efi['xg_official'], 2)
+            efi_matched += 1
+        print(f"  EFI: {len(efi_by_team)} teams fetched, {efi_matched} matched to played teams")
+    except Exception as e:
+        print(f"  WARNING EFI: {e}")
 
     # Save live ELO to live_data.json
     try:
