@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T23:27:19.690159+00:00",
+  "updated_at": "2026-07-02T23:45:31.186564+00:00",
   "teams": [
     {
       "code": "MEX",
@@ -1487,71 +1487,6 @@
       "dgf_efi": 0.58
     },
     {
-      "code": "AUT",
-      "name": "Austria",
-      "games": 3,
-      "goals_for": 6,
-      "goals_against": 6,
-      "xg_for": 4.67,
-      "xg_against": 4.66,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "points": 4,
-      "expected_points": 3.9293705763036995,
-      "big_chances_created": 8,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "JOR",
-          "date": "2026-06-17",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.4,
-          "xga": 1.09,
-          "result": "W",
-          "p_win": 0.614
-        },
-        {
-          "vs": "ARG",
-          "date": "2026-06-22",
-          "gf": 0,
-          "ga": 2,
-          "xgf": 0.55,
-          "xga": 1.78,
-          "result": "L",
-          "p_win": 0.073
-        },
-        {
-          "vs": "AGL",
-          "date": "2026-06-28",
-          "gf": 3,
-          "ga": 3,
-          "xgf": 1.72,
-          "xga": 1.79,
-          "result": "D",
-          "p_win": 0.372
-        }
-      ],
-      "xpts": 3.93,
-      "delta_pts": 0.07,
-      "xgf": 1.56,
-      "xga": 1.55,
-      "efi": {
-        "games": 3,
-        "xg_official": 1.21,
-        "pass_accuracy": 86.6,
-        "avg_distance_km": 7.11,
-        "sprints": 424.7,
-        "forced_turnovers": 36.3,
-        "linebreaks_completed": 109.0,
-        "linebreaks_attempted": 160.7,
-        "top_speed": 34.1,
-        "shot_accuracy": 30.8
-      },
-      "dgf_efi": 0.79
-    },
-    {
       "code": "TUR",
       "name": "Turkey",
       "games": 3,
@@ -1838,7 +1773,7 @@
       "goals_for": 1,
       "goals_against": 9,
       "xg_for": 1.8499999999999999,
-      "xg_against": 10.64,
+      "xg_against": 10.65,
       "wins": 0,
       "draws": 1,
       "losses": 2,
@@ -1863,7 +1798,7 @@
           "gf": 0,
           "ga": 0,
           "xgf": 0.7,
-          "xga": 4.26,
+          "xga": 4.27,
           "result": "D",
           "p_win": 0.067
         },
@@ -1895,6 +1830,156 @@
         "shot_accuracy": 24.1
       },
       "dgf_efi": -0.24
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "games": 4,
+      "goals_for": 8,
+      "goals_against": 0,
+      "xg_for": 9.371600232488104,
+      "xg_against": 1.9829093455127138,
+      "wins": 3,
+      "draws": 1,
+      "losses": 0,
+      "points": 10,
+      "expected_points": 10.134599006036545,
+      "big_chances_created": 8,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CAB",
+          "date": "2026-06-15",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 2.15,
+          "xga": 0.35,
+          "result": "D",
+          "p_win": 0.909
+        },
+        {
+          "vs": "ARS",
+          "date": "2026-06-21",
+          "gf": 4,
+          "ga": 0,
+          "xgf": 3.28,
+          "xga": 0.25,
+          "result": "W",
+          "p_win": 0.832
+        },
+        {
+          "vs": "URU",
+          "date": "2026-06-27",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.35,
+          "xga": 0.78,
+          "result": "W",
+          "p_win": 0.649
+        },
+        {
+          "vs": "AUT",
+          "date": "2026-07-02",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 2.59,
+          "xga": 0.6,
+          "result": "W",
+          "p_win": 0.789
+        }
+      ],
+      "xpts": 10.13,
+      "delta_pts": -0.13,
+      "xgf": 2.34,
+      "xga": 0.5,
+      "efi": {
+        "games": 3,
+        "xg_official": 2.19,
+        "pass_accuracy": 91.9,
+        "avg_distance_km": 7.28,
+        "sprints": 418.7,
+        "forced_turnovers": 48.7,
+        "linebreaks_completed": 169.7,
+        "linebreaks_attempted": 210.0,
+        "top_speed": 33.7,
+        "shot_accuracy": 29.1
+      },
+      "dgf_efi": -0.19
+    },
+    {
+      "code": "AUT",
+      "name": "Austria",
+      "games": 4,
+      "goals_for": 6,
+      "goals_against": 9,
+      "xg_for": 5.272909345512714,
+      "xg_against": 7.251600232488105,
+      "wins": 1,
+      "draws": 1,
+      "losses": 2,
+      "points": 4,
+      "expected_points": 4.246150740740561,
+      "big_chances_created": 8,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "JOR",
+          "date": "2026-06-17",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.4,
+          "xga": 1.09,
+          "result": "W",
+          "p_win": 0.614
+        },
+        {
+          "vs": "ARG",
+          "date": "2026-06-22",
+          "gf": 0,
+          "ga": 2,
+          "xgf": 0.55,
+          "xga": 1.78,
+          "result": "L",
+          "p_win": 0.073
+        },
+        {
+          "vs": "AGL",
+          "date": "2026-06-28",
+          "gf": 3,
+          "ga": 3,
+          "xgf": 1.72,
+          "xga": 1.79,
+          "result": "D",
+          "p_win": 0.372
+        },
+        {
+          "vs": "ESP",
+          "date": "2026-07-02",
+          "gf": 0,
+          "ga": 3,
+          "xgf": 0.6,
+          "xga": 2.59,
+          "result": "L",
+          "p_win": 0.053
+        }
+      ],
+      "xpts": 4.25,
+      "delta_pts": -0.25,
+      "xgf": 1.32,
+      "xga": 1.81,
+      "efi": {
+        "games": 3,
+        "xg_official": 1.21,
+        "pass_accuracy": 86.6,
+        "avg_distance_km": 7.11,
+        "sprints": 424.7,
+        "forced_turnovers": 36.3,
+        "linebreaks_completed": 109.0,
+        "linebreaks_attempted": 160.7,
+        "top_speed": 34.1,
+        "shot_accuracy": 30.8
+      },
+      "dgf_efi": 0.29
     },
     {
       "code": "ARS",
@@ -2035,71 +2120,6 @@
         "shot_accuracy": 32.7
       },
       "dgf_efi": 0.99
-    },
-    {
-      "code": "ESP",
-      "name": "Spain",
-      "games": 3,
-      "goals_for": 5,
-      "goals_against": 0,
-      "xg_for": 6.779999999999999,
-      "xg_against": 1.38,
-      "wins": 2,
-      "draws": 1,
-      "losses": 0,
-      "points": 7,
-      "expected_points": 7.609331411660563,
-      "big_chances_created": 8,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "CAB",
-          "date": "2026-06-15",
-          "gf": 0,
-          "ga": 0,
-          "xgf": 2.15,
-          "xga": 0.35,
-          "result": "D",
-          "p_win": 0.909
-        },
-        {
-          "vs": "ARS",
-          "date": "2026-06-21",
-          "gf": 4,
-          "ga": 0,
-          "xgf": 3.28,
-          "xga": 0.25,
-          "result": "W",
-          "p_win": 0.832
-        },
-        {
-          "vs": "URU",
-          "date": "2026-06-27",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 1.35,
-          "xga": 0.78,
-          "result": "W",
-          "p_win": 0.649
-        }
-      ],
-      "xpts": 7.61,
-      "delta_pts": -0.61,
-      "xgf": 2.26,
-      "xga": 0.46,
-      "efi": {
-        "games": 3,
-        "xg_official": 2.19,
-        "pass_accuracy": 91.9,
-        "avg_distance_km": 7.28,
-        "sprints": 418.7,
-        "forced_turnovers": 48.7,
-        "linebreaks_completed": 169.7,
-        "linebreaks_attempted": 210.0,
-        "top_speed": 33.7,
-        "shot_accuracy": 29.1
-      },
-      "dgf_efi": -0.52
     },
     {
       "code": "JAP",
@@ -2777,7 +2797,7 @@
       "games": 4,
       "goals_for": 2,
       "goals_against": 4,
-      "xg_for": 7.43,
+      "xg_for": 7.4399999999999995,
       "xg_against": 4.220000000000001,
       "wins": 1,
       "draws": 1,
@@ -2802,7 +2822,7 @@
           "date": "2026-06-21",
           "gf": 0,
           "ga": 0,
-          "xgf": 4.26,
+          "xgf": 4.27,
           "xga": 0.7,
           "result": "D",
           "p_win": 0.754
@@ -5256,7 +5276,7 @@
       "pA": 0.067,
       "lam": 2.42,
       "mu": 0.65,
-      "home_xg": 4.26,
+      "home_xg": 4.27,
       "away_xg": 0.7,
       "real_xg": false,
       "home_shots": 27,
@@ -7741,10 +7761,46 @@
       "nlbair": false,
       "stadium": "San Francisco Bay Area Stadium (Levi's Stadium)",
       "city": "Santa Clara"
+    },
+    {
+      "date": "2026-07-02",
+      "home": "ESP",
+      "away": "AUT",
+      "g1": 3,
+      "g2": 0,
+      "pH": 0.789,
+      "pD": 0.158,
+      "pA": 0.053,
+      "lam": 2.59,
+      "mu": 0.6,
+      "home_xg": 2.59,
+      "away_xg": 0.6,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "HOME_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (79%). Final: 3–0."
+      ],
+      "nlbair": false,
+      "stadium": "",
+      "city": ""
     }
   ],
   "real_xg_games": 44,
   "nlbair_games": 63,
-  "narratives_built": 82,
+  "narratives_built": 83,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
