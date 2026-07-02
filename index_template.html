@@ -748,11 +748,14 @@ function renderOddsUI(){
     // instead of naive .split(' ')[0] which truncates "Bosnia & Herzegovina" → "Bosnia"
     const hShort=hCode?tn(hCode):hTeam;
     const aShort=aCode?tn(aCode):aTeam;
-    // Check value
-    const hEdge=probs&&h2h.home?Math.round((probs.pH-1/h2h.home)*1000)/10:null;
-    const aEdge=probs&&h2h.away?Math.round((probs.pA-1/h2h.away)*1000)/10:null;
-    const dEdge=probs&&h2h.draw?Math.round((probs.pD-1/h2h.draw)*1000)/10:null;
+    // Check value — only against a healthy book; a broken feed (implied sum
+    // far from ~1.05) would flag every outcome as +EV.
+    const bookOk=oddsBookValid(h2h);
+    const hEdge=bookOk&&probs&&h2h.home?Math.round((probs.pH-1/h2h.home)*1000)/10:null;
+    const aEdge=bookOk&&probs&&h2h.away?Math.round((probs.pA-1/h2h.away)*1000)/10:null;
+    const dEdge=bookOk&&probs&&h2h.draw?Math.round((probs.pD-1/h2h.draw)*1000)/10:null;
     if((hEdge&&hEdge>=5)||(aEdge&&aEdge>=5))hasValue=true;
+    const bookWarn=(!bookOk&&(h2h.home||h2h.draw||h2h.away))?'<div style="font-size:9.5px;color:var(--tx3);margin-top:.35rem">⚠️ Odds incompletas/desatualizadas — análise de valor suprimida</div>':'';
     html+=`<div class="match-odds-card ${hasValue?'has-value':''}">
       <div class="mhdr">
         <div class="mteams">${hTeam} <span style="color:var(--tx3);font-weight:400;font-size:12px">vs</span> ${aTeam}</div>
@@ -775,6 +778,7 @@ function renderOddsUI(){
           ${aEdge!=null?`<div class="oedge">${aEdge>0?'▲ +':''}${aEdge.toFixed(1)}%</div>`:''}
         </div>
       </div>
+      ${bookWarn}
       <div class="mmarkets">
         ${totals.over25?`<div class="mmarket"><span>Over 2.5</span>${totals.over25.toFixed(2)}</div>`:''}
         ${totals.under25?`<div class="mmarket"><span>Under 2.5</span>${totals.under25.toFixed(2)}</div>`:''}
@@ -1344,7 +1348,7 @@ function renderMatchup(){
   },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{max:80,ticks:{font:{size:10},callback:v=>v+'%'}},x:{ticks:{font:{size:10}}}}}});
   // Live odds for this matchup
   const liveGame=oddsData?findOddsGame(h.name,a.name):null;
-  if(liveGame&&liveGame.h2h){
+  if(liveGame&&liveGame.h2h&&oddsBookValid(liveGame.h2h)){
     const hEdge=liveGame.h2h.home?Math.round((pH-1/liveGame.h2h.home)*1000)/10:null;
     const aEdge=liveGame.h2h.away?Math.round((pA-1/liveGame.h2h.away)*1000)/10:null;
     const dEdge=liveGame.h2h.draw?Math.round((pD-1/liveGame.h2h.draw)*1000)/10:null;
@@ -1702,6 +1706,14 @@ var ELO_LIVE_UPDATED='2026-06-23';
 
 // ── Dixon-Coles correction for 0-0, 1-1, 0-1, 1-0 ─────────────────────────
 var DC_RHO = -0.18;
+// Multiplicative goal model (backtested 2026-07-02, see scripts/generate_perf.py):
+// totals grow with mismatch; replaces the old additive 1.35+diff/400 form.
+var GOAL_BASE = 1.25, GOAL_SCALE = 460;
+function goalLambdas(diff){
+  var lam = GOAL_BASE * Math.pow(10,  diff/(2*GOAL_SCALE));
+  var mu  = GOAL_BASE * Math.pow(10, -diff/(2*GOAL_SCALE));
+  return [Math.max(0.15,Math.min(4.5,lam)), Math.max(0.15,Math.min(4.5,mu))];
+}
 function dcTau(a,b,lam,mu){
   if(a===0&&b===0) return 1-lam*mu*DC_RHO;
   if(a===0&&b===1) return 1+lam*DC_RHO;
@@ -1730,7 +1742,7 @@ function getElo(code){
 // Expected goals — ELO diff + venue altitude/temp + form
 function expGoals(ratingA,ratingB,homeBonus,penaltyVisitor,tempPenalty,favBonus){
   var diff=(ratingA+(homeBonus||0))-ratingB;
-  var base=Math.max(0.3,Math.min(3.5, 1.35+diff/400));
+  var base=goalLambdas(diff)[0];
   // Altitude reduces visiting team's goals (penaltyVisitor applies to home xG too via lower pace)
   base = base * (1 - (tempPenalty||0));
   return Math.max(0.25, base);
@@ -1800,8 +1812,8 @@ function matchProb(rA,rB,homeBonus,codeA,codeB,group,isKO){
   // Home team benefits from altitude (they're acclimatised), visitor is penalised
   var rAeff=rA+formA*100+(homeBonus>0?0:0);
   var rBeff=rB+formB*100;
-  var lam=Math.max(0.3,Math.min(3.5, 1.35+((rAeff+(homeBonus||0))-rBeff)/400));
-  var mu =Math.max(0.3,Math.min(3.5, 1.35+(rBeff-(rAeff+(homeBonus||0)/2))/400));
+  var _lm=goalLambdas((rAeff+(homeBonus||0))-rBeff);
+  var lam=_lm[0], mu=_lm[1];
   // Apply penalties: temp reduces both; altitude reduces visitor's
   lam=lam*(1-tempPen)*(homeBonus>0?1:1-altPen);
   mu =mu *(1-tempPen)*(homeBonus>0?1-altPen:1);
@@ -2883,6 +2895,16 @@ function kellyFraction(modelProb, decimalOdds) {
   return Math.max(0, Math.round(f * 1000) / 1000);
 }
 
+// A healthy 1X2 book's implied probabilities sum to ~1.02–1.12 (overround).
+// A sum well below 1 means the feed is stale/incomplete (e.g. one outcome
+// missing or mispriced) — model-vs-market "edges" computed against it are
+// meaningless and would flag every outcome as a value bet.
+function oddsBookValid(h2h) {
+  if (!h2h || !h2h.home || !h2h.draw || !h2h.away) return false;
+  var s = 1/h2h.home + 1/h2h.draw + 1/h2h.away;
+  return s >= 0.93 && s <= 1.25;
+}
+
 // ── Enhanced matchProb with config integration ────────────────────────────────
 function matchProbV2(codeA, codeB, group, isKO) {
   var cfg = getPredConfig();
@@ -2909,8 +2931,8 @@ function matchProbV2(codeA, codeB, group, isKO) {
   var rBeff = rB - formDiff * cfg.formW * 2;
 
   // Poisson lambdas
-  var lam = Math.max(0.3, Math.min(3.5, 1.35 + (rAeff - rBeff) / 400));
-  var mu  = Math.max(0.3, Math.min(3.5, 1.35 + (rBeff - rAeff) / 400));
+  var _lm2 = goalLambdas(rAeff - rBeff);
+  var lam = _lm2[0], mu = _lm2[1];
   // ── Real xG blend (WC2026 observed, scales with games played) ─────────
   var _pa=WC26_PERF_SUMMARY[codeA]||{}, _pb=WC26_PERF_SUMMARY[codeB]||{};
   var _wA=Math.min((_pa.rg||0),3)/3*0.20, _wB=Math.min((_pb.rg||0),3)/3*0.20;
@@ -3445,11 +3467,11 @@ function reckCode(name) {
 function reckMatchProb(codeA, codeB, neutral) {
   var rA = getElo(codeA), rB = getElo(codeB);
   var hb = neutral ? 0 : ((SIM_HOME_BONUS[codeA]||0) - (SIM_HOME_BONUS[codeB]||0));
-  var lam = Math.max(0.3, Math.min(3.5, 1.35 + ((rA+hb)-rB)/400));
-  var mu  = Math.max(0.3, Math.min(3.5, 1.35 + (rB-(rA+hb/2))/400));
+  var _lm3 = goalLambdas((rA+hb)-rB);
+  var lam = _lm3[0], mu = _lm3[1];
   var wA=0,dr=0,wB=0;
   function pmf(k,l){ if(l<=0)return k===0?1:0; var p=Math.exp(-l); for(var i=1;i<=k;i++)p*=l/i; return p; }
-  function tau(a,b){ if(a===0&&b===0)return 1-lam*mu*(-0.13); if(a===0&&b===1)return 1+lam*(-0.13); if(a===1&&b===0)return 1+mu*(-0.13); if(a===1&&b===1)return 1-(-0.13); return 1; }
+  var tau = function(a,b){ return dcTau(a,b,lam,mu); };
   for(var a=0;a<=8;a++){var pA=pmf(a,lam);for(var b=0;b<=8;b++){var p=pA*pmf(b,mu)*tau(a,b);if(a>b)wA+=p;else if(a<b)wB+=p;else dr+=p;}}
   var tot=wA+dr+wB;
   return {winA:wA/tot,draw:dr/tot,winB:wB/tot,xgA:Math.round(lam*100)/100,xgB:Math.round(mu*100)/100,eloA:rA,eloB:rB};
