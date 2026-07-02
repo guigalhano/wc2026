@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T12:41:09.796716+00:00",
+  "updated_at": "2026-07-02T18:18:31.921263+00:00",
   "teams": [
     {
       "code": "FRA",
@@ -82,8 +82,8 @@
       "games": 4,
       "goals_for": 8,
       "goals_against": 0,
-      "xg_for": 8.307500000000001,
-      "xg_against": 3.1825,
+      "xg_for": 7.460000000000001,
+      "xg_against": 2.955,
       "wins": 4,
       "draws": 0,
       "losses": 0,
@@ -127,16 +127,16 @@
           "date": "2026-07-01",
           "gf": 2,
           "ga": 0,
-          "xgf": 1.87,
-          "xga": 0.96,
+          "xgf": 1.02,
+          "xga": 0.73,
           "result": "W",
           "p_win": 0.573
         }
       ],
       "xpts": 9.22,
       "delta_pts": 2.78,
-      "xgf": 2.08,
-      "xga": 0.8,
+      "xgf": 1.87,
+      "xga": 0.74,
       "efi": {
         "games": 4,
         "xg_official": 1.52,
@@ -307,8 +307,8 @@
       "games": 4,
       "goals_for": 10,
       "goals_against": 8,
-      "xg_for": 8.647499999999999,
-      "xg_against": 4.7625,
+      "xg_for": 8.91,
+      "xg_against": 4.970000000000001,
       "wins": 3,
       "draws": 0,
       "losses": 1,
@@ -352,16 +352,16 @@
           "date": "2026-06-30",
           "gf": 2,
           "ga": 1,
-          "xgf": 1.76,
-          "xga": 0.94,
+          "xgf": 2.02,
+          "xga": 1.15,
           "result": "W",
           "p_win": 0.551
         }
       ],
       "xpts": 6.98,
       "delta_pts": 2.02,
-      "xgf": 2.16,
-      "xga": 1.19,
+      "xgf": 2.23,
+      "xga": 1.24,
       "efi": {
         "games": 4,
         "xg_official": 1.91,
@@ -782,8 +782,8 @@
       "games": 4,
       "goals_for": 5,
       "goals_against": 4,
-      "xg_for": 4.3225,
-      "xg_against": 5.2675,
+      "xg_for": 4.529999999999999,
+      "xg_against": 5.529999999999999,
       "wins": 2,
       "draws": 0,
       "losses": 2,
@@ -827,16 +827,16 @@
           "date": "2026-06-30",
           "gf": 1,
           "ga": 2,
-          "xgf": 0.94,
-          "xga": 1.76,
+          "xgf": 1.15,
+          "xga": 2.02,
           "result": "L",
           "p_win": 0.186
         }
       ],
       "xpts": 5.03,
       "delta_pts": 0.97,
-      "xgf": 1.08,
-      "xga": 1.32,
+      "xgf": 1.13,
+      "xga": 1.38,
       "efi": {
         "games": 4,
         "xg_official": 1.38,
@@ -922,8 +922,8 @@
       "games": 4,
       "goals_for": 10,
       "goals_against": 4,
-      "xg_for": 8.8875,
-      "xg_against": 4.0175,
+      "xg_for": 7.64,
+      "xg_against": 3.6100000000000003,
       "wins": 3,
       "draws": 0,
       "losses": 1,
@@ -967,16 +967,16 @@
           "date": "2026-07-02",
           "gf": 2,
           "ga": 0,
-          "xgf": 2.17,
-          "xga": 0.66,
+          "xgf": 0.92,
+          "xga": 0.25,
           "result": "W",
           "p_win": 0.711
         }
       ],
       "xpts": 8.17,
       "delta_pts": 0.83,
-      "xgf": 2.22,
-      "xga": 1.0,
+      "xgf": 1.91,
+      "xga": 0.9,
       "efi": {
         "games": 4,
         "xg_official": 1.51,
@@ -997,8 +997,8 @@
       "games": 4,
       "goals_for": 5,
       "goals_against": 5,
-      "xg_for": 3.8425000000000002,
-      "xg_against": 7.1375,
+      "xg_for": 4.0775,
+      "xg_against": 7.0025,
       "wins": 1,
       "draws": 1,
       "losses": 2,
@@ -1042,16 +1042,16 @@
           "date": "2026-07-01",
           "gf": 1,
           "ga": 2,
-          "xgf": 0.53,
-          "xga": 2.17,
+          "xgf": 0.76,
+          "xga": 2.04,
           "result": "L",
           "p_win": 0.065
         }
       ],
       "xpts": 3.21,
       "delta_pts": 0.79,
-      "xgf": 0.96,
-      "xga": 1.78,
+      "xgf": 1.02,
+      "xga": 1.75,
       "efi": {
         "games": 4,
         "xg_official": 0.93,
@@ -1147,8 +1147,8 @@
       "games": 4,
       "goals_for": 8,
       "goals_against": 3,
-      "xg_for": 8.765,
-      "xg_against": 4.085,
+      "xg_for": 8.629999999999999,
+      "xg_against": 4.319999999999999,
       "wins": 3,
       "draws": 1,
       "losses": 0,
@@ -1192,16 +1192,16 @@
           "date": "2026-07-01",
           "gf": 2,
           "ga": 1,
-          "xgf": 2.17,
-          "xga": 0.53,
+          "xgf": 2.04,
+          "xga": 0.76,
           "result": "W",
           "p_win": 0.746
         }
       ],
       "xpts": 9.31,
       "delta_pts": 0.69,
-      "xgf": 2.19,
-      "xga": 1.02,
+      "xgf": 2.16,
+      "xga": 1.08,
       "efi": {
         "games": 4,
         "xg_official": 2.12,
@@ -1222,8 +1222,8 @@
       "games": 4,
       "goals_for": 5,
       "goals_against": 8,
-      "xg_for": 3.9975,
-      "xg_against": 6.9175,
+      "xg_for": 3.59,
+      "xg_against": 5.67,
       "wins": 1,
       "draws": 1,
       "losses": 2,
@@ -1267,16 +1267,16 @@
           "date": "2026-07-02",
           "gf": 0,
           "ga": 2,
-          "xgf": 0.66,
-          "xga": 2.17,
+          "xgf": 0.25,
+          "xga": 0.92,
           "result": "L",
           "p_win": 0.088
         }
       ],
       "xpts": 3.39,
       "delta_pts": 0.61,
-      "xgf": 1.0,
-      "xga": 1.73,
+      "xgf": 0.9,
+      "xga": 1.42,
       "efi": {
         "games": 4,
         "xg_official": 0.51,
@@ -2128,7 +2128,7 @@
       "goals_for": 1,
       "goals_against": 9,
       "xg_for": 1.8499999999999999,
-      "xg_against": 10.64,
+      "xg_against": 10.65,
       "wins": 0,
       "draws": 1,
       "losses": 2,
@@ -2153,7 +2153,7 @@
           "gf": 0,
           "ga": 0,
           "xgf": 0.7,
-          "xga": 4.26,
+          "xga": 4.27,
           "result": "D",
           "p_win": 0.116
         },
@@ -2787,8 +2787,8 @@
       "games": 4,
       "goals_for": 2,
       "goals_against": 4,
-      "xg_for": 7.657500000000001,
-      "xg_against": 5.067500000000001,
+      "xg_for": 7.4399999999999995,
+      "xg_against": 4.220000000000001,
       "wins": 1,
       "draws": 1,
       "losses": 2,
@@ -2812,7 +2812,7 @@
           "date": "2026-06-21",
           "gf": 0,
           "ga": 0,
-          "xgf": 4.26,
+          "xgf": 4.27,
           "xga": 0.7,
           "result": "D",
           "p_win": 0.654
@@ -2832,16 +2832,16 @@
           "date": "2026-07-01",
           "gf": 0,
           "ga": 2,
-          "xgf": 0.96,
-          "xga": 1.87,
+          "xgf": 0.73,
+          "xga": 1.02,
           "result": "L",
           "p_win": 0.176
         }
       ],
       "xpts": 5.6,
       "delta_pts": -1.6,
-      "xgf": 1.91,
-      "xga": 1.27,
+      "xgf": 1.86,
+      "xga": 1.06,
       "efi": {
         "games": 4,
         "xg_official": 1.47,
@@ -5153,7 +5153,7 @@
       "pA": 0.116,
       "lam": 1.97,
       "mu": 0.73,
-      "home_xg": 4.26,
+      "home_xg": 4.27,
       "away_xg": 0.7,
       "real_xg": false,
       "home_shots": 27,
@@ -7234,21 +7234,38 @@
       "pA": 0.551,
       "lam": 0.94,
       "mu": 1.76,
-      "home_xg": 0.94,
-      "away_xg": 1.76,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 1.15,
+      "away_xg": 2.02,
+      "real_xg": true,
+      "home_shots": 14.0,
+      "away_shots": 9.0,
+      "home_sot": 5.0,
+      "away_sot": 3.0,
+      "home_poss": 52.0,
+      "away_poss": 48.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_goals": [
+        {
+          "min": "74",
+          "player": "Amad Diallo",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "39",
+          "player": "Antonio Eromonsele Nordby Nusa",
+          "type": "regular"
+        },
+        {
+          "min": "86",
+          "player": "Erling Braut Haaland",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (55%). Final: 1–2."
       ],
@@ -7301,24 +7318,42 @@
       "pA": 0.176,
       "lam": 1.87,
       "mu": 0.96,
-      "home_xg": 1.87,
-      "away_xg": 0.96,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 1.02,
+      "away_xg": 0.73,
+      "real_xg": true,
+      "home_shots": 15.0,
+      "away_shots": 7.0,
+      "home_sot": 3.0,
+      "away_sot": 1.0,
+      "home_poss": 37.0,
+      "away_poss": 52.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
+      "home_goals": [
+        {
+          "min": "22",
+          "player": "Julián Andrés Quinones",
+          "type": "regular"
+        },
+        {
+          "min": "31",
+          "player": "Raúl Alonso Jimenez",
+          "type": "regular"
+        }
+      ],
       "away_goals": [],
-      "reds": [],
-      "has_stats": false,
+      "reds": [
+        [
+          "95",
+          "EQU",
+          "Piero Martin Hincapie"
+        ]
+      ],
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (57%). Final: 2–0.",
-        "🧱 Ecuador underperformed xG (0 goals vs 1.0 xG)."
+        "⚡ Mexico outscored xG (2 goals vs 1.0 xG) — clinical finishing.",
+        "🟥 Ecuador down to 10 men (Piero Martin Hincapie, 95')."
       ],
       "nlbair": false,
       "stadium": "Mexico City Stadium (Estadio Azteca)",
@@ -7335,21 +7370,38 @@
       "pA": 0.065,
       "lam": 2.17,
       "mu": 0.53,
-      "home_xg": 2.17,
-      "away_xg": 0.53,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 2.04,
+      "away_xg": 0.76,
+      "real_xg": true,
+      "home_shots": 16.0,
+      "away_shots": 7.0,
+      "home_sot": 7.0,
+      "away_sot": 2.0,
+      "home_poss": 60.0,
+      "away_poss": 40.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_goals": [
+        {
+          "min": "75",
+          "player": "Harry Edward Kane",
+          "type": "regular"
+        },
+        {
+          "min": "86",
+          "player": "Harry Edward Kane",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "7",
+          "player": "Kibambe Brian Cipenga",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "narrative": [
         "✅ **Result matched prediction** (75%). Final: 2–1."
       ],
@@ -7403,30 +7455,49 @@
       "pA": 0.088,
       "lam": 2.17,
       "mu": 0.66,
-      "home_xg": 2.17,
-      "away_xg": 0.66,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 0.92,
+      "away_xg": 0.25,
+      "real_xg": true,
+      "home_shots": 8.0,
+      "away_shots": 10.0,
+      "home_sot": 2.0,
+      "away_sot": 3.0,
+      "home_poss": 48.0,
+      "away_poss": 52.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
+      "home_goals": [
+        {
+          "min": "45",
+          "player": "Folarin Jolaoluwa Balogun",
+          "type": "regular"
+        },
+        {
+          "min": "82",
+          "player": "Malik Leon Tillman",
+          "type": "regular"
+        }
+      ],
       "away_goals": [],
-      "reds": [],
-      "has_stats": false,
+      "reds": [
+        [
+          "64",
+          "EUA",
+          "Folarin Jolaoluwa Balogun"
+        ]
+      ],
+      "has_stats": true,
       "narrative": [
-        "✅ **Result matched prediction** (71%). Final: 2–0."
+        "✅ **Result matched prediction** (71%). Final: 2–0.",
+        "⚡ USA outscored xG (2 goals vs 0.9 xG) — clinical finishing.",
+        "🟥 USA down to 10 men (Folarin Jolaoluwa Balogun, 64')."
       ],
       "nlbair": false,
       "stadium": "San Francisco Bay Area Stadium (Levi's Stadium)",
       "city": "Santa Clara"
     }
   ],
-  "real_xg_games": 40,
+  "real_xg_games": 44,
   "nlbair_games": 63,
   "narratives_built": 82,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"

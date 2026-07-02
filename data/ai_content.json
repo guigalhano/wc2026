@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T11:43:24.857705+00:00",
-  "generated_at_brt": "02/07/2026 08:43 BRT",
+  "generated_at": "2026-07-02T18:18:33.376898+00:00",
+  "generated_at_brt": "02/07/2026 15:18 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -15,11 +15,11 @@
       "h2h": {
         "away": 13.0,
         "home": 4.4,
-        "draw": 5.7
+        "draw": 5.65
       },
       "totals": {
-        "over25": 2.16,
-        "under25": 3.4
+        "over25": 2.1,
+        "under25": 3.45
       },
       "btts_yes": null,
       "preview": {
@@ -37,13 +37,13 @@
       "away": "Croatia",
       "time": "2026-07-02T23:00:00Z",
       "h2h": {
-        "away": 5.7,
-        "home": 1.78,
+        "away": 6.0,
+        "home": 1.73,
         "draw": 3.98
       },
       "totals": {
-        "over25": 2.2,
-        "under25": 2.2
+        "over25": 2.23,
+        "under25": 3.3
       },
       "btts_yes": null,
       "preview": {
@@ -61,12 +61,12 @@
       "away": "Algeria",
       "time": "2026-07-03T03:00:00Z",
       "h2h": {
-        "away": 4.5,
-        "home": 2.1,
-        "draw": 3.41
+        "away": 4.8,
+        "home": 2.01,
+        "draw": 3.4
       },
       "totals": {
-        "over25": 3.1,
+        "over25": 3.3,
         "under25": 1.95
       },
       "btts_yes": null,
@@ -85,13 +85,13 @@
       "away": "Egypt",
       "time": "2026-07-03T18:00:00Z",
       "h2h": {
-        "home": 3.6,
-        "away": 2.58,
-        "draw": 3.04
+        "home": 3.55,
+        "away": 2.6,
+        "draw": 3.02
       },
       "totals": {
-        "over25": 2.8,
-        "under25": 2.5
+        "over25": 2.92,
+        "under25": 2.4
       },
       "btts_yes": null,
       "preview": {
@@ -109,13 +109,13 @@
       "away": "Cape Verde",
       "time": "2026-07-03T22:00:00Z",
       "h2h": {
-        "home": 1.19,
+        "home": 1.18,
         "away": 25.0,
-        "draw": 8.8
+        "draw": 9.0
       },
       "totals": {
         "over25": 2.7,
-        "under25": 2.27
+        "under25": 2.38
       },
       "btts_yes": null,
       "preview": {
