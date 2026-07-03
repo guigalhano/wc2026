@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-03T17:03:53.478161+00:00",
-  "generated_at_brt": "03/07/2026 14:03 BRT",
+  "generated_at": "2026-07-03T21:46:46.469572+00:00",
+  "generated_at_brt": "03/07/2026 18:46 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -8,42 +8,18 @@
   },
   "match_previews": [
     {
-      "game_id": "fb270a3dac2b682c861bd674a5ff4a04",
-      "home": "Australia",
-      "away": "Egypt",
-      "time": "2026-07-03T18:00:00Z",
-      "h2h": {
-        "home": 3.9,
-        "away": 2.45,
-        "draw": 3.0
-      },
-      "totals": {
-        "over25": 2.72,
-        "under25": 2.5
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
       "game_id": "3e161b2448ed76d6b0c0f5bda6fd5bf2",
       "home": "Argentina",
       "away": "Cape Verde",
       "time": "2026-07-03T22:00:00Z",
       "h2h": {
-        "home": 1.17,
-        "away": 27.03,
-        "draw": 9.4
+        "home": 1.16,
+        "away": 30.03,
+        "draw": 10.4
       },
       "totals": {
-        "over25": 2.65,
-        "under25": 2.36
+        "over25": 2.6,
+        "under25": 2.45
       },
       "btts_yes": null,
       "preview": {
@@ -66,8 +42,8 @@
         "draw": 4.6
       },
       "totals": {
-        "over25": 2.75,
-        "under25": 2.09
+        "over25": 2.9,
+        "under25": 2.08
       },
       "btts_yes": null,
       "preview": {
@@ -85,13 +61,13 @@
       "away": "Morocco",
       "time": "2026-07-04T17:00:00Z",
       "h2h": {
-        "home": 5.5,
-        "away": 1.84,
-        "draw": 3.64
+        "home": 5.0,
+        "away": 1.93,
+        "draw": 3.51
       },
       "totals": {
         "over25": 2.34,
-        "under25": 2.95
+        "under25": 2.85
       },
       "btts_yes": null,
       "preview": {
@@ -109,9 +85,9 @@
       "away": "France",
       "time": "2026-07-04T21:00:00Z",
       "h2h": {
-        "away": 1.22,
-        "home": 29.55,
-        "draw": 8.2
+        "away": 1.23,
+        "home": 26.84,
+        "draw": 8.03
       },
       "totals": {
         "over25": 2.7,
