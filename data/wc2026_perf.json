@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T10:16:46.318827+00:00",
+  "updated_at": "2026-07-03T17:03:52.604129+00:00",
   "teams": [
     {
       "code": "MEX",
@@ -157,8 +157,8 @@
       "games": 4,
       "goals_for": 9,
       "goals_against": 3,
-      "xg_for": 6.451187465932149,
-      "xg_against": 3.902251703713679,
+      "xg_for": 7.220000000000001,
+      "xg_against": 3.74,
       "wins": 3,
       "draws": 1,
       "losses": 0,
@@ -202,16 +202,16 @@
           "date": "2026-07-03",
           "gf": 2,
           "ga": 0,
-          "xgf": 1.75,
-          "xga": 0.89,
+          "xgf": 2.52,
+          "xga": 0.73,
           "result": "W",
           "p_win": 0.557
         }
       ],
       "xpts": 7.69,
       "delta_pts": 2.31,
-      "xgf": 1.61,
-      "xga": 0.98,
+      "xgf": 1.81,
+      "xga": 0.94,
       "efi": {
         "games": 4,
         "xg_official": 1.67,
@@ -2157,8 +2157,8 @@
       "games": 4,
       "goals_for": 5,
       "goals_against": 9,
-      "xg_for": 5.54225170371368,
-      "xg_against": 5.441187465932149,
+      "xg_for": 5.380000000000001,
+      "xg_against": 6.21,
       "wins": 1,
       "draws": 1,
       "losses": 2,
@@ -2202,16 +2202,16 @@
           "date": "2026-07-03",
           "gf": 0,
           "ga": 2,
-          "xgf": 0.89,
-          "xga": 1.75,
+          "xgf": 0.73,
+          "xga": 2.52,
           "result": "L",
           "p_win": 0.169
         }
       ],
       "xpts": 4.45,
       "delta_pts": -0.45,
-      "xgf": 1.39,
-      "xga": 1.36,
+      "xgf": 1.35,
+      "xga": 1.55,
       "efi": {
         "games": 4,
         "xg_official": 1.0,
@@ -7885,34 +7885,44 @@
       "pA": 0.169,
       "lam": 1.75,
       "mu": 0.89,
-      "home_xg": 1.75,
-      "away_xg": 0.89,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 2.52,
+      "away_xg": 0.73,
+      "real_xg": true,
+      "home_shots": 11.0,
+      "away_shots": 8.0,
+      "home_sot": 5.0,
+      "away_sot": 2.0,
+      "home_poss": 45.0,
+      "away_poss": 55.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
+      "home_goals": [
+        {
+          "min": "10",
+          "player": "Breel Donald Embolo",
+          "type": "regular"
+        },
+        {
+          "min": "46",
+          "player": "Dan Ndoye",
+          "type": "regular"
+        }
+      ],
       "away_goals": [],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (56%). Final: 2–0.",
-        "🧱 Algeria underperformed xG (0 goals vs 0.9 xG)."
+        "✅ **Result matched prediction** (56%). Final: 2–0."
       ],
       "nlbair": false,
       "stadium": "Vancouver Stadium (BC Place)",
       "city": "Vancouver"
     }
   ],
-  "real_xg_games": 44,
+  "real_xg_games": 45,
   "nlbair_games": 63,
   "narratives_built": 85,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-03T10:16:47.627501+00:00",
-  "generated_at_brt": "03/07/2026 07:16 BRT",
+  "generated_at": "2026-07-03T17:03:53.478161+00:00",
+  "generated_at_brt": "03/07/2026 14:03 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -14,12 +14,12 @@
       "time": "2026-07-03T18:00:00Z",
       "h2h": {
         "home": 3.9,
-        "away": 2.47,
+        "away": 2.45,
         "draw": 3.0
       },
       "totals": {
-        "over25": 2.9,
-        "under25": 2.48
+        "over25": 2.72,
+        "under25": 2.5
       },
       "btts_yes": null,
       "preview": {
@@ -37,13 +37,13 @@
       "away": "Cape Verde",
       "time": "2026-07-03T22:00:00Z",
       "h2h": {
-        "home": 1.16,
-        "away": 51.81,
-        "draw": 9.74
+        "home": 1.17,
+        "away": 27.03,
+        "draw": 9.4
       },
       "totals": {
         "over25": 2.65,
-        "under25": 2.35
+        "under25": 2.36
       },
       "btts_yes": null,
       "preview": {
@@ -61,13 +61,13 @@
       "away": "Ghana",
       "time": "2026-07-04T01:30:00Z",
       "h2h": {
-        "home": 1.47,
+        "home": 1.48,
         "away": 10.0,
-        "draw": 4.93
+        "draw": 4.6
       },
       "totals": {
-        "over25": 3.0,
-        "under25": 2.5
+        "over25": 2.75,
+        "under25": 2.09
       },
       "btts_yes": null,
       "preview": {
@@ -85,9 +85,9 @@
       "away": "Morocco",
       "time": "2026-07-04T17:00:00Z",
       "h2h": {
-        "home": 5.7,
-        "away": 1.82,
-        "draw": 3.62
+        "home": 5.5,
+        "away": 1.84,
+        "draw": 3.64
       },
       "totals": {
         "over25": 2.34,
@@ -109,13 +109,13 @@
       "away": "France",
       "time": "2026-07-04T21:00:00Z",
       "h2h": {
-        "away": 1.24,
-        "home": 25.28,
-        "draw": 8.18
+        "away": 1.22,
+        "home": 29.55,
+        "draw": 8.2
       },
       "totals": {
-        "over25": 2.75,
-        "under25": 2.27
+        "over25": 2.7,
+        "under25": 2.23
       },
       "btts_yes": null,
       "preview": {
