@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T23:45:32.398786+00:00",
-  "generated_at_brt": "02/07/2026 20:45 BRT",
+  "generated_at": "2026-07-03T10:16:47.627501+00:00",
+  "generated_at_brt": "03/07/2026 07:16 BRT",
   "value_bets_today": {
     "summary": "Erro na geração: HTTP Error 404: Not Found",
     "bets": [],
@@ -8,66 +8,18 @@
   },
   "match_previews": [
     {
-      "game_id": "852b4baf0be4b9eef2a30596a8d39249",
-      "home": "Portugal",
-      "away": "Croatia",
-      "time": "2026-07-02T23:00:00Z",
-      "h2h": {
-        "away": 7.4,
-        "home": 1.82,
-        "draw": 3.3
-      },
-      "totals": {
-        "over25": 3.3,
-        "under25": 2.35
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
-      "game_id": "c17fe2e46190d7ab6af01504ff240e82",
-      "home": "Switzerland",
-      "away": "Algeria",
-      "time": "2026-07-03T03:00:00Z",
-      "h2h": {
-        "away": 4.75,
-        "home": 2.04,
-        "draw": 3.37
-      },
-      "totals": {
-        "over25": 3.2,
-        "under25": 1.95
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Erro na geração: HTTP Error 404: Not Found",
-        "aposta_principal": "N/D",
-        "justificativa": "",
-        "apostas_alternativas": [],
-        "risco": "",
-        "confianca": "media"
-      }
-    },
-    {
       "game_id": "fb270a3dac2b682c861bd674a5ff4a04",
       "home": "Australia",
       "away": "Egypt",
       "time": "2026-07-03T18:00:00Z",
       "h2h": {
-        "home": 3.6,
-        "away": 2.6,
-        "draw": 3.04
+        "home": 3.9,
+        "away": 2.47,
+        "draw": 3.0
       },
       "totals": {
-        "over25": 2.92,
-        "under25": 2.46
+        "over25": 2.9,
+        "under25": 2.48
       },
       "btts_yes": null,
       "preview": {
@@ -85,13 +37,85 @@
       "away": "Cape Verde",
       "time": "2026-07-03T22:00:00Z",
       "h2h": {
-        "home": 1.18,
-        "away": 26.0,
-        "draw": 9.0
+        "home": 1.16,
+        "away": 51.81,
+        "draw": 9.74
       },
       "totals": {
-        "over25": 2.7,
-        "under25": 2.38
+        "over25": 2.65,
+        "under25": 2.35
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "88e032a2b2e5042d26db3f0da1df924a",
+      "home": "Colombia",
+      "away": "Ghana",
+      "time": "2026-07-04T01:30:00Z",
+      "h2h": {
+        "home": 1.47,
+        "away": 10.0,
+        "draw": 4.93
+      },
+      "totals": {
+        "over25": 3.0,
+        "under25": 2.5
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "9c7073ae2c29ee4881bb695f92168c68",
+      "home": "Canada",
+      "away": "Morocco",
+      "time": "2026-07-04T17:00:00Z",
+      "h2h": {
+        "home": 5.7,
+        "away": 1.82,
+        "draw": 3.62
+      },
+      "totals": {
+        "over25": 2.34,
+        "under25": 2.95
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Erro na geração: HTTP Error 404: Not Found",
+        "aposta_principal": "N/D",
+        "justificativa": "",
+        "apostas_alternativas": [],
+        "risco": "",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "c798a1ffdeda28e82d930e7145a8ff10",
+      "home": "Paraguay",
+      "away": "France",
+      "time": "2026-07-04T21:00:00Z",
+      "h2h": {
+        "away": 1.24,
+        "home": 25.28,
+        "draw": 8.18
+      },
+      "totals": {
+        "over25": 2.75,
+        "under25": 2.27
       },
       "btts_yes": null,
       "preview": {
