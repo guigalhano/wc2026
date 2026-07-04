@@ -1,63 +1,36 @@
 {
-  "generated_at": "2026-07-04T14:51:44.405097+00:00",
-  "generated_at_brt": "04/07/2026 11:51 BRT",
+  "generated_at": "2026-07-04T20:16:24.425146+00:00",
+  "generated_at_brt": "04/07/2026 17:16 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Rodada da Copa 2026 apresenta oportunidades claras de value, especialmente em favoritismos mal precificados pelas casas. França e Brasil surgem como as apostas mais sólidas do dia, enquanto Marrocos oferece retorno interessante contra o Canadá.\",\n  \"tip_of_day\": {\n    \"jogo\":",
+    "summary": "```json\n{\n  \"summary\": \"Dia de dois confrontos contrastantes na Copa 2026, com França favorita absoluta contra o Paraguai e Brasil em duelo equilibrado contra a Noruega surpreendente. O calor extremo nas sedes americanas e mexicanas é fator crítico que favorece seleções com maior profundidade de ele",
     "bets": [],
     "tip_of_day": null
   },
   "match_previews": [
-    {
-      "game_id": "9c7073ae2c29ee4881bb695f92168c68",
-      "home": "Canada",
-      "away": "Morocco",
-      "time": "2026-07-04T17:00:00Z",
-      "h2h": {
-        "home": 6.26,
-        "away": 1.8,
-        "draw": 3.6
-      },
-      "totals": {
-        "over25": 2.25,
-        "under25": 3.05
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Marrocos chega como claro favorito com métricas sólidas (xG 1.52, xGA 0.55) e rating 81, enquanto o Canadá não apresenta dados xG disponíveis, sugerindo inconsistência ofensiva. Espera-se uma partida equilibrada defensivamente com Marrocos controlando o jogo e limitando os espaços para Alphonso Davies.",
-        "aposta_principal": "Vitória Marrocos @ 1.80",
-        "justificativa": "Marrocos possui a melhor defesa entre os dados disponíveis com xGA de apenas 0.55, o que demonstra solidez estrutural sob Lamouchi. A ausência de métricas do Canadá combinada com o estilo físico marroquino favorece um jogo controlado pelo lado africano. A odd de 1.80 reflete valor aceitável para um favorito com dados defensivos tão consistentes.",
-        "apostas_alternativas": [
-          "Under 2.5 gols @ 1.77 — Marrocos concede pouco (xGA 0.55) e o Canadá tende a ter dificuldades na criação ofensiva",
-          "Marrocos Vence/Empate (Dupla Chance) @ ~1.20 como seguro em combinações acumuladas"
-        ],
-        "risco": "O principal risco é a velocidade de Alphonso Davies explorar as costas da defesa marroquina em transições rápidas, podendo abrir o jogo de forma inesperada.",
-        "confianca": "media"
-      }
-    },
     {
       "game_id": "c798a1ffdeda28e82d930e7145a8ff10",
       "home": "Paraguay",
       "away": "France",
       "time": "2026-07-04T21:00:00Z",
       "h2h": {
-        "away": 1.21,
-        "home": 23.0,
-        "draw": 7.9
+        "away": 1.23,
+        "home": 22.0,
+        "draw": 7.34
       },
       "totals": {
         "over25": 2.6,
-        "under25": 2.35
+        "under25": 2.28
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "França enfrenta o Paraguai em duelo extremamente desequilibrado válido pelo Mundial de 2026, com os europeus sendo amplamente favoritos com odds de 1.21. A seleção francesa chega com rating de elite (95.3), xG de 2.52 e um elenco repleto de estrelas liderado por Mbappé, enquanto o Paraguai tem dados limitados e dificilmente representa ameaça real.",
-        "aposta_principal": "França Vence (Money Line) — odd 1.21",
-        "justificativa": "O xG da França de 2.52 por jogo indica capacidade ofensiva consistente, enquanto o xGA de apenas 0.98 reflete solidez defensiva. A diferença técnica é abissal: odd de 1.21 para a França reflete um favoritismo quase absoluto que os dados corroboram. Paraguai sem dados relevantes reforça a assimetria do confronto.",
+        "resumo": "França enfrenta o Paraguai em duelo extremamente desequilibrado, com os europeus chegando como absolutos favoritos com rating de 95.3 e xG de 2.52 por partida. O Paraguai apresenta dados limitados e odds de 22.0, refletindo a enorme diferença técnica entre as seleções neste que deve ser um jogo de amplo domínio francês.",
+        "aposta_principal": "Vitória da França — odd 1.23",
+        "justificativa": "Com xG de 2.52 e xGA de apenas 0.98, a França demonstra superioridade ofensiva e solidez defensiva consistentes. O elenco profundo com Mbappé nas transições rápidas é praticamente irresistível para uma defesa paraguaia sem dados expressivos. Odd de 1.23 reflete corretamente a realidade do confronto.",
         "apostas_alternativas": [
-          "Over 2.5 gols — odd 2.6 (xG francês de 2.52 sozinho já sustenta mais de 2 gols, com margem para o Paraguai sofrer em transições rápidas)",
-          "França Vence e Over 1.5 gols — buscar odd combinada em torno de 1.55-1.65 (cenário mais provável dado o padrão ofensivo francês)"
+          "Over 2.5 gols — odd 2.6: xG francês de 2.52 já sustenta esse mercado sozinho, com o Paraguai tendendo a sofrer em volume",
+          "França vence e Over 2.5 (combo): potencializa o retorno mantendo a lógica dos dados ofensivos franceses"
         ],
-        "risco": "A odd baixa da França (1.21) limita o retorno e qualquer surpresa ou jogo administrado com reservas pode resultar em empate ou placar mínimo, comprometendo apostas em gols.",
+        "risco": "O risco principal é uma França rotacionada ou desmotivada gerenciar o resultado com placar mínimo, frustrando o Over 2.5.",
         "confianca": "alta"
       }
     },
@@ -69,7 +42,7 @@
       "h2h": {
         "home": 1.9,
         "away": 4.8,
-        "draw": 3.85
+        "draw": 3.81
       },
       "totals": {
         "over25": 2.85,
@@ -77,14 +50,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Brasil e Noruega se enfrentam num duelo entre a transição ofensiva de Ancelotti, centrada em Vinícius Jr, e o poderio físico norueguês liderado por Haaland. O cenário aponta para uma partida aberta e de múltiplos gols, dado que ambas as equipes possuem xG elevados e estilos de jogo verticais.",
+        "resumo": "Brasil e Noruega se enfrentam num duelo de estilos contrastantes: a transição vertical brasileira explorando Vinícius Jr contra o futebol físico e direto da Noruega centrado em Haaland. O cenário aponta para uma partida com gols, dado que ambas as equipes possuem xG elevado e vulnerabilidades defensivas reais.",
         "aposta_principal": "Over 2.5 gols @ 2.85",
-        "justificativa": "O xG combinado das duas equipes soma 7.86, um dos mais altos possíveis neste tipo de confronto. O Brasil produz 4.5 xG por jogo e a Noruega, apesar da defesa sólida (xGA 0.53), joga em ritmo brutal e com linhas avançadas que tendem a abrir espaços na transição. A odd de 2.85 oferece valor real considerando a natureza ofensiva das duas seleções.",
+        "justificativa": "O xG combinado das duas equipes soma 7.86 por jogo, sinalizando forte potencial ofensivo. O Brasil produz 4.5 xG por partida e a Noruega, apesar de defensivamente sólida (xGA 0.53), enfrenta uma transição brasileira de altíssimo nível que explora espaços — exatamente o que o estilo norueguês costuma conceder ao avançar. A odd de 2.85 oferece valor real diante dessa projeção ofensiva.",
         "apostas_alternativas": [
-          "Vitória do Brasil @ 1.90 — favorito claro pelo rating superior (90.1 vs 86.2) e vantagem tática no meio-campo",
-          "Vinícius Jr a marcar a qualquer momento @ estimado 2.10-2.30 — isolamento tático planejado pelo estilo Ancelotti contra defesa com linha alta norueguesa"
+          "Brasil Vencer @ 1.90 — rating superior (90.1 vs 86.2) e vantagem tática clara com Vinícius isolado contra a defesa norueguesa",
+          "Vinícius Jr. a marcar a qualquer momento @ estimativa ~2.20 — foco tático brasileiro em isolá-lo torna ele o principal catalisador ofensivo"
         ],
-        "risco": "Haaland é um fator de desequilíbrio capaz de decidir sozinho; qualquer ineficiência defensiva brasileira em bolas aéreas e jogadas de força pode comprometer qualquer prognóstico.",
+        "risco": "A eficiência defensiva histórica da Noruega (xGA 0.53) pode conter o ataque brasileiro melhor do que os números ofensivos sugerem, e um jogo travado com gol de Haaland em contra-ataque pode frustrar tanto o Over quanto a vitória brasileira.",
         "confianca": "media"
       }
     }

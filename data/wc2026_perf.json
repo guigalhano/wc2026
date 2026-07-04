@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T14:51:42.789143+00:00",
+  "updated_at": "2026-07-04T20:16:23.187812+00:00",
   "teams": [
     {
       "code": "MEX",
@@ -300,6 +300,91 @@
         "shot_accuracy": 48.8
       },
       "dgf_efi": 0.59
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "games": 5,
+      "goals_for": 10,
+      "goals_against": 4,
+      "xg_for": 8.269958708546563,
+      "xg_against": 4.767988452064015,
+      "wins": 3,
+      "draws": 2,
+      "losses": 0,
+      "points": 11,
+      "expected_points": 8.835201200139906,
+      "big_chances_created": 9,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BRA",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.1,
+          "xga": 1.62,
+          "result": "D",
+          "p_win": 0.231
+        },
+        {
+          "vs": "ESC",
+          "date": "2026-06-19",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 0.54,
+          "xga": 0.97,
+          "result": "W",
+          "p_win": 0.664
+        },
+        {
+          "vs": "HAI",
+          "date": "2026-06-24",
+          "gf": 4,
+          "ga": 2,
+          "xgf": 3.71,
+          "xga": 0.92,
+          "result": "W",
+          "p_win": 0.875
+        },
+        {
+          "vs": "HOL",
+          "date": "2026-06-30",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.4,
+          "xga": 0.23,
+          "result": "D",
+          "p_win": 0.296
+        },
+        {
+          "vs": "CAN",
+          "date": "2026-07-04",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 1.52,
+          "xga": 1.03,
+          "result": "W",
+          "p_win": 0.464
+        }
+      ],
+      "xpts": 8.84,
+      "delta_pts": 2.16,
+      "xgf": 1.65,
+      "xga": 0.95,
+      "efi": {
+        "games": 4,
+        "xg_official": 1.39,
+        "pass_accuracy": 89.5,
+        "avg_distance_km": 7.63,
+        "sprints": 509.0,
+        "forced_turnovers": 45.0,
+        "linebreaks_completed": 114.2,
+        "linebreaks_attempted": 175.2,
+        "top_speed": 35.5,
+        "shot_accuracy": 35.6
+      },
+      "dgf_efi": 0.61
     },
     {
       "code": "PAR",
@@ -1123,81 +1208,6 @@
         "linebreaks_attempted": 160.2,
         "top_speed": 35.0,
         "shot_accuracy": 24.5
-      },
-      "dgf_efi": 0.36
-    },
-    {
-      "code": "MAR",
-      "name": "Morocco",
-      "games": 4,
-      "goals_for": 7,
-      "goals_against": 4,
-      "xg_for": 6.75,
-      "xg_against": 3.7399999999999998,
-      "wins": 2,
-      "draws": 2,
-      "losses": 0,
-      "points": 8,
-      "expected_points": 7.1406844489110535,
-      "big_chances_created": 9,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "BRA",
-          "date": "2026-06-13",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.1,
-          "xga": 1.62,
-          "result": "D",
-          "p_win": 0.231
-        },
-        {
-          "vs": "ESC",
-          "date": "2026-06-19",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 0.54,
-          "xga": 0.97,
-          "result": "W",
-          "p_win": 0.664
-        },
-        {
-          "vs": "HAI",
-          "date": "2026-06-24",
-          "gf": 4,
-          "ga": 2,
-          "xgf": 3.71,
-          "xga": 0.92,
-          "result": "W",
-          "p_win": 0.875
-        },
-        {
-          "vs": "HOL",
-          "date": "2026-06-30",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.4,
-          "xga": 0.23,
-          "result": "D",
-          "p_win": 0.296
-        }
-      ],
-      "xpts": 7.14,
-      "delta_pts": 0.86,
-      "xgf": 1.69,
-      "xga": 0.93,
-      "efi": {
-        "games": 4,
-        "xg_official": 1.39,
-        "pass_accuracy": 89.5,
-        "avg_distance_km": 7.63,
-        "sprints": 509.0,
-        "forced_turnovers": 45.0,
-        "linebreaks_completed": 114.2,
-        "linebreaks_attempted": 175.2,
-        "top_speed": 35.5,
-        "shot_accuracy": 35.6
       },
       "dgf_efi": 0.36
     },
@@ -2492,81 +2502,6 @@
       "dgf_efi": 0.5
     },
     {
-      "code": "CAN",
-      "name": "Canada",
-      "games": 4,
-      "goals_for": 9,
-      "goals_against": 3,
-      "xg_for": 8.541773350793838,
-      "xg_against": 2.6828363811831295,
-      "wins": 2,
-      "draws": 1,
-      "losses": 1,
-      "points": 7,
-      "expected_points": 8.081219162778225,
-      "big_chances_created": 11,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "BOS",
-          "date": "2026-06-12",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.35,
-          "xga": 0.98,
-          "result": "D",
-          "p_win": 0.688
-        },
-        {
-          "vs": "CAT",
-          "date": "2026-06-18",
-          "gf": 6,
-          "ga": 0,
-          "xgf": 3.82,
-          "xga": 0.22,
-          "result": "W",
-          "p_win": 0.669
-        },
-        {
-          "vs": "SUI",
-          "date": "2026-06-24",
-          "gf": 1,
-          "ga": 2,
-          "xgf": 1.35,
-          "xga": 0.71,
-          "result": "L",
-          "p_win": 0.357
-        },
-        {
-          "vs": "AFS",
-          "date": "2026-06-28",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 2.02,
-          "xga": 0.77,
-          "result": "W",
-          "p_win": 0.648
-        }
-      ],
-      "xpts": 8.08,
-      "delta_pts": -1.08,
-      "xgf": 2.14,
-      "xga": 0.67,
-      "efi": {
-        "games": 4,
-        "xg_official": 2.08,
-        "pass_accuracy": 83.2,
-        "avg_distance_km": 7.1,
-        "sprints": 508.0,
-        "forced_turnovers": 45.0,
-        "linebreaks_completed": 112.8,
-        "linebreaks_attempted": 169.2,
-        "top_speed": 35.2,
-        "shot_accuracy": 40.8
-      },
-      "dgf_efi": 0.17
-    },
-    {
       "code": "HAI",
       "name": "Haiti",
       "games": 3,
@@ -3225,6 +3160,91 @@
         "shot_accuracy": 33.3
       },
       "dgf_efi": 0.3
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "games": 5,
+      "goals_for": 9,
+      "goals_against": 6,
+      "xg_for": 9.569761802857853,
+      "xg_against": 4.202795089729692,
+      "wins": 2,
+      "draws": 1,
+      "losses": 2,
+      "points": 7,
+      "expected_points": 9.085285803178957,
+      "big_chances_created": 11,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BOS",
+          "date": "2026-06-12",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.35,
+          "xga": 0.98,
+          "result": "D",
+          "p_win": 0.688
+        },
+        {
+          "vs": "CAT",
+          "date": "2026-06-18",
+          "gf": 6,
+          "ga": 0,
+          "xgf": 3.82,
+          "xga": 0.22,
+          "result": "W",
+          "p_win": 0.669
+        },
+        {
+          "vs": "SUI",
+          "date": "2026-06-24",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 1.35,
+          "xga": 0.71,
+          "result": "L",
+          "p_win": 0.357
+        },
+        {
+          "vs": "AFS",
+          "date": "2026-06-28",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 2.02,
+          "xga": 0.77,
+          "result": "W",
+          "p_win": 0.648
+        },
+        {
+          "vs": "MAR",
+          "date": "2026-07-04",
+          "gf": 0,
+          "ga": 3,
+          "xgf": 1.03,
+          "xga": 1.52,
+          "result": "L",
+          "p_win": 0.234
+        }
+      ],
+      "xpts": 9.09,
+      "delta_pts": -2.09,
+      "xgf": 1.91,
+      "xga": 0.84,
+      "efi": {
+        "games": 4,
+        "xg_official": 2.08,
+        "pass_accuracy": 83.2,
+        "avg_distance_km": 7.1,
+        "sprints": 508.0,
+        "forced_turnovers": 45.0,
+        "linebreaks_completed": 112.8,
+        "linebreaks_attempted": 169.2,
+        "top_speed": 35.2,
+        "shot_accuracy": 40.8
+      },
+      "dgf_efi": -0.28
     },
     {
       "code": "ALE",
@@ -8100,10 +8120,48 @@
       "nlbair": true,
       "stadium": "Kansas City Stadium (Arrowhead Stadium)",
       "city": "Kansas City"
+    },
+    {
+      "date": "2026-07-04",
+      "home": "CAN",
+      "away": "MAR",
+      "g1": 0,
+      "g2": 3,
+      "pH": 0.234,
+      "pD": 0.301,
+      "pA": 0.464,
+      "lam": 1.03,
+      "mu": 1.52,
+      "home_xg": 1.03,
+      "away_xg": 1.52,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "AWAY_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (46%). Final: 0–3.",
+        "🧱 Canada underperformed xG (0 goals vs 1.0 xG).",
+        "⚡ Morocco outscored xG (3 goals vs 1.5 xG) — clinical finishing."
+      ],
+      "nlbair": false,
+      "stadium": "",
+      "city": ""
     }
   ],
   "real_xg_games": 46,
   "nlbair_games": 64,
-  "narratives_built": 88,
+  "narratives_built": 89,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
