@@ -118,25 +118,56 @@ def fetch_weather():
     print(f"  ✓ Weather for {ok}/{len(VENUES)} venues")
     return results
 
+def fetch_url_text(url, timeout=15):
+    """Like fetch_url but returns raw text instead of parsed JSON (for RSS/XML)."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent":"WC2026Bot/1.0"})
+        r = urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX)
+        return r.read().decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"  ⚠ fetch error {url[:60]}: {e}")
+        return None
+
 def fetch_news_headlines():
-    """Fetch recent WC 2026 headlines via web search (DuckDuckGo instant API)."""
+    """Fetch recent WC 2026 headlines from Google News RSS (no API key needed).
+
+    Note: the previous implementation used the DuckDuckGo Instant Answer API,
+    which is built for encyclopedic/factual answers, not news search — it
+    almost never returns results for queries like "results scores today",
+    so `headlines` came back empty. Google News RSS actually indexes live
+    news and returns real <item> entries for these queries.
+    """
     print("📰 Fetching news headlines...")
+    import xml.etree.ElementTree as ET
+
     queries = [
-        "FIFA World Cup 2026 team news injury",
-        "Copa do Mundo 2026 escalação lesão",
-        "World Cup 2026 results scores today",
+        ("FIFA World Cup 2026", "en"),
+        ("Copa do Mundo 2026", "pt-BR"),
+        ("World Cup 2026 results", "en"),
     ]
     headlines = []
-    for q in queries:
+    seen_titles = set()
+    for q, lang in queries:
         encoded = urllib.parse.quote(q)
-        url = f"https://api.duckduckgo.com/?q={encoded}&format=json&no_html=1&skip_disambig=1"
-        data = fetch_url(url)
-        if data:
-            if data.get("Abstract"):
-                headlines.append({"title": data.get("Heading",""), "text": data.get("Abstract",""), "url": data.get("AbstractURL","")})
-            for r in data.get("RelatedTopics",[])[:3]:
-                if isinstance(r,dict) and r.get("Text"):
-                    headlines.append({"title": r.get("Text","")[:100], "text": r.get("Text",""), "url": r.get("FirstURL","")})
+        hl, gl, ceid = ("pt-BR", "BR", "BR:pt-BR") if lang == "pt-BR" else ("en-US", "US", "US:en")
+        url = f"https://news.google.com/rss/search?q={encoded}&hl={hl}&gl={gl}&ceid={ceid}"
+        raw = fetch_url_text(url)
+        if not raw:
+            continue
+        try:
+            root = ET.fromstring(raw)
+        except ET.ParseError as e:
+            print(f"  ⚠ RSS parse error for '{q}': {e}")
+            continue
+        for item in root.findall(".//item")[:6]:
+            title = (item.findtext("title") or "").strip()
+            link = (item.findtext("link") or "").strip()
+            pub_date = (item.findtext("pubDate") or "").strip()
+            source_el = item.find("source")
+            source = source_el.text.strip() if source_el is not None and source_el.text else ""
+            if title and title not in seen_titles:
+                seen_titles.add(title)
+                headlines.append({"title": title, "source": source, "url": link, "published": pub_date})
     print(f"  ✓ {len(headlines)} headlines")
     return headlines[:12]
 
