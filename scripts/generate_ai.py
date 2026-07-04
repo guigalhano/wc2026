@@ -183,35 +183,6 @@ Responda SOMENTE com JSON válido:
         pass
     return {"summary": raw[:300] if raw else "N/D", "bets":[], "tip_of_day":None}
 
-def generate_tactical_notes(updated_teams):
-    """Generate updated tactical notes for teams playing today."""
-    if not updated_teams:
-        return {}
-    notes = {}
-    for team in updated_teams[:6]:  # limit API calls
-        _, scout = get_scout(team)
-        prompt = f"""Analista tático da Copa do Mundo 2026. Gere uma nota tática atualizada em JSON para {team}.
-
-Scout base: {json.dumps(scout, ensure_ascii=False)}
-
-Responda SOMENTE com JSON:
-{{
-  "forma_atual": "avaliação em 1 frase",
-  "pontos_fortes": ["ponto 1","ponto 2","ponto 3"],
-  "pontos_fracos": ["fraqueza 1","fraqueza 2"],
-  "aposta_perfil": "tipo de apostas que favorecem este time (ex: over goals, clean sheet, etc)"
-}}"""
-        raw = call_claude(prompt, max_tokens=300)
-        try:
-            import re
-            m = re.search(r'\{.*\}', raw, re.DOTALL)
-            if m:
-                notes[team] = json.loads(m.group(0))
-        except:
-            notes[team] = {"forma_atual": raw[:150] if raw else "N/D"}
-        time.sleep(0.5)  # rate limit
-    return notes
-
 def main():
     now = datetime.now(timezone.utc)
     print(f"\n🤖 WC 2026 AI Generator — {now.isoformat()}\n")
@@ -247,7 +218,6 @@ def main():
 
     # 2. Match previews
     print(f"📋 Generating previews for {len(all_games[:6])} matches...")
-    teams_today = set()
     for g in all_games[:6]:  # limit to 6 to control costs
         print(f"  → {g['home_team']} vs {g['away_team']}")
         preview = generate_match_preview(g, weather_city=None, weather=weather)
@@ -261,13 +231,7 @@ def main():
             "btts_yes": g.get("btts_yes"),
             "preview": preview
         })
-        teams_today.add(g["home_team"])
-        teams_today.add(g["away_team"])
         time.sleep(0.5)
-
-    # 3. Tactical notes for today's teams
-    print(f"🎯 Generating tactical notes for {len(teams_today)} teams...")
-    ai_output["tactical_notes"] = generate_tactical_notes(list(teams_today))
 
     # Save
     with open("data/ai_content.json","w") as f:
@@ -275,7 +239,6 @@ def main():
 
     print(f"\n✅ Saved data/ai_content.json")
     print(f"   {len(ai_output['match_previews'])} previews")
-    print(f"   {len(ai_output['tactical_notes'])} tactical notes")
 
 if __name__ == "__main__":
     main()
