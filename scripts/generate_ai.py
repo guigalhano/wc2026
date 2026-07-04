@@ -6,11 +6,11 @@ Uses Claude to generate:
   - Updated tactical notes
 Saves to data/ai_content.json
 """
-import json, os, urllib.request, ssl, time
+import json, os, urllib.request, urllib.error, ssl, time
 from datetime import datetime, timezone, timedelta
 
 CLAUDE_API_KEY = os.environ.get("CLAUDE_API_KEY","")
-CLAUDE_MODEL   = "claude-sonnet-4-20250514"
+CLAUDE_MODEL   = "claude-sonnet-4-6"  # fixed: old snapshot claude-sonnet-4-20250514 was returning HTTP 404
 SSL_CTX = ssl.create_default_context()
 
 # Scout data (static baseline — updated manually each match day)
@@ -58,6 +58,14 @@ def call_claude(prompt, max_tokens=800):
         r = urllib.request.urlopen(req, timeout=30, context=SSL_CTX)
         data = json.loads(r.read().decode())
         return data.get("content",[])[0].get("text","") if data.get("content") else ""
+    except urllib.error.HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode()[:300]
+        except Exception:
+            pass
+        print(f"  ⚠ Claude HTTP error: {e.code} {e.reason} — {body}")
+        return f"Erro na geração: HTTP {e.code} — {body}"
     except Exception as e:
         print(f"  ⚠ Claude error: {e}")
         return f"Erro na geração: {e}"
