@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T08:13:15.570102+00:00",
+  "updated_at": "2026-07-04T14:51:42.789143+00:00",
   "teams": [
     {
       "code": "MEX",
@@ -389,7 +389,7 @@
       "losses": 0,
       "points": 10,
       "expected_points": 8.12324655180582,
-      "big_chances_created": 6,
+      "big_chances_created": 11,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -8071,18 +8071,18 @@
       "home_xg": 2.19,
       "away_xg": 0.26,
       "real_xg": true,
-      "home_shots": 20.0,
-      "away_shots": 8.0,
-      "home_sot": 8.0,
-      "away_sot": 0.0,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 20,
+      "away_shots": 8,
+      "home_sot": 12,
+      "away_sot": 5,
+      "home_poss": 58.4,
+      "away_poss": 41.6,
+      "home_big_chances": 5,
+      "away_big_chances": 0,
       "home_goals": [
         {
-          "min": "14",
-          "player": "Jhon Adolfo Arias",
+          "min": "13",
+          "player": "Jhon Arias",
           "type": "regular"
         }
       ],
@@ -8094,15 +8094,16 @@
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (69%). Final: 1–0.",
-        "🧱 Colombia underperformed xG (1 goals vs 2.2 xG)."
+        "🧱 Colombia underperformed xG (1 goals vs 2.2 xG).",
+        "💥 Colombia created 5 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Kansas City Stadium (Arrowhead Stadium)",
       "city": "Kansas City"
     }
   ],
   "real_xg_games": 46,
-  "nlbair_games": 63,
+  "nlbair_games": 64,
   "narratives_built": 88,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
