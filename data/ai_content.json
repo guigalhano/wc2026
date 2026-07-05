@@ -1,63 +1,90 @@
 {
-  "generated_at": "2026-07-04T20:16:24.425146+00:00",
-  "generated_at_brt": "04/07/2026 17:16 BRT",
+  "generated_at": "2026-07-05T08:33:40.260953+00:00",
+  "generated_at_brt": "05/07/2026 05:33 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia de dois confrontos contrastantes na Copa 2026, com França favorita absoluta contra o Paraguai e Brasil em duelo equilibrado contra a Noruega surpreendente. O calor extremo nas sedes americanas e mexicanas é fator crítico que favorece seleções com maior profundidade de ele",
+    "summary": "```json\n{\n  \"summary\": \"Dia de apostas com três confrontos de alto nível na Copa 2026, destacando duelos europeus com odds atrativas. A maior oportunidade de value está nos azarões com odds elevadas em jogos equilibrados.\",\n  \"tip_of_day\": {\n    \"jogo\": \"Mexico vs England\",\n    \"aposta\": \"Vitória do",
     "bets": [],
     "tip_of_day": null
   },
   "match_previews": [
-    {
-      "game_id": "c798a1ffdeda28e82d930e7145a8ff10",
-      "home": "Paraguay",
-      "away": "France",
-      "time": "2026-07-04T21:00:00Z",
-      "h2h": {
-        "away": 1.23,
-        "home": 22.0,
-        "draw": 7.34
-      },
-      "totals": {
-        "over25": 2.6,
-        "under25": 2.28
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "França enfrenta o Paraguai em duelo extremamente desequilibrado, com os europeus chegando como absolutos favoritos com rating de 95.3 e xG de 2.52 por partida. O Paraguai apresenta dados limitados e odds de 22.0, refletindo a enorme diferença técnica entre as seleções neste que deve ser um jogo de amplo domínio francês.",
-        "aposta_principal": "Vitória da França — odd 1.23",
-        "justificativa": "Com xG de 2.52 e xGA de apenas 0.98, a França demonstra superioridade ofensiva e solidez defensiva consistentes. O elenco profundo com Mbappé nas transições rápidas é praticamente irresistível para uma defesa paraguaia sem dados expressivos. Odd de 1.23 reflete corretamente a realidade do confronto.",
-        "apostas_alternativas": [
-          "Over 2.5 gols — odd 2.6: xG francês de 2.52 já sustenta esse mercado sozinho, com o Paraguai tendendo a sofrer em volume",
-          "França vence e Over 2.5 (combo): potencializa o retorno mantendo a lógica dos dados ofensivos franceses"
-        ],
-        "risco": "O risco principal é uma França rotacionada ou desmotivada gerenciar o resultado com placar mínimo, frustrando o Over 2.5.",
-        "confianca": "alta"
-      }
-    },
     {
       "game_id": "a4634eae056c18d705e3feffb347163f",
       "home": "Brazil",
       "away": "Norway",
       "time": "2026-07-05T20:00:00Z",
       "h2h": {
-        "home": 1.9,
-        "away": 4.8,
-        "draw": 3.81
+        "home": 1.86,
+        "away": 5.0,
+        "draw": 3.83
       },
       "totals": {
-        "over25": 2.85,
-        "under25": 2.2
+        "over25": 2.75,
+        "under25": 2.23
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Brasil e Noruega se enfrentam num duelo de estilos contrastantes: a transição vertical brasileira explorando Vinícius Jr contra o futebol físico e direto da Noruega centrado em Haaland. O cenário aponta para uma partida com gols, dado que ambas as equipes possuem xG elevado e vulnerabilidades defensivas reais.",
-        "aposta_principal": "Over 2.5 gols @ 2.85",
-        "justificativa": "O xG combinado das duas equipes soma 7.86 por jogo, sinalizando forte potencial ofensivo. O Brasil produz 4.5 xG por partida e a Noruega, apesar de defensivamente sólida (xGA 0.53), enfrenta uma transição brasileira de altíssimo nível que explora espaços — exatamente o que o estilo norueguês costuma conceder ao avançar. A odd de 2.85 oferece valor real diante dessa projeção ofensiva.",
+        "resumo": "Brasil e Noruega prometem um confronto de alto nível com dois sistemas ofensivos bem definidos: o Brasil explorando transições rápidas com Vinícius Jr e a Noruega dependendo do poder físico e finalizador de Haaland. O cenário aponta para uma partida aberta com gols dos dois lados, dado o xG elevado do Brasil (4.5) frente a uma defesa norueguesa que, apesar do baixo xGA (0.53), enfrenta aqui uma qualidade ofensiva superior.",
+        "aposta_principal": "Over 2.5 gols @ 2.75",
+        "justificativa": "O Brasil apresenta o maior xG do confronto (4.5), sinalizando capacidade ofensiva consistente para pressionar qualquer linha defensiva. A Noruega, por sua vez, possui estilo direto e ritmo brutal que tende a gerar oportunidades mútuas. A combinação de dois ataques de alto potencial em um jogo de alta pressão favorece clara produção de gols acima de 2.5.",
         "apostas_alternativas": [
-          "Brasil Vencer @ 1.90 — rating superior (90.1 vs 86.2) e vantagem tática clara com Vinícius isolado contra a defesa norueguesa",
-          "Vinícius Jr. a marcar a qualquer momento @ estimativa ~2.20 — foco tático brasileiro em isolá-lo torna ele o principal catalisador ofensivo"
+          "Vitória do Brasil @ 1.86 — favorito racional com rating 90.1 vs 86.2 e vantagem técnica clara",
+          "Ambos marcam (BTTS Sim) @ mercado estimado ~2.10 — Haaland é ameaça real mesmo contra defesas sólidas"
         ],
-        "risco": "A eficiência defensiva histórica da Noruega (xGA 0.53) pode conter o ataque brasileiro melhor do que os números ofensivos sugerem, e um jogo travado com gol de Haaland em contra-ataque pode frustrar tanto o Over quanto a vitória brasileira.",
+        "risco": "O baixíssimo xGA da Noruega (0.53) sugere organização defensiva de elite, o que pode frustrar o ataque brasileiro e manter o placar abaixo de 2.5 caso Haaland seja neutralizado.",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "e61a7b471cadc8e3849158ed59d49cab",
+      "home": "Mexico",
+      "away": "England",
+      "time": "2026-07-06T00:00:00Z",
+      "h2h": {
+        "away": 2.52,
+        "home": 3.3,
+        "draw": 3.3
+      },
+      "totals": {
+        "over25": 2.52,
+        "under25": 2.8
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Inglaterra chega como grande favorita com xG de 2.59 e xGA impressionante de apenas 0.26, indicando domínio ofensivo e solidez defensiva sob Tuchel. O México, sem rating definido e com xG modesto de 1.16, depende do fator casa e do pragmatismo de Aguirre para surpreender.",
+        "aposta_principal": "England Vence @ 2.52",
+        "justificativa": "Os dados apontam clara superioridade inglesa: xG 2.59 vs 1.16 do México e xGA de apenas 0.26 revelam uma equipe que cria muito e sofre pouquíssimo. Com jogadores como Rice, Kane e Bellingham, a Inglaterra tem qualidade individual e coletiva para vencer mesmo em ambiente hostil. A odd de 2.52 oferece valor real frente à disparidade técnica.",
+        "apostas_alternativas": [
+          "Over 2.5 Gols @ 2.52 — xG combinado de 3.75 sustenta expectativa de jogo aberto com múltiplos gols",
+          "Inglaterra Vence e Over 1.5 Gols @ ~2.80 (se disponível) — cenário mais provável dado o poder ofensivo inglês"
+        ],
+        "risco": "O fator altitude do Estádio Azteca e o ambiente mexicano podem reduzir o ritmo inglês, favorecendo um resultado mais fechado do que os dados sugerem.",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "16ed3adcf661b3a9bea39871a2d204df",
+      "home": "Portugal",
+      "away": "Spain",
+      "time": "2026-07-06T19:00:00Z",
+      "h2h": {
+        "home": 4.3,
+        "away": 1.96,
+        "draw": 3.83
+      },
+      "totals": {
+        "over25": 2.0,
+        "under25": 3.05
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Espanha chega como favorita clara com rating máximo (100) e o melhor xGA do confronto (0.88), sustentada pelo controle de posse e pressing alto de Lamine Yamal. Portugal oferece perigo real no ataque (xG 2.75) com frenesi de cruzamentos e meio-campo criativo, mas defensivamente é mais vulnerável, tornando um jogo intenso e com gols prováveis.",
+        "aposta_principal": "Over 2.5 gols @ 2.0",
+        "justificativa": "A soma dos xGs das duas equipes aponta para 5.7 gols esperados no agregado, refletindo dois ataques de alto nível. O estilo de Portugal (cruzamentos frequentes) tende a gerar volume de finalizações, enquanto o pressing alto da Espanha cria transições rápidas e espaços — ambiente ideal para partidas com 3+ gols. A odd de 2.0 oferece valor considerando os dados ofensivos.",
+        "apostas_alternativas": [
+          "Espanha vence @ 1.96 — favorita consistente com melhor rating e xGA, valor razoável para handicap asiático -0.5",
+          "Ambas marcam (BTTS Sim) — Portugal tem xG 2.75 e Espanha concede (xGA 0.88 não é zero), ambas têm poder ofensivo real"
+        ],
+        "risco": "Portugal pode adotar bloco defensivo compacto e explorar contra-ataques, reduzindo o volume de jogo e tornando o Over 2.5 mais difícil de converter em um jogo de mata-mata.",
         "confianca": "media"
       }
     }

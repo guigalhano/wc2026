@@ -1,6 +1,91 @@
 {
-  "updated_at": "2026-07-04T20:16:23.187812+00:00",
+  "updated_at": "2026-07-05T08:33:39.126930+00:00",
   "teams": [
+    {
+      "code": "FRA",
+      "name": "France",
+      "games": 5,
+      "goals_for": 14,
+      "goals_against": 2,
+      "xg_for": 11.288233707373752,
+      "xg_against": 3.9082186041803952,
+      "wins": 5,
+      "draws": 0,
+      "losses": 0,
+      "points": 15,
+      "expected_points": 12.028625262604915,
+      "big_chances_created": 10,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "SEN",
+          "date": "2026-06-16",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.44,
+          "xga": 1.05,
+          "result": "W",
+          "p_win": 0.599
+        },
+        {
+          "vs": "IRQ",
+          "date": "2026-06-22",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 2.21,
+          "xga": 0.45,
+          "result": "W",
+          "p_win": 0.929
+        },
+        {
+          "vs": "NOR",
+          "date": "2026-06-26",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 0.96,
+          "xga": 1.3,
+          "result": "W",
+          "p_win": 0.538
+        },
+        {
+          "vs": "SUE",
+          "date": "2026-06-30",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 2.61,
+          "xga": 0.6,
+          "result": "W",
+          "p_win": 0.792
+        },
+        {
+          "vs": "PAR",
+          "date": "2026-07-04",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 3.07,
+          "xga": 0.51,
+          "result": "W",
+          "p_win": 0.865
+        }
+      ],
+      "xpts": 12.03,
+      "delta_pts": 2.97,
+      "xgf": 2.26,
+      "xga": 0.78,
+      "efi": {
+        "games": 5,
+        "xg_official": 1.96,
+        "pass_accuracy": 90.0,
+        "avg_distance_km": 7.43,
+        "sprints": 402.8,
+        "forced_turnovers": 42.2,
+        "linebreaks_completed": 132.0,
+        "linebreaks_attempted": 174.6,
+        "top_speed": 37.6,
+        "shot_accuracy": 44.3
+      },
+      "dgf_efi": 0.84
+    },
     {
       "code": "MEX",
       "name": "Mexico",
@@ -75,81 +160,6 @@
         "shot_accuracy": 32.0
       },
       "dgf_efi": 0.48
-    },
-    {
-      "code": "FRA",
-      "name": "France",
-      "games": 4,
-      "goals_for": 13,
-      "goals_against": 2,
-      "xg_for": 8.215178700424413,
-      "xg_against": 3.399766918002765,
-      "wins": 4,
-      "draws": 0,
-      "losses": 0,
-      "points": 12,
-      "expected_points": 9.326111676507995,
-      "big_chances_created": 10,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "SEN",
-          "date": "2026-06-16",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.44,
-          "xga": 1.05,
-          "result": "W",
-          "p_win": 0.599
-        },
-        {
-          "vs": "IRQ",
-          "date": "2026-06-22",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 2.21,
-          "xga": 0.45,
-          "result": "W",
-          "p_win": 0.929
-        },
-        {
-          "vs": "NOR",
-          "date": "2026-06-26",
-          "gf": 4,
-          "ga": 1,
-          "xgf": 0.96,
-          "xga": 1.3,
-          "result": "W",
-          "p_win": 0.538
-        },
-        {
-          "vs": "SUE",
-          "date": "2026-06-30",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 2.61,
-          "xga": 0.6,
-          "result": "W",
-          "p_win": 0.792
-        }
-      ],
-      "xpts": 9.33,
-      "delta_pts": 2.67,
-      "xgf": 2.05,
-      "xga": 0.85,
-      "efi": {
-        "games": 4,
-        "xg_official": 1.97,
-        "pass_accuracy": 90.1,
-        "avg_distance_km": 7.29,
-        "sprints": 423.8,
-        "forced_turnovers": 43.5,
-        "linebreaks_completed": 136.5,
-        "linebreaks_attempted": 183.0,
-        "top_speed": 37.6,
-        "shot_accuracy": 46.6
-      },
-      "dgf_efi": 1.28
     },
     {
       "code": "SUI",
@@ -373,93 +383,18 @@
       "xgf": 1.65,
       "xga": 0.95,
       "efi": {
-        "games": 4,
-        "xg_official": 1.39,
-        "pass_accuracy": 89.5,
-        "avg_distance_km": 7.63,
-        "sprints": 509.0,
-        "forced_turnovers": 45.0,
-        "linebreaks_completed": 114.2,
-        "linebreaks_attempted": 175.2,
+        "games": 5,
+        "xg_official": 1.28,
+        "pass_accuracy": 88.6,
+        "avg_distance_km": 7.46,
+        "sprints": 497.6,
+        "forced_turnovers": 45.2,
+        "linebreaks_completed": 108.4,
+        "linebreaks_attempted": 169.0,
         "top_speed": 35.5,
-        "shot_accuracy": 35.6
+        "shot_accuracy": 39.1
       },
-      "dgf_efi": 0.61
-    },
-    {
-      "code": "PAR",
-      "name": "Paraguay",
-      "games": 4,
-      "goals_for": 3,
-      "goals_against": 5,
-      "xg_for": 2.6964148843331253,
-      "xg_against": 9.490998795766858,
-      "wins": 1,
-      "draws": 2,
-      "losses": 1,
-      "points": 5,
-      "expected_points": 3.0512073219472655,
-      "big_chances_created": 1,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "EUA",
-          "date": "2026-06-13",
-          "gf": 1,
-          "ga": 4,
-          "xgf": 1.0,
-          "xga": 2.69,
-          "result": "L",
-          "p_win": 0.078
-        },
-        {
-          "vs": "TUR",
-          "date": "2026-06-20",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 0.48,
-          "xga": 3.77,
-          "result": "W",
-          "p_win": 0.288
-        },
-        {
-          "vs": "AUS",
-          "date": "2026-06-26",
-          "gf": 0,
-          "ga": 0,
-          "xgf": 0.5,
-          "xga": 0.85,
-          "result": "D",
-          "p_win": 0.219
-        },
-        {
-          "vs": "ALE",
-          "date": "2026-06-29",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 0.72,
-          "xga": 2.18,
-          "result": "D",
-          "p_win": 0.093
-        }
-      ],
-      "xpts": 3.05,
-      "delta_pts": 1.95,
-      "xgf": 0.67,
-      "xga": 2.37,
-      "efi": {
-        "games": 4,
-        "xg_official": 0.47,
-        "pass_accuracy": 71.6,
-        "avg_distance_km": 7.51,
-        "sprints": 454.5,
-        "forced_turnovers": 52.2,
-        "linebreaks_completed": 59.8,
-        "linebreaks_attempted": 140.5,
-        "top_speed": 33.9,
-        "shot_accuracy": 26.7
-      },
-      "dgf_efi": 0.28
+      "dgf_efi": 0.72
     },
     {
       "code": "COL",
@@ -535,6 +470,91 @@
         "shot_accuracy": 35.4
       },
       "dgf_efi": -0.34
+    },
+    {
+      "code": "PAR",
+      "name": "Paraguay",
+      "games": 5,
+      "goals_for": 3,
+      "goals_against": 6,
+      "xg_for": 3.204866570510755,
+      "xg_against": 12.564053802716197,
+      "wins": 1,
+      "draws": 2,
+      "losses": 2,
+      "points": 5,
+      "expected_points": 3.241327612649892,
+      "big_chances_created": 1,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "EUA",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 4,
+          "xgf": 1.0,
+          "xga": 2.69,
+          "result": "L",
+          "p_win": 0.078
+        },
+        {
+          "vs": "TUR",
+          "date": "2026-06-20",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 0.48,
+          "xga": 3.77,
+          "result": "W",
+          "p_win": 0.288
+        },
+        {
+          "vs": "AUS",
+          "date": "2026-06-26",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 0.5,
+          "xga": 0.85,
+          "result": "D",
+          "p_win": 0.219
+        },
+        {
+          "vs": "ALE",
+          "date": "2026-06-29",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 0.72,
+          "xga": 2.18,
+          "result": "D",
+          "p_win": 0.093
+        },
+        {
+          "vs": "FRA",
+          "date": "2026-07-04",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 0.51,
+          "xga": 3.07,
+          "result": "L",
+          "p_win": 0.028
+        }
+      ],
+      "xpts": 3.24,
+      "delta_pts": 1.76,
+      "xgf": 0.64,
+      "xga": 2.51,
+      "efi": {
+        "games": 5,
+        "xg_official": 0.4,
+        "pass_accuracy": 70.2,
+        "avg_distance_km": 7.34,
+        "sprints": 428.2,
+        "forced_turnovers": 49.8,
+        "linebreaks_completed": 54.4,
+        "linebreaks_attempted": 132.6,
+        "top_speed": 34.7,
+        "shot_accuracy": 22.9
+      },
+      "dgf_efi": 0.2
     },
     {
       "code": "ARG",
@@ -3233,18 +3253,18 @@
       "xgf": 1.91,
       "xga": 0.84,
       "efi": {
-        "games": 4,
-        "xg_official": 2.08,
-        "pass_accuracy": 83.2,
-        "avg_distance_km": 7.1,
-        "sprints": 508.0,
-        "forced_turnovers": 45.0,
-        "linebreaks_completed": 112.8,
-        "linebreaks_attempted": 169.2,
+        "games": 5,
+        "xg_official": 1.8,
+        "pass_accuracy": 82.1,
+        "avg_distance_km": 7.13,
+        "sprints": 512.0,
+        "forced_turnovers": 45.6,
+        "linebreaks_completed": 109.2,
+        "linebreaks_attempted": 168.8,
         "top_speed": 35.2,
-        "shot_accuracy": 40.8
+        "shot_accuracy": 39.5
       },
-      "dgf_efi": -0.28
+      "dgf_efi": 0.0
     },
     {
       "code": "ALE",
@@ -8158,10 +8178,47 @@
       "nlbair": false,
       "stadium": "",
       "city": ""
+    },
+    {
+      "date": "2026-07-04",
+      "home": "PAR",
+      "away": "FRA",
+      "g1": 0,
+      "g2": 1,
+      "pH": 0.028,
+      "pD": 0.107,
+      "pA": 0.865,
+      "lam": 0.51,
+      "mu": 3.07,
+      "home_xg": 0.51,
+      "away_xg": 3.07,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "AWAY_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (87%). Final: 0–1.",
+        "🧱 France underperformed xG (1 goals vs 3.1 xG)."
+      ],
+      "nlbair": false,
+      "stadium": "",
+      "city": ""
     }
   ],
   "real_xg_games": 46,
   "nlbair_games": 64,
-  "narratives_built": 89,
+  "narratives_built": 90,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
