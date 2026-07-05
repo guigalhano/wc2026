@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-05T15:02:08.631160+00:00",
-  "generated_at_brt": "05/07/2026 12:02 BRT",
+  "generated_at": "2026-07-05T20:21:12.687911+00:00",
+  "generated_at_brt": "05/07/2026 17:21 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Rodada com três confrontos de alto nível na Copa 2026, com destaque para odds infladas em favoritos tradicionais que abrem janelas de value real. O calor extremo em Miami (38,3°C) é fator crítico que penaliza equipes de maior intensidade física, favorecendo seleções com melho",
+    "summary": "```json\n{\n  \"summary\": \"Rodada intensa da Copa 2026 com três confrontos de alto nível, incluindo duelos europeus e a estreia do Brasil. O calor extremo em Dallas e Houston (acima de 40°C) é fator crítico e favorece ritmo lento, jogos truncados e menos gols — elemento decisivo na análise de value.\",\n",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "Norway",
       "time": "2026-07-05T20:00:00Z",
       "h2h": {
-        "home": 1.85,
-        "away": 5.1,
-        "draw": 3.85
+        "home": 1.83,
+        "away": 5.3,
+        "draw": 3.95
       },
       "totals": {
-        "over25": 2.7,
-        "under25": 2.28
+        "over25": 2.04,
+        "under25": 1.95
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Brasil e Noruega se enfrentam num duelo de estilos contrastantes: a transição veloz com Vinícius Jr contra o jogo físico e direto centrado em Haaland. O confronto entre os xG elevados de ambos os lados (4.5 vs 3.36) aponta para uma partida de muitos golos e intensidade ofensiva.",
-        "aposta_principal": "Over 2.5 gols @ 2.7",
-        "justificativa": "O Brasil acumula xG de 4.5 por jogo, enquanto a Noruega gera 3.36, somando quase 8 gols esperados combinados — um dos valores mais altos possíveis. A defesa brasileira concede xGA de 1.9, o que significa que a Noruega tem capacidade real de balançar as redes. A odd de 2.7 no Over 2.5 representa valor claro dado o perfil ofensivo das duas seleções.",
+        "resumo": "Brasil e Noruega se enfrentam em duelo de estilos contrastantes: a transição rápida de Ancelotti isolando Vinícius Jr contra a dependência norueguesa de Haaland no ataque. Com xG combinado de 7.86 e ambas as defesas tendo vulnerabilidades documentadas, o jogo tem perfil ofensivo claro.",
+        "aposta_principal": "Over 2.5 gols @ 2.04",
+        "justificativa": "O Brasil projeta 4.5 xG ofensivo, enquanto a Noruega, apesar do baixo xGA (0.53), enfrenta uma das transições mais afiadas do torneio. A Noruega também gera 3.36 xG, explorando espaços que o sistema ofensivo brasileiro naturalmente cede. Histórico de jogos com muitos gols em ambas as equipes sustenta a aposta.",
         "apostas_alternativas": [
-          "Vitória do Brasil @ 1.85 — favorito consistente com rating superior (90.1 vs 86.2) e maior capacidade de criação ofensiva",
-          "Ambas as equipas marcam (BTTS - Sim) @ estimar ~2.1 — xGA do Brasil (1.9) indica vulnerabilidade defensiva suficiente para Haaland pontuar"
+          "Brasil vence (1X2) @ 1.83 — favorito sólido com superioridade de rating e xG",
+          "Vinícius Jr marca a qualquer momento @ ~2.50 — isolamento tático dele é ponto central do plano de jogo brasileiro"
         ],
-        "risco": "A Noruega possui o melhor xGA do confronto (0.53), sugerindo uma defesa extremamente sólida que pode frustrar o ataque brasileiro e manter o jogo abaixo de 2.5 gols.",
+        "risco": "O baixíssimo xGA da Noruega (0.53) sugere um bloco defensivo extremamente organizado que pode anular as transições brasileiras e manter o jogo abaixo de 2.5 gols.",
         "confianca": "media"
       }
     },
@@ -40,24 +40,24 @@
       "away": "England",
       "time": "2026-07-06T00:00:00Z",
       "h2h": {
-        "away": 2.56,
-        "home": 3.3,
-        "draw": 3.35
+        "away": 2.64,
+        "home": 3.2,
+        "draw": 3.25
       },
       "totals": {
-        "over25": 2.48,
-        "under25": 2.9
+        "over25": 2.54,
+        "under25": 2.7
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra enfrenta o México com ampla superioridade técnica e estatística, apoiada por um xG de 2.59 e uma defesa que concede apenas 0.26 xGA. O México depende de organização defensiva e da altitude do Azteca, mas este confronto provavelmente ocorre em campo neutro na Copa do Mundo 2026, anulando essa vantagem.",
-        "aposta_principal": "Vitória da Inglaterra @ 2.56",
-        "justificativa": "O rating 91.9 da Inglaterra combinado com xG de 2.59 e xGA de apenas 0.26 aponta para um time muito eficiente em ambos os lados do campo. O México apresenta dados incompletos e xG modesto de 1.16, sugerindo dificuldade em criar chances de qualidade. A odd de 2.56 oferece valor razoável dado o claro favoritismo inglês.",
+        "resumo": "Inglaterra chega como clara favorita diante do México, apoiada em dados ofensivos e defensivos superiores sob o comando de Tuchel. O México tentará se apoiar no fator casa e no pragmatismo de Aguirre para segurar o resultado, mas o abismo técnico é significativo.",
+        "aposta_principal": "Vitória da Inglaterra @ 2.64",
+        "justificativa": "A Inglaterra apresenta xG de 2.59 contra apenas 0.26 de xGA, indicando dominância ofensiva e solidez defensiva excepcional. O rating de 91.9 reforça a superioridade técnica do elenco com Rice, Kane e Bellingham, enquanto o México sequer possui rating registrado e ostenta xG de apenas 1.16. A odd de 2.64 oferece valor razoável frente à diferença de nível entre as equipes.",
         "apostas_alternativas": [
-          "Over 2.5 gols @ 2.48 — o potencial ofensivo inglês (xG 2.59) sustenta apostas em jogos com mais de 2 gols",
-          "Inglaterra vence e Over 1.5 gols @ ~2.80 (mercado combinado) — cenário mais provável dado o domínio esperado"
+          "Over 1.5 gols da Inglaterra @ odd estimada ~1.70 — alta capacidade ofensiva torna provável ao menos 2 gols ingleses",
+          "Ambas marcam: Não @ odd estimada ~1.80 — defesa inglesa com xGA de 0.26 sugere dificuldade do México em balançar a rede"
         ],
-        "risco": "O México historicamente performa bem em grandes torneios com estrutura defensiva compacta, e uma estratégia de contenção com contra-ataques pode frustrar a Inglaterra e manter o placar baixo.",
+        "risco": "O fator Estádio Azteca e o pragmatismo defensivo de Aguirre podem neutralizar o ataque inglês e forçar um resultado equilibrado, especialmente se o México explorar contra-ataques com Raúl Jiménez.",
         "confianca": "media"
       }
     },
@@ -69,22 +69,22 @@
       "h2h": {
         "home": 4.3,
         "away": 1.99,
-        "draw": 3.82
+        "draw": 3.83
       },
       "totals": {
-        "over25": 2.01,
+        "over25": 1.96,
         "under25": 3.15
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha chega como favorita clara com rating 100 e os melhores números defensivos e ofensivos do confronto, apoiada por xG de 2.95 e xGA de apenas 0.88. Portugal tentará explorar cruzamentos com Vitinha-Neves-Fernandes, mas enfrenta um adversário que sufoca rivais com posse dominante e pressing alto de Lamine Yamal.",
-        "aposta_principal": "Over 2.5 Gols @ 2.01",
-        "justificativa": "Ambas as seleções apresentam xG elevado (2.75 Portugal e 2.95 Espanha), indicando tendência ofensiva pronunciada. Historicamente clássicos ibéricos em fases eliminatórias produzem tensão tática, mas as métricas apontam para um jogo aberto com alta probabilidade de múltiplos gols. A odd de 2.01 oferece valor razoável dado o perfil ofensivo das duas equipes.",
+        "resumo": "Espanha chega como favorita clara contra Portugal nas semifinais, com rating máximo de 100 e os melhores números defensivos da competição (xGA 0.88). O confronto promete ser disputado, mas o domínio espanhol de posse e pressing alto deve controlar o ritmo e limitar o 'frenesi de cruzamentos' português.",
+        "aposta_principal": "Vitória da Espanha @ 1.99",
+        "justificativa": "A Espanha apresenta superioridade estatística em todas as métricas: rating 100 vs 89.9, xG superior (2.95 vs 2.75) e defesa mais sólida (xGA 0.88 vs 1.07). O estilo de posse dominante com pressing alto de Lamine Yamal tende a neutralizar transições rápidas adversárias, e a odd de 1.99 oferece valor razoável dado o nível de dominância espanhola no torneio.",
         "apostas_alternativas": [
-          "Vitória da Espanha @ 1.99 — favorita justificada pelo rating máximo e melhor defesa do confronto",
-          "Ambos marcam (BTTS Sim) @ estimado ~2.10 — xGA de 1.07 de Portugal indica vulnerabilidade, enquanto Espanha também sofre pressão"
+          "Over 2.5 gols @ 1.96 — ambas as equipes possuem xG elevado (soma 5.70), indicando partida com múltiplos gols",
+          "Espanha Vence/Over 1.5 gols @ ~2.30 estimado — combina o favorito com expectativa ofensiva mútua"
         ],
-        "risco": "O estilo de frenesi de cruzamentos de Portugal pode criar situações de bola parada perigosas, e uma saída surpresa lusitana em jogo único de mata-mata pode frustrar favoritos.",
+        "risco": "Portugal tem capacidade ofensiva real (xG 2.75, trio Vitinha-Neves-Fernandes) e a experiência em grandes jogos pode transformar o confronto em uma decisão de detalhes ou pênaltis.",
         "confianca": "media"
       }
     }

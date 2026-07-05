@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T15:02:07.616181+00:00",
+  "updated_at": "2026-07-05T20:21:11.794438+00:00",
   "teams": [
     {
       "code": "FRA",
@@ -7,8 +7,8 @@
       "games": 5,
       "goals_for": 14,
       "goals_against": 2,
-      "xg_for": 11.288233707373752,
-      "xg_against": 3.9082186041803952,
+      "xg_for": 10.015178700424414,
+      "xg_against": 3.699766918002765,
       "wins": 5,
       "draws": 0,
       "losses": 0,
@@ -62,16 +62,16 @@
           "date": "2026-07-04",
           "gf": 1,
           "ga": 0,
-          "xgf": 3.07,
-          "xga": 0.51,
+          "xgf": 1.8,
+          "xga": 0.3,
           "result": "W",
           "p_win": 0.865
         }
       ],
       "xpts": 12.03,
       "delta_pts": 2.97,
-      "xgf": 2.26,
-      "xga": 0.78,
+      "xgf": 2.0,
+      "xga": 0.74,
       "efi": {
         "games": 5,
         "xg_official": 1.96,
@@ -317,8 +317,8 @@
       "games": 5,
       "goals_for": 10,
       "goals_against": 4,
-      "xg_for": 8.269958708546563,
-      "xg_against": 4.767988452064015,
+      "xg_for": 7.95,
+      "xg_against": 4.54,
       "wins": 3,
       "draws": 2,
       "losses": 0,
@@ -372,16 +372,16 @@
           "date": "2026-07-04",
           "gf": 3,
           "ga": 0,
-          "xgf": 1.52,
-          "xga": 1.03,
+          "xgf": 1.2,
+          "xga": 0.8,
           "result": "W",
           "p_win": 0.464
         }
       ],
       "xpts": 8.84,
       "delta_pts": 2.16,
-      "xgf": 1.65,
-      "xga": 0.95,
+      "xgf": 1.59,
+      "xga": 0.91,
       "efi": {
         "games": 5,
         "xg_official": 1.28,
@@ -477,8 +477,8 @@
       "games": 5,
       "goals_for": 3,
       "goals_against": 6,
-      "xg_for": 3.204866570510755,
-      "xg_against": 12.564053802716197,
+      "xg_for": 2.996414884333125,
+      "xg_against": 11.290998795766859,
       "wins": 1,
       "draws": 2,
       "losses": 2,
@@ -532,16 +532,16 @@
           "date": "2026-07-04",
           "gf": 0,
           "ga": 1,
-          "xgf": 0.51,
-          "xga": 3.07,
+          "xgf": 0.3,
+          "xga": 1.8,
           "result": "L",
           "p_win": 0.028
         }
       ],
       "xpts": 3.24,
       "delta_pts": 1.76,
-      "xgf": 0.64,
-      "xga": 2.51,
+      "xgf": 0.6,
+      "xga": 2.26,
       "efi": {
         "games": 5,
         "xg_official": 0.4,
@@ -3187,8 +3187,8 @@
       "games": 5,
       "goals_for": 9,
       "goals_against": 6,
-      "xg_for": 9.569761802857853,
-      "xg_against": 4.202795089729692,
+      "xg_for": 9.341773350793838,
+      "xg_against": 3.8828363811831297,
       "wins": 2,
       "draws": 1,
       "losses": 2,
@@ -3242,16 +3242,16 @@
           "date": "2026-07-04",
           "gf": 0,
           "ga": 3,
-          "xgf": 1.03,
-          "xga": 1.52,
+          "xgf": 0.8,
+          "xga": 1.2,
           "result": "L",
           "p_win": 0.234
         }
       ],
       "xpts": 9.09,
       "delta_pts": -2.09,
-      "xgf": 1.91,
-      "xga": 0.84,
+      "xgf": 1.87,
+      "xga": 0.78,
       "efi": {
         "games": 5,
         "xg_official": 1.8,
@@ -8152,32 +8152,48 @@
       "pA": 0.464,
       "lam": 1.03,
       "mu": 1.52,
-      "home_xg": 1.03,
-      "away_xg": 1.52,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 0.8,
+      "away_xg": 1.2,
+      "real_xg": true,
+      "home_shots": 10.0,
+      "away_shots": 5.0,
+      "home_sot": 3.0,
+      "away_sot": 4.0,
+      "home_poss": 37.0,
+      "away_poss": 50.0,
       "home_big_chances": null,
       "away_big_chances": null,
       "home_goals": [],
-      "away_goals": [],
+      "away_goals": [
+        {
+          "min": "50",
+          "player": "Azz-Eddine Ounahi",
+          "type": "regular"
+        },
+        {
+          "min": "82",
+          "player": "Azz-Eddine Ounahi",
+          "type": "regular"
+        },
+        {
+          "min": "90",
+          "player": "Soufiane Rahimi",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (46%). Final: 0–3.",
-        "🧱 Canada underperformed xG (0 goals vs 1.0 xG).",
-        "⚡ Morocco outscored xG (3 goals vs 1.5 xG) — clinical finishing."
+        "⚡ Morocco outscored xG (3 goals vs 1.2 xG) — clinical finishing.",
+        "🎯 Morocco: 3 goals from 5 shots (60% conversion)."
       ],
       "nlbair": false,
-      "stadium": "",
-      "city": ""
+      "stadium": "Houston Stadium (NRG Stadium)",
+      "city": "Houston"
     },
     {
       "date": "2026-07-04",
@@ -8190,34 +8206,40 @@
       "pA": 0.865,
       "lam": 0.51,
       "mu": 3.07,
-      "home_xg": 0.51,
-      "away_xg": 3.07,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 0.3,
+      "away_xg": 1.8,
+      "real_xg": true,
+      "home_shots": 5.0,
+      "away_shots": 15.0,
+      "home_sot": 1.0,
+      "away_sot": 5.0,
+      "home_poss": 24.0,
+      "away_poss": 76.0,
       "home_big_chances": null,
       "away_big_chances": null,
       "home_goals": [],
-      "away_goals": [],
+      "away_goals": [
+        {
+          "min": "70",
+          "player": "Kylian Mbappe",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (87%). Final: 0–1.",
-        "🧱 France underperformed xG (1 goals vs 3.1 xG)."
+        "🎯 France dominated possession (76%)."
       ],
       "nlbair": false,
-      "stadium": "",
-      "city": ""
+      "stadium": "Philadelphia Stadium (Lincoln Financial Field)",
+      "city": "Philadelphia"
     }
   ],
-  "real_xg_games": 46,
+  "real_xg_games": 48,
   "nlbair_games": 64,
   "narratives_built": 90,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
