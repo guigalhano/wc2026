@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-06T12:29:37.666447+00:00",
-  "generated_at_brt": "06/07/2026 09:29 BRT",
+  "generated_at": "2026-07-06T20:59:23.773183+00:00",
+  "generated_at_brt": "06/07/2026 17:59 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com quatro confrontos de alto nível na Copa 2026, destacando o clássico ibérico e duelos com boas oportunidades de value nas odds apresentadas. As maiores discrepâncias entre probabilidade implícita e valor real aparecem em jogos com favoritos moderados e zebras sub-cotad",
+    "summary": "```json\n{\n  \"summary\": \"Dia com 4 jogos de alto nível na Copa 2026, destacando-se oportunidades de value em mercados com odds infladas pelo mercado. O calor extremo em Dallas (40.4°C) e Houston (38.8°C) é fator crítico que favorece seleções com maior capacidade física e elencos profundos.\",\n  \"tip_o",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,25 +13,25 @@
       "away": "Spain",
       "time": "2026-07-06T19:00:00Z",
       "h2h": {
-        "home": 4.4,
-        "away": 1.99,
-        "draw": 3.75
+        "home": 1000.0,
+        "away": 3.25,
+        "draw": 19.0
       },
       "totals": {
-        "over25": 2.95,
-        "under25": 2.13
+        "over25": 11.0,
+        "under25": 1.85
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha chega como ampla favorita com rating perfeito de 100 e os melhores indicadores defensivos e ofensivos do confronto. Portugal terá dificuldades para conter o pressing alto espanhol e a criatividade de Lamine Yamal, tornando este um duelo muito desequilibrado no papel.",
-        "aposta_principal": "Vitória Espanha @ 1.99",
-        "justificativa": "Espanha apresenta xG de 2.95 contra apenas 0.88 de xGA, indicando domínio ofensivo e solidez defensiva superior. O rating 100 vs 89.9 de Portugal reforça a vantagem técnica espanhola, enquanto o estilo de posse dominante da Espanha anula o 'frenesi de cruzamentos' português. A odd de 1.99 ainda oferece valor razoável para um favorito desta magnitude.",
+        "resumo": "Espanha chega como clara favorita com rating máximo (100) e o melhor xGA do torneio (0.88), refletindo uma equipe defensivamente sólida e ofensivamente eficiente sob posse dominante. Portugal apresenta números ofensivos respeitáveis (xG 2.75) mas enfrenta um adversário que historicamente suprime o estilo de cruzamentos lusitano com pressing alto e compactação defensiva.",
+        "aposta_principal": "Vitória da Espanha @ 3.25",
+        "justificativa": "A superioridade técnica da Espanha é respaldada por dados: rating 100 vs 89.9 de Portugal, xGA 0.88 (defensivamente superior) e xG 2.95 indicam domínio esperado em ambas as fases. A odd de 3.25 oferece valor real para um favoritismo que na prática deveria estar próximo de 2.20-2.50. O estilo de posse da Espanha neutraliza naturalmente o frenesi de cruzamentos português ao manter a bola longe de áreas perigosas.",
         "apostas_alternativas": [
-          "Over 2.5 gols @ 2.95 — ambas as equipes com xG elevado (2.75 + 2.95) tornam partida com gols provável",
-          "Espanha vence e Over 1.5 gols @ ~2.20 — cenário mais seguro combinando resultado esperado com volume ofensivo espanhol"
+          "Espanha vence e Under 2.5 gols (combinada) — valor identificado dado xGA 0.88 da Espanha e tendência de jogos controlados",
+          "Ambas marcam: NÃO @ odd de mercado — defesa espanhola (xGA 0.88) sugere dificuldade de Portugal em converter"
         ],
-        "risco": "Portugal pode explorar transições rápidas com Vitinha-Neves-Fernandes e uma eventual saída de bola espanhola mal executada pode gerar gol e virar o jogo emocional de uma semifinal.",
-        "confianca": "media"
+        "risco": "Portugal possui jogadores de alto nível individual (Vitinha, Bruno Fernandes) capazes de explorar transições rápidas, e a pressão eliminatória pode equilibrar o jogo além do esperado pelos dados.",
+        "confianca": "alta"
       }
     },
     {
@@ -40,24 +40,24 @@
       "away": "Belgium",
       "time": "2026-07-07T00:00:00Z",
       "h2h": {
-        "away": 2.94,
-        "home": 2.62,
+        "away": 2.96,
+        "home": 2.63,
         "draw": 3.6
       },
       "totals": {
-        "over25": 2.7,
-        "under25": 2.32
+        "over25": 2.75,
+        "under25": 2.3
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Bélgica chega com dados sólidos de ataque (xG 2.48) e rating elevado (84.6), sendo favorita técnica apesar das odds equilibradas. O confronto deve ser aberto dado que a defesa belga apresenta fragilidade (xGA 1.11), o que potencializa uma partida com gols.",
-        "aposta_principal": "Over 2.5 gols @ 2.70",
-        "justificativa": "O xG ofensivo da Bélgica (2.48 por jogo) combinado com a defesa fragilizada (xGA 1.11) cria condições favoráveis para uma partida movimentada. A presença de De Bruyne e Doku no ataque belga eleva o potencial de criação de chances, e sem dados consistentes sobre a solidez defensiva dos EUA, o mercado de gols acima de 2.5 oferece valor real à odd 2.70.",
+        "resumo": "Bélgica enfrenta os EUA com claras vantagens técnicas, sustentadas por um xG elevado (2.48) e jogadores de elite como De Bruyne e Doku no setor ofensivo. Os dados dos americanos são limitados, o que aumenta a incerteza, mas o rating belga de 84.6 sugere superioridade individual significativa.",
+        "aposta_principal": "Bélgica Vence — Odd 2.96",
+        "justificativa": "A Bélgica apresenta xG de 2.48 por partida, indicando criação de chances consistente, enquanto a defesa americana não tem dados confiáveis para contrabalançar. A odd de 2.96 oferece valor real considerando a qualidade técnica belga. A defesa frágil da própria Bélgica (xGA 1.11) pode abrir espaços, mas seu potencial ofensivo compensa.",
         "apostas_alternativas": [
-          "Bélgica vence @ 2.94 — valor interessante dado o rating superior e xG elevado",
-          "Bélgica marca primeiro @ ~2.00 — ataque qualificado com De Bruyne/Doku como catalisadores ofensivos"
+          "Over 2.5 Gols — Odd 2.75, jogo atraente dado o ataque belga e possíveis contraataques americanos",
+          "Bélgica Vence ou Empata (Dupla Chance) — buscar odd em torno de 1.55-1.65 para reduzir risco"
         ],
-        "risco": "A ausência de dados confiáveis sobre os EUA representa incerteza significativa, podendo tornar as projeções baseadas apenas no lado belga incompletas.",
+        "risco": "A ausência de dados confiáveis sobre os EUA é o principal fator de incerteza, podendo mascarar uma equipe em boa fase ou com esquema tático eficiente.",
         "confianca": "media"
       }
     },
@@ -68,23 +68,23 @@
       "time": "2026-07-07T16:00:00Z",
       "h2h": {
         "home": 1.41,
-        "away": 11.0,
+        "away": 11.5,
         "draw": 5.0
       },
       "totals": {
         "over25": 2.9,
-        "under25": 1.89
+        "under25": 1.86
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Argentina chega como absoluta favorita contra um Egito com dados limitados e historicamente inferior no cenário mundial. O confronto deve ser dominado pelos sul-americanos, com Messi como peça central e expectativa de placar favorável à seleção campeã.",
-        "aposta_principal": "Vitória Argentina @ 1.41",
-        "justificativa": "Com rating de 97.1 e xG de 2.4, a Argentina demonstra capacidade ofensiva consistente e solidez defensiva aceitável. A odd de 1.41 reflete com precisão a diferença de nível entre as equipes. O histórico de mentalidade campeã e a presença de Messi reforçam a previsibilidade do resultado.",
+        "resumo": "Argentina chega como ampla favorita contra um Egito com dados escassos e histórico inferior no cenário global. O confronto deve ser controlado pelos argentinos, com Messi e companhia ditando o ritmo desde o início.",
+        "aposta_principal": "Vitória da Argentina @ 1.41",
+        "justificativa": "O rating excepcional de 97.1 e xG de 2.4 por jogo indicam uma equipe altamente produtiva ofensivamente. O Egito apresenta dados limitados, sugerindo nível técnico inferior, e a odd de 1.41 reflete corretamente a disparidade entre as seleções. A mentalidade campeã argentina reduz a probabilidade de tropeços inesperados.",
         "apostas_alternativas": [
-          "Argentina Vence & Over 1.5 Gols @ ~1.70",
-          "Messi Marca a Qualquer Momento @ ~1.90"
+          "Over 2.5 gols @ 2.9 — xG argentino elevado favorece partida com volume de gols",
+          "Argentina vence e Over 1.5 gols @ ~1.80 — combina resultado provável com produtividade ofensiva esperada"
         ],
-        "risco": "A principal incerteza é a ausência de dados scout do Egito, que pode esconder um esquema defensivo organizado capaz de segurar o placar por mais tempo.",
+        "risco": "Dados ausentes do Egito dificultam avaliação defensiva real, e a odd baixa da Argentina oferece margem de valor reduzida caso ocorra uma surpresa tática.",
         "confianca": "alta"
       }
     },
@@ -94,7 +94,7 @@
       "away": "Colombia",
       "time": "2026-07-07T20:00:00Z",
       "h2h": {
-        "away": 2.38,
+        "away": 2.36,
         "home": 3.75,
         "draw": 3.2
       },
@@ -104,14 +104,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Colômbia chega como favorita clara com métricas ofensivas impressionantes (xG 3.6) e rating elevado de 89.5, enquanto a Suíça tem dados limitados disponíveis para análise. O cenário aponta para um jogo com gols, dado o potencial atacante colombiano com Luis Díaz como referência nas alas.",
-        "aposta_principal": "Colômbia Vence — Odd 2.38",
-        "justificativa": "A Colômbia apresenta xG de 3.6 combinado com xGA de apenas 1.6, indicando dominância ofensiva e solidez defensiva. O rating 89.5 reforça superioridade técnica frente a uma Suíça sem dados expressivos disponíveis. A odd de 2.38 oferece valor razoável dado o desequilíbrio entre as equipes.",
+        "resumo": "Colômbia chega como favorita clara com rating 89.5 e ataque altamente eficiente (xG 3.6), enquanto a Suíça apresenta dados limitados que dificultam análise defensiva confiável. O cenário aponta para domínio colombiano com Luis Díaz explorando as alas e volume ofensivo elevado.",
+        "aposta_principal": "Colômbia Vence — Odd 2.36",
+        "justificativa": "Os dados da Colômbia são expressivos: xG de 3.6 indica capacidade de criar muitas chances reais de gol por partida, com xGA de apenas 1.6 mostrando equilíbrio defensivo. A assimetria de informação favorece quem tem dados sólidos, e a odd 2.36 oferece valor razoável para uma seleção com estilo de jogo bem definido e peças ofensivas de alto nível.",
         "apostas_alternativas": [
-          "Over 2.5 Gols — Odd 2.48 (xG colombiano elevado favorece partida com múltiplos gols)",
-          "Colômbia Vence & Over 1.5 — buscar odd combinada ~2.80 (perfil ofensivo sugere vitória com placar elástico)"
+          "Over 2.5 Gols — Odd 2.48 (xG colombiano sugere partida com gols; mesmo com Suíça defensiva, volume ofensivo deve converter)",
+          "Colômbia Vence + Over 1.5 Gols — buscar odd combinada ~2.80 (cenário mais provável dado o padrão ofensivo colombiano)"
         ],
-        "risco": "A ausência de dados da Suíça é uma incógnita relevante — equipes europeias com estilo defensivo organizado podem neutralizar favoritos mesmo com métricas inferiores.",
+        "risco": "A ausência de dados confiáveis da Suíça é o maior risco — equipes europeias organizadas podem suprimir xG adversário e transformar o jogo num cenário de contra-ataque imprevisível.",
         "confianca": "media"
       }
     }
