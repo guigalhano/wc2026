@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07T10:34:40.416002+00:00",
+  "updated_at": "2026-07-07T19:18:04.140157+00:00",
   "teams": [
     {
       "code": "NOR",
@@ -332,6 +332,91 @@
       "dgf_efi": 0.72
     },
     {
+      "code": "ARG",
+      "name": "Argentina",
+      "games": 5,
+      "goals_for": 14,
+      "goals_against": 5,
+      "xg_for": 10.11279254943383,
+      "xg_against": 3.6143026416046586,
+      "wins": 5,
+      "draws": 0,
+      "losses": 0,
+      "points": 15,
+      "expected_points": 12.985999409022977,
+      "big_chances_created": 10,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AGL",
+          "date": "2026-06-17",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 1.0,
+          "xga": 0.43,
+          "result": "W",
+          "p_win": 0.764
+        },
+        {
+          "vs": "AUT",
+          "date": "2026-06-22",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 1.78,
+          "xga": 0.55,
+          "result": "W",
+          "p_win": 0.739
+        },
+        {
+          "vs": "JOR",
+          "date": "2026-06-28",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.14,
+          "xga": 0.63,
+          "result": "W",
+          "p_win": 0.951
+        },
+        {
+          "vs": "CAB",
+          "date": "2026-07-03",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.69,
+          "xga": 1.38,
+          "result": "W",
+          "p_win": 0.88
+        },
+        {
+          "vs": "EGI",
+          "date": "2026-07-07",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.5,
+          "xga": 0.62,
+          "result": "W",
+          "p_win": 0.771
+        }
+      ],
+      "xpts": 12.99,
+      "delta_pts": 2.01,
+      "xgf": 2.02,
+      "xga": 0.72,
+      "efi": {
+        "games": 4,
+        "xg_official": 2.32,
+        "pass_accuracy": 91.5,
+        "avg_distance_km": 7.18,
+        "sprints": 393.2,
+        "forced_turnovers": 45.0,
+        "linebreaks_completed": 136.8,
+        "linebreaks_attempted": 176.8,
+        "top_speed": 35.2,
+        "shot_accuracy": 47.4
+      },
+      "dgf_efi": 0.48
+    },
+    {
       "code": "COL",
       "name": "Colombia",
       "games": 4,
@@ -660,81 +745,6 @@
         "shot_accuracy": 40.0
       },
       "dgf_efi": 0.08
-    },
-    {
-      "code": "ARG",
-      "name": "Argentina",
-      "games": 4,
-      "goals_for": 11,
-      "goals_against": 3,
-      "xg_for": 7.609999999999999,
-      "xg_against": 2.9899999999999998,
-      "wins": 4,
-      "draws": 0,
-      "losses": 0,
-      "points": 12,
-      "expected_points": 10.503227739052564,
-      "big_chances_created": 10,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "AGL",
-          "date": "2026-06-17",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 1.0,
-          "xga": 0.43,
-          "result": "W",
-          "p_win": 0.764
-        },
-        {
-          "vs": "AUT",
-          "date": "2026-06-22",
-          "gf": 2,
-          "ga": 0,
-          "xgf": 1.78,
-          "xga": 0.55,
-          "result": "W",
-          "p_win": 0.739
-        },
-        {
-          "vs": "JOR",
-          "date": "2026-06-28",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.14,
-          "xga": 0.63,
-          "result": "W",
-          "p_win": 0.951
-        },
-        {
-          "vs": "CAB",
-          "date": "2026-07-03",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 2.69,
-          "xga": 1.38,
-          "result": "W",
-          "p_win": 0.88
-        }
-      ],
-      "xpts": 10.5,
-      "delta_pts": 1.5,
-      "xgf": 1.9,
-      "xga": 0.75,
-      "efi": {
-        "games": 4,
-        "xg_official": 2.32,
-        "pass_accuracy": 91.5,
-        "avg_distance_km": 7.18,
-        "sprints": 393.2,
-        "forced_turnovers": 45.0,
-        "linebreaks_completed": 136.8,
-        "linebreaks_attempted": 176.8,
-        "top_speed": 35.2,
-        "shot_accuracy": 47.4
-      },
-      "dgf_efi": 0.43
     },
     {
       "code": "AFS",
@@ -1207,81 +1217,6 @@
       "dgf_efi": 0.74
     },
     {
-      "code": "EGI",
-      "name": "Egypt",
-      "games": 4,
-      "goals_for": 6,
-      "goals_against": 4,
-      "xg_for": 9.8,
-      "xg_against": 8.57,
-      "wins": 1,
-      "draws": 3,
-      "losses": 0,
-      "points": 6,
-      "expected_points": 4.813359569972661,
-      "big_chances_created": 12,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "BEL",
-          "date": "2026-06-15",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.12,
-          "xga": 1.58,
-          "result": "D",
-          "p_win": 0.124
-        },
-        {
-          "vs": "NZE",
-          "date": "2026-06-22",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.44,
-          "xga": 1.69,
-          "result": "W",
-          "p_win": 0.509
-        },
-        {
-          "vs": "IRA",
-          "date": "2026-06-27",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 0.85,
-          "xga": 0.92,
-          "result": "D",
-          "p_win": 0.313
-        },
-        {
-          "vs": "AUS",
-          "date": "2026-07-03",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 5.39,
-          "xga": 4.38,
-          "result": "D",
-          "p_win": 0.274
-        }
-      ],
-      "xpts": 4.81,
-      "delta_pts": 1.19,
-      "xgf": 2.45,
-      "xga": 2.14,
-      "efi": {
-        "games": 4,
-        "xg_official": 1.06,
-        "pass_accuracy": 87.1,
-        "avg_distance_km": 7.48,
-        "sprints": 379.5,
-        "forced_turnovers": 43.2,
-        "linebreaks_completed": 95.8,
-        "linebreaks_attempted": 143.8,
-        "top_speed": 35.2,
-        "shot_accuracy": 27.4
-      },
-      "dgf_efi": 0.44
-    },
-    {
       "code": "GAN",
       "name": "Ghana",
       "games": 4,
@@ -1430,6 +1365,91 @@
         "shot_accuracy": 24.5
       },
       "dgf_efi": 0.36
+    },
+    {
+      "code": "EGI",
+      "name": "Egypt",
+      "games": 5,
+      "goals_for": 8,
+      "goals_against": 7,
+      "xg_for": 10.42430264160466,
+      "xg_against": 11.072792549433832,
+      "wins": 1,
+      "draws": 3,
+      "losses": 1,
+      "points": 6,
+      "expected_points": 5.161634923149515,
+      "big_chances_created": 12,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BEL",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.12,
+          "xga": 1.58,
+          "result": "D",
+          "p_win": 0.124
+        },
+        {
+          "vs": "NZE",
+          "date": "2026-06-22",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.44,
+          "xga": 1.69,
+          "result": "W",
+          "p_win": 0.509
+        },
+        {
+          "vs": "IRA",
+          "date": "2026-06-27",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 0.85,
+          "xga": 0.92,
+          "result": "D",
+          "p_win": 0.313
+        },
+        {
+          "vs": "AUS",
+          "date": "2026-07-03",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 5.39,
+          "xga": 4.38,
+          "result": "D",
+          "p_win": 0.274
+        },
+        {
+          "vs": "ARG",
+          "date": "2026-07-07",
+          "gf": 2,
+          "ga": 3,
+          "xgf": 0.62,
+          "xga": 2.5,
+          "result": "L",
+          "p_win": 0.06
+        }
+      ],
+      "xpts": 5.16,
+      "delta_pts": 0.84,
+      "xgf": 2.08,
+      "xga": 2.21,
+      "efi": {
+        "games": 4,
+        "xg_official": 1.06,
+        "pass_accuracy": 87.1,
+        "avg_distance_km": 7.48,
+        "sprints": 379.5,
+        "forced_turnovers": 43.2,
+        "linebreaks_completed": 95.8,
+        "linebreaks_attempted": 143.8,
+        "top_speed": 35.2,
+        "shot_accuracy": 27.4
+      },
+      "dgf_efi": 0.54
     },
     {
       "code": "HOL",
@@ -8791,10 +8811,47 @@
       "nlbair": false,
       "stadium": "San Francisco Bay Area Stadium (Levi's Stadium)",
       "city": "Santa Clara"
+    },
+    {
+      "date": "2026-07-07",
+      "home": "ARG",
+      "away": "EGI",
+      "g1": 3,
+      "g2": 2,
+      "pH": 0.771,
+      "pD": 0.169,
+      "pA": 0.06,
+      "lam": 2.5,
+      "mu": 0.62,
+      "home_xg": 2.5,
+      "away_xg": 0.62,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "HOME_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (77%). Final: 3–2.",
+        "⚡ Egypt outscored xG (2 goals vs 0.6 xG) — clinical finishing."
+      ],
+      "nlbair": false,
+      "stadium": "Kansas City Stadium (Arrowhead Stadium)",
+      "city": "Kansas City"
     }
   ],
   "real_xg_games": 52,
   "nlbair_games": 80,
-  "narratives_built": 94,
+  "narratives_built": 95,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }

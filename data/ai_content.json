@@ -1,63 +1,36 @@
 {
-  "generated_at": "2026-07-07T10:34:41.117441+00:00",
-  "generated_at_brt": "07/07/2026 07:34 BRT",
+  "generated_at": "2026-07-07T19:18:04.941190+00:00",
+  "generated_at_brt": "07/07/2026 16:18 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de Copa 2026 com perfis distintos: Argentina é forte favorita contra o Egito, enquanto Suíça e Colômbia apresentam equilíbrio com leve vantagem colombiana nas odds. O maior valor percebido está no mercado colombiano e em apostas seletivas no jogo argen",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, Switzerland vs Colombia, disputado em Dallas sob calor extremo de 40.7°C — fator físico decisivo que favorece equipes com maior profundidade de elenco e disciplina tática. As odds refletem leve vantagem colombiana, mas há value intere",
     "bets": [],
     "tip_of_day": null
   },
   "match_previews": [
-    {
-      "game_id": "190922affd0be754bfefd71548dbf90d",
-      "home": "Argentina",
-      "away": "Egypt",
-      "time": "2026-07-07T16:00:00Z",
-      "h2h": {
-        "home": 1.38,
-        "away": 13.0,
-        "draw": 5.2
-      },
-      "totals": {
-        "over25": 2.9,
-        "under25": 1.97
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Argentina chega como amplamente favorita contra um Egito com dados limitados e histórico inferior em competições de alto nível. O cenário aponta para domínio argentino com Messi como fator decisivo e possibilidade de jogo com múltiplos gols.",
-        "aposta_principal": "Argentina Vence (1x2) — Odd 1.38",
-        "justificativa": "Com rating 97.1 e xG de 2.4, a Argentina demonstra capacidade ofensiva consistente e solidez defensiva razoável. A mentalidade campeã e a presença de Messi reforçam a previsibilidade do resultado. Odd de 1.38 reflete o favoritismo real, sendo a aposta de menor risco disponível.",
-        "apostas_alternativas": [
-          "Argentina Vence & Over 2.5 Gols — mercado combinado estimado ~2.10 (valor interessante dado xG 2.4 da Argentina)",
-          "Over 2.5 Gols — Odd 2.90 (xG argentino elevado contra defesa egípcia de dados limitados sugere exploração ofensiva)"
-        ],
-        "risco": "O risco principal é a incerteza total sobre o desempenho do Egito, que pode adotar postura ultra-defensiva e comprometer mercados de gols.",
-        "confianca": "alta"
-      }
-    },
     {
       "game_id": "a6da973c5749ce60adab77d64b3664f4",
       "home": "Switzerland",
       "away": "Colombia",
       "time": "2026-07-07T20:00:00Z",
       "h2h": {
-        "away": 2.36,
-        "home": 3.8,
-        "draw": 3.2
+        "away": 2.44,
+        "home": 3.9,
+        "draw": 3.15
       },
       "totals": {
-        "over25": 2.44,
-        "under25": 2.23
+        "over25": 2.5,
+        "under25": 3.05
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Colômbia chega como favorita clara com rating 89.5 e um ataque altamente eficiente liderado por Luis Díaz, enquanto a Suíça apresenta dados limitados que dificultam a avaliação defensiva. O cenário aponta para domínio colombiano com boas chances de jogo movimentado e placar favorável à seleção sul-americana.",
-        "aposta_principal": "Vitória da Colômbia @ 2.36",
-        "justificativa": "A Colômbia apresenta xG de 3.6 por jogo, indicando um ataque extremamente produtivo, contra apenas 1.6 de xGA, sugerindo solidez defensiva. A odd de 2.36 reflete valor real considerando a superioridade técnica evidente. A ausência de dados confiáveis da Suíça aumenta a assimetria favorável à Colômbia.",
+        "resumo": "Colômbia chega como favorita clara com rating 89.5 e xG de 3.6, indicando poder ofensivo elevado e capacidade de criar volume de chances. A Suíça enfrenta este duelo com dados limitados, o que torna difícil avaliar seu potencial defensivo, mas o favoritismo colombiano é respaldado pelos números disponíveis.",
+        "aposta_principal": "Colômbia Vence @ 2.44",
+        "justificativa": "Com xG de 3.6 e xGA de apenas 1.6, a Colômbia demonstra clara superioridade nas métricas esperadas, sugerindo domínio ofensivo e solidez defensiva. Luis Díaz nas alas potencializa o ataque e dificulta qualquer esquema defensivo adversário. A odd de 2.44 reflete valor razoável dado o favoritismo técnico colombiano.",
         "apostas_alternativas": [
-          "Over 2.5 gols @ 2.44 — xG colombiano elevado sustenta expectativa de jogo aberto com múltiplos gols",
-          "Colômbia vence e Over 1.5 gols @ ~2.80 (combinada estimada) — cenário mais provável dado o potencial ofensivo colombiano"
+          "Over 2.5 Gols @ 2.5 — xG colombiano elevado sugere jogo aberto com gols",
+          "Colômbia Marcar Primeiro @ ~1.80 — ataque prolífico e pressão ofensiva consistente desde o início"
         ],
-        "risco": "A falta de dados da Suíça é o maior risco, pois pode ocultar uma organização defensiva sólida capaz de frustrar o ataque colombiano.",
+        "risco": "A ausência de dados confiáveis sobre a Suíça é o maior risco, pois o potencial defensivo suíço permanece desconhecido e pode surpreender negativamente as projeções colombianas.",
         "confianca": "media"
       }
     }
