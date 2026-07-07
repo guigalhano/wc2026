@@ -1,39 +1,11 @@
 {
-  "generated_at": "2026-07-07T19:18:04.941190+00:00",
-  "generated_at_brt": "07/07/2026 16:18 BRT",
+  "generated_at": "2026-07-07T23:32:50.700285+00:00",
+  "generated_at_brt": "07/07/2026 20:32 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, Switzerland vs Colombia, disputado em Dallas sob calor extremo de 40.7°C — fator físico decisivo que favorece equipes com maior profundidade de elenco e disciplina tática. As odds refletem leve vantagem colombiana, mas há value intere",
+    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [
-    {
-      "game_id": "a6da973c5749ce60adab77d64b3664f4",
-      "home": "Switzerland",
-      "away": "Colombia",
-      "time": "2026-07-07T20:00:00Z",
-      "h2h": {
-        "away": 2.44,
-        "home": 3.9,
-        "draw": 3.15
-      },
-      "totals": {
-        "over25": 2.5,
-        "under25": 3.05
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Colômbia chega como favorita clara com rating 89.5 e xG de 3.6, indicando poder ofensivo elevado e capacidade de criar volume de chances. A Suíça enfrenta este duelo com dados limitados, o que torna difícil avaliar seu potencial defensivo, mas o favoritismo colombiano é respaldado pelos números disponíveis.",
-        "aposta_principal": "Colômbia Vence @ 2.44",
-        "justificativa": "Com xG de 3.6 e xGA de apenas 1.6, a Colômbia demonstra clara superioridade nas métricas esperadas, sugerindo domínio ofensivo e solidez defensiva. Luis Díaz nas alas potencializa o ataque e dificulta qualquer esquema defensivo adversário. A odd de 2.44 reflete valor razoável dado o favoritismo técnico colombiano.",
-        "apostas_alternativas": [
-          "Over 2.5 Gols @ 2.5 — xG colombiano elevado sugere jogo aberto com gols",
-          "Colômbia Marcar Primeiro @ ~1.80 — ataque prolífico e pressão ofensiva consistente desde o início"
-        ],
-        "risco": "A ausência de dados confiáveis sobre a Suíça é o maior risco, pois o potencial defensivo suíço permanece desconhecido e pode surpreender negativamente as projeções colombianas.",
-        "confianca": "media"
-      }
-    }
-  ],
+  "match_previews": [],
   "tactical_notes": {}
 }

@@ -1,6 +1,91 @@
 {
-  "updated_at": "2026-07-07T19:18:04.140157+00:00",
+  "updated_at": "2026-07-07T23:32:49.380094+00:00",
   "teams": [
+    {
+      "code": "SUI",
+      "name": "Switzerland",
+      "games": 5,
+      "goals_for": 10,
+      "goals_against": 3,
+      "xg_for": 11.68,
+      "xg_against": 9.47,
+      "wins": 4,
+      "draws": 1,
+      "losses": 0,
+      "points": 13,
+      "expected_points": 8.805979387799264,
+      "big_chances_created": 19,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CAT",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.54,
+          "xga": 0.78,
+          "result": "D",
+          "p_win": 0.691
+        },
+        {
+          "vs": "BOS",
+          "date": "2026-06-18",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 2.45,
+          "xga": 0.88,
+          "result": "W",
+          "p_win": 0.641
+        },
+        {
+          "vs": "CAN",
+          "date": "2026-06-24",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 0.71,
+          "xga": 1.35,
+          "result": "W",
+          "p_win": 0.327
+        },
+        {
+          "vs": "AGL",
+          "date": "2026-07-03",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 2.52,
+          "xga": 0.73,
+          "result": "W",
+          "p_win": 0.557
+        },
+        {
+          "vs": "COL",
+          "date": "2026-07-07",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 4.46,
+          "xga": 5.73,
+          "result": "W",
+          "p_win": 0.269
+        }
+      ],
+      "xpts": 8.81,
+      "delta_pts": 4.19,
+      "xgf": 2.34,
+      "xga": 1.89,
+      "efi": {
+        "games": 4,
+        "xg_official": 2.14,
+        "pass_accuracy": 86.7,
+        "avg_distance_km": 7.02,
+        "sprints": 447.2,
+        "forced_turnovers": 48.2,
+        "linebreaks_completed": 125.5,
+        "linebreaks_attempted": 192.5,
+        "top_speed": 34.3,
+        "shot_accuracy": 41.1
+      },
+      "dgf_efi": -0.14
+    },
     {
       "code": "NOR",
       "name": "Norway",
@@ -14,7 +99,7 @@
       "losses": 1,
       "points": 12,
       "expected_points": 7.818475851084802,
-      "big_chances_created": 18,
+      "big_chances_created": 21,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -99,7 +184,7 @@
       "losses": 0,
       "points": 15,
       "expected_points": 12.028625262604915,
-      "big_chances_created": 17,
+      "big_chances_created": 14,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -170,81 +255,6 @@
         "shot_accuracy": 44.3
       },
       "dgf_efi": 0.84
-    },
-    {
-      "code": "SUI",
-      "name": "Switzerland",
-      "games": 4,
-      "goals_for": 9,
-      "goals_against": 3,
-      "xg_for": 7.220000000000001,
-      "xg_against": 3.74,
-      "wins": 3,
-      "draws": 1,
-      "losses": 0,
-      "points": 10,
-      "expected_points": 7.69028734810624,
-      "big_chances_created": 14,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "CAT",
-          "date": "2026-06-13",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.54,
-          "xga": 0.78,
-          "result": "D",
-          "p_win": 0.691
-        },
-        {
-          "vs": "BOS",
-          "date": "2026-06-18",
-          "gf": 4,
-          "ga": 1,
-          "xgf": 2.45,
-          "xga": 0.88,
-          "result": "W",
-          "p_win": 0.641
-        },
-        {
-          "vs": "CAN",
-          "date": "2026-06-24",
-          "gf": 2,
-          "ga": 1,
-          "xgf": 0.71,
-          "xga": 1.35,
-          "result": "W",
-          "p_win": 0.327
-        },
-        {
-          "vs": "AGL",
-          "date": "2026-07-03",
-          "gf": 2,
-          "ga": 0,
-          "xgf": 2.52,
-          "xga": 0.73,
-          "result": "W",
-          "p_win": 0.557
-        }
-      ],
-      "xpts": 7.69,
-      "delta_pts": 2.31,
-      "xgf": 1.81,
-      "xga": 0.94,
-      "efi": {
-        "games": 4,
-        "xg_official": 2.14,
-        "pass_accuracy": 86.7,
-        "avg_distance_km": 7.02,
-        "sprints": 447.2,
-        "forced_turnovers": 48.2,
-        "linebreaks_completed": 125.5,
-        "linebreaks_attempted": 192.5,
-        "top_speed": 34.3,
-        "shot_accuracy": 41.1
-      },
-      "dgf_efi": 0.11
     },
     {
       "code": "MAR",
@@ -337,14 +347,14 @@
       "games": 5,
       "goals_for": 14,
       "goals_against": 5,
-      "xg_for": 10.11279254943383,
-      "xg_against": 3.6143026416046586,
+      "xg_for": 11.33,
+      "xg_against": 3.9899999999999998,
       "wins": 5,
       "draws": 0,
       "losses": 0,
       "points": 15,
       "expected_points": 12.985999409022977,
-      "big_chances_created": 10,
+      "big_chances_created": 16,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -392,16 +402,16 @@
           "date": "2026-07-07",
           "gf": 3,
           "ga": 2,
-          "xgf": 2.5,
-          "xga": 0.62,
+          "xgf": 3.72,
+          "xga": 1.0,
           "result": "W",
           "p_win": 0.771
         }
       ],
       "xpts": 12.99,
       "delta_pts": 2.01,
-      "xgf": 2.02,
-      "xga": 0.72,
+      "xgf": 2.27,
+      "xga": 0.8,
       "efi": {
         "games": 4,
         "xg_official": 2.32,
@@ -415,81 +425,6 @@
         "shot_accuracy": 47.4
       },
       "dgf_efi": 0.48
-    },
-    {
-      "code": "COL",
-      "name": "Colombia",
-      "games": 4,
-      "goals_for": 5,
-      "goals_against": 1,
-      "xg_for": 7.7986520479601555,
-      "xg_against": 3.086770338774416,
-      "wins": 3,
-      "draws": 1,
-      "losses": 0,
-      "points": 10,
-      "expected_points": 8.12324655180582,
-      "big_chances_created": 11,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "UZB",
-          "date": "2026-06-18",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.45,
-          "xga": 0.82,
-          "result": "W",
-          "p_win": 0.727
-        },
-        {
-          "vs": "RDC",
-          "date": "2026-06-24",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 2.04,
-          "xga": 0.61,
-          "result": "W",
-          "p_win": 0.7
-        },
-        {
-          "vs": "POR",
-          "date": "2026-06-27",
-          "gf": 0,
-          "ga": 0,
-          "xgf": 1.12,
-          "xga": 1.4,
-          "result": "D",
-          "p_win": 0.278
-        },
-        {
-          "vs": "GAN",
-          "date": "2026-07-04",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 2.19,
-          "xga": 0.26,
-          "result": "W",
-          "p_win": 0.693
-        }
-      ],
-      "xpts": 8.12,
-      "delta_pts": 1.88,
-      "xgf": 1.95,
-      "xga": 0.77,
-      "efi": {
-        "games": 4,
-        "xg_official": 1.59,
-        "pass_accuracy": 88.7,
-        "avg_distance_km": 6.94,
-        "sprints": 390.5,
-        "forced_turnovers": 35.5,
-        "linebreaks_completed": 112.8,
-        "linebreaks_attempted": 168.0,
-        "top_speed": 34.6,
-        "shot_accuracy": 35.4
-      },
-      "dgf_efi": -0.34
     },
     {
       "code": "PAR",
@@ -589,7 +524,7 @@
       "losses": 0,
       "points": 11,
       "expected_points": 9.253475703327823,
-      "big_chances_created": 10,
+      "big_chances_created": 14,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1069,7 +1004,7 @@
       "losses": 0,
       "points": 13,
       "expected_points": 11.788137395141357,
-      "big_chances_created": 12,
+      "big_chances_created": 15,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1372,14 +1307,14 @@
       "games": 5,
       "goals_for": 8,
       "goals_against": 7,
-      "xg_for": 10.42430264160466,
-      "xg_against": 11.072792549433832,
+      "xg_for": 10.8,
+      "xg_against": 12.290000000000001,
       "wins": 1,
       "draws": 3,
       "losses": 1,
       "points": 6,
       "expected_points": 5.161634923149515,
-      "big_chances_created": 12,
+      "big_chances_created": 14,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1427,16 +1362,16 @@
           "date": "2026-07-07",
           "gf": 2,
           "ga": 3,
-          "xgf": 0.62,
-          "xga": 2.5,
+          "xgf": 1.0,
+          "xga": 3.72,
           "result": "L",
           "p_win": 0.06
         }
       ],
       "xpts": 5.16,
       "delta_pts": 0.84,
-      "xgf": 2.08,
-      "xga": 2.21,
+      "xgf": 2.16,
+      "xga": 2.46,
       "efi": {
         "games": 4,
         "xg_official": 1.06,
@@ -1525,6 +1460,91 @@
         "shot_accuracy": 47.8
       },
       "dgf_efi": 1.5
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "games": 5,
+      "goals_for": 5,
+      "goals_against": 2,
+      "xg_for": 13.528652047960156,
+      "xg_against": 7.546770338774416,
+      "wins": 3,
+      "draws": 1,
+      "losses": 1,
+      "points": 10,
+      "expected_points": 9.69786027307859,
+      "big_chances_created": 18,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "UZB",
+          "date": "2026-06-18",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.45,
+          "xga": 0.82,
+          "result": "W",
+          "p_win": 0.727
+        },
+        {
+          "vs": "RDC",
+          "date": "2026-06-24",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 2.04,
+          "xga": 0.61,
+          "result": "W",
+          "p_win": 0.7
+        },
+        {
+          "vs": "POR",
+          "date": "2026-06-27",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 1.12,
+          "xga": 1.4,
+          "result": "D",
+          "p_win": 0.278
+        },
+        {
+          "vs": "GAN",
+          "date": "2026-07-04",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 2.19,
+          "xga": 0.26,
+          "result": "W",
+          "p_win": 0.693
+        },
+        {
+          "vs": "SUI",
+          "date": "2026-07-07",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 5.73,
+          "xga": 4.46,
+          "result": "L",
+          "p_win": 0.422
+        }
+      ],
+      "xpts": 9.7,
+      "delta_pts": 0.3,
+      "xgf": 2.71,
+      "xga": 1.51,
+      "efi": {
+        "games": 4,
+        "xg_official": 1.59,
+        "pass_accuracy": 88.7,
+        "avg_distance_km": 6.94,
+        "sprints": 390.5,
+        "forced_turnovers": 35.5,
+        "linebreaks_completed": 112.8,
+        "linebreaks_attempted": 168.0,
+        "top_speed": 34.6,
+        "shot_accuracy": 35.4
+      },
+      "dgf_efi": -0.59
     },
     {
       "code": "ESC",
@@ -2174,7 +2194,7 @@
       "losses": 1,
       "points": 10,
       "expected_points": 10.663272607162149,
-      "big_chances_created": 17,
+      "big_chances_created": 21,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2334,7 +2354,7 @@
       "losses": 3,
       "points": 0,
       "expected_points": 0.8978210992712843,
-      "big_chances_created": 2,
+      "big_chances_created": 1,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2724,7 +2744,7 @@
       "losses": 1,
       "points": 8,
       "expected_points": 9.431195628407643,
-      "big_chances_created": 7,
+      "big_chances_created": 8,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -5897,28 +5917,28 @@
       "home_xg": 2.21,
       "away_xg": 0.45,
       "real_xg": true,
-      "home_shots": 19,
-      "away_shots": 4,
-      "home_sot": 10,
-      "away_sot": 1,
-      "home_poss": 54.3,
-      "away_poss": 45.7,
-      "home_big_chances": 5,
-      "away_big_chances": 1,
+      "home_shots": 19.0,
+      "away_shots": 4.0,
+      "home_sot": 5.0,
+      "away_sot": 0.0,
+      "home_poss": 56.0,
+      "away_poss": 44.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "13",
-          "player": "Kylian Mbappé",
+          "min": "14",
+          "player": "Kylian Mbappe",
           "type": "regular"
         },
         {
-          "min": "53",
-          "player": "Kylian Mbappé",
+          "min": "54",
+          "player": "Kylian Mbappe",
           "type": "regular"
         },
         {
-          "min": "65",
-          "player": "Ousmane Dembélé",
+          "min": "66",
+          "player": "Masour Ousmane Dembele",
           "type": "regular"
         }
       ],
@@ -5929,11 +5949,9 @@
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (93%). Final: 3–0.",
-        "💥 France created 5 big chances.",
-        "💥 Iraq created 1 big chance."
+        "✅ **Result matched prediction** (93%). Final: 3–0."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
     },
@@ -8547,20 +8565,20 @@
       "home_xg": 0.3,
       "away_xg": 1.8,
       "real_xg": true,
-      "home_shots": 5.0,
-      "away_shots": 15.0,
-      "home_sot": 1.0,
-      "away_sot": 5.0,
-      "home_poss": 24.0,
-      "away_poss": 76.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 5,
+      "away_shots": 15,
+      "home_sot": 1,
+      "away_sot": 9,
+      "home_poss": 31.2,
+      "away_poss": 68.8,
+      "home_big_chances": 0,
+      "away_big_chances": 2,
       "home_goals": [],
       "away_goals": [
         {
-          "min": "70",
-          "player": "Kylian Mbappe",
-          "type": "regular"
+          "min": "69",
+          "player": "Kylian Mbappé",
+          "type": "penalty"
         }
       ],
       "reds": [],
@@ -8570,9 +8588,10 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (87%). Final: 0–1.",
-        "🎯 France dominated possession (76%)."
+        "💥 France created 2 big chances.",
+        "🎯 France dominated possession (69%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Philadelphia Stadium (Lincoln Financial Field)",
       "city": "Philadelphia"
     },
@@ -8590,30 +8609,30 @@
       "home_xg": 2.61,
       "away_xg": 1.05,
       "real_xg": true,
-      "home_shots": 14.0,
-      "away_shots": 9.0,
-      "home_sot": 4.0,
-      "away_sot": 5.0,
-      "home_poss": 34.0,
-      "away_poss": 66.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 14,
+      "away_shots": 9,
+      "home_sot": 8,
+      "away_sot": 6,
+      "home_poss": 37.8,
+      "away_poss": 62.2,
+      "home_big_chances": 4,
+      "away_big_chances": 3,
       "home_goals": [
         {
-          "min": "90",
-          "player": "Neymar Neymar Jr",
-          "type": "regular"
+          "min": "99",
+          "player": "Neymar",
+          "type": "penalty"
         }
       ],
       "away_goals": [
         {
-          "min": "79",
-          "player": "Erling Braut Haaland",
+          "min": "78",
+          "player": "Erling Haaland",
           "type": "regular"
         },
         {
-          "min": "90",
-          "player": "Erling Braut Haaland",
+          "min": "89",
+          "player": "Erling Haaland",
           "type": "regular"
         }
       ],
@@ -8626,9 +8645,11 @@
         "🚨 **Upset**: model predicted Brazil win (47%) but ended 1–2.",
         "🧱 Brazil underperformed xG (1 goals vs 2.6 xG).",
         "⚡ Norway outscored xG (2 goals vs 1.1 xG) — clinical finishing.",
-        "🎯 Norway dominated possession (66%)."
+        "💥 Brazil created 4 big chances.",
+        "💥 Norway created 3 big chances.",
+        "🎯 Norway dominated possession (62%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
     },
@@ -8720,18 +8741,18 @@
       "home_xg": 0.63,
       "away_xg": 1.69,
       "real_xg": true,
-      "home_shots": 10.0,
-      "away_shots": 15.0,
-      "home_sot": 2.0,
-      "away_sot": 6.0,
-      "home_poss": 45.0,
-      "away_poss": 55.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 10,
+      "away_shots": 15,
+      "home_sot": 5,
+      "away_sot": 9,
+      "home_poss": 46.1,
+      "away_poss": 53.9,
+      "home_big_chances": 1,
+      "away_big_chances": 3,
       "home_goals": [],
       "away_goals": [
         {
-          "min": "90+1",
+          "min": "90",
           "player": "Mikel Merino",
           "type": "regular"
         }
@@ -8742,9 +8763,11 @@
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (45%). Final: 0–1."
+        "✅ **Result matched prediction** (45%). Final: 0–1.",
+        "💥 Portugal created 1 big chance.",
+        "💥 Spain created 3 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Miami Stadium (Hard Rock Stadium)",
       "city": "Miami Gardens"
     },
@@ -8762,39 +8785,39 @@
       "home_xg": 0.67,
       "away_xg": 2.15,
       "real_xg": true,
-      "home_shots": 7.0,
-      "away_shots": 15.0,
-      "home_sot": 2.0,
-      "away_sot": 7.0,
-      "home_poss": 56.0,
-      "away_poss": 44.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 7,
+      "away_shots": 15,
+      "home_sot": 2,
+      "away_sot": 11,
+      "home_poss": 55.1,
+      "away_poss": 44.9,
+      "home_big_chances": 0,
+      "away_big_chances": 4,
       "home_goals": [
         {
-          "min": "31",
-          "player": "Malik Leon Tillman",
+          "min": "30",
+          "player": "Malik Tillman",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "9",
-          "player": "Charles Marc De Ketelaere",
+          "min": "8",
+          "player": "Charles De Ketelaere",
           "type": "regular"
         },
         {
-          "min": "33",
-          "player": "Charles Marc De Ketelaere",
+          "min": "32",
+          "player": "Charles De Ketelaere",
           "type": "regular"
         },
         {
-          "min": "57",
+          "min": "56",
           "player": "Hans Vanaken",
           "type": "regular"
         },
         {
-          "min": "90+3",
+          "min": "92",
           "player": "Romelu Lukaku",
           "type": "regular"
         }
@@ -8806,9 +8829,10 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "🚨 **Upset**: model predicted USA win (41%) but ended 1–4.",
-        "⚡ Belgium outscored xG (4 goals vs 2.1 xG) — clinical finishing."
+        "⚡ Belgium outscored xG (4 goals vs 2.1 xG) — clinical finishing.",
+        "💥 Belgium created 4 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "San Francisco Bay Area Stadium (Levi's Stadium)",
       "city": "Santa Clara"
     },
@@ -8823,35 +8847,145 @@
       "pA": 0.06,
       "lam": 2.5,
       "mu": 0.62,
-      "home_xg": 2.5,
-      "away_xg": 0.62,
+      "home_xg": 3.72,
+      "away_xg": 1.0,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_shots": 19,
+      "away_shots": 5,
+      "home_sot": 12,
+      "away_sot": 2,
+      "home_poss": 58.8,
+      "away_poss": 41.2,
+      "home_big_chances": 6,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "78",
+          "player": "Cristian Romero",
+          "type": "regular"
+        },
+        {
+          "min": "82",
+          "player": "Lionel Messi",
+          "type": "regular"
+        },
+        {
+          "min": "91",
+          "player": "Enzo Fernández",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "14",
+          "player": "Yasser Ibrahim",
+          "type": "regular"
+        },
+        {
+          "min": "66",
+          "player": "Mostafa Zico",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (77%). Final: 3–2.",
-        "⚡ Egypt outscored xG (2 goals vs 0.6 xG) — clinical finishing."
+        "⚡ Egypt outscored xG (2 goals vs 1.0 xG) — clinical finishing.",
+        "💥 Argentina created 6 big chances.",
+        "💥 Egypt created 2 big chances.",
+        "🎯 Egypt: 2 goals from 5 shots (40% conversion)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Kansas City Stadium (Arrowhead Stadium)",
       "city": "Kansas City"
+    },
+    {
+      "date": "2026-07-07",
+      "home": "SUI",
+      "away": "COL",
+      "g1": 1,
+      "g2": 0,
+      "pH": 0.269,
+      "pD": 0.31,
+      "pA": 0.422,
+      "lam": 1.1,
+      "mu": 1.42,
+      "home_xg": 4.46,
+      "away_xg": 5.73,
+      "real_xg": false,
+      "home_shots": 12,
+      "away_shots": 20,
+      "home_sot": 7,
+      "away_sot": 13,
+      "home_poss": 52.5,
+      "away_poss": 47.5,
+      "home_big_chances": 5,
+      "away_big_chances": 7,
+      "home_goals": [
+        {
+          "min": "122",
+          "player": "Granit Xhaka",
+          "type": "penalty"
+        },
+        {
+          "min": "124",
+          "player": "Zeki Amdouni",
+          "type": "penalty"
+        },
+        {
+          "min": "128",
+          "player": "Cedric Itten",
+          "type": "penalty"
+        },
+        {
+          "min": "130",
+          "player": "Rubén Vargas",
+          "type": "penalty"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "121",
+          "player": "Juan Fernando Quintero",
+          "type": "penalty"
+        },
+        {
+          "min": "125",
+          "player": "Jaminton Campaz",
+          "type": "penalty"
+        },
+        {
+          "min": "129",
+          "player": "Luis Díaz",
+          "type": "penalty"
+        }
+      ],
+      "reds": [],
+      "has_stats": true,
+      "went_pens": true,
+      "pens": {
+        "home": 3,
+        "away": 3
+      },
+      "winner": null,
+      "narrative": [
+        "🚨 **Upset**: model predicted Colombia win (42%) but ended 1–0.",
+        "🧱 Switzerland underperformed xG (1 goals vs 4.5 xG).",
+        "🧱 Colombia underperformed xG (0 goals vs 5.7 xG).",
+        "💥 Switzerland created 5 big chances.",
+        "💥 Colombia created 7 big chances."
+      ],
+      "nlbair": true,
+      "stadium": "Seattle Stadium (Lumen Field)",
+      "city": "Seattle"
     }
   ],
   "real_xg_games": 52,
-  "nlbair_games": 80,
-  "narratives_built": 95,
+  "nlbair_games": 85,
+  "narratives_built": 96,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
