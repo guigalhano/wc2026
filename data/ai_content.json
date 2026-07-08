@@ -1,11 +1,39 @@
 {
-  "generated_at": "2026-07-07T23:32:50.700285+00:00",
-  "generated_at_brt": "07/07/2026 20:32 BRT",
+  "generated_at": "2026-07-08T09:17:05.165584+00:00",
+  "generated_at_brt": "08/07/2026 06:17 BRT",
   "value_bets_today": {
-    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, mas com grande apelo histórico e técnico: França vs Marrocos. As odds refletem o favoritismo claro dos franceses, porém Marrocos demonstrou capacidade de surpreender em Mundiais recentes.\",\n  \"tip_of_day\": {\n    \"jogo\": \"France vs Mor",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [],
+  "match_previews": [
+    {
+      "game_id": "b6e926d7f026782b9cab2fa02b823d92",
+      "home": "France",
+      "away": "Morocco",
+      "time": "2026-07-09T20:00:00Z",
+      "h2h": {
+        "home": 1.63,
+        "away": 7.0,
+        "draw": 4.02
+      },
+      "totals": {
+        "over25": 2.7,
+        "under25": 1.92
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "França enfrenta Marrocos com clara superioridade técnica e histórico ofensivo expressivo, sendo ampla favorita neste que deve ser um duelo de Copa do Mundo 2026. Espera-se domínio francês com transições rápidas explorando os espaços deixados pelo Marrocos, que tende a defender de forma compacta e sair em contra-ataques.",
+        "aposta_principal": "França Vence (1x2) @ 1.63",
+        "justificativa": "O rating superior da França (95.3 vs 81) combinado com xG de 2.52 contra apenas 1.52 do Marrocos evidencia diferença de nível ofensivo significativa. A defesa marroquina (xGA 0.55) é sólida, mas enfrenta um ataque com Mbappé e transições velozes que tendem a criar situações de alta qualidade. Historicamente, seleções de nível similar ao Marrocos sofrem contra o volume ofensivo francês.",
+        "apostas_alternativas": [
+          "Ambas Marcam - Não @ verificar odd (Marrocos defende bem, xGA 0.55, França pode vencer sem sofrer)",
+          "França Vence & Under 3.5 Gols @ odd estimada ~2.10 (vitória controlada é cenário mais provável dado o estilo defensivo marroquino)"
+        ],
+        "risco": "A solidez defensiva do Marrocos (xGA 0.55 é um dos melhores números) pode frustrar o ataque francês e aproximar o resultado, tornando o empate ou uma vitória magra possível se o jogo ficar travado.",
+        "confianca": "alta"
+      }
+    }
+  ],
   "tactical_notes": {}
 }
