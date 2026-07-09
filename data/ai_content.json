@@ -1,63 +1,36 @@
 {
-  "generated_at": "2026-07-09T21:28:01.397536+00:00",
-  "generated_at_brt": "09/07/2026 18:28 BRT",
+  "generated_at": "2026-07-09T23:19:13.693314+00:00",
+  "generated_at_brt": "09/07/2026 20:19 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia de Copa do Mundo 2026 com dois confrontos de alto nível, onde o calor extremo em Dallas e Houston (acima de 38°C) favorece equipes com maior profundidade de elenco e posse de bola controlada. France e Spain surgem como favoritas sólidas, mas as odds do empate Spain vs Bel",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, Spain vs Belgium, clássico europeu com Espanha favorita às odds de 1.69. O value está concentrado em mercados alternativos, já que a odd da Espanha reflete bem sua superioridade técnica atual.\",\n  \"tip_of_day\": {\n    \"jogo\": \"Spain vs",
     "bets": [],
     "tip_of_day": null
   },
   "match_previews": [
-    {
-      "game_id": "b6e926d7f026782b9cab2fa02b823d92",
-      "home": "France",
-      "away": "Morocco",
-      "time": "2026-07-09T20:00:00Z",
-      "h2h": {
-        "home": 1.83,
-        "away": 50.0,
-        "draw": 8.0
-      },
-      "totals": {
-        "over25": 2.75,
-        "under25": 3.2
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "França enfrenta Marrocos com clara superioridade técnica e histórica, sendo amplamente favorita para avançar na competição. O confronto deve ser controlado pelos franceses, com Marrocos tentando se sustentar defensivamente e explorar contra-ataques.",
-        "aposta_principal": "França Vence (1X2) @ 1.83",
-        "justificativa": "A França apresenta xG de 2.52 contra apenas 1.52 de Marrocos, refletindo dominância ofensiva consistente. O rating de 95.3 vs 81 evidencia diferença de nível significativa, e o histórico de transições rápidas com Mbappé tende a castigar linhas defensivas recuadas. A odd de 1.83 oferece valor razoável dado o desequilíbrio entre as seleções.",
-        "apostas_alternativas": [
-          "França Vence & Under 2.5 Gols — valor em jogo controlado com Marrocos defensivo (xGA 0.55)",
-          "França Marcar Primeiro @ mercado disponível — transições rápidas favorecem abertura precoce do placar"
-        ],
-        "risco": "Marrocos possui solidez defensiva notável (xGA 0.55) e pode surpreender em um dia inspirado de goleiro ou bola parada, tornando o placar imprevisível.",
-        "confianca": "alta"
-      }
-    },
     {
       "game_id": "fca257de4583bd4bc592e8b2a8f24ad7",
       "home": "Spain",
       "away": "Belgium",
       "time": "2026-07-10T19:00:00Z",
       "h2h": {
-        "away": 6.0,
+        "away": 6.1,
         "home": 1.69,
-        "draw": 4.15
+        "draw": 4.1
       },
       "totals": {
-        "over25": 2.03,
+        "over25": 2.04,
         "under25": 3.15
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha enfrenta a Bélgica com ampla superioridade técnica e estatística, sendo favorita clara com xG de 2.95 contra 1.11 de xGA adversário. O confronto deve ser marcado pelo domínio espanhol de posse e criação ofensiva, com Lamine Yamal como principal ameaça.",
-        "aposta_principal": "Over 2.5 gols @ 2.03",
-        "justificativa": "A Bélgica possui defesa frágil (xGA 1.11) e o ataque espanhol é o mais produtivo do torneio (xG 2.95). Do lado belga, De Bruyne e Doku têm capacidade real de criar chances, e a Espanha costuma sofrer pressão mesmo vencendo. A combinação de ataque forte espanhol com defesa vulnerável belga favorece partida com volume de gols.",
+        "resumo": "Espanha chega como clara favorita com superioridade técnica e xG quase 3 gols por partida, enquanto a Bélgica apresenta defesa frágil com xGA de 1.11. O cenário aponta para domínio espanhol com volume ofensivo alto, especialmente com Lamine Yamal e o pressing intenso da seleção ibérica.",
+        "aposta_principal": "Over 2.5 gols @ 2.04",
+        "justificativa": "Espanha produz em média 2.95 xG por jogo e a Bélgica sofre 1.11 xGA, criando condição ideal para partida com mais de 2.5 gols. A Bélgica também gera perigo ofensivo com De Bruyne e Doku, e tende a se abrir ao atacar contra equipes superiores, o que favorece ainda mais o volume de gols. A odd de 2.04 oferece valor considerando os dados combinados das duas equipes.",
         "apostas_alternativas": [
           "Vitória da Espanha @ 1.69",
-          "Espanha vence e Over 1.5 gols @ ~1.85 (mercado combinado)"
+          "Espanha marca em ambos os tempos @ estimado 2.20+"
         ],
-        "risco": "A Espanha pode controlar o jogo de forma conservadora e fechar o placar em 1-0 ou 2-0, frustrando o Over 2.5.",
+        "risco": "A Bélgica pode adotar postura defensiva com bloco baixo e De Bruyne controlando o ritmo, limitando os espaços e mantendo o jogo no 0x0 por longos períodos.",
         "confianca": "media"
       }
     }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T21:28:00.383598+00:00",
+  "updated_at": "2026-07-09T23:19:12.408644+00:00",
   "teams": [
     {
       "code": "NOR",
@@ -89,16 +89,16 @@
     {
       "code": "FRA",
       "name": "France",
-      "games": 5,
-      "goals_for": 14,
+      "games": 6,
+      "goals_for": 16,
       "goals_against": 2,
-      "xg_for": 11.5,
-      "xg_against": 4.16,
-      "wins": 5,
+      "xg_for": 14.6,
+      "xg_against": 4.29,
+      "wins": 6,
       "draws": 0,
       "losses": 0,
-      "points": 15,
-      "expected_points": 12.028625262604915,
+      "points": 18,
+      "expected_points": 14.02156162250629,
       "big_chances_created": 19,
       "big_chances_conceded": 0,
       "matches": [
@@ -151,12 +151,22 @@
           "xga": 0.3,
           "result": "W",
           "p_win": 0.865
+        },
+        {
+          "vs": "MAR",
+          "date": "2026-07-09",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 3.1,
+          "xga": 0.13,
+          "result": "W",
+          "p_win": 0.575
         }
       ],
-      "xpts": 12.03,
-      "delta_pts": 2.97,
-      "xgf": 2.3,
-      "xga": 0.83,
+      "xpts": 14.02,
+      "delta_pts": 3.98,
+      "xgf": 2.43,
+      "xga": 0.71,
       "efi": {
         "games": 5,
         "xg_official": 1.96,
@@ -169,7 +179,7 @@
         "top_speed": 37.6,
         "shot_accuracy": 44.3
       },
-      "dgf_efi": 0.84
+      "dgf_efi": 0.71
     },
     {
       "code": "SUI",
@@ -255,91 +265,6 @@
         "shot_accuracy": 39.7
       },
       "dgf_efi": -0.03
-    },
-    {
-      "code": "MAR",
-      "name": "Morocco",
-      "games": 5,
-      "goals_for": 10,
-      "goals_against": 4,
-      "xg_for": 7.95,
-      "xg_against": 4.54,
-      "wins": 3,
-      "draws": 2,
-      "losses": 0,
-      "points": 11,
-      "expected_points": 8.835201200139906,
-      "big_chances_created": 20,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "BRA",
-          "date": "2026-06-13",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.1,
-          "xga": 1.62,
-          "result": "D",
-          "p_win": 0.231
-        },
-        {
-          "vs": "ESC",
-          "date": "2026-06-19",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 0.54,
-          "xga": 0.97,
-          "result": "W",
-          "p_win": 0.664
-        },
-        {
-          "vs": "HAI",
-          "date": "2026-06-24",
-          "gf": 4,
-          "ga": 2,
-          "xgf": 3.71,
-          "xga": 0.92,
-          "result": "W",
-          "p_win": 0.875
-        },
-        {
-          "vs": "HOL",
-          "date": "2026-06-30",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.4,
-          "xga": 0.23,
-          "result": "D",
-          "p_win": 0.296
-        },
-        {
-          "vs": "CAN",
-          "date": "2026-07-04",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 1.2,
-          "xga": 0.8,
-          "result": "W",
-          "p_win": 0.464
-        }
-      ],
-      "xpts": 8.84,
-      "delta_pts": 2.16,
-      "xgf": 1.59,
-      "xga": 0.91,
-      "efi": {
-        "games": 5,
-        "xg_official": 1.28,
-        "pass_accuracy": 88.6,
-        "avg_distance_km": 7.46,
-        "sprints": 497.6,
-        "forced_turnovers": 45.2,
-        "linebreaks_completed": 108.4,
-        "linebreaks_attempted": 169.0,
-        "top_speed": 35.5,
-        "shot_accuracy": 39.1
-      },
-      "dgf_efi": 0.72
     },
     {
       "code": "ARG",
@@ -915,6 +840,101 @@
         "shot_accuracy": 31.1
       },
       "dgf_efi": -0.13
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "games": 6,
+      "goals_for": 10,
+      "goals_against": 6,
+      "xg_for": 8.08,
+      "xg_against": 7.640000000000001,
+      "wins": 3,
+      "draws": 2,
+      "losses": 1,
+      "points": 11,
+      "expected_points": 9.575250634629473,
+      "big_chances_created": 20,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "BRA",
+          "date": "2026-06-13",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.1,
+          "xga": 1.62,
+          "result": "D",
+          "p_win": 0.231
+        },
+        {
+          "vs": "ESC",
+          "date": "2026-06-19",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 0.54,
+          "xga": 0.97,
+          "result": "W",
+          "p_win": 0.664
+        },
+        {
+          "vs": "HAI",
+          "date": "2026-06-24",
+          "gf": 4,
+          "ga": 2,
+          "xgf": 3.71,
+          "xga": 0.92,
+          "result": "W",
+          "p_win": 0.875
+        },
+        {
+          "vs": "HOL",
+          "date": "2026-06-30",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.4,
+          "xga": 0.23,
+          "result": "D",
+          "p_win": 0.296
+        },
+        {
+          "vs": "CAN",
+          "date": "2026-07-04",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 1.2,
+          "xga": 0.8,
+          "result": "W",
+          "p_win": 0.464
+        },
+        {
+          "vs": "FRA",
+          "date": "2026-07-09",
+          "gf": 0,
+          "ga": 2,
+          "xgf": 0.13,
+          "xga": 3.1,
+          "result": "L",
+          "p_win": 0.158
+        }
+      ],
+      "xpts": 9.58,
+      "delta_pts": 1.42,
+      "xgf": 1.35,
+      "xga": 1.27,
+      "efi": {
+        "games": 5,
+        "xg_official": 1.28,
+        "pass_accuracy": 88.6,
+        "avg_distance_km": 7.46,
+        "sprints": 497.6,
+        "forced_turnovers": 45.2,
+        "linebreaks_completed": 108.4,
+        "linebreaks_attempted": 169.0,
+        "top_speed": 35.5,
+        "shot_accuracy": 39.1
+      },
+      "dgf_efi": 0.39
     },
     {
       "code": "RDC",
@@ -8984,10 +9004,58 @@
       "nlbair": true,
       "stadium": "Seattle Stadium (Lumen Field)",
       "city": "Seattle"
+    },
+    {
+      "date": "2026-07-09",
+      "home": "FRA",
+      "away": "MAR",
+      "g1": 2,
+      "g2": 0,
+      "pH": 0.575,
+      "pD": 0.267,
+      "pA": 0.158,
+      "lam": 1.8,
+      "mu": 0.87,
+      "home_xg": 3.1,
+      "away_xg": 0.13,
+      "real_xg": true,
+      "home_shots": 21.0,
+      "away_shots": 5.0,
+      "home_sot": 8.0,
+      "away_sot": 1.0,
+      "home_poss": 48.0,
+      "away_poss": 52.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [
+        {
+          "min": "60",
+          "player": "Kylian Mbappe",
+          "type": "regular"
+        },
+        {
+          "min": "66",
+          "player": "Masour Ousmane Dembele",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": true,
+      "went_pens": false,
+      "pens": null,
+      "winner": "HOME_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (58%). Final: 2–0.",
+        "🧱 France underperformed xG (2 goals vs 3.1 xG)."
+      ],
+      "nlbair": false,
+      "stadium": "Boston Stadium (Gillette Stadium)",
+      "city": "Foxborough"
     }
   ],
-  "real_xg_games": 54,
+  "real_xg_games": 55,
   "nlbair_games": 86,
-  "narratives_built": 96,
+  "narratives_built": 97,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
