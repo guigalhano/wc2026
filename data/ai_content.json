@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-08T21:53:58.166268+00:00",
-  "generated_at_brt": "08/07/2026 18:53 BRT",
+  "generated_at": "2026-07-09T10:34:04.057528+00:00",
+  "generated_at_brt": "09/07/2026 07:34 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto disponível na Copa 2026, o clássico duelo entre França e Marrocos. As odds refletem o favoritismo francês, mas o valor pode estar distribuído em mercados alternativos dado o histórico recente e a força do futebol marroquino.\",\n  \"tip_of_day\": {\n   ",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de alto nível na Copa 2026, ambos com favoritos europeus bem definidos. As odds sugerem mercados com value interessante nos empates e nas seleções da casa, especialmente onde as casas precificaram mal a resistência dos azarões.\",\n  \"tip_of_day\": {\n    ",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,25 +13,52 @@
       "away": "Morocco",
       "time": "2026-07-09T20:00:00Z",
       "h2h": {
-        "home": 1.62,
+        "home": 1.63,
         "away": 7.2,
         "draw": 4.1
       },
       "totals": {
         "over25": 2.8,
-        "under25": 1.91
+        "under25": 1.9
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "França enfrenta Marrocos com ampla vantagem técnica e histórico ofensivo superior, sendo favorita clara com xG de 2.52 contra apenas 1.52 dos africanos. O cenário aponta para domínio francês, embora Marrocos tenha demonstrado solidez defensiva com xGA de 0.55.",
-        "aposta_principal": "França Vence — Odd 1.62",
-        "justificativa": "A diferença de rating (95.3 vs 81) e o xG superior da França (2.52) reforçam o favoritismo. Marrocos possui boa organização defensiva, mas o poder ofensivo francês com Mbappé e transições rápidas deve ser suficiente para superar o bloco marroquino. A odd de 1.62 reflete valor aceitável para o nível de superioridade técnica apresentado.",
+        "resumo": "França enfrenta Marrocos com ampla vantagem técnica e histórico ofensivo superior, sendo favorita clara neste que deve ser um duelo de Copa do Mundo 2026. O Marrocos chega com defesa sólida (xGA 0.55), mas a qualidade individual francesa e o xG de 2.52 sugerem pressão constante sobre o gol marroquino.",
+        "aposta_principal": "França Vence (1x2) @ 1.63",
+        "justificativa": "A diferença de rating (95.3 vs 81) e o xG superior da França (2.52 vs 1.52) indicam domínio claro esperado. O elenco profundo com Mbappé nas transições rápidas é especialmente eficiente contra blocos baixos. A odd de 1.63 reflete valor justo dado o favoritismo consistente dos dados.",
         "apostas_alternativas": [
-          "França Vence & Under 2.5 Gols — explora solidez defensiva de Marrocos (xGA 0.55) com risco controlado",
-          "França Marcar Primeiro — alta probabilidade dado xG 2.52 e intensidade ofensiva nas transições com Mbappé"
+          "França Vence + Under 3.5 Gols @ ~2.10 — equilibra a defesa sólida do Marrocos (xGA 0.55) com a vitória francesa",
+          "França Marcar Primeiro (Sim) @ ~1.50 — xG elevado e pressão inicial tendem a antecipar os gols franceses"
         ],
-        "risco": "A organização defensiva de Marrocos (xGA 0.55) é o maior obstáculo, podendo frustrar o ataque francês e resultar em vitória apertada ou empate em caso de jogo travado.",
+        "risco": "A organização defensiva do Marrocos (xGA 0.55, um dos melhores do torneio) pode frustrar a França e forçar um placar magro ou até empate em jogo truncado.",
         "confianca": "alta"
+      }
+    },
+    {
+      "game_id": "fca257de4583bd4bc592e8b2a8f24ad7",
+      "home": "Spain",
+      "away": "Belgium",
+      "time": "2026-07-10T19:00:00Z",
+      "h2h": {
+        "away": 6.0,
+        "home": 1.69,
+        "draw": 4.13
+      },
+      "totals": {
+        "over25": 2.03,
+        "under25": 3.05
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Espanha chega como favorita clara com superioridade técnica e xG médio de 2.95 por jogo, indicando potencial ofensivo elevado. A Bélgica possui atacantes perigosos mas defesa vulnerável (xGA 1.11), o que deve favorecer um jogo com gols.",
+        "aposta_principal": "Over 2.5 gols @ 2.03",
+        "justificativa": "A combinação entre o ataque espanhol de alto xG (2.95) e a defesa belga frágil (xGA 1.11) cria cenário propício para partida com pelo menos 3 gols. A Espanha cede pouco (xGA 0.88), mas De Bruyne e Doku têm capacidade de marcar mesmo sob pressão. Historicamente confrontos entre equipes de alto xG bilateral tendem a ultrapassar a linha de 2.5.",
+        "apostas_alternativas": [
+          "Vitória da Espanha @ 1.69",
+          "Ambas marcam (BTTS) @ estimado ~2.10"
+        ],
+        "risco": "A Bélgica pode adotar postura defensiva e explorar contra-ataques, mantendo o jogo travado e frustrando o Over 2.5.",
+        "confianca": "media"
       }
     }
   ],
