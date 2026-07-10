@@ -1,39 +1,12 @@
 {
-  "generated_at": "2026-07-10T21:12:23.728152+00:00",
-  "generated_at_brt": "10/07/2026 18:12 BRT",
+  "generated_at": "2026-07-10T23:03:35.467760+00:00",
+  "generated_at_brt": "10/07/2026 20:03 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos contrastantes na Copa 2026: Espanha é favorita pesada contra a Bélgica, enquanto Norway vs England apresenta um equilíbrio maior com a Inglaterra leve favorita. As melhores oportunidades de value estão nos azarões e no mercado equilibrado da segunda partida",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, mas com excelente oportunidade de value na vitória da Inglaterra, que entra como favorita clara diante da Noruega. As odds do mercado sugerem probabilidade implícita de 51,5% para a Inglaterra, possivelmente subestimada dado o nível a",
     "bets": [],
     "tip_of_day": null
   },
   "match_previews": [
-    {
-      "game_id": "fca257de4583bd4bc592e8b2a8f24ad7",
-      "home": "Spain",
-      "away": "Belgium",
-      "time": "2026-07-10T19:00:00Z",
-      "h2h": {
-        "away": 1000.0,
-        "home": 3.12,
-        "draw": 36.0
-      },
-      "totals": {
-        "over25": 25.0,
-        "under25": 1.71
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Espanha enfrenta a Bélgica com ampla superioridade técnica e estatística, sendo enorme favorita neste confronto. O cenário aponta para domínio espanhol com posse e pressing alto, explorando a defesa frágil dos belgas.",
-        "aposta_principal": "Vitória da Espanha @ 3.12",
-        "justificativa": "A Espanha apresenta rating 100 contra 84.6 da Bélgica, com xG de 2.95 vs 2.48 e defesa muito mais sólida (xGA 0.88 vs 1.11). As odds de 3.12 para a Espanha parecem subvalorizadas dado o favoritismo estatístico claro, sugerindo valor real na aposta. A presença de Lamine Yamal contra uma defesa belga instável reforça o potencial ofensivo espanhol.",
-        "apostas_alternativas": [
-          "Espanha vence e ambas marcam @ odd a verificar em outras casas",
-          "Mais de 1.5 gols da Espanha @ odd a verificar — xG 2.95 suporta volume ofensivo alto"
-        ],
-        "risco": "As odds extremamente infladas para empate (36.0) e vitória belga (1000.0) sugerem possível erro de mercado ou jogo com contexto especial — verificar a legitimidade da partida antes de apostar.",
-        "confianca": "media"
-      }
-    },
     {
       "game_id": "e66e4478b739fa0657a7a11235e1fcee",
       "home": "Norway",
@@ -45,19 +18,19 @@
         "draw": 3.9
       },
       "totals": {
-        "over25": 1.93,
+        "over25": 2.17,
         "under25": 3.25
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra chega como clara favorita com rating superior (91.9) e uma das defesas mais sólidas do torneio (xGA 0.26), enquanto a Noruega depende quase exclusivamente de Haaland para criar perigo. O confronto deve ser controlado pelos ingleses, com a Noruega buscando explorar transições rápidas caso Haaland apareça.",
-        "aposta_principal": "Inglaterra Vence (1X2) @ 1.94",
-        "justificativa": "Inglaterra apresenta rating 5.7 pontos superior e xGA de apenas 0.26, indicando defesa historicamente eficiente nesta campanha. O xG de 2.59 mostra capacidade ofensiva consistente, enquanto a Noruega, apesar do xG alto (3.36), é extremamente dependente de Haaland — o que a defesa de Tuchel, organizada e compacta, tende a neutralizar. Odd de 1.94 oferece valor razoável dado o desnível técnico.",
+        "resumo": "Inglaterra chega como favorita clara contra uma Noruega que depende fortemente de Haaland, com defesa sólida e rating superior de 91.9. O confronto deve ser controlado pelos ingleses, com a Noruega apostando em transições rápidas para explorar o poder ofensivo do seu centroavante.",
+        "aposta_principal": "Inglaterra Vence (1x2) @ 1.94",
+        "justificativa": "A Inglaterra apresenta xGA de apenas 0.26, indicando defesa extremamente sólida sob Tuchel, enquanto a Noruega concede 0.53 xGA por jogo. O rating inglês é superior em 5.7 pontos e o xG ofensivo de 3.36 da Noruega é inflado pela presença de Haaland, mas a consistência defensiva inglesa tende a anular esse fator. A odd de 1.94 oferece valor real considerando a diferença técnica entre os lados.",
         "apostas_alternativas": [
-          "Over 2.5 Gols @ 1.93 — xG combinado de 5.95 sugere partida aberta em volume ofensivo, especialmente se Haaland ameaçar e forçar a Inglaterra a jogar mais aberta",
-          "Inglaterra Vence e Over 1.5 Gols @ ~2.20 (mercado combinado) — cenário mais provável: vitória inglesa com ao menos 2 gols marcados"
+          "Over 2.5 Gols @ 2.17 — xG combinado de 5.95 sugere jogo com gols, especialmente com Haaland vs defesa inglesa em nível de alta pressão",
+          "Inglaterra Vence e Ambos Marcam @ ~3.20 — Haaland tem capacidade individual para marcar mesmo contra defesas de elite, mantendo o placar movimentado"
         ],
-        "risco": "O risco principal é Erling Haaland em um dia inspirado: com xG norueguês de 3.36, uma atuação individual de elite pode virar o jogo e comprometer tanto a vitória inglesa quanto mercados defensivos.",
+        "risco": "Haaland é um fator isolado capaz de alterar qualquer prognóstico com um único momento de brilho, e a odd de 1.94 da Inglaterra oferece margem de lucro limitada caso o jogo se equilibre.",
         "confianca": "alta"
       }
     }
