@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10T14:42:35.493959+00:00",
-  "generated_at_brt": "10/07/2026 11:42 BRT",
+  "generated_at": "2026-07-10T17:52:20.177661+00:00",
+  "generated_at_brt": "10/07/2026 14:52 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de alto nível na Copa 2026, destacando o favoritismo claro da Espanha e da Inglaterra em suas respectivas partidas. As odds oferecem oportunidades de value especialmente nas seleções favoritas e em mercados alternativos com retorno elevado.\",\n  \"tip_of",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos de Copa do Mundo 2026 oferecendo oportunidades interessantes de value, especialmente nas odds de times considerados azarões. Spain surge como favorita clara contra Belgium, enquanto England é favorita moderada frente a uma Norway com potencial ofensivo elev",
     "bets": [],
     "tip_of_day": null
   },
@@ -14,23 +14,23 @@
       "time": "2026-07-10T19:00:00Z",
       "h2h": {
         "away": 6.2,
-        "home": 1.65,
-        "draw": 4.23
+        "home": 1.68,
+        "draw": 4.2
       },
       "totals": {
-        "over25": 2.0,
-        "under25": 3.2
+        "over25": 1.98,
+        "under25": 3.15
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha enfrenta a Bélgica com clara superioridade técnica e estatística, sustentada por um xG de 2.95 contra apenas 0.88 sofrido. O confronto deve ser dominado pelos espanhóis, com a fragilidade defensiva belga (xGA 1.11) abrindo espaço para um jogo com gols.",
-        "aposta_principal": "Over 2.5 gols @ 2.0",
-        "justificativa": "A Espanha produz em média 2.95 xG por jogo e a Bélgica concede 1.11 xGA, criando condições favoráveis para uma partida com ao menos 3 gols. Somado ao potencial ofensivo belga com De Bruyne e Doku — time que gera 2.48 xG — ambas as equipes tendem a balançar as redes. A odd de 2.0 oferece valor real para esse cenário.",
+        "resumo": "Espanha enfrenta a Bélgica com clara vantagem estatística e superioridade de rating (100 vs 84.6), sendo forte favorita para avançar. O confronto deve ser ofensivo, com a defesa belga frágil exposta ao poderio atacante espanhol liderado por Lamine Yamal.",
+        "aposta_principal": "Over 2.5 gols @ 1.98",
+        "justificativa": "Espanha apresenta xG de 2.95 por jogo, enquanto a Bélgica tem xGA de 1.11 e defesa reconhecidamente vulnerável. Do outro lado, De Bruyne e Doku têm capacidade real de explorar espaços contra o pressing alto espanhol, tornando um jogo com 3+ gols o cenário mais provável. A odd de 1.98 oferece valor positivo dado o perfil ofensivo das duas equipes.",
         "apostas_alternativas": [
-          "Vitória da Espanha @ 1.65",
-          "Espanha vence e Over 2.5 (combinada) @ ~2.90 estimado"
+          "Vitória da Espanha @ 1.68 — favorita consistente com rating máximo e xG dominante",
+          "Espanha Vence & Over 2.5 @ ~2.80 — combina o resultado mais provável com o volume de gols esperado"
         ],
-        "risco": "A Bélgica tem capacidade ofensiva real com De Bruyne e Doku, podendo surpreender se a Espanha baixar o ritmo defensivo em momentos pontuais.",
+        "risco": "A Bélgica possui qualidade individual capaz de surpreender em transições rápidas, e De Bruyne em grande dia pode desequilibrar qualquer equipe.",
         "confianca": "alta"
       }
     },
@@ -41,7 +41,7 @@
       "time": "2026-07-11T21:00:00Z",
       "h2h": {
         "away": 1.96,
-        "home": 4.35,
+        "home": 4.3,
         "draw": 3.85
       },
       "totals": {
@@ -50,15 +50,15 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra enfrenta a Noruega com clara superioridade técnica e defensiva, sendo favorita justificada pelas métricas. A Noruega depende quase exclusivamente de Haaland para ameaçar, enquanto a Inglaterra apresenta equilíbrio coletivo superior com xGA de apenas 0.26.",
-        "aposta_principal": "Inglaterra Vence @ 1.96",
-        "justificativa": "O rating de 91.9 vs 86.2 e o xGA da Inglaterra (0.26) indicam uma defesa de elite sob Tuchel, capaz de conter o ritmo norueguês. O xG inglês de 2.59 demonstra criação consistente de chances, enquanto a Noruega, apesar do xG elevado (3.36), é altamente dependente de Haaland — contenha Haaland e a ameaça cai drasticamente. A odd de 1.96 oferece valor razoável dado o diferencial entre as equipes.",
+        "resumo": "England chega como ampla favorita com rating superior (91.9 vs 86.2) e uma das defesas mais sólidas do torneio (xGA 0.26). Norway depende quase exclusivamente de Haaland para criar perigo, mas seu ataque coletivo é limitado frente à estrutura defensiva montada por Tuchel.",
+        "aposta_principal": "England Vence — Odd 1.96",
+        "justificativa": "O rating superior da Inglaterra (91.9) combinado com xGA impressionante de apenas 0.26 indica uma defesa que dificilmente será vazada pelo jogo norueguês. O xG da England (2.59) supera o da Norway em qualidade de finalizações coletivas, e sem Haaland em forma máxima a Norway carece de alternativas reais para virar o jogo.",
         "apostas_alternativas": [
-          "Inglaterra Vence e Menos de 3.5 Gols @ ~2.20 (proteção contra goleada que encurte a odd)",
-          "Haaland Marca a Qualquer Momento @ ~2.10 (único ponto de perigo real da Noruega, com alto volume de xG gerado por ele)"
+          "England Vence & Under 2.5 Gols — mercado combinado estimado ~2.50, refletindo o estilo controlado de Tuchel",
+          "England Vence a Zero (Clean Sheet) — odd estimada ~2.80, sustentada pelo xGA de 0.26 e solidez defensiva comprovada"
         ],
-        "risco": "O xG elevadíssimo da Noruega (3.36) sugere que, se Haaland estiver em dia e a defesa inglesa cometer erros posicionais, uma virada surpreendente não é impossível dado o ritmo brutal do time escandinavo.",
-        "confianca": "media"
+        "risco": "Haaland é um evento isolado capaz de mudar qualquer jogo com uma jogada, tornando a odd do Norway (4.3) tentadora como zebra pontual.",
+        "confianca": "alta"
       }
     }
   ],
