@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T19:42:41.005404+00:00",
+  "updated_at": "2026-07-10T21:12:22.639957+00:00",
   "teams": [
     {
       "code": "NOR",
@@ -180,6 +180,101 @@
         "shot_accuracy": 42.7
       },
       "dgf_efi": 0.45
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "games": 6,
+      "goals_for": 11,
+      "goals_against": 1,
+      "xg_for": 13.396182340156678,
+      "xg_against": 3.6491658134610314,
+      "wins": 5,
+      "draws": 1,
+      "losses": 0,
+      "points": 16,
+      "expected_points": 13.624661274059392,
+      "big_chances_created": 15,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CAB",
+          "date": "2026-06-15",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 2.15,
+          "xga": 0.35,
+          "result": "D",
+          "p_win": 0.909
+        },
+        {
+          "vs": "ARS",
+          "date": "2026-06-21",
+          "gf": 4,
+          "ga": 0,
+          "xgf": 3.28,
+          "xga": 0.25,
+          "result": "W",
+          "p_win": 0.832
+        },
+        {
+          "vs": "URU",
+          "date": "2026-06-27",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.35,
+          "xga": 0.78,
+          "result": "W",
+          "p_win": 0.649
+        },
+        {
+          "vs": "AUT",
+          "date": "2026-07-02",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 3.28,
+          "xga": 0.69,
+          "result": "W",
+          "p_win": 0.789
+        },
+        {
+          "vs": "POR",
+          "date": "2026-07-06",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.69,
+          "xga": 0.63,
+          "result": "W",
+          "p_win": 0.45
+        },
+        {
+          "vs": "BEL",
+          "date": "2026-07-10",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 1.65,
+          "xga": 0.95,
+          "result": "W",
+          "p_win": 0.516
+        }
+      ],
+      "xpts": 13.62,
+      "delta_pts": 2.38,
+      "xgf": 2.23,
+      "xga": 0.61,
+      "efi": {
+        "games": 5,
+        "xg_official": 2.11,
+        "pass_accuracy": 91.4,
+        "avg_distance_km": 7.31,
+        "sprints": 443.0,
+        "forced_turnovers": 50.4,
+        "linebreaks_completed": 168.0,
+        "linebreaks_attempted": 212.0,
+        "top_speed": 33.7,
+        "shot_accuracy": 34.4
+      },
+      "dgf_efi": -0.28
     },
     {
       "code": "SUI",
@@ -435,91 +530,6 @@
         "shot_accuracy": 22.9
       },
       "dgf_efi": 0.2
-    },
-    {
-      "code": "BEL",
-      "name": "Belgium",
-      "games": 5,
-      "goals_for": 13,
-      "goals_against": 5,
-      "xg_for": 11.110000000000001,
-      "xg_against": 6.130000000000001,
-      "wins": 3,
-      "draws": 2,
-      "losses": 0,
-      "points": 11,
-      "expected_points": 9.253475703327823,
-      "big_chances_created": 14,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "EGI",
-          "date": "2026-06-15",
-          "gf": 1,
-          "ga": 1,
-          "xgf": 1.58,
-          "xga": 1.12,
-          "result": "D",
-          "p_win": 0.634
-        },
-        {
-          "vs": "IRA",
-          "date": "2026-06-21",
-          "gf": 0,
-          "ga": 0,
-          "xgf": 1.45,
-          "xga": 0.62,
-          "result": "D",
-          "p_win": 0.549
-        },
-        {
-          "vs": "NZE",
-          "date": "2026-06-27",
-          "gf": 5,
-          "ga": 1,
-          "xgf": 3.25,
-          "xga": 0.48,
-          "result": "W",
-          "p_win": 0.778
-        },
-        {
-          "vs": "SEN",
-          "date": "2026-07-01",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 2.68,
-          "xga": 3.24,
-          "result": "W",
-          "p_win": 0.407
-        },
-        {
-          "vs": "EUA",
-          "date": "2026-07-07",
-          "gf": 4,
-          "ga": 1,
-          "xgf": 2.15,
-          "xga": 0.67,
-          "result": "W",
-          "p_win": 0.28
-        }
-      ],
-      "xpts": 9.25,
-      "delta_pts": 1.75,
-      "xgf": 2.22,
-      "xga": 1.23,
-      "efi": {
-        "games": 5,
-        "xg_official": 1.84,
-        "pass_accuracy": 86.5,
-        "avg_distance_km": 7.72,
-        "sprints": 414.8,
-        "forced_turnovers": 41.8,
-        "linebreaks_completed": 101.6,
-        "linebreaks_attempted": 159.2,
-        "top_speed": 34.8,
-        "shot_accuracy": 29.9
-      },
-      "dgf_efi": 0.76
     },
     {
       "code": "ING",
@@ -1097,91 +1107,6 @@
       "dgf_efi": -0.46
     },
     {
-      "code": "ESP",
-      "name": "Spain",
-      "games": 5,
-      "goals_for": 9,
-      "goals_against": 0,
-      "xg_for": 11.749999999999998,
-      "xg_against": 2.6999999999999997,
-      "wins": 4,
-      "draws": 1,
-      "losses": 0,
-      "points": 13,
-      "expected_points": 11.788137395141357,
-      "big_chances_created": 15,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "CAB",
-          "date": "2026-06-15",
-          "gf": 0,
-          "ga": 0,
-          "xgf": 2.15,
-          "xga": 0.35,
-          "result": "D",
-          "p_win": 0.909
-        },
-        {
-          "vs": "ARS",
-          "date": "2026-06-21",
-          "gf": 4,
-          "ga": 0,
-          "xgf": 3.28,
-          "xga": 0.25,
-          "result": "W",
-          "p_win": 0.832
-        },
-        {
-          "vs": "URU",
-          "date": "2026-06-27",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 1.35,
-          "xga": 0.78,
-          "result": "W",
-          "p_win": 0.649
-        },
-        {
-          "vs": "AUT",
-          "date": "2026-07-02",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 3.28,
-          "xga": 0.69,
-          "result": "W",
-          "p_win": 0.789
-        },
-        {
-          "vs": "POR",
-          "date": "2026-07-06",
-          "gf": 1,
-          "ga": 0,
-          "xgf": 1.69,
-          "xga": 0.63,
-          "result": "W",
-          "p_win": 0.45
-        }
-      ],
-      "xpts": 11.79,
-      "delta_pts": 1.21,
-      "xgf": 2.35,
-      "xga": 0.54,
-      "efi": {
-        "games": 5,
-        "xg_official": 2.11,
-        "pass_accuracy": 91.4,
-        "avg_distance_km": 7.31,
-        "sprints": 443.0,
-        "forced_turnovers": 50.4,
-        "linebreaks_completed": 168.0,
-        "linebreaks_attempted": 212.0,
-        "top_speed": 33.7,
-        "shot_accuracy": 34.4
-      },
-      "dgf_efi": -0.31
-    },
-    {
       "code": "BOS",
       "name": "Bosnia & Herzegovina",
       "games": 4,
@@ -1405,6 +1330,101 @@
         "shot_accuracy": 24.5
       },
       "dgf_efi": 0.36
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium",
+      "games": 6,
+      "goals_for": 14,
+      "goals_against": 7,
+      "xg_for": 12.059165813461032,
+      "xg_against": 7.776182340156681,
+      "wins": 3,
+      "draws": 2,
+      "losses": 1,
+      "points": 11,
+      "expected_points": 10.129488053942438,
+      "big_chances_created": 14,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "EGI",
+          "date": "2026-06-15",
+          "gf": 1,
+          "ga": 1,
+          "xgf": 1.58,
+          "xga": 1.12,
+          "result": "D",
+          "p_win": 0.634
+        },
+        {
+          "vs": "IRA",
+          "date": "2026-06-21",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 1.45,
+          "xga": 0.62,
+          "result": "D",
+          "p_win": 0.549
+        },
+        {
+          "vs": "NZE",
+          "date": "2026-06-27",
+          "gf": 5,
+          "ga": 1,
+          "xgf": 3.25,
+          "xga": 0.48,
+          "result": "W",
+          "p_win": 0.778
+        },
+        {
+          "vs": "SEN",
+          "date": "2026-07-01",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.68,
+          "xga": 3.24,
+          "result": "W",
+          "p_win": 0.407
+        },
+        {
+          "vs": "EUA",
+          "date": "2026-07-07",
+          "gf": 4,
+          "ga": 1,
+          "xgf": 2.15,
+          "xga": 0.67,
+          "result": "W",
+          "p_win": 0.28
+        },
+        {
+          "vs": "ESP",
+          "date": "2026-07-10",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 0.95,
+          "xga": 1.65,
+          "result": "L",
+          "p_win": 0.196
+        }
+      ],
+      "xpts": 10.13,
+      "delta_pts": 0.87,
+      "xgf": 2.01,
+      "xga": 1.3,
+      "efi": {
+        "games": 5,
+        "xg_official": 1.84,
+        "pass_accuracy": 86.5,
+        "avg_distance_km": 7.72,
+        "sprints": 414.8,
+        "forced_turnovers": 41.8,
+        "linebreaks_completed": 101.6,
+        "linebreaks_attempted": 159.2,
+        "top_speed": 34.8,
+        "shot_accuracy": 29.9
+      },
+      "dgf_efi": 0.49
     },
     {
       "code": "EGI",
@@ -9052,10 +9072,46 @@
       "nlbair": false,
       "stadium": "Boston Stadium (Gillette Stadium)",
       "city": "Foxborough"
+    },
+    {
+      "date": "2026-07-10",
+      "home": "ESP",
+      "away": "BEL",
+      "g1": 2,
+      "g2": 1,
+      "pH": 0.516,
+      "pD": 0.287,
+      "pA": 0.196,
+      "lam": 1.65,
+      "mu": 0.95,
+      "home_xg": 1.65,
+      "away_xg": 0.95,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "HOME_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (52%). Final: 2–1."
+      ],
+      "nlbair": false,
+      "stadium": "Los Angeles Stadium (SoFi Stadium)",
+      "city": "Inglewood"
     }
   ],
   "real_xg_games": 55,
   "nlbair_games": 86,
-  "narratives_built": 97,
+  "narratives_built": 98,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
