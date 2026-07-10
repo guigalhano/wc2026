@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10T11:12:08.113984+00:00",
-  "generated_at_brt": "10/07/2026 08:12 BRT",
+  "generated_at": "2026-07-10T14:42:35.493959+00:00",
+  "generated_at_brt": "10/07/2026 11:42 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos da Copa do Mundo 2026 apresentando oportunidades interessantes de value, especialmente em favoritos com odds acima do esperado. Spain e England surgem como as apostas mais sólidas considerando qualidade técnica e histórico recente.\",\n  \"tip_of_day\": {\n    \"",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de alto nível na Copa 2026, destacando o favoritismo claro da Espanha e da Inglaterra em suas respectivas partidas. As odds oferecem oportunidades de value especialmente nas seleções favoritas e em mercados alternativos com retorno elevado.\",\n  \"tip_of",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "Belgium",
       "time": "2026-07-10T19:00:00Z",
       "h2h": {
-        "away": 6.3,
-        "home": 1.67,
-        "draw": 4.17
+        "away": 6.2,
+        "home": 1.65,
+        "draw": 4.23
       },
       "totals": {
-        "over25": 2.03,
-        "under25": 3.15
+        "over25": 2.0,
+        "under25": 3.2
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha chega como favorita clara com superioridade técnica e um xG ofensivo de 2.95 contra uma defesa belga que concede em média 1.11 gols esperados por jogo. O cenário aponta para domínio espanhol com múltiplos gols, aproveitando a fragilidade defensiva da Bélgica e a presença de Lamine Yamal no ataque.",
-        "aposta_principal": "Over 2.5 gols @ 2.03",
-        "justificativa": "A combinação dos xG das duas equipes soma 5.43 por jogo, valor bem acima do limiar de 2.5. A Bélgica tem defesa frágil (xGA 1.11) e aposta no ataque com De Bruyne e Doku, o que abre espaços para os contra-ataques espanhóis. Historicamente, jogos com times ofensivos e desequilíbrio defensivo tendem a ser abertos e com muitos gols.",
+        "resumo": "Espanha enfrenta a Bélgica com clara superioridade técnica e estatística, sustentada por um xG de 2.95 contra apenas 0.88 sofrido. O confronto deve ser dominado pelos espanhóis, com a fragilidade defensiva belga (xGA 1.11) abrindo espaço para um jogo com gols.",
+        "aposta_principal": "Over 2.5 gols @ 2.0",
+        "justificativa": "A Espanha produz em média 2.95 xG por jogo e a Bélgica concede 1.11 xGA, criando condições favoráveis para uma partida com ao menos 3 gols. Somado ao potencial ofensivo belga com De Bruyne e Doku — time que gera 2.48 xG — ambas as equipes tendem a balançar as redes. A odd de 2.0 oferece valor real para esse cenário.",
         "apostas_alternativas": [
-          "Vitória da Espanha @ 1.67",
-          "Espanha Vence e Over 1.5 gols @ ~1.90"
+          "Vitória da Espanha @ 1.65",
+          "Espanha vence e Over 2.5 (combinada) @ ~2.90 estimado"
         ],
-        "risco": "A Bélgica pode adotar postura defensiva e bloquear o jogo com linhas baixas, reduzindo o volume de gols e comprometendo o Over 2.5.",
+        "risco": "A Bélgica tem capacidade ofensiva real com De Bruyne e Doku, podendo surpreender se a Espanha baixar o ritmo defensivo em momentos pontuais.",
         "confianca": "alta"
       }
     },
@@ -40,25 +40,25 @@
       "away": "England",
       "time": "2026-07-11T21:00:00Z",
       "h2h": {
-        "away": 1.95,
-        "home": 4.4,
+        "away": 1.96,
+        "home": 4.35,
         "draw": 3.85
       },
       "totals": {
-        "over25": 1.96,
+        "over25": 1.97,
         "under25": 3.25
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra enfrenta a Noruega com clara superioridade técnica e defensiva, sendo favorita natural com rating 91.9 contra 86.2 dos noruegueses. O cenário aponta para uma partida controlada pelos ingleses, mas com risco pontual via Haaland nos contra-ataques.",
-        "aposta_principal": "Vitória da Inglaterra — odd 1.95",
-        "justificativa": "A Inglaterra apresenta xGA de apenas 0.26, indicando uma defesa excepcional sob Tuchel, enquanto seu xG de 2.59 mostra eficiência ofensiva consistente. A Noruega depende quase exclusivamente de Haaland para criar perigo, o que facilita a leitura defensiva inglesa. O rating superior e o estilo organizado dos ingleses justificam a aposta na vitória com confiança.",
+        "resumo": "Inglaterra enfrenta a Noruega com clara superioridade técnica e defensiva, sendo favorita justificada pelas métricas. A Noruega depende quase exclusivamente de Haaland para ameaçar, enquanto a Inglaterra apresenta equilíbrio coletivo superior com xGA de apenas 0.26.",
+        "aposta_principal": "Inglaterra Vence @ 1.96",
+        "justificativa": "O rating de 91.9 vs 86.2 e o xGA da Inglaterra (0.26) indicam uma defesa de elite sob Tuchel, capaz de conter o ritmo norueguês. O xG inglês de 2.59 demonstra criação consistente de chances, enquanto a Noruega, apesar do xG elevado (3.36), é altamente dependente de Haaland — contenha Haaland e a ameaça cai drasticamente. A odd de 1.96 oferece valor razoável dado o diferencial entre as equipes.",
         "apostas_alternativas": [
-          "Over 2.5 gols — odd 1.96 (xG combinado de 5.95 entre os times sugere partida com gols, mesmo que a defesa inglesa contenha parte desse potencial)",
-          "Inglaterra vence e Over 1.5 gols — odd estimada ~2.20 (fluxo ofensivo inglês com Rice-Kane-Bellingham tende a produzir múltiplos gols contra defesas medianas)"
+          "Inglaterra Vence e Menos de 3.5 Gols @ ~2.20 (proteção contra goleada que encurte a odd)",
+          "Haaland Marca a Qualquer Momento @ ~2.10 (único ponto de perigo real da Noruega, com alto volume de xG gerado por ele)"
         ],
-        "risco": "Haaland em um dia inspirado pode converter chances isoladas e mudar o placar, tornando o xGA norueguês enganoso se a Inglaterra relaxar na marcação.",
-        "confianca": "alta"
+        "risco": "O xG elevadíssimo da Noruega (3.36) sugere que, se Haaland estiver em dia e a defesa inglesa cometer erros posicionais, uma virada surpreendente não é impossível dado o ritmo brutal do time escandinavo.",
+        "confianca": "media"
       }
     }
   ],
