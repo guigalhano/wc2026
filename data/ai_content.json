@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-11T13:40:41.956246+00:00",
-  "generated_at_brt": "11/07/2026 10:40 BRT",
+  "generated_at": "2026-07-11T15:01:20.087080+00:00",
+  "generated_at_brt": "11/07/2026 12:01 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de perfis distintos na Copa 2026: um duelo equilibrado entre Norway e England e um jogo com favoritismo claro da Argentina sobre a Suíça. As melhores oportunidades de value estão nas odds infladas dos azarões e no mercado de dupla chance.\",\n  \"tip_of_d",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos contrastantes na Copa 2026: um duelo equilibrado entre Noruega e Inglaterra, e um confronto com favoritismo claro da Argentina sobre a Suíça. As maiores oportunidades de value estão nos azarões e nos empates, onde as casas parecem subestimar probabilidades ",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "England",
       "time": "2026-07-11T21:00:00Z",
       "h2h": {
-        "away": 2.02,
+        "away": 2.03,
         "home": 4.1,
-        "draw": 3.85
+        "draw": 3.9
       },
       "totals": {
         "over25": 2.7,
-        "under25": 2.26
+        "under25": 2.27
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra entra como favorita clara com rating superior (91.9 vs 86.2) e uma das defesas mais sólidas do torneio, enquanto a Noruega depende quase que exclusivamente de Haaland para ameaçar o gol adversário. O cenário aponta para uma vitória inglesa controlada, com pressão norueguesa via jogo direto para Haaland.",
-        "aposta_principal": "Inglaterra Vence @ 2.02",
-        "justificativa": "A Inglaterra apresenta xGA de apenas 0.26, indicando defesa praticamente impermeável, enquanto a Noruega concede 0.53 de xGA e tem ataque altamente dependente de um único jogador. O rating de 91.9 da Inglaterra reflete consistência em ambas as fases, e Tuchel demonstra solidez tática para neutralizar o estilo direto norueguês. Odd de 2.02 oferece valor aceitável frente à clara diferença de qualidade entre os elencos.",
+        "resumo": "Inglaterra enfrenta a Noruega com clara superioridade técnica e defensiva, respaldada por um rating 91.9 contra 86.2 e xGA impressionante de apenas 0.26. O cenário aponta para uma vitória inglesa controlada, embora Haaland represente ameaça constante de gol em jogadas isoladas.",
+        "aposta_principal": "Vitória da Inglaterra @ 2.03",
+        "justificativa": "A Inglaterra apresenta xG de 2.59 com xGA de apenas 0.26, indicando domínio ofensivo e solidez defensiva excepcional sob Tuchel. O meio-campo Rice-Bellingham controla o ritmo e neutraliza transições rápidas, justamente o estilo que a Noruega depende. A odd de 2.03 reflete valor real considerando a diferença de nível entre as seleções.",
         "apostas_alternativas": [
-          "Inglaterra Vence e Menos de 3.5 Gols @ ~2.20 (vitória controlada sem festa ofensiva)",
-          "Haaland Marca a Qualquer Momento @ ~2.50 (único vetor de perigo real da Noruega, xG norueguês elevado passa por ele)"
+          "Inglaterra Vence e Menos de 3.5 gols @ ~2.20 (controla jogo sem se expor)",
+          "Haaland marca a qualquer momento @ ~2.50 (único vetor ofensivo norueguês com qualidade para furar xGA inglesa)"
         ],
-        "risco": "Um grande jogo de Haaland ou falha defensiva inglesa pode abrir espaço para empate ou virada, dado que a Noruega tem xG ofensivo de 3.36 — alto o suficiente para explorar qualquer desatenção.",
+        "risco": "Haaland em um dia inspirado pode explorar espaços nas transições e mudar o panorama do jogo com uma ou duas jogadas isoladas de alto impacto.",
         "confianca": "alta"
       }
     },
@@ -42,22 +42,22 @@
       "h2h": {
         "home": 1.75,
         "away": 6.2,
-        "draw": 3.8
+        "draw": 3.75
       },
       "totals": {
-        "over25": 2.32,
+        "over25": 2.4,
         "under25": 3.0
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Argentina chega como forte favorita diante de uma Suíça com dados limitados, apoiada em um rating de elite (97.1) e na influência decisiva de Messi. O cenário aponta para domínio argentino, com expectativa de jogo aberto o suficiente para produzir gols.",
-        "aposta_principal": "Vitória Argentina @ 1.75",
-        "justificativa": "Com xG de 2.4 e rating 97.1, a Argentina demonstra capacidade ofensiva consistente e solidez defensiva razoável (xGA 2.0). A Suíça apresenta dados insuficientes para sustentar resistência prolongada contra uma seleção de mentalidade campeã. A odd de 1.75 reflete valor justo considerando o abismo técnico entre as equipes.",
+        "resumo": "Argentina chega como ampla favorita diante de uma Suíça com dados limitados, sugerindo desequilíbrio técnico significativo. O xG argentino de 2.4 indica capacidade ofensiva consistente, tornando uma partida com gols o cenário mais provável.",
+        "aposta_principal": "Argentina Vence @ 1.75",
+        "justificativa": "Com rating de 97.1 e xG de 2.4, a Argentina demonstra superioridade clara em criação de chances. A Suíça apresenta dados escassos, o que dificulta apontar capacidade de contenção real. Messi como fator decisivo amplifica a vantagem argentina em momentos de maior pressão.",
         "apostas_alternativas": [
-          "Argentina Vence + Over 1.5 Gols @ ~1.90 (combinação segura dado o xG argentino)",
-          "Over 2.5 Gols @ 2.32 (xG argentino de 2.4 já sustenta a linha sozinho, Suíça tende a marcar ao contra-atacar)"
+          "Over 2.5 Gols @ 2.40 — xG argentino elevado favorece partida com volume de gols",
+          "Argentina Vence & Over 1.5 Gols @ ~2.10 — combina favoritismo com tendência ofensiva da seleção"
         ],
-        "risco": "A escassez de dados da Suíça é o principal fator de incerteza — equipes europeias organizadas podem neutralizar favoritos e explorar o xGA de 2.0 da Argentina em contra-ataques.",
+        "risco": "A escassez de dados da Suíça é uma incógnita relevante; times europeus organizados defensivamente podem conter o xG argentino e manter o jogo fechado por mais tempo.",
         "confianca": "media"
       }
     }
