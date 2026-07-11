@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-11T06:20:47.555189+00:00",
-  "generated_at_brt": "11/07/2026 03:20 BRT",
+  "generated_at": "2026-07-11T09:44:30.805485+00:00",
+  "generated_at_brt": "11/07/2026 06:44 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos de perfis distintos na Copa 2026: um confronto equilibrado entre Noruega e Inglaterra, e um jogo de favorito claro com Argentina dominando as odds contra a Suíça. As melhores oportunidades de value estão nos azarões e no mercado de dupla chance.\",\n  \"tip_of",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos de Copa do Mundo 2026 oferecendo oportunidades distintas: a vitória da Inglaterra aparece subvalorizada diante da Noruega, enquanto a Argentina entra como favorita clara contra a Suíça. As odds do mercado abrem espaço para value especialmente nos azarões e ",
     "bets": [],
     "tip_of_day": null
   },
@@ -15,22 +15,22 @@
       "h2h": {
         "away": 2.0,
         "home": 4.1,
-        "draw": 3.85
+        "draw": 3.9
       },
       "totals": {
-        "over25": 1.94,
+        "over25": 2.16,
         "under25": 3.25
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "England chega como favorita clara com rating superior (91.9) e uma das defesas mais sólidas do torneio, com xGA impressionante de apenas 0.26. Norway depende quase que exclusivamente de Haaland para criar perigo, mas seu ataque coletivo pode explorar espaços deixados por uma England que costuma jogar em transição.",
-        "aposta_principal": "England vence @ 2.0",
-        "justificativa": "O rating de 91.9 contra 86.2 e o xGA da England de 0.26 indicam solidez defensiva consistente, enquanto o xG ofensivo de 2.59 mostra eficiência no ataque. A Noruega, apesar do xG alto (3.36 puxado por Haaland), enfrenta uma das melhores defesas do torneio. A odd de 2.0 oferece valor razoável para o favoritismo inglês sob Tuchel.",
+        "resumo": "Inglaterra entra como favorita clara com rating superior (91.9 vs 86.2) e uma das melhores defesas do torneio, enquanto a Noruega depende quase exclusivamente de Haaland para criar perigo. O duelo deve ser controlado pela Inglaterra, mas o poderio ofensivo norueguês liderado por Haaland garante ameaça constante e potencial para um jogo com gols.",
+        "aposta_principal": "Over 2.5 gols @ 2.16",
+        "justificativa": "A Noruega apresenta xG impressionante de 3.36, indicando volume ofensivo real, enquanto a Inglaterra também ataca com consistência (xG 2.59). Mesmo com as defesas sólidas de ambos os lados, a combinação de dois ataques de alto nível e o estilo agressivo norueguês favorecem uma partida com pelo menos 3 gols. Historicamente, jogos com times de xG elevado tendem a superar a linha de 2.5 com frequência.",
         "apostas_alternativas": [
-          "Over 2.5 gols @ 1.94 — o xG combinado das duas equipes soma 5.95, sugerindo jogo aberto com gols",
-          "England vence e Over 1.5 gols @ ~2.20 — cenário mais provável considerando o potencial ofensivo norueguês centralizado em Haaland"
+          "Inglaterra vence (1X2) @ 2.0",
+          "Haaland marca a qualquer momento @ ~2.5 (verificar disponibilidade)"
         ],
-        "risco": "Haaland em um dia inspirado é capaz de decidir sozinho qualquer jogo, tornando o resultado imprevisível independentemente da superioridade técnica inglesa.",
+        "risco": "A defesa da Inglaterra é excepcional (xGA 0.26) e pode limitar a Noruega a poucas finalizações convertidas, mantendo o placar baixo e invalidando o Over 2.5.",
         "confianca": "media"
       }
     },
@@ -40,9 +40,9 @@
       "away": "Switzerland",
       "time": "2026-07-12T01:00:00Z",
       "h2h": {
-        "home": 1.73,
+        "home": 1.75,
         "away": 6.4,
-        "draw": 3.75
+        "draw": 3.8
       },
       "totals": {
         "over25": 3.4,
@@ -50,14 +50,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Argentina chega como forte favorita diante de uma Suíça com dados limitados, contando com Messi decisivo e rating impressionante de 97.1. O cenário aponta para domínio argentino, mas o xGA de 2.0 indica que a defesa não é intransponível, sugerindo uma partida com movimentação no placar.",
-        "aposta_principal": "Vitória Argentina — odd 1.73",
-        "justificativa": "Com rating de 97.1 e xG de 2.4 por partida, a Argentina demonstra consistência ofensiva e mentalidade vencedora. A odd de 1.73 reflete o favoritismo real do time, e a Suíça não apresenta dados suficientes para justificar apostar contra. Messi como fator decisivo reforça a escolha.",
+        "resumo": "Argentina entra como grande favorita contra uma Suíça com dados limitados, apoiada em um rating excepcional de 97.1 e presença decisiva de Messi. O cenário aponta para domínio argentino, com expectativa de jogo controlado e poucos espaços para o adversário.",
+        "aposta_principal": "Vitória Argentina @ 1.75",
+        "justificativa": "O rating 97.1 e xG de 2.4 indicam uma equipe altamente produtiva ofensivamente, enquanto o xGA de 2.0 mostra solidez defensiva. A mentalidade campeã reduz a probabilidade de surpresas, e a odd de 1.75 reflete valor real frente ao nível técnico demonstrado. Dados escassos da Suíça reforçam a assimetria entre as equipes.",
         "apostas_alternativas": [
-          "Argentina vence + Under 3.5 gols — valor combinado estimado ~2.10",
-          "Ambas marcam (BTTS Sim) — odd implícita ~2.20, dado xGA de 2.0 da Argentina"
+          "Argentina Vence + Under 3.5 Gols @ ~2.20 (vitória controlada, perfil de jogo organizado)",
+          "Ambas Marcam - Não @ ~2.00 (defesa argentina sólida, Suíça com dados ofensivos desconhecidos)"
         ],
-        "risco": "Dados limitados da Suíça impedem avaliação defensiva precisa, e uma atuação compacta europeia pode frustrar o favoritismo argentino.",
+        "risco": "A escassez de dados da Suíça impede avaliação defensiva precisa, abrindo margem para surpresas ou um placar mais aberto que o esperado.",
         "confianca": "media"
       }
     }
