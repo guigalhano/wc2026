@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-11T15:01:20.087080+00:00",
-  "generated_at_brt": "11/07/2026 12:01 BRT",
+  "generated_at": "2026-07-11T17:05:02.720980+00:00",
+  "generated_at_brt": "11/07/2026 14:05 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos contrastantes na Copa 2026: um duelo equilibrado entre Noruega e Inglaterra, e um confronto com favoritismo claro da Argentina sobre a Suíça. As maiores oportunidades de value estão nos azarões e nos empates, onde as casas parecem subestimar probabilidades ",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos de perfis distintos na Copa 2026: Norway vs England apresenta equilíbrio competitivo com valor nas odds da Noruega, enquanto Argentina vs Switzerland tem favoritismo claro dos sul-americanos com possível value na Suíça a odds elevadas. As melhores oportunid",
     "bets": [],
     "tip_of_day": null
   },
@@ -14,24 +14,24 @@
       "time": "2026-07-11T21:00:00Z",
       "h2h": {
         "away": 2.03,
-        "home": 4.1,
-        "draw": 3.9
+        "home": 4.0,
+        "draw": 3.95
       },
       "totals": {
         "over25": 2.7,
-        "under25": 2.27
+        "under25": 2.29
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra enfrenta a Noruega com clara superioridade técnica e defensiva, respaldada por um rating 91.9 contra 86.2 e xGA impressionante de apenas 0.26. O cenário aponta para uma vitória inglesa controlada, embora Haaland represente ameaça constante de gol em jogadas isoladas.",
-        "aposta_principal": "Vitória da Inglaterra @ 2.03",
-        "justificativa": "A Inglaterra apresenta xG de 2.59 com xGA de apenas 0.26, indicando domínio ofensivo e solidez defensiva excepcional sob Tuchel. O meio-campo Rice-Bellingham controla o ritmo e neutraliza transições rápidas, justamente o estilo que a Noruega depende. A odd de 2.03 reflete valor real considerando a diferença de nível entre as seleções.",
+        "resumo": "Inglaterra chega como favorita clara com rating superior (91.9) e defesa impermeável (xGA 0.26), mas enfrenta uma Noruega perigosamente dependente de Haaland, que pode mudar qualquer jogo em um lance. O cenário aponta para uma partida equilibrada no início, mas com England dominando territórialmente e buscando o resultado.",
+        "aposta_principal": "England Vence @ 2.03",
+        "justificativa": "O rating 91.9 da Inglaterra contra 86.2 da Noruega reflete superioridade técnica coletiva real. A defesa inglesa sob Tuchel é a mais sólida do torneio (xGA 0.26), enquanto o ataque com Rice, Kane e Bellingham gerou xG 2.59 consistentemente. A odd de 2.03 ainda oferece valor considerando a assimetria de qualidade entre os elencos.",
         "apostas_alternativas": [
-          "Inglaterra Vence e Menos de 3.5 gols @ ~2.20 (controla jogo sem se expor)",
-          "Haaland marca a qualquer momento @ ~2.50 (único vetor ofensivo norueguês com qualidade para furar xGA inglesa)"
+          "Ambas marcam - Não @ ~1.80 (defesa inglesa concedeu apenas 0.26 xGA, Noruega pode ficar calada sem espaços)",
+          "Over 2.5 gols @ 2.7 (xG combinado de 5.95 sugere potencial ofensivo alto, especialmente se Haaland ativar e England responder)"
         ],
-        "risco": "Haaland em um dia inspirado pode explorar espaços nas transições e mudar o panorama do jogo com uma ou duas jogadas isoladas de alto impacto.",
-        "confianca": "alta"
+        "risco": "Haaland é um fator de imprevisibilidade absoluta — um dia inspirado dele pode anular toda a lógica estatística e mudar o resultado sozinho.",
+        "confianca": "media"
       }
     },
     {
@@ -40,24 +40,24 @@
       "away": "Switzerland",
       "time": "2026-07-12T01:00:00Z",
       "h2h": {
-        "home": 1.75,
-        "away": 6.2,
-        "draw": 3.75
+        "home": 1.77,
+        "away": 6.4,
+        "draw": 3.7
       },
       "totals": {
-        "over25": 2.4,
+        "over25": 2.32,
         "under25": 3.0
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Argentina chega como ampla favorita diante de uma Suíça com dados limitados, sugerindo desequilíbrio técnico significativo. O xG argentino de 2.4 indica capacidade ofensiva consistente, tornando uma partida com gols o cenário mais provável.",
-        "aposta_principal": "Argentina Vence @ 1.75",
-        "justificativa": "Com rating de 97.1 e xG de 2.4, a Argentina demonstra superioridade clara em criação de chances. A Suíça apresenta dados escassos, o que dificulta apontar capacidade de contenção real. Messi como fator decisivo amplifica a vantagem argentina em momentos de maior pressão.",
+        "resumo": "Argentina chega como ampla favorita com rating 97.1 e xG de 2.4, indicando alta capacidade ofensiva e presença decisiva de Messi. A Suíça tem dados limitados, o que reforça a assimetria técnica entre as seleções e aponta para um jogo controlado pelos argentinos.",
+        "aposta_principal": "Vitória Argentina @ 1.77",
+        "justificativa": "O rating dominante de 97.1 e o xG de 2.4 da Argentina sustentam a expectativa de vitória confortável. A mentalidade campeã e os poucos erros cometidos reduzem a vulnerabilidade defensiva (xGA 2.0 administrável). A odd de 1.77 reflete valor razoável dado o favoritismo claro.",
         "apostas_alternativas": [
-          "Over 2.5 Gols @ 2.40 — xG argentino elevado favorece partida com volume de gols",
-          "Argentina Vence & Over 1.5 Gols @ ~2.10 — combina favoritismo com tendência ofensiva da seleção"
+          "Argentina Vence + Over 2.5 Gols (combinada estimada ~3.00)",
+          "Over 2.5 Gols @ 2.32 — xG argentino elevado sugere jogo aberto ofensivamente"
         ],
-        "risco": "A escassez de dados da Suíça é uma incógnita relevante; times europeus organizados defensivamente podem conter o xG argentino e manter o jogo fechado por mais tempo.",
+        "risco": "A escassez de dados da Suíça impede avaliar seu potencial defensivo real, e seleções europeias compactas historicamente complicam favoritos sul-americanos.",
         "confianca": "media"
       }
     }
