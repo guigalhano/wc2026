@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10T23:03:35.467760+00:00",
-  "generated_at_brt": "10/07/2026 20:03 BRT",
+  "generated_at": "2026-07-11T03:20:50.782628+00:00",
+  "generated_at_brt": "11/07/2026 00:20 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, mas com excelente oportunidade de value na vitória da Inglaterra, que entra como favorita clara diante da Noruega. As odds do mercado sugerem probabilidade implícita de 51,5% para a Inglaterra, possivelmente subestimada dado o nível a",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de alto perfil na Copa 2026, onde a Argentina surge como favorita clara contra a Suíça e a Inglaterra é favorita moderada diante da Noruega. As odds abertas pelo mercado revelam oportunidades de value especialmente nos azarões e em mercados alternativo",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,25 +13,52 @@
       "away": "England",
       "time": "2026-07-11T21:00:00Z",
       "h2h": {
-        "away": 1.94,
-        "home": 4.3,
+        "away": 1.97,
+        "home": 4.2,
         "draw": 3.9
       },
       "totals": {
-        "over25": 2.17,
+        "over25": 1.96,
         "under25": 3.25
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra chega como favorita clara contra uma Noruega que depende fortemente de Haaland, com defesa sólida e rating superior de 91.9. O confronto deve ser controlado pelos ingleses, com a Noruega apostando em transições rápidas para explorar o poder ofensivo do seu centroavante.",
-        "aposta_principal": "Inglaterra Vence (1x2) @ 1.94",
-        "justificativa": "A Inglaterra apresenta xGA de apenas 0.26, indicando defesa extremamente sólida sob Tuchel, enquanto a Noruega concede 0.53 xGA por jogo. O rating inglês é superior em 5.7 pontos e o xG ofensivo de 3.36 da Noruega é inflado pela presença de Haaland, mas a consistência defensiva inglesa tende a anular esse fator. A odd de 1.94 oferece valor real considerando a diferença técnica entre os lados.",
+        "resumo": "England chega como clara favorita com rating superior (91.9) e uma defesa praticamente impermeável (xGA 0.26), enquanto a Noruega depende quase exclusivamente de Haaland para criar perigo real. O cenário aponta para domínio inglês com controle defensivo, mas o potencial ofensivo de ambos os lados sugere pelo menos 3 gols no total.",
+        "aposta_principal": "Over 2.5 gols @ 1.96",
+        "justificativa": "Norway apresenta xG ofensivo altíssimo de 3.36, o que indica capacidade de criação mesmo contra defesas sólidas. England também é produtiva (xG 2.59) com Rice, Kane e Bellingham como motor, e mesmo que a defesa inglesa segure Haaland, a pressão norueguesa tende a gerar ao menos um gol. A combinação de duas equipes com alto potencial ofensivo torna o Over 2.5 @ 1.96 o mercado com melhor valor.",
         "apostas_alternativas": [
-          "Over 2.5 Gols @ 2.17 — xG combinado de 5.95 sugere jogo com gols, especialmente com Haaland vs defesa inglesa em nível de alta pressão",
-          "Inglaterra Vence e Ambos Marcam @ ~3.20 — Haaland tem capacidade individual para marcar mesmo contra defesas de elite, mantendo o placar movimentado"
+          "England vence @ 1.97 — favorita consistente com rating 91.9 e defesa impermeável, odd justa para o nível de superioridade",
+          "England Vence & Over 1.5 gols @ ~2.60 (mercado combo) — equilibra segurança no resultado com expectativa de volume ofensivo inglês"
         ],
-        "risco": "Haaland é um fator isolado capaz de alterar qualquer prognóstico com um único momento de brilho, e a odd de 1.94 da Inglaterra oferece margem de lucro limitada caso o jogo se equilibre.",
-        "confianca": "alta"
+        "risco": "O principal risco é Haaland em noite inspirada transformar um ou dois dos altos xG noruegueses em gols reais, comprometendo o resultado inglês e mantendo o placar baixo.",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "200d9cd5eda092c7eb778cc104cd2fd2",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "time": "2026-07-12T01:00:00Z",
+      "h2h": {
+        "home": 1.74,
+        "away": 6.4,
+        "draw": 3.75
+      },
+      "totals": {
+        "over25": 3.4,
+        "under25": 2.27
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Argentina chega como forte favorita com rating 97.1 e xG de 2.4, indicando capacidade ofensiva superior e mentalidade vencedora consolidada. A Suíça apresenta dados limitados e odds de 6.4, refletindo clara desvantagem técnica neste confronto.",
+        "aposta_principal": "Argentina vence — Odd 1.74",
+        "justificativa": "O rating elevado (97.1) e o xG de 2.4 da Argentina sustentam a expectativa de domínio técnico e criação de chances consistentes. Com Messi decisivo e poucos erros defensivos (xGA 2.0), a Argentina tem perfil de equipe que controla jogos e converte. A odd de 1.74 reflete valor razoável para um favoritismo tão sólido.",
+        "apostas_alternativas": [
+          "Argentina vence e ambas marcam — Odd estimada ~2.80 (xGA 2.0 indica alguma vulnerabilidade defensiva)",
+          "Gols: Under 2.5 — Odd implícita (~1.40 inverso ao Over 3.4), dado estilo controlado da Argentina e incerteza sobre ataque suíço"
+        ],
+        "risco": "Dados limitados da Suíça impedem avaliação precisa do seu potencial ofensivo, e o Over 2.5 em 3.4 sugere mercado esperando jogo fechado, o que pode indicar resistência defensiva helvética maior do que o esperado.",
+        "confianca": "media"
       }
     }
   ],
