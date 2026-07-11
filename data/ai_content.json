@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-11T19:13:46.261015+00:00",
-  "generated_at_brt": "11/07/2026 16:13 BRT",
+  "generated_at": "2026-07-11T20:58:46.847958+00:00",
+  "generated_at_brt": "11/07/2026 17:58 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois jogos de Copa 2026, destaque para o confronto England vs Norway onde as odds sugerem valor real na vitória inglesa. O calor extremo em Miami (39,3°C) é fator crítico e favorece equipes com maior profundidade de elenco e melhor preparo físico.\",\n  \"tip_of_day\": {\n",
+    "summary": "```json\n{\n  \"summary\": \"Dia de Copa do Mundo 2026 com dois confrontos de alto interesse: Inglaterra surge como favorita diante da Noruega em Dallas com calor extremo de 38.3°C, enquanto Argentina enfrenta a Suíça com favoritismo claro. O calor extremo em Dallas é fator crítico que penaliza equipes d",
     "bets": [],
     "tip_of_day": null
   },
@@ -11,27 +11,27 @@
       "game_id": "e66e4478b739fa0657a7a11235e1fcee",
       "home": "Norway",
       "away": "England",
-      "time": "2026-07-11T21:00:00Z",
+      "time": "2026-07-11T21:05:00Z",
       "h2h": {
-        "away": 1.98,
-        "home": 4.2,
-        "draw": 4.1
+        "away": 1.93,
+        "home": 4.6,
+        "draw": 4.0
       },
       "totals": {
-        "over25": 2.75,
-        "under25": 2.3
+        "over25": 3.0,
+        "under25": 2.23
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Inglaterra entra como clara favorita contra uma Noruega altamente dependente de Haaland, com vantagem significativa em rating (91.9 vs 86.2) e defesa praticamente impenetrável (xGA 0.26). O cenário aponta para uma vitória inglesa controlada, com Tuchel priorizando solidez defensiva e transições eficientes via Bellingham e Kane.",
-        "aposta_principal": "Vitória da Inglaterra @ 1.98",
-        "justificativa": "A Inglaterra apresenta superioridade técnica clara com rating 5.7 pontos acima da Noruega, além da melhor defesa do torneio (xGA 0.26). A odd de 1.98 oferece valor real considerando que os ingleses têm xG de 2.59 contra uma Noruega que concede apenas 0.53 xGA — mas a Noruega ofensivamente é perigosa (xG 3.36), o que pode ser neutralizado pela solidez defensiva de Rice e companhia.",
+        "resumo": "Inglaterra chega como grande favorita com rating superior (91.9) e defesa praticamente impermeável (xGA 0.26), enquanto a Noruega depende quase exclusivamente de Haaland para criar perigo real. O cenário aponta para uma vitória controlada dos ingleses, com pouco espaço para erros defensivos dado o estilo organizado de Tuchel.",
+        "aposta_principal": "Vitória da Inglaterra @ 1.93",
+        "justificativa": "A Inglaterra apresenta rating 5.7 pontos acima da Noruega e um xGA de apenas 0.26, indicando solidez defensiva excepcional sob Tuchel. Com xG de 2.59, o ataque inglês (Rice-Kane-Bellingham) é consistente e multidimensional, ao contrário da Noruega que concentra toda sua criatividade em Haaland. A odd de 1.93 ainda oferece valor considerando o nível de dominância esperada.",
         "apostas_alternativas": [
-          "Ambas marcam - Não @ verificar casas (Inglaterra defense sólida sugere clean sheet provável)",
-          "Over 2.5 gols @ 2.75 — Noruega tem xG 3.36 e ritmo brutal, podendo forçar jogo aberto se sair atrás"
+          "Inglaterra Vence & Under 2.5 Gols @ ~2.80 — defesa inglesa (xGA 0.26) sugere jogo controlado e de poucos gols",
+          "Ambas Marcam: Não @ ~1.80 — com xGA 0.26 da Inglaterra e dependência total da Noruega em Haaland, o clean sheet inglês é altamente provável"
         ],
-        "risco": "Haaland é um fator isolado capaz de mudar qualquer jogo com uma ou duas jogadas, e se a Noruega abrir o placar, a dinâmica da partida pode favorecer um resultado surpreendente.",
-        "confianca": "media"
+        "risco": "O risco principal é Haaland em um dia inspirado explorar algum erro pontual da defesa inglesa, desequilibrando completamente o prognóstico e potencialmente abrindo o jogo.",
+        "confianca": "alta"
       }
     },
     {
@@ -45,19 +45,19 @@
         "draw": 3.65
       },
       "totals": {
-        "over25": 2.4,
+        "over25": 2.35,
         "under25": 2.95
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Argentina chega como grande favorita com rating 97.1 e xG de 2.4, indicando forte potencial ofensivo e presença decisiva de Messi. A Suíça possui dados limitados, o que reforça a assimetria técnica esperada neste confronto.",
-        "aposta_principal": "Argentina Vence @ 1.76",
-        "justificativa": "O rating elevado (97.1) e o xG de 2.4 da Argentina indicam dominância ofensiva consistente, enquanto o xGA de 2.0 sugere que o jogo pode ser aberto. A Suíça possui odd de 6.5, refletindo baixíssima expectativa de vitória, e os dados limitados dos suíços não oferecem argumentos concretos para contrariar o favoritismo argentino.",
+        "resumo": "Argentina enfrenta a Suíça com ampla vantagem nos dados técnicos, apresentando rating de 97.1 e xG de 2.4 por partida, indicando produção ofensiva consistente. A Suíça chega com dados limitados disponíveis, o que reforça a assimetria entre as equipes e sugere domínio argentino ao longo dos 90 minutos.",
+        "aposta_principal": "Over 2.5 gols @ 2.35",
+        "justificativa": "O xG da Argentina de 2.4 por jogo já aproxima sozinho do limite de 2.5, e com a Suíça tendendo a abrir espaços contra equipes de alto nível, a linha de gols fica atrativa. O xGA argentino de 2.0 indica que a seleção também sofre chances, o que favorece jogos mais abertos. A odd de 2.35 oferece valor real considerando o perfil ofensivo da partida.",
         "apostas_alternativas": [
-          "Over 2.5 Gols @ 2.4 — xG de 2.4 da Argentina isoladamente já justifica volume de gols, e jogos abertos (xGA 2.0) favorecem este mercado",
-          "Argentina Vence e Over 1.5 Gols @ ~2.10 — combina o resultado esperado com o mínimo de produtividade ofensiva argentino"
+          "Argentina vence (1X2) @ 1.76",
+          "Argentina vence e Over 1.5 gols @ ~2.10 (mercado combinado estimado)"
         ],
-        "risco": "A escassez de dados da Suíça impede avaliação defensiva precisa, e equipes europeias organizadas podem explorar os espaços deixados pelo xGA elevado da Argentina.",
+        "risco": "Dados limitados da Suíça impedem avaliação defensiva precisa, e uma postura ultra-defensiva helvética poderia bloquear o Over 2.5.",
         "confianca": "media"
       }
     }
