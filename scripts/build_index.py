@@ -103,6 +103,35 @@ def build_previews_html(previews):
         </div>'''
     return html
 
+def build_wc26_perf_summary(perf_matches):
+    """Per-team real-xG averages (rg=games with real xG, xgf/xga=per-game avg,
+    pa=avg possession), refreshed every run from data/wc2026_perf.json instead
+    of a static snapshot from early in the tournament."""
+    agg = {}
+    for m in perf_matches:
+        if not m.get('real_xg'):
+            continue
+        hC, aC = m.get('home'), m.get('away')
+        hxg, axg = m.get('home_xg'), m.get('away_xg')
+        hpos, apos = m.get('home_poss'), m.get('away_poss')
+        if hC and hxg is not None:
+            a = agg.setdefault(hC, {'rg': 0, 'xgf_sum': 0.0, 'xga_sum': 0.0, 'pos_sum': 0.0, 'pos_n': 0})
+            a['rg'] += 1; a['xgf_sum'] += hxg; a['xga_sum'] += (axg or 0)
+            if hpos is not None: a['pos_sum'] += hpos; a['pos_n'] += 1
+        if aC and axg is not None:
+            a = agg.setdefault(aC, {'rg': 0, 'xgf_sum': 0.0, 'xga_sum': 0.0, 'pos_sum': 0.0, 'pos_n': 0})
+            a['rg'] += 1; a['xgf_sum'] += axg; a['xga_sum'] += (hxg or 0)
+            if apos is not None: a['pos_sum'] += apos; a['pos_n'] += 1
+    out = {}
+    for code, a in agg.items():
+        if a['rg'] == 0:
+            continue
+        entry = {'rg': a['rg'], 'xgf': round(a['xgf_sum'] / a['rg'], 2), 'xga': round(a['xga_sum'] / a['rg'], 2)}
+        if a['pos_n'] > 0:
+            entry['pa'] = round(a['pos_sum'] / a['pos_n'], 1)
+        out[code] = entry
+    return out
+
 def main():
     print("\n🔨 Building index.html...\n")
 
@@ -153,6 +182,16 @@ def main():
         elo_games = live.get('live_elo_games', 0)
         result = _re.sub(r"ELO_LIVE_UPDATED='[\d-]+'", f"ELO_LIVE_UPDATED='{elo_date}'", result, count=1)
         print(f"   Live ELO: {len(live_elo)} teams, {elo_games} games, updated {elo_date}")
+    # ── Inject WC26_PERF_SUMMARY (real-xG per-team averages, refreshed each run) ──
+    try:
+        with open("data/wc2026_perf.json") as f: perf = json.load(f)
+    except Exception:
+        perf = {"matches": []}
+    wc26_summary = build_wc26_perf_summary(perf.get("matches", []))
+    wc26_summary_js = 'var WC26_PERF_SUMMARY=' + json.dumps(wc26_summary, separators=(',', ':')) + ';'
+    result = re.sub(r'var WC26_PERF_SUMMARY=\{.*?\};', wc26_summary_js, result, count=1, flags=re.DOTALL)
+    print(f"   WC26_PERF_SUMMARY: {len(wc26_summary)} teams (real-xG games)")
+
     result = result.replace("{{AI_DATA_JSON}}", ai_json)
 
     with open("index.html","w") as f:

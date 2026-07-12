@@ -1697,7 +1697,7 @@ function getVenueFactors(group, isKnockout) {
   return {altPenalty:altPenalty, tempPenalty:tempPenalty, city:city,
           alt:alt, temp:temp, knockoutFavBonus:knockoutFavBonus};
 }
-var WC26_PERF_SUMMARY={"EUA":{"rg":2,"xgf":1.95,"xga":0.66},"NOR":{"rg":1,"xgf":2.85,"xga":0.68,"pa":86.7},"MEX":{"rg":1,"xgf":1.84,"xga":0.52,"pa":87.3},"ARG":{"rg":1,"xgf":1.0,"xga":0.43,"pa":89.8},"ALE":{"rg":2,"xgf":3.33,"xga":0.58},"GAN":{"rg":0},"FRA":{"rg":1,"xgf":2.44,"xga":1.05,"pa":90.0},"EGI":{"rg":1,"xgf":1.12,"xga":1.58},"ING":{"rg":1,"xgf":2.92,"xga":1.64},"CDM":{"rg":1,"xgf":0.72,"xga":1.85},"PAR":{"rg":2,"xgf":0.74,"xga":3.23,"pa":66.9},"CAB":{"rg":1,"xgf":0.35,"xga":2.15},"JAP":{"rg":2,"xgf":1.96,"xga":1.05},"MAR":{"rg":2,"xgf":0.82,"xga":1.29,"pa":88.5},"COL":{"rg":1,"xgf":2.45,"xga":0.82,"pa":87.8},"HOL":{"rg":2,"xgf":2.7,"xga":1.35},"AUS":{"rg":2,"xgf":0.65,"xga":1.99,"pa":76.9},"AGL":{"rg":1,"xgf":0.43,"xga":1.0},"ESC":{"rg":2,"xgf":1.21,"xga":0.94},"RDC":{"rg":1,"xgf":1.15,"xga":1.78},"COR":{"rg":1,"xgf":2.48,"xga":1.17},"AUT":{"rg":1,"xgf":2.4,"xga":1.09,"pa":86.2},"SUE":{"rg":2,"xgf":1.6,"xga":1.91},"CUR":{"rg":2,"xgf":0.57,"xga":4.54},"CAN":{"rg":2,"xgf":2.58,"xga":0.6,"pa":86.2},"SUI":{"rg":2,"xgf":2.0,"xga":0.83,"pa":90.0},"BRA":{"rg":2,"xgf":1.95,"xga":0.76,"pa":88.4},"ARS":{"rg":2,"xgf":0.55,"xga":2.52},"CAT":{"rg":2,"xgf":0.5,"xga":2.68},"BOS":{"rg":2,"xgf":0.93,"xga":1.9},"AFS":{"rg":2,"xgf":0.83,"xga":1.6},"IRQ":{"rg":1,"xgf":0.68,"xga":2.85,"pa":84.5},"POR":{"rg":1,"xgf":1.78,"xga":1.15,"pa":92.0},"NZE":{"rg":1,"xgf":1.98,"xga":2.16},"CRO":{"rg":1,"xgf":1.64,"xga":2.92,"pa":86.9},"IRA":{"rg":1,"xgf":2.16,"xga":1.98},"UZB":{"rg":1,"xgf":0.82,"xga":2.45,"pa":79.9},"ESP":{"rg":2,"xgf":2.71,"xga":0.3,"pa":92.9},"PAN":{"rg":0,"pa":88.1},"HAI":{"rg":2,"xgf":0.87,"xga":1.86,"pa":86.0},"TCH":{"rg":2,"xgf":1.26,"xga":1.81},"JOR":{"rg":1,"xgf":1.09,"xga":2.4,"pa":71.3},"BEL":{"rg":1,"xgf":1.58,"xga":1.12,"pa":86.8},"SEN":{"rg":1,"xgf":1.05,"xga":2.44,"pa":87.8},"TUN":{"rg":2,"xgf":0.26,"xga":2.21,"pa":81.0},"URU":{"rg":1,"xgf":1.76,"xga":0.85,"pa":88.6},"TUR":{"rg":2,"xgf":3.27,"xga":0.72,"pa":90.6},"EQU":{"rg":1,"xgf":4.27,"xga":0.7}};
+var WC26_PERF_SUMMARY={};
 var ELO_RATINGS={"AFS":1584,"AGL":1710,"ALE":1947,"ARG":1996,"ARS":1662,"AUS":1772,"AUT":1723,"BEL":1855,"BOS":1598,"BRA":1953,"CAB":1636,"CAN":1748,"CAT":1589,"CDM":1752,"COL":1889,"COR":1757,"CRO":1835,"CUR":1559,"EGI":1727,"EQU":1777,"ESC":1668,"ESP":1995,"EUA":1867,"FRA":2029,"GAN":1683,"HAI":1515,"HOL":1908,"ING":2010,"IRA":1745,"IRQ":1586,"JAP":1845,"JOR":1517,"MAR":1893,"MEX":1867,"NOR":1912,"NZE":1584,"PAN":1591,"PAR":1695,"POR":1926,"RDC":1669,"SEN":1809,"SUE":1755,"SUI":1811,"TCH":1628,"TUN":1643,"TUR":1676,"URU":1804,"UZB":1622};
 var ELO_LIVE_UPDATED='2026-06-23';
 
@@ -1710,6 +1710,10 @@ var DC_RHO = -0.30;
 // of the fit — see scripts/generate_perf.py):
 // totals grow with mismatch; replaces the old additive 1.35+diff/400 form.
 var GOAL_BASE = 1.10, GOAL_SCALE = 360;
+// Real-xG blend weight cap in matchProbV2 (was 0.20). Backtested 2026-07-12,
+// walk-forward on 100 matches: ANY weight > 0 makes logloss worse (real-xG
+// sample per team is 1-6 games — too noisy to blend into the Elo/DC core).
+var XG_BLEND_WMAX = 0;
 function goalLambdas(diff){
   var lam = GOAL_BASE * Math.pow(10,  diff/(2*GOAL_SCALE));
   var mu  = GOAL_BASE * Math.pow(10, -diff/(2*GOAL_SCALE));
@@ -3054,7 +3058,7 @@ function matchProbV2(codeA, codeB, group, isKO) {
   var lam = _lm2[0], mu = _lm2[1];
   // ── Real xG blend (WC2026 observed, scales with games played) ─────────
   var _pa=WC26_PERF_SUMMARY[codeA]||{}, _pb=WC26_PERF_SUMMARY[codeB]||{};
-  var _wA=Math.min((_pa.rg||0),3)/3*0.20, _wB=Math.min((_pb.rg||0),3)/3*0.20;
+  var _wA=Math.min((_pa.rg||0),3)/3*XG_BLEND_WMAX, _wB=Math.min((_pb.rg||0),3)/3*XG_BLEND_WMAX;
   if(_wA>0){if(_pa.xgf!=null)lam=lam*(1-_wA)+_pa.xgf*_wA;if(_pb.xga!=null)lam=lam*(1-_wA*0.5)+_pb.xga*_wA*0.5;}
   if(_wB>0){if(_pb.xgf!=null)mu=mu*(1-_wB)+_pb.xgf*_wB;if(_pa.xga!=null)mu=mu*(1-_wB*0.5)+_pa.xga*_wB*0.5;}
   if(_pa.pa&&_pa.pa>88)lam*=1+(_pa.pa-88)*0.003;
