@@ -2186,115 +2186,233 @@ function simKOMatch(a, b, rand) {
   return { winner: winner, loser: sA > sB ? b : a, draw: false, sA: sA, sB: sB };
 }
 
-function simKO(qual,rand,best8){
-  // Assign best 3rds to R32 slots
-  var t3=assignBest3rds(best8,qual);
+// ── Real KO results helpers — ground the bracket in confirmed results ───────
+function getRealKORound(stage) {
+  var ld = window.LIVE_DATA;
+  var matches = (ld && ld.wc_results && ld.wc_results.matches) || [];
+  return matches.filter(function (m) {
+    return m.stage === stage && m.status === 'FINISHED' &&
+      m.home_score !== null && m.home_score !== undefined &&
+      m.away_score !== null && m.away_score !== undefined;
+  });
+}
+function realKOWinner(m) {
+  if (m.match_winner === 'HOME_TEAM') return m.home_code;
+  if (m.match_winner === 'AWAY_TEAM') return m.away_code;
+  return m.home_score > m.away_score ? m.home_code : m.away_code;
+}
+// Order a round's real matches so consecutive pairs (0,1),(2,3),... feed the
+// next round in the SAME order as nextRoundMatches (needed so the bracket's
+// visual connectors line up). Falls back to source order if it can't match.
+function orderRealRound(roundMatches, nextRoundMatches) {
+  if (!nextRoundMatches || !nextRoundMatches.length) return roundMatches.slice();
+  var winnerToMatch = {};
+  roundMatches.forEach(function (m) { winnerToMatch[realKOWinner(m)] = m; });
+  var ordered = [];
+  nextRoundMatches.forEach(function (mNext) {
+    [mNext.home_code, mNext.away_code].forEach(function (code) {
+      var m = winnerToMatch[code];
+      if (m && ordered.indexOf(m) === -1) ordered.push(m);
+    });
+  });
+  roundMatches.forEach(function (m) { if (ordered.indexOf(m) === -1) ordered.push(m); });
+  return ordered;
+}
+
+function simKO(qual, rand, best8) {
+  var br = { r32: [], r16: [], qf: [], sf: [], final: [], champion: null };
+
+  // ── Fast path: use CONFIRMED results wherever the round is fully played,
+  // instead of re-deriving the bracket from group standings. This is what
+  // keeps M73+ showing real scores/winners instead of stale simulations. ──
+  var real32 = getRealKORound('LAST_32');
+  var real16 = getRealKORound('LAST_16');
+  var realQF = getRealKORound('QUARTER_FINALS');
+  var useReal32 = real32.length === 16;
+  var useReal16 = useReal32 && real16.length === 8;
+  var useRealQF = useReal16 && realQF.length === 4;
+
+  var r32w, r16w, qfw;
+
+  // Build top-down from whichever round is the deepest fully-real anchor,
+  // so each earlier round is ordered to match the (already ordered) round
+  // that consumes it — NOT the other way around.
+  var ordQF = useRealQF ? orderRealRound(realQF, null) : null;
+  var ord16 = useReal16 ? orderRealRound(real16, ordQF) : null;
+  var ord32 = useReal32 ? orderRealRound(real32, ord16) : null;
+
+  if (useReal32) {
+    r32w = ord32.map(function (m) {
+      br.r32.push({
+        a: m.home_code, b: m.away_code, winner: realKOWinner(m),
+        sA: m.home_score, sB: m.away_score, real: true,
+        aet: m.went_extra, pens: m.went_pens
+      });
+      return realKOWinner(m);
+    });
+  }
+
+  if (useReal16) {
+    r16w = ord16.map(function (m) {
+      br.r16.push({
+        a: m.home_code, b: m.away_code, winner: realKOWinner(m),
+        sA: m.home_score, sB: m.away_score, real: true,
+        aet: m.went_extra, pens: m.went_pens
+      });
+      return realKOWinner(m);
+    });
+  } else if (useReal32) {
+    var r16pairsA = [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15]];
+    r16w = r16pairsA.map(function (p) {
+      var a = r32w[p[0]], b = r32w[p[1]];
+      var m = rand ? simKOMatch(a, b, true) : simKOMatch(a, b, false);
+      br.r16.push({ a: a, b: b, winner: m.winner, sA: m.sA, sB: m.sB });
+      return m.winner;
+    });
+  }
+
+  if (useRealQF) {
+    qfw = ordQF.map(function (m) {
+      br.qf.push({
+        a: m.home_code, b: m.away_code, winner: realKOWinner(m),
+        sA: m.home_score, sB: m.away_score, real: true,
+        aet: m.went_extra, pens: m.went_pens
+      });
+      return realKOWinner(m);
+    });
+  } else if (useReal16) {
+    qfw = [];
+    for (var iq = 0; iq < 4; iq++) {
+      var aq = r16w[iq * 2], bq = r16w[iq * 2 + 1];
+      var mq = rand ? simKOMatch(aq, bq, true) : simKOMatch(aq, bq, false);
+      br.qf.push({ a: aq, b: bq, winner: mq.winner, sA: mq.sA, sB: mq.sB });
+      qfw.push(mq.winner);
+    }
+  }
+
+  if (useReal32 && r32w && r16w && qfw) {
+    // Everything through QF is grounded in reality — only SF onward is
+    // still genuinely undecided, so fall through to simulate from here.
+    var sfw = [];
+    for (var i = 0; i < 2; i++) {
+      var a = qfw[i * 2], b = qfw[i * 2 + 1];
+      var m = rand ? simKOMatch(a, b, true) : simKOMatch(a, b, false);
+      br.sf.push({ a: a, b: b, winner: m.winner, sA: m.sA, sB: m.sB });
+      sfw.push(m.winner);
+    }
+    var fm = rand ? simKOMatch(sfw[0], sfw[1], true) : simKOMatch(sfw[0], sfw[1], false);
+    br.final.push({ a: sfw[0], b: sfw[1], winner: fm.winner, sA: fm.sA, sB: fm.sB });
+    br.champion = fm.winner;
+    return br;
+  }
+
+  // ── Fallback: Round of 32 not (fully) played yet — derive the bracket
+  // from group qualifiers, same as before. ──────────────────────────────
+  var t3 = assignBest3rds(best8, qual);
 
   // FIFA 2026 Round of 32 bracket (official draw)
-  var R32=[
-    [qual.A.first,  qual.B.second],   // M61
-    [qual.I.first,  qual.J.second],   // M62
-    [qual.E.first,  t3['3A/B/C/D/F']||qual.C.third||'?'],  // M63
-    [qual.F.first,  qual.C.second],   // M64
-    [qual.C.first,  qual.F.second],   // M65 (note: C1 vs F2 swapped intentionally per FIFA draw)
-    [qual.I.first!==qual.I.first?qual.I.first:qual.I.first, t3['3C/D/F/G/H']||'?'], // M66 - 1I vs best3
-    [qual.E.second, qual.I.second],   // M67
-    [qual.A.first!==qual.A.first?qual.A.first:qual.A.first, t3['3C/E/F/H/I']||'?'], // M68 - 1A vs best3
-    [qual.L.first,  t3['3E/H/I/J/K']||'?'], // M69
-    [qual.D.first,  t3['3B/E/F/I/J']||'?'], // M70
-    [qual.G.first,  t3['3A/E/H/I/J']||'?'], // M71
-    [qual.K.second, qual.L.second],   // M72
-    [qual.H.first,  qual.J.second],   // M73 (note: corrected — H1 vs J2)
-    [qual.B.first,  t3['3E/F/G/I/J']||'?'], // M74 - 1B vs best3
-    [qual.J.first,  qual.H.second],   // M75
-    [qual.K.first,  t3['3D/E/I/J/L']||'?'], // M76 - 1K vs best3
-    [qual.D.second, qual.G.second],   // M77 - but wait let me use the simplified FIFA draw
+  var R32 = [
+    [qual.A.first, qual.B.second], // M61
+    [qual.I.first, qual.J.second], // M62
+    [qual.E.first, t3['3A/B/C/D/F'] || qual.C.third || '?'], // M63
+    [qual.F.first, qual.C.second], // M64
+    [qual.C.first, qual.F.second], // M65 (note: C1 vs F2 swapped intentionally per FIFA draw)
+    [qual.I.first !== qual.I.first ? qual.I.first : qual.I.first, t3['3C/D/F/G/H'] || '?'], // M66 - 1I vs best3
+    [qual.E.second, qual.I.second], // M67
+    [qual.A.first !== qual.A.first ? qual.A.first : qual.A.first, t3['3C/E/F/H/I'] || '?'], // M68 - 1A vs best3
+    [qual.L.first, t3['3E/H/I/J/K'] || '?'], // M69
+    [qual.D.first, t3['3B/E/F/I/J'] || '?'], // M70
+    [qual.G.first, t3['3A/E/H/I/J'] || '?'], // M71
+    [qual.K.second, qual.L.second], // M72
+    [qual.H.first, qual.J.second], // M73 (note: corrected — H1 vs J2)
+    [qual.B.first, t3['3E/F/G/I/J'] || '?'], // M74 - 1B vs best3
+    [qual.J.first, qual.H.second], // M75
+    [qual.K.first, t3['3D/E/I/J/L'] || '?'], // M76 - 1K vs best3
+    [qual.D.second, qual.G.second], // M77 - but wait let me use the simplified FIFA draw
   ];
 
   // SIMPLIFIED but correct: use the actual R32 bracket from FIFA 2026
   // Based on official draw (12 groups, seeded bracket):
-  R32=[
-    [qual.A.first,  qual.B.second],
-    [qual.C.first,  qual.D.second],
-    [qual.E.first,  t3['3A/B/C/D/F']||qual.F.second],
-    [qual.G.first,  qual.H.second],
-    [qual.I.first,  qual.J.second],
-    [qual.K.first,  qual.L.second],
-    [qual.B.first,  t3['3E/F/G/I/J']||qual.A.second],
-    [qual.D.first,  t3['3B/E/F/I/J']||qual.C.second],
-    [qual.F.first,  qual.C.second],
-    [qual.H.first,  qual.J.second],
-    [qual.J.first,  qual.H.second],
-    [qual.L.first,  t3['3E/H/I/J/K']||qual.K.second],
-    [qual.A.first!==qual.A.first?qual.A.first:qual.A.second, qual.B.first],
-    [qual.I.first,  t3['3C/D/F/G/H']||qual.G.second],
+  R32 = [
+    [qual.A.first, qual.B.second],
+    [qual.C.first, qual.D.second],
+    [qual.E.first, t3['3A/B/C/D/F'] || qual.F.second],
+    [qual.G.first, qual.H.second],
+    [qual.I.first, qual.J.second],
+    [qual.K.first, qual.L.second],
+    [qual.B.first, t3['3E/F/G/I/J'] || qual.A.second],
+    [qual.D.first, t3['3B/E/F/I/J'] || qual.C.second],
+    [qual.F.first, qual.C.second],
+    [qual.H.first, qual.J.second],
+    [qual.J.first, qual.H.second],
+    [qual.L.first, t3['3E/H/I/J/K'] || qual.K.second],
+    [qual.A.first !== qual.A.first ? qual.A.first : qual.A.second, qual.B.first],
+    [qual.I.first, t3['3C/D/F/G/H'] || qual.G.second],
     [qual.E.second, qual.I.second],
     [qual.D.second, qual.G.second],
   ];
 
   // ── Simplified correct bracket: 16 R32 games ──
   // Use clean version based on FIXTURES analysis:
-  R32=[
-    [qual.A.first,  qual.B.second],       // W1
-    [qual.E.first,  t3['3A/B/C/D/F']||qual.F.second],  // W2
-    [qual.F.first,  qual.C.second],       // W3
-    [qual.C.first,  qual.F.second],       // W4 — intentional cross
-    [qual.I.first,  t3['3C/D/F/G/H']||qual.D.second],  // W5
+  R32 = [
+    [qual.A.first, qual.B.second],       // W1
+    [qual.E.first, t3['3A/B/C/D/F'] || qual.F.second],  // W2
+    [qual.F.first, qual.C.second],       // W3
+    [qual.C.first, qual.F.second],       // W4 — intentional cross
+    [qual.I.first, t3['3C/D/F/G/H'] || qual.D.second],  // W5
     [qual.E.second, qual.I.second],       // W6
-    [qual.A.first!==qual.A.second?qual.A.second:qual.B.first, t3['3C/E/F/H/I']||qual.D.first],  // W7 — 1A vs best3 → using A2 vs 3rd
-    [qual.L.first,  t3['3E/H/I/J/K']||qual.K.second],  // W8
-    [qual.D.first,  t3['3B/E/F/I/J']||qual.B.second],  // W9
-    [qual.G.first,  t3['3A/E/H/I/J']||qual.H.second],  // W10
+    [qual.A.first !== qual.A.second ? qual.A.second : qual.B.first, t3['3C/E/F/H/I'] || qual.D.first],  // W7 — 1A vs best3 → using A2 vs 3rd
+    [qual.L.first, t3['3E/H/I/J/K'] || qual.K.second],  // W8
+    [qual.D.first, t3['3B/E/F/I/J'] || qual.B.second],  // W9
+    [qual.G.first, t3['3A/E/H/I/J'] || qual.H.second],  // W10
     [qual.K.second, qual.L.second],       // W11
-    [qual.H.first,  qual.J.second],       // W12 — 1H vs 2J
-    [qual.B.first,  t3['3E/F/G/I/J']||qual.A.second],  // W13
-    [qual.J.first,  qual.H.second],       // W14 — 1J vs 2H
-    [qual.K.first,  t3['3D/E/I/J/L']||qual.L.second],  // W15
+    [qual.H.first, qual.J.second],       // W12 — 1H vs 2J
+    [qual.B.first, t3['3E/F/G/I/J'] || qual.A.second],  // W13
+    [qual.J.first, qual.H.second],       // W14 — 1J vs 2H
+    [qual.K.first, t3['3D/E/I/J/L'] || qual.L.second],  // W15
     [qual.D.second, qual.G.second],       // W16 — 2D vs 2G
   ];
 
-  var br={r32:[],r16:[],qf:[],sf:[],final:[],champion:null};
-
   // Sim R32 (16 games)
-  var r32w=R32.map(function(p){
-    var a=p[0]||'?',b=p[1]||'?';
-    if(a==='?'||b==='?'){var w=a!=='?'?a:b;br.r32.push({a:a,b:b,winner:w,sA:1,sB:0});return w;}
-    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
-    br.r32.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
+  r32w = R32.map(function (p) {
+    var a = p[0] || '?', b = p[1] || '?';
+    if (a === '?' || b === '?') { var w = a !== '?' ? a : b; br.r32.push({ a: a, b: b, winner: w, sA: 1, sB: 0 }); return w; }
+    var m = rand ? simKOMatch(a, b, true) : simKOMatch(a, b, false);
+    br.r32.push({ a: a, b: b, winner: m.winner, sA: m.sA, sB: m.sB });
     return m.winner;
   });
 
   // Sim R16 (8 games) — winners of R32 paired in order
-  var r16pairs=[[0,1],[2,3],[4,5],[6,7],[8,9],[10,11],[12,13],[14,15]];
-  var r16w=r16pairs.map(function(p){
-    var a=r32w[p[0]],b=r32w[p[1]];
-    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
-    br.r16.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
+  var r16pairs = [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15]];
+  r16w = r16pairs.map(function (p) {
+    var a = r32w[p[0]], b = r32w[p[1]];
+    var m = rand ? simKOMatch(a, b, true) : simKOMatch(a, b, false);
+    br.r16.push({ a: a, b: b, winner: m.winner, sA: m.sA, sB: m.sB });
     return m.winner;
   });
 
   // QF (4 games)
-  var qfw=[];
-  for(var i=0;i<4;i++){
-    var a=r16w[i*2],b=r16w[i*2+1];
-    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
-    br.qf.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
-    qfw.push(m.winner);
+  qfw = [];
+  for (var i2 = 0; i2 < 4; i2++) {
+    var a2 = r16w[i2 * 2], b2 = r16w[i2 * 2 + 1];
+    var m2 = rand ? simKOMatch(a2, b2, true) : simKOMatch(a2, b2, false);
+    br.qf.push({ a: a2, b: b2, winner: m2.winner, sA: m2.sA, sB: m2.sB });
+    qfw.push(m2.winner);
   }
 
   // SF (2 games)
-  var sfw=[];
-  for(var i=0;i<2;i++){
-    var a=qfw[i*2],b=qfw[i*2+1];
-    var m=rand?simKOMatch(a,b,true):simKOMatch(a,b,false);
-    br.sf.push({a:a,b:b,winner:m.winner,sA:m.sA,sB:m.sB});
-    sfw.push(m.winner);
+  var sfw2 = [];
+  for (var i3 = 0; i3 < 2; i3++) {
+    var a3 = qfw[i3 * 2], b3 = qfw[i3 * 2 + 1];
+    var m3 = rand ? simKOMatch(a3, b3, true) : simKOMatch(a3, b3, false);
+    br.sf.push({ a: a3, b: b3, winner: m3.winner, sA: m3.sA, sB: m3.sB });
+    sfw2.push(m3.winner);
   }
 
   // Final
-  var fm=rand?simKOMatch(sfw[0],sfw[1],true):simKOMatch(sfw[0],sfw[1],false);
-  br.final.push({a:sfw[0],b:sfw[1],winner:fm.winner,sA:fm.sA,sB:fm.sB});
-  br.champion=fm.winner;
+  var fm2 = rand ? simKOMatch(sfw2[0], sfw2[1], true) : simKOMatch(sfw2[0], sfw2[1], false);
+  br.final.push({ a: sfw2[0], b: sfw2[1], winner: fm2.winner, sA: fm2.sA, sB: fm2.sB });
+  br.champion = fm2.winner;
   return br;
 }
 function showSimTab(id,btn){document.querySelectorAll('.sim-tab').forEach(function(b){b.classList.remove('active');});if(btn)btn.classList.add('active');['champion','bracket','groups','groupresults','montecarlo'].forEach(function(t){var el=document.getElementById('simTab'+t.charAt(0).toUpperCase()+t.slice(1));if(el)el.style.display=t===id?'block':'none';});}
