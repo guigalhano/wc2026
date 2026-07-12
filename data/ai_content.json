@@ -1,36 +1,11 @@
 {
-  "generated_at": "2026-07-12T03:32:28.362945+00:00",
-  "generated_at_brt": "12/07/2026 00:32 BRT",
+  "generated_at": "2026-07-12T06:41:24.067218+00:00",
+  "generated_at_brt": "12/07/2026 03:41 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"A Copa do Mundo 2026 apresenta hoje um confronto de alto nível entre Argentina e Suíça, com odds que revelam clara favorita. A análise de value aponta oportunidades interessantes especialmente em mercados alternativos ao resultado simples.\",\n  \"tip_of_day\": {\n    \"jogo\": \"Arg",
+    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [
-    {
-      "game_id": "200d9cd5eda092c7eb778cc104cd2fd2",
-      "home": "Argentina",
-      "away": "Switzerland",
-      "time": "2026-07-12T01:00:00Z",
-      "h2h": {
-        "home": 2.4,
-        "away": 15.0,
-        "draw": 1.65
-      },
-      "totals": {},
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Argentina chega como forte favorita com rating de elite (97.1) e xG ofensivo de 2.4, indicando capacidade de criar e converter chances com consistência. A Suíça enfrenta grande desvantagem tática e qualitativa, com odds de 15.0 refletindo o abismo entre as equipes.",
-        "aposta_principal": "Argentina vence — odd 2.4",
-        "justificativa": "O xG argentino de 2.4 combinado com xGA de 2.0 demonstra equilíbrio entre ataque produtivo e solidez defensiva razoável. A mentalidade campeã e a presença decisiva de Messi elevam o potencial em jogos de mata-mata ou fase avançada de torneio. A odd de 2.4 oferece valor considerando o domínio esperado no confronto.",
-        "apostas_alternativas": [
-          "Ambas marcam — Não (Argentina vence sem sofrer): odd estimada ~1.80, alinhada ao xGA controlado",
-          "Over 2.5 gols na partida: odd estimada ~1.90, sustentada pelo xG ofensivo elevado da Argentina"
-        ],
-        "risco": "Dados limitados da Suíça impedem avaliação precisa de contra-ataques ou estratégia defensiva compacta, o que pode comprimir o placar.",
-        "confianca": "media"
-      }
-    }
-  ],
+  "match_previews": [],
   "tactical_notes": {}
 }
