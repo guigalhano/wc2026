@@ -1705,10 +1705,11 @@ var ELO_LIVE_UPDATED='2026-07-12';
  // auto-updated after each WC2026 match
 
 // ── Dixon-Coles correction for 0-0, 1-1, 0-1, 1-0 ─────────────────────────
-var DC_RHO = -0.18;
-// Multiplicative goal model (backtested 2026-07-02, see scripts/generate_perf.py):
+var DC_RHO = -0.30;
+// Multiplicative goal model (re-backtested 2026-07-12 on 100 matches, KO held out
+// of the fit — see scripts/generate_perf.py):
 // totals grow with mismatch; replaces the old additive 1.35+diff/400 form.
-var GOAL_BASE = 1.25, GOAL_SCALE = 460;
+var GOAL_BASE = 1.10, GOAL_SCALE = 360;
 function goalLambdas(diff){
   var lam = GOAL_BASE * Math.pow(10,  diff/(2*GOAL_SCALE));
   var mu  = GOAL_BASE * Math.pow(10, -diff/(2*GOAL_SCALE));

@@ -49,10 +49,14 @@ HOME_BONUS = {'MEX':100,'EUA':100,'CAN':80}
 # Backtested 2026-07-02 on 82 played matches (out-of-sample validated on knockouts):
 #   multiplicative goal model (GOAL_BASE/GOAL_SCALE) + MOV-scaled K=40 + rho=-0.18
 #   logloss 0.837 -> 0.80, RPS 0.154 -> 0.140 vs previous additive formula.
-DC_RHO = -0.18          # aligned with frontend simulator (was -0.13 here, -0.18 in JS)
-ELO_K = 40              # base K; effective K scales with margin of victory (mov_mult)
-GOAL_BASE  = 1.25       # expected goals per team when ratings are equal
-GOAL_SCALE = 460        # ELO points for a 10x goal-ratio swing (per 2*scale)
+DC_RHO = -0.30          # aligned with frontend simulator (was -0.13 here, -0.18 in JS)
+ELO_K = 20              # base K; effective K scales with margin of victory (mov_mult)
+GOAL_BASE  = 1.10       # expected goals per team when ratings are equal
+GOAL_SCALE = 360        # ELO points for a 10x goal-ratio swing (per 2*scale)
+# Re-backtested 2026-07-12 on 100 played matches (72 group + 28 KO, KO held out
+# of the fit): logloss 0.784 -> 0.769 all-games, 0.678 -> 0.651 on held-out KO
+# (-4.0%). Broad, stable optimum (not a narrow spike) across rho in [-0.24,-0.36],
+# K in [15,25], scale in [325,400].
 
 TEAM_NAMES = {
     'ESP':'Spain','ARG':'Argentina','FRA':'France','ING':'England','BRA':'Brazil',
