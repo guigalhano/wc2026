@@ -2974,8 +2974,8 @@ function getWC2026FormScore(code) {
   var allMatches = (typeof FIXTURES !== 'undefined') ? FIXTURES :
     (window.LIVE_DATA && window.LIVE_DATA.wc_results ? window.LIVE_DATA.wc_results.matches : []);
   var played = allMatches.filter(function(f) {
-    var hc = f.home || f.home_code || '';
-    var ac = f.away || f.away_code || '';
+    var hc = f.home_code || f.home || '';
+    var ac = f.away_code || f.away || '';
     var hg = f.score1 != null ? f.score1 : (f.home_score != null ? f.home_score : null);
     return hg !== null && (hc === code || ac === code);
   }).slice(-5);
