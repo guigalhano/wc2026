@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-13T11:21:13.612397+00:00",
-  "generated_at_brt": "13/07/2026 08:21 BRT",
+  "generated_at": "2026-07-13T14:49:47.676426+00:00",
+  "generated_at_brt": "13/07/2026 11:49 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto de alto nível na Copa 2026, o clássico europeu entre França e Espanha. O duelo entre duas das maiores potências do futebol mundial oferece oportunidades interessantes de value, especialmente considerando o equilíbrio refletido nas odds.\",\n  \"tip_of",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto de altíssimo nível na Copa 2026: France vs Spain, clássico europeu equilibrado com odds que sugerem leve favoritism francês. As odds abertas pelo mercado oferecem valor especialmente no empate e na vitória espanhola.\",\n  \"tip_of_day\": {\n    \"jogo\":",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,7 +13,7 @@
       "away": "Spain",
       "time": "2026-07-14T19:00:00Z",
       "h2h": {
-        "home": 2.42,
+        "home": 2.44,
         "away": 3.4,
         "draw": 3.35
       },
@@ -23,14 +23,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Duelo de alto nível entre a Espanha (rating 100) e a França (rating 95.3), duas das seleções mais completas do mundo com estilos contrastantes — posse espanhola contra transições francesas. Espera-se uma partida equilibrada e tecnicamente intensa, com ambas as equipes apresentando xG elevado e defesas sólidas.",
-        "aposta_principal": "Over 2.5 gols @ 1.96",
-        "justificativa": "França e Espanha combinam xG total de 5.47 por jogo, indicando forte capacidade ofensiva dos dois lados. Mesmo com defesas eficientes (xGA 0.98 e 0.88), o nível ofensivo com Mbappé e Lamine Yamal pressiona qualquer linha defensiva. Histórico de confrontos diretos entre essas seleções tende a produzir partidas abertas e com gols.",
+        "resumo": "Clássico europeu de altíssimo nível entre duas seleções com ataque e defesa de elite, prometendo um duelo tático intenso. A Espanha chega como favorita técnica com xG superior e rating máximo, mas a França possui transições letais que podem desequilibrar qualquer adversário.",
+        "aposta_principal": "Over 2.5 Gols @ 1.96",
+        "justificativa": "Ambas as seleções combinam xG médio de 2.52 e 2.95 por jogo, sinalizando forte potencial ofensivo. As defesas, embora sólidas (xGA 0.98 e 0.88), estarão expostas ao nível de qualidade individual de Mbappé e Lamine Yamal. Confrontos diretos entre essas seleções em competições recentes tendem a ser abertos e com múltiplos gols.",
         "apostas_alternativas": [
-          "Espanha vence (Draw No Bet) @ ~1.85 — maior xG (2.95) e rating superior justificam leve favoritismo espanhol",
-          "Ambas marcam (BTTS - Sim) @ ~1.80 — xG elevado dos dois lados e pressing alto da Espanha criam espaços para as transições francesas"
+          "Ambas marcam (BTTS - Sim) @ estimado ~1.85",
+          "Empate ao intervalo / Qualquer time vence @ estimado ~2.10"
         ],
-        "risco": "O equilíbrio técnico entre as seleções e a natureza de jogo eliminatório (copa/torneio) pode levar a uma partida mais cautelosa e truncada, comprometendo o mercado de gols.",
+        "risco": "O alto nível defensivo de ambas as seleções e a natureza de jogo eliminatório podem resultar em uma partida mais cautelosa, com poucos gols ou definição nas penalidades.",
         "confianca": "media"
       }
     }
