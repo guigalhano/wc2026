@@ -1,11 +1,39 @@
 {
-  "generated_at": "2026-07-12T22:57:17.630423+00:00",
-  "generated_at_brt": "12/07/2026 19:57 BRT",
+  "generated_at": "2026-07-13T03:35:13.310824+00:00",
+  "generated_at_brt": "13/07/2026 00:35 BRT",
   "value_bets_today": {
-    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, mas de altíssimo nível: França x Espanha, duas potências do futebol mundial. As odds sugerem jogo equilibrado com leve favoritismo francês, abrindo boas oportunidades de value especialmente no empate e na vitória espanhola.\",\n  \"tip_o",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [],
+  "match_previews": [
+    {
+      "game_id": "f9aa13a662d1658e5a02cfc06d6a2d73",
+      "home": "France",
+      "away": "Spain",
+      "time": "2026-07-14T19:00:00Z",
+      "h2h": {
+        "home": 2.45,
+        "away": 3.45,
+        "draw": 3.35
+      },
+      "totals": {
+        "over25": 1.95,
+        "under25": 2.95
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Duelo de altíssimo nível entre duas seleções de elite, com a Espanha ligeiramente superior nos dados ofensivos e defensivos (xG 2.95 e xGA 0.88 contra xG 2.52 e xGA 0.98 da França). Espera-se uma partida intensa com ambas as equipes criando chances, mas com tendência ao equilíbrio tático e possível definição nos detalhes.",
+        "aposta_principal": "Over 2.5 gols @ 1.95",
+        "justificativa": "A Espanha produz 2.95 xG por jogo e a França 2.52, ambas com estilos ofensivos bem definidos — posse dominante com pressing alto vs. transições rápidas com Mbappé. A soma dos xG das duas equipes sugere forte probabilidade de ao menos 3 gols, e os xGA relativamente baixos indicam que as defesas serão testadas, mas não blindadas. O mercado de Over 2.5 a 1.95 representa valor real frente ao potencial ofensivo combinado.",
+        "apostas_alternativas": [
+          "Espanha vence @ 3.45 — rating 100 e melhor xG/xGA justificam valor na vitória espanhola",
+          "Ambas marcam (BTTS - Sim) @ ~1.80 — xG elevado dos dois lados torna provável que ambas balançem a rede"
+        ],
+        "risco": "O fator eliminatório pode induzir as equipes a jogarem de forma mais cautelosa, reduzindo o ritmo ofensivo e comprometendo o Over 2.5.",
+        "confianca": "media"
+      }
+    }
+  ],
   "tactical_notes": {}
 }
