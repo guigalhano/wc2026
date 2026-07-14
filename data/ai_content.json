@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-14T06:19:17.919983+00:00",
-  "generated_at_brt": "14/07/2026 03:19 BRT",
+  "generated_at": "2026-07-14T10:04:53.535495+00:00",
+  "generated_at_brt": "14/07/2026 07:04 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de alto nível na Copa 2026, ambos com odds equilibradas sugerindo incerteza real entre as casas. As odds de empate em ambas as partidas apresentam os maiores potenciais de value frente às probabilidades implícitas calculadas.\",\n  \"tip_of_day\": {\n    \"j",
+    "summary": "```json\n{\n  \"summary\": \"Dia de grandes confrontos na Copa 2026 com dois clássicos de alto nível: França x Espanha e Inglaterra x Argentina. As odds refletem equilíbrio nos duelos, abrindo janelas de valor especialmente nos empates e nos azarões.\",\n  \"tip_of_day\": {\n    \"jogo\": \"England vs Argentina\"",
     "bets": [],
     "tip_of_day": null
   },
@@ -18,19 +18,19 @@
         "draw": 3.3
       },
       "totals": {
-        "over25": 2.0,
+        "over25": 2.02,
         "under25": 3.0
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Duelo entre duas das melhores seleções do mundo, com a Espanha ligeiramente favorita pelos dados ofensivos superiores (xG 2.95) e menor vulnerabilidade defensiva (xGA 0.88). Espera-se uma partida equilibrada e de alto nível técnico, com a França buscando aproveitar contra-ataques via Mbappé diante do pressing alto espanhol.",
-        "aposta_principal": "Over 2.5 gols @ 2.0",
-        "justificativa": "Ambas as seleções apresentam xG elevado — França 2.52 e Espanha 2.95 — indicando poder ofensivo consistente. A Espanha pressiona alto e abre espaços para transições francesas, fator que historicamente aumenta o volume de gols em confrontos entre essas duas equipes. A odd de 2.0 oferece valor justo para um jogo com potencial claro de pelo menos 3 tentos.",
+        "resumo": "Duelo de alto nível entre duas das melhores seleções do mundo, com a Espanha chegando com rating superior (100 vs 95.3) e xG mais elevado (2.95). Espera-se uma partida intensa com bastante volume ofensivo dos dois lados, dado o estilo agressivo de ambas as equipes.",
+        "aposta_principal": "Over 2.5 gols @ 2.02",
+        "justificativa": "A Espanha produz 2.95 xG por jogo e a França 2.52, somando mais de 5.4 xG combinados — volume expressivo que favorece múltiplos gols. O estilo de pressing alto da Espanha tende a gerar erros defensivos e transições rápidas da França com Mbappé potencializam situações de gol em contra-ataque. Historicamente, confrontos diretos entre essas seleções em fases decisivas costumam ser disputados e com placar movimentado.",
         "apostas_alternativas": [
-          "Espanha vence @ 3.35 — rating máximo (100) e melhor xG/xGA do confronto justificam aposta com valor",
-          "Ambas marcam (BTTS Sim) — defensas permitem volume ofensivo adversário, França xGA 0.98 e Espanha xGA 0.88 ainda são vulneráveis a times de elite"
+          "Espanha vence (Draw No Bet) @ ~1.85 — rating máximo e melhor xGA (0.88) indicam solidez defensiva superior",
+          "Ambas marcam (BTTS - Sim) @ ~1.75 — xGA acima de 0.88 para ambas sugere que nenhuma é inexpugnável defensivamente"
         ],
-        "risco": "O alto nível defensivo de ambas as seleções (especialmente Espanha com xGA 0.88) pode resultar em jogo truncado e placar baixo, comprometendo o Over 2.5.",
+        "risco": "A França tem potencial de surpreender com transições letais via Mbappé, e o fator eliminatório pode nivelar o desempenho das equipes, tornando o resultado imprevisível apesar do desequilíbrio nos ratings.",
         "confianca": "media"
       }
     },
@@ -50,14 +50,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Duelo de alto nível entre duas seleções de elite, com Argentina ligeiramente favorita pelos dados de rating (97.1 vs 91.9), mas enfrentando uma Inglaterra organizada e com xGA impressionante de apenas 0.26. O cenário aponta para uma partida disputada, com a Argentina buscando impor seu jogo e a Inglaterra apostando na solidez defensiva para explorar contra-ataques.",
+        "resumo": "Duelo de altíssimo nível entre a Argentina (rating 97.1) e uma Inglaterra sólida defensivamente sob Tuchel, prometendo um jogo equilibrado mas com potencial ofensivo dos dois lados. O xGA elevado da Argentina (2.0) contrasta com o xGA impressionante da Inglaterra (0.26), sugerindo que os ingleses podem explorar espaços defensivos argentinos.",
         "aposta_principal": "Over 2.5 Gols @ 2.44",
-        "justificativa": "A Inglaterra projeta xG de 2.59 e a Argentina de 2.40, somando ofensiva combinada robusta que sustenta a expectativa de placar movimentado. O xGA elevado da Argentina (2.0) indica vulnerabilidade defensiva que a Inglaterra de Kane e Bellingham pode explorar. Com Messi decisivo e a pressão ofensiva de ambos os lados, ultrapassar 2.5 gols é o cenário mais respaldado pelos dados.",
+        "justificativa": "A Inglaterra produz 2.59 xG por jogo e a Argentina 2.4 xG, somando mais de 4.9 xG esperados no confronto. O xGA da Argentina de 2.0 indica vulnerabilidade defensiva que a Inglaterra de Kane e Bellingham pode explorar. Com Messi decisivo e a Inglaterra pressionando alto, o jogo tem ingredientes claros para ultrapassar a linha de 2.5 gols.",
         "apostas_alternativas": [
-          "Argentina Vence @ 3.20 — rating superior e mentalidade campeã justificam o valor desta odd",
-          "Ambas Marcam (BTTS - Sim) @ estimado ~1.90 — xGA de 2.0 da Argentina e ataque inglês de xG 2.59 favorecem gols nos dois lados"
+          "Inglaterra Vence (1X2) @ 2.78 — rating inferior da Argentina em termos de solidez defensiva favorece a organização tática de Tuchel",
+          "Ambas Marcam (BTTS - Sim) @ ~2.00 — xG ofensivo elevado dos dois lados e o xGA de 2.0 da Argentina tornam este mercado atrativo"
         ],
-        "risco": "A defesa excepcional da Inglaterra (xGA 0.26) pode suprimir o ataque argentino e manter o placar baixo, invalidando o Over 2.5 caso Tuchel execute um bloco defensivo eficaz.",
+        "risco": "A mentalidade campeã da Argentina e a influência individual de Messi podem neutralizar qualquer modelo estatístico, tornando o resultado imprevisível em momentos decisivos.",
         "confianca": "media"
       }
     }
