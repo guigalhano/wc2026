@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-13T23:02:16.286198+00:00",
-  "generated_at_brt": "13/07/2026 20:02 BRT",
+  "generated_at": "2026-07-14T02:57:37.190892+00:00",
+  "generated_at_brt": "13/07/2026 23:57 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, mas de altíssimo nível: France vs Spain, clássico europeu com odds equilibradas que sugerem jogo disputado. As odds abertas indicam leve favoritismo francês, abrindo oportunidades de value no empate e na Espanha.\",\n  \"tip_of_day\": {\n ",
+    "summary": "```json\n{\n  \"summary\": \"Dia com dois confrontos de altíssimo nível na Copa 2026, reunindo quatro das maiores seleções do mundo. As odds refletem jogos equilibrados, mas há oportunidades de value especialmente nos empates e nas seleções ligeiramente desvalorizadas pelas casas.\",\n  \"tip_of_day\": {\n   ",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,51 @@
       "away": "Spain",
       "time": "2026-07-14T19:00:00Z",
       "h2h": {
-        "home": 2.48,
+        "home": 2.52,
         "away": 3.35,
-        "draw": 3.35
+        "draw": 3.3
       },
       "totals": {
-        "over25": 1.97,
+        "over25": 1.98,
         "under25": 3.0
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Clássico entre duas das melhores seleções do mundo, com a Espanha chegando como favorita técnica graças ao maior rating e melhores métricas ofensivas e defensivas. Espera-se uma partida disputada e com gols, dado o alto xG combinado (5.47) e os estilos ofensivos de ambas as equipes.",
-        "aposta_principal": "Over 2.5 Gols @ 1.97",
-        "justificativa": "A soma dos xG de France (2.52) e Spain (2.95) totaliza 5.47, indicando forte expectativa de gols. Ambas as equipes possuem linhas ofensivas de elite — Mbappé em transições e Lamine Yamal no jogo posicional — e defesas que, apesar de sólidas, estão expostas a ataques de alto nível. O histórico de confrontos diretos recentes também tende a ser elétrico e com múltiplos tentos.",
+        "resumo": "Duelo de alto nível entre duas seleções de elite com estilos contrastantes: a Espanha lidera em xG (2.95) e controle de jogo, enquanto a França aposta nas transições rápidas com Mbappé. Esperamos uma partida intensa com gols, dado o potencial ofensivo combinado das duas equipes.",
+        "aposta_principal": "Over 2.5 Gols @ 1.98",
+        "justificativa": "A Espanha acumula xG de 2.95 por jogo e a França 2.52, totalizando uma expectativa ofensiva elevada. Ambas as defesas, apesar de sólidas (xGA abaixo de 1.0), estarão expostas ao pressing alto espanhol e às transições francesas. O histórico de jogos entre seleções top neste formato aponta para partidas abertas com múltiplos gols.",
         "apostas_alternativas": [
-          "Espanha vence @ 3.35 — melhor rating (100 vs 95.3) e xGA mais baixo (0.88) sustentam a vantagem técnica",
-          "Ambas marcam (BTTS Sim) — xGA de ambas acima de 0.88 e poder ofensivo mútuo tornam esse mercado consistente"
+          "Espanha Vence (Draw No Bet) @ ~2.10 — melhor rating e xG superior justificam o favoritismo técnico",
+          "Ambas Marcam (BTTS - Sim) @ ~1.85 — xGA de ambas abaixo de 1.0 mas com ofensivas letais suficientes para furar qualquer defesa"
         ],
-        "risco": "Tratando-se de uma final ou semifinal de alto nível, o fator emocional e tático pode suprimir os gols, especialmente se a França optar por um bloco baixo e apostar no contra-ataque de Mbappé.",
+        "risco": "A solidez defensiva da França (xGA 0.98) e a capacidade de Mbappé decidir isoladamente podem frustrar o favoritismo espanhol e manter o placar baixo.",
+        "confianca": "media"
+      }
+    },
+    {
+      "game_id": "ced22494ae0bbb8cc4f7108bf6f493df",
+      "home": "England",
+      "away": "Argentina",
+      "time": "2026-07-15T19:00:00Z",
+      "h2h": {
+        "away": 3.25,
+        "home": 2.76,
+        "draw": 3.08
+      },
+      "totals": {
+        "over25": 2.44,
+        "under25": 3.0
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "Duelo entre duas das seleções mais fortes do mundo, com Argentina levemente favorita nos ratings (97.1 vs 91.9), mas England surpreende com xGA extraordinariamente baixo (0.26), indicando defesa de elite sob Tuchel. O cenário aponta para uma partida equilibrada e truncada, com poucos gols e alta intensidade nos dois lados.",
+        "aposta_principal": "Under 2.5 gols (odd implícita ~1.63, caso disponível) ou Empate 1X2 @ 3.08",
+        "justificativa": "O xGA da England de apenas 0.26 é um dos mais baixos possíveis, sinalizando uma defesa extremamente sólida que deve neutralizar o ataque argentino. A Argentina, apesar do rating superior, carrega um xGA de 2.0, mostrando vulnerabilidade defensiva — o que pode resultar em um jogo tenso mas de baixa pontuação. O Over 2.5 a 2.44 parece caro dado o perfil defensivo inglês, favorecendo o Under ou o empate em jogo de Copa.",
+        "apostas_alternativas": [
+          "Empate @ 3.08 — equilíbrio tático e histórico de jogos truncados em grandes decisões justificam o valor",
+          "England sem sofrer gol (Clean Sheet) @ odds estimadas 2.80-3.00 — xGA de 0.26 da England é dado concreto e robusto"
+        ],
+        "risco": "Messi em noite decisiva ou erro defensivo inglês pode romper o equilíbrio e invalidar apostas baseadas em contenção de gols.",
         "confianca": "media"
       }
     }
