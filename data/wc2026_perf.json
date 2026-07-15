@@ -1,6 +1,111 @@
 {
-  "updated_at": "2026-07-15T21:07:29.840491+00:00",
+  "updated_at": "2026-07-15T23:03:25.661651+00:00",
   "teams": [
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "games": 7,
+      "goals_for": 19,
+      "goals_against": 7,
+      "xg_for": 12.787644700341039,
+      "xg_against": 6.204051494428927,
+      "wins": 7,
+      "draws": 0,
+      "losses": 0,
+      "points": 21,
+      "expected_points": 16.984666603190455,
+      "big_chances_created": 16,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AGL",
+          "date": "2026-06-17",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 1.0,
+          "xga": 0.43,
+          "result": "W",
+          "p_win": 0.818
+        },
+        {
+          "vs": "AUT",
+          "date": "2026-06-22",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 1.78,
+          "xga": 0.55,
+          "result": "W",
+          "p_win": 0.795
+        },
+        {
+          "vs": "JOR",
+          "date": "2026-06-28",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.14,
+          "xga": 0.63,
+          "result": "W",
+          "p_win": 0.97
+        },
+        {
+          "vs": "CAB",
+          "date": "2026-07-03",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.69,
+          "xga": 1.38,
+          "result": "W",
+          "p_win": 0.932
+        },
+        {
+          "vs": "EGI",
+          "date": "2026-07-07",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.12,
+          "xga": 1.54,
+          "result": "W",
+          "p_win": 0.828
+        },
+        {
+          "vs": "SUI",
+          "date": "2026-07-12",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.0,
+          "xga": 0.53,
+          "result": "W",
+          "p_win": 0.622
+        },
+        {
+          "vs": "ING",
+          "date": "2026-07-15",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 1.06,
+          "xga": 1.14,
+          "result": "W",
+          "p_win": 0.293
+        }
+      ],
+      "xpts": 16.98,
+      "delta_pts": 4.02,
+      "xgf": 1.83,
+      "xga": 0.89,
+      "efi": {
+        "games": 6,
+        "xg_official": 2.32,
+        "pass_accuracy": 90.7,
+        "avg_distance_km": 7.28,
+        "sprints": 405.8,
+        "forced_turnovers": 43.0,
+        "linebreaks_completed": 134.8,
+        "linebreaks_attempted": 180.8,
+        "top_speed": 35.2,
+        "shot_accuracy": 41.8
+      },
+      "dgf_efi": 0.39
+    },
     {
       "code": "ESP",
       "name": "Spain",
@@ -285,196 +390,6 @@
         "shot_accuracy": 22.9
       },
       "dgf_efi": 0.2
-    },
-    {
-      "code": "ARG",
-      "name": "Argentina",
-      "games": 6,
-      "goals_for": 17,
-      "goals_against": 6,
-      "xg_for": 11.73,
-      "xg_against": 5.06,
-      "wins": 6,
-      "draws": 0,
-      "losses": 0,
-      "points": 18,
-      "expected_points": 15.735434143640074,
-      "big_chances_created": 16,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "AGL",
-          "date": "2026-06-17",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 1.0,
-          "xga": 0.43,
-          "result": "W",
-          "p_win": 0.818
-        },
-        {
-          "vs": "AUT",
-          "date": "2026-06-22",
-          "gf": 2,
-          "ga": 0,
-          "xgf": 1.78,
-          "xga": 0.55,
-          "result": "W",
-          "p_win": 0.795
-        },
-        {
-          "vs": "JOR",
-          "date": "2026-06-28",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.14,
-          "xga": 0.63,
-          "result": "W",
-          "p_win": 0.97
-        },
-        {
-          "vs": "CAB",
-          "date": "2026-07-03",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 2.69,
-          "xga": 1.38,
-          "result": "W",
-          "p_win": 0.932
-        },
-        {
-          "vs": "EGI",
-          "date": "2026-07-07",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 2.12,
-          "xga": 1.54,
-          "result": "W",
-          "p_win": 0.828
-        },
-        {
-          "vs": "SUI",
-          "date": "2026-07-12",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.0,
-          "xga": 0.53,
-          "result": "W",
-          "p_win": 0.622
-        }
-      ],
-      "xpts": 15.74,
-      "delta_pts": 2.26,
-      "xgf": 1.96,
-      "xga": 0.84,
-      "efi": {
-        "games": 6,
-        "xg_official": 2.32,
-        "pass_accuracy": 90.7,
-        "avg_distance_km": 7.28,
-        "sprints": 405.8,
-        "forced_turnovers": 43.0,
-        "linebreaks_completed": 134.8,
-        "linebreaks_attempted": 180.8,
-        "top_speed": 35.2,
-        "shot_accuracy": 41.8
-      },
-      "dgf_efi": 0.51
-    },
-    {
-      "code": "ING",
-      "name": "England",
-      "games": 6,
-      "goals_for": 13,
-      "goals_against": 6,
-      "xg_for": 11.2,
-      "xg_against": 6.969999999999999,
-      "wins": 5,
-      "draws": 1,
-      "losses": 0,
-      "points": 16,
-      "expected_points": 13.92547550558836,
-      "big_chances_created": 23,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "CRO",
-          "date": "2026-06-17",
-          "gf": 4,
-          "ga": 2,
-          "xgf": 2.92,
-          "xga": 1.64,
-          "result": "W",
-          "p_win": 0.588
-        },
-        {
-          "vs": "GAN",
-          "date": "2026-06-23",
-          "gf": 0,
-          "ga": 0,
-          "xgf": 1.12,
-          "xga": 0.89,
-          "result": "D",
-          "p_win": 0.895
-        },
-        {
-          "vs": "PAN",
-          "date": "2026-06-27",
-          "gf": 2,
-          "ga": 0,
-          "xgf": 2.55,
-          "xga": 1.03,
-          "result": "W",
-          "p_win": 0.944
-        },
-        {
-          "vs": "RDC",
-          "date": "2026-07-01",
-          "gf": 2,
-          "ga": 1,
-          "xgf": 2.04,
-          "xga": 0.76,
-          "result": "W",
-          "p_win": 0.892
-        },
-        {
-          "vs": "MEX",
-          "date": "2026-07-06",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 1.61,
-          "xga": 1.88,
-          "result": "W",
-          "p_win": 0.392
-        },
-        {
-          "vs": "NOR",
-          "date": "2026-07-11",
-          "gf": 2,
-          "ga": 1,
-          "xgf": 0.96,
-          "xga": 0.77,
-          "result": "W",
-          "p_win": 0.521
-        }
-      ],
-      "xpts": 13.93,
-      "delta_pts": 2.07,
-      "xgf": 1.87,
-      "xga": 1.16,
-      "efi": {
-        "games": 6,
-        "xg_official": 2.04,
-        "pass_accuracy": 89.7,
-        "avg_distance_km": 7.33,
-        "sprints": 451.8,
-        "forced_turnovers": 35.0,
-        "linebreaks_completed": 123.0,
-        "linebreaks_attempted": 174.5,
-        "top_speed": 35.8,
-        "shot_accuracy": 41.5
-      },
-      "dgf_efi": 0.13
     },
     {
       "code": "FRA",
@@ -1570,6 +1485,111 @@
         "shot_accuracy": 30.4
       },
       "dgf_efi": 0.74
+    },
+    {
+      "code": "ING",
+      "name": "England",
+      "games": 7,
+      "goals_for": 14,
+      "goals_against": 8,
+      "xg_for": 12.344051494428927,
+      "xg_against": 8.027644700341037,
+      "wins": 5,
+      "draws": 1,
+      "losses": 1,
+      "points": 16,
+      "expected_points": 15.3051124553337,
+      "big_chances_created": 23,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "CRO",
+          "date": "2026-06-17",
+          "gf": 4,
+          "ga": 2,
+          "xgf": 2.92,
+          "xga": 1.64,
+          "result": "W",
+          "p_win": 0.588
+        },
+        {
+          "vs": "GAN",
+          "date": "2026-06-23",
+          "gf": 0,
+          "ga": 0,
+          "xgf": 1.12,
+          "xga": 0.89,
+          "result": "D",
+          "p_win": 0.895
+        },
+        {
+          "vs": "PAN",
+          "date": "2026-06-27",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 2.55,
+          "xga": 1.03,
+          "result": "W",
+          "p_win": 0.944
+        },
+        {
+          "vs": "RDC",
+          "date": "2026-07-01",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 2.04,
+          "xga": 0.76,
+          "result": "W",
+          "p_win": 0.892
+        },
+        {
+          "vs": "MEX",
+          "date": "2026-07-06",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 1.61,
+          "xga": 1.88,
+          "result": "W",
+          "p_win": 0.392
+        },
+        {
+          "vs": "NOR",
+          "date": "2026-07-11",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 0.96,
+          "xga": 0.77,
+          "result": "W",
+          "p_win": 0.521
+        },
+        {
+          "vs": "ARG",
+          "date": "2026-07-15",
+          "gf": 1,
+          "ga": 2,
+          "xgf": 1.14,
+          "xga": 1.06,
+          "result": "L",
+          "p_win": 0.336
+        }
+      ],
+      "xpts": 15.31,
+      "delta_pts": 0.69,
+      "xgf": 1.76,
+      "xga": 1.15,
+      "efi": {
+        "games": 6,
+        "xg_official": 2.04,
+        "pass_accuracy": 89.7,
+        "avg_distance_km": 7.33,
+        "sprints": 451.8,
+        "forced_turnovers": 35.0,
+        "linebreaks_completed": 123.0,
+        "linebreaks_attempted": 174.5,
+        "top_speed": 35.8,
+        "shot_accuracy": 41.5
+      },
+      "dgf_efi": -0.04
     },
     {
       "code": "SUE",
@@ -9352,10 +9372,47 @@
       "nlbair": false,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
+    },
+    {
+      "date": "2026-07-15",
+      "home": "ING",
+      "away": "ARG",
+      "g1": 1,
+      "g2": 2,
+      "pH": 0.336,
+      "pD": 0.371,
+      "pA": 0.293,
+      "lam": 1.14,
+      "mu": 1.06,
+      "home_xg": 1.14,
+      "away_xg": 1.06,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "AWAY_TEAM",
+      "narrative": [
+        "🚨 **Upset**: model predicted draw (37%) but ended 1–2.",
+        "⚡ Argentina outscored xG (2 goals vs 1.1 xG) — clinical finishing."
+      ],
+      "nlbair": false,
+      "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
+      "city": "Atlanta"
     }
   ],
   "real_xg_games": 59,
   "nlbair_games": 86,
-  "narratives_built": 101,
+  "narratives_built": 102,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }

@@ -1,39 +1,11 @@
 {
-  "generated_at": "2026-07-15T21:07:30.672862+00:00",
-  "generated_at_brt": "15/07/2026 18:07 BRT",
+  "generated_at": "2026-07-15T23:03:26.703972+00:00",
+  "generated_at_brt": "15/07/2026 20:03 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um jogo na Copa 2026, mas com grande destaque: o clássico England vs Argentina apresenta odds extremamente desequilibradas, sugerindo forte favoritismo pela Argentina segundo o mercado. A odd de 13.84 para o empate chama atenção como possível value em um confro",
+    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [
-    {
-      "game_id": "ced22494ae0bbb8cc4f7108bf6f493df",
-      "home": "England",
-      "away": "Argentina",
-      "time": "2026-07-15T19:00:00Z",
-      "h2h": {
-        "away": 13.84,
-        "home": 1000.0,
-        "draw": 100.0
-      },
-      "totals": {
-        "over25": 50.0,
-        "under25": 2.02
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Argentina chega como ampla favorita com rating 97.1 contra 91.9 da Inglaterra, em um confronto de alto nível onde os sul-americanos demonstram superioridade técnica e mentalidade vencedora. O cenário aponta para domínio argentino, com Messi como fator decisivo e a defesa inglesa sendo o principal obstáculo.",
-        "aposta_principal": "Argentina vence — odd 13.84",
-        "justificativa": "O rating superior da Argentina (97.1 vs 91.9) e o xG favorável (2.4) apontam para capacidade ofensiva consistente. A odd de 13.84 representa valor real dado o nível técnico argentino, especialmente considerando que a odd de 1000.0 na Inglaterra revela desequilíbrio extremo. A Inglaterra possui defesa sólida (xGA 0.26), mas enfrenta um adversário campeão mundial com repertório superior.",
-        "apostas_alternativas": [
-          "Argentina vence + Over 1.5 gols — odd estimada ~18.0 (combina favoritismo argentino com produção ofensiva de ambos)",
-          "Resultado Correto Argentina 2-0 ou 2-1 — odd estimada ~25.0+ (perfil argentino de vitórias controladas com xGA 2.0 indica jogos movimentados)"
-        ],
-        "risco": "A defesa excepcional da Inglaterra (xGA 0.26) pode frustrar o ataque argentino, tornando o jogo truncado e aumentando a chance de empate ou placar mínimo.",
-        "confianca": "media"
-      }
-    }
-  ],
+  "match_previews": [],
   "tactical_notes": {}
 }
