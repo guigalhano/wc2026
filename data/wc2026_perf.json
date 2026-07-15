@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T23:02:26.106290+00:00",
+  "updated_at": "2026-07-15T02:55:46.433740+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -7,8 +7,8 @@
       "games": 7,
       "goals_for": 13,
       "goals_against": 1,
-      "xg_for": 14.869683821103125,
-      "xg_against": 4.2338153594774255,
+      "xg_for": 15.459999999999997,
+      "xg_against": 3.3699999999999997,
       "wins": 6,
       "draws": 1,
       "losses": 0,
@@ -82,16 +82,16 @@
           "date": "2026-07-14",
           "gf": 2,
           "ga": 0,
-          "xgf": 1.04,
-          "xga": 1.16,
+          "xgf": 1.63,
+          "xga": 0.3,
           "result": "W",
           "p_win": 0.284
         }
       ],
       "xpts": 15.5,
       "delta_pts": 3.5,
-      "xgf": 2.12,
-      "xga": 0.6,
+      "xgf": 2.21,
+      "xga": 0.48,
       "efi": {
         "games": 6,
         "xg_official": 2.13,
@@ -482,8 +482,8 @@
       "games": 7,
       "goals_for": 16,
       "goals_against": 4,
-      "xg_for": 15.763815359477427,
-      "xg_against": 5.329683821103128,
+      "xg_for": 14.9,
+      "xg_against": 5.92,
       "wins": 6,
       "draws": 0,
       "losses": 1,
@@ -557,16 +557,16 @@
           "date": "2026-07-14",
           "gf": 0,
           "ga": 2,
-          "xgf": 1.16,
-          "xga": 1.04,
+          "xgf": 0.3,
+          "xga": 1.63,
           "result": "L",
           "p_win": 0.346
         }
       ],
       "xpts": 15.95,
       "delta_pts": 2.05,
-      "xgf": 2.25,
-      "xga": 0.76,
+      "xgf": 2.13,
+      "xga": 0.85,
       "efi": {
         "games": 6,
         "xg_official": 2.22,
@@ -9317,35 +9317,44 @@
       "pA": 0.284,
       "lam": 1.16,
       "mu": 1.04,
-      "home_xg": 1.16,
-      "away_xg": 1.04,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 0.3,
+      "away_xg": 1.63,
+      "real_xg": true,
+      "home_shots": 10.0,
+      "away_shots": 10.0,
+      "home_sot": 3.0,
+      "away_sot": 2.0,
+      "home_poss": 42.0,
+      "away_poss": 58.0,
       "home_big_chances": null,
       "away_big_chances": null,
       "home_goals": [],
-      "away_goals": [],
+      "away_goals": [
+        {
+          "min": "22",
+          "player": "Mikel Oyarzabal",
+          "type": "regular"
+        },
+        {
+          "min": "58",
+          "player": "Pedro Antonio Porro",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
-        "🚨 **Upset**: model predicted draw (37%) but ended 0–2.",
-        "🧱 France underperformed xG (0 goals vs 1.2 xG).",
-        "⚡ Spain outscored xG (2 goals vs 1.0 xG) — clinical finishing."
+        "🚨 **Upset**: model predicted draw (37%) but ended 0–2."
       ],
       "nlbair": false,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
     }
   ],
-  "real_xg_games": 58,
+  "real_xg_games": 59,
   "nlbair_games": 86,
   "narratives_built": 101,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"

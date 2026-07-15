@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-14T23:02:27.078914+00:00",
-  "generated_at_brt": "14/07/2026 20:02 BRT",
+  "generated_at": "2026-07-15T02:55:47.247935+00:00",
+  "generated_at_brt": "14/07/2026 23:55 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto na Copa 2026, mas de altíssimo nível: England vs Argentina, clássico mundial com odds equilibradas que sugerem jogo disputado. As três odds disponíveis (2.84 / 3.04 / 3.20) indicam mercado competitivo com possível value no empate e na vitória argen",
+    "summary": "```json\n{\n  \"summary\": \"A Copa do Mundo 2026 apresenta hoje um duelo de peso entre Inglaterra e Argentina, duas seleções com histórico rico e motivações distintas. As odds equilibradas refletem a incerteza do confronto, abrindo janelas de value especialmente nos mercados alternativos.\",\n  \"tip_of_da",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "Argentina",
       "time": "2026-07-15T19:00:00Z",
       "h2h": {
-        "away": 3.2,
-        "home": 2.84,
+        "away": 3.15,
+        "home": 2.86,
         "draw": 3.04
       },
       "totals": {
-        "over25": 2.56,
+        "over25": 2.54,
         "under25": 2.85
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Duelo de alto nível entre uma Inglaterra organizada e defensivamente sólida sob Tuchel contra uma Argentina com rating superior e mentalidade campeã, com Messi como fator decisivo. Espera-se um jogo equilibrado e disputado, com a Argentina levando leve vantagem técnica apesar das odds favorecendo a Inglaterra.",
-        "aposta_principal": "Argentina vence — odd 3.2",
-        "justificativa": "A Argentina possui rating 97.1 contra 91.9 da Inglaterra, e seu xGA de 2.0 indica vulnerabilidade defensiva que o ataque inglês (xG 2.59) pode explorar — porém, o xG ofensivo argentino (2.4) aliado à presença de Messi em momentos decisivos justifica apostar na vitória argentina com odd de valor real considerando o nível da seleção. A odd 3.2 para o atual campeão mundial representa valor claro de mercado.",
+        "resumo": "Clássico de alto nível entre duas seleções de elite, com Argentina ligeiramente favorita pelos dados de rating (97.1 vs 91.9), mas England apresenta defesa excepcional com xGA de apenas 0.26. Espera-se um jogo disputado e equilibrado, com Argentina tendo maior potencial ofensivo e England apostando na solidez defensiva de Tuchel.",
+        "aposta_principal": "Empate no tempo regulamentar @ 3.04",
+        "justificativa": "O xGA da England (0.26) indica uma defesa quase impermeável, dificultando a criação argentina apesar do xG de 2.4. A Argentina, embora superior no rating, também comete poucos erros, o que tende a produzir jogos truncados. O equilíbrio histórico entre as seleções e o contexto de mata-mata favorece um resultado justo de empate, com odds de 3.04 oferecendo valor real.",
         "apostas_alternativas": [
-          "Over 2.5 gols — odd 2.56 (xG combinado de ~5.0 entre as equipes sugere partida com gols, especialmente dado o xGA elevado da Argentina de 2.0)",
-          "Inglaterra vence ou empata (dupla chance) — odd ~1.55 (defesa inglesa com xGA de apenas 0.26 torna difícil a Argentina vencer com facilidade, segurança como hedge)"
+          "Argentina vence @ 3.15 — risco calculado dado o rating superior e mentalidade campeã com Messi decisivo",
+          "Under 2.5 gols (odd implícita ~1.65) — xGA da England sugere poucos gols sofridos, tornando placar fechado provável"
         ],
-        "risco": "O xGA altíssimo da Argentina (2.0) pode ser inflado pelo nível dos adversários anteriores, e uma Argentina defensivamente concentrada contra a Inglaterra de Tuchel pode resultar em jogo de baixa pontuação invalidando o Over.",
+        "risco": "A imprevisibilidade de Messi em jogos decisivos e a capacidade argentina de resolver partidas em momentos isolados podem comprometer qualquer análise baseada apenas em médias estatísticas.",
         "confianca": "media"
       }
     }
