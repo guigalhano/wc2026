@@ -1,15 +1,8 @@
 {
-  "updated_at": "2026-07-15 19:22 UTC",
+  "updated_at": "2026-07-15 21:07 UTC",
   "source": "betting.betfair.com",
   "count": 10,
   "items": [
-    {
-      "title": "World Cup Tuesday Tipsheet: Back a close encounter between Les Bleus and La Roja in Texas",
-      "link": "https://betting.betfair.com/football/world-cup-2026/world-cup-day-31-tips-and-predictions-back-a-close-encounter-between-les-bleus-and-la-roja-in-texas-130726-904.html",
-      "date": "Tue, 14 Jul 2026 18:37:00 +0100",
-      "desc": "The World Cup semi-finals get underway in Arlington on Tuesday, and Jack Critchley has picked out his best bets and a bet builder for the game between France and Spain, 2022 runners-up hoping to oust ",
-      "isWC": true
-    },
     {
       "title": "Alan Shearer Exclusive: England can beat Argentina in an amazing World Cup semi-final",
       "link": "https://betting.betfair.com/football/alan-shearer/alan-shearer-exclusive-argentina-players-danced-after-the-match-in-98-as-we-got-on-the-team-bus-home-140726-1323.html",
@@ -71,6 +64,13 @@
       "link": "https://betting.betfair.com/football/world-cup-2026/england-v-argentina-tips-bellingham-can-help-bank-40-1-bet-builder-120726-719.html",
       "date": "Wed, 15 Jul 2026 19:00:00 +0100",
       "desc": "Dave Tindall previews the World Cup semi-final between England and Argentina and he is looking to megastars Jude Bellingham and Lionel Messi for his best bets in Wednesday night&#039;s fixture...\n\nEng",
+      "isWC": false
+    },
+    {
+      "title": "Alan Shearer: It could get rocky at Newcastle following transfer policy switch",
+      "link": "https://betting.betfair.com/football/alan-shearer/alan-shearer-on-newcastle-guimares-transfer-andrey-santos-and-more-140726-1323.html",
+      "date": "Wed, 15 Jul 2026 19:55:00 +0100",
+      "desc": "It&#039;s been a rough few weeks for Newcastle fans and the Toon faithful may need to buckle up for a &#039;rocky&#039; season or two, says club legend Alan Shearer...\n\nBruno Guimarães transfer would ",
       "isWC": false
     }
   ]
