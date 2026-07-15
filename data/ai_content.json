@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-15T13:56:28.841678+00:00",
-  "generated_at_brt": "15/07/2026 10:56 BRT",
+  "generated_at": "2026-07-15T15:39:49.636804+00:00",
+  "generated_at_brt": "15/07/2026 12:39 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Copa do Mundo 2026 apresenta um duelo histórico entre Inglaterra e Argentina, duas potências do futebol mundial com odds equilibradas que sugerem jogo disputado. As odds abertas indicam leve vantagem para a Argentina, mas o mercado precifica um confronto extremamente parelho ",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto de alto perfil na Copa 2026, o clássico England vs Argentina, disputado em condições de calor extremo que favorecem baixo ritmo e menos gols. As odds equilibradas (2.82/3.04/3.2) indicam mercado sem favorito claro, abrindo espaço para value em merc",
     "bets": [],
     "tip_of_day": null
   },
@@ -23,14 +23,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Duelo de alto nível entre uma Inglaterra sólida defensivamente (xGA 0.26) e uma Argentina superior no rating geral (97.1 vs 91.9), favorita pela qualidade coletiva e presença de Messi. O cenário aponta para uma partida equilibrada com poucas brechas, mas com potencial ofensivo dos dois lados.",
-        "aposta_principal": "Over 2.5 gols @ 2.56",
-        "justificativa": "Inglaterra projeta xG de 2.59 e Argentina de 2.4, somando mais de 5 gols esperados combinados — forte indicativo de partida com pelo menos 3 gols. Apesar da defesa inglesa ser sólida, o ataque argentino com Messi decisivo e o poder ofensivo de Kane e Bellingham sustentam a expectativa de volume de gols. A odd de 2.56 oferece valor aceitável para esse nível de xG.",
+        "resumo": "Clássico de altíssimo nível entre duas seleções de elite, com Argentina ligeiramente favorita pelos dados de rating (97.1 vs 91.9), mas England apresenta xGA impressionante de apenas 0.26, sugerindo uma defesa excepcionalmente sólida sob Tuchel. O confronto aponta para um jogo disputado, com Argentina buscando o controle e England apostando na solidez defensiva e transições rápidas.",
+        "aposta_principal": "England Ganha ou Empate (Double Chance) — odd aproximada 1.55 / Alternativa direta: Under 2.5 Gols",
+        "justificativa": "O xGA da England de apenas 0.26 é um dado extremamente relevante, indicando que a seleção inglesa concede pouquíssimas chances de qualidade. A Argentina, apesar do rating superior, tem xGA de 2.0, mostrando vulnerabilidade defensiva. Com England difícil de ser batida e jogo de alto nível tendendo ao equilíbrio, o Under 2.5 (odd 2.56) oferece valor real considerando o padrão defensivo inglês e a tendência de jogos de mata-mata serem truncados.",
         "apostas_alternativas": [
-          "Argentina Vence @ 3.20 — rating superior (97.1) e mentalidade campeã justificam o upside da odd",
-          "Ambas marcam (BTTS) @ ~2.10 estimado — xG elevado dos dois lados torna provável que ambas as seleções balanciem as redes"
+          "Under 2.5 Gols — odd 2.56: xGA baixo da England e tensão de jogo grande reduzem volume de gols esperado",
+          "Empate no Tempo Normal — odd 3.04: equilíbrio técnico entre as seleções e pressão do jogo favorece cautela de ambos os lados"
         ],
-        "risco": "A defesa excepcional da Inglaterra (xGA 0.26) pode frustrar o ataque argentino e manter o placar baixo, invalidando o Over 2.5.",
+        "risco": "Messi em momentos decisivos é imprevisível e pode resolver individualmente, quebrando qualquer padrão estatístico projetado.",
         "confianca": "media"
       }
     }
