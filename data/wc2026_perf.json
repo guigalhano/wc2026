@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T06:25:07.381961+00:00",
+  "updated_at": "2026-07-16T10:17:15.150766+00:00",
   "teams": [
     {
       "code": "ARG",
@@ -7,8 +7,8 @@
       "games": 7,
       "goals_for": 19,
       "goals_against": 7,
-      "xg_for": 12.787644700341039,
-      "xg_against": 6.204051494428927,
+      "xg_for": 13.530000000000001,
+      "xg_against": 5.6,
       "wins": 7,
       "draws": 0,
       "losses": 0,
@@ -82,16 +82,16 @@
           "date": "2026-07-15",
           "gf": 2,
           "ga": 1,
-          "xgf": 1.06,
-          "xga": 1.14,
+          "xgf": 1.8,
+          "xga": 0.54,
           "result": "W",
           "p_win": 0.293
         }
       ],
       "xpts": 16.98,
       "delta_pts": 4.02,
-      "xgf": 1.83,
-      "xga": 0.89,
+      "xgf": 1.93,
+      "xga": 0.8,
       "efi": {
         "games": 7,
         "xg_official": 2.2,
@@ -1492,8 +1492,8 @@
       "games": 7,
       "goals_for": 14,
       "goals_against": 8,
-      "xg_for": 12.344051494428927,
-      "xg_against": 8.027644700341037,
+      "xg_for": 11.739999999999998,
+      "xg_against": 8.77,
       "wins": 5,
       "draws": 1,
       "losses": 1,
@@ -1567,16 +1567,16 @@
           "date": "2026-07-15",
           "gf": 1,
           "ga": 2,
-          "xgf": 1.14,
-          "xga": 1.06,
+          "xgf": 0.54,
+          "xga": 1.8,
           "result": "L",
           "p_win": 0.336
         }
       ],
       "xpts": 15.31,
       "delta_pts": 0.69,
-      "xgf": 1.76,
-      "xga": 1.15,
+      "xgf": 1.68,
+      "xga": 1.25,
       "efi": {
         "games": 7,
         "xg_official": 1.81,
@@ -9384,34 +9384,51 @@
       "pA": 0.293,
       "lam": 1.14,
       "mu": 1.06,
-      "home_xg": 1.14,
-      "away_xg": 1.06,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 0.54,
+      "away_xg": 1.8,
+      "real_xg": true,
+      "home_shots": 5.0,
+      "away_shots": 15.0,
+      "home_sot": 2.0,
+      "away_sot": 5.0,
+      "home_poss": 36.0,
+      "away_poss": 64.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_goals": [
+        {
+          "min": "55",
+          "player": "Anthony Michael Gordon",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "85",
+          "player": "Enzo Jeremías Fernandez",
+          "type": "regular"
+        },
+        {
+          "min": "90+2",
+          "player": "Lautaro Javier Martinez",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
         "🚨 **Upset**: model predicted draw (37%) but ended 1–2.",
-        "⚡ Argentina outscored xG (2 goals vs 1.1 xG) — clinical finishing."
+        "🎯 Argentina dominated possession (64%)."
       ],
       "nlbair": false,
       "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
       "city": "Atlanta"
     }
   ],
-  "real_xg_games": 59,
+  "real_xg_games": 60,
   "nlbair_games": 86,
   "narratives_built": 102,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
