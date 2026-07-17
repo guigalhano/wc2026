@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-17T03:20:20.324515+00:00",
-  "generated_at_brt": "17/07/2026 00:20 BRT",
+  "generated_at": "2026-07-17T06:23:02.788931+00:00",
+  "generated_at_brt": "17/07/2026 03:23 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"O dia conta com um duelo histórico entre França e Inglaterra na Copa 2026, partida de altíssimo nível com odds equilibradas que escondem valor real. A vitória francesa surge como aposta central, enquanto mercados alternativos oferecem oportunidades interessantes de value.\",\n ",
+    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto disponível na Copa 2026, o clássico France vs England, duelo de altíssimo nível entre duas das maiores seleções do mundo. As odds refletem leve favoritismo francês, mas o empate e a vitória inglesa apresentam valor interessante para apostadores ate",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "England",
       "time": "2026-07-18T21:00:00Z",
       "h2h": {
-        "away": 4.05,
+        "away": 4.07,
         "home": 1.99,
         "draw": 4.1
       },
       "totals": {
-        "over25": 2.2,
+        "over25": 2.18,
         "under25": 2.75
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "França e Inglaterra se enfrentam em um duelo de alto nível com favoritism claro para os franceses, que apresentam rating superior e transições letais lideradas por Mbappé. A Inglaterra sob Tuchel chega com defesa impressionante (xGA 0.26), tornando este um confronto equilibrado defensivamente, mas com potencial ofensivo considerável dos dois lados.",
-        "aposta_principal": "França Vence @ 1.99",
-        "justificativa": "A França possui rating 3.4 pontos superior, xG de 2.52 contra uma defesa inglesa que, apesar de sólida, enfrenta o ataque mais perigoso do torneio. O histórico de Mbappé em grandes jogos e o elenco profundo francês sustentam o favoritismo. A odd de 1.99 oferece valor razoável para um time claramente superior em qualidade técnica.",
+        "resumo": "Duelo de alto nível entre França e Inglaterra com estilos contrastantes: a França aposta em transições explosivas lideradas por Mbappé, enquanto a Inglaterra de Tuchel apresenta uma das defesas mais sólidas do torneio com xGA impressionante de apenas 0.26. O confronto deve ser equilibrado e truncado, com a França levando vantagem nas odds por seu rating superior e maior poder ofensivo coletivo.",
+        "aposta_principal": "França Vence — Odd 1.99",
+        "justificativa": "A França possui rating 3.4 pontos acima da Inglaterra e xG de 2.52 contra uma defesa inglesa que, apesar de sólida, ainda não enfrentou ataque de nível Mbappé neste torneio. A odd de 1.99 oferece valor real para o favorito em um mata-mata, e o histórico recente de transições rápidas francesas tende a explorar linhas defensivas organizadas em espaços abertos.",
         "apostas_alternativas": [
-          "Over 2.5 gols @ 2.2 — ambas as equipes têm xG elevado (2.52 e 2.59) e motivação máxima, favorecendo partida com gols",
-          "Inglaterra marca (BTTS) @ mercado — xG inglês de 2.59 é o maior do confronto, sugerindo capacidade real de marcar mesmo diante da defesa francesa"
+          "Ambas marcam (BTTS - Sim) — buscar odd ~2.10, considerando que Inglaterra tem xG 2.59 e França xGA 0.98, ambos os lados têm capacidade de balançar a rede",
+          "Under 2.5 gols — Odd ~1.83, dado o xGA excepcionalmente baixo da Inglaterra (0.26) e o perfil defensivo imposto por Tuchel, o jogo pode terminar com 1-0 ou 2-0"
         ],
-        "risco": "A solidez defensiva da Inglaterra (xGA 0.26, a melhor do torneio) pode frustrar o ataque francês e levar o jogo para prorrogação ou resultado baixo, comprometendo tanto a vitória francesa quanto o Over 2.5.",
+        "risco": "A defesa inglesa é historicamente difícil de ser vazada neste torneio (xGA 0.26), o que pode frustrar o ataque francês e levar o jogo para a prorrogação ou pênaltis, anulando a aposta simples na vitória da França.",
         "confianca": "media"
       }
     }
