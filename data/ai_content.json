@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-17T19:19:40.479145+00:00",
-  "generated_at_brt": "17/07/2026 16:19 BRT",
+  "generated_at": "2026-07-17T21:02:40.252327+00:00",
+  "generated_at_brt": "17/07/2026 18:02 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia com apenas um confronto de alto nível na Copa 2026, França vs Inglaterra, clássico europeu disputado em condições de calor extremo nos EUA. O fator climático (Houston 40.3°C) é determinante para análise de mercados alternativos como handicap asiático e totais de gols.\",\n ",
+    "summary": "```json\n{\n  \"summary\": \"Copa do Mundo 2026 apresenta um duelo clássico entre França e Inglaterra em Houston, com calor extremo de 38°C podendo impactar diretamente o ritmo e a intensidade do jogo. O clima adverso favorece apostas em mercados de baixo volume de gols e resultados defensivos, especialm",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "England",
       "time": "2026-07-18T21:00:00Z",
       "h2h": {
-        "away": 4.0,
+        "away": 4.1,
         "home": 1.99,
         "draw": 4.1
       },
       "totals": {
-        "over25": 2.22,
+        "over25": 2.2,
         "under25": 2.85
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "França e Inglaterra se enfrentam em um duelo de alto nível com a França largando como favorita pelas odds, mas os dados de xGA mostram uma Inglaterra extraordinariamente sólida defensivamente (0.26 contra gols esperados). O confronto equilibrado aponta para um jogo tenso e truncado, com a França pressionando e a Inglaterra explorando contra-ataques.",
-        "aposta_principal": "Ambas as equipes marcam: NÃO @ ~1.80 (mercado derivado recomendado)",
-        "justificativa": "O xGA da Inglaterra de apenas 0.26 é excepcional e sugere que a defesa sob Tuchel é difícil de ser vazada, tornando improvável que a França construa múltiplas oportunidades convertidas. A França, por sua vez, tem xGA de 0.98, indicando que também consegue se proteger, o que favorece um placar de baixo volume de gols efetivos. O Over 2.5 a 2.22 reforça que o mercado também não espera um jogo aberto.",
+        "resumo": "França entra como favorita com rating superior (95.3) e estilo ofensivo liderado por Mbappé, mas enfrenta uma Inglaterra excepcionalmente sólida defensivamente sob Tuchel, com xGA impressionante de apenas 0.26. O confronto promete ser disputado e tático, com a França pressionando e a Inglaterra apostando em transições e organização defensiva.",
+        "aposta_principal": "França Vence (1X2) @ 1.99",
+        "justificativa": "A França apresenta xG de 2.52 com elenco mais profundo e rating 3.4 pontos superior, o que justifica a vantagem nas odds. Apesar da defesa inglesa ser robusta (xGA 0.26), o poder ofensivo francês com Mbappé em transições rápidas tende a criar oportunidades de alta qualidade. A odd de 1.99 oferece valor aceitável considerando a superioridade técnica e individual do elenco francês.",
         "apostas_alternativas": [
-          "França vence (1X2) @ 1.99 — rating superior (95.3 vs 91.9) e Mbappé como fator decisivo em transições",
-          "Under 2.5 gols @ ~1.65 — xGA sólido dos dois lados indica jogo fechado e de poucos gols"
+          "Ambas Marcam (BTTS - Sim) @ ~2.10 — xG elevado dos dois lados (França 2.52 / Inglaterra 2.59) sugere capacidade ofensiva mútua",
+          "Over 2.5 Gols @ 2.20 — Os xG combinados ultrapassam 5.0, e mesmo com defesa inglesa sólida, o nível ofensivo de ambas as seleções favorece partida com ao menos 3 gols"
         ],
-        "risco": "A Inglaterra tem xG ofensivo de 2.59 (superior à França) e pode surpreender em contra-ataques com Kane e Bellingham, tornando o favoritismo francês mais estreito do que as odds sugerem.",
+        "risco": "A disciplina defensiva da Inglaterra sob Tuchel (xGA 0.26 é excepcionalmente baixo) pode frustrar o ataque francês e levar a um placar fechado ou empate, invalidando tanto o resultado quanto o over.",
         "confianca": "media"
       }
     }

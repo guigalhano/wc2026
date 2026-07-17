@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T19:19:39.426130+00:00",
+  "updated_at": "2026-07-17T21:02:39.412495+00:00",
   "teams": [
     {
       "code": "ARG",
@@ -14,7 +14,7 @@
       "losses": 0,
       "points": 21,
       "expected_points": 16.984666603190455,
-      "big_chances_created": 16,
+      "big_chances_created": 22,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -119,7 +119,7 @@
       "losses": 0,
       "points": 19,
       "expected_points": 15.495358235441117,
-      "big_chances_created": 15,
+      "big_chances_created": 20,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -224,7 +224,7 @@
       "losses": 2,
       "points": 12,
       "expected_points": 8.642055930492193,
-      "big_chances_created": 21,
+      "big_chances_created": 22,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -404,7 +404,7 @@
       "losses": 1,
       "points": 18,
       "expected_points": 15.951009628842787,
-      "big_chances_created": 19,
+      "big_chances_created": 25,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -809,7 +809,7 @@
       "losses": 1,
       "points": 11,
       "expected_points": 9.562367027784884,
-      "big_chances_created": 19,
+      "big_chances_created": 20,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1404,7 +1404,7 @@
       "losses": 1,
       "points": 11,
       "expected_points": 10.234144974546265,
-      "big_chances_created": 14,
+      "big_chances_created": 15,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1499,7 +1499,7 @@
       "losses": 1,
       "points": 16,
       "expected_points": 15.3051124553337,
-      "big_chances_created": 23,
+      "big_chances_created": 26,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -9118,23 +9118,23 @@
       "home_xg": 3.1,
       "away_xg": 0.13,
       "real_xg": true,
-      "home_shots": 21.0,
-      "away_shots": 5.0,
-      "home_sot": 8.0,
-      "away_sot": 1.0,
-      "home_poss": 48.0,
-      "away_poss": 52.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 22,
+      "away_shots": 5,
+      "home_sot": 14,
+      "away_sot": 2,
+      "home_poss": 49.5,
+      "away_poss": 50.5,
+      "home_big_chances": 6,
+      "away_big_chances": 0,
       "home_goals": [
         {
-          "min": "60",
-          "player": "Kylian Mbappe",
+          "min": "59",
+          "player": "Kylian Mbappé",
           "type": "regular"
         },
         {
-          "min": "66",
-          "player": "Masour Ousmane Dembele",
+          "min": "65",
+          "player": "Ousmane Dembélé",
           "type": "regular"
         }
       ],
@@ -9146,9 +9146,10 @@
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (59%). Final: 2–0.",
-        "🧱 France underperformed xG (2 goals vs 3.1 xG)."
+        "🧱 France underperformed xG (2 goals vs 3.1 xG).",
+        "💥 France created 6 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Boston Stadium (Gillette Stadium)",
       "city": "Foxborough"
     },
@@ -9166,30 +9167,30 @@
       "home_xg": 2.08,
       "away_xg": 0.37,
       "real_xg": true,
-      "home_shots": 17.0,
-      "away_shots": 5.0,
-      "home_sot": 8.0,
-      "away_sot": 2.0,
-      "home_poss": 68.0,
-      "away_poss": 32.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 17,
+      "away_shots": 5,
+      "home_sot": 13,
+      "away_sot": 4,
+      "home_poss": 63.9,
+      "away_poss": 36.1,
+      "home_big_chances": 2,
+      "away_big_chances": 1,
       "home_goals": [
         {
-          "min": "30",
-          "player": "Fabian Ruiz",
+          "min": "29",
+          "player": "Fabián Ruiz",
           "type": "regular"
         },
         {
-          "min": "88",
+          "min": "87",
           "player": "Mikel Merino",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "41",
-          "player": "Charles Marc De Ketelaere",
+          "min": "40",
+          "player": "Charles De Ketelaere",
           "type": "regular"
         }
       ],
@@ -9200,9 +9201,11 @@
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (55%). Final: 2–1.",
-        "🎯 Spain dominated possession (68%)."
+        "💥 Spain created 2 big chances.",
+        "💥 Belgium created 1 big chance.",
+        "🎯 Spain dominated possession (64%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Los Angeles Stadium (SoFi Stadium)",
       "city": "Inglewood"
     },
@@ -9220,30 +9223,30 @@
       "home_xg": 0.77,
       "away_xg": 0.96,
       "real_xg": true,
-      "home_shots": 13.0,
-      "away_shots": 14.0,
-      "home_sot": 5.0,
-      "away_sot": 8.0,
-      "home_poss": 47.0,
-      "away_poss": 53.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 13,
+      "away_shots": 14,
+      "home_sot": 8,
+      "away_sot": 11,
+      "home_poss": 46.5,
+      "away_poss": 53.5,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
       "home_goals": [
         {
-          "min": "36",
-          "player": "Andreas Rædergård Schjelderup",
+          "min": "35",
+          "player": "Andreas Schjelderup",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "45+2",
-          "player": "Jude Victor William Bellingham",
+          "min": "46",
+          "player": "Jude Bellingham",
           "type": "regular"
         },
         {
-          "min": "93",
-          "player": "Jude Victor William Bellingham",
+          "min": "92",
+          "player": "Jude Bellingham",
           "type": "regular"
         }
       ],
@@ -9254,9 +9257,11 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (52%). Final: 1–2.",
-        "⚡ England outscored xG (2 goals vs 1.0 xG) — clinical finishing."
+        "⚡ England outscored xG (2 goals vs 1.0 xG) — clinical finishing.",
+        "💥 Norway created 1 big chance.",
+        "💥 England created 2 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Miami Stadium (Hard Rock Stadium)",
       "city": "Miami Gardens"
     },
@@ -9274,34 +9279,34 @@
       "home_xg": 2.0,
       "away_xg": 0.53,
       "real_xg": true,
-      "home_shots": 23.0,
-      "away_shots": 13.0,
-      "home_sot": 7.0,
-      "away_sot": 5.0,
-      "home_poss": 59.0,
-      "away_poss": 41.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 22,
+      "away_shots": 11,
+      "home_sot": 15,
+      "away_sot": 8,
+      "home_poss": 57.8,
+      "away_poss": 42.2,
+      "home_big_chances": 3,
+      "away_big_chances": 1,
       "home_goals": [
         {
-          "min": "10",
+          "min": "9",
           "player": "Alexis Mac Allister",
           "type": "regular"
         },
         {
-          "min": "112",
+          "min": "111",
           "player": "Julián Alvarez",
           "type": "regular"
         },
         {
-          "min": "120+1",
-          "player": "Lautaro Javier Martinez",
+          "min": "120",
+          "player": "Lautaro Martínez",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "67",
+          "min": "66",
           "player": "Dan Ndoye",
           "type": "regular"
         }
@@ -9320,9 +9325,11 @@
       "narrative": [
         "✅ **Result matched prediction** (62%). Final: 3–1.",
         "⚡ Argentina outscored xG (3 goals vs 2.0 xG) — clinical finishing.",
+        "💥 Argentina created 3 big chances.",
+        "💥 Switzerland created 1 big chance.",
         "🟥 Switzerland down to 10 men (Breel Donald Embolo, 72')."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Kansas City Stadium (Arrowhead Stadium)",
       "city": "Kansas City"
     },
@@ -9340,24 +9347,24 @@
       "home_xg": 0.3,
       "away_xg": 1.63,
       "real_xg": true,
-      "home_shots": 10.0,
-      "away_shots": 10.0,
-      "home_sot": 3.0,
-      "away_sot": 2.0,
-      "home_poss": 42.0,
-      "away_poss": 58.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 10,
+      "away_shots": 10,
+      "home_sot": 5,
+      "away_sot": 5,
+      "home_poss": 48.9,
+      "away_poss": 51.1,
+      "home_big_chances": 0,
+      "away_big_chances": 3,
       "home_goals": [],
       "away_goals": [
         {
-          "min": "22",
+          "min": "21",
           "player": "Mikel Oyarzabal",
-          "type": "regular"
+          "type": "penalty"
         },
         {
-          "min": "58",
-          "player": "Pedro Antonio Porro",
+          "min": "57",
+          "player": "Pedro Porro",
           "type": "regular"
         }
       ],
@@ -9367,9 +9374,10 @@
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
-        "🚨 **Upset**: model predicted draw (37%) but ended 0–2."
+        "🚨 **Upset**: model predicted draw (37%) but ended 0–2.",
+        "💥 Spain created 3 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
     },
@@ -9387,30 +9395,30 @@
       "home_xg": 0.54,
       "away_xg": 1.8,
       "real_xg": true,
-      "home_shots": 5.0,
-      "away_shots": 15.0,
-      "home_sot": 2.0,
-      "away_sot": 5.0,
-      "home_poss": 36.0,
-      "away_poss": 64.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 5,
+      "away_shots": 15,
+      "home_sot": 4,
+      "away_sot": 9,
+      "home_poss": 39.3,
+      "away_poss": 60.7,
+      "home_big_chances": 1,
+      "away_big_chances": 3,
       "home_goals": [
         {
-          "min": "55",
-          "player": "Anthony Michael Gordon",
+          "min": "54",
+          "player": "Anthony Gordon",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "85",
-          "player": "Enzo Jeremías Fernandez",
+          "min": "84",
+          "player": "Enzo Fernández",
           "type": "regular"
         },
         {
-          "min": "90+2",
-          "player": "Lautaro Javier Martinez",
+          "min": "91",
+          "player": "Lautaro Martínez",
           "type": "regular"
         }
       ],
@@ -9421,15 +9429,17 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "🚨 **Upset**: model predicted draw (37%) but ended 1–2.",
-        "🎯 Argentina dominated possession (64%)."
+        "💥 England created 1 big chance.",
+        "💥 Argentina created 3 big chances.",
+        "🎯 Argentina dominated possession (61%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
       "city": "Atlanta"
     }
   ],
   "real_xg_games": 60,
-  "nlbair_games": 86,
+  "nlbair_games": 92,
   "narratives_built": 102,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
