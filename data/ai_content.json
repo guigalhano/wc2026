@@ -1,11 +1,39 @@
 {
-  "generated_at": "2026-07-16T23:03:42.501186+00:00",
-  "generated_at_brt": "16/07/2026 20:03 BRT",
+  "generated_at": "2026-07-17T03:20:20.324515+00:00",
+  "generated_at_brt": "17/07/2026 00:20 BRT",
   "value_bets_today": {
-    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
+    "summary": "```json\n{\n  \"summary\": \"O dia conta com um duelo histórico entre França e Inglaterra na Copa 2026, partida de altíssimo nível com odds equilibradas que escondem valor real. A vitória francesa surge como aposta central, enquanto mercados alternativos oferecem oportunidades interessantes de value.\",\n ",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [],
+  "match_previews": [
+    {
+      "game_id": "7a49e7985534a5ff3428740d0b630fd7",
+      "home": "France",
+      "away": "England",
+      "time": "2026-07-18T21:00:00Z",
+      "h2h": {
+        "away": 4.05,
+        "home": 1.99,
+        "draw": 4.1
+      },
+      "totals": {
+        "over25": 2.2,
+        "under25": 2.75
+      },
+      "btts_yes": null,
+      "preview": {
+        "resumo": "França e Inglaterra se enfrentam em um duelo de alto nível com favoritism claro para os franceses, que apresentam rating superior e transições letais lideradas por Mbappé. A Inglaterra sob Tuchel chega com defesa impressionante (xGA 0.26), tornando este um confronto equilibrado defensivamente, mas com potencial ofensivo considerável dos dois lados.",
+        "aposta_principal": "França Vence @ 1.99",
+        "justificativa": "A França possui rating 3.4 pontos superior, xG de 2.52 contra uma defesa inglesa que, apesar de sólida, enfrenta o ataque mais perigoso do torneio. O histórico de Mbappé em grandes jogos e o elenco profundo francês sustentam o favoritismo. A odd de 1.99 oferece valor razoável para um time claramente superior em qualidade técnica.",
+        "apostas_alternativas": [
+          "Over 2.5 gols @ 2.2 — ambas as equipes têm xG elevado (2.52 e 2.59) e motivação máxima, favorecendo partida com gols",
+          "Inglaterra marca (BTTS) @ mercado — xG inglês de 2.59 é o maior do confronto, sugerindo capacidade real de marcar mesmo diante da defesa francesa"
+        ],
+        "risco": "A solidez defensiva da Inglaterra (xGA 0.26, a melhor do torneio) pode frustrar o ataque francês e levar o jogo para prorrogação ou resultado baixo, comprometendo tanto a vitória francesa quanto o Over 2.5.",
+        "confianca": "media"
+      }
+    }
+  ],
   "tactical_notes": {}
 }
