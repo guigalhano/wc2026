@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-18T19:13:34.862059+00:00",
-  "generated_at_brt": "18/07/2026 16:13 BRT",
+  "generated_at": "2026-07-18T20:58:08.287443+00:00",
+  "generated_at_brt": "18/07/2026 17:58 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dia de dois grandes confrontos na Copa 2026, com destaque para o calor extremo em Houston (44°C) que favorece seleções mais adaptadas ao clima quente e pode prejudicar times europeus de alta intensidade. As odds oferecem value interessante nos azarões e nos mercados alternati",
+    "summary": "```json\n{\n  \"summary\": \"Dois jogos de alto nível na Copa 2026 com condições extremas de calor em Houston (42.2°C) que favorecem times com maior profundidade de elenco e estilo de jogo mais direto. O calor extremo tende a reduzir o ritmo das partidas e diminuir o número de gols, criando valor em merc",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "England",
       "time": "2026-07-18T21:00:00Z",
       "h2h": {
-        "away": 4.2,
-        "home": 1.9,
-        "draw": 4.22
+        "away": 4.7,
+        "home": 1.78,
+        "draw": 4.5
       },
       "totals": {
-        "over25": 2.22,
-        "under25": 2.95
+        "over25": 2.28,
+        "under25": 2.75
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "França e Inglaterra se enfrentam em duelo de altíssimo nível com França levemente favorita pelo rating superior (95.3 vs 91.9) e ameaça ofensiva de Mbappé. A Inglaterra de Tuchel apresenta a melhor defesa dos dados (xGA 0.26), prometendo um jogo equilibrado e táticos.",
-        "aposta_principal": "Empate ao intervalo / França vence — odd estimada ~2.80",
-        "justificativa": "A França tende a crescer no segundo tempo com suas transições rápidas e elenco profundo, enquanto a Inglaterra aposta em solidez defensiva nas primeiras fases. O xGA inglês excepcionalmente baixo (0.26) sugere que o gol francês, caso saia, pode demorar. A odd de 1.90 na vitória francesa tem valor dado o rating 3.4 pontos superior.",
+        "resumo": "Duelo de alto nível entre França (rating 95.3) e Inglaterra (rating 91.9), com os franceses favoritos pelas odds mas enfrentando uma defesa inglesa excepcionalmente sólida (xGA 0.26). O cenário aponta para um jogo equilibrado e disputado, com a França buscando explorar transições rápidas via Mbappé contra um bloco defensivo organizado por Tuchel.",
+        "aposta_principal": "Empate no intervalo / França no final (Double Chance França + HT Draw) — odd estimada ~2.10",
+        "justificativa": "A Inglaterra apresenta o melhor xGA do confronto (0.26), sugerindo que a França dificilmente vencerá com facilidade no primeiro tempo. Com rating superior (95.3) e elenco mais profundo, os franceses tendem a impor seu ritmo na segunda etapa, tornando o perfil 'empate no intervalo e vitória da França no fim' estatisticamente coerente. A odd de França simples (1.78) oferece valor moderado, mas carrega risco dado o potencial defensivo inglês.",
         "apostas_alternativas": [
-          "Vitória da França (1X2) — odd 1.90",
-          "Over 2.5 gols — odd 2.22 (xG combinado de 5.11 justifica volume, mas defesas sólidas equilibram)"
+          "França vence — odd 1.78 (favorita clara pelo rating, mas defesa inglesa exige cautela)",
+          "Over 1.5 gols — odd estimada ~1.45 (ambos os times têm xG acima de 2.5, gols são prováveis mesmo em jogo truncado)"
         ],
-        "risco": "O xGA excepcional da Inglaterra (0.26) indica capacidade real de anular ataques, o que pode travar a França e resultar em empate ou placar magro, invalidando apostas ofensivas.",
+        "risco": "A solidez defensiva excepcional da Inglaterra (xGA 0.26) é o maior risco para apostas em gols e vitória francesa, podendo resultar em placar baixo ou empate.",
         "confianca": "media"
       }
     },
@@ -45,19 +45,19 @@
         "draw": 3.15
       },
       "totals": {
-        "over25": 2.38,
+        "over25": 2.42,
         "under25": 3.05
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha chega como favorita clara com rating superior (100 vs 97.1) e xG dominante de 2.95, sugerindo uma partida de alto controle técnico e criação ofensiva. O confronto entre duas potências mundiais deve ser disputado, mas os dados indicam vantagem estrutural espanhola, especialmente com Lamine Yamal como fator desequilibrante.",
-        "aposta_principal": "Vitória da Espanha @ 2.38",
-        "justificativa": "A Espanha apresenta xG de 2.95 contra apenas 0.88 de xGA, indicando domínio total nas duas fases do jogo. A Argentina tem xGA de 2.0, demonstrando vulnerabilidade defensiva que o pressing alto espanhol tende a explorar. A diferença de rating (2.9 pontos) e o estilo de jogo espanhol favorecem claramente o resultado positivo para a Roja.",
+        "resumo": "Espanha chega como favorita clara com xG ofensivo superior (2.95) e defesa sólida (xGA 0.88), indicando domínio técnico e capacidade de marcar múltiplos gols. Argentina, apesar do rating elevado (97.1), apresenta vulnerabilidade defensiva (xGA 2.0) que pode ser explorada pelo estilo de posse e pressing espanhol.",
+        "aposta_principal": "Over 2.5 gols @ 2.42",
+        "justificativa": "A combinação dos xGs das duas equipes aponta para uma média esperada de 5.35 gols totais, tornando Over 2.5 estatisticamente forte. A defesa argentina (xGA 2.0) é permeável contra equipes de alto pressing, e a Espanha tem capacidade ofensiva consistente para converter chances. A odd de 2.42 oferece valor real frente à probabilidade implícita.",
         "apostas_alternativas": [
-          "Over 2.5 Gols @ 2.38 — xG combinado de 5.35 sustenta apostas em jogos com muitos gols",
-          "Espanha Vence e Over 1.5 Gols @ ~2.80 — alta probabilidade dado o ataque espanhol e defesa argentina vulnerável"
+          "Vitória Espanha @ 2.38 — favorita pelos dados defensivos e ofensivos superiores",
+          "Ambas marcam (BTTS - Sim) @ ~2.10 — Argentina tem potencial ofensivo com Messi decisivo e Espanha pode sofrer contra-ataques"
         ],
-        "risco": "Messi em dias decisivos pode desequilibrar qualquer prognóstico, e a mentalidade campeã argentina os mantém competitivos mesmo em desvantagem técnica.",
+        "risco": "A experiência argentina em decisões e a imprevisibilidade de Messi em jogos únicos podem inverter o resultado, especialmente se a Espanha errar defensivamente no bloco baixo adversário.",
         "confianca": "media"
       }
     }
