@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-18T17:03:33.249041+00:00",
-  "generated_at_brt": "18/07/2026 14:03 BRT",
+  "generated_at": "2026-07-18T19:13:34.862059+00:00",
+  "generated_at_brt": "18/07/2026 16:13 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Dois confrontos de elite na Copa 2026 com condições climáticas extremas em Miami e Houston, fator que favorece seleções com melhor preparo físico e experiência em calor intenso. O calor acima de 38°C tende a reduzir o ritmo das partidas e beneficiar equipes mais organizadas t",
+    "summary": "```json\n{\n  \"summary\": \"Dia de dois grandes confrontos na Copa 2026, com destaque para o calor extremo em Houston (44°C) que favorece seleções mais adaptadas ao clima quente e pode prejudicar times europeus de alta intensidade. As odds oferecem value interessante nos azarões e nos mercados alternati",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,24 +13,24 @@
       "away": "England",
       "time": "2026-07-18T21:00:00Z",
       "h2h": {
-        "away": 4.1,
-        "home": 1.92,
-        "draw": 4.2
+        "away": 4.2,
+        "home": 1.9,
+        "draw": 4.22
       },
       "totals": {
-        "over25": 2.2,
+        "over25": 2.22,
         "under25": 2.95
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "França e Inglaterra se enfrentam em duelo de alto nível com os anfitriões favoritos graças ao rating superior e potência ofensiva de Mbappé. A Inglaterra de Tuchel surpreende com xGA impressionante de apenas 0.26, sugerindo um jogo equilibrado e potencialmente de baixo placar.",
-        "aposta_principal": "Empate no intervalo / França vence (Double Chance + BTTS não) — France Vence @1.92",
-        "justificativa": "A França possui rating 3.4 pontos acima da Inglaterra e xG de 2.52, indicando produção ofensiva consistente. Contudo, a defesa inglesa é historicamente sólida neste torneio (xGA 0.26), o que favorece a França como favorita mas em jogo disputado. A odd de 1.92 oferece valor razoável para o favorito em confronto eliminatório.",
+        "resumo": "França e Inglaterra se enfrentam em duelo de altíssimo nível com França levemente favorita pelo rating superior (95.3 vs 91.9) e ameaça ofensiva de Mbappé. A Inglaterra de Tuchel apresenta a melhor defesa dos dados (xGA 0.26), prometendo um jogo equilibrado e táticos.",
+        "aposta_principal": "Empate ao intervalo / França vence — odd estimada ~2.80",
+        "justificativa": "A França tende a crescer no segundo tempo com suas transições rápidas e elenco profundo, enquanto a Inglaterra aposta em solidez defensiva nas primeiras fases. O xGA inglês excepcionalmente baixo (0.26) sugere que o gol francês, caso saia, pode demorar. A odd de 1.90 na vitória francesa tem valor dado o rating 3.4 pontos superior.",
         "apostas_alternativas": [
-          "Under 2.5 gols @1.82 — xGA baixíssimo da Inglaterra (0.26) sugere jogo travado defensivamente",
-          "Ambas marcam: Não @1.75 — defesa inglesa concedeu pouquíssimos gols esperados no torneio"
+          "Vitória da França (1X2) — odd 1.90",
+          "Over 2.5 gols — odd 2.22 (xG combinado de 5.11 justifica volume, mas defesas sólidas equilibram)"
         ],
-        "risco": "O xG elevado de ambas as equipes (2.52 e 2.59) indica potencial ofensivo real, podendo invalidar apostas defensivas caso o jogo abra no segundo tempo.",
+        "risco": "O xGA excepcional da Inglaterra (0.26) indica capacidade real de anular ataques, o que pode travar a França e resultar em empate ou placar magro, invalidando apostas ofensivas.",
         "confianca": "media"
       }
     },
@@ -45,19 +45,19 @@
         "draw": 3.15
       },
       "totals": {
-        "over25": 2.4,
+        "over25": 2.38,
         "under25": 3.05
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha chega como favorita clara com xG impressionante de 2.95 e rating superior, enquanto a Argentina tem vulnerabilidade defensiva com xGA de 2.0. Espera-se uma partida de alto nível técnico com Espanha controlando posse e Argentina buscando transições rápidas com Messi.",
-        "aposta_principal": "Over 2.5 gols @ 2.40",
-        "justificativa": "O xG combinado das duas seleções é de 5.35, sinalizando forte potencial ofensivo. A defesa argentina mostra fragilidade com xGA de 2.0, e o estilo de pressing alto da Espanha tende a gerar muitas chances. O histórico ofensivo de ambas as equipes reforça a expectativa de jogo aberto e com gols.",
+        "resumo": "Espanha chega como favorita clara com rating superior (100 vs 97.1) e xG dominante de 2.95, sugerindo uma partida de alto controle técnico e criação ofensiva. O confronto entre duas potências mundiais deve ser disputado, mas os dados indicam vantagem estrutural espanhola, especialmente com Lamine Yamal como fator desequilibrante.",
+        "aposta_principal": "Vitória da Espanha @ 2.38",
+        "justificativa": "A Espanha apresenta xG de 2.95 contra apenas 0.88 de xGA, indicando domínio total nas duas fases do jogo. A Argentina tem xGA de 2.0, demonstrando vulnerabilidade defensiva que o pressing alto espanhol tende a explorar. A diferença de rating (2.9 pontos) e o estilo de jogo espanhol favorecem claramente o resultado positivo para a Roja.",
         "apostas_alternativas": [
-          "Vitória Espanha @ 2.38 — rating superior e xG dominante justificam o favoritismo",
-          "Ambas marcam (BTTS Sim) — Argentina ataca bem com xG 2.4 e Espanha tem xGA de 0.88 mas enfrenta Messi"
+          "Over 2.5 Gols @ 2.38 — xG combinado de 5.35 sustenta apostas em jogos com muitos gols",
+          "Espanha Vence e Over 1.5 Gols @ ~2.80 — alta probabilidade dado o ataque espanhol e defesa argentina vulnerável"
         ],
-        "risco": "A mentalidade campeã da Argentina e a capacidade decisiva de Messi podem equilibrar uma partida onde os números favorecem a Espanha, aumentando o risco em apostas de resultado.",
+        "risco": "Messi em dias decisivos pode desequilibrar qualquer prognóstico, e a mentalidade campeã argentina os mantém competitivos mesmo em desvantagem técnica.",
         "confianca": "media"
       }
     }
