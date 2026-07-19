@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-19T15:03:28.273055+00:00",
-  "generated_at_brt": "19/07/2026 12:03 BRT",
+  "generated_at": "2026-07-19T17:05:36.374976+00:00",
+  "generated_at_brt": "19/07/2026 14:05 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"A Copa do Mundo 2026 apresenta hoje um confronto de altíssimo nível entre Espanha e Argentina, duas das maiores potências do futebol mundial. As odds refletem um equilíbrio competitivo com leve favoritismo espanhol jogando como mandante no contexto do torneio.\",\n  \"tip_of_day",
+    "summary": "```json\n{\n  \"summary\": \"Dia de jogo único na Copa 2026 com o duelo mais aguardado do torneio: Spain vs Argentina. O calor extremo nas cidades-sede (acima de 38°C) é fator determinante na análise, favorecendo jogo mais lento, menos intenso e potencialmente menos gols.\",\n  \"tip_of_day\": {\n    \"jogo\": ",
     "bets": [],
     "tip_of_day": null
   },
@@ -13,8 +13,8 @@
       "away": "Argentina",
       "time": "2026-07-19T19:00:00Z",
       "h2h": {
-        "away": 3.85,
-        "home": 2.38,
+        "away": 3.9,
+        "home": 2.37,
         "draw": 3.15
       },
       "totals": {
@@ -23,14 +23,14 @@
       },
       "btts_yes": null,
       "preview": {
-        "resumo": "Espanha enfrenta a Argentina em um duelo de altíssimo nível com dois dos melhores selecionados do mundo em forma. A Espanha chega como favorita com xG superior (2.95) e defesa sólida, mas enfrenta uma Argentina experiente e campeã que sabe jogar partidas decisivas.",
-        "aposta_principal": "Vitória da Espanha @ 2.38",
-        "justificativa": "A Espanha possui rating máximo (100) e xG de 2.95 contra apenas 0.88 de xGA, indicando dominância ofensiva e defensiva consistente. A Argentina concede em média 2.0 xGA, o que favorece o ataque espanhol com Lamine Yamal em destaque. A odd de 2.38 oferece valor real considerando o desnível técnico entre as equipes.",
+        "resumo": "Espanha chega como favorita com métricas ofensivas superiores (xG 2.95) e a melhor defesa esperada do confronto (xGA 0.88), sugerindo domínio técnico e territorial. Argentina conta com experiência de campeã e Messi como fator imprevisível, mas seu xGA de 2.0 indica vulnerabilidade defensiva que pode ser explorada.",
+        "aposta_principal": "Spain Vence @ 2.37",
+        "justificativa": "A Espanha apresenta rating máximo (100) contra 97.1 da Argentina, com vantagem expressiva no xG (2.95 vs 2.40) e superioridade defensiva clara (xGA 0.88 vs 2.0). O estilo de posse dominante com pressing alto de Lamine Yamal tende a sufocar a saída de bola argentina, que historicamente sofre contra equipes que pressionam alto com organização.",
         "apostas_alternativas": [
-          "Over 2.5 gols @ 2.44 — combinação de ataque espanhol (xG 2.95) com defesa argentina vulnerável (xGA 2.0) sugere jogo com gols",
-          "Ambas marcam (Sim) @ ~2.10 — Argentina tem poder ofensivo com Messi decisivo e xG de 2.4, improvável que fique sem marcar"
+          "Over 2.5 Gols @ 2.44 — xG combinado de 5.35 entre as equipes aponta forte tendência de jogo aberto com múltiplos gols",
+          "Ambas Marcam @ ~1.85 (estimada) — Argentina tem capacidade ofensiva real (xG 2.40) e Espanha concede pouco, mas Messi em jogos decisivos eleva a chance de gol argentino"
         ],
-        "risco": "A mentalidade campeã da Argentina e a imprevisibilidade de Messi em jogos grandes podem neutralizar a superioridade técnica espanhola e virar o jogo.",
+        "risco": "Messi em jogos de alto nível é um fator de desequilíbrio difícil de modelar estatisticamente, podendo inverter o favoritismo com uma jogada isolada.",
         "confianca": "media"
       }
     }
