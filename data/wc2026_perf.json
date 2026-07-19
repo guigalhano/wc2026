@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T03:28:58.864311+00:00",
+  "updated_at": "2026-07-19T06:36:31.459792+00:00",
   "teams": [
     {
       "code": "ARG",
@@ -408,18 +408,18 @@
       "xgf": 1.59,
       "xga": 1.25,
       "efi": {
-        "games": 7,
-        "xg_official": 1.81,
-        "pass_accuracy": 89.0,
-        "avg_distance_km": 7.24,
-        "sprints": 445.1,
-        "forced_turnovers": 34.6,
-        "linebreaks_completed": 118.1,
-        "linebreaks_attempted": 171.1,
+        "games": 8,
+        "xg_official": 1.88,
+        "pass_accuracy": 89.1,
+        "avg_distance_km": 7.23,
+        "sprints": 441.9,
+        "forced_turnovers": 34.2,
+        "linebreaks_completed": 119.9,
+        "linebreaks_attempted": 172.0,
         "top_speed": 36.2,
-        "shot_accuracy": 41.4
+        "shot_accuracy": 44.1
       },
-      "dgf_efi": 0.69
+      "dgf_efi": 0.62
     },
     {
       "code": "PAR",
@@ -1598,18 +1598,18 @@
       "xgf": 2.01,
       "xga": 0.87,
       "efi": {
-        "games": 7,
-        "xg_official": 1.97,
-        "pass_accuracy": 89.4,
-        "avg_distance_km": 7.29,
-        "sprints": 406.4,
-        "forced_turnovers": 42.9,
-        "linebreaks_completed": 127.7,
-        "linebreaks_attempted": 169.6,
+        "games": 8,
+        "xg_official": 2.1,
+        "pass_accuracy": 89.5,
+        "avg_distance_km": 7.18,
+        "sprints": 414.0,
+        "forced_turnovers": 41.2,
+        "linebreaks_completed": 126.8,
+        "linebreaks_attempted": 165.6,
         "top_speed": 37.6,
-        "shot_accuracy": 41.7
+        "shot_accuracy": 42.4
       },
-      "dgf_efi": 0.53
+      "dgf_efi": 0.4
     },
     {
       "code": "SUE",
