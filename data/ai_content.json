@@ -1,39 +1,11 @@
 {
-  "generated_at": "2026-07-19T20:59:07.605510+00:00",
-  "generated_at_brt": "19/07/2026 17:59 BRT",
+  "generated_at": "2026-07-19T22:58:13.021029+00:00",
+  "generated_at_brt": "19/07/2026 19:58 BRT",
   "value_bets_today": {
-    "summary": "```json\n{\n  \"summary\": \"Apenas um jogo disponível hoje na Copa 2026, o clássico Spain vs Argentina, disputado sob condições de calor extremo que favorecem times com maior profundidade de elenco e estilo de jogo mais adaptável. O calor severo (acima de 39°C) reduz intensidade ofensiva e aumenta proba",
+    "summary": "Nenhum jogo da Copa encontrado para hoje/amanhã.",
     "bets": [],
     "tip_of_day": null
   },
-  "match_previews": [
-    {
-      "game_id": "fb30113e43d113f1ace48b8563ba1ee9",
-      "home": "Spain",
-      "away": "Argentina",
-      "time": "2026-07-19T19:05:00Z",
-      "h2h": {
-        "away": 10.0,
-        "home": 3.45,
-        "draw": 1.83
-      },
-      "totals": {
-        "over25": 2.26,
-        "under25": 2.13
-      },
-      "btts_yes": null,
-      "preview": {
-        "resumo": "Espanha chega como favorita clara diante de uma Argentina que, apesar do rating elevado (97.1), apresenta xGA de 2.0 — vulnerabilidade que o ataque espanhol (xG 2.95) tende a explorar. O cenário aponta para uma partida de domínio territorial espanhol com gols, dado o desequilíbrio defensivo argentino.",
-        "aposta_principal": "Over 2.5 gols @ 2.26",
-        "justificativa": "A Espanha produz em média 2.95 xG por jogo com posse dominante e pressing alto, enquanto a Argentina concede 2.0 xGA — combinação que favorece partidas com múltiplos gols. Mesmo que a Argentina marque através de Messi em momentos decisivos, a pressão ofensiva espanhola sustentada por Lamine Yamal torna o over altamente provável. A odd de 2.26 oferece valor real frente à probabilidade implícita.",
-        "apostas_alternativas": [
-          "Espanha vence (1X2) @ 3.45 — valor interessante dado o xG 2.95 vs xGA 2.0 argentino",
-          "Ambas marcam (BTTS - Sim) @ estimado ~1.90 — Argentina tem poder ofensivo (xG 2.4) e Messi decisivo"
-        ],
-        "risco": "A mentalidade campeã da Argentina e a imprevisibilidade de Messi em jogos únicos podem comprimir o jogo e anular a superioridade técnica espanhola, especialmente se marcarem primeiro.",
-        "confianca": "media"
-      }
-    }
-  ],
+  "match_previews": [],
   "tactical_notes": {}
 }

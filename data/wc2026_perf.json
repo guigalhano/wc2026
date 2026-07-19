@@ -1,124 +1,19 @@
 {
-  "updated_at": "2026-07-19T20:59:06.706305+00:00",
+  "updated_at": "2026-07-19T22:58:12.209849+00:00",
   "teams": [
-    {
-      "code": "ARG",
-      "name": "Argentina",
-      "games": 7,
-      "goals_for": 19,
-      "goals_against": 7,
-      "xg_for": 13.530000000000001,
-      "xg_against": 5.6,
-      "wins": 7,
-      "draws": 0,
-      "losses": 0,
-      "points": 21,
-      "expected_points": 16.984666603190455,
-      "big_chances_created": 22,
-      "big_chances_conceded": 0,
-      "matches": [
-        {
-          "vs": "AGL",
-          "date": "2026-06-17",
-          "gf": 3,
-          "ga": 0,
-          "xgf": 1.0,
-          "xga": 0.43,
-          "result": "W",
-          "p_win": 0.818
-        },
-        {
-          "vs": "AUT",
-          "date": "2026-06-22",
-          "gf": 2,
-          "ga": 0,
-          "xgf": 1.78,
-          "xga": 0.55,
-          "result": "W",
-          "p_win": 0.795
-        },
-        {
-          "vs": "JOR",
-          "date": "2026-06-28",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.14,
-          "xga": 0.63,
-          "result": "W",
-          "p_win": 0.97
-        },
-        {
-          "vs": "CAB",
-          "date": "2026-07-03",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 2.69,
-          "xga": 1.38,
-          "result": "W",
-          "p_win": 0.932
-        },
-        {
-          "vs": "EGI",
-          "date": "2026-07-07",
-          "gf": 3,
-          "ga": 2,
-          "xgf": 2.12,
-          "xga": 1.54,
-          "result": "W",
-          "p_win": 0.828
-        },
-        {
-          "vs": "SUI",
-          "date": "2026-07-12",
-          "gf": 3,
-          "ga": 1,
-          "xgf": 2.0,
-          "xga": 0.53,
-          "result": "W",
-          "p_win": 0.622
-        },
-        {
-          "vs": "ING",
-          "date": "2026-07-15",
-          "gf": 2,
-          "ga": 1,
-          "xgf": 1.8,
-          "xga": 0.54,
-          "result": "W",
-          "p_win": 0.293
-        }
-      ],
-      "xpts": 16.98,
-      "delta_pts": 4.02,
-      "xgf": 1.93,
-      "xga": 0.8,
-      "efi": {
-        "games": 7,
-        "xg_official": 2.2,
-        "pass_accuracy": 90.6,
-        "avg_distance_km": 7.2,
-        "sprints": 407.7,
-        "forced_turnovers": 42.4,
-        "linebreaks_completed": 133.4,
-        "linebreaks_attempted": 178.1,
-        "top_speed": 35.2,
-        "shot_accuracy": 40.7
-      },
-      "dgf_efi": 0.51
-    },
     {
       "code": "ESP",
       "name": "Spain",
-      "games": 7,
-      "goals_for": 13,
+      "games": 8,
+      "goals_for": 14,
       "goals_against": 1,
-      "xg_for": 15.459999999999997,
-      "xg_against": 3.3699999999999997,
-      "wins": 6,
+      "xg_for": 16.68409193916573,
+      "xg_against": 4.358487842526489,
+      "wins": 7,
       "draws": 1,
       "losses": 0,
-      "points": 19,
-      "expected_points": 15.495358235441117,
+      "points": 22,
+      "expected_points": 16.988821752320895,
       "big_chances_created": 20,
       "big_chances_conceded": 0,
       "matches": [
@@ -191,12 +86,22 @@
           "xga": 0.3,
           "result": "W",
           "p_win": 0.284
+        },
+        {
+          "vs": "ARG",
+          "date": "2026-07-19",
+          "gf": 1,
+          "ga": 0,
+          "xgf": 1.22,
+          "xga": 0.99,
+          "result": "W",
+          "p_win": 0.375
         }
       ],
-      "xpts": 15.5,
-      "delta_pts": 3.5,
-      "xgf": 2.21,
-      "xga": 0.48,
+      "xpts": 16.99,
+      "delta_pts": 5.01,
+      "xgf": 2.09,
+      "xga": 0.54,
       "efi": {
         "games": 7,
         "xg_official": 2.14,
@@ -209,7 +114,7 @@
         "top_speed": 34.0,
         "shot_accuracy": 35.0
       },
-      "dgf_efi": -0.28
+      "dgf_efi": -0.39
     },
     {
       "code": "NOR",
@@ -305,6 +210,121 @@
         "shot_accuracy": 46.2
       },
       "dgf_efi": 0.51
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "games": 8,
+      "goals_for": 19,
+      "goals_against": 8,
+      "xg_for": 14.51848784252649,
+      "xg_against": 6.824091939165731,
+      "wins": 7,
+      "draws": 0,
+      "losses": 1,
+      "points": 21,
+      "expected_points": 18.1240897432128,
+      "big_chances_created": 22,
+      "big_chances_conceded": 0,
+      "matches": [
+        {
+          "vs": "AGL",
+          "date": "2026-06-17",
+          "gf": 3,
+          "ga": 0,
+          "xgf": 1.0,
+          "xga": 0.43,
+          "result": "W",
+          "p_win": 0.818
+        },
+        {
+          "vs": "AUT",
+          "date": "2026-06-22",
+          "gf": 2,
+          "ga": 0,
+          "xgf": 1.78,
+          "xga": 0.55,
+          "result": "W",
+          "p_win": 0.795
+        },
+        {
+          "vs": "JOR",
+          "date": "2026-06-28",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.14,
+          "xga": 0.63,
+          "result": "W",
+          "p_win": 0.97
+        },
+        {
+          "vs": "CAB",
+          "date": "2026-07-03",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.69,
+          "xga": 1.38,
+          "result": "W",
+          "p_win": 0.932
+        },
+        {
+          "vs": "EGI",
+          "date": "2026-07-07",
+          "gf": 3,
+          "ga": 2,
+          "xgf": 2.12,
+          "xga": 1.54,
+          "result": "W",
+          "p_win": 0.828
+        },
+        {
+          "vs": "SUI",
+          "date": "2026-07-12",
+          "gf": 3,
+          "ga": 1,
+          "xgf": 2.0,
+          "xga": 0.53,
+          "result": "W",
+          "p_win": 0.622
+        },
+        {
+          "vs": "ING",
+          "date": "2026-07-15",
+          "gf": 2,
+          "ga": 1,
+          "xgf": 1.8,
+          "xga": 0.54,
+          "result": "W",
+          "p_win": 0.293
+        },
+        {
+          "vs": "ESP",
+          "date": "2026-07-19",
+          "gf": 0,
+          "ga": 1,
+          "xgf": 0.99,
+          "xga": 1.22,
+          "result": "L",
+          "p_win": 0.257
+        }
+      ],
+      "xpts": 18.12,
+      "delta_pts": 2.88,
+      "xgf": 1.81,
+      "xga": 0.85,
+      "efi": {
+        "games": 7,
+        "xg_official": 2.2,
+        "pass_accuracy": 90.6,
+        "avg_distance_km": 7.2,
+        "sprints": 407.7,
+        "forced_turnovers": 42.4,
+        "linebreaks_completed": 133.4,
+        "linebreaks_attempted": 178.1,
+        "top_speed": 35.2,
+        "shot_accuracy": 40.7
+      },
+      "dgf_efi": 0.17
     },
     {
       "code": "ING",
@@ -9547,10 +9567,47 @@
       "nlbair": false,
       "stadium": "Miami Stadium (Hard Rock Stadium)",
       "city": "Miami Gardens"
+    },
+    {
+      "date": "2026-07-19",
+      "home": "ESP",
+      "away": "ARG",
+      "g1": 1,
+      "g2": 0,
+      "pH": 0.375,
+      "pD": 0.367,
+      "pA": 0.257,
+      "lam": 1.22,
+      "mu": 0.99,
+      "home_xg": 1.22,
+      "away_xg": 0.99,
+      "real_xg": false,
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
+      "reds": [],
+      "has_stats": false,
+      "went_pens": false,
+      "pens": null,
+      "winner": "HOME_TEAM",
+      "narrative": [
+        "✅ **Result matched prediction** (38%). Final: 1–0.",
+        "🧱 Argentina underperformed xG (0 goals vs 1.0 xG)."
+      ],
+      "nlbair": false,
+      "stadium": "New York New Jersey Stadium (MetLife Stadium)",
+      "city": "East Rutherford"
     }
   ],
   "real_xg_games": 61,
   "nlbair_games": 92,
-  "narratives_built": 103,
+  "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
