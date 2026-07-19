@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T06:36:31.459792+00:00",
+  "updated_at": "2026-07-19T09:58:16.064660+00:00",
   "teams": [
     {
       "code": "ARG",
@@ -312,8 +312,8 @@
       "games": 8,
       "goals_for": 20,
       "goals_against": 12,
-      "xg_for": 12.745896780506254,
-      "xg_against": 9.97290672308447,
+      "xg_for": 14.619999999999997,
+      "xg_against": 11.649999999999999,
       "wins": 6,
       "draws": 1,
       "losses": 1,
@@ -397,16 +397,16 @@
           "date": "2026-07-18",
           "gf": 6,
           "ga": 4,
-          "xgf": 1.01,
-          "xga": 1.2,
+          "xgf": 2.88,
+          "xga": 2.88,
           "result": "W",
           "p_win": 0.266
         }
       ],
       "xpts": 16.47,
       "delta_pts": 2.53,
-      "xgf": 1.59,
-      "xga": 1.25,
+      "xgf": 1.83,
+      "xga": 1.46,
       "efi": {
         "games": 8,
         "xg_official": 1.88,
@@ -1502,8 +1502,8 @@
       "games": 8,
       "goals_for": 20,
       "goals_against": 10,
-      "xg_for": 16.102906723084473,
-      "xg_against": 6.925896780506255,
+      "xg_for": 17.78,
+      "xg_against": 8.8,
       "wins": 6,
       "draws": 0,
       "losses": 2,
@@ -1587,16 +1587,16 @@
           "date": "2026-07-18",
           "gf": 4,
           "ga": 6,
-          "xgf": 1.2,
-          "xga": 1.01,
+          "xgf": 2.88,
+          "xga": 2.88,
           "result": "L",
           "p_win": 0.365
         }
       ],
       "xpts": 17.42,
       "delta_pts": 0.58,
-      "xgf": 2.01,
-      "xga": 0.87,
+      "xgf": 2.22,
+      "xga": 1.1,
       "efi": {
         "games": 8,
         "xg_official": 2.1,
@@ -9468,35 +9468,88 @@
       "pA": 0.266,
       "lam": 1.2,
       "mu": 1.01,
-      "home_xg": 1.2,
-      "away_xg": 1.01,
-      "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
+      "home_xg": 2.88,
+      "away_xg": 2.88,
+      "real_xg": true,
+      "home_shots": 18.0,
+      "away_shots": 21.0,
+      "home_sot": 9.0,
+      "away_sot": 11.0,
+      "home_poss": 50.0,
+      "away_poss": 50.0,
       "home_big_chances": null,
       "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_goals": [
+        {
+          "min": "48",
+          "player": "Kylian Mbappe",
+          "type": "regular"
+        },
+        {
+          "min": "54",
+          "player": "Bradley Jean-Manuel Essolisa Barcola",
+          "type": "regular"
+        },
+        {
+          "min": "66",
+          "player": "Kylian Mbappe",
+          "type": "regular"
+        },
+        {
+          "min": "96",
+          "player": "Masour Ousmane Dembele",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "3",
+          "player": "Declan Rice",
+          "type": "regular"
+        },
+        {
+          "min": "18",
+          "player": "Ezri Ngoyo Konsa",
+          "type": "regular"
+        },
+        {
+          "min": "37",
+          "player": "Bukayo Ayoyinka Saka",
+          "type": "regular"
+        },
+        {
+          "min": "46",
+          "player": "Bukayo Ayoyinka Saka",
+          "type": "regular"
+        },
+        {
+          "min": "87",
+          "player": "Bukayo Ayoyinka Saka",
+          "type": "regular"
+        },
+        {
+          "min": "98",
+          "player": "Jude Victor William Bellingham",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
         "🚨 **Upset**: model predicted draw (37%) but ended 4–6.",
-        "⚡ France outscored xG (4 goals vs 1.2 xG) — clinical finishing.",
-        "⚡ England outscored xG (6 goals vs 1.0 xG) — clinical finishing."
+        "⚡ France outscored xG (4 goals vs 2.9 xG) — clinical finishing.",
+        "⚡ England outscored xG (6 goals vs 2.9 xG) — clinical finishing.",
+        "🎯 England: 6 goals from 21 shots (29% conversion)."
       ],
       "nlbair": false,
       "stadium": "Miami Stadium (Hard Rock Stadium)",
       "city": "Miami Gardens"
     }
   ],
-  "real_xg_games": 60,
+  "real_xg_games": 61,
   "nlbair_games": 92,
   "narratives_built": 103,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
