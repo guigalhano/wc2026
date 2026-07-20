@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T03:43:34.266461+00:00",
+  "updated_at": "2026-07-20T06:55:13.326330+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -103,18 +103,18 @@
       "xgf": 2.28,
       "xga": 0.44,
       "efi": {
-        "games": 7,
-        "xg_official": 2.14,
-        "pass_accuracy": 90.5,
-        "avg_distance_km": 7.34,
-        "sprints": 445.9,
-        "forced_turnovers": 49.0,
-        "linebreaks_completed": 163.7,
-        "linebreaks_attempted": 212.3,
+        "games": 8,
+        "xg_official": 2.18,
+        "pass_accuracy": 90.4,
+        "avg_distance_km": 7.52,
+        "sprints": 455.6,
+        "forced_turnovers": 49.9,
+        "linebreaks_completed": 168.9,
+        "linebreaks_attempted": 219.5,
         "top_speed": 34.0,
-        "shot_accuracy": 35.0
+        "shot_accuracy": 38.6
       },
-      "dgf_efi": -0.39
+      "dgf_efi": -0.43
     },
     {
       "code": "NOR",
@@ -313,18 +313,18 @@
       "xgf": 1.71,
       "xga": 1.05,
       "efi": {
-        "games": 7,
-        "xg_official": 2.2,
-        "pass_accuracy": 90.6,
-        "avg_distance_km": 7.2,
-        "sprints": 407.7,
-        "forced_turnovers": 42.4,
-        "linebreaks_completed": 133.4,
-        "linebreaks_attempted": 178.1,
+        "games": 8,
+        "xg_official": 1.93,
+        "pass_accuracy": 89.5,
+        "avg_distance_km": 7.35,
+        "sprints": 421.2,
+        "forced_turnovers": 43.9,
+        "linebreaks_completed": 129.9,
+        "linebreaks_attempted": 180.6,
         "top_speed": 35.2,
-        "shot_accuracy": 40.7
+        "shot_accuracy": 40.0
       },
-      "dgf_efi": 0.17
+      "dgf_efi": 0.45
     },
     {
       "code": "ING",
@@ -3389,7 +3389,7 @@
       "losses": 3,
       "points": 3,
       "expected_points": 5.259883160323824,
-      "big_chances_created": 11,
+      "big_chances_created": 16,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -7131,38 +7131,38 @@
       "home_xg": 3.01,
       "away_xg": 0.14,
       "real_xg": true,
-      "home_shots": 28.0,
-      "away_shots": 6.0,
-      "home_sot": 12.0,
-      "away_sot": 1.0,
-      "home_poss": 69.0,
-      "away_poss": 31.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 28,
+      "away_shots": 6,
+      "home_sot": 17,
+      "away_sot": 5,
+      "home_poss": 63.3,
+      "away_poss": 36.7,
+      "home_big_chances": 5,
+      "away_big_chances": 0,
       "home_goals": [
         {
-          "min": "4",
-          "player": "Habib Mbacke Diarra",
+          "min": "3",
+          "player": "Habib Diarra",
           "type": "regular"
         },
         {
-          "min": "56",
-          "player": "Ismaila Sarr",
+          "min": "55",
+          "player": "Ismaïla Sarr",
           "type": "regular"
         },
         {
-          "min": "59",
-          "player": "Pape Alassane Gueye",
+          "min": "58",
+          "player": "Pape Gueye",
           "type": "regular"
         },
         {
-          "min": "71",
-          "player": "Pape Alassane Gueye",
+          "min": "70",
+          "player": "Pape Gueye",
           "type": "regular"
         },
         {
-          "min": "82",
-          "player": "Iliman Cheikh Baroy Ndiaye",
+          "min": "81",
+          "player": "Iliman Ndiaye",
           "type": "regular"
         }
       ],
@@ -7181,11 +7181,12 @@
       "narrative": [
         "✅ **Result matched prediction** (77%). Final: 5–0.",
         "⚡ Senegal outscored xG (5 goals vs 3.0 xG) — clinical finishing.",
+        "💥 Senegal created 5 big chances.",
         "🟥 Iraq down to 10 men (Ghareeb Solaka Rebin Sulaka, 13').",
-        "🎯 Senegal dominated possession (69%).",
+        "🎯 Senegal dominated possession (63%).",
         "📉 Scoreline (5–0) far more one-sided than model expected (~2.4–0.5)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "New York New Jersey Stadium (MetLife Stadium)",
       "city": "East Rutherford"
     },
@@ -9616,7 +9617,7 @@
     }
   ],
   "real_xg_games": 61,
-  "nlbair_games": 93,
+  "nlbair_games": 94,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
