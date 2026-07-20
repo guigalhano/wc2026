@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T18:11:06.640149+00:00",
+  "updated_at": "2026-07-20T21:17:16.329915+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -7,8 +7,8 @@
       "games": 8,
       "goals_for": 14,
       "goals_against": 1,
-      "xg_for": 18.269999999999996,
-      "xg_against": 3.5399999999999996,
+      "xg_for": 15.979999999999997,
+      "xg_against": 3.4599999999999995,
       "wins": 7,
       "draws": 1,
       "losses": 0,
@@ -92,16 +92,16 @@
           "date": "2026-07-19",
           "gf": 1,
           "ga": 0,
-          "xgf": 2.81,
-          "xga": 0.17,
+          "xgf": 0.52,
+          "xga": 0.09,
           "result": "W",
           "p_win": 0.375
         }
       ],
       "xpts": 16.99,
       "delta_pts": 5.01,
-      "xgf": 2.28,
-      "xga": 0.44,
+      "xgf": 2.0,
+      "xga": 0.43,
       "efi": {
         "games": 8,
         "xg_official": 2.18,
@@ -217,8 +217,8 @@
       "games": 8,
       "goals_for": 19,
       "goals_against": 8,
-      "xg_for": 13.700000000000001,
-      "xg_against": 8.41,
+      "xg_for": 13.620000000000001,
+      "xg_against": 6.119999999999999,
       "wins": 7,
       "draws": 0,
       "losses": 1,
@@ -302,16 +302,16 @@
           "date": "2026-07-19",
           "gf": 0,
           "ga": 1,
-          "xgf": 0.17,
-          "xga": 2.81,
+          "xgf": 0.09,
+          "xga": 0.52,
           "result": "L",
           "p_win": 0.257
         }
       ],
       "xpts": 18.12,
       "delta_pts": 2.88,
-      "xgf": 1.71,
-      "xga": 1.05,
+      "xgf": 1.7,
+      "xga": 0.76,
       "efi": {
         "games": 8,
         "xg_official": 1.93,
@@ -447,14 +447,14 @@
       "games": 5,
       "goals_for": 3,
       "goals_against": 6,
-      "xg_for": 7.982475518929513,
-      "xg_against": 15.638077517045641,
+      "xg_for": 8.48,
+      "xg_against": 15.92,
       "wins": 1,
       "draws": 2,
       "losses": 2,
       "points": 5,
       "expected_points": 2.6937578644374804,
-      "big_chances_created": 9,
+      "big_chances_created": 10,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -462,8 +462,8 @@
           "date": "2026-06-13",
           "gf": 1,
           "ga": 4,
-          "xgf": 0.5,
-          "xga": 2.41,
+          "xgf": 1.0,
+          "xga": 2.69,
           "result": "L",
           "p_win": 0.04
         },
@@ -510,8 +510,8 @@
       ],
       "xpts": 2.69,
       "delta_pts": 2.31,
-      "xgf": 1.6,
-      "xga": 3.13,
+      "xgf": 1.7,
+      "xga": 3.18,
       "efi": {
         "games": 5,
         "xg_official": 0.4,
@@ -3457,14 +3457,14 @@
       "games": 5,
       "goals_for": 11,
       "goals_against": 8,
-      "xg_for": 8.02807751704564,
-      "xg_against": 5.262475518929513,
+      "xg_for": 8.31,
+      "xg_against": 5.76,
       "wins": 3,
       "draws": 0,
       "losses": 2,
       "points": 9,
       "expected_points": 11.373731057525971,
-      "big_chances_created": 8,
+      "big_chances_created": 12,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -3472,8 +3472,8 @@
           "date": "2026-06-13",
           "gf": 4,
           "ga": 1,
-          "xgf": 2.41,
-          "xga": 0.5,
+          "xgf": 2.69,
+          "xga": 1.0,
           "result": "W",
           "p_win": 0.778
         },
@@ -3520,8 +3520,8 @@
       ],
       "xpts": 11.37,
       "delta_pts": -2.37,
-      "xgf": 1.61,
-      "xga": 1.05,
+      "xgf": 1.66,
+      "xga": 1.15,
       "efi": {
         "games": 5,
         "xg_official": 1.27,
@@ -3947,29 +3947,59 @@
       "pA": 0.04,
       "lam": 2.41,
       "mu": 0.5,
-      "home_xg": 2.41,
-      "away_xg": 0.5,
+      "home_xg": 2.69,
+      "away_xg": 1.0,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_shots": 16,
+      "away_shots": 10,
+      "home_sot": 10,
+      "away_sot": 7,
+      "home_poss": 61.7,
+      "away_poss": 38.3,
+      "home_big_chances": 4,
+      "away_big_chances": 1,
+      "home_goals": [
+        {
+          "min": "30",
+          "player": "Folarin Balogun",
+          "type": "regular"
+        },
+        {
+          "min": "49",
+          "player": "Folarin Balogun",
+          "type": "regular"
+        },
+        {
+          "min": "97",
+          "player": "Giovanni Reyna",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "6",
+          "player": "Damián Bobadilla",
+          "type": "regular"
+        },
+        {
+          "min": "72",
+          "player": "Mauricio",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (78%). Final: 4–1.",
-        "⚡ USA outscored xG (4 goals vs 2.4 xG) — clinical finishing."
+        "⚡ USA outscored xG (4 goals vs 2.7 xG) — clinical finishing.",
+        "💥 USA created 4 big chances.",
+        "💥 Paraguay created 1 big chance.",
+        "🎯 USA dominated possession (62%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -9551,9 +9581,9 @@
       "pA": 0.257,
       "lam": 1.22,
       "mu": 0.99,
-      "home_xg": 2.81,
-      "away_xg": 0.17,
-      "real_xg": false,
+      "home_xg": 0.52,
+      "away_xg": 0.09,
+      "real_xg": true,
       "home_shots": 20,
       "away_shots": 2,
       "home_sot": 15,
@@ -9570,15 +9600,27 @@
         }
       ],
       "away_goals": [],
-      "reds": [],
+      "reds": [
+        [
+          "93",
+          "ARG",
+          "Enzo Jeremías Fernandez"
+        ],
+        [
+          "120",
+          "ARG",
+          "Leandro Daniel Paredes"
+        ]
+      ],
       "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (38%). Final: 1–0.",
-        "🧱 Spain underperformed xG (1 goals vs 2.8 xG).",
         "💥 Spain created 4 big chances.",
+        "🟥 Argentina down to 10 men (Enzo Jeremías Fernandez, 93').",
+        "🟥 Argentina down to 10 men (Leandro Daniel Paredes, 120').",
         "🎯 Spain dominated possession (62%)."
       ],
       "nlbair": true,
@@ -9586,8 +9628,8 @@
       "city": "East Rutherford"
     }
   ],
-  "real_xg_games": 61,
-  "nlbair_games": 93,
+  "real_xg_games": 62,
+  "nlbair_games": 94,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
