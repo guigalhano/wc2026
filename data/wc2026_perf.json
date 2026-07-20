@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T14:21:21.308448+00:00",
+  "updated_at": "2026-07-20T18:11:06.640149+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -447,14 +447,14 @@
       "games": 5,
       "goals_for": 3,
       "goals_against": 6,
-      "xg_for": 8.48,
-      "xg_against": 15.92,
+      "xg_for": 7.982475518929513,
+      "xg_against": 15.638077517045641,
       "wins": 1,
       "draws": 2,
       "losses": 2,
       "points": 5,
       "expected_points": 2.6937578644374804,
-      "big_chances_created": 10,
+      "big_chances_created": 9,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -462,8 +462,8 @@
           "date": "2026-06-13",
           "gf": 1,
           "ga": 4,
-          "xgf": 1.0,
-          "xga": 2.69,
+          "xgf": 0.5,
+          "xga": 2.41,
           "result": "L",
           "p_win": 0.04
         },
@@ -510,8 +510,8 @@
       ],
       "xpts": 2.69,
       "delta_pts": 2.31,
-      "xgf": 1.7,
-      "xga": 3.18,
+      "xgf": 1.6,
+      "xga": 3.13,
       "efi": {
         "games": 5,
         "xg_official": 0.4,
@@ -3457,14 +3457,14 @@
       "games": 5,
       "goals_for": 11,
       "goals_against": 8,
-      "xg_for": 8.31,
-      "xg_against": 5.76,
+      "xg_for": 8.02807751704564,
+      "xg_against": 5.262475518929513,
       "wins": 3,
       "draws": 0,
       "losses": 2,
       "points": 9,
       "expected_points": 11.373731057525971,
-      "big_chances_created": 12,
+      "big_chances_created": 8,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -3472,8 +3472,8 @@
           "date": "2026-06-13",
           "gf": 4,
           "ga": 1,
-          "xgf": 2.69,
-          "xga": 1.0,
+          "xgf": 2.41,
+          "xga": 0.5,
           "result": "W",
           "p_win": 0.778
         },
@@ -3520,8 +3520,8 @@
       ],
       "xpts": 11.37,
       "delta_pts": -2.37,
-      "xgf": 1.66,
-      "xga": 1.15,
+      "xgf": 1.61,
+      "xga": 1.05,
       "efi": {
         "games": 5,
         "xg_official": 1.27,
@@ -3947,59 +3947,29 @@
       "pA": 0.04,
       "lam": 2.41,
       "mu": 0.5,
-      "home_xg": 2.69,
-      "away_xg": 1.0,
+      "home_xg": 2.41,
+      "away_xg": 0.5,
       "real_xg": false,
-      "home_shots": 16,
-      "away_shots": 10,
-      "home_sot": 10,
-      "away_sot": 7,
-      "home_poss": 61.7,
-      "away_poss": 38.3,
-      "home_big_chances": 4,
-      "away_big_chances": 1,
-      "home_goals": [
-        {
-          "min": "30",
-          "player": "Folarin Balogun",
-          "type": "regular"
-        },
-        {
-          "min": "49",
-          "player": "Folarin Balogun",
-          "type": "regular"
-        },
-        {
-          "min": "97",
-          "player": "Giovanni Reyna",
-          "type": "regular"
-        }
-      ],
-      "away_goals": [
-        {
-          "min": "6",
-          "player": "Damián Bobadilla",
-          "type": "regular"
-        },
-        {
-          "min": "72",
-          "player": "Mauricio",
-          "type": "regular"
-        }
-      ],
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
       "reds": [],
-      "has_stats": true,
+      "has_stats": false,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (78%). Final: 4–1.",
-        "⚡ USA outscored xG (4 goals vs 2.7 xG) — clinical finishing.",
-        "💥 USA created 4 big chances.",
-        "💥 Paraguay created 1 big chance.",
-        "🎯 USA dominated possession (62%)."
+        "⚡ USA outscored xG (4 goals vs 2.4 xG) — clinical finishing."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "",
       "city": ""
     },
@@ -9617,7 +9587,7 @@
     }
   ],
   "real_xg_games": 61,
-  "nlbair_games": 94,
+  "nlbair_games": 93,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
