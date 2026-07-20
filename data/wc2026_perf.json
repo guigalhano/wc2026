@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T22:58:12.209849+00:00",
+  "updated_at": "2026-07-20T03:43:34.266461+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -7,14 +7,14 @@
       "games": 8,
       "goals_for": 14,
       "goals_against": 1,
-      "xg_for": 16.68409193916573,
-      "xg_against": 4.358487842526489,
+      "xg_for": 18.269999999999996,
+      "xg_against": 3.5399999999999996,
       "wins": 7,
       "draws": 1,
       "losses": 0,
       "points": 22,
       "expected_points": 16.988821752320895,
-      "big_chances_created": 20,
+      "big_chances_created": 24,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -92,16 +92,16 @@
           "date": "2026-07-19",
           "gf": 1,
           "ga": 0,
-          "xgf": 1.22,
-          "xga": 0.99,
+          "xgf": 2.81,
+          "xga": 0.17,
           "result": "W",
           "p_win": 0.375
         }
       ],
       "xpts": 16.99,
       "delta_pts": 5.01,
-      "xgf": 2.09,
-      "xga": 0.54,
+      "xgf": 2.28,
+      "xga": 0.44,
       "efi": {
         "games": 7,
         "xg_official": 2.14,
@@ -217,8 +217,8 @@
       "games": 8,
       "goals_for": 19,
       "goals_against": 8,
-      "xg_for": 14.51848784252649,
-      "xg_against": 6.824091939165731,
+      "xg_for": 13.700000000000001,
+      "xg_against": 8.41,
       "wins": 7,
       "draws": 0,
       "losses": 1,
@@ -302,16 +302,16 @@
           "date": "2026-07-19",
           "gf": 0,
           "ga": 1,
-          "xgf": 0.99,
-          "xga": 1.22,
+          "xgf": 0.17,
+          "xga": 2.81,
           "result": "L",
           "p_win": 0.257
         }
       ],
       "xpts": 18.12,
       "delta_pts": 2.88,
-      "xgf": 1.81,
-      "xga": 0.85,
+      "xgf": 1.71,
+      "xga": 1.05,
       "efi": {
         "games": 7,
         "xg_official": 2.2,
@@ -339,7 +339,7 @@
       "losses": 1,
       "points": 19,
       "expected_points": 16.472616996029245,
-      "big_chances_created": 26,
+      "big_chances_created": 32,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1529,7 +1529,7 @@
       "losses": 2,
       "points": 18,
       "expected_points": 17.415002832244344,
-      "big_chances_created": 25,
+      "big_chances_created": 31,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -3389,7 +3389,7 @@
       "losses": 3,
       "points": 3,
       "expected_points": 5.259883160323824,
-      "big_chances_created": 16,
+      "big_chances_created": 11,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -7131,38 +7131,38 @@
       "home_xg": 3.01,
       "away_xg": 0.14,
       "real_xg": true,
-      "home_shots": 28,
-      "away_shots": 6,
-      "home_sot": 17,
-      "away_sot": 5,
-      "home_poss": 63.3,
-      "away_poss": 36.7,
-      "home_big_chances": 5,
-      "away_big_chances": 0,
+      "home_shots": 28.0,
+      "away_shots": 6.0,
+      "home_sot": 12.0,
+      "away_sot": 1.0,
+      "home_poss": 69.0,
+      "away_poss": 31.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "3",
-          "player": "Habib Diarra",
+          "min": "4",
+          "player": "Habib Mbacke Diarra",
           "type": "regular"
         },
         {
-          "min": "55",
-          "player": "Ismaïla Sarr",
+          "min": "56",
+          "player": "Ismaila Sarr",
           "type": "regular"
         },
         {
-          "min": "58",
-          "player": "Pape Gueye",
+          "min": "59",
+          "player": "Pape Alassane Gueye",
           "type": "regular"
         },
         {
-          "min": "70",
-          "player": "Pape Gueye",
+          "min": "71",
+          "player": "Pape Alassane Gueye",
           "type": "regular"
         },
         {
-          "min": "81",
-          "player": "Iliman Ndiaye",
+          "min": "82",
+          "player": "Iliman Cheikh Baroy Ndiaye",
           "type": "regular"
         }
       ],
@@ -7181,12 +7181,11 @@
       "narrative": [
         "✅ **Result matched prediction** (77%). Final: 5–0.",
         "⚡ Senegal outscored xG (5 goals vs 3.0 xG) — clinical finishing.",
-        "💥 Senegal created 5 big chances.",
         "🟥 Iraq down to 10 men (Ghareeb Solaka Rebin Sulaka, 13').",
-        "🎯 Senegal dominated possession (63%).",
+        "🎯 Senegal dominated possession (69%).",
         "📉 Scoreline (5–0) far more one-sided than model expected (~2.4–0.5)."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "New York New Jersey Stadium (MetLife Stadium)",
       "city": "East Rutherford"
     },
@@ -9491,65 +9490,65 @@
       "home_xg": 2.88,
       "away_xg": 2.88,
       "real_xg": true,
-      "home_shots": 18.0,
-      "away_shots": 21.0,
-      "home_sot": 9.0,
-      "away_sot": 11.0,
-      "home_poss": 50.0,
-      "away_poss": 50.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 19,
+      "away_shots": 19,
+      "home_sot": 13,
+      "away_sot": 17,
+      "home_poss": 46.2,
+      "away_poss": 53.8,
+      "home_big_chances": 6,
+      "away_big_chances": 6,
       "home_goals": [
         {
-          "min": "48",
-          "player": "Kylian Mbappe",
+          "min": "47",
+          "player": "Kylian Mbappé",
           "type": "regular"
         },
         {
-          "min": "54",
-          "player": "Bradley Jean-Manuel Essolisa Barcola",
+          "min": "53",
+          "player": "Bradley Barcola",
           "type": "regular"
         },
         {
-          "min": "66",
-          "player": "Kylian Mbappe",
+          "min": "65",
+          "player": "Kylian Mbappé",
           "type": "regular"
         },
         {
-          "min": "96",
-          "player": "Masour Ousmane Dembele",
+          "min": "95",
+          "player": "Ousmane Dembélé",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "3",
+          "min": "2",
           "player": "Declan Rice",
           "type": "regular"
         },
         {
-          "min": "18",
-          "player": "Ezri Ngoyo Konsa",
+          "min": "17",
+          "player": "Ezri Konsa",
           "type": "regular"
         },
         {
-          "min": "37",
-          "player": "Bukayo Ayoyinka Saka",
+          "min": "36",
+          "player": "Bukayo Saka",
           "type": "regular"
         },
         {
-          "min": "46",
-          "player": "Bukayo Ayoyinka Saka",
+          "min": "45",
+          "player": "Bukayo Saka",
           "type": "regular"
         },
         {
-          "min": "87",
-          "player": "Bukayo Ayoyinka Saka",
-          "type": "regular"
+          "min": "86",
+          "player": "Bukayo Saka",
+          "type": "penalty"
         },
         {
-          "min": "98",
-          "player": "Jude Victor William Bellingham",
+          "min": "97",
+          "player": "Jude Bellingham",
           "type": "regular"
         }
       ],
@@ -9562,9 +9561,11 @@
         "🚨 **Upset**: model predicted draw (37%) but ended 4–6.",
         "⚡ France outscored xG (4 goals vs 2.9 xG) — clinical finishing.",
         "⚡ England outscored xG (6 goals vs 2.9 xG) — clinical finishing.",
-        "🎯 England: 6 goals from 21 shots (29% conversion)."
+        "💥 France created 6 big chances.",
+        "💥 England created 6 big chances.",
+        "🎯 England: 6 goals from 19 shots (32% conversion)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Miami Stadium (Hard Rock Stadium)",
       "city": "Miami Gardens"
     },
@@ -9579,35 +9580,43 @@
       "pA": 0.257,
       "lam": 1.22,
       "mu": 0.99,
-      "home_xg": 1.22,
-      "away_xg": 0.99,
+      "home_xg": 2.81,
+      "away_xg": 0.17,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
+      "home_shots": 20,
+      "away_shots": 2,
+      "home_sot": 15,
+      "away_sot": 1,
+      "home_poss": 62.1,
+      "away_poss": 37.9,
+      "home_big_chances": 4,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "105",
+          "player": "Ferran Torres",
+          "type": "regular"
+        }
+      ],
       "away_goals": [],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (38%). Final: 1–0.",
-        "🧱 Argentina underperformed xG (0 goals vs 1.0 xG)."
+        "🧱 Spain underperformed xG (1 goals vs 2.8 xG).",
+        "💥 Spain created 4 big chances.",
+        "🎯 Spain dominated possession (62%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "New York New Jersey Stadium (MetLife Stadium)",
       "city": "East Rutherford"
     }
   ],
   "real_xg_games": 61,
-  "nlbair_games": 92,
+  "nlbair_games": 93,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
