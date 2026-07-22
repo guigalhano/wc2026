@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22 14:10 UTC",
+  "updated_at": "2026-07-22 17:26 UTC",
   "source": "betting.betfair.com",
   "count": 10,
   "items": [
@@ -53,13 +53,6 @@
       "isWC": true
     },
     {
-      "title": "Football Summer Transfer Window 2026: World Cup breakout trio could get big moves",
-      "link": "https://betting.betfair.com/football/transfers/football-summer-transfer-window-2026-major-done-deals-and-latest-rumours-260626-205.html",
-      "date": "Wed, 22 Jul 2026 11:05:00 +0100",
-      "desc": "Get the latest on the major done deals and the chances of the big moves happening in the Premier League, Europe and beyond. Today we look at the likely options for Marcus Rashford&#039;s next move...\n",
-      "isWC": true
-    },
-    {
       "title": "Alan Shearer Exclusive: Thomas Tuchel got it wrong, England player ratings and what&#039;s next before Euro 2028",
       "link": "https://betting.betfair.com/football/world-cup-2026/alan-shearer-exclusive-thomas-tuchel-got-it-wrong-england-player-ratings-and-whats-next-before-euro-28-170726-1323.html",
       "date": "Mon, 20 Jul 2026 10:00:00 +0100",
@@ -71,6 +64,13 @@
       "link": "https://betting.betfair.com/football/world-cup-2026/golden-boot-betting-guide---who-will-win-at-the-2026-world-cup-280526-140.html",
       "date": "Sun, 19 Jul 2026 10:45:00 +0100",
       "desc": "It&#039;s been one of the greatest Golden Boot battle of all-time and while we do not have a Final showdown between the two favourites, the race could still go to the wire. Get the latest on the World",
+      "isWC": false
+    },
+    {
+      "title": "Football Summer Transfer Window 2026: Staying at Old Trafford the likeliest option for Rashford",
+      "link": "https://betting.betfair.com/football/transfers/football-summer-transfer-window-2026-major-done-deals-and-latest-rumours-260626-205.html",
+      "date": "Wed, 22 Jul 2026 11:05:00 +0100",
+      "desc": "Get the latest on the major done deals and the chances of the big moves happening in the Premier League, Europe and beyond. Today we look at the likely options for Marcus Rashford&#039;s next move...\n",
       "isWC": false
     }
   ]
