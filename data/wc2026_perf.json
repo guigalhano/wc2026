@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T15:03:39.211446+00:00",
+  "updated_at": "2026-08-13T17:01:31.829669+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -7,8 +7,8 @@
       "games": 8,
       "goals_for": 14,
       "goals_against": 1,
-      "xg_for": 16.13,
-      "xg_against": 6.32,
+      "xg_for": 16.43,
+      "xg_against": 5.25,
       "wins": 7,
       "draws": 1,
       "losses": 0,
@@ -92,16 +92,16 @@
           "date": "2026-07-19",
           "gf": 1,
           "ga": 0,
-          "xgf": 1.12,
-          "xga": 1.95,
+          "xgf": 1.42,
+          "xga": 0.88,
           "result": "W",
           "p_win": 0.375
         }
       ],
       "xpts": 16.99,
       "delta_pts": 5.01,
-      "xgf": 2.02,
-      "xga": 0.79,
+      "xgf": 2.05,
+      "xga": 0.66,
       "efi": {
         "games": 8,
         "xg_official": 2.18,
@@ -217,8 +217,8 @@
       "games": 8,
       "goals_for": 19,
       "goals_against": 8,
-      "xg_for": 15.51,
-      "xg_against": 6.28,
+      "xg_for": 14.440000000000001,
+      "xg_against": 6.58,
       "wins": 7,
       "draws": 0,
       "losses": 1,
@@ -302,16 +302,16 @@
           "date": "2026-07-19",
           "gf": 0,
           "ga": 1,
-          "xgf": 1.95,
-          "xga": 1.12,
+          "xgf": 0.88,
+          "xga": 1.42,
           "result": "L",
           "p_win": 0.257
         }
       ],
       "xpts": 18.12,
       "delta_pts": 2.88,
-      "xgf": 1.94,
-      "xga": 0.79,
+      "xgf": 1.81,
+      "xga": 0.82,
       "efi": {
         "games": 8,
         "xg_official": 1.93,
@@ -9574,8 +9574,8 @@
       "pA": 0.257,
       "lam": 1.22,
       "mu": 0.99,
-      "home_xg": 1.12,
-      "away_xg": 1.95,
+      "home_xg": 1.42,
+      "away_xg": 0.88,
       "real_xg": true,
       "home_shots": 20,
       "away_shots": 2,
@@ -9600,7 +9600,7 @@
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (38%). Final: 1–0.",
-        "🧱 Argentina underperformed xG (0 goals vs 1.9 xG).",
+        "🧱 Argentina underperformed xG (0 goals vs 0.9 xG).",
         "💥 Spain created 4 big chances.",
         "🎯 Spain dominated possession (62%)."
       ],
