@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T20:32:39.301408+00:00",
+  "updated_at": "2026-08-18T22:30:53.143894+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -217,14 +217,14 @@
       "games": 8,
       "goals_for": 19,
       "goals_against": 8,
-      "xg_for": 16.06524876554444,
-      "xg_against": 6.610908701636534,
+      "xg_for": 14.440000000000001,
+      "xg_against": 6.58,
       "wins": 7,
       "draws": 0,
       "losses": 1,
       "points": 21,
       "expected_points": 18.1240897432128,
-      "big_chances_created": 21,
+      "big_chances_created": 22,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -232,8 +232,8 @@
           "date": "2026-06-17",
           "gf": 3,
           "ga": 0,
-          "xgf": 2.63,
-          "xga": 0.46,
+          "xgf": 1.0,
+          "xga": 0.43,
           "result": "W",
           "p_win": 0.818
         },
@@ -310,8 +310,8 @@
       ],
       "xpts": 18.12,
       "delta_pts": 2.88,
-      "xgf": 2.01,
-      "xga": 0.83,
+      "xgf": 1.81,
+      "xga": 0.82,
       "efi": {
         "games": 8,
         "xg_official": 1.93,
@@ -2197,8 +2197,8 @@
       "games": 4,
       "goals_for": 5,
       "goals_against": 9,
-      "xg_for": 5.410908701636535,
-      "xg_against": 7.8352487655444385,
+      "xg_for": 5.380000000000001,
+      "xg_against": 6.21,
       "wins": 1,
       "draws": 1,
       "losses": 2,
@@ -2212,8 +2212,8 @@
           "date": "2026-06-17",
           "gf": 0,
           "ga": 3,
-          "xgf": 0.46,
-          "xga": 2.63,
+          "xgf": 0.43,
+          "xga": 1.0,
           "result": "L",
           "p_win": 0.028
         },
@@ -2251,7 +2251,7 @@
       "xpts": 4.33,
       "delta_pts": -0.33,
       "xgf": 1.35,
-      "xga": 1.96,
+      "xga": 1.55,
       "efi": {
         "games": 4,
         "xg_official": 1.18,
@@ -4792,28 +4792,47 @@
       "pA": 0.028,
       "lam": 2.63,
       "mu": 0.46,
-      "home_xg": 2.63,
-      "away_xg": 0.46,
+      "home_xg": 1.0,
+      "away_xg": 0.43,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
+      "home_shots": 10,
+      "away_shots": 7,
+      "home_sot": 6,
+      "away_sot": 3,
+      "home_poss": 47.6,
+      "away_poss": 52.4,
+      "home_big_chances": 1,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "16",
+          "player": "Lionel Messi",
+          "type": "regular"
+        },
+        {
+          "min": "59",
+          "player": "Lionel Messi",
+          "type": "regular"
+        },
+        {
+          "min": "75",
+          "player": "Lionel Messi",
+          "type": "regular"
+        }
+      ],
       "away_goals": [],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (82%). Final: 3–0."
+        "✅ **Result matched prediction** (82%). Final: 3–0.",
+        "⚡ Argentina outscored xG (3 goals vs 1.0 xG) — clinical finishing.",
+        "💥 Argentina created 1 big chance.",
+        "🎯 Argentina: 3 goals from 10 shots (30% conversion)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -9591,7 +9610,7 @@
     }
   ],
   "real_xg_games": 62,
-  "nlbair_games": 93,
+  "nlbair_games": 94,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
