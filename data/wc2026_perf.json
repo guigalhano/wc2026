@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T01:41:22.477452+00:00",
+  "updated_at": "2026-08-22T03:04:40.481499+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -14,7 +14,7 @@
       "losses": 0,
       "points": 22,
       "expected_points": 16.988821752320895,
-      "big_chances_created": 24,
+      "big_chances_created": 22,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -129,7 +129,7 @@
       "losses": 2,
       "points": 12,
       "expected_points": 8.642055930492193,
-      "big_chances_created": 18,
+      "big_chances_created": 22,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -217,14 +217,14 @@
       "games": 8,
       "goals_for": 19,
       "goals_against": 8,
-      "xg_for": 14.440000000000001,
-      "xg_against": 6.58,
+      "xg_for": 16.8,
+      "xg_against": 6.207883441965776,
       "wins": 7,
       "draws": 0,
       "losses": 1,
       "points": 21,
       "expected_points": 18.1240897432128,
-      "big_chances_created": 22,
+      "big_chances_created": 19,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -252,8 +252,8 @@
           "date": "2026-06-28",
           "gf": 3,
           "ga": 1,
-          "xgf": 2.14,
-          "xga": 0.63,
+          "xgf": 4.5,
+          "xga": 0.26,
           "result": "W",
           "p_win": 0.97
         },
@@ -310,8 +310,8 @@
       ],
       "xpts": 18.12,
       "delta_pts": 2.88,
-      "xgf": 1.81,
-      "xga": 0.82,
+      "xgf": 2.1,
+      "xga": 0.78,
       "efi": {
         "games": 8,
         "xg_official": 1.93,
@@ -447,14 +447,14 @@
       "games": 5,
       "goals_for": 3,
       "goals_against": 6,
-      "xg_for": 8.48,
-      "xg_against": 15.92,
+      "xg_for": 7.982475518929513,
+      "xg_against": 15.638077517045641,
       "wins": 1,
       "draws": 2,
       "losses": 2,
       "points": 5,
       "expected_points": 2.6937578644374804,
-      "big_chances_created": 10,
+      "big_chances_created": 9,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -462,8 +462,8 @@
           "date": "2026-06-13",
           "gf": 1,
           "ga": 4,
-          "xgf": 1.0,
-          "xga": 2.69,
+          "xgf": 0.5,
+          "xga": 2.41,
           "result": "L",
           "p_win": 0.04
         },
@@ -510,8 +510,8 @@
       ],
       "xpts": 2.69,
       "delta_pts": 2.31,
-      "xgf": 1.7,
-      "xga": 3.18,
+      "xgf": 1.6,
+      "xga": 3.13,
       "efi": {
         "games": 5,
         "xg_official": 0.4,
@@ -539,7 +539,7 @@
       "losses": 2,
       "points": 4,
       "expected_points": 2.0607721921055098,
-      "big_chances_created": 0,
+      "big_chances_created": 1,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -614,7 +614,7 @@
       "losses": 2,
       "points": 4,
       "expected_points": 2.155726799222071,
-      "big_chances_created": 0,
+      "big_chances_created": 2,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -689,7 +689,7 @@
       "losses": 2,
       "points": 6,
       "expected_points": 4.261495010165821,
-      "big_chances_created": 8,
+      "big_chances_created": 6,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -839,7 +839,7 @@
       "losses": 1,
       "points": 11,
       "expected_points": 9.562367027784884,
-      "big_chances_created": 18,
+      "big_chances_created": 20,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1009,7 +1009,7 @@
       "losses": 1,
       "points": 11,
       "expected_points": 9.585305586674615,
-      "big_chances_created": 20,
+      "big_chances_created": 9,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1434,7 +1434,7 @@
       "losses": 1,
       "points": 11,
       "expected_points": 10.234144974546265,
-      "big_chances_created": 15,
+      "big_chances_created": 14,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1529,7 +1529,7 @@
       "losses": 2,
       "points": 18,
       "expected_points": 17.415002832244344,
-      "big_chances_created": 30,
+      "big_chances_created": 31,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1637,14 +1637,14 @@
       "games": 4,
       "goals_for": 7,
       "goals_against": 10,
-      "xg_for": 4.168613452303281,
-      "xg_against": 9.847757803807717,
+      "xg_for": 5.103795499329696,
+      "xg_against": 9.343996745611008,
       "wins": 1,
       "draws": 1,
       "losses": 2,
       "points": 4,
       "expected_points": 3.537744504308245,
-      "big_chances_created": 2,
+      "big_chances_created": 6,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1652,8 +1652,8 @@
           "date": "2026-06-15",
           "gf": 5,
           "ga": 1,
-          "xgf": 1.38,
-          "xga": 0.87,
+          "xgf": 2.32,
+          "xga": 0.37,
           "result": "W",
           "p_win": 0.45
         },
@@ -1690,8 +1690,8 @@
       ],
       "xpts": 3.54,
       "delta_pts": 0.46,
-      "xgf": 1.04,
-      "xga": 2.46,
+      "xgf": 1.28,
+      "xga": 2.34,
       "efi": {
         "games": 4,
         "xg_official": 1.17,
@@ -1719,7 +1719,7 @@
       "losses": 2,
       "points": 3,
       "expected_points": 2.595069215779095,
-      "big_chances_created": 4,
+      "big_chances_created": 3,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1784,7 +1784,7 @@
       "losses": 0,
       "points": 8,
       "expected_points": 7.651287321807392,
-      "big_chances_created": 9,
+      "big_chances_created": 3,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1917,14 +1917,14 @@
       "games": 3,
       "goals_for": 3,
       "goals_against": 5,
-      "xg_for": 6.774824317035852,
-      "xg_against": 4.5541143280026155,
+      "xg_for": 8.58,
+      "xg_against": 4.27,
       "wins": 1,
       "draws": 0,
       "losses": 2,
       "points": 3,
       "expected_points": 2.976435157551693,
-      "big_chances_created": 9,
+      "big_chances_created": 11,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -1932,8 +1932,8 @@
           "date": "2026-06-14",
           "gf": 0,
           "ga": 2,
-          "xgf": 0.96,
-          "xga": 1.25,
+          "xgf": 2.77,
+          "xga": 0.97,
           "result": "L",
           "p_win": 0.245
         },
@@ -1960,8 +1960,8 @@
       ],
       "xpts": 2.98,
       "delta_pts": 0.02,
-      "xgf": 2.26,
-      "xga": 1.52,
+      "xgf": 2.86,
+      "xga": 1.42,
       "efi": {
         "games": 3,
         "xg_official": 1.83,
@@ -2129,7 +2129,7 @@
       "losses": 2,
       "points": 6,
       "expected_points": 6.198655065922893,
-      "big_chances_created": 2,
+      "big_chances_created": 0,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2204,7 +2204,7 @@
       "losses": 2,
       "points": 4,
       "expected_points": 4.333759113358929,
-      "big_chances_created": 6,
+      "big_chances_created": 8,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2477,14 +2477,14 @@
       "games": 4,
       "goals_for": 3,
       "goals_against": 3,
-      "xg_for": 6.8041143280026155,
-      "xg_against": 8.064824317035852,
+      "xg_for": 6.52,
+      "xg_against": 9.870000000000001,
       "wins": 1,
       "draws": 2,
       "losses": 1,
       "points": 5,
       "expected_points": 5.602602839895456,
-      "big_chances_created": 4,
+      "big_chances_created": 5,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2492,8 +2492,8 @@
           "date": "2026-06-14",
           "gf": 2,
           "ga": 0,
-          "xgf": 1.25,
-          "xga": 0.96,
+          "xgf": 0.97,
+          "xga": 2.77,
           "result": "W",
           "p_win": 0.39
         },
@@ -2530,8 +2530,8 @@
       ],
       "xpts": 5.6,
       "delta_pts": -0.6,
-      "xgf": 1.7,
-      "xga": 2.02,
+      "xgf": 1.63,
+      "xga": 2.47,
       "efi": {
         "games": 4,
         "xg_official": 0.68,
@@ -2767,14 +2767,14 @@
       "games": 3,
       "goals_for": 3,
       "goals_against": 8,
-      "xg_for": 2.69,
-      "xg_against": 6.970000000000001,
+      "xg_for": 2.317883441965776,
+      "xg_against": 9.33,
       "wins": 0,
       "draws": 0,
       "losses": 3,
       "points": 0,
       "expected_points": 1.140449075023199,
-      "big_chances_created": 2,
+      "big_chances_created": 1,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2802,16 +2802,16 @@
           "date": "2026-06-28",
           "gf": 1,
           "ga": 3,
-          "xgf": 0.63,
-          "xga": 2.14,
+          "xgf": 0.26,
+          "xga": 4.5,
           "result": "L",
           "p_win": 0.001
         }
       ],
       "xpts": 1.14,
       "delta_pts": -1.14,
-      "xgf": 0.9,
-      "xga": 2.32,
+      "xgf": 0.77,
+      "xga": 3.11,
       "efi": {
         "games": 3,
         "xg_official": 0.62,
@@ -2969,7 +2969,7 @@
       "losses": 2,
       "points": 1,
       "expected_points": 2.5779162638318676,
-      "big_chances_created": 1,
+      "big_chances_created": 4,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -3242,8 +3242,8 @@
       "games": 3,
       "goals_for": 2,
       "goals_against": 12,
-      "xg_for": 1.5185354517730878,
-      "xg_against": 5.920377011221842,
+      "xg_for": 1.0147743935763782,
+      "xg_against": 6.855559058248258,
       "wins": 0,
       "draws": 0,
       "losses": 3,
@@ -3257,8 +3257,8 @@
           "date": "2026-06-15",
           "gf": 1,
           "ga": 5,
-          "xgf": 0.87,
-          "xga": 1.38,
+          "xgf": 0.37,
+          "xga": 2.32,
           "result": "L",
           "p_win": 0.199
         },
@@ -3285,8 +3285,8 @@
       ],
       "xpts": 1.8,
       "delta_pts": -1.8,
-      "xgf": 0.51,
-      "xga": 1.97,
+      "xgf": 0.34,
+      "xga": 2.29,
       "efi": {
         "games": 3,
         "xg_official": 0.37,
@@ -3457,14 +3457,14 @@
       "games": 5,
       "goals_for": 11,
       "goals_against": 8,
-      "xg_for": 8.69,
-      "xg_against": 5.91,
+      "xg_for": 8.40807751704564,
+      "xg_against": 5.412475518929512,
       "wins": 3,
       "draws": 0,
       "losses": 2,
       "points": 9,
       "expected_points": 11.373731057525971,
-      "big_chances_created": 12,
+      "big_chances_created": 8,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -3472,8 +3472,8 @@
           "date": "2026-06-13",
           "gf": 4,
           "ga": 1,
-          "xgf": 2.69,
-          "xga": 1.0,
+          "xgf": 2.41,
+          "xga": 0.5,
           "result": "W",
           "p_win": 0.778
         },
@@ -3520,8 +3520,8 @@
       ],
       "xpts": 11.37,
       "delta_pts": -2.37,
-      "xgf": 1.74,
-      "xga": 1.18,
+      "xgf": 1.68,
+      "xga": 1.08,
       "efi": {
         "games": 5,
         "xg_official": 1.27,
@@ -3634,7 +3634,7 @@
       "losses": 1,
       "points": 7,
       "expected_points": 9.593562578729768,
-      "big_chances_created": 21,
+      "big_chances_created": 16,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -3947,59 +3947,29 @@
       "pA": 0.04,
       "lam": 2.41,
       "mu": 0.5,
-      "home_xg": 2.69,
-      "away_xg": 1.0,
+      "home_xg": 2.41,
+      "away_xg": 0.5,
       "real_xg": false,
-      "home_shots": 16,
-      "away_shots": 10,
-      "home_sot": 10,
-      "away_sot": 7,
-      "home_poss": 61.7,
-      "away_poss": 38.3,
-      "home_big_chances": 4,
-      "away_big_chances": 1,
-      "home_goals": [
-        {
-          "min": "30",
-          "player": "Folarin Balogun",
-          "type": "regular"
-        },
-        {
-          "min": "49",
-          "player": "Folarin Balogun",
-          "type": "regular"
-        },
-        {
-          "min": "97",
-          "player": "Giovanni Reyna",
-          "type": "regular"
-        }
-      ],
-      "away_goals": [
-        {
-          "min": "6",
-          "player": "Damián Bobadilla",
-          "type": "regular"
-        },
-        {
-          "min": "72",
-          "player": "Mauricio",
-          "type": "regular"
-        }
-      ],
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
       "reds": [],
-      "has_stats": true,
+      "has_stats": false,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (78%). Final: 4–1.",
-        "⚡ USA outscored xG (4 goals vs 2.7 xG) — clinical finishing.",
-        "💥 USA created 4 big chances.",
-        "💥 Paraguay created 1 big chance.",
-        "🎯 USA dominated possession (62%)."
+        "⚡ USA outscored xG (4 goals vs 2.4 xG) — clinical finishing."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "",
       "city": ""
     },
@@ -4159,29 +4129,44 @@
       "pA": 0.245,
       "lam": 1.25,
       "mu": 0.96,
-      "home_xg": 1.25,
-      "away_xg": 0.96,
+      "home_xg": 0.97,
+      "away_xg": 2.77,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
+      "home_shots": 9,
+      "away_shots": 30,
+      "home_sot": 5,
+      "away_sot": 20,
+      "home_poss": 35.1,
+      "away_poss": 64.9,
+      "home_big_chances": 1,
+      "away_big_chances": 2,
+      "home_goals": [
+        {
+          "min": "26",
+          "player": "Nestory Irankunda",
+          "type": "regular"
+        },
+        {
+          "min": "74",
+          "player": "Connor Metcalfe",
+          "type": "regular"
+        }
+      ],
       "away_goals": [],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (39%). Final: 2–0.",
-        "🧱 Turkey underperformed xG (0 goals vs 1.0 xG)."
+        "⚡ Australia outscored xG (2 goals vs 1.0 xG) — clinical finishing.",
+        "🧱 Turkey underperformed xG (0 goals vs 2.8 xG).",
+        "💥 Australia created 1 big chance.",
+        "💥 Turkey created 2 big chances.",
+        "🎯 Turkey dominated possession (65%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -4378,30 +4363,64 @@
       "pA": 0.199,
       "lam": 1.38,
       "mu": 0.87,
-      "home_xg": 1.38,
-      "away_xg": 0.87,
+      "home_xg": 2.32,
+      "away_xg": 0.37,
       "real_xg": false,
-      "home_shots": null,
-      "away_shots": null,
-      "home_sot": null,
-      "away_sot": null,
-      "home_poss": null,
-      "away_poss": null,
-      "home_big_chances": null,
-      "away_big_chances": null,
-      "home_goals": [],
-      "away_goals": [],
+      "home_shots": 13,
+      "away_shots": 6,
+      "home_sot": 10,
+      "away_sot": 3,
+      "home_poss": 49.3,
+      "away_poss": 50.7,
+      "home_big_chances": 4,
+      "away_big_chances": 0,
+      "home_goals": [
+        {
+          "min": "6",
+          "player": "Yasin Ayari",
+          "type": "regular"
+        },
+        {
+          "min": "29",
+          "player": "Alexander Isak",
+          "type": "regular"
+        },
+        {
+          "min": "58",
+          "player": "Viktor Gyökeres",
+          "type": "regular"
+        },
+        {
+          "min": "83",
+          "player": "Mattias Svanberg",
+          "type": "regular"
+        },
+        {
+          "min": "95",
+          "player": "Yasin Ayari",
+          "type": "regular"
+        }
+      ],
+      "away_goals": [
+        {
+          "min": "42",
+          "player": "Omar Rekik",
+          "type": "regular"
+        }
+      ],
       "reds": [],
-      "has_stats": false,
+      "has_stats": true,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (45%). Final: 5–1.",
-        "⚡ Sweden outscored xG (5 goals vs 1.4 xG) — clinical finishing.",
+        "⚡ Sweden outscored xG (5 goals vs 2.3 xG) — clinical finishing.",
+        "💥 Sweden created 4 big chances.",
+        "🎯 Sweden: 5 goals from 13 shots (38% conversion).",
         "📉 Scoreline (5–1) far more one-sided than model expected (~1.4–0.9)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "",
       "city": ""
     },
@@ -4860,24 +4879,24 @@
       "home_xg": 1.78,
       "away_xg": 1.15,
       "real_xg": true,
-      "home_shots": 7.0,
-      "away_shots": 8.0,
-      "home_sot": 1.0,
-      "away_sot": 2.0,
-      "home_poss": 68.0,
-      "away_poss": 25.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 7,
+      "away_shots": 8,
+      "home_sot": 3,
+      "away_sot": 5,
+      "home_poss": 69.2,
+      "away_poss": 30.8,
+      "home_big_chances": 0,
+      "away_big_chances": 1,
       "home_goals": [
         {
-          "min": "6",
-          "player": "Pedro Joao Neves",
+          "min": "5",
+          "player": "João Neves",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "45",
+          "min": "49",
           "player": "Yoane Wissa",
           "type": "regular"
         }
@@ -4889,9 +4908,10 @@
       "winner": "DRAW",
       "narrative": [
         "🚨 **Upset**: model predicted Portugal win (85%) but ended 1–1.",
-        "🎯 Portugal dominated possession (68%)."
+        "💥 DR Congo created 1 big chance.",
+        "🎯 Portugal dominated possession (69%)."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Houston Stadium (NRG Stadium)",
       "city": "Houston"
     },
@@ -4909,44 +4929,44 @@
       "home_xg": 2.92,
       "away_xg": 1.64,
       "real_xg": true,
-      "home_shots": 22,
-      "away_shots": 10,
-      "home_sot": 16,
-      "away_sot": 7,
-      "home_poss": 51.7,
-      "away_poss": 48.3,
-      "home_big_chances": 7,
-      "away_big_chances": 2,
+      "home_shots": 22.0,
+      "away_shots": 10.0,
+      "home_sot": 11.0,
+      "away_sot": 5.0,
+      "home_poss": 48.0,
+      "away_poss": 43.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "11",
-          "player": "Harry Kane",
-          "type": "penalty"
-        },
-        {
-          "min": "41",
-          "player": "Harry Kane",
+          "min": "12",
+          "player": "Harry Edward Kane",
           "type": "regular"
         },
         {
-          "min": "46",
-          "player": "Jude Bellingham",
+          "min": "42",
+          "player": "Harry Edward Kane",
           "type": "regular"
         },
         {
-          "min": "84",
+          "min": "47",
+          "player": "Jude Victor William Bellingham",
+          "type": "regular"
+        },
+        {
+          "min": "85",
           "player": "Marcus Rashford",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "35",
+          "min": "36",
           "player": "Martin Baturina",
           "type": "regular"
         },
         {
-          "min": "49",
+          "min": "45",
           "player": "Petar Musa",
           "type": "regular"
         }
@@ -4958,11 +4978,9 @@
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (59%). Final: 4–2.",
-        "⚡ England outscored xG (4 goals vs 2.9 xG) — clinical finishing.",
-        "💥 England created 7 big chances.",
-        "💥 Croatia created 2 big chances."
+        "⚡ England outscored xG (4 goals vs 2.9 xG) — clinical finishing."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
     },
@@ -5082,26 +5100,26 @@
       "home_xg": 1.35,
       "away_xg": 1.15,
       "real_xg": true,
-      "home_shots": 14.0,
-      "away_shots": 17.0,
-      "home_sot": 3.0,
-      "away_sot": 4.0,
-      "home_poss": 32.0,
-      "away_poss": 60.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 14,
+      "away_shots": 17,
+      "home_sot": 6,
+      "away_sot": 12,
+      "home_poss": 40.8,
+      "away_poss": 59.2,
+      "home_big_chances": 3,
+      "away_big_chances": 1,
       "home_goals": [
         {
-          "min": "6",
-          "player": "Michal Sadilek",
+          "min": "5",
+          "player": "Michal Sadílek",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "83",
+          "min": "82",
           "player": "Teboho Mokoena",
-          "type": "regular"
+          "type": "penalty"
         }
       ],
       "reds": [],
@@ -5110,9 +5128,11 @@
       "pens": null,
       "winner": "DRAW",
       "narrative": [
-        "🚨 **Upset**: model predicted Czechia win (42%) but ended 1–1."
+        "🚨 **Upset**: model predicted Czechia win (42%) but ended 1–1.",
+        "💥 Czechia created 3 big chances.",
+        "💥 South Africa created 1 big chance."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Los Angeles Stadium (SoFi Stadium)",
       "city": "Inglewood"
     },
@@ -5374,18 +5394,18 @@
       "home_xg": 0.97,
       "away_xg": 0.54,
       "real_xg": true,
-      "home_shots": 6,
-      "away_shots": 12,
-      "home_sot": 3,
-      "away_sot": 6,
-      "home_poss": 42.4,
-      "away_poss": 57.6,
-      "home_big_chances": 1,
-      "away_big_chances": 2,
+      "home_shots": 6.0,
+      "away_shots": 12.0,
+      "home_sot": 0.0,
+      "away_sot": 4.0,
+      "home_poss": 41.0,
+      "away_poss": 59.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [],
       "away_goals": [
         {
-          "min": "1",
+          "min": "2",
           "player": "Ismael Saibari",
           "type": "regular"
         }
@@ -5397,11 +5417,9 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (71%). Final: 0–1.",
-        "🧱 Scotland underperformed xG (0 goals vs 1.0 xG).",
-        "💥 Scotland created 1 big chance.",
-        "💥 Morocco created 2 big chances."
+        "🧱 Scotland underperformed xG (0 goals vs 1.0 xG)."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Boston Stadium (Gillette Stadium)",
       "city": "Foxborough"
     },
@@ -5591,30 +5609,30 @@
       "home_xg": 1.85,
       "away_xg": 0.72,
       "real_xg": true,
-      "home_shots": 16,
-      "away_shots": 9,
-      "home_sot": 11,
-      "away_sot": 7,
-      "home_poss": 55.6,
-      "away_poss": 44.4,
-      "home_big_chances": 5,
-      "away_big_chances": 2,
+      "home_shots": 16.0,
+      "away_shots": 9.0,
+      "home_sot": 8.0,
+      "away_sot": 3.0,
+      "home_poss": 59.0,
+      "away_poss": 41.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "67",
+          "min": "68",
           "player": "Deniz Undav",
           "type": "regular"
         },
         {
-          "min": "93",
+          "min": "90",
           "player": "Deniz Undav",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "29",
-          "player": "Franck Kessie",
+          "min": "30",
+          "player": "Franck Yannick Kessie",
           "type": "regular"
         }
       ],
@@ -5624,11 +5642,9 @@
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (67%). Final: 2–1.",
-        "💥 Germany created 5 big chances.",
-        "💥 Ivory Coast created 2 big chances."
+        "✅ **Result matched prediction** (67%). Final: 2–1."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
       "city": "Atlanta"
     },
@@ -7013,40 +7029,40 @@
       "home_xg": 1.3,
       "away_xg": 0.96,
       "real_xg": true,
-      "home_shots": 9.0,
-      "away_shots": 17.0,
-      "home_sot": 5.0,
-      "away_sot": 9.0,
-      "home_poss": 47.0,
-      "away_poss": 53.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 10,
+      "away_shots": 18,
+      "home_sot": 7,
+      "away_sot": 12,
+      "home_poss": 44.8,
+      "away_poss": 55.2,
+      "home_big_chances": 4,
+      "away_big_chances": 1,
       "home_goals": [
         {
-          "min": "21",
-          "player": "Thelonious Gerard Aasgaard",
+          "min": "20",
+          "player": "Thelo Aasgaard",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "7",
-          "player": "Masour Ousmane Dembele",
+          "min": "6",
+          "player": "Ousmane Dembélé",
           "type": "regular"
         },
         {
-          "min": "20",
-          "player": "Masour Ousmane Dembele",
+          "min": "19",
+          "player": "Ousmane Dembélé",
           "type": "regular"
         },
         {
-          "min": "32",
-          "player": "Masour Ousmane Dembele",
+          "min": "31",
+          "player": "Ousmane Dembélé",
           "type": "regular"
         },
         {
-          "min": "90",
-          "player": "Désiré Nonka-Maho Doue",
+          "min": "93",
+          "player": "Désiré Doué",
           "type": "regular"
         }
       ],
@@ -7057,9 +7073,11 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (56%). Final: 1–4.",
-        "⚡ France outscored xG (4 goals vs 1.0 xG) — clinical finishing."
+        "⚡ France outscored xG (4 goals vs 1.0 xG) — clinical finishing.",
+        "💥 Norway created 4 big chances.",
+        "💥 France created 1 big chance."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Boston Stadium (Gillette Stadium)",
       "city": "Foxborough"
     },
@@ -7529,54 +7547,29 @@
       "pA": 0.97,
       "lam": 0.26,
       "mu": 4.5,
-      "home_xg": 0.63,
-      "away_xg": 2.14,
+      "home_xg": 0.26,
+      "away_xg": 4.5,
       "real_xg": false,
-      "home_shots": 5,
-      "away_shots": 12,
-      "home_sot": 3,
-      "away_sot": 7,
-      "home_poss": 31.3,
-      "away_poss": 68.7,
-      "home_big_chances": 1,
-      "away_big_chances": 3,
-      "home_goals": [
-        {
-          "min": "54",
-          "player": "Mousa Al Tamari",
-          "type": "regular"
-        }
-      ],
-      "away_goals": [
-        {
-          "min": "18",
-          "player": "Giovani Lo Celso",
-          "type": "regular"
-        },
-        {
-          "min": "30",
-          "player": "Lautaro Martínez",
-          "type": "penalty"
-        },
-        {
-          "min": "79",
-          "player": "Lionel Messi",
-          "type": "regular"
-        }
-      ],
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
+      "away_goals": [],
       "reds": [],
-      "has_stats": true,
+      "has_stats": false,
       "went_pens": false,
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (97%). Final: 1–3.",
-        "⚡ Argentina outscored xG (3 goals vs 2.1 xG) — clinical finishing.",
-        "💥 Jordan created 1 big chance.",
-        "💥 Argentina created 3 big chances.",
-        "🎯 Argentina dominated possession (69%)."
+        "🧱 Argentina underperformed xG (3 goals vs 4.5 xG)."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "",
       "city": ""
     },
@@ -7858,51 +7851,26 @@
       "home_xg": 0.23,
       "away_xg": 1.4,
       "real_xg": true,
-      "home_shots": 11,
-      "away_shots": 16,
-      "home_sot": 9,
-      "away_sot": 13,
-      "home_poss": 34.0,
-      "away_poss": 66.0,
-      "home_big_chances": 6,
-      "away_big_chances": 9,
+      "home_shots": 6.0,
+      "away_shots": 11.0,
+      "home_sot": 2.0,
+      "away_sot": 5.0,
+      "home_poss": 30.0,
+      "away_poss": 70.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "71",
-          "player": "Cody Gakpo",
+          "min": "72",
+          "player": "Cody Mathès Gakpo",
           "type": "regular"
-        },
-        {
-          "min": "120",
-          "player": "Teun Koopmeiners",
-          "type": "penalty"
-        },
-        {
-          "min": "124",
-          "player": "Wout Weghorst",
-          "type": "penalty"
         }
       ],
       "away_goals": [
         {
           "min": "90",
-          "player": "Issa Diop",
+          "player": "Issa Laye Lucas Jean Diop",
           "type": "regular"
-        },
-        {
-          "min": "123",
-          "player": "Soufiane Rahimi",
-          "type": "penalty"
-        },
-        {
-          "min": "125",
-          "player": "Chemsdine Talbi",
-          "type": "penalty"
-        },
-        {
-          "min": "129",
-          "player": "Ismael Saibari",
-          "type": "penalty"
         }
       ],
       "reds": [],
@@ -7915,11 +7883,9 @@
       "winner": "AWAY_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (37%). Final: 1–1.",
-        "💥 Netherlands created 6 big chances.",
-        "💥 Morocco created 9 big chances.",
-        "🎯 Morocco dominated possession (66%)."
+        "🎯 Morocco dominated possession (70%)."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Monterrey Stadium (Estadio BBVA)",
       "city": "Guadalupe"
     },
@@ -8105,30 +8071,30 @@
       "home_xg": 2.04,
       "away_xg": 0.76,
       "real_xg": true,
-      "home_shots": 16.0,
-      "away_shots": 7.0,
-      "home_sot": 7.0,
-      "away_sot": 2.0,
-      "home_poss": 60.0,
-      "away_poss": 40.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 16,
+      "away_shots": 7,
+      "home_sot": 10,
+      "away_sot": 5,
+      "home_poss": 56.4,
+      "away_poss": 43.6,
+      "home_big_chances": 7,
+      "away_big_chances": 1,
       "home_goals": [
         {
-          "min": "75",
-          "player": "Harry Edward Kane",
+          "min": "74",
+          "player": "Harry Kane",
           "type": "regular"
         },
         {
-          "min": "86",
-          "player": "Harry Edward Kane",
+          "min": "85",
+          "player": "Harry Kane",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "7",
-          "player": "Kibambe Brian Cipenga",
+          "min": "6",
+          "player": "Brian Cipenga",
           "type": "regular"
         }
       ],
@@ -8138,9 +8104,11 @@
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (89%). Final: 2–1."
+        "✅ **Result matched prediction** (89%). Final: 2–1.",
+        "💥 England created 7 big chances.",
+        "💥 DR Congo created 1 big chance."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
       "city": "Atlanta"
     },
@@ -8371,22 +8339,22 @@
       "home_xg": 2.52,
       "away_xg": 0.73,
       "real_xg": true,
-      "home_shots": 11.0,
-      "away_shots": 8.0,
-      "home_sot": 5.0,
-      "away_sot": 2.0,
-      "home_poss": 45.0,
-      "away_poss": 55.0,
-      "home_big_chances": null,
-      "away_big_chances": null,
+      "home_shots": 11,
+      "away_shots": 8,
+      "home_sot": 7,
+      "away_sot": 5,
+      "home_poss": 46.5,
+      "away_poss": 53.5,
+      "home_big_chances": 2,
+      "away_big_chances": 2,
       "home_goals": [
         {
-          "min": "10",
-          "player": "Breel Donald Embolo",
+          "min": "9",
+          "player": "Breel Embolo",
           "type": "regular"
         },
         {
-          "min": "46",
+          "min": "45",
           "player": "Dan Ndoye",
           "type": "regular"
         }
@@ -8398,9 +8366,11 @@
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (55%). Final: 2–0."
+        "✅ **Result matched prediction** (55%). Final: 2–0.",
+        "💥 Switzerland created 2 big chances.",
+        "💥 Algeria created 2 big chances."
       ],
-      "nlbair": false,
+      "nlbair": true,
       "stadium": "Vancouver Stadium (BC Place)",
       "city": "Vancouver"
     },
@@ -9149,30 +9119,30 @@
       "home_xg": 1.9,
       "away_xg": 1.15,
       "real_xg": true,
-      "home_shots": 17,
-      "away_shots": 5,
-      "home_sot": 13,
-      "away_sot": 4,
-      "home_poss": 63.9,
-      "away_poss": 36.1,
-      "home_big_chances": 2,
-      "away_big_chances": 1,
+      "home_shots": 16.0,
+      "away_shots": 10.0,
+      "home_sot": 7.0,
+      "away_sot": 4.0,
+      "home_poss": 57.0,
+      "away_poss": 43.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "29",
-          "player": "Fabián Ruiz",
+          "min": "30",
+          "player": "Daniel Olmo",
           "type": "regular"
         },
         {
-          "min": "87",
-          "player": "Mikel Merino",
+          "min": "88",
+          "player": "Lamine Yamal Yamal",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "40",
-          "player": "Charles De Ketelaere",
+          "min": "41",
+          "player": "Charles Marc De Ketelaere",
           "type": "regular"
         }
       ],
@@ -9182,12 +9152,9 @@
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (55%). Final: 2–1.",
-        "💥 Spain created 2 big chances.",
-        "💥 Belgium created 1 big chance.",
-        "🎯 Spain dominated possession (64%)."
+        "✅ **Result matched prediction** (55%). Final: 2–1."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Los Angeles Stadium (SoFi Stadium)",
       "city": "Inglewood"
     },
