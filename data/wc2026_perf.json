@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T06:51:32.203589+00:00",
+  "updated_at": "2026-08-23T08:37:26.609854+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -14,7 +14,7 @@
       "losses": 0,
       "points": 22,
       "expected_points": 16.988821752320895,
-      "big_chances_created": 24,
+      "big_chances_created": 21,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -9380,24 +9380,24 @@
       "home_xg": 0.3,
       "away_xg": 1.63,
       "real_xg": true,
-      "home_shots": 10,
-      "away_shots": 10,
-      "home_sot": 5,
-      "away_sot": 5,
-      "home_poss": 48.9,
-      "away_poss": 51.1,
-      "home_big_chances": 0,
-      "away_big_chances": 3,
+      "home_shots": 8.0,
+      "away_shots": 15.0,
+      "home_sot": 2.0,
+      "away_sot": 6.0,
+      "home_poss": 41.0,
+      "away_poss": 59.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [],
       "away_goals": [
         {
-          "min": "21",
+          "min": "22",
           "player": "Mikel Oyarzabal",
-          "type": "penalty"
+          "type": "regular"
         },
         {
-          "min": "57",
-          "player": "Pedro Porro",
+          "min": "58",
+          "player": "Pedro Antonio Porro",
           "type": "regular"
         }
       ],
@@ -9407,10 +9407,9 @@
       "pens": null,
       "winner": "AWAY_TEAM",
       "narrative": [
-        "🚨 **Upset**: model predicted draw (37%) but ended 0–2.",
-        "💥 Spain created 3 big chances."
+        "🚨 **Upset**: model predicted draw (37%) but ended 0–2."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Dallas Stadium (AT&T Stadium)",
       "city": "Arlington"
     },
@@ -9610,7 +9609,7 @@
     }
   ],
   "real_xg_games": 62,
-  "nlbair_games": 94,
+  "nlbair_games": 93,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
