@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T08:48:42.217174+00:00",
+  "updated_at": "2026-09-04T14:08:20.271707+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -539,7 +539,7 @@
       "losses": 2,
       "points": 4,
       "expected_points": 2.0607721921055098,
-      "big_chances_created": 1,
+      "big_chances_created": 0,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2969,7 +2969,7 @@
       "losses": 2,
       "points": 1,
       "expected_points": 2.5779162638318676,
-      "big_chances_created": 4,
+      "big_chances_created": 1,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -5132,26 +5132,26 @@
       "home_xg": 1.35,
       "away_xg": 1.15,
       "real_xg": true,
-      "home_shots": 14,
-      "away_shots": 17,
-      "home_sot": 6,
-      "away_sot": 12,
-      "home_poss": 40.8,
-      "away_poss": 59.2,
-      "home_big_chances": 3,
-      "away_big_chances": 1,
+      "home_shots": 14.0,
+      "away_shots": 17.0,
+      "home_sot": 3.0,
+      "away_sot": 4.0,
+      "home_poss": 32.0,
+      "away_poss": 60.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "5",
-          "player": "Michal Sadílek",
+          "min": "6",
+          "player": "Michal Sadilek",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "82",
+          "min": "83",
           "player": "Teboho Mokoena",
-          "type": "penalty"
+          "type": "regular"
         }
       ],
       "reds": [],
@@ -5160,11 +5160,9 @@
       "pens": null,
       "winner": "DRAW",
       "narrative": [
-        "🚨 **Upset**: model predicted Czechia win (42%) but ended 1–1.",
-        "💥 Czechia created 3 big chances.",
-        "💥 South Africa created 1 big chance."
+        "🚨 **Upset**: model predicted Czechia win (42%) but ended 1–1."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "Los Angeles Stadium (SoFi Stadium)",
       "city": "Inglewood"
     },
@@ -9610,7 +9608,7 @@
     }
   ],
   "real_xg_games": 62,
-  "nlbair_games": 94,
+  "nlbair_games": 93,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
