@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T23:09:15.124130+00:00",
+  "updated_at": "2026-10-22T04:14:54.341036+00:00",
   "teams": [
     {
       "code": "ESP",
@@ -1529,7 +1529,7 @@
       "losses": 2,
       "points": 18,
       "expected_points": 17.415002832244344,
-      "big_chances_created": 31,
+      "big_chances_created": 27,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2552,8 +2552,8 @@
       "games": 3,
       "goals_for": 2,
       "goals_against": 8,
-      "xg_for": 2.66,
-      "xg_against": 7.43,
+      "xg_for": 2.5350729109258836,
+      "xg_against": 9.394528166741843,
       "wins": 0,
       "draws": 0,
       "losses": 3,
@@ -2577,8 +2577,8 @@
           "date": "2026-06-20",
           "gf": 0,
           "ga": 3,
-          "xgf": 0.41,
-          "xga": 2.28,
+          "xgf": 0.29,
+          "xga": 4.24,
           "result": "L",
           "p_win": 0.002
         },
@@ -2595,8 +2595,8 @@
       ],
       "xpts": 0.85,
       "delta_pts": -0.85,
-      "xgf": 0.89,
-      "xga": 2.48,
+      "xgf": 0.85,
+      "xga": 3.13,
       "efi": {
         "games": 3,
         "xg_official": 0.55,
@@ -2682,14 +2682,14 @@
       "games": 5,
       "goals_for": 10,
       "goals_against": 4,
-      "xg_for": 11.69,
-      "xg_against": 4.24,
+      "xg_for": 13.654528166741843,
+      "xg_against": 4.115072910925884,
       "wins": 3,
       "draws": 1,
       "losses": 1,
       "points": 10,
       "expected_points": 11.056638039266486,
-      "big_chances_created": 21,
+      "big_chances_created": 16,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -2707,8 +2707,8 @@
           "date": "2026-06-20",
           "gf": 3,
           "ga": 0,
-          "xgf": 2.28,
-          "xga": 0.41,
+          "xgf": 4.24,
+          "xga": 0.29,
           "result": "W",
           "p_win": 0.961
         },
@@ -2745,8 +2745,8 @@
       ],
       "xpts": 11.06,
       "delta_pts": -1.06,
-      "xgf": 2.34,
-      "xga": 0.85,
+      "xgf": 2.73,
+      "xga": 0.82,
       "efi": {
         "games": 5,
         "xg_official": 2.18,
@@ -3389,7 +3389,7 @@
       "losses": 3,
       "points": 3,
       "expected_points": 5.259883160323824,
-      "big_chances_created": 16,
+      "big_chances_created": 14,
       "big_chances_conceded": 0,
       "matches": [
         {
@@ -4668,34 +4668,34 @@
       "home_xg": 2.44,
       "away_xg": 1.05,
       "real_xg": true,
-      "home_shots": 11,
-      "away_shots": 6,
-      "home_sot": 10,
-      "away_sot": 4,
-      "home_poss": 51.9,
-      "away_poss": 48.1,
-      "home_big_chances": 4,
-      "away_big_chances": 2,
+      "home_shots": 11.0,
+      "away_shots": 6.0,
+      "home_sot": 8.0,
+      "away_sot": 2.0,
+      "home_poss": 49.0,
+      "away_poss": 44.0,
+      "home_big_chances": null,
+      "away_big_chances": null,
       "home_goals": [
         {
-          "min": "65",
-          "player": "Kylian Mbappé",
+          "min": "66",
+          "player": "Kylian Mbappe",
           "type": "regular"
         },
         {
-          "min": "81",
-          "player": "Bradley Barcola",
+          "min": "82",
+          "player": "Bradley Jean-Manuel Essolisa Barcola",
           "type": "regular"
         },
         {
-          "min": "95",
-          "player": "Kylian Mbappé",
+          "min": "90",
+          "player": "Kylian Mbappe",
           "type": "regular"
         }
       ],
       "away_goals": [
         {
-          "min": "94",
+          "min": "90",
           "player": "Ibrahim Mbaye",
           "type": "regular"
         }
@@ -4706,11 +4706,9 @@
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
-        "✅ **Result matched prediction** (63%). Final: 3–1.",
-        "💥 France created 4 big chances.",
-        "💥 Senegal created 2 big chances."
+        "✅ **Result matched prediction** (63%). Final: 3–1."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "New York New Jersey Stadium (MetLife Stadium)",
       "city": "East Rutherford"
     },
@@ -5468,46 +5466,29 @@
       "pA": 0.002,
       "lam": 4.24,
       "mu": 0.29,
-      "home_xg": 2.28,
-      "away_xg": 0.41,
+      "home_xg": 4.24,
+      "away_xg": 0.29,
       "real_xg": false,
-      "home_shots": 8,
-      "away_shots": 7,
-      "home_sot": 6,
-      "away_sot": 4,
-      "home_poss": 55.3,
-      "away_poss": 44.7,
-      "home_big_chances": 5,
-      "away_big_chances": 0,
-      "home_goals": [
-        {
-          "min": "22",
-          "player": "Matheus Cunha",
-          "type": "regular"
-        },
-        {
-          "min": "35",
-          "player": "Matheus Cunha",
-          "type": "regular"
-        },
-        {
-          "min": "47",
-          "player": "Vinícius Júnior",
-          "type": "regular"
-        }
-      ],
+      "home_shots": null,
+      "away_shots": null,
+      "home_sot": null,
+      "away_sot": null,
+      "home_poss": null,
+      "away_poss": null,
+      "home_big_chances": null,
+      "away_big_chances": null,
+      "home_goals": [],
       "away_goals": [],
       "reds": [],
-      "has_stats": true,
+      "has_stats": false,
       "went_pens": false,
       "pens": null,
       "winner": "HOME_TEAM",
       "narrative": [
         "✅ **Result matched prediction** (96%). Final: 3–0.",
-        "💥 Brazil created 5 big chances.",
-        "🎯 Brazil: 3 goals from 8 shots (38% conversion)."
+        "🧱 Brazil underperformed xG (3 goals vs 4.2 xG)."
       ],
-      "nlbair": true,
+      "nlbair": false,
       "stadium": "",
       "city": ""
     },
@@ -9610,7 +9591,7 @@
     }
   ],
   "real_xg_games": 62,
-  "nlbair_games": 94,
+  "nlbair_games": 92,
   "narratives_built": 104,
   "source": "football-data.org + mominullptr + nlbair/wc2026-events"
 }
